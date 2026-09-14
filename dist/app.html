@@ -1,0 +1,1323 @@
+<title>Reisadvies-Reviewer</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap">
+<style>
+:root {
+  --papier: #f6f5f1;
+  --vlak: #ffffff;
+  --vlak-2: #eeece6;
+  --inkt: #17202b;
+  --gedempt: #666d77;
+  --lijn: #ddd9d0;
+  --lijn-sterk: #c6c1b5;
+  --accent: #24485f;
+  --accent-zacht: #e4ecf1;
+  --fout: #9d2f26;
+  --fout-vlak: #f7e6e3;
+  --letop: #8a5d0d;
+  --letop-vlak: #f8eed9;
+  --info: #55606b;
+  --info-vlak: #e9ecee;
+  --kc-groen: #3f7a3a;
+  --kc-geel: #d4ae12;
+  --kc-oranje: #cd6a1c;
+  --kc-rood: #a92b21;
+  --schaduw: 0 1px 2px rgba(23,32,43,.06), 0 4px 14px rgba(23,32,43,.05);
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Source Code Pro", ui-monospace, "SF Mono", Menlo, monospace;
+}
+:root:not([data-theme="light"]) {
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papier: #14181d;
+    --vlak: #1b2027;
+    --vlak-2: #232a33;
+    --inkt: #e7e5e0;
+    --gedempt: #99a1ab;
+    --lijn: #2d353f;
+    --lijn-sterk: #3d4753;
+    --accent: #8fbcd4;
+    --accent-zacht: #1e2b35;
+    --fout: #e8877c;
+    --fout-vlak: #33211f;
+    --letop: #dcaf5c;
+    --letop-vlak: #2e2718;
+    --info: #9aa4af;
+    --info-vlak: #242b33;
+    --kc-groen: #72b169;
+    --kc-geel: #d9be4a;
+    --kc-oranje: #e09250;
+    --kc-rood: #e0796c;
+    --schaduw: 0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"] {
+  --papier: #14181d;
+  --vlak: #1b2027;
+  --vlak-2: #232a33;
+  --inkt: #e7e5e0;
+  --gedempt: #99a1ab;
+  --lijn: #2d353f;
+  --lijn-sterk: #3d4753;
+  --accent: #8fbcd4;
+  --accent-zacht: #1e2b35;
+  --fout: #e8877c;
+  --fout-vlak: #33211f;
+  --letop: #dcaf5c;
+  --letop-vlak: #2e2718;
+  --info: #9aa4af;
+  --info-vlak: #242b33;
+  --kc-groen: #72b169;
+  --kc-geel: #d9be4a;
+  --kc-oranje: #e09250;
+  --kc-rood: #e0796c;
+  --schaduw: 0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.25);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--inkt);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1320px; margin: 0 auto; padding-inline: 20px; padding-block: 0 56px; }
+
+/* ---------- kop ---------- */
+header.kop { border-bottom: 1px solid var(--lijn); padding-block: 26px 20px; }
+.kop h1 {
+  font-family: var(--serif); font-weight: 700; font-size: clamp(1.55rem, 3.4vw, 2.1rem);
+  margin: 0; letter-spacing: -.012em; text-wrap: balance;
+}
+.kop p.lead { margin: .45rem 0 0; color: var(--gedempt); max-width: 62ch; }
+.kop .bron { font-family: var(--mono); font-size: .74rem; color: var(--gedempt); margin-top: .7rem; }
+
+/* ---------- bedieningsbalk ---------- */
+.balk {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  padding-block: 16px; border-bottom: 1px solid var(--lijn);
+}
+label.veld { display: flex; align-items: center; gap: 7px; font-size: .85rem; color: var(--gedempt); }
+select, textarea, button {
+  font: inherit; color: inherit; border-radius: 5px; border: 1px solid var(--lijn-sterk);
+  background: var(--vlak);
+}
+select { padding: 7px 10px; font-size: .9rem; }
+button {
+  padding: 7px 14px; cursor: pointer; font-size: .88rem; font-weight: 600;
+  transition: background .12s, border-color .12s;
+}
+button:hover:not(:disabled) { background: var(--vlak-2); }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.hoofd { background: var(--accent); border-color: var(--accent); color: var(--papier); }
+button.hoofd:hover:not(:disabled) { filter: brightness(1.12); background: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+textarea {
+  width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(--mono);
+  font-size: .82rem; line-height: 1.5; resize: vertical;
+}
+
+/* ---------- statusstrook ---------- */
+.status { display: grid; grid-template-columns: minmax(230px, 1.4fr) repeat(auto-fit, minmax(112px, 1fr)); gap: 1px;
+  background: var(--lijn); border: 1px solid var(--lijn); border-radius: 7px; overflow: hidden; margin-block: 20px; }
+.cel { background: var(--vlak); padding: 13px 15px; }
+.cel .etiket { font-size: .68rem; text-transform: uppercase; letter-spacing: .09em; color: var(--gedempt); font-weight: 600; }
+.cel .waarde { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.2; margin-top: 3px; }
+.cel .waarde small { font-family: var(--sans); font-size: .78rem; font-weight: 400; color: var(--gedempt); }
+.cel.fout .waarde { color: var(--fout); }
+.cel.letop .waarde { color: var(--letop); }
+.meter { height: 7px; border-radius: 4px; background: var(--vlak-2); margin-top: 9px; overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--accent); border-radius: 4px; transition: width .3s; }
+.meter.over i { background: var(--fout); }
+.kleurchips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 7px; }
+.chip {
+  font-size: .74rem; font-weight: 600; padding: 2px 9px; border-radius: 99px;
+  border: 1px solid currentColor; text-transform: capitalize;
+}
+.chip.groen { color: var(--kc-groen); } .chip.geel { color: var(--kc-geel); }
+.chip.oranje { color: var(--kc-oranje); } .chip.rood { color: var(--kc-rood); }
+
+/* ---------- werkblad ---------- */
+.werkblad { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 26px; align-items: start; }
+@media (max-width: 940px) { .werkblad { grid-template-columns: 1fr; } .paneel.tekst { order: 2; } }
+
+.paneel { background: var(--vlak); border: 1px solid var(--lijn); border-radius: 8px; box-shadow: var(--schaduw); }
+.paneel > h2 {
+  font-family: var(--sans); font-size: .72rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--gedempt); margin: 0; padding: 13px 18px; border-bottom: 1px solid var(--lijn); font-weight: 700;
+}
+.paneel .body { padding: 16px 18px; }
+
+/* de tekst zelf */
+.advies h3.blok-h2 {
+  font-family: var(--serif); font-size: 1.12rem; font-weight: 700; margin: 1.5em 0 .35em;
+  padding-bottom: .25em; border-bottom: 1px solid var(--lijn); display: flex; gap: 10px;
+  align-items: baseline; justify-content: space-between;
+}
+.advies h4.blok-h3 { font-family: var(--serif); font-size: .99rem; font-weight: 600; margin: 1.15em 0 .3em;
+  display: flex; gap: 10px; align-items: baseline; justify-content: space-between; }
+.advies h3.blok-h2:first-child { margin-top: 0; }
+.telling { font-family: var(--mono); font-size: .7rem; color: var(--gedempt); font-weight: 400; white-space: nowrap; }
+.telling.lang { color: var(--letop); }
+.advies p { margin: 0 0 .65em; }
+.advies ul { margin: 0 0 .8em; padding-left: 1.15em; }
+.advies li { margin-bottom: .25em; }
+.zin { border-radius: 2px; cursor: pointer; }
+.zin.m-fout { background: var(--fout-vlak); box-shadow: inset 0 -2px 0 var(--fout); }
+.zin.m-letop { background: var(--letop-vlak); box-shadow: inset 0 -2px 0 var(--letop); }
+.zin.m-info { background: var(--info-vlak); box-shadow: inset 0 -1px 0 var(--info); }
+.zin.actief { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* bevindingen */
+.groep + .groep { margin-top: 20px; }
+.groep > h3 {
+  font-size: .8rem; font-weight: 700; margin: 0 0 9px; display: flex; align-items: center; gap: 8px;
+}
+.groep > h3 .aantal { font-family: var(--mono); font-weight: 400; color: var(--gedempt); font-size: .76rem; }
+.groep.fout > h3 { color: var(--fout); }
+.groep.letop > h3 { color: var(--letop); }
+.groep.info > h3 { color: var(--info); }
+
+.bev { border: 1px solid var(--lijn); border-radius: 6px; padding: 11px 13px; margin-bottom: 9px; background: var(--vlak); }
+.bev.actief { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-zacht); }
+.bev .regelnaam { font-family: var(--mono); font-size: .72rem; color: var(--gedempt); }
+.bev .tekst { margin: 3px 0 0; font-size: .91rem; }
+.bev blockquote {
+  margin: 8px 0 0; padding: 6px 10px; border-left: 2px solid var(--lijn-sterk);
+  background: var(--vlak-2); font-size: .84rem; color: var(--inkt); border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.bev .bron { margin-top: 7px; font-size: .74rem; color: var(--gedempt); font-style: italic; }
+.bev .verwacht { margin-top: 7px; font-size: .8rem; color: var(--gedempt); }
+.bev .verwacht b { color: var(--inkt); font-weight: 600; }
+.oordeel { display: flex; gap: 5px; margin-top: 9px; flex-wrap: wrap; align-items: center; }
+.oordeel .vraag { font-size: .72rem; color: var(--gedempt); margin-right: 3px; }
+.oordeel button { padding: 2px 9px; font-size: .74rem; font-weight: 600; border-radius: 99px; }
+.oordeel button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--papier); }
+
+.leeg { color: var(--gedempt); font-size: .9rem; padding: 8px 0; }
+.geen-fouten { color: var(--kc-groen); font-weight: 600; }
+
+/* oordeelstoets */
+.oordeelsblok { border-top: 1px solid var(--lijn); margin-top: 18px; padding-top: 16px; }
+.oordeelsblok h3 { font-size: .8rem; margin: 0 0 4px; font-weight: 700; }
+.oordeelsblok p.uitleg { font-size: .82rem; color: var(--gedempt); margin: 0 0 10px; }
+.oordeelsuitvoer { font-size: .89rem; white-space: pre-wrap; }
+.oordeelsuitvoer:empty { display: none; }
+
+/* voetnoot */
+.voorbehoud {
+  margin-top: 30px; border: 1px dashed var(--lijn-sterk); border-radius: 7px; padding: 15px 18px;
+  background: transparent;
+}
+.voorbehoud h2 { font-family: var(--sans); font-size: .72rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--gedempt); margin: 0 0 7px; font-weight: 700; }
+.voorbehoud ul { margin: 0; padding-left: 1.15em; font-size: .87rem; color: var(--gedempt); }
+.voorbehoud li { margin-bottom: .3em; }
+.voorbehoud li b { color: var(--inkt); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="kop">
+    <h1>Reisadvies-Reviewer</h1>
+    <p class="lead">Toetst een reisadvies op wat objectief te toetsen is: de schrijfwijzer, de
+      onderwerpen-matrix, B1 en begrijpelijkheid. Elke bevinding verwijst naar de regel waar hij vandaan komt.</p>
+    <p class="bron" id="bron-regel"></p>
+  </header>
+
+  <div class="balk">
+    <label class="veld" for="kies-advies">Reisadvies
+      <select id="kies-advies"></select>
+    </label>
+    <button type="button" id="knop-plakken">Eigen tekst plakken</button>
+    <span style="flex:1"></span>
+    <button type="button" id="knop-oordeel" class="hoofd">Oordeelstoets uitvoeren</button>
+  </div>
+
+  <div id="plakvak" hidden style="padding-block:14px">
+    <label class="veld" for="invoer" style="display:block;margin-bottom:6px">
+      Plak hier de HTML of de platte tekst van het reisadvies
+    </label>
+    <textarea id="invoer" spellcheck="false"></textarea>
+    <div style="margin-top:9px;display:flex;gap:9px;align-items:center">
+      <button type="button" id="knop-toets" class="hoofd">Toetsen</button>
+      <label class="veld" for="land-invoer">Land
+        <input id="land-invoer" style="font:inherit;padding:7px 10px;border:1px solid var(--lijn-sterk);border-radius:5px;background:var(--vlak);color:inherit" placeholder="bijvoorbeeld Tsjechië">
+      </label>
+    </div>
+  </div>
+
+  <div class="status" id="status"></div>
+
+  <div class="werkblad">
+    <section class="paneel tekst">
+      <h2>Het advies</h2>
+      <div class="body advies" id="advies"></div>
+    </section>
+
+    <section class="paneel">
+      <h2>Bevindingen</h2>
+      <div class="body">
+        <div id="bevindingen"></div>
+        <div class="oordeelsblok">
+          <h3>Oordeelstoets</h3>
+          <p class="uitleg">B1-woordmoeilijkheid, begrijpelijkheid, en of een onderwerp dat de matrix als
+            <em>verwijzen</em> aanmerkt niet te ver is uitgeschreven. Met een herschrijfvoorstel op zinsniveau.</p>
+          <div class="oordeelsuitvoer" id="oordeelsuitvoer"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="voorbehoud">
+    <h2>Waar de tool niets over zegt</h2>
+    <ul>
+      <li><b>Politieke gevoeligheden.</b> Die weging blijft mensenwerk; de tool doet er geen uitspraak over.</li>
+      <li><b>Inkorten.</b> Bij een overschrijding wijst de tool de langste blokken aan, maar schrapt niet zelf —
+        wat weg kan is een inhoudelijke keuze.</li>
+      <li><b>Nog geen oordeel over juistheid.</b> De tool toetst vorm en onderwerpkeuze, niet of de inhoud klopt.</li>
+    </ul>
+  </div>
+</div>
+
+<script>const Parse = (function () {
+/**
+ * Zet een reisadvies om naar een genormaliseerd document waar de regels op toetsen.
+ *
+ * Draait ongewijzigd in Node (tests, bulkslag) en in de browser (de Artifact-pagina),
+ * daarom geen DOM en geen dependencies. De HTML die het cms levert is beperkt
+ * (koppen, alinea's, lijsten, links, opmaak), dus een kleine tokenizer volstaat.
+ */
+
+const BLOKTAGS = new Set(['h1', 'h2', 'h3', 'h4', 'p', 'li', 'ul', 'ol', 'div', 'section', 'br', 'table', 'tr', 'td', 'th']);
+const OPMAAKTAGS = { b: 'vet', strong: 'vet', i: 'cursief', em: 'cursief', u: 'onderstreept' };
+
+/** Afkortingen waarna een punt géén zinseinde is. */
+const AFKORTINGEN = ['bijv', 'etc', 'e.d', 'o.a', 'm.b.t', 'i.v.m', 'd.w.z', 'n.a.v', 'z.s.m', 'evt', 'incl',
+  'excl', 'max', 'min', 'ca', 't.o.v', 'i.p.v', 'a.u.b', 'nr', 'dhr', 'mw', 'drs', 'ir', 'mr'];
+
+function decodeEntities(s) {
+  const map = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', euro: '\u20ac',
+    eacute: '\u00e9', egrave: '\u00e8', euml: '\u00eb', iuml: '\u00ef', ouml: '\u00f6',
+    uuml: '\u00fc', auml: '\u00e4', ccedil: '\u00e7', rsquo: '\u2019', lsquo: '\u2018',
+    ldquo: '\u201c', rdquo: '\u201d', ndash: '\u2013', mdash: '\u2014', hellip: '\u2026' };
+  return s
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&([a-z]+);/gi, (m, n) => (n.toLowerCase() in map ? map[n.toLowerCase()] : m));
+}
+
+function schoon(s) {
+  return decodeEntities(s).replace(/\s+/g, ' ').trim();
+}
+
+function isHtml(invoer) {
+  return /<(h[1-4]|p|ul|ol|li|div|br|a|strong|em)\b/i.test(invoer);
+}
+
+/**
+ * Splitst een string in tokens: {type:'tag'|'tekst', ...}.
+ */
+function tokeniseer(html) {
+  const zonderRuis = html
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, '');
+  const tokens = [];
+  const re = /<\/?([a-z][a-z0-9]*)\b([^>]*)>/gi;
+  let laatste = 0;
+  let m;
+  while ((m = re.exec(zonderRuis)) !== null) {
+    if (m.index > laatste) tokens.push({ type: 'tekst', waarde: zonderRuis.slice(laatste, m.index) });
+    tokens.push({
+      type: 'tag',
+      naam: m[1].toLowerCase(),
+      sluit: m[0].startsWith('</'),
+      attrs: m[2] || '',
+    });
+    laatste = m.index + m[0].length;
+  }
+  if (laatste < zonderRuis.length) tokens.push({ type: 'tekst', waarde: zonderRuis.slice(laatste) });
+  return tokens;
+}
+
+function attr(attrs, naam) {
+  const m = attrs.match(new RegExp(naam + '\\s*=\\s*("([^"]*)"|\'([^\']*)\'|([^\\s>]+))', 'i'));
+  return m ? decodeEntities(m[2] ?? m[3] ?? m[4] ?? '') : null;
+}
+
+/**
+ * Splitst een alinea in zinnen. Houdt rekening met afkortingen, getallen (1.500),
+ * tijden (8.00 uur) en het feit dat een vraagteken wél een zinseinde is.
+ */
+function splitsZinnen(tekst) {
+  const zinnen = [];
+  let huidig = '';
+  for (let i = 0; i < tekst.length; i++) {
+    const c = tekst[i];
+    huidig += c;
+    if (c !== '.' && c !== '!' && c !== '?') continue;
+
+    const rest = tekst.slice(i + 1);
+    if (!/^\s/.test(rest) && rest !== '') continue;          // geen spatie erna: geen zinseinde
+    if (c === '.') {
+      const voor = huidig.slice(0, -1);
+      const laatsteWoord = (voor.match(/([\w.\u00c0-\u017f]+)$/) || [])[1] || '';
+      if (AFKORTINGEN.includes(laatsteWoord.toLowerCase())) continue;
+      if (/\d$/.test(voor) && /^\s*\d/.test(rest)) continue;  // 1.500 of 8.00
+    }
+    if (rest !== '' && !/^\s+["'(\u2018\u201c]?[A-Z\u00c0-\u00dd\d]/.test(rest)) continue;
+    zinnen.push(huidig.trim());
+    huidig = '';
+  }
+  if (huidig.trim()) zinnen.push(huidig.trim());
+  return zinnen.filter(Boolean);
+}
+
+function telWoorden(tekst) {
+  if (!tekst) return 0;
+  return (tekst.match(/[\p{L}\p{N}]+(?:[-'\u2019][\p{L}\p{N}]+)*/gu) || []).length;
+}
+
+/**
+ * @param {string} invoer      HTML of platte tekst van het reisadvies
+ * @param {object} [meta]      {titel, land, metadescription, url, kleurcodes:[...]}
+ * @returns genormaliseerd document
+ */
+function parseAdvies(invoer, meta = {}) {
+  const doc = {
+    land: meta.land || null,
+    titel: meta.titel || null,
+    metadescription: meta.metadescription || null,
+    url: meta.url || null,
+    kleurcodes: meta.kleurcodes || null,
+    intro: null,
+    blokken: [],
+    links: [],
+    opmaak: { vet: [], cursief: [], onderstreept: [] },
+    bron: isHtml(invoer) ? 'html' : 'tekst',
+  };
+
+  const blokken = doc.blokken;
+  let huidigH2 = null;
+  let huidigH3 = null;
+
+  function blokVoorInhoud() {
+    if (blokken.length === 0) {
+      blokken.push({ niveau: 0, kop: null, h2: null, h3: null, alineas: [], opsommingen: [] });
+    }
+    return blokken[blokken.length - 1];
+  }
+
+  function nieuwBlok(niveau, kop) {
+    if (niveau === 2) { huidigH2 = kop; huidigH3 = null; }
+    if (niveau === 3) huidigH3 = kop;
+    blokken.push({ niveau, kop, h2: niveau === 2 ? kop : huidigH2, h3: niveau === 3 ? kop : null, alineas: [], opsommingen: [] });
+  }
+
+  if (doc.bron === 'tekst') {
+    // Platte tekst: lege regel scheidt alinea's, een regel die eindigt zonder leesteken
+    // en kort is behandelen we niet automatisch als kop — dat zou raden zijn.
+    for (const stuk of invoer.split(/\n\s*\n/)) {
+      const t = schoon(stuk);
+      if (!t) continue;
+      const bullets = stuk.split('\n').filter((r) => /^\s*[-*\u2022]/.test(r));
+      if (bullets.length > 1) {
+        blokVoorInhoud().opsommingen.push({ items: bullets.map((b) => schoon(b.replace(/^\s*[-*\u2022]\s*/, ''))) });
+      } else {
+        blokVoorInhoud().alineas.push({ tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
+      }
+    }
+  } else {
+    const tokens = tokeniseer(invoer);
+    let buffer = '';
+    let context = null;              // 'h1'|'h2'|'h3'|'p'|'li'
+    let linkOpen = null;
+    const opmaakStack = [];
+    let lijst = null;
+
+    const spoel = () => {
+      const t = schoon(buffer);
+      buffer = '';
+      if (!t) return;
+      if (context === 'h1') { if (!doc.titel) doc.titel = t; return; }
+      if (context === 'h2') { nieuwBlok(2, t); return; }
+      if (context === 'h3') { nieuwBlok(3, t); return; }
+      if (context === 'li') { if (lijst) lijst.items.push(t); return; }
+      blokVoorInhoud().alineas.push({ tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
+    };
+
+    for (const tok of tokens) {
+      if (tok.type === 'tekst') {
+        buffer += tok.waarde;
+        if (linkOpen) linkOpen.tekst += tok.waarde;
+        for (const soort of opmaakStack) doc.opmaak[soort].push(schoon(tok.waarde));
+        continue;
+      }
+      const { naam, sluit, attrs } = tok;
+
+      if (naam === 'a') {
+        if (!sluit) linkOpen = { tekst: '', href: attr(attrs, 'href'), h2: huidigH2, h3: huidigH3 };
+        else if (linkOpen) {
+          linkOpen.tekst = schoon(linkOpen.tekst);
+          if (linkOpen.tekst) doc.links.push(linkOpen);
+          linkOpen = null;
+        }
+        continue;
+      }
+      if (naam in OPMAAKTAGS) {
+        if (!sluit) opmaakStack.push(OPMAAKTAGS[naam]);
+        else opmaakStack.pop();
+        continue;
+      }
+      if (naam === 'ul' || naam === 'ol') {
+        if (!sluit) { spoel(); lijst = { items: [], geordend: naam === 'ol', h2: huidigH2, h3: huidigH3 }; }
+        else if (lijst) { spoel(); blokVoorInhoud().opsommingen.push(lijst); lijst = null; }
+        continue;
+      }
+      if (!BLOKTAGS.has(naam)) continue;
+
+      spoel();
+      if (sluit) { context = null; continue; }
+      if (naam === 'h1' || naam === 'h2' || naam === 'h3') context = naam;
+      else if (naam === 'li') context = 'li';
+      else if (naam === 'p' || naam === 'div') context = 'p';
+      else context = null;
+    }
+    spoel();
+    if (lijst) blokVoorInhoud().opsommingen.push(lijst);
+  }
+
+  // De intro is de eerste alinea vóór de eerste H2.
+  const eerste = blokken[0];
+  if (eerste && eerste.niveau === 0 && eerste.alineas.length) doc.intro = eerste.alineas[0].tekst;
+  else if (eerste && eerste.niveau === 2 && blokken[0].alineas.length) doc.intro = blokken[0].alineas[0].tekst;
+
+  doc.alineas = blokken.flatMap((b) => b.alineas.map((a) => ({ ...a, h2: b.h2, h3: b.h3, kop: b.kop })));
+  doc.zinnen = doc.alineas.flatMap((a) => a.zinnen.map((z) => ({ tekst: z, woorden: telWoorden(z), h2: a.h2, h3: a.h3 })));
+  doc.opsommingen = blokken.flatMap((b) => b.opsommingen.map((o) => ({ ...o, h2: b.h2, h3: b.h3 })));
+  doc.koppen = blokken.filter((b) => b.niveau > 0).map((b) => ({ niveau: b.niveau, tekst: b.kop, h2: b.h2 }));
+  doc.woorden = doc.alineas.reduce((n, a) => n + a.woorden, 0)
+    + doc.opsommingen.reduce((n, o) => n + o.items.reduce((m, i) => m + telWoorden(i), 0), 0)
+    + doc.koppen.reduce((n, k) => n + telWoorden(k.tekst), 0);
+  doc.volledigeTekst = [
+    doc.titel || '',
+    ...blokken.flatMap((b) => [b.kop || '', ...b.alineas.map((a) => a.tekst), ...b.opsommingen.flatMap((o) => o.items)]),
+  ].filter(Boolean).join('\n');
+
+  return doc;
+}
+
+
+
+return { parseAdvies, splitsZinnen, telWoorden };
+})();</script>
+<script>const Regels = (function () {
+/**
+ * De harde regels (laag 1) uit de schrijfwijzer en de format-matrix.
+ *
+ * Elke regel is een pure functie: document in, bevindingen uit. Geen model, geen netwerk,
+ * volledig reproduceerbaar. De regeldata komt van buiten (regels/*.json) zodat dezelfde
+ * code in Node draait voor de tests en de bulkslag, en in de Artifact voor de redacteur.
+ *
+ * Wat de tool bewust NIET doet, conform STRATEGY.md:
+ *  - geen uitspraak over politieke gevoeligheden
+ *  - niet zelf inkorten: wel de overschrijding melden en de langste blokken aanwijzen
+ */
+
+const telWoorden = Parse.telWoorden;
+
+const ERNST = { fout: 'fout', letop: 'let-op', info: 'info' };
+
+/** Normaliseert voor tekstvergelijking: kleine letters, rechte apostrof, enkele spaties. */
+function norm(s) {
+  return (s || '')
+    .replace(/[‘’ʼ]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+
+const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** Maakt van een sjabloon met {land}/{gebieden} een regex die tegen genormaliseerde tekst matcht. */
+function sjabloonRegex(sjabloon, land) {
+  let p = esc(norm(sjabloon));
+  p = p.replace(/\\\{land\\\}/g, land ? esc(norm(land)) : "[a-z\\u00c0-\\u017f' -]{2,40}");
+  p = p.replace(/\\\{gebieden\\\}/g, "[^.]{2,120}");
+  return new RegExp(p);
+}
+
+function bevinding(regel, ernst, bron, boodschap, extra = {}) {
+  return { regel, ernst, bron, boodschap, ...extra };
+}
+
+/**
+ * @param {object} data  {matrix, kleurcodes, woordenlijsten, limieten}
+ */
+function maakToetser(data) {
+  const { matrix, kleurcodes, woordenlijsten: wl, limieten: lim } = data;
+
+  const koppenOpNaam = new Map(matrix.koppen.filter((k) => k.h3).map((k) => [norm(k.h3), k]));
+
+  // Lijdende vorm: hulpwerkwoord + voltooid deelwoord in dezelfde zin. Het deelwoord-patroon
+  // vangt ook scheidbare werkwoorden ("wordt opgestuurd"); zelfstandige naamwoorden die
+  // toevallig op een deelwoord lijken ("gebied", "verkeer") staan op een uitzonderingslijst.
+  const hulpRe = new RegExp('\\b(' + wl.lijdende_vorm.hulpwerkwoorden.join('|') + ')\\b', 'iu');
+  const deelwoordRe = new RegExp('\\b(' + wl.lijdende_vorm.deelwoord_patroon + ')\\b', 'giu');
+  const geenDeelwoord = new Set((wl.lijdende_vorm.geen_deelwoord || []).map((w) => w.toLowerCase()));
+
+  /** @returns {[hulpwerkwoord, deelwoord]|null} — zoekt door tot een echt deelwoord, zodat
+   *  "er wordt een gebied afgesloten" niet op "gebied" blijft hangen. */
+  function lijdendeVorm(zin) {
+    const h = zin.match(hulpRe);
+    if (!h) return null;
+    const staart = zin.slice(h.index + h[0].length);
+    for (const m of staart.matchAll(deelwoordRe)) {
+      if (!geenDeelwoord.has(m[0].toLowerCase())) return [h[0], m[0]];
+    }
+    return null;
+  }
+
+  /** Koppen die de matrix letterlijk voorschrijft, inclusief de toegestane varianten. */
+  const matrixKoppen = new Set(matrix.koppen.flatMap((k) =>
+    [k.h3, ...(k.kop_varianten || [])].filter(Boolean).map(norm)));
+  const isMatrixKop = (kop) => matrixKoppen.has(norm(kop));
+
+  /** De vaste H2's staan in vraagvorm met de landnaam erin; 'in {land}' mag ook 'op {land}'
+   *  zijn, want de schrijfwijzer kent die keuze per (ei)land. */
+  function isVasteH2(kop, land) {
+    const n = norm(kop);
+    return matrix.h2_vast.some((sjabloon) => {
+      // De landnaam in de kop wijkt legitiem af van het location-veld: adviezen gebruiken
+      // afkortingen ("de VAE") en lidwoorden ("op de Bahama's"), en de schrijfwijzer laat
+      // per (ei)land in of op toe. Daarom een jokerteken in plaats van de exacte naam.
+      const p = esc(norm(sjabloon))
+        .replace(/\\\?/g, '\\?')
+        .replace(/\b(in|naar) \\\{land\\\}/g, '(?:in|op|naar) [^?]{2,45}')
+        .replace(/\\\{land\\\}/g, '[^?]{2,45}');
+      return new RegExp('^' + p + '$').test(n);
+    });
+  }
+
+  /** @returns {{bevindingen: Array, samenvatting: object}} */
+  return function toets(doc, opties = {}) {
+    const b = [];
+    const tekst = doc.volledigeTekst || '';
+    const genorm = norm(tekst);
+    // "kleurcode groen" en "de kleurcode van het reisadvies voor X is groen" tellen allebei;
+    // [^.] houdt de match binnen één zin, zodat twee kleuren niet in elkaar overlopen.
+    const kleurenInTekst = kleurcodes.volgorde.filter((k) =>
+      new RegExp('kleurcode[^.]{0,80}\\b' + k + '\\b').test(genorm));
+    const aantalKleuren = doc.kleurcodes ? doc.kleurcodes.length : kleurenInTekst.length;
+    const meerdereKleuren = aantalKleuren > 1;
+
+    // ---------- document ----------
+    const limiet = meerdereKleuren ? lim.document.woorden_meerdere_kleurcodes : lim.document.woorden_1_kleurcode;
+    if (doc.woorden >= limiet) {
+      const langste = [...doc.blokken]
+        .filter((x) => x.kop)
+        .map((x) => ({
+          kop: x.kop,
+          woorden: x.alineas.reduce((n, a) => n + a.woorden, 0)
+            + x.opsommingen.reduce((n, o) => n + o.items.reduce((m, i) => m + telWoorden(i), 0), 0),
+        }))
+        .sort((x, y) => y.woorden - x.woorden)
+        .slice(0, 3);
+      b.push(bevinding('doc-woordenaantal', ERNST.fout, 'MX, tab Richtlijn woordenaantal',
+        `Het advies telt ${doc.woorden} woorden. De richtlijn is minder dan ${limiet} bij ${meerdereKleuren ? 'meerdere kleurcodes' : '1 kleurcode'}.`,
+        { detail: langste.map((x) => `${x.kop} (${x.woorden} woorden)`),
+          notitie: 'De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze.' }));
+    }
+
+    // ---------- kleurcodes ----------
+    // De matrix laat meerdere manieren toe om de kleur aan te duiden (kolom NB), maar de
+    // handelingsinstructie erachter ligt vast. Die twee toetsen we daarom apart.
+    for (const kleur of kleurenInTekst) {
+      const k = kleurcodes.kleuren[kleur];
+      if (!k) continue;
+
+      const aangeduid = (kleurcodes.aanduiding_sjablonen || []).some((sj) =>
+        sjabloonRegex(sj.replace(/\{kleur\}/g, kleur), doc.land).test(genorm));
+      if (!aangeduid) {
+        b.push(bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+          `Kleurcode ${kleur} wordt niet op een van de vaste manieren aangeduid.`,
+          { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.` }));
+      }
+
+      const heeftActie = (k.actiezinnen || []).some((z) => genorm.includes(norm(z)));
+      if (!heeftActie) {
+        b.push(bevinding('kleur-vaste-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
+          `Bij kleurcode ${kleur} ontbreekt de vaste handelingsinstructie.`,
+          { verwacht: k.in_het_kort_volledig.replace('{land}', doc.land || 'land X') }));
+      }
+    }
+
+    // De volgorde rood-naar-groen geldt voor de opsomming in "In het kort", niet voor elke
+    // vermelding van een kleur verderop in het advies.
+    const kortTekst = kortBlokTekst(doc);
+    if (kortTekst) {
+      const posities = kleurcodes.volgorde
+        .map((k) => ({ k, i: norm(kortTekst).search(new RegExp('kleurcode[^.]{0,80}\\b' + k + '\\b|\\b' + k + '\\b(?=[^.]{0,40}kleurcode)')) }))
+        .filter((x) => x.i >= 0).sort((x, y) => x.i - y.i).map((x) => x.k);
+      if (posities.length > 1) {
+        const verwacht = kleurcodes.volgorde.filter((k) => posities.includes(k));
+        if (posities.join('>') !== verwacht.join('>')) {
+          b.push(bevinding('kleur-volgorde', ERNST.fout, 'MX, tab Kleurcode-teksten, kolom NB',
+            `In "In het kort" staan de kleurcodes in de volgorde ${posities.join(' > ')}. De volgorde is altijd van rood naar groen: ${verwacht.join(' > ')}.`));
+        }
+      }
+    }
+
+    const kortBlok = doc.blokken.find((x) => norm(x.kop || '') === norm('In het kort'));
+    if (kortBlok) {
+      const bullets = kortBlok.opsommingen.flatMap((o) => o.items);
+      const eersteKleur = bullets.find((i) => /kleurcode/i.test(i));
+      if (eersteKleur && !/^de kleurcode van het reisadvies voor /.test(norm(eersteKleur))) {
+        b.push(bevinding('kleur-eerste-bullet-voluit', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+          'De eerste bullet over de kleurcode moet voluit: "De kleurcode van het reisadvies voor ... is ...".',
+          { fragment: eersteKleur }));
+      }
+      const gebiedenMatch = tekst.match(/gebieden\s+((?:[A-Z][\wÀ-ſ-]*(?:,\s*|\s+en\s+)){2,}[A-Z][\wÀ-ſ-]*)/);
+      if (gebiedenMatch) {
+        const n = gebiedenMatch[1].split(/,|\sen\s/).map((s) => s.trim()).filter(Boolean).length;
+        if (n > lim.gebieden.max_noemen) {
+          b.push(bevinding('gebieden-max-drie', ERNST.letop, 'MX, tab Koppen, rij In het kort',
+            `Er worden ${n} gebieden genoemd. Noem er maximaal ${lim.gebieden.max_noemen} en verwijs daarna.`,
+            { fragment: gebiedenMatch[0] }));
+        }
+      }
+    }
+
+    if (!/informatieservice/i.test(tekst)) {
+      b.push(bevinding('kort-informatieservice', ERNST.letop, 'MX, tab Koppen, rij In het kort',
+        'De standaardtekst over aanmelden voor de informatieservice ontbreekt onder "Let op".'));
+    }
+
+    // ---------- koppen tegen de matrix ----------
+    for (const kop of doc.koppen) {
+      if (kop.niveau === 2 && !isVasteH2(kop.tekst, doc.land)) {
+        b.push(bevinding('h2-vast', ERNST.letop, 'MX, tab Uitleg',
+          `"${kop.tekst}" is geen vaste H2. Vast zijn: ${matrix.h2_vast.map((h) => h.replace('{land}', doc.land || 'land X')).join(' / ')}.`,
+          { fragment: kop.tekst }));
+      }
+      if (kop.niveau === 3) {
+        const regel = koppenOpNaam.get(norm(kop.tekst));
+        if (regel && regel.richtlijn === 'niet-melden') {
+          b.push(bevinding('h3-niet-melden', ERNST.fout, 'MX, tab Koppen, richtlijn Niet melden',
+            `"${kop.tekst}" hoort niet in een reisadvies.`, { fragment: kop.tekst, notitie: regel.toelichting }));
+        }
+      }
+    }
+
+    const heeftRegionaal = doc.koppen.some((k) => norm(k.tekst) === norm("Regionale risico's"));
+    if (heeftRegionaal && !meerdereKleuren) {
+      b.push(bevinding('h3-regionaal-alleen-bij-meerdere', ERNST.letop, 'MX, tab Koppen, rij Regionale risico\'s',
+        'Regionale risico\'s hoort er alleen te staan bij meer dan 1 kleurcode.'));
+    }
+
+    const actueelBlok = doc.blokken.find((x) => norm(x.kop || '') === 'actueel');
+    if (actueelBlok) {
+      const n = actueelBlok.alineas.reduce((s, a) => s + a.woorden, 0);
+      if (n > lim.actueel.max_woorden) {
+        b.push(bevinding('actueel-max-woorden', ERNST.fout, 'MX, tab Koppen, rij In het kort',
+          `Actueel telt ${n} woorden. Maximaal ${lim.actueel.max_woorden}.`));
+      }
+    }
+
+    // ---------- titel en intro ----------
+    if (doc.titel) {
+      if (doc.titel.length > lim.titel.max_tekens) {
+        b.push(bevinding('titel-max-tekens', ERNST.fout, 'SW, Gebruiksvriendelijkheid > Titel',
+          `De titel is ${doc.titel.length} tekens. Maximaal ${lim.titel.max_tekens}.`, { fragment: doc.titel }));
+      }
+      const leestekens = [...doc.titel].filter((c) => /[.,;:!"'()]/.test(c));
+      if (leestekens.length) {
+        b.push(bevinding('titel-leestekens', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Titel',
+          'De titel bevat leestekens. Dat mag alleen bij de vraagvorm.', { fragment: doc.titel }));
+      }
+    }
+    const titelIsVraag = !!doc.titel && doc.titel.trim().endsWith('?');
+    if (doc.intro) {
+      const n = telWoorden(doc.intro);
+      if (n > lim.intro.max_woorden) {
+        b.push(bevinding('intro-max-woorden', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Intro',
+          `De intro telt ${n} woorden. Richtlijn is maximaal ${lim.intro.max_woorden}.`, { fragment: doc.intro }));
+      }
+      if (titelIsVraag && doc.intro.trim().split(/(?<=[.?!])\s/)[0].endsWith('?')) {
+        b.push(bevinding('intro-geen-vraag-na-vraagtitel', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Intro',
+          'De titel is al een vraag, begin de intro dan niet met een vraag.', { fragment: doc.intro }));
+      }
+    }
+
+    // ---------- tussenkoppen ----------
+    // Alleen H3: de H2's zijn door de matrix voorgeschreven vraagvormen en mogen langer zijn.
+    // Koppen die de matrix letterlijk voorschrijft ("Paspoort, ID-kaart, rijbewijs") toetsen we
+    // niet op woordenaantal of leestekens — de richtlijn is daar de matrix zelf.
+    for (const kop of doc.koppen.filter((k) => k.niveau === 3 && !isMatrixKop(k.tekst))) {
+      const w = telWoorden(kop.tekst);
+      if (w > lim.tussenkop.max_woorden) {
+        b.push(bevinding('tussenkop-max-woorden', ERNST.letop, 'SW, Gebruiksvriendelijkheid > (Tussen)koppen',
+          `"${kop.tekst}" telt ${w} woorden. Maximaal ${lim.tussenkop.max_woorden}.`, { fragment: kop.tekst }));
+      }
+      const eerste = (kop.tekst.match(/^\s*([\p{L}]+)/u) || [])[1];
+      if (eerste && wl.lidwoorden.includes(eerste.toLowerCase())) {
+        b.push(bevinding('tussenkop-lidwoord', ERNST.letop, 'SW, Gebruiksvriendelijkheid > (Tussen)koppen',
+          `"${kop.tekst}" begint met een lidwoord.`, { fragment: kop.tekst }));
+      }
+      if (/[.,;:!"'()]/.test(kop.tekst.replace(/'(?=s\b)|(?<=\w)'(?=\w)/g, ''))) {
+        b.push(bevinding('tussenkop-leestekens', ERNST.info, 'SW, Gebruiksvriendelijkheid > (Tussen)koppen',
+          `"${kop.tekst}" bevat een leesteken. Alleen een vraagteken mag.`, { fragment: kop.tekst }));
+      }
+      if (titelIsVraag && kop.tekst.trim().endsWith('?')) {
+        b.push(bevinding('tussenkop-vraagvorm', ERNST.letop, 'SW, Begrijpelijkheid > Vraagvorm',
+          `De titel is al een vraag, zet tussenkop "${kop.tekst}" dan niet in vraagvorm.`, { fragment: kop.tekst }));
+      }
+    }
+
+    // ---------- alinea's en zinnen ----------
+    for (const a of doc.alineas) {
+      if (a.woorden > lim.alinea.max_woorden) {
+        b.push(bevinding('alinea-max-woorden', ERNST.letop, "SW, Gebruiksvriendelijkheid > Alinea's",
+          `Deze alinea telt ${a.woorden} woorden. Maximaal ${lim.alinea.max_woorden}.`,
+          { fragment: a.tekst.slice(0, 120) + (a.tekst.length > 120 ? '…' : ''), kop: a.kop }));
+      }
+    }
+
+    const vasteZinnen = new Set();
+    for (const k of Object.values(kleurcodes.kleuren)) {
+      for (const veld of ['in_het_kort_volledig', 'in_het_kort_deels', 'regionaal_tekst']) {
+        if (k[veld]) for (const z of k[veld].split(/(?<=\.)\s+/)) vasteZinnen.add(norm(z).replace(/\{land\}|\{gebieden\}/g, ''));
+      }
+    }
+    const isVasteZin = (z) => {
+      const n = norm(z);
+      for (const v of vasteZinnen) {
+        const kern = v.replace(/^de kleurcode van het reisadvies voor\s*/, '').trim();
+        if (kern.length > 12 && n.includes(kern)) return true;
+      }
+      return false;
+    };
+
+    for (const z of doc.zinnen) {
+      if (isVasteZin(z.tekst)) continue;
+      if (z.woorden > lim.zin.max_woorden) {
+        b.push(bevinding('zin-max-woorden', ERNST.fout, 'SW, Begrijpelijkheid > B1',
+          `Deze zin telt ${z.woorden} woorden. Maximaal ${lim.zin.max_woorden}.`, { fragment: z.tekst, kop: z.h3 || z.h2 }));
+      }
+      for (const w of wl.twijfeltaal.woorden) {
+        if (new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) {
+          b.push(bevinding('zin-twijfeltaal', ERNST.letop, 'SW, Begrijpelijkheid > B1',
+            `Twijfeltaal: "${w}".`, { fragment: z.tekst, kop: z.h3 || z.h2 }));
+        }
+      }
+      const lv = lijdendeVorm(z.tekst);
+      if (lv) {
+        b.push(bevinding('zin-lijdende-vorm', ERNST.letop, 'SW, Begrijpelijkheid > B1',
+          `Lijdende vorm: "${lv[0]} … ${lv[1]}". Schrijf actief.`, { fragment: z.tekst, kop: z.h3 || z.h2 }));
+      }
+    }
+
+    let reeks = 0;
+    for (const z of doc.zinnen) {
+      reeks = z.tekst.trim().endsWith('?') ? reeks + 1 : 0;
+      if (reeks === lim.vragen.max_opeenvolgend + 1) {
+        b.push(bevinding('vragen-opeenvolgend', ERNST.letop, 'SW, Begrijpelijkheid > Vraagvorm',
+          `Meer dan ${lim.vragen.max_opeenvolgend} vragen achter elkaar.`, { fragment: z.tekst }));
+      }
+    }
+
+    const negRe = new RegExp('\\b(' + wl.negatieve_lading.woorden.map(esc).join('|') + ')\\b', 'gi');
+    const negTekst = doc.zinnen.filter((z) => !isVasteZin(z.tekst)).map((z) => z.tekst).join(' ');
+    const negAantal = (negTekst.match(negRe) || []).length;
+    const negWoorden = telWoorden(negTekst);
+    if (negWoorden > 100) {
+      const dichtheid = (negAantal / negWoorden) * 100;
+      if (dichtheid > wl.negatieve_lading.drempel_per_100_woorden) {
+        b.push(bevinding('tekst-negatieve-lading', ERNST.info, 'SW, Begrijpelijkheid > Positieve taal',
+          `${negAantal} woorden met negatieve lading op ${negWoorden} woorden (${dichtheid.toFixed(1)} per 100). Richtlijn is maximaal ${wl.negatieve_lading.drempel_per_100_woorden}.`,
+          { notitie: 'Vaste kleurcode-formuleringen tellen niet mee.' }));
+      }
+    }
+
+    // ---------- links ----------
+    for (const l of doc.links) {
+      if (l.tekst.length > lim.link.max_tekens_linktekst) {
+        b.push(bevinding('link-tekstlengte', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Lengte linkteksten',
+          `Linktekst is ${l.tekst.length} tekens. Maximaal ${lim.link.max_tekens_linktekst}.`, { fragment: l.tekst }));
+      }
+      const host = (l.href || '').replace(/^https?:\/\//, '').split('/')[0].replace(/^www\./, '');
+      const verboden = wl.niet_linken_naar.domeinen.find((d) => host === d || host.endsWith('.' + d));
+      if (verboden) {
+        b.push(bevinding('link-verboden-partij', ERNST.fout, 'SW, Relevantie > Naar wie linken we niet?',
+          `Link naar ${host}. We linken niet naar commerciële partijen, politieke partijen, belangenbehartigers of media.`,
+          { fragment: l.tekst }));
+      }
+    }
+    const ookNuttig = doc.blokken.find((x) => /ook nuttig/i.test(x.kop || ''));
+    if (ookNuttig) {
+      const n = ookNuttig.opsommingen.reduce((s, o) => s + o.items.length, 0);
+      if (n > lim.ook_nuttig.max_links) {
+        b.push(bevinding('link-ook-nuttig-max', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Links onderaan',
+          `"Ook nuttig" bevat ${n} links. Richtlijn is maximaal ${lim.ook_nuttig.max_links}.`));
+      }
+    }
+
+    // ---------- opsommingen en opmaak ----------
+    for (const o of doc.opsommingen) {
+      for (const item of o.items) {
+        if (item.includes(';')) {
+          b.push(bevinding('opsomming-puntkomma', ERNST.fout, 'SW, Schrijfregels > Opsommingen',
+            'We gebruiken nooit puntkomma\'s in opsommingen.', { fragment: item }));
+        }
+      }
+    }
+    for (const t of doc.opmaak.vet) {
+      if (t) b.push(bevinding('opmaak-vet-onderstreept', ERNST.letop, 'SW, Schrijfregels > Vet',
+        'We maken tekst niet vet.', { fragment: t }));
+    }
+    for (const t of doc.opmaak.onderstreept) {
+      if (t) b.push(bevinding('opmaak-vet-onderstreept', ERNST.letop, 'SW, Schrijfregels > Onderstrepen',
+        'We onderstrepen tekst niet.', { fragment: t }));
+    }
+    for (const t of doc.opmaak.cursief) {
+      if (!t) continue;
+      const toegestaan = /^laatste update/i.test(t) || telWoorden(t) <= 3;
+      if (!toegestaan) {
+        b.push(bevinding('opmaak-cursief', ERNST.letop, 'SW, Schrijfregels > Cursief',
+          'Cursief mag alleen bij een laatste update en bij een woord in een andere taal.', { fragment: t }));
+      }
+    }
+
+    // ---------- schrijfregels op tekstniveau ----------
+    const regelChecks = [
+      // Alleen echte paren tellen: 'veiligheidsrisico's' en 'Bahama's' bevatten een apostrof,
+      // geen aanhalingsteken.
+      ['aanhalingstekens', ERNST.letop, 'SW, Schrijfregels > Aanhalingstekens',
+        /“[^”]{1,200}”|‘[^’]{1,200}’|"[^"]{1,200}"/g,
+        (m) => `Aanhalingstekens om ${m.length > 40 ? m.slice(0, 40) + '…' : m}. Gebruik geen aanhalingstekens.`],
+      ['percentage-notatie', ERNST.letop, 'SW, Schrijfregels > Percentages',
+        /\d+\s+%|\d+\s*procent/gi, (m) => `"${m}" moet als 5% — symbool, zonder spatie.`],
+      ['valuta-notatie', ERNST.letop, "SW, Schrijfregels > Euro's / Valuta",
+        /€\d[\d.,]*|\d+\s*euro\b|EUR\s*\d[\d.,]*|€\s?\d+,-/gi,
+        (m) => `"${m}" schrijven als € met spatie en hele getallen zonder nullen of streepjes, bijvoorbeeld € 9 of € 15,86.`],
+      ['tijd-notatie', ERNST.letop, 'SW, Schrijfregels > Tijd',
+        /\b0\d\.\d{2}\b|\b\d{1,2}:\d{2}\b/g, (m) => `"${m}" moet als 8.00 uur — punt, geen voorloopnul.`],
+      ['datum-notatie', ERNST.letop, 'SW, Schrijfregels > Datum',
+        /\b\d{1,2}[-/]\d{1,2}[-/]\d{2,4}\b/g, (m) => `"${m}" moet voluit: 3 januari 2021.`],
+      ['telefoon-notatie', ERNST.letop, 'SW, Schrijfregels > Telefoonnummers',
+        /\b00\d{2}[\s-]?\d|\(0\)\s?\d/g, (m) => `"${m}" moet met plusteken en landcode: +31 …`],
+      ['rangtelwoord-notatie', ERNST.info, 'SW, Schrijfregels > Rangtelwoorden',
+        /\b\d+(ste|de)\b/g, (m) => `"${m}" moet als 1e, 2e.`],
+      ['schuine-streep', ERNST.info, 'SW, Schrijfregels > Schuine streep',
+        /\s\/\s/g, () => 'Gebruik voor en na een schuine streep geen spatie.'],
+      ['getallen-cijfers', ERNST.info, 'SW, Schrijfregels > Getallen / Cijfers',
+        /\b(twee|drie|vier|vijf|zes|zeven|acht|negen|tien|elf|twaalf|dertien|veertien|vijftien|zestien|zeventien|achttien|negentien|twintig)\b/gi,
+        (m) => `"${m}" als cijfer schrijven.`],
+    ];
+    for (const [id, ernst, bron, re, maakBoodschap] of regelChecks) {
+      const gezien = new Set();
+      for (const m of tekst.matchAll(re)) {
+        if (gezien.has(m[0])) continue;
+        gezien.add(m[0]);
+        b.push(bevinding(id, ernst, bron, maakBoodschap(m[0]), { fragment: contextVan(tekst, m.index) }));
+      }
+    }
+
+    // Duizendtallen apart: telefoonnummers en jaartallen zijn geen "grote getallen".
+    const zonderTelefoon = tekst.replace(/(\+|00)\d[\d\s().-]{6,}/g, (m) => ' '.repeat(m.length));
+    const gezienGetal = new Set();
+    for (const m of zonderTelefoon.matchAll(/(?<![\d.,+])[1-9]\d{3,}(?![\d.,])/g)) {
+      const n = Number(m[0]);
+      if (n >= 1900 && n <= 2100 && m[0].length === 4) continue;   // jaartal
+      if (gezienGetal.has(m[0])) continue;
+      gezienGetal.add(m[0]);
+      b.push(bevinding('getallen-cijfers', ERNST.info, 'SW, Schrijfregels > Getallen / Cijfers',
+        `"${m[0]}" scheiden met een punt per 3 cijfers: ${n.toLocaleString('nl-NL')}.`,
+        { fragment: contextVan(tekst, m.index) }));
+    }
+
+    for (const [fout, goed] of Object.entries(wl.afkortingen.vervang)) {
+      const re = new RegExp('(^|[\\s(])' + esc(fout).replace(/\\\./g, '\\.') + '(?=[\\s,)]|$)', 'gi');
+      const m = tekst.match(re);
+      if (m) {
+        b.push(bevinding('afkortingen-uitschrijven', ERNST.letop, 'SW, Schrijfregels > Afkortingen',
+          `"${fout}" uitschrijven als "${goed}" (${m.length}×).`));
+      }
+    }
+    for (const [fout, goed] of Object.entries(wl.eenheden_voluit.vervang)) {
+      const re = new RegExp('\\b\\d+\\s?' + esc(fout) + '\\b', 'g');
+      const m = tekst.match(re);
+      if (m) {
+        b.push(bevinding('eenheden-voluit', ERNST.info, 'SW, Schrijfregels > Afstanden/Gewicht/Hoeveelheden',
+          `"${m[0]}" voluit schrijven als ${goed}.`, { fragment: contextVan(tekst, tekst.indexOf(m[0])) }));
+      }
+    }
+    for (const [fout, goed] of Object.entries(wl.vaste_schrijfwijze.vervang)) {
+      const re = new RegExp('\\b' + esc(fout.trim()) + '\\b', 'i');
+      const m = tekst.match(re);
+      if (m) {
+        b.push(bevinding('schrijfwijze-vast', ERNST.fout, 'SW, Schrijfregels',
+          `"${m[0]}" schrijven we als "${goed.trim()}".`, { fragment: contextVan(tekst, m.index) }));
+      }
+    }
+    for (const w of wl.genderneutraal.woorden) {
+      const re = new RegExp('\\b' + esc(w) + '\\b', 'i');
+      if (re.test(tekst)) {
+        b.push(bevinding('genderneutraal', ERNST.letop, 'SW, Schrijfregels > Gender(neutraal) / lhbtiq+',
+          `"${w}" is niet genderneutraal.`, { fragment: contextVan(tekst, tekst.search(re)) }));
+      }
+    }
+    for (const { patroon, boodschap } of wl.genderneutraal.lhbtiq.patronen) {
+      const m = tekst.match(new RegExp(patroon, 'u'));
+      if (m) {
+        b.push(bevinding('lhbtiq-schrijfwijze', ERNST.letop, 'SW, Schrijfregels > Gender(neutraal) / lhbtiq+',
+          boodschap, { fragment: contextVan(tekst, m.index) }));
+      }
+    }
+
+    // ---------- metadescription en url ----------
+    if (doc.metadescription) {
+      const n = doc.metadescription.length;
+      if (n < lim.metadescription.min_tekens || n > lim.metadescription.max_tekens) {
+        b.push(bevinding('metadescription-lengte', ERNST.letop, 'SW, Vindbaarheid > Metadescriptions',
+          `De metadescription is ${n} tekens. Richtlijn is ${lim.metadescription.min_tekens}–${lim.metadescription.max_tekens}.`));
+      }
+    }
+    if (doc.url && doc.url.length > lim.url.max_tekens) {
+      b.push(bevinding('url-lengte', ERNST.info, 'SW, Schrijfregels > url',
+        `De URL is ${doc.url.length} tekens. Richtlijn is maximaal ${lim.url.max_tekens}.`));
+    }
+
+    const perRegel = {};
+    for (const x of b) perRegel[x.regel] = (perRegel[x.regel] || 0) + 1;
+
+    return {
+      bevindingen: b,
+      samenvatting: {
+        land: doc.land,
+        woorden: doc.woorden,
+        woordenlimiet: limiet,
+        kleurcodes: kleurenInTekst,
+        zinnen: doc.zinnen.length,
+        fout: b.filter((x) => x.ernst === ERNST.fout).length,
+        letop: b.filter((x) => x.ernst === ERNST.letop).length,
+        info: b.filter((x) => x.ernst === ERNST.info).length,
+        perRegel,
+      },
+      buitenScope: [
+        'Politieke gevoeligheden: daar doet de tool geen uitspraak over.',
+        'Inkorten: de tool signaleert de overschrijding en wijst de langste blokken aan, maar schrapt niet.',
+      ],
+    };
+  };
+}
+
+/** De tekst onder "In het kort": daar geldt de volgorde-regel voor de kleurcodes. */
+function kortBlokTekst(doc) {
+  const blok = doc.blokken.find((x) => (x.kop || '').trim().toLowerCase() === 'in het kort');
+  if (!blok) return null;
+  return [...blok.alineas.map((a) => a.tekst), ...blok.opsommingen.flatMap((o) => o.items)].join(' ');
+}
+
+/** De zin waarin de treffer staat. Een hele zin is bruikbaarder voor de redacteur dan een
+ *  afgeknipt tekenvenster, en het maakt bevindingen vergelijkbaar tussen adviezen: dezelfde
+ *  standaardzin levert dan letterlijk hetzelfde fragment op. */
+function contextVan(tekst, index, marge = 220) {
+  if (index == null || index < 0) return '';
+  const vanaf = Math.max(0, index - marge);
+  const tot = Math.min(tekst.length, index + marge);
+  const venster = tekst.slice(vanaf, tot);
+  const positie = index - vanaf;
+
+  let start = 0;
+  for (const m of venster.slice(0, positie).matchAll(/[.!?\n]\s+/g)) start = m.index + m[0].length;
+  let eind = venster.length;
+  const staart = venster.slice(positie).match(/[.!?\n]/);
+  if (staart) eind = positie + staart.index + 1;
+
+  const zin = venster.slice(start, eind).replace(/\s+/g, ' ').trim();
+  return zin || venster.replace(/\s+/g, ' ').trim();
+}
+
+
+
+
+return { maakToetser, norm, ERNST };
+})();</script>
+<script>
+const REGELDATA = {"matrix":{"_bron":"Matrix nieuwe format Reisadviezen (1).xlsx, tabbladen 'Koppen' en 'Uitleg'","_richtlijnen":{"uitschrijven":"Uitleg geven en evt handelingsperspectief wat bezoeker kan doen","verwijzen":"Korte tekst en doorverwijzen met een link","niet-melden":"Info valt buiten reisadvies en we verwijzen er ook niet naar"},"h2_vast":["In het kort","Welke veiligheidsrisico's zijn er in {land}?","Wat kan ik doen in een noodsituatie?","Hoe bereid ik mijn reis naar {land} voor?","Ook nuttig"],"koppen":[{"id":"in-het-kort","h2":"In het kort","h3":null,"richtlijn":"uitschrijven","toelichting":"In bullets: actuele ontwikkeling (alleen als er iets speelt op het gebied van veiligheid) met verwijzing naar Actueel, daarna kleurcode 1, 2 en 3. Daaronder in Let op: Aanmelden Informatieservice (standaardtekst).","opmerking":"Actueel max 25 woorden. Kleurcodes vaste formuleringen aanhouden. Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen."},{"id":"actueel","h2":"Veiligheidsrisico's","h3":"Actueel","richtlijn":"uitschrijven","toelichting":"Alleen indien relevant, als er een calamiteit is en de situatie onvoorspelbaar is. Wat speelt er? Waar: hele land of bepaalde gebieden? Is de kleurcode hierom opgeschaald? Welk handelingsperspectief heeft de klant?","opmerking":"Bijv. stroomstoringen niet, alleen als er een link is met veiligheid.","trefwoorden":["politieke onrust","spanningen","gevechten","aanslagen","demonstraties","natuurgeweld"]},{"id":"regionale-risicos","h2":"Veiligheidsrisico's","h3":"Regionale risico's","richtlijn":"uitschrijven","toelichting":"Alleen bij meer dan 1 kleurcode. Zo beknopt mogelijk: welke gebieden hebben welke kleurcode, wat zijn de concrete risico's daar, welk handelingsperspectief heeft de klant?","alleen_bij_meerdere_kleurcodes":true},{"id":"terrorisme","h2":"Veiligheidsrisico's","h3":"Terrorisme","richtlijn":"uitschrijven","toelichting":"Is er concrete terroristische dreiging? Worden er wel eens aanslagen gepleegd? Specifieke gebieden waar de klant risico loopt? Welk handelingsperspectief?"},{"id":"criminaliteit","h2":"Veiligheidsrisico's","h3":"Criminaliteit","richtlijn":"uitschrijven","toelichting":"Is er veel criminaliteit? Op welke plekken? Welke vormen zijn specifiek voor dit land? Welk handelingsperspectief (landspecifieke tips en verwijzing naar de pagina met standaardtips)?","subkopjes":["zakkenrollers","berovingen","oplichting","drogeren","ontvoeringen"]},{"id":"wetten-en-gebruiken","h2":"Veiligheidsrisico's","h3":"Wetten en gebruiken","richtlijn":"uitschrijven","toelichting":"Zijn er specifieke wetten en gebruiken om rekening mee te houden en welke vormen een risico?","opmerking":"Grenscontroles niet vermelden: je kunt altijd worden gecontroleerd en moet altijd een reisdocument bij je hebben.","subkopjes":["drugs","alcohol","lhbtiq+","grenzen/grensovergangen gesloten"]},{"id":"natuurgeweld","h2":"Veiligheidsrisico's","h3":"Natuurgeweld","richtlijn":"uitschrijven","toelichting":"Welke vormen van natuurgeweld zijn een risico, in welke gebieden en wanneer? Wat is het handelingsperspectief, met links naar relevante bronnen?","subkopjes":["aardbevingen","bosbranden","orkanen","overstromingen","vulkaanuitbarstingen"]},{"id":"landmijnen","h2":"Veiligheidsrisico's","h3":"Landmijnen","richtlijn":"uitschrijven","toelichting":"Apart kopje als het niet al bij Regionale risico's staat. Alleen indien relevant: waar liggen landmijnen, staat dit aangegeven, wat is het handelingsperspectief?"},{"id":"ziekte-uitbraak","h2":"Veiligheidsrisico's","h3":"Naam virus/bacterie/ziekte","richtlijn":"uitschrijven","toelichting":"Alleen als er op dat moment een uitbraak of risico is. Bijvoorbeeld ebola, coronavirus, SARS.","kop_is_variabel":true},{"id":"demonstraties","h2":"Veiligheidsrisico's","h3":"Demonstraties","richtlijn":"uitschrijven","toelichting":"Indien actueel hoort dit bij Actueel. Alleen een apart kopje bij landen waar het structureel is en een risico vormt voor de klant."},{"id":"verkeersongevallen","h2":"Veiligheidsrisico's","h3":"Verkeersongevallen","richtlijn":"uitschrijven","toelichting":"Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders.","alleen_bij_uitzondering":true},{"id":"smog","h2":"Veiligheidsrisico's","h3":"Smog","richtlijn":"niet-melden","toelichting":"Evt. alleen indien er ernstig gevaar is voor iedereen. Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld.","trefwoorden":["smog","luchtkwaliteit","luchtvervuiling","fijnstof"]},{"id":"fotos-maken","h2":"Veiligheidsrisico's","h3":"Foto's maken","richtlijn":"niet-melden","toelichting":"Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet.","trefwoorden":["foto's maken","fotograferen","filmen"]},{"id":"kledingvoorschriften","h2":"Veiligheidsrisico's","h3":"Kledingvoorschriften","richtlijn":"niet-melden","toelichting":"Reisgidsinfo.","trefwoorden":["kledingvoorschrift","bedek uw","kleed u","gepaste kleding"]},{"id":"wilde-dieren","h2":"Veiligheidsrisico's","h3":"Wilde dieren","richtlijn":"niet-melden","toelichting":"Reisgidsinfo.","trefwoorden":["wilde dieren","slangen","haaien","krokodillen"]},{"id":"weeshuistoerisme","h2":"Veiligheidsrisico's","h3":"Weeshuistoerisme","richtlijn":"niet-melden","toelichting":"Geen risico. En staat ook op Rijksoverheid.nl.","trefwoorden":["weeshuis","weeshuistoerisme","vrijwilligerswerk met kinderen"]},{"id":"in-geval-van-nood","h2":"Noodsituatie","h3":"In geval van nood","richtlijn":"uitschrijven","toelichting":"Lokale hulpdiensten (alarmnummers in land X), handelingsperspectief bij nood- of crisissituatie, contact met ambassade of consulaat-generaal."},{"id":"reisverzekering","h2":"Reisvoorbereiding","h3":"Reisverzekering","richtlijn":"uitschrijven","toelichting":"Wat voor reisverzekering heb ik nodig? Evt.: is de gezondheidszorg heel slecht, dan is goed verzekerd zijn extra belangrijk."},{"id":"paspoort-visum-rijbewijs","h2":"Reisvoorbereiding","h3":"Paspoort, visum, rijbewijs","richtlijn":"uitschrijven-verwijzen","toelichting":"Zo kort mogelijk: is een NL paspoort of ID-kaart nodig en hoelang geldig; is een visum nodig, bij welke verblijfsduur en waar aan te vragen; kan ik er met NL rijbewijs rijden of is een internationaal rijbewijs nodig (verwijzing ANWB).","kop_varianten":["Paspoort, visum, rijbewijs","Paspoort, ID-kaart, rijbewijs"]},{"id":"reisvaccinaties","h2":"Reisvoorbereiding","h3":"Reisvaccinaties","richtlijn":"verwijzen","toelichting":"Welke vaccinaties heb ik nodig, verplicht of niet? Verwijzen met link naar GGD/LCR. Indien inreisverplichting (gele koorts) dan uitschrijven.","opmerking":"Is een ziekte zoals mpox, zika, dengue of malaria geen actualiteit meer maar een structureel risico, dan kan het in het lijstje met mogelijke ziektes, met verwijzing naar de GGD-site."},{"id":"medicijnen","h2":"Reisvoorbereiding","h3":"Medicijnen","richtlijn":"verwijzen","toelichting":"Mag ik medicijnen meenemen? Heb ik een medisch paspoort of verklaring nodig? Link naar het CAK."},{"id":"bagageregels","h2":"Reisvoorbereiding","h3":"Bagageregels","richtlijn":"verwijzen","toelichting":"Wat mag ik meenemen naar land X (verwijzing lokale autoriteiten/douane)? Wat mag ik mee terugnemen naar Nederland (NWW)?"},{"id":"mobiele-telefoon","h2":"Reisvoorbereiding","h3":"Mobiele telefoon","richtlijn":"niet-melden","toelichting":"Te veel open deur. Evt. alleen noemen als bellen of bereik echt een groot probleem is, met verwijzing naar de pagina over mobiel gebruik in het buitenland.","trefwoorden":["simkaart","simlock","mobiel bereik","roaming"]},{"id":"geldzaken","h2":"Reisvoorbereiding","h3":"Geldzaken","richtlijn":"niet-melden","toelichting":"Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden.","trefwoorden":["pinnen","contant geld","geldautomaat","creditcard","wisselkoers"]},{"id":"eten-en-drinken","h2":"Reisvoorbereiding","h3":"Eten en drinken","richtlijn":"niet-melden","toelichting":"Reisgidsinfo.","trefwoorden":["kraanwater","drink geen","voedselveiligheid","rauw voedsel"]},{"id":"thuisblijvers","h2":"Reisvoorbereiding","h3":"Thuisblijvers","richtlijn":"niet-melden","toelichting":"Evt. deels overhevelen naar In geval van nood.","trefwoorden":["thuisblijvers","achterblijvers","laat uw reisschema achter"]},{"id":"gezondheidszorg","h2":"Reisvoorbereiding","h3":"Gezondheidszorg","richtlijn":"niet-melden","toelichting":"Evt. tekst opnemen bij Reisverzekering. Let op: slechte gezondheidszorg is nooit een reden om de kleurcode te wijzigen.","trefwoorden":["ziekenhuis","medische voorzieningen","gezondheidszorg","artsen"]},{"id":"ggd-app","h2":"Reisvoorbereiding","h3":"GGD-reis mee app","richtlijn":"niet-melden","toelichting":"","trefwoorden":["reis mee app","ggd-app"]}],"_h2_toelichting":"Vastgesteld op een echte API-respons (data/voorbeeld/CZE.xml). De matrix zegt 'Deze koppen zijn vast en in vraagvorm'; de korte labels (Veiligheidsrisico's, Noodsituatie, Reisvoorbereiding) zijn de matrixnamen, de vraagvormen staan in de gepubliceerde tekst. {land} is de landnaam; 'in {land}' mag ook 'op {land}' zijn volgens de schrijfwijzerregel over op/in bij eilanden. 'Ook nuttig' komt uit de schrijfwijzer (Gebruiksvriendelijkheid > Links onderaan de pagina) en staat in het veld additionalinformation.","h2_matrixnamen":["In het kort","Veiligheidsrisico's","Noodsituatie","Reisvoorbereiding"]},"kleurcodes":{"_bron":"Matrix nieuwe format Reisadviezen (1).xlsx, tabblad 'Kleurcode-teksten'","_placeholders":{"{land}":"landnaam zoals gebruikt in het advies","{gebieden}":"opsomming van gebieden, of 'de rest van {land}'"},"volgorde":["rood","oranje","geel","groen"],"_volgorde_regel":"De volgorde is altijd van rood naar groen.","_eerste_bullet_voluit":["De kleurcode van het reisadvies voor {land} is {kleur}.","De kleurcode van het reisadvies voor de gebieden {gebieden} is {kleur}."],"_vervolg_bullet_kort":"Voor de gebieden {gebieden} geldt kleurcode {kleur}.","_regionale_afsluiter":"De kleurcode van het reisadvies voor de rest van {land} is {kleur}.","_woordenaantal":{"1 kleurcode":1500,"meerdere kleurcodes":2000,"_bron":"tabblad 'Richtlijn woordenaantal'"},"kleuren":{"groen":{"op_de_kaart":"Geen bijzondere veiligheidsrisico's","in_het_kort_volledig":"De kleurcode van het reisadvies voor {land} is groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.","in_het_kort_deels":"Voor {gebieden} geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.","regionaal_kop":"Groen: u kunt erheen reizen","regionaal_tekst":"U kunt reizen naar gebieden met kleurcode groen. Lees welke veiligheidsrisico's er zijn.","actiezinnen":["U kunt erheen reizen","U kunt hierheen reizen","U kunt reizen naar gebieden met kleurcode groen"]},"geel":{"op_de_kaart":"Let op, veiligheidsrisico's","in_het_kort_volledig":"De kleurcode van het reisadvies voor {land} is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.","in_het_kort_deels":"Voor {gebieden} geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.","regionaal_kop":"Geel: let op, er zijn risico's","regionaal_tekst":"U kunt reizen naar gebieden met kleurcode geel. Maar let op: er zijn bijzondere veiligheidsrisico's.","actiezinnen":["Maar let op: er zijn bijzondere veiligheidsrisico's"]},"oranje":{"op_de_kaart":"Alleen noodzakelijke reizen","in_het_kort_volledig":"De kleurcode van het reisadvies voor {land} is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.","in_het_kort_deels":"Voor de gebieden {gebieden} geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.","regionaal_kop":"Oranje: alleen noodzakelijke reizen","regionaal_tekst":"Reis alleen naar gebieden met kleurcode oranje als dit noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.","actiezinnen":["Reis alleen hierheen als het noodzakelijk is","Reis alleen naar gebieden met kleurcode oranje als dit noodzakelijk is"]},"rood":{"op_de_kaart":"Niet reizen","in_het_kort_volledig":"De kleurcode van het reisadvies voor {land} is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.","in_het_kort_deels":"Voor de gebieden {gebieden} geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.","regionaal_kop":"Rood: niet reizen","regionaal_tekst":"Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.","uitzonderingszin":"Bent u in {land}? Verlaat het land dan als dat op een veilige manier kan.","_uitzonderingszin_nb":"Alleen in uitzonderlijke gevallen toevoegen, max. 25 woorden.","actiezinnen":["reis er niet heen","reis niet hierheen","reis niet naar gebieden met kleurcode rood"]}},"aanduiding_sjablonen":["De kleurcode van het reisadvies voor {land} is {kleur}","De kleurcode van het reisadvies voor de gebieden {gebieden} is {kleur}","De kleurcode van het reisadvies is {kleur} voor {gebieden}","Voor {gebieden} geldt kleurcode {kleur}","Voor de rest van {land} geldt kleurcode {kleur}"],"_aanduiding_bron":"Tabblad Kleurcode-teksten, kolom NB: de eerste bullet voluit, vervolgbullets verkort, en bij een opsomming van meerdere gebieden mag de formulering worden aangepast naar 'De kleurcode van het reisadvies is oranje voor gebieden X, Y en Z.'","_actiezinnen_toelichting":"De handelingsinstructie is het inhoudelijke deel van de vaste tekst. De aanduiding van de kleur mag variëren volgens de NB-kolom; de instructie niet."},"woordenlijsten":{"_bron":"Schrijfwijzer Nederland Wereldwijd - website.docx","twijfeltaal":{"_bron":"Begrijpelijkheid > B1: 'Vermijd twijfeltaal. Denk aan woorden zoals: misschien, vaak, mogelijk, bijna, etc.'","woorden":["misschien","vaak","mogelijk","mogelijkerwijs","bijna","waarschijnlijk","wellicht","eventueel","eventuele","soms","veelal","doorgaans","regelmatig","vermoedelijk","in principe","over het algemeen","kan voorkomen","zou kunnen"]},"negatieve_lading":{"_bron":"Begrijpelijkheid > Positieve taal: 'Gebruik zo min mogelijk woorden met een negatieve lading, zoals niet, nooit, probleem, mislukt etc.'","_toepassing":"Dichtheidstoets, geen fout per voorkomen. Vaste kleurcode-formuleringen tellen niet mee.","woorden":["niet","nooit","geen","probleem","problemen","mislukt","mislukken","onmogelijk","verboden","helaas","weiger","geweigerd","fout","gebrek"],"drempel_per_100_woorden":6},"afkortingen":{"_bron":"Schrijfregels > Afkortingen: 'Schrijf afkortingen uit: bijvoorbeeld in plaats van bijv.'","vervang":{"bijv.":"bijvoorbeeld","etc.":"enzovoort","e.d.":"en dergelijke","o.a.":"onder andere","m.b.t.":"met betrekking tot","i.v.m.":"in verband met","d.w.z.":"dat wil zeggen","n.a.v.":"naar aanleiding van","z.s.m.":"zo snel mogelijk","evt.":"eventueel","incl.":"inclusief","excl.":"exclusief","max.":"maximaal","min.":"minimaal","ca.":"ongeveer","t.o.v.":"ten opzichte van","i.p.v.":"in plaats van","a.u.b.":"alstublieft"},"toegestaan":["t/m","nr.","dhr.","mw."],"_toegestaan_toelichting":"Organisatie-afkortingen (ANWB, RDW, SVB, CAK, RvIG, GGD, LCR, EU, NAVO, NS, VK, VAE) worden apart afgehandeld: eerste keer voluit met afkorting tussen haakjes."},"eenheden_voluit":{"_bron":"Schrijfregels > Afstanden, Gewicht, Hoeveelheden: 'Schrijf aanduidingen voluit.'","vervang":{"km":"kilometer","cm":"centimeter","mm":"millimeter","kg":"kilogram","gr":"gram","ltr":"liter","ml":"milliliter"}},"vaste_schrijfwijze":{"_bron":"Schrijfregels: 'u heeft', 'u wilt', 'Caribisch', 'ID-bewijs niet gebruiken'","vervang":{"u hebt":"u heeft","u wil":"u wilt","Caraïbisch":"Caribisch","ID-bewijs":"identiteitsbewijs"},"_toelichting":"Hoofdletterongevoelig getoetst; het vervangwoord toont de juiste schrijfwijze."},"genderneutraal":{"_bron":"Schrijfregels > Gender(neutraal) / lhbtiq+","woorden":["hij/zij","zij/hij","hij of zij","zijn/haar","haar/zijn","echtgenoot","echtgenote","dames en heren","beste dames","de aanvrager zijn","mannelijke reiziger","vrouwelijke reiziger"],"lhbtiq":{"_bron":"Schrijfregels > Gender(neutraal) / lhbtiq+","_regel":"We gebruiken de term lhbtiq+. Bijvoeglijk met spatie (lhbtiq+ personen), definiërend met koppelteken (lhbtiq+-rechten).","patronen":[{"patroon":"\\blhbtiq(?!\\+)\\b","boodschap":"\"lhbtiq\" zonder plusteken; we gebruiken de term lhbtiq+."},{"patroon":"lhbtiq\\+(?=\\p{L})","boodschap":"\"lhbtiq+\" direct tegen het volgende woord; bijvoeglijk hoort er een spatie tussen (lhbtiq+ personen), definiërend een koppelteken (lhbtiq+-rechten)."},{"patroon":"\\bLHBTIQ\\+","boodschap":"\"LHBTIQ+\" in hoofdletters; we schrijven lhbtiq+."},{"patroon":"\\blhbti\\+|\\blhbt\\b","boodschap":"verouderde afkorting; we gebruiken lhbtiq+."}]}},"lijdende_vorm":{"_bron":"Begrijpelijkheid > B1: 'Schrijf actief. Dus vermijd de lijdende vorm.'","hulpwerkwoorden":["wordt","worden","werd","werden","is geworden","zijn geworden"],"_detectie":"hulpwerkwoord gevolgd door een voltooid deelwoord in dezelfde zin, inclusief scheidbare werkwoorden (wordt opgestuurd)","deelwoord_patroon":"(?:\\p{L}+)?ge\\p{L}+(?:d|t|en)|(?:be|ver|ont|her)\\p{L}+(?:d|t|en)","geen_deelwoord":["gebied","gebieden","geld","gebouw","gebouwen","gezin","geval","gevallen","gebrek","geluid","gewicht","gemeente","gerecht","gedrag","gevaar","geloof","geslacht","gewoonte","gedeelte","gebergte","gezondheid","gemak","genot","gehalte","geheel","verband","verschil","verkeer","verblijf","bericht","berichten","bedrag","begin","beleid","onthaal","herkomst"]},"lidwoorden":["de","het","een"],"leestekens_in_koppen_verboden":[".",",",";",":","!","\"","'","(",")"],"_leestekens_uitzondering":"Een vraagteken mag, want de vraagvorm is toegestaan in titels en tussenkoppen.","aanhalingstekens_verboden":["“","”","‘","’","\""],"_aanhalingstekens_bron":"Schrijfregels > Aanhalingstekens: 'Gebruik geen aanhalingstekens. Kan het echt niet zonder? Gebruik dan alleen enkele en rechte.'","niet_linken_naar":{"_bron":"Relevantie > Naar wie linken we niet?","categorieen":["commerciële partijen","politieke partijen","belangenbehartigers","uitzendingen of artikelen uit media"],"domeinen":["facebook.com","x.com","twitter.com","instagram.com","tiktok.com","nu.nl","nos.nl","telegraaf.nl","ad.nl","volkskrant.nl","nrc.nl","booking.com","tripadvisor.com","expedia.com","skyscanner.net"]}},"limieten":{"_bron":"Schrijfwijzer Nederland Wereldwijd - website.docx + Matrix nieuwe format Reisadviezen (1).xlsx","document":{"woorden_1_kleurcode":1500,"woorden_meerdere_kleurcodes":2000,"_bron":"Matrix, tabblad 'Richtlijn woordenaantal'"},"titel":{"max_tekens":70,"leestekens_toegestaan":["?"],"_bron":"Gebruiksvriendelijkheid > Titel; Vindbaarheid > Titel"},"intro":{"max_woorden":50,"begin_niet_met_vraag_als_titel_vraag_is":true,"_bron":"Gebruiksvriendelijkheid > Intro"},"tussenkop":{"max_woorden":5,"geen_lidwoord_vooraan":true,"leestekens_toegestaan":["?"],"niet_in_vraagvorm_als_titel_vraag_is":true,"_bron":"Gebruiksvriendelijkheid > (Tussen)koppen; Vindbaarheid > (Tussen)koppen"},"alinea":{"max_woorden":80,"_bron":"Gebruiksvriendelijkheid > Alinea's"},"zin":{"max_woorden":15,"richtlijn_woorden":12,"_bron":"Begrijpelijkheid > B1: 'Gebruik maximaal 15 woorden in een zin.'"},"vragen":{"max_opeenvolgend":2,"_bron":"Begrijpelijkheid > Vraagvorm: 'Beperk in de lopende tekst het aantal vragen opeenvolgende zinnen tot 2.'"},"link":{"max_tekens_linktekst":70,"_bron":"Gebruiksvriendelijkheid > Lengte linkteksten"},"ook_nuttig":{"max_links":3,"_bron":"Gebruiksvriendelijkheid > Links onderaan de pagina ('ook nuttig')"},"metadescription":{"min_tekens":130,"max_tekens":156,"_bron":"Vindbaarheid > Metadescriptions"},"url":{"max_tekens":100,"_bron":"Schrijfregels > url"},"actueel":{"max_woorden":25,"_bron":"Matrix, tabblad 'Koppen', rij 'In het kort': 'Actueel max 25 woorden.'"},"gebieden":{"max_noemen":3,"_bron":"Matrix, tabblad 'Koppen': 'Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen.'"},"uitzonderingszin_rood":{"max_woorden":25,"_bron":"Matrix, tabblad 'Kleurcode-teksten', rij Rood"},"taalmarkering":{"vanaf_aantal_anderstalige_woorden":4,"_bron":"Begrijpelijkheid > Woorden in een andere taal: 'Een taalmarkering is nodig bij 4 of meer woorden.'"}}};
+const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kort","html":"<h2>In het kort</h2>\n           <p>De kleurcode van het reisadvies voor Tsjechië is groen. U\n  kunt   erheen reizen. Lees welke veiligheidsrisico's er zijn.</p><div class=\"notification attention\">E-mail ontvangen als het reisadvies\n  wijzigt en bij (dreigende) crisis? <a\n    href=\"https://informatieservice.nederlandwereldwijd.nl\">Meld u aan\n    voor de Informatieservice</a></div>\n<h2>Welke veiligheidsrisico's zijn er in Tsjechië?</h2>\n<h3>Criminaliteit</h3>\n<p>Let in Tsjechië op voor dieven en zakkenrollers. Vooral in de\n  hoofdstad Praag. Door een goede voorbereiding verkleint u de kans dat\n  u wordt beroofd of opgelicht. Lees meer op de pagina <a\n    href=\"https://www.nederlandwereldwijd.nl/reisadvies/criminaliteit\">Hoe\n    voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?</a></p>\n<h3>Wetten en gebruiken</h3>\n<h4>Drugs</h4>\n        <p>U mag in Tsjechië geen drugs gebruiken, smokkelen of\n  verkopen.   Dit   geldt ook voor softdrugs. In Tsjechië zijn straffen\n  zwaarder dan   in Nederland.</p>\n        <h4>Alcohol</h4>\n        <p>Rijden onder invloed van alcohol is verboden en wordt in\n  Tsjechië   streng bestraft. Dit geldt ook als u met een fiets rijdt.</p>\n        <h4>Drones</h4>\n        <p>Het gebruik van drones is op sommige plaatsen in Tsjechië\n  verboden.   Uw drone kan in beslag worden genomen en kunt u een boete\n  krijgen. <a href=\"https://czechdronerules.cz/\">Lees meer informatie\n    over waar u     in Tsjechië drones mag gebruiken</a> op de website\n  van de   Tsjechische luchtverkeersleiding of <a\n    href=\"https://dronemap.gov.cz/index.php?lang=2\">bekijk de\n    interactieve kaart</a> (informatie in het Engels).</p>\n<h3>Natuurgeweld</h3>\n<h4>Bosbranden</h4>\n      <p>In Tsjechië komen in de zomer bosbranden voor. Vooral als het\n  lang   droog is. Reist u in deze periode naar Tsjechië? <a\n    href=\"https://hzscr.gov.cz/hasicien/article/about-us-scope-of-activities-integrated-rescue-system.aspx\">Lees\n    informatie over bosbranden</a> op de website van de Tsjechische\n  brandweer (informatie in het Engels).</p>\n      <h4>Overstromingen</h4>\n      <p>In Tsjechië kunnen hevige regenval en overstromingen voorkomen.</p>\n      <h4>Lawines</h4>\n      <p>In Tsjechië is een hoog risico op lawines in de winter. Vooral\n  als   u gaat skiën of snowboarden buiten de officiële pistes\n  (off-piste).   Bereid u voor:</p>\n      <ul>  <li>Check vooraf de weersvoorspellingen en\n  sneeuwomstandigheden.</li>  <li>Ga nooit alleen buiten de officiële\n  pistes.</li>  <li>Neem een lawine-airbag, gps-tracker en\n    overlevingspakket mee.</li>  <li>Zorg voor een verzekering die de\n    kosten dekt van bergreddingsdiensten, helikoptervervoer en\n  repatriëring.</li>  <li>Volg altijd de aanwijzingen van de Tsjechische\n  autoriteiten.</li> </ul>\n      <p>   <a href=\"https://www.avalanches.org/\">Lees informatie over\n  lawinegevaar</a> op de website van de European Avalanche Warning\n  Service (informatie in het Engels).</p>\n      <h4>Wat kunt u doen bij natuurgeweld?</h4>\n      <p>In Tsjechië is een risico op natuurgeweld. Krijgt u hiermee te maken?</p>\n      <ul>  <li>Volg altijd de aanwijzingen van de lokale\n  autoriteiten.</li>     <li>Houd de (lokale) media in de gaten. De\n    situatie kan snel   veranderen.</li>  <li>Neem contact op met de\n    lokale autoriteiten, uw     hotel of reisorganisatie als u een vraag\n    heeft over de actuele   situatie.</li> </ul>\n<h2>Wat kan ik doen in een noodsituatie?</h2>\n<h3>In geval van nood</h3>\n<h4>Lokale hulpdiensten</h4>\n    <p>Heeft u direct hulp nodig in Tsjechië? Neem contact op met de\n  lokale hulpdiensten via:</p>\n    <p>het Algemeen alarmnummer: 112</p>\n    <p>Let op: hulpverleners in kleinere steden spreken geen of\n  nauwelijks   Engels. Houd hier rekening mee.</p>\n    <h4>Nood- of crisissituatie</h4>\n    <ul>  <li>Bent u in Tsjechie en bent u in nood? Bijvoorbeeld: u bent\n    opgenomen in het ziekenhuis, of u bent bestolen. <a\n      href=\"https://www.nederlandwereldwijd.nl/hulp-bij-nood\">Lees wat u\n      kunt doen in geval van nood</a>.</li>  <li>Komt u in een\n    crisissituatie terecht (zoals politieke onrust, een terroristische\n    aanslag of natuurgeweld)? <a\n      href=\"https://www.nederlandwereldwijd.nl/crisis/regelen-in-crisissituatie\">Lees\n      wat u kunt doen in een crisissituatie</a>.</li>  <li>Laat uw\n    familie/vrienden weten hoe het met u gaat.</li>  <li>Volg altijd de\n    aanwijzingen op van de lokale autoriteiten.</li>  <li>Maakt u een\n    georganiseerde reis? Houd contact met uw reisorganisatie.</li>\n    <li>Heeft u hulp nodig? Neem contact op met uw reisverzekeraar of\n    met de Nederlandse ambassade.</li> </ul>\n    <h4>Contactgegevens Nederlandse ambassade in geval van nood</h4>\n    <p>Nederlandse ambassades en consulaten-generaal zijn 24 uur per\n  dag,   7 dagen per week bereikbaar via het contactcenter van\n  NederlandWereldwijd op telefoonnummer <a\n    href=\"tel:+31-247-247-247\">+31 247 247 247</a> of via WhatsApp: <a\n    href=\"https://wa.me/31857737400\">+31 857 737 400</a>.</p>\n    <h4>Nederlandse ambassade in Tsjechië</h4>\n    <p>Bekijk de <a\n    href=\"https://www.nederlandwereldwijd.nl/contact/ambassades-consulaten-generaal/tsjechie/ambassade-praag\">contactgegevens\n    van de Nederlandse ambassade in Praag</a>.</p>\n<h2>Hoe bereid ik mijn reis naar Tsjechië voor?</h2>\n<h3>Reisverzekering</h3>\n<ul>  <li>Sluit altijd een goede reisverzekering af die de extra kosten\n    dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet\n    worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt\n    deze kosten niet altijd 100 procent.</li>  <li>Gaat u een (extreme)\n    sport beoefenen? Sluit een extra verzekering af.</li> </ul><div class=\"notification attention\">Laat familie in Nederland weten hoe\n  en waar u bent verzekerd. In een noodgeval kan uw familie dan hulp\n  inschakelen van uw verzekeraar.</div>\n<h3>Paspoort, ID-kaart, rijbewijs</h3>\n<h4>Paspoort of ID-kaart</h4>\n<ul>\n  <li>U heeft een geldig paspoort of geldige ID-kaart nodig om naar\n    Tsjechië te reizen.</li>\n  <li>Uw Nederlandse paspoort of ID-kaart moet geldig zijn tijdens de\n    hele periode dat u in het land bent.</li> </ul>\n  <p>Deel een kopie van uw paspoort of ID-kaart met familie in\n  Nederland. Als u iets overkomt, is het belangrijk dat anderen uw\n  gegevens hebben. <a\n    href=\"https://www.rijksoverheid.nl/onderwerpen/identiteitsfraude/vraag-en-antwoord/veilige-kopie-identiteitsbewijs\">Lees\n    hoe u een veilige kopie maakt van uw paspoort of ID-kaart</a> op de\n  website van de Rijksoverheid.</p>\n<h4>Visum</h4>\n<p>U heeft geen visum nodig voor Tsjechië als u met een Nederlands\n  paspoort of Nederlandse ID-kaart reist.</p>\n<h4>Reizen met kinderen</h4>\n<p>Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig\n  voor een reis naar Tsjechië. Reist u alleen met 1 of meer kinderen\n  jonger dan 18 jaar? <a\n    href=\"https://www.rijksoverheid.nl/documenten/formulieren/2014/02/06/formulier-toestemming-reizen-met-minderjarige-naar-het-buitenland\">Check\n    welke documenten u nodig heeft om te reizen met een minderjarig\n  kind</a> en neem die mee. Zo voorkomt u problemen en lange wachttijden\n  bij grenscontroles.</p>\n<h4>Registratieplicht</h4>\n<p>Blijft u langer dan 30 dagen in Tsjechië? Registreer u bij de lokale\n  Vreemdelingenpolitie. Als uw accommodatie u registreert, hoeft u dit\n  zelf niet meer te doen. <a\n    href=\"https://frs.gov.cz/en/obligations-for-foreigners/obligations-for-eu-citizens-and-their-family-members/\">Lees\n    meer over registratie</a> op de website van het Tsjechische\n  ministerie van Binnenlandse Zaken (informatie in het Engels).</p>\n<h4>Rijbewijs</h4>\n<p>Uw Nederlandse rijbewijs is geldig in Tsjechië. <a\n    href=\"https://www.anwb.nl/vakantie/tsjechie/reisvoorbereiding\">Lees\n    meer over rijden in Tsjechië</a> op de website van de ANWB.</p>\n<h3>Reisvaccinaties</h3>\n<ul>   <li>     <a\n      href=\"https://www.ggdreisvaccinaties.nl/land/tsjechie\">Check\n      welke vaccinaties u nodig heeft voor Tsjechië</a> op de website\n    van GGD Reisvaccinaties.</li>   <li>Maak een vaccinatie-afspraak bij\n    u in de buurt. <a\n      href=\"https://www.lcr.nl/Vaccinatie-adressen\">Check alle\n      aanbieders van reisvaccinaties</a> op de website van het Landelijk\n    Coördinatiecentrum Reizigersadvisering (LCR).</li> </ul>\n<h3>Medicijnen</h3>\n<p>Gebruikt u medicijnen?</p>\n                <ul>  <li>Neem voldoende medicijnen mee, ook voor extra\n  dagen.</li>     <li>     <a\n      href=\"https://www.hetcak.nl/medicijnen-mee-op-reis/\">Check of u\n      een medicijnverklaring nodig heeft</a> om uw medicijnen mee te\n    mogen nemen naar Tsjechië.</li>  <li>Neem de medicijnen altijd mee\n    in de originele verpakking.</li> </ul>\n<h3>Geldzaken</h3>\n<p>In taxi’s moet u vaak contant betalen. Zorg ervoor dat u genoeg\n  contant geld bij u heeft. In kleine dorpen in Tsjechië zijn meestal\n  geen pinautomaten. Houd er rekening mee dat u daar geen geld kunt pinnen.</p>\n<h3>Bagageregels</h3>\n<h4>Wat mag ik meenemen naar Tsjechië?</h4>\n                <p>   <a\n    href=\"https://celnisprava.gov.cz/en/clo/informace-pro-fyzicke-osoby/Pages/moving-of-natural-persons.aspx\">Check\n    wat u mag meenemen naar Tsjechië</a> op de website van de\n  Tsjechische overheid (informatie in het Engels).</p>\n                <h4>Wat mag ik mee terugnemen naar Nederland?</h4>\n                <p>Bekijk wat u vanuit Tsjechië mee terug mag nemen naar\n  Nederland   op   de pagina <a\n    href=\"https://www.nederlandwereldwijd.nl/reizen-naar-nederland/meenemen-nederland\">Wat\n    mag ik meenemen naar Nederland?</a></p>\n<h2>Ook nuttig</h2>\n    <p>   <a\n    href=\"https://www.nederlandwereldwijd.nl/reisadvies/reisadviezen-kleurcodes\">Lees\n    meer over reisadviezen en kleurcodes</a></p>"},{"iso":"AGO","land":"Angola","kenmerk":"meerdere kleurcodes","html":"<h2>In het kort</h2>\n      <ul>  <li>In buurland de Democratische Republiek Congo (DRC) is\n    een     uitbraak van het ebolavirus. De Angolese overheid voert\n    daarom     gezondheidscontroles uit. Lees meer onder Actueel.</li>\n    <li>De     kleurcode van het reisadvies is oranje voor de provincie\n    Cabinda. En     voor het grensgebied van Angola met de Democratische\n    Republiek Congo     in de provincie Lunda-Norte. Reis alleen\n    hierheen als het     noodzakelijk is. Het is niet veilig er op\n    vakantie te gaan. Lees     meer onder Regionale risico’s.</li>\n    <li>Voor de rest van Angola     geldt kleurcode geel. U kunt\n    hierheen reizen. Maar let op: er zijn     bijzondere\n  veiligheidsrisico’s.</li> </ul><div class=\"notification attention\">E-mail ontvangen als het reisadvies\n  wijzigt en bij (dreigende) crisis? <a\n    href=\"https://informatieservice.nederlandwereldwijd.nl\">Meld u aan\n    voor de Informatieservice</a></div>\n<h2>Welke veiligheidsrisico's zijn er in Angola?</h2>\n<h3>Actueel</h3>\n<h4>Ebolavirus in buurland Democratische Republiek Congo (DRC)</h4>\n     <p>In de DRC is een uitbraak van het ebolavirus. Om verspreiding\n  van   het virus te voorkomen zijn er gezondheidscontroles aan de\n  grenzen in   het noordoosten van Angola. Ook op het vliegveld in\n  Luanda worden   mensen gecontroleerd die uit de DRC komen.</p>\n     <p>   <a href=\"https://www.rivm.nl/ebola\">Lees informatie over het\n  ebolavirus</a> op de website van het RIVM.</p>\n<h3>Regionale risico's</h3>\n<h4>Oranje: alleen noodzakelijke reizen</h4>\n      <div class=\"notification attention\">Reis alleen naar gebieden met\n  kleurcode oranje als dit noodzakelijk is. Bijvoorbeeld voor de\n  uitvaart van een familielid. Of als u er dringend heen moet voor uw\n  werk. Het is niet veilig er op vakantie te gaan. De Nederlandse\n  ambassade kan u minder goed helpen als u in de problemen komt.</div>\n      <p>Voor de volgende gebieden geldt kleurcode oranje:</p>\n      <ul>  <li>de provincie Cabinda</li>  <li>het grensgebied van\n    Angola     met de Democratische Republiek Congo in de provincie\n  Lunda-Norte</li> </ul>\n      <h4>De provincie Cabinda</h4>\n      <p>De provincie Cabinda ligt tussen de Republiek Congo in het\n  noorden   en de Democratische Republiek Congo in het zuiden.\n  Separatistische   groepen vallen hier buitenlanders aan. Ook is er een\n  risico op   ontvoering. Vanwege de onrust zijn in deze provincie veel\n  militairen aanwezig.</p>\n      <p>Is het voor u noodzakelijk om naar Cabinda te gaan? Reis dan\n  per   vliegtuig vanuit de hoofdstad Luanda.</p>\n      <h4>Het grensgebied in de provincie Lunda-Norte</h4>\n      <p>De provincie Lunda-Norte ligt in het noordoosten van Angola. In\n  het   grensgebied met de Democratische Republiek Congo voeren de\n  politie en   het leger controles uit. Dit heeft te maken met illegale\n  migratie en   ongewenste bezoeken aan het gebied dat veel diamanten\n  heeft. De kans   om aangehouden of gevangen te worden is hier groot.\n  Reis alleen naar   het gebied 10 kilometer van de grens met de\n  Democratische Republiek   Congo als dit noodzakelijk is.</p>\n      <h4>Geel: let op, er zijn risico’s</h4>\n      <div class=\"notification attention\">U kunt reizen naar gebieden\n  met   kleurcode geel. Maar let op: er zijn bijzondere veiligheidsrisico's</div>\n      <p>De kleurcode van het reisadvies voor de rest van Angola is\n  geel.   Lees verder in het reisadvies met welke risico’s u te maken\n  kunt krijgen.</p>\n<h3>Criminaliteit</h3>\n<p>Houd in Angola rekening met geweld. In grote steden zoals Luanda\n  komen gewapende overvallen, berovingen en autodiefstallen voor. Veel\n  mensen hebben een wapen. Daar zijn nauwelijks controles op.</p>\n           <h4>Voorkom dat u slachtoffer wordt van criminaliteit</h4>\n           <ul>  <li>Laat een contactpersoon uw bezoek aan Angola\n    regelen.     Zeker     als u de situatie ter plekke niet goed kent.\n    Zorg dat uw     contactpersoon u ophaalt van het vliegveld.</li>\n    <li>Regel uw     vervoer vooraf. Bijvoorbeeld via uw hotel,\n    reisorganisatie of via de     app UGO. Maak geen gebruik van de\n    lokale blauw-witte   taxibusjes.</li>  <li>Loop niet alleen op\n    straat, zeker niet na     zonsondergang. Wees overdag ook\n  alert.</li>  <li>Rijdt u auto? Houd     de deuren op slot en de ramen\n  gesloten.</li>  <li>Verzet u niet bij     een overval of beroving.\n    Verzet leidt vaak tot (meer) geweld.</li> </ul>\n           <p>Door een goede voorbereiding verkleint u de kans dat u\n  wordt   beroofd of opgelicht. Lees meer op de pagina <a\n    href=\"https://www.nederlandwereldwijd.nl/reisadvies/criminaliteit\">Hoe\n    voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?</a></p>\n<h3>Wetten en gebruiken</h3>\n<h4>Drugs</h4>\n                                               <p>U mag in Angola geen\n  drugs   gebruiken,   bezitten   of   verkopen.   Dit   geldt ook voor\n  softdrugs. In Angola   zijn   straffen   veel zwaarder   dan in\n  Nederland. En de   omstandigheden in   gevangenissen zijn slecht.</p>\n                                               <h4>Lhbtiq+</h4>\n                                               <p>Bent u een lhbtiq+\n  persoon?   En   wilt   u   naar   Angola   reizen?   In   het\n  openbaar liefde   uiten   is niet   strafbaar   in   Angola. U kunt\n  wel te   maken   krijgen   met   discriminatie en   agressie. Niet\n  iedereen   heeft een   positieve   houding tegenover uw   seksuele\n  voorkeur of   identiteit.   Lees   de   tips op de pagina <a\n    href=\"https://www.nederlandwereldwijd.nl/reisadvies/lhbtiq\">Kan ik\n    veilig reizen als lhbtiq+ persoon?</a> om risico’s te verkleinen.</p>\n                                               <h4>Foto’s maken</h4>\n                                               <p>Maak in Angola geen\n  foto’s   van   mensen   in   uniform,   militaire   objecten, openbare\n  gebouwen,   bruggen of   luchthavens. Dit   is verboden.</p>\n<h3>Natuurgeweld</h3>\n<h4>Hevige regen</h4>\n                                              <p>Het regenseizoen in\n  Angola   duurt   van   oktober   tot   mei.   Hevige   regen   kan\n  wegen   beschadigen en   onbegaanbaar maken.</p>\n                                              <ul>  <li>Volg altijd de\n    aanwijzingen     van     de     lokale     autoriteiten,\n    bijvoorbeeld de     brandweer of   politie.</li>     <li>Houd de\n    (lokale)     media in     de gaten. De     situatie kan snel\n  veranderen.</li>  <li>Heeft     u een vraag over     de actuele\n    situatie?     Neem contact op met de     lokale     autoriteiten, uw\n    hotel of   reisorganisatie.</li> </ul>\n<h3>Landmijnen</h3>\n<p>In alle provincies van Angola liggen landmijnen, bommen, granaten en\n  mortieren. Deze zijn zeer gevaarlijk.</p>\n                                    <p>Bekende toeristische plekken zijn\n  vrij   van   landmijnen   en   kunt   u   veilig bezoeken. Zoals Cabo\n  Ledo,   het   schiereiland   Mussolo,   Kwanza   Lodge, Quiçama\n  National Park,   Barro   do Dande,   Pedras Negras   de Pundo\n  Andongo en de Calendula Falls.</p>\n                                    <p>Reist u naar andere gebieden in Angola?</p>\n                                    <ul>  <li>Blijf op hoofdwegen. Bent\n    u     op     een     secundaire     weg     of     op     een\n    wandelpad?     Blijf dan in     het midden van     de weg.     Ga\n    niet van     de weg of     de     paden af.</li>     <li>Vraag\n    inwoners     naar de gevaren.     Zij weten     welke     gebieden u\n    beter     kunt   vermijden.</li>     <li>Let     op     (in)formele\n    markeringen, zoals     rood-witte     verf, vastgebonden     gras en\n    gekruiste     takken. Deze     geven aan dat er mijnen   zijn.</li> </ul>\n<h3>Demonstraties</h3>\n<p>Houd in Angola rekening met demonstraties van verschillende groepen,\n  zoals politieke partijen, verenigingen en studentenorganisaties.\n  Demonstraties komen vooral voor in Luanda en de grotere\n  provinciesteden. Hierbij kan geweld ontstaan.</p>\n                                            <ul>  <li>Wees voorzichtig\n    en     vermijd     demonstraties     en     grote   menigten.</li>\n    <li>Blijf op de     hoogte van de laatste     ontwikkelingen.\n    Volg het laatste     nieuws via de lokale media of     vraag bij uw\n    hotel om   informatie.</li>  <li>Volg de aanwijzingen     van de\n    lokale   overheid.</li> </ul>\n<h2>Wat kan ik doen in een noodsituatie?</h2>\n<h3>In geval van nood</h3>\n<h4>Lokale hulpdiensten</h4>\n             <p>Heeft u direct hulp nodig in Angola? Neem contact op met\n  de   lokale hulpdiensten:</p>\n             <ul>   <li>Politie: 113</li>   <li>Ambulance: 116</li>\n    <li>Brandweer:   115</li> </ul>\n             <p>Let op: Hulpverleners spreken geen of nauwelijks Engels.\n  Houd   hier   rekening mee.</p>\n             <h4>Nood- of crisissituatie</h4>\n             <ul>   <li>Bent u in Angola en bent u in nood?\n    Bijvoorbeeld:     u     bent     opgenomen     in het ziekenhuis, of\n    u bent bestolen.       <a\n      href=\"https://www.nederlandwereldwijd.nl/hulp-bij-nood\">Lees\n      wat u       kunt doen in geval van nood</a>.</li>   <li>Komt u in\n    een     crisissituatie terecht (zoals politieke onrust, een\n    terroristische aanslag of natuurgeweld)? <a\n      href=\"https://www.nederlandwereldwijd.nl/crisis/regelen-in-crisissituatie\">Lees\n      wat u kunt doen in een crisissituatie</a>.</li>   <li>Laat uw\n    familie/vrienden weten hoe het met u gaat.</li>   <li>Volg altijd de\n    aanwijzingen op van de lokale autoriteiten.</li>   <li>Maakt u een\n    georganiseerde reis? Houd contact met uw reisorganisatie.</li>\n    <li>Heeft u hulp nodig? Neem contact op met uw reisverzekeraar of\n    met     de Nederlandse ambassade.</li> </ul>\n             <h4>Contactgegevens Nederlandse ambassade in geval van nood</h4>\n             <p>Nederlandse ambassades en consulaten-generaal zijn 24\n  uur   per   dag,   7   dagen per week bereikbaar via het contactcenter\n  van   NederlandWereldwijd op telefoonnummer <a\n    href=\"tel:+31-247-247-247\">+31 247 247 247</a> of via WhatsApp: <a\n    href=\"https://wa.me/31857737400\">+31 857 737 400</a>.</p>\n             <p>Bent u in Angola en heeft u een lokaal telefoonnummer?\n  Bel   het   lokale   nummer van de Nederlandse ambassade. U betaalt\n  dan het   lokale tarief.</p>\n             <h4>Nederlandse ambassade in Angola</h4>\n             <p>Bekijk de contactgegevens van de <a\n    href=\"https://www.nederlandwereldwijd.nl/contact/ambassades-consulaten-generaal/angola/ambassade-luanda\">Nederlandse\n    ambassade in Luanda</a>.</p>\n<h2>Hoe bereid ik mijn reis naar Angola voor?</h2>\n<h3>Reisverzekering</h3>\n<ul>  <li>Sluit altijd een goede reisverzekering af die extra kosten\n    dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland\n    moet worden vervoerd (repatriëring). Uw basiszorgverzekering\n    vergoedt deze kosten niet altijd 100 procent.</li>  <li>Voor een\n    reis naar Angola is een goede reisverzekering extra belangrijk. Want\n    de gezondheidszorg is zeer beperkt, vooral buiten Luanda. In Luanda\n    zijn particuliere klinieken. De kosten van een medische behandeling\n    kunnen hoog zijn.</li>  <li>Let op: Bij een oranje of rood\n    reisadvies passen veel Nederlandse verzekeraars de voorwaarden van\n    hun reisverzekeringen aan. Bepaalde risico’s of kosten bij schade\n    zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar.</li> </ul><div class=\"notification attention\">Laat familie in Nederland weten hoe\n  en waar u bent verzekerd. In een noodgeval kan uw familie dan hulp\n  inschakelen van uw verzekeraar.</div>\n<h3>Paspoort, visum, rijbewijs</h3>\n<h4>Paspoort</h4>\n<ul>\n  <li>U heeft een geldig paspoort nodig om naar Angola te reizen.</li>\n  <li>Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op\n    het moment van aankomst in het land.</li>\n</ul>\n<p>Deel een kopie van uw paspoort met familie in Nederland. Als u iets\n  overkomt, is het belangrijk dat anderen uw paspoortgegevens hebben. <a\n    href=\"https://www.rijksoverheid.nl/onderwerpen/identiteitsfraude/vraag-en-antwoord/veilige-kopie-identiteitsbewijs\">Lees\n    hoe u een veilige kopie maakt van uw paspoort</a> op de website van\n  de Rijksoverheid.</p>\n<h4>Visum</h4>\n<p>Of u een visum nodig heeft, hangt af van hoelang u in Angola blijft:</p>\n<ul>\n  <li>Blijft u 30 dagen of korter in Angola? En reist u met een\n    Nederlands paspoort? Dan heeft u geen visum nodig.</li>\n  <li>Blijft u langer dan 30 dagen in Angola? En reist u met een\n    Nederlands paspoort? Dan heeft u een visum nodig.</li>\n</ul>\n<p>\n  <a\n    href=\"https://www.rijksoverheid.nl/themas/migratie-en-reizen/ambassades-consulaten-en-overige-vertegenwoordigingen/overzicht-landen-en-gebieden/angola\">Neem\n    contact op met de ambassade van Angola in Den Haag</a> voor meer\n  informatie over visa. <a\n    href=\"https://www.consuladoangolaroterdao.nl/\">Bekijk welke\n    documenten u nodig heeft voor een visum</a> op de website van het\n  consulaat-generaal van Angola.</p>\n<h4>Reizen met kinderen</h4>\n<p>Kinderen hebben ook een geldig paspoort nodig voor een reis naar\n  Angola. Reist u alleen met 1 of meer kinderen jonger dan 18 jaar?<a\n    href=\"https://www.rijksoverheid.nl/documenten/formulieren/2014/02/06/formulier-toestemming-reizen-met-minderjarige-naar-het-buitenland\">\n    Check welke documenten u nodig heeft om te reizen met een\n    minderjarig kind</a> en neem die mee. Zo voorkomt u problemen en\n  lange wachttijden bij grenscontroles.</p>\n<h4>Rijbewijs</h4>\n<p>In Angola is uw Nederlandse rijbewijs alleen geldig als u ook een\n  geldig internationaal rijbewijs heeft. <a\n    href=\"https://www.anwb.nl/auto/rijbewijs/het-rijbewijs/internationaal-rijbewijs-afrika\">Lees\n    meer over rijden in Angola</a> op de website van de ANWB.</p>\n<h3>Reisvaccinaties</h3>\n<h4>Reisvaccinaties</h4>\n     <ul>  <li>     <a\n      href=\"https://www.ggdreisvaccinaties.nl/land/angola\">Check welke\n      vaccinaties u nodig heeft voor Angola</a> op de website van GGD\n  Reisvaccinaties.</li>  <li>U leest op de website van de GGD ook meer\n    over ziektes die er voorkomen, zoals malaria, gele koorts en\n    hondsdolheid (rabiës).</li>  <li>Maak een vaccinatie-afspraak bij u\n    in de buurt. <a href=\"https://www.lcr.nl/Vaccinatie-adressen\">Check\n      alle aanbieders van reisvaccinaties</a> op de website van het\n    Landelijk Coördinatiecentrum Reizigersadvisering (LCR).</li> </ul>\n     <h4>Gele koorts</h4>\n     <ul>  <li>Reist u uit een land waar gele koorts heerst? Bij\n    aankomst     in Angola bent u verplicht een bewijs van vaccinatie\n    tegen gele     koorts te laten zien.</li>  <li>Heeft u geen bewijs\n    van vaccinatie     tegen gele koorts? Dan komt u mogelijk het land\n    niet in.</li>     <li>Neem altijd uw gele vaccinatieboekje mee.</li> </ul>\n     <h4>Cholera</h4>\n     <p>In Angola komt cholera voor. De kans op besmetting is het\n  grootst   in het regenseizoen van november tot en met maart. <a\n    href=\"https://lcr.nl/infectieziekten/8305\">Lees meer over\n  cholera</a> op de website van het Landelijk Coördinatiecentrum\n  Reizigersadvisering (LCR).</p>\n<h3>Medicijnen</h3>\n<p>Gebruikt u medicijnen?</p>\n                               <ul>  <li>Neem voldoende medicijnen mee,\n    ook     voor     extra   dagen.</li>     <li>     <a\n      href=\"https://www.hetcak.nl/regelingen/medicijnen-mee-op-reis\">Check\n      of u een medicijnverklaring nodig heeft</a> om uw medicijnen mee\n    te mogen nemen naar Angola.</li>  <li>Neem de medicijnen altijd mee\n    in de originele verpakking. </li> </ul>\n<h3>Geldzaken</h3>\n<h4> </h4>\n                                <ul>  <li>U kunt in Angola beperkt\n    creditcards     gebruiken.     Alleen     Visa     wordt als\n    creditcard   geaccepteerd.</li>  <li>In     Angola kunt     u niet\n    betalen met     euro’s of Amerikaanse     dollars. Neem daar wel\n    voldoende     van mee. U kunt euro’s of     dollars wisselen voor de\n    Angolese     Kwanza     (AOA). Bijvoorbeeld     op het vliegveld, in\n    hotels     of bij officiële     wisselkantoren     (casa de\n  cambio).</li> </ul>\n<h3>Bagageregels</h3>\n<h4>Wat mag ik meenemen naar Angola?</h4>\n                     <p>Check wat de regels zijn bij de lokale\n  autoriteiten.   Bijvoorbeeld   de douane van Angola.</p>\n                     <h4>Wat mag ik mee terugnemen naar Nederland?</h4>\n                     <p>Bekijk wat u vanuit Angola mee terug mag nemen\n  naar   Nederland   op   de   pagina <a\n    href=\"https://www.nederlandwereldwijd.nl/reizen-naar-nederland/meenemen-nederland\">Wat\n    mag ik meenemen naar Nederland?</a></p>\n<h2>Ook nuttig</h2>\n    <p>   <a\n    href=\"https://www.nederlandwereldwijd.nl/reisadvies/reisadviezen-kleurcodes\">Lees\n    meer over reisadviezen en kleurcodes</a></p>"},{"iso":"THA","land":"Thailand","kenmerk":"langste advies","html":"<h2>In het kort</h2>\n     <ul>  <li>Vanaf 15 september 2026 wordt de visumvrije periode\n    verkort     van 60 naar 30 dagen. Lees meer onder Paspoort, visum,\n  rijbewijs. </li>  <li>De kleurcode van het reisadvies is rood voor de\n    strook van 5 kilometer vanaf de grens met Cambodja. Wat uw situatie\n    ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder\n    Regionale risico’s.</li>  <li>Kleurcode oranje geldt voor de strook\n    van 5 tot 20 kilometer vanaf de grens met Cambodja. De kleurcode is\n    ook oranje voor het zuidelijkste deel van Thailand en het\n    grensgebied tussen Thailand en Myanmar. Reis alleen hierheen als het\n    noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>\n    <li>Voor de rest van Thailand geldt kleurcode geel. U kunt hierheen\n    reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.</li> </ul><div class=\"notification attention\">E-mail ontvangen als het reisadvies\n  wijzigt en bij (dreigende) crisis? <a\n    href=\"https://informatieservice.nederlandwereldwijd.nl\">Meld u aan\n    voor de Informatieservice</a></div>\n<h2>Welke veiligheidsrisico's zijn er in Thailand?</h2>\n<h3>Regionale risico's</h3>\n<h4>Rood: niet reizen</h4>\n   <div class=\"notification attention\">Wat uw situatie ook is: reis niet\n  naar gebieden met kleurcode rood. Het is er te gevaarlijk. De\n  Nederlandse ambassade kan u niet helpen als u in de problemen komt.</div>\n   <p>Kleurcode rood geldt voor het grensgebied tussen Thailand en\n  Cambodja: een strook van 5 kilometer vanaf de grens.</p>\n   <p>Reis niet naar de grensstrook. Sinds eind 2025 is er een\n  staakt-het-vuren tussen Thailand en Cambodja. De veiligheidssituatie\n  is verbeterd, maar blijft onvoorspelbaar. ZDe grens is gesloten.\n  Ondanks het staakt-het-vuren zijn er checkpoints van het leger. Er\n  kunnen ook landmijnen in het gebied liggen. </p>\n   <h4>Oranje: alleen noodzakelijke reizen</h4>\n   <div class=\"notification attention\">Reis alleen naar gebieden met\n  kleurcode oranje als dit noodzakelijk is. Bijvoorbeeld voor de\n  uitvaart van een familielid. Of als u er dringend heen moet voor uw\n  werk. Het is niet veilig er op vakantie te gaan. De Nederlandse\n  ambassade kan u minder goed helpen als u in de problemen komt.</div>\n   <p>Voor de volgende gebieden geldt kleurcode oranje:</p>\n   <ul>  <li>Het grensgebied tussen Thailand en Cambodja: de strook van\n    5     tot 20 kilometer vanaf de grens.<br>  De veiligheidssituatie\n    in het     grensgebied is onvoorspelbaar. Er zijn militairen\n    aanwezig in het     gebied. Er zijn ook militaire checkpoints.</li>\n    <li>De zuidelijke     provincies Yala, Narathiwat en Pattani.<br>\n    Voor de meeste     districten in deze provincies geldt de\n    noodtoestand. De     veiligheidsmaatregelen in het gebied zijn\n    aangescherpt. Houd     rekening met strenge controles door politie\n    en leger.</li>  <li>De     districten Chana, Nathawi, Thepha en\n    Sabayoi in de zuidelijke     provincie Songkhla.</li>  <li>Het\n    grensgebied tussen Thailand en     Myanmar: de strook van 10\n    kilometer vanaf de grens. Dit geldt niet     voor de grenssteden Mae\n    Sai, Mae Sot en Ranong.</li> </ul>\n   <p>In Zuid-Thailand zijn rebellengroepen actief. Deze groepen plegen\n  regelmatig (bom)aanslagen. Doelwitten zijn tot nu toe vooral het\n  Thaise leger en de politie. Aanslagen vinden meestal plaats bij\n  checkpoints van het leger en de politie. En bij gebouwen en\n  infrastructuur van de overheid, het leger en de politie. Maar ook\n  andere doelwitten zijn mogelijk. </p>\n   <p>Voor de meeste districten in de zuidelijkste provincies\n  Narathiwat,   Pattani en Yala geldt de noodtoestand. De\n  veiligheidsmaatregelen in   het gebied zijn aangescherpt. Houd\n  rekening met strenge controles van   politie en leger.</p>\n   <p>Maakt u een noodzakelijke reis naar Zuid-Thailand?</p>\n   <ul>  <li>Blijf niet langer dan nodig bij checkpoints van het Thaise\n    leger en de politie. Blijf weg bij gebouwen van de overheid, het\n    leger en de politie. En vermijd drukke plekken.</li>  <li>Ga niet de\n    straat op tussen 18.00 en 6.00 uur. Aanslagen vinden meestal plaats\n    in het donker.</li>  <li>Volg de aanwijzingen van de (lokale)\n  autoriteiten.</li> </ul>\n   <p>Grens met Myanmar:<br> Het grensgebied tussen Thailand en Myanmar\n  (behalve de steden Mae Sai, Mae Sot en Ranong) is niet veilig:</p>\n   <ul>  <li>Het Myanmarese leger voert dicht bij de Thaise grens\n    militaire acties uit. Dit kan ook over de grens in Thailand tot\n    onveilige situaties leiden.</li>  <li>In het grensgebied zijn\n    criminele bendes actief, zoals drugs- en mensensmokkelaars.</li>\n    <li>Op veel plaatsen is het niet duidelijk waar de grens loopt. Het\n    oversteken van de grens buiten de officiële grensovergangen is\n    illegaal en gevaarlijk.</li> </ul>\n   <p>Maakt u een noodzakelijke reis naar deze gebieden?</p>\n   <ul>  <li>Wees extra alert, ook in afgelegen gebieden.</li>\n    <li>Bereid uw reis en verblijf goed voor. Eventueel met hulp iemand\n    die het gebied goed kent. Reis met een officiële (lokale) gids.</li>\n    <li>Informeer u vooraf over de laatste ontwikkelingen in deze\n    gebieden. Bijvoorbeeld door het lokale nieuws te volgen. Of vraag\n    informatie bij uw hotel.</li>  <li>Volg de aanwijzingen van de\n    lokale autoriteiten.</li> </ul>\n   <p>De kleurcode van het reisadvies voor de rest van Thailand is geel.\n  U kunt reizen naar gebieden met kleurcode geel. Maar let op: er zijn\n  bijzondere veiligheidsrisico's. Lees verder in het reisadvies met\n  welke risico’s u te maken kunt krijgen.</p>\n   <p>De grensovergangen Mae Sot en Mae Sai tussen Thailand en Myanmar\n  zijn alleen open voor personen met een Thais of Myanmarees paspoort.\n  De grensovergang bij Ranong is meestal wel open voor buitenlanders,\n  maar u kunt vanaf hier niet verder Myanmar in reizen.</p>\n   <p>In de grensstreek dichtbij het drielandenpunt tussen Thailand,\n  Laos   en Myanmar zijn gewapende drugs- en mensensmokkelaars actief en\n  vindt   criminaliteit plaats. </p>\n   <p>De situatie in de grensgebieden in Myanmar is op dit moment\n  onveilig. Steek de grens naar Myanmar daarom niet over. <a\n    href=\"https://www.nederlandwereldwijd.nl/reisadvies/myanmar\">Lees\n    meer informatie in het reisadvies voor Myanmar</a>.</p>\n   <p>Reist u naar Mae Sai, Mae Sot of Ranong? Bereid u goed voor en\n  reis   met een betrouwbare (lokale) gids.</p>\n<h3>Terrorisme</h3>\n<p>Ook in de delen van Thailand waarvoor kleurcode geel geldt, kan een\n  terroristische aanslag plaatsvinden. Wees alert op drukke plaatsen en\n  volg altijd de aanwijzingen van de lokale autoriteiten.</p>\n<h3>Criminaliteit</h3>\n<h4>Zakkenrollers en diefstal</h4>\n       <p>Wees in Thailand alert op zakkenrollers en oplichters. Vooral\n  in   de   grote steden en drukke toeristische gebieden. Pas ook op\n  voor   dieven   die tassen of sieraden stelen vanaf een brommer of motor.</p>\n       <h4>Oplichting rondom scooterverhuur</h4>\n       <p>Veel verhuurders van scooters vragen uw paspoort of rijbewijs\n  als   borg. U kunt worden opgelicht wanneer u schade heeft gemaakt. U\n  krijgt   uw paspoort of rijbewijs dan pas terug nadat u veel geld\n  betaalt.   Verhuurders gaan soms over tot (dreiging met) geweld. Veel\n  huurscooters zijn niet verzekerd.</p>\n       <p>Wat kunt u doen?</p>\n       <ul>  <li>Geef nooit uw paspoort of rijbewijs af. Geef de\n    verhuurder     een kopie van uw paspoort of rijbewijs of vraag of u\n    een borgsom     kunt betalen. Accepteert een verhuurder dit niet? Ga\n    dan naar een     andere verhuurder. De Thaise autoriteiten verbieden\n    het innemen van     een paspoort of rijbewijs bij verhuur.</li>\n    <li>Maak voor gebruik     foto’s of video’s van de scooter waarop de\n    staat van de scooter     duidelijk zichtbaar is. Daarmee verkleint u\n    de kans dat de     verhuurder u aansprakelijk stelt voor schade die\n    al bestond.</li>     <li>Zet de scooter altijd op slot als u\n  parkeert.</li> </ul>\n       <p>Er gebeuren veel ongelukken met scooters in Thailand. Lees\n  meer   onder Verkeersongevallen.</p>\n       <h4>Oplichting en dwangarbeid</h4>\n       <p>Krijgt u een goedbetaalde baan in Thailand aangeboden? Pas op\n  voor   oplichting. Regelmatig worden buitenlanders met valse beloften\n  naar   Thailand gelokt. Eenmaal in Thailand worden zij door een\n  criminele   organisatie illegaal naar een buurland vervoerd en daar\n  onder dwang   aan het werk gezet. Hierbij worden paspoorten ingenomen,\n  zodat   slachtoffers niet kunnen vluchten. Of slachtoffers moeten veel\n  geld   betalen om vrij te komen.</p>\n       <h4>Voorkom dat u slachtoffer wordt van criminaliteit</h4>\n       <p>Door een goede voorbereiding verkleint u de kans dat u wordt\n  beroofd of opgelicht. Lees meer op de pagina <a\n    href=\"https://www.nederlandwereldwijd.nl/reisadvies/criminaliteit\">Hoe\n    voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?</a></p>\n<h3>Verkeersongevallen</h3>\n<h4>Dodelijke verkeersongevallen</h4>\n       <p>In Thailand vallen elk jaar duizenden doden en\n  honderdduizenden   gewonden in het verkeer, waaronder ook toeristen.\n  Het risico op een   ongeval met dodelijke afloop is vele malen groter\n  dan in Nederland.   Ongelukken gebeuren vooral met motorscooters.\n  Nagenoeg alle scooters   in Thailand zijn officieel motoren. Heeft u\n  geen geldig   (internationaal) motorrijbewijs? Dan vergoedt uw\n  reisverzekering vaak   niet schade of medische kosten na een ongeluk.</p>\n       <p>   <a href=\"https://www.thairsc.com/eng/\">Lees meer over het\n    aantal     verkeersongelukken in Thailand</a> op de website van het\n  Accident   Data Center of Thailand (informatie in het Thais).</p>\n       <p>   <a\n    href=\"https://www.anwb.nl/vakantie/thailand/reisvoorbereiding/verkeer\">Lees\n    meer informatie over het verkeer in Thailand</a> op de website van\n  de ANWB.</p>\n       <h4>Risico's bij reizen met bus of veerboot</h4>\n       <p>Reizen met de bus of veerboot kan gevaarlijk zijn in Thailand.\n  Veel   bussen en veerboten zijn van slechte kwaliteit en niet goed\n  onderhouden. Veerboten zitten vaak overvol en hebben te weinig of geen\n  reddingsvesten aan boord.</p>\n<h3>Wetten en gebruiken</h3>\n<h4>Drugs</h4>\n       <p>U mag in Thailand geen drugs gebruiken, bezitten of verkopen.\n  De   straffen zijn veel zwaarder dan in Nederland. Ook als u een\n  kleine   hoeveelheid drugs bij u heeft, kunt u zware boetes of een\n  lange   gevangenisstraf krijgen. Het bezit van sommige soorten\n  harddrugs kan   zelfs leiden tot de doodstraf.</p>\n       <h4>Cannabis</h4>\n       <p>Recreatief gebruik van cannabis is in Thailand verboden.\n  Cannabisgebruik is alleen toegestaan voor medische redenen of bij\n  wetenschappelijk onderzoek. </p>\n       <p>Het is verboden om cannabis mee te nemen naar Thailand, of\n  vanuit   Thailand naar andere landen te vervoeren. De Thaise\n  autoriteiten   controleren hierop als u het land verlaat. U kunt een\n  hoge boete of   gevangenisstraf krijgen voor het illegaal meenemen van\n  cannabis. Ook   bij aankomst op uw bestemming buiten Thailand kunnen\n  de lokale   autoriteiten u aanhouden en bestraffen. </p>\n       <p>In 2025 zijn de wetten in Thailand aangescherpt. Er wordt\n  strenger   gecontroleerd op het gebruik, bezit en kopen van\n  cannabisproducten.   Winkels en ‘coffeeshops’ bieden mogelijk\n  cannabisproducten aan die   illegaal en onveilig zijn om te gebruiken.\n  Houd hier rekening mee.</p>\n       <p>Heeft u een vraag over cannabisregels? Vraag dit na bij de\n  lokale autoriteiten.</p>\n       <h4>Drones</h4>\n       <p>In Thailand gelden strenge regels voor het gebruik van drones.\n  U   kunt een hoge boete of gevangenisstraf krijgen als u zich niet aan\n  deze regels houdt. <a href=\"https://uasportal.caat.or.th/\">Lees meer\n    informatie over het gebruik van drones</a> op de website van de\n  Civilian Aviation Authority in Thailand (informatie in het Engels).</p>\n       <h4>Roken op stranden</h4>\n       <p>Roken is op veel stranden in Thailand strafbaar. U kunt een\n  gevangenisstraf krijgen van maximaal 1 jaar als u op het strand rookt.\n  Of een boete van maximaal 100.000 Thaise baht (ongeveer € 2.500).</p>\n       <h4>Seks met minderjarigen</h4>\n       <p>U mag in Thailand geen seks hebben met iemand jonger dan 18\n  jaar.   Ook niet als de minderjarige zegt dit te willen. U bent dan\n  strafbaar.   En u kunt hiervoor een lange gevangenisstraf krijgen. Het\n  is moeilijk   om iemands leeftijd te schatten. U kunt om een\n  identiteitsbewijs   vragen. Maar let op: dit kan vervalst zijn.</p>\n       <h4>Hoge straffen</h4>\n       <p>In Thailand worden zware straffen opgelegd. Ook voor kleine\n  vergrijpen als winkeldiefstal. De omstandigheden in de Thaise\n  gevangenissen zijn erg zwaar. U kunt na uw straf ook het land worden\n  uitgezet. De uitzettingsprocedure kan zwaar en lang zijn.</p>\n       <ul> </ul>\n       <h4>Belediging Thaise koningshuis</h4>\n       <p>Doe geen kritische uitspraken en vermijd discussies over het\n  Thaise   koningshuis. In Thailand geldt een verbod op het beledigen\n  van het   koningshuis. U kunt een zware straf krijgen. De Thaise\n  autoriteiten   handhaven het verbod strikt.</p>\n       <h4>Lhbtiq+</h4>\n       <p>Bent u een lhbtiq+ persoon? En wilt u naar Thailand reizen? De\n  wetten en de gebruiken in dit land tegenover lhbtiq+ personen zijn\n  vergelijkbaar met die van Nederland. Lees de tips op de pagina <a\n    href=\"https://www.nederlandwereldwijd.nl/reisadvies/lhbtiq\">Kan ik\n    veilig reizen als lhbtiq+ persoon?</a> om risico’s te verkleinen.</p>\n<h3>Natuurgeweld</h3>\n<h4>Regenseizoen</h4>\n      <p>Het regenseizoen in Thailand loopt van mei tot oktober. Van\n  oktober   tot en met januari kan het ook in het zuiden en aan de\n  zuidoostkust   van Thailand veel regenen. Onder andere in de provincie\n  Surat Thani en   de provincies ten zuiden daarvan. En op de eilanden\n  Koh Tao, Koh Pha   Ngan en Koh Samui.</p>\n      <p>Zware regenval kan overstromingen en aardverschuivingen\n  veroorzaken. Houd er rekening mee dat elektriciteit, telefoon- en\n  internetverbindingen regelmatig kunnen uitvallen. Ook kunnen wegen en\n  vliegvelden (tijdelijk) afgesloten worden. </p>\n      <p>Check de volgende websites voor actuele informatie over\n  overstromingen in Thailand (informatie in het Engels):</p>\n      <ul>  <li>     <a href=\"https://disaster.gistda.or.th/\">Decision\n      Support System for       Disaster Management</a></li>  <li>     <a\n      href=\"https://www.mrcmekong.org/\">Mekong River\n  Commission</a></li> </ul>\n      <p>Reist u tijdens het regenseizoen?</p>\n      <ul>  <li>     <a href=\"http://www.tmd.go.th/en/\">Check regelmatig\n      de     weersverwachting</a> op de website van de Thai\n    Meteorological     Department (informatie in het Engels).</li>\n    <li>Houd het lokale     nieuws in de gaten.</li>  <li>Volg altijd de\n    aanwijzingen van de     lokale autoriteiten.</li> </ul>\n      <h4>Sterke stromingen</h4>\n      <p>In Thailand komen sterke stromingen en hoge golven voor. Dit\n  gebeurt vooral in het regenseizoen van mei tot oktober.</p>\n      <p>Wees alert als u gaat zwemmen, duiken, kajakken of\n  wildwatervaren   (raften). De gevaren zijn niet altijd duidelijk. Er\n  is risico op verdrinking.</p>\n      <p>Let op het volgende:</p>\n      <ul>  <li>Ga bij een rode vlag of een ruwe zee niet het water\n  in.</li>     <li>Draag altijd een zwemvest als u gaat kajakken of\n  wildwatervaren.</li>  <li>Volg de aanwijzingen van de lokale\n    autoriteiten. Of vraag informatie bij uw hotel.</li> </ul>\n      <h4>Aardbevingen</h4>\n      <p>In Thailand is er een risico op aardbevingen,\n  aardverschuivingen   en   tsunami’s. Check de volgende websites voor\n  meer informatie   (informatie   in het Engels):</p>\n      <ul>  <li>     <a href=\"https://earthquaketrack.com/\">The\n      Earthquake   Track</a></li>  <li>     <a\n      href=\"https://www.tsunami.gov/\">US Tsunami       Warning\n  Centre</a></li>  <li>     <a\n      href=\"https://www.ready.gov/earthquakes\">US Federal Emergency\n      Management Agency</a></li> </ul>\n      <h4>Luchtvervuiling</h4>\n      <p>Houd in Thailand rekening met luchtvervuiling, vooral tussen\n  december en maart. Ernstige luchtvervuiling vormt met name een risico\n  voor mensen met gevoelige luchtwegen, zwangere vrouwen en kinderen. </p>\n      <p>   <a href=\"https://aqicn.org/map/thailand/\">Bekijk het niveau\n    van     de   luchtkwaliteit</a> op de World Air Quality Index\n  website   (informatie   in het Engels). Bij een hoge\n  fijnstofconcentratie   (PM2.5) is het aan   te raden om een KN95\n  mondkapje te dragen.</p>\n<h3>Demonstraties</h3>\n<p>In Thailand kunnen demonstraties voorkomen, vooral in de grote\n  steden. Vermijd samenscholingen, mensenmassa’s en demonstraties. Volg\n  het nieuws via de (lokale) media. Of vraag uw hotel om informatie.</p>\n<h2>Wat kan ik doen in een noodsituatie?</h2>\n<h3>In geval van nood</h3>\n<h4>Lokale hulpdiensten</h4>\n           <p>Heeft u direct hulp nodig in Thailand? Neem contact op met\n  de   lokale hulpdiensten:</p>\n           <ul>  <li>Algemeen alarmnummer: 191</li>\n    <li>(Toeristen)politie:   1155</li>  <li>Medische noodgevallen regio\n    Bangkok: 1646</li>     <li>Medische noodgevallen Thailand: 1669</li>\n    <li>Brandweer:   199</li> </ul>\n           <h4>Nood- of crisissituatie</h4>\n           <ul>  <li>Bent u in Thailand en bent u in nood? Bijvoorbeeld:\n    u     bent     opgenomen in het ziekenhuis, of u bent bestolen. <a\n      href=\"https://www.nederlandwereldwijd.nl/hulp-bij-nood\">Lees wat u\n      kunt doen in geval van nood</a>.</li>  <li>Komt u in een\n    crisissituatie terecht (zoals politieke onrust, een terroristische\n    aanslag of natuurgeweld)? <a\n      href=\"https://www.nederlandwereldwijd.nl/crisis/regelen-in-crisissituatie\">Lees\n      wat u kunt doen in een crisissituatie</a>.</li>  <li>Laat uw\n    familie/vrienden weten hoe het met u gaat.</li>  <li>Volg altijd de\n    aanwijzingen op van de lokale autoriteiten.</li>  <li>Maakt u een\n    georganiseerde reis? Houd contact met uw reisorganisatie.</li>\n    <li>Heeft u hulp nodig? Neem contact op met uw reisverzekeraar of\n    met de Nederlandse ambassade.</li> </ul>\n           <h4>Contactgegevens Nederlandse ambassade in geval van nood</h4>\n           <p>Nederlandse ambassades en consulaten-generaal zijn 24 uur\n  per   dag,   7 dagen per week bereikbaar via het contactcenter van\n  NederlandWereldwijd op telefoonnummer <a\n    href=\"tel:+31-247-247-247\">+31 247 247 247</a> of via WhatsApp: <a\n    href=\"https://wa.me/31857737400\">+31 857 737 400</a>.</p>\n           <p>Bent u in Thailand en heeft u een lokaal telefoonnummer?\n  Bel   het   lokale nummer van de Nederlandse ambassade in Bangkok. U\n  betaalt   dan   het lokale tarief.</p>\n           <h4>Nederlandse ambassade in Thailand</h4>\n           <p>Bekijk de <a\n    href=\"https://www.nederlandwereldwijd.nl/contact/ambassades-consulaten-generaal/thailand/ambassade-bangkok\">contactgegevens\n    van de Nederlandse ambassade in Bangkok</a>.</p>\n<h2>Hoe bereid ik mijn reis naar Thailand voor?</h2>\n<h3>Reisverzekering</h3>\n<ul>  <li>Sluit altijd een goede reisverzekering af die extra kosten\n    dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland\n    moet worden vervoerd (repatriëring). Uw basiszorgverzekering\n    vergoedt deze kosten niet altijd 100 procent.</li>  <li>Voor een\n    reis naar Thailand is een goede reisverzekering extra belangrijk. De\n    gezondheidszorg in Thailand is voldoende beschikbaar en goed. Maar\n    houd er wel rekening mee dat medische kosten hoog kunnen zijn en\n    soms vooruitbetaald moeten worden.</li>  <li>Gaat u een (extreme)\n    sport beoefenen? Sluit een extra verzekering af.</li>  <li>Let op:\n    Bij een oranje of rood reisadvies passen veel Nederlandse\n    verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde\n    risico’s of kosten bij schade zijn dan niet meer gedekt. Vraag dit\n    na bij uw verzekeraar.</li> </ul><div class=\"notification attention\">Laat familie in Nederland weten hoe\n  en waar u bent verzekerd. In een noodgeval kan uw familie dan hulp\n  inschakelen van uw verzekeraar.</div>\n<h3>Paspoort, visum, rijbewijs</h3>\n<h4>Paspoort</h4>\n      <ul>  <li>U heeft een geldig paspoort nodig om naar Thailand te\n  reizen.</li>  <li>Reist u naar Thailand met een beschadigd paspoort?\n    De lokale autoriteiten kunnen u de toegang weigeren.</li>  <li>Uw\n    Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het\n    moment van aankomst in Thailand.</li>  <li>Heeft u naast uw\n    Nederlandse paspoort ook een geldig paspoort van een andere\n    nationaliteit? Gebruik bij vertrek uit Thailand het paspoort waarmee\n    u Thailand bent binnengekomen.</li> </ul>\n      <p>Deel een kopie van uw paspoort met familie in Nederland. Als u\n  iets   overkomt, is het belangrijk dat anderen uw paspoortgegevens\n  hebben. <a\n    href=\"https://www.rijksoverheid.nl/onderwerpen/identiteitsfraude/vraag-en-antwoord/veilige-kopie-identiteitsbewijs\">Lees\n    hoe u een veilige kopie maakt van uw paspoort</a> op de website van\n  de Rijksoverheid.</p>\n      <h4>Visum</h4>\n      <p>Of u een visum nodig heeft, hangt af van uw aankomstdatum in\n  Thailand en hoelang u in Thailand blijft.</p>\n      <ul>  <li>Komt u vóór 15 september aan in Thailand? Met een\n    Nederlands     paspoort kunt u maximaal 60 dagen zonder visum in\n    Thailand   blijven.</li>  <li>Komt u op of na 15 september aan in\n    Thailand? Met     een Nederlands paspoort kunt u maximaal 30 dagen\n    zonder visum in     Thailand verblijven.</li> </ul>\n      <p>Heeft u geen visum nodig voor uw verblijf in Thailand?</p>\n      <ul>  <li>U krijgt bij aankomst een stempel in uw paspoort, met\n    daarop     de uiterste datum van uw vertrek.</li>  <li>U moet kunnen\n    aantonen     dat u Thailand binnen de toegestane visumvrije periode\n    weer verlaat.     Bijvoorbeeld met een retourticket of een\n  doorreisticket.</li>     <li>Reist u meerdere keren kort na elkaar\n    zonder visum naar     Thailand? En doet u dit zonder geldige reden?\n    Dan kan de Thaise     Immigratiedienst u de toegang tot Thailand\n    weigeren. Houd rekening     met strenge controles bij alle\n  grensovergangen.</li> </ul>\n      <p>Wilt u langer dan de visumvrije periode in Thailand blijven?\n  Dan   moet u een visum aanvragen.</p>\n      <ul>  <li>     <a href=\"https://hague.thaiembassy.org/\">Neem voor\n      uw       reis naar       Thailand contact op</a> met de ambassade\n    van     Thailand in Den Haag     voor informatie over visa\n    (informatie in     het Engels).</li>  <li>Wilt     u uw\n    verblijfsduur in Thailand     verlengen wanneer u in het land bent?\n    Dat kan soms elektronisch     via <a\n      href=\"https://www.immigration.go.th/\">de website van de\n      Thaise     Immigratiedienst</a> (informatie in het Engels). In\n    andere gevallen     dient u direct contact op te nemen met de Thaise\n  Immigratiedienst.</li> </ul>\n      <p>Let op: er wordt streng gecontroleerd op zogenoemde\n  ‘visa-runs’.   Dit betekent dat u kort de grens overgaat en daarna\n  direct terugkeert   naar Thailand. Een visa-run is maximaal twee keer\n  per jaar toegestaan.</p>\n      <h4>Thailand Digital Arrival Card</h4>\n      <p>Reist u naar Thailand? En reist u met een Nederlands paspoort?\n  Dan   moet u de de Thailand Digital Arrival Card invullen. Dit kan\n  vanaf 3   dagen voor aankomst in Thailand.</p>\n      <ul>  <li>     <a\n      href=\"https://tdac.immigration.go.th/arrival-card/#/home\">Vul de\n        <span dir=\"ltr\" lang=\"en\">Thailand Digital Arrival Card</span>\n    in</a> via de website van de Thaise immigratiedienst (informatie in\n    het Engels).</li>  <li>Wilt u meer weten? <a\n      href=\"https://www.youtube.com/watch?v=QSEoVloM5A0\">Bekijk de\n    instructievideo</a> van de Thaise overheid (informatie in het\n  Engels). </li> </ul>\n      <h4>Reizen met kinderen</h4>\n      <p>Kinderen hebben ook een geldig paspoort, een Thailand Digital\n  Arrival Card en eventueel een visum, nodig voor een reis naar\n  Thailand. Reist u alleen met 1 of meer kinderen jonger dan 18 jaar? <a\n    href=\"https://www.rijksoverheid.nl/documenten/formulieren/2014/02/06/formulier-toestemming-reizen-met-minderjarige-naar-het-buitenland\">Check\n    welke documenten u nodig heeft om te reizen met een minderjarig\n  kind</a> en neem die mee. Zo voorkomt u problemen en lange wachttijden\n  bij grenscontroles.</p>\n      <h4>Rijbewijs</h4>\n      <p>In Thailand is uw Nederlandse rijbewijs alleen geldig als u ook\n  een   geldig internationaal rijbewijs heeft. Wilt u in Thailand een\n  scooter   of motor huren? Dan heeft u een motorrijbewijs nodig.</p>\n      <p>   <a\n    href=\"https://www.anwb.nl/vakantie/thailand/reisvoorbereiding/reisdocumenten\">Lees\n    meer over rijden in Thailand</a> op de website van de ANWB.</p>\n<h3>Reisvaccinaties</h3>\n<ul>  <li>     <a\n      href=\"https://www.ggdreisvaccinaties.nl/land/thailand\">Check\n      welke vaccinaties u nodig heeft voor Thailand</a> op de website\n    van GGD Reisvaccinaties.</li>  <li>U leest op de website van de GGD\n    ook meer over ziektes die er voorkomen, zoals malaria, dengue\n    (knokkelkoorts) en hondsdolheid (rabiës).</li>  <li>Maak een\n    vaccinatie-afspraak bij u in de buurt. <a\n      href=\"https://www.lcr.nl/Vaccinatie-adressen\">Check alle\n      aanbieders van reisvaccinaties</a> op de website van het Landelijk\n    Coördinatiecentrum Reizigersadvisering (LCR).</li> </ul>\n<h3>Medicijnen</h3>\n<p>Gebruikt u medicijnen?</p>\n           <ul>  <li>Neem voldoende medicijnen mee, ook voor extra\n  dagen.</li>     <li>     <a\n      href=\"https://www.hetcak.nl/medicijnen-mee-op-reis/\">Check of u\n      een medicijnverklaring nodig heeft</a> om uw medicijnen mee te\n    mogen nemen naar Thailand.</li>  <li>Neem de medicijnen altijd mee\n    in de originele verpakking.</li> </ul>\n           <h4>Medicijnen zonder doktersrecept</h4>\n           <p>Koopt u in Thailand (slaap)medicijnen zonder\n  doktersrecept?   Bijvoorbeeld bij een lokale apotheek? U riskeert\n  arrestatie, een   geldboete of gevangenisstraf.</p>\n<h3>Bagageregels</h3>\n<h4>Wat mag ik niet meenemen naar Thailand?</h4>\n           <ul>  <li>Elektronische sigaretten (vapes) en\n    navulverpakkingen     zijn     verboden in Thailand. Als u deze\n    producten invoert, krijgt     u een     hoge boete. En u kunt een\n    gevangenisstraf krijgen van     maximaal 10   jaar.</li>  <li>U mag\n    niet meer dan 200 sigaretten per     persoon     invoeren in\n    Thailand. De Thaise douane controleert dit     bij aankomst     op\n    het vliegveld. Neemt u meer sigaretten mee? Dan     krijgt u een\n    boete en worden de sigaretten in beslag   genomen.</li>  <li\n    style=\"margin-bottom: 16.0px;\">     <a\n      href=\"https://www.iatatravelcentre.com/TH-thailand-customs-currency-airport-tax-regulations-details.htm\">Check\n      wat u nog meer wel en niet mag meenemen naar Thailand</a> op de\n    website van IATA (informatie in het Engels). </li> </ul>\n           <h4>Wat mag ik mee terugnemen naar Nederland?</h4>\n           <p>Bekijk wat u vanuit Thailand mee terug mag nemen naar\n  Nederland   op   de pagina <a\n    href=\"https://www.nederlandwereldwijd.nl/reizen-naar-nederland/meenemen-nederland\">Wat\n    mag ik meenemen naar Nederland?</a></p>\n<h2>Ook nuttig</h2>\n    <p>   <a\n    href=\"https://www.nederlandwereldwijd.nl/reisadvies/reisadviezen-kleurcodes\">Lees\n    meer over reisadviezen en kleurcodes</a></p>"}];
+</script>
+<script>
+(function () {
+  const toetser = Regels.maakToetser(REGELDATA);
+  const $ = (id) => document.getElementById(id);
+  let huidig = null;          // {doc, resultaat, land}
+  let oordelen = {};          // sleutel -> 'eens'|'oneens'|'onterecht'
+  let db = null;
+
+  const sleutelVan = (bev) => bev.regel + '::' + String(bev.fragment || bev.boodschap).slice(0, 80);
+  const ernstKlasse = { 'fout': 'fout', 'let-op': 'letop', 'info': 'info' };
+  const ernstLabel = { 'fout': 'Fout', 'let-op': 'Let op', 'info': 'Ter overweging' };
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  const norm = (s) => String(s || '').replace(/[‘’]/g, "'").replace(/\s+/g, ' ').trim();
+
+  // ---------- vullen ----------
+  const kiezer = $('kies-advies');
+  VOORBEELDEN.forEach((v, i) => {
+    const o = document.createElement('option');
+    o.value = String(i);
+    o.textContent = v.land + ' — ' + v.kenmerk;
+    kiezer.appendChild(o);
+  });
+  $('bron-regel').textContent = REGELDATA.matrix.koppen.length + ' koppen uit de matrix · '
+    + Object.keys(REGELDATA.kleurcodes.kleuren).length + ' kleurcodes · schrijfwijzer en format-matrix van Nederlandwereldwijd.nl';
+
+  function toetsInvoer(html, land) {
+    const doc = Parse.parseAdvies(html, { land });
+    const resultaat = toetser(doc);
+    huidig = { doc, resultaat, land };
+    tekenStatus();
+    tekenAdvies();
+    tekenBevindingen();
+    $('oordeelsuitvoer').textContent = '';
+  }
+
+  function kiesVoorbeeld() {
+    const v = VOORBEELDEN[Number(kiezer.value) || 0];
+    toetsInvoer(v.html, v.land);
+  }
+
+  // ---------- status ----------
+  function tekenStatus() {
+    const s = huidig.resultaat.samenvatting;
+    const pct = Math.min(100, Math.round((s.woorden / s.woordenlimiet) * 100));
+    const over = s.woorden >= s.woordenlimiet;
+    $('status').innerHTML = [
+      '<div class="cel"><div class="etiket">Woorden</div>'
+        + '<div class="waarde">' + s.woorden + ' <small>/ ' + s.woordenlimiet + '</small></div>'
+        + '<div class="meter' + (over ? ' over' : '') + '"><i style="width:' + pct + '%"></i></div></div>',
+      '<div class="cel"><div class="etiket">Kleurcode</div><div class="kleurchips">'
+        + (s.kleurcodes.length
+            ? s.kleurcodes.map((k) => '<span class="chip ' + k + '">' + k + '</span>').join('')
+            : '<span class="chip" style="color:var(--gedempt)">geen gevonden</span>')
+        + '</div></div>',
+      '<div class="cel fout"><div class="etiket">Fouten</div><div class="waarde">' + s.fout + '</div></div>',
+      '<div class="cel letop"><div class="etiket">Let op</div><div class="waarde">' + s.letop + '</div></div>',
+      '<div class="cel"><div class="etiket">Zinnen</div><div class="waarde">' + s.zinnen + '</div></div>',
+    ].join('');
+  }
+
+  // ---------- het advies met gemarkeerde zinnen ----------
+  function tekenAdvies() {
+    const perZin = new Map();
+    huidig.resultaat.bevindingen.forEach((bev, i) => {
+      if (!bev.fragment) return;
+      const k = norm(bev.fragment);
+      if (!perZin.has(k)) perZin.set(k, []);
+      perZin.get(k).push(i);
+    });
+
+    const stukken = [];
+    for (const blok of huidig.doc.blokken) {
+      const woorden = blok.alineas.reduce((n, a) => n + a.woorden, 0)
+        + blok.opsommingen.reduce((n, o) => n + o.items.reduce((m, x) => m + Parse.telWoorden(x), 0), 0);
+      if (blok.kop) {
+        const tag = blok.niveau === 2 ? 'h3 class="blok-h2"' : 'h4 class="blok-h3"';
+        const sluit = blok.niveau === 2 ? 'h3' : 'h4';
+        const lang = woorden > 250;
+        stukken.push('<' + tag + '><span>' + esc(blok.kop) + '</span>'
+          + '<span class="telling' + (lang ? ' lang' : '') + '">' + woorden + ' woorden</span></' + sluit + '>');
+      }
+      for (const a of blok.alineas) {
+        stukken.push('<p>' + a.zinnen.map((z) => markeer(z, perZin)).join(' ') + '</p>');
+      }
+      for (const o of blok.opsommingen) {
+        stukken.push('<ul>' + o.items.map((x) => '<li>' + markeer(x, perZin) + '</li>').join('') + '</ul>');
+      }
+    }
+    $('advies').innerHTML = stukken.join('') || '<p class="leeg">Geen tekst gevonden.</p>';
+  }
+
+  function markeer(zin, perZin) {
+    const treffers = perZin.get(norm(zin));
+    if (!treffers) return esc(zin);
+    const ernsten = treffers.map((i) => huidig.resultaat.bevindingen[i].ernst);
+    const zwaarste = ernsten.includes('fout') ? 'fout' : ernsten.includes('let-op') ? 'let-op' : 'info';
+    return '<span class="zin m-' + ernstKlasse[zwaarste] + '" data-bev="' + treffers[0] + '" '
+      + 'title="' + esc(treffers.length + ' bevinding' + (treffers.length > 1 ? 'en' : '')) + '">' + esc(zin) + '</span>';
+  }
+
+  // ---------- bevindingen ----------
+  function tekenBevindingen() {
+    const bevs = huidig.resultaat.bevindingen;
+    if (!bevs.length) {
+      $('bevindingen').innerHTML = '<p class="leeg geen-fouten">Geen bevindingen. Dit advies voldoet aan alle '
+        + 'regels die de tool kan toetsen.</p>';
+      return;
+    }
+    const volgorde = ['fout', 'let-op', 'info'];
+    const html = volgorde.map((ernst) => {
+      const groep = bevs.map((b, i) => [b, i]).filter(([b]) => b.ernst === ernst);
+      if (!groep.length) return '';
+      // per regel bundelen: 10× dezelfde regel is één kopje, niet tien losse kaarten
+      const perRegel = new Map();
+      for (const [b, i] of groep) {
+        if (!perRegel.has(b.regel)) perRegel.set(b.regel, []);
+        perRegel.get(b.regel).push([b, i]);
+      }
+      return '<div class="groep ' + ernstKlasse[ernst] + '"><h3>' + ernstLabel[ernst]
+        + ' <span class="aantal">' + groep.length + '</span></h3>'
+        + [...perRegel.values()].map((items) => items.map(([b, i]) => kaart(b, i)).join('')).join('')
+        + '</div>';
+    }).join('');
+    $('bevindingen').innerHTML = html;
+  }
+
+  function kaart(bev, i) {
+    const s = sleutelVan(bev);
+    const gekozen = oordelen[s];
+    const knop = (w, tekst) => '<button type="button" data-oordeel="' + w + '" data-sleutel="' + esc(s)
+      + '" aria-pressed="' + (gekozen === w ? 'true' : 'false') + '">' + tekst + '</button>';
+    return '<div class="bev" data-index="' + i + '">'
+      + '<div class="regelnaam">' + esc(bev.regel) + '</div>'
+      + '<p class="tekst">' + esc(bev.boodschap) + '</p>'
+      + (bev.fragment ? '<blockquote data-naar="' + i + '">' + esc(bev.fragment) + '</blockquote>' : '')
+      + (bev.verwacht ? '<div class="verwacht">Verwacht: <b>' + esc(bev.verwacht) + '</b></div>' : '')
+      + (bev.detail ? '<div class="verwacht">Langste blokken: <b>' + esc(bev.detail.join(' · ')) + '</b></div>' : '')
+      + (bev.notitie ? '<div class="verwacht">' + esc(bev.notitie) + '</div>' : '')
+      + '<div class="bron">' + esc(bev.bron) + '</div>'
+      + '<div class="oordeel"><span class="vraag">Klopt deze bevinding?</span>'
+        + knop('eens', 'Eens') + knop('oneens', 'Oneens') + knop('onterecht', 'Onterecht') + '</div>'
+      + '</div>';
+  }
+
+  // ---------- interactie ----------
+  document.addEventListener('click', (e) => {
+    const zin = e.target.closest('.zin');
+    if (zin) return richtOp(Number(zin.dataset.bev));
+
+    const quote = e.target.closest('blockquote[data-naar]');
+    if (quote) return richtOp(Number(quote.dataset.naar));
+
+    const knop = e.target.closest('[data-oordeel]');
+    if (knop) return legOordeelVast(knop.dataset.sleutel, knop.dataset.oordeel);
+  });
+
+  function richtOp(index) {
+    document.querySelectorAll('.bev.actief, .zin.actief').forEach((el) => el.classList.remove('actief'));
+    const kaartEl = document.querySelector('.bev[data-index="' + index + '"]');
+    const zinEl = document.querySelector('.zin[data-bev="' + index + '"]');
+    if (kaartEl) { kaartEl.classList.add('actief'); kaartEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+    if (zinEl) { zinEl.classList.add('actief'); zinEl.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+  }
+
+  async function legOordeelVast(sleutel, waarde) {
+    oordelen[sleutel] = oordelen[sleutel] === waarde ? undefined : waarde;
+    tekenBevindingen();
+    if (!db) return;
+    const id = sleutel.replace(/[^A-Za-z0-9_.~:@+-]/g, '_').slice(0, 180);
+    try {
+      if (oordelen[sleutel]) {
+        await db.doc('oordelen/' + id).set({
+          regel: sleutel.split('::')[0], fragment: sleutel.split('::')[1] || '',
+          oordeel: oordelen[sleutel], land: huidig && huidig.land, tijd: new Date().toISOString(),
+        });
+      } else {
+        await db.doc('oordelen/' + id).delete();
+      }
+    } catch (e) { /* vastleggen is een extra; de toets werkt ook zonder */ }
+  }
+
+  $('knop-plakken').addEventListener('click', () => {
+    const vak = $('plakvak');
+    vak.hidden = !vak.hidden;
+    if (!vak.hidden) $('invoer').focus();
+  });
+  $('knop-toets').addEventListener('click', () => {
+    const tekst = $('invoer').value.trim();
+    if (!tekst) return;
+    toetsInvoer(tekst, $('land-invoer').value.trim() || null);
+  });
+  kiezer.addEventListener('change', kiesVoorbeeld);
+
+  // ---------- laag 2: de oordeelstoets ----------
+  $('knop-oordeel').addEventListener('click', async () => {
+    const knop = $('knop-oordeel');
+    const uit = $('oordeelsuitvoer');
+    knop.disabled = true;
+    uit.textContent = 'Bezig…';
+    try {
+      const sample = await window.claude?.use?.('sample');
+      if (!sample) {
+        uit.textContent = 'De oordeelstoets is hier niet beschikbaar. De harde regels hierboven werken wel: '
+          + 'die draaien in de pagina zelf, zonder model.';
+        return;
+      }
+      const matrixRegels = REGELDATA.matrix.koppen
+        .filter((k) => k.h3)
+        .map((k) => '- ' + k.h3 + ': ' + k.richtlijn + (k.toelichting ? ' — ' + k.toelichting : ''))
+        .join('\n');
+      const prompt = [
+        'Je toetst een reisadvies van Nederlandwereldwijd.nl. Beoordeel ALLEEN het objectief toetsbare deel.',
+        'Zeg niets over politieke gevoeligheden en stel niet voor om te schrappen.',
+        '',
+        'Toets op:',
+        '1. B1-niveau: woorden die te moeilijk zijn. Geef per geval een eenvoudiger alternatief.',
+        '2. Begrijpelijkheid: zinnen die ondanks hun lengte lastig te volgen zijn.',
+        '3. Naamwoordstijl en jargon zonder uitleg.',
+        '4. Onderwerpen die volgens de matrix "verwijzen" zijn maar hier zijn uitgeschreven.',
+        '5. Onderwerpen die volgens de matrix "niet melden" zijn maar toch in de lopende tekst staan.',
+        '6. Blokken die het handelingsperspectief missen dat de matrix vraagt.',
+        '',
+        'De matrix:', matrixRegels,
+        '',
+        'Geef per bevinding: het onderwerp, het citaat uit de tekst, waarom het niet voldoet, en een',
+        'herschrijfvoorstel op zinsniveau. Kort en concreet, geen inleiding. Maximaal 8 bevindingen.',
+        '',
+        'Het reisadvies:',
+        huidig.doc.volledigeTekst.slice(0, 12000),
+      ].join('\n');
+
+      const res = await sample(prompt, {
+        modelTier: 'complex',
+        onText: ({ text }) => { uit.textContent = text; },
+      });
+      uit.textContent = res.text;
+    } catch (e) {
+      uit.textContent = 'De oordeelstoets kon niet worden uitgevoerd: ' + (e && e.message ? e.message : e)
+        + '. De harde regels hierboven werken wel.';
+    } finally {
+      knop.disabled = false;
+    }
+  });
+
+  // ---------- start ----------
+  kiesVoorbeeld();
+
+  (async () => {
+    db = await window.claude?.use?.('db');
+    if (!db) return;
+    try {
+      const rijen = await db.collection('oordelen').get();
+      for (const r of (rijen || [])) {
+        const d = r.data ? r.data() : r;
+        if (d && d.regel) oordelen[d.regel + '::' + (d.fragment || '')] = d.oordeel;
+      }
+      if (huidig) tekenBevindingen();
+    } catch (e) { /* geen eerdere oordelen; niet erg */ }
+  })();
+})();
+</script>

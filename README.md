@@ -17,6 +17,16 @@ per advies, op verzoek, en doet een herschrijfvoorstel op zinsniveau.
 Elke bevinding draagt zijn bron mee. `regels/HERKOMST.md` legt per regel-id vast waar in de
 schrijfwijzer of de matrix hij vandaan komt — een bevinding zonder bron hoort de tool niet te geven.
 
+## De pagina
+
+Het prototype is een gepubliceerde Artifact: geen installatie, deelbaar via een link, geen
+interne hosting nodig. De harde regels draaien in de pagina zelf; de oordeelstoets vraagt Claude,
+waarbij de kijker toestemming geeft. Werkt de oordeelstoets niet, dan blijft de rest gewoon werken.
+
+```bash
+node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
+```
+
 ## Gebruik
 
 ```bash
@@ -48,13 +58,23 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 | `src/adapter.js` | ruwe API-respons naar de velden die de toetser nodig heeft |
 | `scripts/fetch-corpus.mjs` | ophalen van de reisadviezen |
 | `scripts/bulk.mjs` | alle adviezen toetsen en een rapport schrijven |
+| `src/app.html` | de paginasjabloon; `scripts/bouw-pagina.mjs` vouwt de regels erin |
 | `tests/` | per regel een fixture die faalt en een die slaagt |
 
 `src/parse.js` en `src/regels.js` hebben geen dependencies en geen buildstap, zodat dezelfde
 code in Node draait (tests, bulkslag) en in de browser (de deelbare prototypepagina).
 
-## Bekende beperking
+## Wat de bulkslag oplevert
 
-De responsvorm van de open data API is nog niet waargenomen; `src/adapter.js` zoekt de velden
-daarom op en rapporteert per veld waar hij ze vond. Zodra één echte respons bekend is hoort daar
-een fixture bij in `tests/adapter.test.mjs` en kan de adapter een directe mapping worden.
+Over 226 live reisadviezen (`data/bulkrapport.md`): 41 zitten boven de woordenlimiet, gemiddeld
+9 eigen fouten per advies, en 25 adviezen bevatten een onderwerp dat de matrix als *niet melden*
+aanmerkt. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
+ruim 200 adviezen woordelijk hetzelfde staan. Die zijn met één aanpassing tegelijk opgelost, en
+het rapport zet ze daarom apart.
+
+## Over de regels
+
+Een regel die op bijna elk advies afgaat is vrijwel altijd de regel, niet de tekst. Vier regels
+gingen zo de eerste keer onderuit en zijn bijgesteld; de geschiedenis daarvan staat in de
+commits. Houd die norm aan bij nieuwe regels: toets een nieuwe regel eerst tegen het hele corpus
+voordat je hem gelooft.

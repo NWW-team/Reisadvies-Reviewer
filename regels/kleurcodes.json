@@ -4,7 +4,12 @@
     "{land}": "landnaam zoals gebruikt in het advies",
     "{gebieden}": "opsomming van gebieden, of 'de rest van {land}'"
   },
-  "volgorde": ["rood", "oranje", "geel", "groen"],
+  "volgorde": [
+    "rood",
+    "oranje",
+    "geel",
+    "groen"
+  ],
   "_volgorde_regel": "De volgorde is altijd van rood naar groen.",
   "_eerste_bullet_voluit": [
     "De kleurcode van het reisadvies voor {land} is {kleur}.",
@@ -23,21 +28,33 @@
       "in_het_kort_volledig": "De kleurcode van het reisadvies voor {land} is groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
       "in_het_kort_deels": "Voor {gebieden} geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
       "regionaal_kop": "Groen: u kunt erheen reizen",
-      "regionaal_tekst": "U kunt reizen naar gebieden met kleurcode groen. Lees welke veiligheidsrisico's er zijn."
+      "regionaal_tekst": "U kunt reizen naar gebieden met kleurcode groen. Lees welke veiligheidsrisico's er zijn.",
+      "actiezinnen": [
+        "U kunt erheen reizen",
+        "U kunt hierheen reizen",
+        "U kunt reizen naar gebieden met kleurcode groen"
+      ]
     },
     "geel": {
       "op_de_kaart": "Let op, veiligheidsrisico's",
       "in_het_kort_volledig": "De kleurcode van het reisadvies voor {land} is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
       "in_het_kort_deels": "Voor {gebieden} geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
       "regionaal_kop": "Geel: let op, er zijn risico's",
-      "regionaal_tekst": "U kunt reizen naar gebieden met kleurcode geel. Maar let op: er zijn bijzondere veiligheidsrisico's."
+      "regionaal_tekst": "U kunt reizen naar gebieden met kleurcode geel. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+      "actiezinnen": [
+        "Maar let op: er zijn bijzondere veiligheidsrisico's"
+      ]
     },
     "oranje": {
       "op_de_kaart": "Alleen noodzakelijke reizen",
       "in_het_kort_volledig": "De kleurcode van het reisadvies voor {land} is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
       "in_het_kort_deels": "Voor de gebieden {gebieden} geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
       "regionaal_kop": "Oranje: alleen noodzakelijke reizen",
-      "regionaal_tekst": "Reis alleen naar gebieden met kleurcode oranje als dit noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt."
+      "regionaal_tekst": "Reis alleen naar gebieden met kleurcode oranje als dit noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+      "actiezinnen": [
+        "Reis alleen hierheen als het noodzakelijk is",
+        "Reis alleen naar gebieden met kleurcode oranje als dit noodzakelijk is"
+      ]
     },
     "rood": {
       "op_de_kaart": "Niet reizen",
@@ -46,7 +63,21 @@
       "regionaal_kop": "Rood: niet reizen",
       "regionaal_tekst": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
       "uitzonderingszin": "Bent u in {land}? Verlaat het land dan als dat op een veilige manier kan.",
-      "_uitzonderingszin_nb": "Alleen in uitzonderlijke gevallen toevoegen, max. 25 woorden."
+      "_uitzonderingszin_nb": "Alleen in uitzonderlijke gevallen toevoegen, max. 25 woorden.",
+      "actiezinnen": [
+        "reis er niet heen",
+        "reis niet hierheen",
+        "reis niet naar gebieden met kleurcode rood"
+      ]
     }
-  }
+  },
+  "aanduiding_sjablonen": [
+    "De kleurcode van het reisadvies voor {land} is {kleur}",
+    "De kleurcode van het reisadvies voor de gebieden {gebieden} is {kleur}",
+    "De kleurcode van het reisadvies is {kleur} voor {gebieden}",
+    "Voor {gebieden} geldt kleurcode {kleur}",
+    "Voor de rest van {land} geldt kleurcode {kleur}"
+  ],
+  "_aanduiding_bron": "Tabblad Kleurcode-teksten, kolom NB: de eerste bullet voluit, vervolgbullets verkort, en bij een opsomming van meerdere gebieden mag de formulering worden aangepast naar 'De kleurcode van het reisadvies is oranje voor gebieden X, Y en Z.'",
+  "_actiezinnen_toelichting": "De handelingsinstructie is het inhoudelijke deel van de vaste tekst. De aanduiding van de kleur mag variëren volgens de NB-kolom; de instructie niet."
 }

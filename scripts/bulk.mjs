@@ -50,8 +50,34 @@ for (const r of resultaten) for (const [id, n] of Object.entries(r.perRegel)) {
   perRegel[id].bevindingen += n;
 }
 
+/** Groepeert op het geciteerde woord uit de boodschap ("100 procent"), en anders op het
+ *  tekstfragment. Zo vallen dezelfde standaardzinnen samen zonder dat twee toevallig even
+ *  lange zinnen op één hoop belanden. */
+function groepeerSleutel(bev) {
+  return bev.regel + '\u0000' + String(bev.fragment || bev.boodschap || '').replace(/\s+/g, ' ').trim();
+}
+
 const teLang = resultaten.filter((r) => r.perRegel['doc-woordenaantal']);
 const zonderFouten = resultaten.filter((r) => r.fout === 0);
+
+// Een bevinding die in tientallen adviezen woordelijk hetzelfde is, komt uit de standaardtekst.
+// Dat is één redactionele keuze, geen tweehonderd problemen — en zo hoort het rapport het te tonen.
+const DREMPEL = Math.max(10, Math.round(resultaten.length * 0.2));
+const perFragment = new Map();
+for (const r of resultaten) {
+  for (const bev of r.bevindingen) {
+    if (!bev.fragment) continue;
+    const sleutel = groepeerSleutel(bev);
+    if (!perFragment.has(sleutel)) perFragment.set(sleutel, { sleutel, regel: bev.regel, fragment: bev.fragment, boodschap: bev.boodschap, landen: new Set() });
+    perFragment.get(sleutel).landen.add(r.land || r.iso);
+  }
+}
+const standaardtekst = [...perFragment.values()].filter((x) => x.landen.size >= DREMPEL)
+  .sort((a, b) => b.landen.size - a.landen.size);
+const standaardSleutels = new Set(standaardtekst.map((x) => x.sleutel));
+
+const eigenFouten = (r) => r.bevindingen.filter((bev) => bev.ernst === 'fout'
+  && !standaardSleutels.has(groepeerSleutel(bev))).length;
 
 const regels = [
   '# Bulkrapport reisadviezen',
@@ -62,8 +88,21 @@ const regels = [
   '',
   `- **${zonderFouten.length}** van de ${resultaten.length} adviezen hebben geen enkele harde fout.`,
   `- **${teLang.length}** adviezen zitten boven de woordenlimiet.`,
-  `- Gemiddeld ${(resultaten.reduce((s, r) => s + r.fout, 0) / resultaten.length).toFixed(1)} fouten per advies.`,
+  `- Gemiddeld ${(resultaten.reduce((s, r) => s + eigenFouten(r), 0) / resultaten.length).toFixed(1)} eigen fouten per advies,`
+  + ` los van wat uit de standaardtekst komt.`,
   '',
+  ...(standaardtekst.length ? [
+    '## Zit in de standaardtekst',
+    '',
+    `Deze bevindingen staan woordelijk gelijk in ${DREMPEL} adviezen of meer. Eén keer aanpassen in`,
+    'de standaardtekst lost ze allemaal tegelijk op.',
+    '',
+    '| regel | in hoeveel adviezen | wat |',
+    '|---|---:|---|',
+    ...standaardtekst.slice(0, 12).map((x) =>
+      `| \`${x.regel}\` | ${x.landen.size} | ${String(x.boodschap).replace(/\|/g, '\\|').slice(0, 90)} |`),
+    '',
+  ] : []),
   '## Per regel',
   '',
   '| regel | adviezen | bevindingen |',

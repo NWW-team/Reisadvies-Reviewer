@@ -6,7 +6,25 @@ Gedraaid op 2026-09-14 over 226 reisadviezen.
 
 - **0** van de 226 adviezen hebben geen enkele harde fout.
 - **41** adviezen zitten boven de woordenlimiet.
-- Gemiddeld 14.5 fouten per advies.
+- Gemiddeld 9.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
+
+## Zit in de standaardtekst
+
+Deze bevindingen staan woordelijk gelijk in 45 adviezen of meer. Eén keer aanpassen in
+de standaardtekst lost ze allemaal tegelijk op.
+
+| regel | in hoeveel adviezen | wat |
+|---|---:|---|
+| `percentage-notatie` | 223 | "100 procent" moet als 5% — symbool, zonder spatie. |
+| `link-tekstlengte` | 221 | Linktekst is 74 tekens. Maximaal 70. |
+| `zin-max-woorden` | 218 | Deze zin telt 17 woorden. Maximaal 15. |
+| `zin-max-woorden` | 212 | Deze zin telt 17 woorden. Maximaal 15. |
+| `zin-lijdende-vorm` | 208 | Lijdende vorm: "wordt … beroofd". Schrijf actief. |
+| `link-tekstlengte` | 208 | Linktekst is 75 tekens. Maximaal 70. |
+| `zin-max-woorden` | 192 | Deze zin telt 32 woorden. Maximaal 15. |
+| `zin-max-woorden` | 191 | Deze zin telt 17 woorden. Maximaal 15. |
+| `zin-max-woorden` | 179 | Deze zin telt 16 woorden. Maximaal 15. |
+| `zin-max-woorden` | 47 | Deze zin telt 18 woorden. Maximaal 15. |
 
 ## Per regel
 
@@ -16,15 +34,12 @@ Gedraaid op 2026-09-14 over 226 reisadviezen.
 | `link-tekstlengte` | 226 | 486 |
 | `percentage-notatie` | 224 | 224 |
 | `zin-lijdende-vorm` | 218 | 483 |
-| `lhbtiq-schrijfwijze` | 198 | 199 |
 | `zin-twijfeltaal` | 183 | 527 |
-| `kleur-vaste-tekst` | 103 | 156 |
 | `kleur-eerste-bullet-voluit` | 68 | 68 |
-| `kleur-volgorde` | 67 | 67 |
 | `aanhalingstekens` | 53 | 87 |
 | `actueel-max-woorden` | 51 | 51 |
 | `doc-woordenaantal` | 41 | 41 |
-| `h2-vast` | 31 | 58 |
+| `kleur-aanduiding` | 33 | 34 |
 | `h3-niet-melden` | 25 | 25 |
 | `getallen-cijfers` | 16 | 29 |
 | `tussenkop-leestekens` | 11 | 11 |
@@ -33,8 +48,11 @@ Gedraaid op 2026-09-14 over 226 reisadviezen.
 | `link-verboden-partij` | 6 | 7 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
+| `h2-vast` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
 | `afkortingen-uitschrijven` | 3 | 3 |
+| `lhbtiq-schrijfwijze` | 2 | 2 |
+| `kleur-vaste-tekst` | 2 | 2 |
 | `alinea-max-woorden` | 2 | 4 |
 | `telefoon-notatie` | 2 | 3 |
 | `genderneutraal` | 2 | 3 |

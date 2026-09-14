@@ -75,10 +75,13 @@ export function maakToetser(data) {
   function isVasteH2(kop, land) {
     const n = norm(kop);
     return matrix.h2_vast.some((sjabloon) => {
-      let p = esc(norm(sjabloon))
+      // De landnaam in de kop wijkt legitiem af van het location-veld: adviezen gebruiken
+      // afkortingen ("de VAE") en lidwoorden ("op de Bahama's"), en de schrijfwijzer laat
+      // per (ei)land in of op toe. Daarom een jokerteken in plaats van de exacte naam.
+      const p = esc(norm(sjabloon))
         .replace(/\\\?/g, '\\?')
-        .replace(/\bin \\\{land\\\}/g, '(?:in|op) ' + (land ? esc(norm(land)) : "[^?]{2,40}"))
-        .replace(/\\\{land\\\}/g, land ? esc(norm(land)) : "[^?]{2,40}");
+        .replace(/\b(in|naar) \\\{land\\\}/g, '(?:in|op|naar) [^?]{2,45}')
+        .replace(/\\\{land\\\}/g, '[^?]{2,45}');
       return new RegExp('^' + p + '$').test(n);
     });
   }
@@ -114,25 +117,41 @@ export function maakToetser(data) {
     }
 
     // ---------- kleurcodes ----------
+    // De matrix laat meerdere manieren toe om de kleur aan te duiden (kolom NB), maar de
+    // handelingsinstructie erachter ligt vast. Die twee toetsen we daarom apart.
     for (const kleur of kleurenInTekst) {
       const k = kleurcodes.kleuren[kleur];
       if (!k) continue;
-      const volledig = sjabloonRegex(k.in_het_kort_volledig, doc.land);
-      const deels = sjabloonRegex(k.in_het_kort_deels, doc.land);
-      if (!volledig.test(genorm) && !deels.test(genorm)) {
+
+      const aangeduid = (kleurcodes.aanduiding_sjablonen || []).some((sj) =>
+        sjabloonRegex(sj.replace(/\{kleur\}/g, kleur), doc.land).test(genorm));
+      if (!aangeduid) {
+        b.push(bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+          `Kleurcode ${kleur} wordt niet op een van de vaste manieren aangeduid.`,
+          { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.` }));
+      }
+
+      const heeftActie = (k.actiezinnen || []).some((z) => genorm.includes(norm(z)));
+      if (!heeftActie) {
         b.push(bevinding('kleur-vaste-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
-          `De vaste formulering voor kleurcode ${kleur} staat niet letterlijk in het advies.`,
+          `Bij kleurcode ${kleur} ontbreekt de vaste handelingsinstructie.`,
           { verwacht: k.in_het_kort_volledig.replace('{land}', doc.land || 'land X') }));
       }
     }
 
-    if (kleurenInTekst.length > 1) {
-      const posities = kleurenInTekst.map((k) => ({ k, i: genorm.indexOf('kleurcode ' + k) }))
+    // De volgorde rood-naar-groen geldt voor de opsomming in "In het kort", niet voor elke
+    // vermelding van een kleur verderop in het advies.
+    const kortTekst = kortBlokTekst(doc);
+    if (kortTekst) {
+      const posities = kleurcodes.volgorde
+        .map((k) => ({ k, i: norm(kortTekst).search(new RegExp('kleurcode[^.]{0,80}\\b' + k + '\\b|\\b' + k + '\\b(?=[^.]{0,40}kleurcode)')) }))
         .filter((x) => x.i >= 0).sort((x, y) => x.i - y.i).map((x) => x.k);
-      const verwacht = kleurcodes.volgorde.filter((k) => posities.includes(k));
-      if (posities.join('>') !== verwacht.join('>')) {
-        b.push(bevinding('kleur-volgorde', ERNST.fout, 'MX, tab Kleurcode-teksten, kolom NB',
-          `De kleurcodes staan in de volgorde ${posities.join(' > ')}. De volgorde is altijd van rood naar groen: ${verwacht.join(' > ')}.`));
+      if (posities.length > 1) {
+        const verwacht = kleurcodes.volgorde.filter((k) => posities.includes(k));
+        if (posities.join('>') !== verwacht.join('>')) {
+          b.push(bevinding('kleur-volgorde', ERNST.fout, 'MX, tab Kleurcode-teksten, kolom NB',
+            `In "In het kort" staan de kleurcodes in de volgorde ${posities.join(' > ')}. De volgorde is altijd van rood naar groen: ${verwacht.join(' > ')}.`));
+        }
       }
     }
 
@@ -435,11 +454,11 @@ export function maakToetser(data) {
           `"${w}" is niet genderneutraal.`, { fragment: contextVan(tekst, tekst.search(re)) }));
       }
     }
-    for (const w of wl.genderneutraal.lhbtiq.fout) {
-      const re = new RegExp(esc(w) + (/\+$/.test(w) ? '(?![\\s-])' : ''), 'g');
-      if (re.test(tekst)) {
+    for (const { patroon, boodschap } of wl.genderneutraal.lhbtiq.patronen) {
+      const m = tekst.match(new RegExp(patroon, 'u'));
+      if (m) {
         b.push(bevinding('lhbtiq-schrijfwijze', ERNST.letop, 'SW, Schrijfregels > Gender(neutraal) / lhbtiq+',
-          `"${w}" is niet de afgesproken schrijfwijze. Bijvoeglijk met spatie (lhbtiq+ personen), definiërend met koppelteken (lhbtiq+-rechten).`));
+          boodschap, { fragment: contextVan(tekst, m.index) }));
       }
     }
 
@@ -480,11 +499,31 @@ export function maakToetser(data) {
   };
 }
 
-function contextVan(tekst, index, marge = 45) {
+/** De tekst onder "In het kort": daar geldt de volgorde-regel voor de kleurcodes. */
+function kortBlokTekst(doc) {
+  const blok = doc.blokken.find((x) => (x.kop || '').trim().toLowerCase() === 'in het kort');
+  if (!blok) return null;
+  return [...blok.alineas.map((a) => a.tekst), ...blok.opsommingen.flatMap((o) => o.items)].join(' ');
+}
+
+/** De zin waarin de treffer staat. Een hele zin is bruikbaarder voor de redacteur dan een
+ *  afgeknipt tekenvenster, en het maakt bevindingen vergelijkbaar tussen adviezen: dezelfde
+ *  standaardzin levert dan letterlijk hetzelfde fragment op. */
+function contextVan(tekst, index, marge = 220) {
   if (index == null || index < 0) return '';
-  const start = Math.max(0, index - marge);
-  const eind = Math.min(tekst.length, index + marge);
-  return (start > 0 ? '…' : '') + tekst.slice(start, eind).replace(/\s+/g, ' ').trim() + (eind < tekst.length ? '…' : '');
+  const vanaf = Math.max(0, index - marge);
+  const tot = Math.min(tekst.length, index + marge);
+  const venster = tekst.slice(vanaf, tot);
+  const positie = index - vanaf;
+
+  let start = 0;
+  for (const m of venster.slice(0, positie).matchAll(/[.!?\n]\s+/g)) start = m.index + m[0].length;
+  let eind = venster.length;
+  const staart = venster.slice(positie).match(/[.!?\n]/);
+  if (staart) eind = positie + staart.index + 1;
+
+  const zin = venster.slice(start, eind).replace(/\s+/g, ' ').trim();
+  return zin || venster.replace(/\s+/g, ' ').trim();
 }
 
 export { ERNST };

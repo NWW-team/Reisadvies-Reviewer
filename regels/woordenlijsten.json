@@ -113,21 +113,25 @@
       "vrouwelijke reiziger"
     ],
     "lhbtiq": {
-      "bijvoeglijk_met_spatie": [
-        "lhbtiq+ personen",
-        "lhbtiq+ reizigers",
-        "lhbtiq+ mensen"
-      ],
-      "definierend_met_koppelteken": [
-        "lhbtiq+-rechten",
-        "lhbtiq+-geweld"
-      ],
-      "fout": [
-        "LHBTIQ+",
-        "lhbti+",
-        "lhbt",
-        "lhbtiq+personen",
-        "lhbtiq+ -rechten"
+      "_bron": "Schrijfregels > Gender(neutraal) / lhbtiq+",
+      "_regel": "We gebruiken de term lhbtiq+. Bijvoeglijk met spatie (lhbtiq+ personen), definiërend met koppelteken (lhbtiq+-rechten).",
+      "patronen": [
+        {
+          "patroon": "\\blhbtiq(?!\\+)\\b",
+          "boodschap": "\"lhbtiq\" zonder plusteken; we gebruiken de term lhbtiq+."
+        },
+        {
+          "patroon": "lhbtiq\\+(?=\\p{L})",
+          "boodschap": "\"lhbtiq+\" direct tegen het volgende woord; bijvoeglijk hoort er een spatie tussen (lhbtiq+ personen), definiërend een koppelteken (lhbtiq+-rechten)."
+        },
+        {
+          "patroon": "\\bLHBTIQ\\+",
+          "boodschap": "\"LHBTIQ+\" in hoofdletters; we schrijven lhbtiq+."
+        },
+        {
+          "patroon": "\\blhbti\\+|\\blhbt\\b",
+          "boodschap": "verouderde afkorting; we gebruiken lhbtiq+."
+        }
       ]
     }
   },

@@ -1,6 +1,6 @@
 /**
  * Haalt de reisadviezen op uit de open data v2 API van Nederland Wereldwijd en schrijft
- * ze naar data/corpus/<iso>.json.
+ * ze naar data/corpus/<iso>.xml. De API levert XML, geen JSON — zie src/adapter.js.
  *
  * Draait NIET in de Claude Code-omgeving: die zit achter een netwerk-allowlist die alleen
  * GitHub en de package-registries doorlaat. Draai dit op een GitHub Actions-runner
@@ -36,10 +36,12 @@ function argumenten(argv) {
 async function haal(url, pogingen = POGINGEN) {
   for (let p = 1; p <= pogingen; p++) {
     try {
-      const r = await fetch(url, { headers: { accept: 'application/json' } });
+      const r = await fetch(url, { headers: { accept: 'application/xml' } });
       if (r.status === 404) return { status: 404 };
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      return { status: 200, body: await r.json() };
+      const tekst = await r.text();
+      if (!tekst.includes('<document')) return { status: 0, fout: 'antwoord is geen <document>-XML' };
+      return { status: 200, body: tekst };
     } catch (e) {
       if (p === pogingen) return { status: 0, fout: e.message };
       await new Promise((r) => setTimeout(r, 2 ** p * 500));
@@ -77,8 +79,7 @@ async function main() {
       const land = werk[volgende++];
       const r = await haalLand(land);
       if (r.ok) {
-        writeFileSync(join(UITVOER, `${land.iso}.json`),
-          JSON.stringify({ iso: land.iso, locationKey: land.locationKey, opgehaald: new Date().toISOString(), bron: r.url, data: r.body }, null, 2));
+        writeFileSync(join(UITVOER, `${land.iso}.xml`), r.body);
         gelukt.push(land.iso);
         process.stdout.write('.');
       } else {

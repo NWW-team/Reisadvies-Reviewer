@@ -24,22 +24,21 @@ const toets = maakToetser({
 });
 
 const corpusMap = join(wortel, 'data', 'corpus');
-if (!existsSync(corpusMap) || readdirSync(corpusMap).filter((f) => f.endsWith('.json')).length === 0) {
+if (!existsSync(corpusMap) || readdirSync(corpusMap).filter((f) => f.endsWith('.xml')).length === 0) {
   console.error('Geen corpus gevonden in data/corpus/. Draai eerst scripts/fetch-corpus.mjs '
     + '(op een machine met toegang tot opendata.nederlandwereldwijd.nl, of via de workflow Corpus ophalen).');
   process.exit(1);
 }
 
 const resultaten = [];
-for (const bestand of readdirSync(corpusMap).filter((f) => f.endsWith('.json')).sort()) {
-  const ruw = JSON.parse(readFileSync(join(corpusMap, bestand), 'utf8'));
-  const velden = uitApiRespons(ruw);
+for (const bestand of readdirSync(corpusMap).filter((f) => f.endsWith('.xml')).sort()) {
+  const velden = uitApiRespons(readFileSync(join(corpusMap, bestand), 'utf8'));
   const doc = parseAdvies(velden.html, {
     land: velden.land, titel: velden.titel, url: velden.url, kleurcodes: velden.kleurcodes,
   });
   const r = toets(doc);
-  resultaten.push({ bestand, iso: ruw.iso || bestand.replace('.json', ''), ...r.samenvatting,
-    bevindingen: r.bevindingen, herkomst: velden.herkomst });
+  resultaten.push({ bestand, iso: velden.isocode || bestand.replace('.xml', ''), ...r.samenvatting,
+    bevindingen: r.bevindingen, gewijzigd: velden.gewijzigd });
 }
 
 writeFileSync(join(wortel, 'data', 'bevindingen.json'), JSON.stringify(resultaten, null, 2));

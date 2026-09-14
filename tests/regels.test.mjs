@@ -25,7 +25,8 @@ const gevallen = [
   {
     regel: 'h2-vast',
     faalt: '<h2>Handige tips</h2><p>Tekst.</p>',
-    slaagt: '<h2>Noodsituatie</h2><p>Tekst.</p>',
+    // De vaste H2's staan in vraagvorm; zie regels/matrix.json en data/voorbeeld/CZE.xml.
+    slaagt: '<h2>Wat kan ik doen in een noodsituatie?</h2><p>Tekst.</p>',
   },
   {
     regel: 'zin-max-woorden',

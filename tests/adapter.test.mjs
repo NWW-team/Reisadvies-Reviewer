@@ -1,51 +1,53 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { uitApiRespons } from '../src/adapter.js';
+import { parseAdvies } from '../src/parse.js';
 
 /**
- * De responsvorm van de open data v2 API is nog niet waargenomen. Deze tests leggen vast dat
- * de adapter tegen verschillende plausibele vormen bestand is en altijd verantwoordt waar hij
- * een veld vandaan haalde. Zodra de echte vorm bekend is hoort daar een fixture bij.
+ * Getoetst tegen een echte respons van de open data v2 API (data/voorbeeld/CZE.xml),
+ * opgehaald door de probe-workflow. De API levert XML met de HTML in CDATA-blokken.
  */
+const CZE = readFileSync(new URL('../data/voorbeeld/CZE.xml', import.meta.url), 'utf8');
 
-test('platte vorm met content-veld', () => {
-  const r = uitApiRespons({
-    iso: 'CZE',
-    data: { title: 'Reisadvies Tsjechië', url: 'https://www.nederlandwereldwijd.nl/reisadvies/tsjechie',
-      country: 'Tsjechië', content: '<h2>In het kort</h2><p>De kleurcode is groen.</p>' },
-  });
-  assert.equal(r.titel, 'Reisadvies Tsjechië');
-  assert.equal(r.land, 'Tsjechië');
-  assert.match(r.html, /In het kort/);
-  assert.equal(r.herkomst.html[0], 'content');
+test('de kopvelden komen uit de juiste XML-elementen', () => {
+  const v = uitApiRespons(CZE);
+  assert.equal(v.land, 'Tsjechië');
+  assert.equal(v.isocode, 'CZE');
+  assert.equal(v.locationKey, 'tsjechie');
+  assert.equal(v.url, 'https://www.nederlandwereldwijd.nl/reisadvies/tsjechie');
 });
 
-test('genest met meerdere secties houdt alle tekst vast', () => {
-  const r = uitApiRespons({
-    data: { travelAdvice: { country: 'Frankrijk', sections: [
-      { heading: 'In het kort', body: '<p>De kleurcode van het reisadvies voor Frankrijk is geel.</p>' },
-      { heading: 'Criminaliteit', body: '<p>Er zijn zakkenrollers in Parijs.</p>' },
-    ] } },
-  });
-  assert.match(r.html, /zakkenrollers/);
-  assert.match(r.html, /kleurcode/);
-  assert.equal(r.herkomst.html.length, 2);
+test('de titel wordt losgeknipt van de ministerienaam', () => {
+  assert.equal(uitApiRespons(CZE).titel, 'Reisadvies Tsjechië');
 });
 
-test('kleurcode uit een expliciet veld gaat voor op de lopende tekst', () => {
-  const r = uitApiRespons({ data: { colour: 'oranje', content: '<p>Ooit was de kleurcode groen.</p>' } });
-  assert.deepEqual(r.kleurcodes, ['oranje']);
-  assert.ok(!r.herkomst.kleurcodes[0].startsWith('(afgeleid'));
+test('categorieën worden h2 en contentblocks worden h3', () => {
+  const doc = parseAdvies(uitApiRespons(CZE).html);
+  const h2 = doc.koppen.filter((k) => k.niveau === 2).map((k) => k.tekst);
+  const h3 = doc.koppen.filter((k) => k.niveau === 3).map((k) => k.tekst);
+  assert.ok(h2.includes('In het kort'));
+  assert.ok(h2.includes("Welke veiligheidsrisico's zijn er in Tsjechië?"));
+  assert.ok(h3.includes('Criminaliteit'));
+  assert.ok(h3.includes('Reisverzekering'));
 });
 
-test('kleurcode wordt afgeleid uit de tekst als er geen veld is', () => {
-  const r = uitApiRespons({ data: { content: '<p>De kleurcode van het reisadvies is rood.</p>' } });
-  assert.deepEqual(r.kleurcodes, ['rood']);
-  assert.match(r.herkomst.kleurcodes[0], /afgeleid/);
+test('de inhoud van de paragrafen blijft behouden', () => {
+  const doc = parseAdvies(uitApiRespons(CZE).html);
+  assert.ok(doc.woorden > 800, `verwachtte een volledig advies, kreeg ${doc.woorden} woorden`);
+  assert.match(doc.volledigeTekst, /zakkenrollers/);
 });
 
-test('zonder herkenbare HTML wordt dat gemeld in plaats van stil geraden', () => {
-  const r = uitApiRespons({ data: { omschrijving: 'Een lange platte tekst zonder opmaak. '.repeat(20) } });
-  assert.ok(r.html.length > 100);
-  assert.match(r.herkomst.html_waarschuwing, /Controleer dit veld/);
+test('de kleurcode wordt uit de vaste formulering gehaald', () => {
+  assert.deepEqual(uitApiRespons(CZE).kleurcodes, ['groen']);
+});
+
+test('links uit de CDATA-blokken komen mee', () => {
+  const doc = parseAdvies(uitApiRespons(CZE).html);
+  assert.ok(doc.links.length > 3, `verwachtte links, kreeg er ${doc.links.length}`);
+  assert.ok(doc.links.some((l) => /informatieservice/i.test(l.href || '')));
+});
+
+test('een niet-XML invoer wordt geweigerd in plaats van stil verkeerd gelezen', () => {
+  assert.throws(() => uitApiRespons({ data: 'geen string' }), TypeError);
 });

@@ -65,6 +65,24 @@ export function maakToetser(data) {
     return null;
   }
 
+  /** Koppen die de matrix letterlijk voorschrijft, inclusief de toegestane varianten. */
+  const matrixKoppen = new Set(matrix.koppen.flatMap((k) =>
+    [k.h3, ...(k.kop_varianten || [])].filter(Boolean).map(norm)));
+  const isMatrixKop = (kop) => matrixKoppen.has(norm(kop));
+
+  /** De vaste H2's staan in vraagvorm met de landnaam erin; 'in {land}' mag ook 'op {land}'
+   *  zijn, want de schrijfwijzer kent die keuze per (ei)land. */
+  function isVasteH2(kop, land) {
+    const n = norm(kop);
+    return matrix.h2_vast.some((sjabloon) => {
+      let p = esc(norm(sjabloon))
+        .replace(/\\\?/g, '\\?')
+        .replace(/\bin \\\{land\\\}/g, '(?:in|op) ' + (land ? esc(norm(land)) : "[^?]{2,40}"))
+        .replace(/\\\{land\\\}/g, land ? esc(norm(land)) : "[^?]{2,40}");
+      return new RegExp('^' + p + '$').test(n);
+    });
+  }
+
   /** @returns {{bevindingen: Array, samenvatting: object}} */
   return function toets(doc, opties = {}) {
     const b = [];
@@ -145,9 +163,10 @@ export function maakToetser(data) {
 
     // ---------- koppen tegen de matrix ----------
     for (const kop of doc.koppen) {
-      if (kop.niveau === 2 && !matrix.h2_vast.some((h) => norm(h) === norm(kop.tekst))) {
+      if (kop.niveau === 2 && !isVasteH2(kop.tekst, doc.land)) {
         b.push(bevinding('h2-vast', ERNST.letop, 'MX, tab Uitleg',
-          `"${kop.tekst}" is geen vaste H2. Vast zijn: ${matrix.h2_vast.join(', ')}.`, { fragment: kop.tekst }));
+          `"${kop.tekst}" is geen vaste H2. Vast zijn: ${matrix.h2_vast.map((h) => h.replace('{land}', doc.land || 'land X')).join(' / ')}.`,
+          { fragment: kop.tekst }));
       }
       if (kop.niveau === 3) {
         const regel = koppenOpNaam.get(norm(kop.tekst));
@@ -199,7 +218,10 @@ export function maakToetser(data) {
     }
 
     // ---------- tussenkoppen ----------
-    for (const kop of doc.koppen) {
+    // Alleen H3: de H2's zijn door de matrix voorgeschreven vraagvormen en mogen langer zijn.
+    // Koppen die de matrix letterlijk voorschrijft ("Paspoort, ID-kaart, rijbewijs") toetsen we
+    // niet op woordenaantal of leestekens — de richtlijn is daar de matrix zelf.
+    for (const kop of doc.koppen.filter((k) => k.niveau === 3 && !isMatrixKop(k.tekst))) {
       const w = telWoorden(kop.tekst);
       if (w > lim.tussenkop.max_woorden) {
         b.push(bevinding('tussenkop-max-woorden', ERNST.letop, 'SW, Gebruiksvriendelijkheid > (Tussen)koppen',
@@ -336,8 +358,11 @@ export function maakToetser(data) {
 
     // ---------- schrijfregels op tekstniveau ----------
     const regelChecks = [
+      // Alleen echte paren tellen: 'veiligheidsrisico's' en 'Bahama's' bevatten een apostrof,
+      // geen aanhalingsteken.
       ['aanhalingstekens', ERNST.letop, 'SW, Schrijfregels > Aanhalingstekens',
-        /[“”‘’"]/g, (m) => `Aanhalingsteken ${m} gebruikt. Gebruik geen aanhalingstekens.`],
+        /“[^”]{1,200}”|‘[^’]{1,200}’|"[^"]{1,200}"/g,
+        (m) => `Aanhalingstekens om ${m.length > 40 ? m.slice(0, 40) + '…' : m}. Gebruik geen aanhalingstekens.`],
       ['percentage-notatie', ERNST.letop, 'SW, Schrijfregels > Percentages',
         /\d+\s+%|\d+\s*procent/gi, (m) => `"${m}" moet als 5% — symbool, zonder spatie.`],
       ['valuta-notatie', ERNST.letop, "SW, Schrijfregels > Euro's / Valuta",

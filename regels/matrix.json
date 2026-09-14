@@ -5,7 +5,13 @@
     "verwijzen": "Korte tekst en doorverwijzen met een link",
     "niet-melden": "Info valt buiten reisadvies en we verwijzen er ook niet naar"
   },
-  "h2_vast": ["In het kort", "Veiligheidsrisico's", "Noodsituatie", "Reisvoorbereiding"],
+  "h2_vast": [
+    "In het kort",
+    "Welke veiligheidsrisico's zijn er in {land}?",
+    "Wat kan ik doen in een noodsituatie?",
+    "Hoe bereid ik mijn reis naar {land} voor?",
+    "Ook nuttig"
+  ],
   "koppen": [
     {
       "id": "in-het-kort",
@@ -22,7 +28,14 @@
       "richtlijn": "uitschrijven",
       "toelichting": "Alleen indien relevant, als er een calamiteit is en de situatie onvoorspelbaar is. Wat speelt er? Waar: hele land of bepaalde gebieden? Is de kleurcode hierom opgeschaald? Welk handelingsperspectief heeft de klant?",
       "opmerking": "Bijv. stroomstoringen niet, alleen als er een link is met veiligheid.",
-      "trefwoorden": ["politieke onrust", "spanningen", "gevechten", "aanslagen", "demonstraties", "natuurgeweld"]
+      "trefwoorden": [
+        "politieke onrust",
+        "spanningen",
+        "gevechten",
+        "aanslagen",
+        "demonstraties",
+        "natuurgeweld"
+      ]
     },
     {
       "id": "regionale-risicos",
@@ -45,7 +58,13 @@
       "h3": "Criminaliteit",
       "richtlijn": "uitschrijven",
       "toelichting": "Is er veel criminaliteit? Op welke plekken? Welke vormen zijn specifiek voor dit land? Welk handelingsperspectief (landspecifieke tips en verwijzing naar de pagina met standaardtips)?",
-      "subkopjes": ["zakkenrollers", "berovingen", "oplichting", "drogeren", "ontvoeringen"]
+      "subkopjes": [
+        "zakkenrollers",
+        "berovingen",
+        "oplichting",
+        "drogeren",
+        "ontvoeringen"
+      ]
     },
     {
       "id": "wetten-en-gebruiken",
@@ -54,7 +73,12 @@
       "richtlijn": "uitschrijven",
       "toelichting": "Zijn er specifieke wetten en gebruiken om rekening mee te houden en welke vormen een risico?",
       "opmerking": "Grenscontroles niet vermelden: je kunt altijd worden gecontroleerd en moet altijd een reisdocument bij je hebben.",
-      "subkopjes": ["drugs", "alcohol", "lhbtiq+", "grenzen/grensovergangen gesloten"]
+      "subkopjes": [
+        "drugs",
+        "alcohol",
+        "lhbtiq+",
+        "grenzen/grensovergangen gesloten"
+      ]
     },
     {
       "id": "natuurgeweld",
@@ -62,7 +86,13 @@
       "h3": "Natuurgeweld",
       "richtlijn": "uitschrijven",
       "toelichting": "Welke vormen van natuurgeweld zijn een risico, in welke gebieden en wanneer? Wat is het handelingsperspectief, met links naar relevante bronnen?",
-      "subkopjes": ["aardbevingen", "bosbranden", "orkanen", "overstromingen", "vulkaanuitbarstingen"]
+      "subkopjes": [
+        "aardbevingen",
+        "bosbranden",
+        "orkanen",
+        "overstromingen",
+        "vulkaanuitbarstingen"
+      ]
     },
     {
       "id": "landmijnen",
@@ -100,7 +130,12 @@
       "h3": "Smog",
       "richtlijn": "niet-melden",
       "toelichting": "Evt. alleen indien er ernstig gevaar is voor iedereen. Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld.",
-      "trefwoorden": ["smog", "luchtkwaliteit", "luchtvervuiling", "fijnstof"]
+      "trefwoorden": [
+        "smog",
+        "luchtkwaliteit",
+        "luchtvervuiling",
+        "fijnstof"
+      ]
     },
     {
       "id": "fotos-maken",
@@ -108,7 +143,11 @@
       "h3": "Foto's maken",
       "richtlijn": "niet-melden",
       "toelichting": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet.",
-      "trefwoorden": ["foto's maken", "fotograferen", "filmen"]
+      "trefwoorden": [
+        "foto's maken",
+        "fotograferen",
+        "filmen"
+      ]
     },
     {
       "id": "kledingvoorschriften",
@@ -116,7 +155,12 @@
       "h3": "Kledingvoorschriften",
       "richtlijn": "niet-melden",
       "toelichting": "Reisgidsinfo.",
-      "trefwoorden": ["kledingvoorschrift", "bedek uw", "kleed u", "gepaste kleding"]
+      "trefwoorden": [
+        "kledingvoorschrift",
+        "bedek uw",
+        "kleed u",
+        "gepaste kleding"
+      ]
     },
     {
       "id": "wilde-dieren",
@@ -124,7 +168,12 @@
       "h3": "Wilde dieren",
       "richtlijn": "niet-melden",
       "toelichting": "Reisgidsinfo.",
-      "trefwoorden": ["wilde dieren", "slangen", "haaien", "krokodillen"]
+      "trefwoorden": [
+        "wilde dieren",
+        "slangen",
+        "haaien",
+        "krokodillen"
+      ]
     },
     {
       "id": "weeshuistoerisme",
@@ -132,7 +181,11 @@
       "h3": "Weeshuistoerisme",
       "richtlijn": "niet-melden",
       "toelichting": "Geen risico. En staat ook op Rijksoverheid.nl.",
-      "trefwoorden": ["weeshuis", "weeshuistoerisme", "vrijwilligerswerk met kinderen"]
+      "trefwoorden": [
+        "weeshuis",
+        "weeshuistoerisme",
+        "vrijwilligerswerk met kinderen"
+      ]
     },
     {
       "id": "in-geval-van-nood",
@@ -154,7 +207,10 @@
       "h3": "Paspoort, visum, rijbewijs",
       "richtlijn": "uitschrijven-verwijzen",
       "toelichting": "Zo kort mogelijk: is een NL paspoort of ID-kaart nodig en hoelang geldig; is een visum nodig, bij welke verblijfsduur en waar aan te vragen; kan ik er met NL rijbewijs rijden of is een internationaal rijbewijs nodig (verwijzing ANWB).",
-      "kop_varianten": ["Paspoort, visum, rijbewijs", "Paspoort, ID-kaart, rijbewijs"]
+      "kop_varianten": [
+        "Paspoort, visum, rijbewijs",
+        "Paspoort, ID-kaart, rijbewijs"
+      ]
     },
     {
       "id": "reisvaccinaties",
@@ -184,7 +240,12 @@
       "h3": "Mobiele telefoon",
       "richtlijn": "niet-melden",
       "toelichting": "Te veel open deur. Evt. alleen noemen als bellen of bereik echt een groot probleem is, met verwijzing naar de pagina over mobiel gebruik in het buitenland.",
-      "trefwoorden": ["simkaart", "simlock", "mobiel bereik", "roaming"]
+      "trefwoorden": [
+        "simkaart",
+        "simlock",
+        "mobiel bereik",
+        "roaming"
+      ]
     },
     {
       "id": "geldzaken",
@@ -192,7 +253,13 @@
       "h3": "Geldzaken",
       "richtlijn": "niet-melden",
       "toelichting": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden.",
-      "trefwoorden": ["pinnen", "contant geld", "geldautomaat", "creditcard", "wisselkoers"]
+      "trefwoorden": [
+        "pinnen",
+        "contant geld",
+        "geldautomaat",
+        "creditcard",
+        "wisselkoers"
+      ]
     },
     {
       "id": "eten-en-drinken",
@@ -200,7 +267,12 @@
       "h3": "Eten en drinken",
       "richtlijn": "niet-melden",
       "toelichting": "Reisgidsinfo.",
-      "trefwoorden": ["kraanwater", "drink geen", "voedselveiligheid", "rauw voedsel"]
+      "trefwoorden": [
+        "kraanwater",
+        "drink geen",
+        "voedselveiligheid",
+        "rauw voedsel"
+      ]
     },
     {
       "id": "thuisblijvers",
@@ -208,7 +280,11 @@
       "h3": "Thuisblijvers",
       "richtlijn": "niet-melden",
       "toelichting": "Evt. deels overhevelen naar In geval van nood.",
-      "trefwoorden": ["thuisblijvers", "achterblijvers", "laat uw reisschema achter"]
+      "trefwoorden": [
+        "thuisblijvers",
+        "achterblijvers",
+        "laat uw reisschema achter"
+      ]
     },
     {
       "id": "gezondheidszorg",
@@ -216,7 +292,12 @@
       "h3": "Gezondheidszorg",
       "richtlijn": "niet-melden",
       "toelichting": "Evt. tekst opnemen bij Reisverzekering. Let op: slechte gezondheidszorg is nooit een reden om de kleurcode te wijzigen.",
-      "trefwoorden": ["ziekenhuis", "medische voorzieningen", "gezondheidszorg", "artsen"]
+      "trefwoorden": [
+        "ziekenhuis",
+        "medische voorzieningen",
+        "gezondheidszorg",
+        "artsen"
+      ]
     },
     {
       "id": "ggd-app",
@@ -224,7 +305,17 @@
       "h3": "GGD-reis mee app",
       "richtlijn": "niet-melden",
       "toelichting": "",
-      "trefwoorden": ["reis mee app", "ggd-app"]
+      "trefwoorden": [
+        "reis mee app",
+        "ggd-app"
+      ]
     }
+  ],
+  "_h2_toelichting": "Vastgesteld op een echte API-respons (data/voorbeeld/CZE.xml). De matrix zegt 'Deze koppen zijn vast en in vraagvorm'; de korte labels (Veiligheidsrisico's, Noodsituatie, Reisvoorbereiding) zijn de matrixnamen, de vraagvormen staan in de gepubliceerde tekst. {land} is de landnaam; 'in {land}' mag ook 'op {land}' zijn volgens de schrijfwijzerregel over op/in bij eilanden. 'Ook nuttig' komt uit de schrijfwijzer (Gebruiksvriendelijkheid > Links onderaan de pagina) en staat in het veld additionalinformation.",
+  "h2_matrixnamen": [
+    "In het kort",
+    "Veiligheidsrisico's",
+    "Noodsituatie",
+    "Reisvoorbereiding"
   ]
 }

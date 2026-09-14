@@ -1,0 +1,230 @@
+{
+  "_bron": "Matrix nieuwe format Reisadviezen (1).xlsx, tabbladen 'Koppen' en 'Uitleg'",
+  "_richtlijnen": {
+    "uitschrijven": "Uitleg geven en evt handelingsperspectief wat bezoeker kan doen",
+    "verwijzen": "Korte tekst en doorverwijzen met een link",
+    "niet-melden": "Info valt buiten reisadvies en we verwijzen er ook niet naar"
+  },
+  "h2_vast": ["In het kort", "Veiligheidsrisico's", "Noodsituatie", "Reisvoorbereiding"],
+  "koppen": [
+    {
+      "id": "in-het-kort",
+      "h2": "In het kort",
+      "h3": null,
+      "richtlijn": "uitschrijven",
+      "toelichting": "In bullets: actuele ontwikkeling (alleen als er iets speelt op het gebied van veiligheid) met verwijzing naar Actueel, daarna kleurcode 1, 2 en 3. Daaronder in Let op: Aanmelden Informatieservice (standaardtekst).",
+      "opmerking": "Actueel max 25 woorden. Kleurcodes vaste formuleringen aanhouden. Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen."
+    },
+    {
+      "id": "actueel",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Actueel",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Alleen indien relevant, als er een calamiteit is en de situatie onvoorspelbaar is. Wat speelt er? Waar: hele land of bepaalde gebieden? Is de kleurcode hierom opgeschaald? Welk handelingsperspectief heeft de klant?",
+      "opmerking": "Bijv. stroomstoringen niet, alleen als er een link is met veiligheid.",
+      "trefwoorden": ["politieke onrust", "spanningen", "gevechten", "aanslagen", "demonstraties", "natuurgeweld"]
+    },
+    {
+      "id": "regionale-risicos",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Regionale risico's",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Alleen bij meer dan 1 kleurcode. Zo beknopt mogelijk: welke gebieden hebben welke kleurcode, wat zijn de concrete risico's daar, welk handelingsperspectief heeft de klant?",
+      "alleen_bij_meerdere_kleurcodes": true
+    },
+    {
+      "id": "terrorisme",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Terrorisme",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Is er concrete terroristische dreiging? Worden er wel eens aanslagen gepleegd? Specifieke gebieden waar de klant risico loopt? Welk handelingsperspectief?"
+    },
+    {
+      "id": "criminaliteit",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Criminaliteit",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Is er veel criminaliteit? Op welke plekken? Welke vormen zijn specifiek voor dit land? Welk handelingsperspectief (landspecifieke tips en verwijzing naar de pagina met standaardtips)?",
+      "subkopjes": ["zakkenrollers", "berovingen", "oplichting", "drogeren", "ontvoeringen"]
+    },
+    {
+      "id": "wetten-en-gebruiken",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Wetten en gebruiken",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Zijn er specifieke wetten en gebruiken om rekening mee te houden en welke vormen een risico?",
+      "opmerking": "Grenscontroles niet vermelden: je kunt altijd worden gecontroleerd en moet altijd een reisdocument bij je hebben.",
+      "subkopjes": ["drugs", "alcohol", "lhbtiq+", "grenzen/grensovergangen gesloten"]
+    },
+    {
+      "id": "natuurgeweld",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Natuurgeweld",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Welke vormen van natuurgeweld zijn een risico, in welke gebieden en wanneer? Wat is het handelingsperspectief, met links naar relevante bronnen?",
+      "subkopjes": ["aardbevingen", "bosbranden", "orkanen", "overstromingen", "vulkaanuitbarstingen"]
+    },
+    {
+      "id": "landmijnen",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Landmijnen",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Apart kopje als het niet al bij Regionale risico's staat. Alleen indien relevant: waar liggen landmijnen, staat dit aangegeven, wat is het handelingsperspectief?"
+    },
+    {
+      "id": "ziekte-uitbraak",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Naam virus/bacterie/ziekte",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Alleen als er op dat moment een uitbraak of risico is. Bijvoorbeeld ebola, coronavirus, SARS.",
+      "kop_is_variabel": true
+    },
+    {
+      "id": "demonstraties",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Demonstraties",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Indien actueel hoort dit bij Actueel. Alleen een apart kopje bij landen waar het structureel is en een risico vormt voor de klant."
+    },
+    {
+      "id": "verkeersongevallen",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Verkeersongevallen",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders.",
+      "alleen_bij_uitzondering": true
+    },
+    {
+      "id": "smog",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Smog",
+      "richtlijn": "niet-melden",
+      "toelichting": "Evt. alleen indien er ernstig gevaar is voor iedereen. Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld.",
+      "trefwoorden": ["smog", "luchtkwaliteit", "luchtvervuiling", "fijnstof"]
+    },
+    {
+      "id": "fotos-maken",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Foto's maken",
+      "richtlijn": "niet-melden",
+      "toelichting": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet.",
+      "trefwoorden": ["foto's maken", "fotograferen", "filmen"]
+    },
+    {
+      "id": "kledingvoorschriften",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Kledingvoorschriften",
+      "richtlijn": "niet-melden",
+      "toelichting": "Reisgidsinfo.",
+      "trefwoorden": ["kledingvoorschrift", "bedek uw", "kleed u", "gepaste kleding"]
+    },
+    {
+      "id": "wilde-dieren",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Wilde dieren",
+      "richtlijn": "niet-melden",
+      "toelichting": "Reisgidsinfo.",
+      "trefwoorden": ["wilde dieren", "slangen", "haaien", "krokodillen"]
+    },
+    {
+      "id": "weeshuistoerisme",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Weeshuistoerisme",
+      "richtlijn": "niet-melden",
+      "toelichting": "Geen risico. En staat ook op Rijksoverheid.nl.",
+      "trefwoorden": ["weeshuis", "weeshuistoerisme", "vrijwilligerswerk met kinderen"]
+    },
+    {
+      "id": "in-geval-van-nood",
+      "h2": "Noodsituatie",
+      "h3": "In geval van nood",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Lokale hulpdiensten (alarmnummers in land X), handelingsperspectief bij nood- of crisissituatie, contact met ambassade of consulaat-generaal."
+    },
+    {
+      "id": "reisverzekering",
+      "h2": "Reisvoorbereiding",
+      "h3": "Reisverzekering",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Wat voor reisverzekering heb ik nodig? Evt.: is de gezondheidszorg heel slecht, dan is goed verzekerd zijn extra belangrijk."
+    },
+    {
+      "id": "paspoort-visum-rijbewijs",
+      "h2": "Reisvoorbereiding",
+      "h3": "Paspoort, visum, rijbewijs",
+      "richtlijn": "uitschrijven-verwijzen",
+      "toelichting": "Zo kort mogelijk: is een NL paspoort of ID-kaart nodig en hoelang geldig; is een visum nodig, bij welke verblijfsduur en waar aan te vragen; kan ik er met NL rijbewijs rijden of is een internationaal rijbewijs nodig (verwijzing ANWB).",
+      "kop_varianten": ["Paspoort, visum, rijbewijs", "Paspoort, ID-kaart, rijbewijs"]
+    },
+    {
+      "id": "reisvaccinaties",
+      "h2": "Reisvoorbereiding",
+      "h3": "Reisvaccinaties",
+      "richtlijn": "verwijzen",
+      "toelichting": "Welke vaccinaties heb ik nodig, verplicht of niet? Verwijzen met link naar GGD/LCR. Indien inreisverplichting (gele koorts) dan uitschrijven.",
+      "opmerking": "Is een ziekte zoals mpox, zika, dengue of malaria geen actualiteit meer maar een structureel risico, dan kan het in het lijstje met mogelijke ziektes, met verwijzing naar de GGD-site."
+    },
+    {
+      "id": "medicijnen",
+      "h2": "Reisvoorbereiding",
+      "h3": "Medicijnen",
+      "richtlijn": "verwijzen",
+      "toelichting": "Mag ik medicijnen meenemen? Heb ik een medisch paspoort of verklaring nodig? Link naar het CAK."
+    },
+    {
+      "id": "bagageregels",
+      "h2": "Reisvoorbereiding",
+      "h3": "Bagageregels",
+      "richtlijn": "verwijzen",
+      "toelichting": "Wat mag ik meenemen naar land X (verwijzing lokale autoriteiten/douane)? Wat mag ik mee terugnemen naar Nederland (NWW)?"
+    },
+    {
+      "id": "mobiele-telefoon",
+      "h2": "Reisvoorbereiding",
+      "h3": "Mobiele telefoon",
+      "richtlijn": "niet-melden",
+      "toelichting": "Te veel open deur. Evt. alleen noemen als bellen of bereik echt een groot probleem is, met verwijzing naar de pagina over mobiel gebruik in het buitenland.",
+      "trefwoorden": ["simkaart", "simlock", "mobiel bereik", "roaming"]
+    },
+    {
+      "id": "geldzaken",
+      "h2": "Reisvoorbereiding",
+      "h3": "Geldzaken",
+      "richtlijn": "niet-melden",
+      "toelichting": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden.",
+      "trefwoorden": ["pinnen", "contant geld", "geldautomaat", "creditcard", "wisselkoers"]
+    },
+    {
+      "id": "eten-en-drinken",
+      "h2": "Reisvoorbereiding",
+      "h3": "Eten en drinken",
+      "richtlijn": "niet-melden",
+      "toelichting": "Reisgidsinfo.",
+      "trefwoorden": ["kraanwater", "drink geen", "voedselveiligheid", "rauw voedsel"]
+    },
+    {
+      "id": "thuisblijvers",
+      "h2": "Reisvoorbereiding",
+      "h3": "Thuisblijvers",
+      "richtlijn": "niet-melden",
+      "toelichting": "Evt. deels overhevelen naar In geval van nood.",
+      "trefwoorden": ["thuisblijvers", "achterblijvers", "laat uw reisschema achter"]
+    },
+    {
+      "id": "gezondheidszorg",
+      "h2": "Reisvoorbereiding",
+      "h3": "Gezondheidszorg",
+      "richtlijn": "niet-melden",
+      "toelichting": "Evt. tekst opnemen bij Reisverzekering. Let op: slechte gezondheidszorg is nooit een reden om de kleurcode te wijzigen.",
+      "trefwoorden": ["ziekenhuis", "medische voorzieningen", "gezondheidszorg", "artsen"]
+    },
+    {
+      "id": "ggd-app",
+      "h2": "Reisvoorbereiding",
+      "h3": "GGD-reis mee app",
+      "richtlijn": "niet-melden",
+      "toelichting": "",
+      "trefwoorden": ["reis mee app", "ggd-app"]
+    }
+  ]
+}

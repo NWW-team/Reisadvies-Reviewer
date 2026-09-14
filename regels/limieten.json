@@ -1,0 +1,71 @@
+{
+  "_bron": "Schrijfwijzer Nederland Wereldwijd - website.docx + Matrix nieuwe format Reisadviezen (1).xlsx",
+  "document": {
+    "woorden_1_kleurcode": 1500,
+    "woorden_meerdere_kleurcodes": 2000,
+    "_bron": "Matrix, tabblad 'Richtlijn woordenaantal'"
+  },
+  "titel": {
+    "max_tekens": 70,
+    "leestekens_toegestaan": ["?"],
+    "_bron": "Gebruiksvriendelijkheid > Titel; Vindbaarheid > Titel"
+  },
+  "intro": {
+    "max_woorden": 50,
+    "begin_niet_met_vraag_als_titel_vraag_is": true,
+    "_bron": "Gebruiksvriendelijkheid > Intro"
+  },
+  "tussenkop": {
+    "max_woorden": 5,
+    "geen_lidwoord_vooraan": true,
+    "leestekens_toegestaan": ["?"],
+    "niet_in_vraagvorm_als_titel_vraag_is": true,
+    "_bron": "Gebruiksvriendelijkheid > (Tussen)koppen; Vindbaarheid > (Tussen)koppen"
+  },
+  "alinea": {
+    "max_woorden": 80,
+    "_bron": "Gebruiksvriendelijkheid > Alinea's"
+  },
+  "zin": {
+    "max_woorden": 15,
+    "richtlijn_woorden": 12,
+    "_bron": "Begrijpelijkheid > B1: 'Gebruik maximaal 15 woorden in een zin.'"
+  },
+  "vragen": {
+    "max_opeenvolgend": 2,
+    "_bron": "Begrijpelijkheid > Vraagvorm: 'Beperk in de lopende tekst het aantal vragen opeenvolgende zinnen tot 2.'"
+  },
+  "link": {
+    "max_tekens_linktekst": 70,
+    "_bron": "Gebruiksvriendelijkheid > Lengte linkteksten"
+  },
+  "ook_nuttig": {
+    "max_links": 3,
+    "_bron": "Gebruiksvriendelijkheid > Links onderaan de pagina ('ook nuttig')"
+  },
+  "metadescription": {
+    "min_tekens": 130,
+    "max_tekens": 156,
+    "_bron": "Vindbaarheid > Metadescriptions"
+  },
+  "url": {
+    "max_tekens": 100,
+    "_bron": "Schrijfregels > url"
+  },
+  "actueel": {
+    "max_woorden": 25,
+    "_bron": "Matrix, tabblad 'Koppen', rij 'In het kort': 'Actueel max 25 woorden.'"
+  },
+  "gebieden": {
+    "max_noemen": 3,
+    "_bron": "Matrix, tabblad 'Koppen': 'Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen.'"
+  },
+  "uitzonderingszin_rood": {
+    "max_woorden": 25,
+    "_bron": "Matrix, tabblad 'Kleurcode-teksten', rij Rood"
+  },
+  "taalmarkering": {
+    "vanaf_aantal_anderstalige_woorden": 4,
+    "_bron": "Begrijpelijkheid > Woorden in een andere taal: 'Een taalmarkering is nodig bij 4 of meer woorden.'"
+  }
+}

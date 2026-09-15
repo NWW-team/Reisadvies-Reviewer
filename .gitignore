@@ -2,3 +2,5 @@ node_modules/
 # De uitkomsten van een lokale, mislukte ophaalpoging horen niet in de repo.
 # De workflow commit data/corpus/, data/ophaalrapport.json en data/bulkrapport.md wél,
 # want dat zijn de resultaten van een geslaagde run op een runner.
+# Het gebouwde corpus is 2,9 MB en volledig af te leiden uit data/corpus/.
+dist/corpus.js

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import vm from 'node:vm';
@@ -45,6 +45,29 @@ test('de gebouwde pagina draait zonder ontbrekende verwijzingen', () => {
   assert.equal(bundel.fout, module.samenvatting.fout);
   assert.equal(bundel.letop, module.samenvatting.letop);
   assert.equal(bundel.woorden, module.samenvatting.woorden);
+});
+
+test('corpus.js bevat alle adviezen, op landnaam gesorteerd', () => {
+  bundelContext();                                   // bouwt ook dist/corpus.js
+  const ctx = vm.createContext({ window: {} });
+  vm.runInContext(readFileSync(join(wortel, 'dist', 'corpus.js'), 'utf8'), ctx);
+  const corpus = JSON.parse(vm.runInContext('JSON.stringify(window.__CORPUS__)', ctx));
+
+  const opSchijf = readdirSync(join(wortel, 'data', 'corpus')).filter((f) => f.endsWith('.xml')).length;
+  assert.equal(corpus.length, opSchijf, 'niet elk opgehaald advies zit in corpus.js');
+  assert.ok(corpus.every((x) => x.land && x.html), 'een advies mist land of tekst');
+
+  const landen = corpus.map((x) => x.land);
+  assert.deepEqual(landen, [...landen].sort((a, b) => a.localeCompare(b, 'nl')),
+    'de lijst staat niet op landnaam gesorteerd');
+});
+
+test('de pagina valt terug op de ingebouwde voorbeelden zonder corpus.js', () => {
+  // corpus.js wordt als los bestand meegepubliceerd; ontbreekt het, dan moet de pagina
+  // nog steeds iets tonen in plaats van een lege keuzelijst.
+  const ctx = bundelContext();
+  const aantal = JSON.parse(vm.runInContext('JSON.stringify(VOORBEELDEN.length)', ctx));
+  assert.ok(aantal >= 1, 'zonder corpus.js blijft er niets over om te tonen');
 });
 
 test('alle regeldata zit in de pagina', () => {

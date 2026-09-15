@@ -229,6 +229,12 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .oordeelsblok p.uitleg { font-size: .82rem; color: var(--gedempt); margin: 0 0 10px; }
 .oordeelsuitvoer { font-size: .89rem; white-space: pre-wrap; }
 .oordeelsuitvoer:empty { display: none; }
+.oordeelsdatum { font-size: .74rem; color: var(--gedempt); margin: 0 0 8px; }
+.oordeelsdatum:empty { display: none; }
+.opslagmelding { font-size: .78rem; color: var(--kc-groen); }
+.opslagmelding.mis { color: var(--letop); }
+.opslagmelding:empty { display: none; }
+select { max-width: min(58vw, 320px); }
 
 .voorbehoud { margin-block: 30px 56px; border: 1px solid var(--lijn); border-top: 4px solid var(--donkerblauw); padding: 15px 18px; background: var(--vlak-2); }
 .voorbehoud h2 { font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; color: var(--gedempt); margin: 0 0 7px; font-weight: 700; }
@@ -276,6 +282,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
       <select id="kies-advies"></select>
     </label>
     <button type="button" id="knop-plakken">Eigen tekst plakken</button>
+    <span class="opslagmelding" id="opslagmelding" role="status" aria-live="polite"></span>
     <span style="flex:1"></span>
     <button type="button" id="knop-oordeel" class="hoofd">Oordeelstoets uitvoeren</button>
   </div>
@@ -308,7 +315,9 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
         <div class="oordeelsblok">
           <h3>Oordeelstoets</h3>
           <p class="uitleg">B1-woordmoeilijkheid, begrijpelijkheid, en of een onderwerp dat de matrix als
-            <em>verwijzen</em> aanmerkt niet te ver is uitgeschreven. Met een herschrijfvoorstel op zinsniveau.</p>
+            <em>verwijzen</em> aanmerkt niet te ver is uitgeschreven. Met een herschrijfvoorstel op zinsniveau.
+            De uitkomst wordt per land bewaard, dus je kunt van advies wisselen zonder hem kwijt te raken.</p>
+          <p class="oordeelsdatum" id="oordeelsdatum"></p>
           <div class="oordeelsuitvoer" id="oordeelsuitvoer"></div>
         </div>
       </div>
@@ -326,6 +335,9 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
   </div>
 </div>
 
+<!-- Alle 226 reisadviezen, als apart bestand naast de pagina. Ontbreekt het, dan valt de
+     pagina terug op de drie ingebouwde voorbeelden. -->
+<script src="corpus.js"></script>
 <script>/*__PARSE__*/</script>
 <script>/*__REGELS__*/</script>
 <script>
@@ -350,29 +362,41 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   const norm = (s) => String(s || '').replace(/[‘’]/g, "'").replace(/\s+/g, ' ').trim();
 
   // ---------- vullen ----------
+  // Het volledige corpus komt als apart bestand naast de pagina (corpus.js, ~2,8 MB).
+  // Ontbreekt dat, dan blijft de pagina werken met de drie ingebouwde voorbeelden.
+  const ADVIEZEN = (Array.isArray(window.__CORPUS__) && window.__CORPUS__.length)
+    ? window.__CORPUS__ : VOORBEELDEN;
   const kiezer = $('kies-advies');
-  VOORBEELDEN.forEach((v, i) => {
+  ADVIEZEN.forEach((v, i) => {
     const o = document.createElement('option');
     o.value = String(i);
-    o.textContent = v.land + ' — ' + v.kenmerk;
+    o.textContent = v.land + (v.kenmerk ? ' — ' + v.kenmerk : '');
     kiezer.appendChild(o);
   });
-  $('bron-regel').textContent = REGELDATA.matrix.koppen.length + ' koppen uit de matrix · '
-    + Object.keys(REGELDATA.kleurcodes.kleuren).length + ' kleurcodes · schrijfwijzer en format-matrix van Nederlandwereldwijd.nl';
+  $('bron-regel').textContent = ADVIEZEN.length + ' reisadviezen · '
+    + REGELDATA.matrix.koppen.length + ' koppen uit de matrix · '
+    + REGELDATA.sjabloon.vaste_teksten.length + ' vaste teksten uit het sjabloon · '
+    + 'schrijfwijzer, format-matrix en sjabloon van Nederlandwereldwijd.nl';
 
-  function toetsInvoer(html, land) {
-    const doc = Parse.parseAdvies(html, { land });
+  /** Een documentnaam die de database accepteert: letters, cijfers en _ - . ~ : @ + */
+  function landSleutel(land) {
+    return String(land || 'onbekend').normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^A-Za-z0-9_.~:@+-]/g, '-').slice(0, 180) || 'onbekend';
+  }
+
+  function toetsInvoer(html, land, meta = {}) {
+    const doc = Parse.parseAdvies(html, { land, intro: meta.intro });
     const resultaat = toetser(doc);
-    huidig = { doc, resultaat, land };
+    huidig = { doc, resultaat, land, sleutel: meta.sleutel || landSleutel(land), oordeelstoets: null };
     tekenStatus();
     tekenAdvies();
-    tekenBevindingen();
-    $('oordeelsuitvoer').textContent = '';
+    // laadVoorLand tekent de bevindingen en de oordeelstoets zodra het bewaarde werk binnen is.
+    laadVoorLand();
   }
 
   function kiesVoorbeeld() {
-    const v = VOORBEELDEN[Number(kiezer.value) || 0];
-    toetsInvoer(v.html, v.land);
+    const v = ADVIEZEN[Number(kiezer.value) || 0];
+    toetsInvoer(v.html, v.land, { intro: v.intro, sleutel: v.iso || landSleutel(v.land) });
   }
 
   // ---------- status ----------
@@ -502,18 +526,57 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   async function legOordeelVast(sleutel, waarde) {
     oordelen[sleutel] = oordelen[sleutel] === waarde ? undefined : waarde;
     tekenBevindingen();
-    if (!db) return;
-    const id = sleutel.replace(/[^A-Za-z0-9_.~:@+-]/g, '_').slice(0, 180);
+    if (!db || !huidig) return;
+    // Eén document per land met alle oordelen erin, niet één per bevinding: de database houdt
+    // maximaal 5000 documenten en 226 adviezen maal twintig bevindingen zou daar tegenaan lopen.
+    const perLand = {};
+    for (const [k, v] of Object.entries(oordelen)) if (v) perLand[k] = v;
     try {
-      if (oordelen[sleutel]) {
-        await db.doc('oordelen/' + id).set({
-          regel: sleutel.split('::')[0], fragment: sleutel.split('::')[1] || '',
-          oordeel: oordelen[sleutel], land: huidig && huidig.land, tijd: new Date().toISOString(),
-        });
-      } else {
-        await db.doc('oordelen/' + id).delete();
-      }
-    } catch (e) { /* vastleggen is een extra; de toets werkt ook zonder */ }
+      await db.doc('oordelen/' + huidig.sleutel).set({
+        land: huidig.land, oordelen: perLand, tijd: new Date().toISOString(),
+      });
+      meldOpslag('Oordeel bewaard.');
+    } catch (e) {
+      meldOpslag('Kon het oordeel niet bewaren: ' + (e && e.message ? e.message : e), true);
+    }
+  }
+
+  function meldOpslag(tekst, mis) {
+    const el = $('opslagmelding');
+    if (!el) return;
+    el.textContent = tekst;
+    el.className = 'opslagmelding' + (mis ? ' mis' : '');
+    clearTimeout(meldOpslag._t);
+    meldOpslag._t = setTimeout(() => { el.textContent = ''; }, 4000);
+  }
+
+  /** Haalt de bewaarde oordelen en de bewaarde oordeelstoets van dit land op. */
+  async function laadVoorLand() {
+    oordelen = {};
+    if (!db || !huidig) { tekenBevindingen(); toonOordeelstoets(); return; }
+    try {
+      const snap = await db.doc('oordelen/' + huidig.sleutel).get();
+      if (snap.exists) oordelen = snap.data().oordelen || {};
+    } catch (e) { /* nog geen oordelen voor dit land */ }
+    tekenBevindingen();
+
+    try {
+      const snap = await db.doc('oordeelstoets/' + huidig.sleutel).get();
+      huidig.oordeelstoets = snap.exists ? snap.data() : null;
+    } catch (e) { huidig.oordeelstoets = null; }
+    toonOordeelstoets();
+  }
+
+  function toonOordeelstoets() {
+    const uit = $('oordeelsuitvoer');
+    const stempel = $('oordeelsdatum');
+    const bewaard = huidig && huidig.oordeelstoets;
+    uit.textContent = bewaard ? bewaard.tekst : '';
+    if (stempel) {
+      stempel.textContent = bewaard && bewaard.tijd
+        ? 'Bewaard op ' + new Date(bewaard.tijd).toLocaleString('nl-NL')
+        : '';
+    }
   }
 
   $('knop-plakken').addEventListener('click', () => {
@@ -571,6 +634,22 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         onText: ({ text }) => { uit.textContent = text; },
       });
       uit.textContent = res.text;
+
+      // Bewaren per land, zodat de uitkomst blijft staan als je naar een ander advies gaat
+      // en terugkomt. Zonder dit kost elke terugkeer opnieuw een aanroep.
+      if (db && huidig) {
+        const tijd = new Date().toISOString();
+        try {
+          await db.doc('oordeelstoets/' + huidig.sleutel).set({ land: huidig.land, tekst: res.text, tijd });
+          huidig.oordeelstoets = { land: huidig.land, tekst: res.text, tijd };
+          toonOordeelstoets();
+          meldOpslag('Oordeelstoets bewaard.');
+        } catch (e) {
+          meldOpslag('De toets is uitgevoerd maar niet bewaard: ' + (e && e.message ? e.message : e), true);
+        }
+      } else if (!db) {
+        meldOpslag('De toets is uitgevoerd maar kan hier niet worden bewaard.', true);
+      }
     } catch (e) {
       uit.textContent = 'De oordeelstoets kon niet worden uitgevoerd: ' + (e && e.message ? e.message : e)
         + '. De harde regels hierboven werken wel.';
@@ -584,15 +663,11 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
 
   (async () => {
     db = await window.claude?.use?.('db');
-    if (!db) return;
-    try {
-      const rijen = await db.collection('oordelen').get();
-      for (const r of (rijen || [])) {
-        const d = r.data ? r.data() : r;
-        if (d && d.regel) oordelen[d.regel + '::' + (d.fragment || '')] = d.oordeel;
-      }
-      if (huidig) tekenBevindingen();
-    } catch (e) { /* geen eerdere oordelen; niet erg */ }
+    if (!db) {
+      meldOpslag('Bewaren is hier niet beschikbaar; de toets werkt wel.', true);
+      return;
+    }
+    laadVoorLand();
   })();
 })();
 </script>

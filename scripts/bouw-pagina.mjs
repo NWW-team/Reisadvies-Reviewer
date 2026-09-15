@@ -8,12 +8,13 @@
  *   node scripts/bouw-pagina.mjs
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { uitApiRespons } from '../src/adapter.js';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
+const corpusMap = join(wortel, 'data', 'corpus');
 const lees = (...p) => readFileSync(join(wortel, ...p), 'utf8');
 
 /** ES-module naar een klassieke namespace, zodat de pagina geen modulesysteem nodig heeft. */
@@ -74,4 +75,24 @@ const pagina = lees('src', 'app.html')
 mkdirSync(join(wortel, 'dist'), { recursive: true });
 writeFileSync(join(wortel, 'dist', 'app.html'), pagina);
 console.log(`dist/app.html geschreven — ${(pagina.length / 1024).toFixed(0)} kB, `
-  + `${voorbeelden.length} voorbeelden (${voorbeelden.map((v) => v.land).join(', ')})`);
+  + `${voorbeelden.length} ingebouwde voorbeelden (${voorbeelden.map((v) => v.land).join(', ')})`);
+
+// Het volledige corpus gaat als apart bestand mee, niet in de pagina: zo blijft de pagina klein
+// en werkt hij ook als het corpus ontbreekt. De Artifact-omgeving kan geen externe verzoeken
+// doen, maar een script naast de pagina laden mag wel.
+const alle = [];
+for (const bestand of readdirSync(corpusMap).filter((f) => f.endsWith('.xml')).sort()) {
+  const v = uitApiRespons(readFileSync(join(corpusMap, bestand), 'utf8'));
+  alle.push({
+    iso: bestand.replace('.xml', ''),
+    land: v.land,
+    intro: v.intro,
+    kleurcodes: v.kleurcodes,
+    html: v.html,
+  });
+}
+alle.sort((a, b) => String(a.land).localeCompare(String(b.land), 'nl'));
+const corpusJs = 'window.__CORPUS__ = ' + JSON.stringify(alle) + ';\n';
+writeFileSync(join(wortel, 'dist', 'corpus.js'), corpusJs);
+console.log(`dist/corpus.js geschreven — ${(corpusJs.length / 1024 / 1024).toFixed(2)} MB, `
+  + `${alle.length} reisadviezen`);

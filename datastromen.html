@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Datastromen · Reisadvies-Reviewer</title>
+<style>
+  :root{
+    color-scheme: light;
+    --bg:#f6f6f3; --card:#ffffff; --ink:#1b1b19; --muted:#63635d; --faint:#8d8d86;
+    --line:#e2e2dc; --line-strong:#cfcfc7;
+    --brand:#1f3a5f; --brand-soft:#eaf0f7;
+
+    --db:#1d4ed8;   --db-bg:#e5edff;   --db-ink:#15368f;
+    --repo:#15803d; --repo-bg:#dcf5e3; --repo-ink:#0d5228;
+    --ext:#6d28d9;  --ext-bg:#ede8fd;  --ext-ink:#4c1d95;
+    --tijd:#475569; --tijd-bg:#e8ecf1; --tijd-ink:#334155;
+    --keu:#be123c;  --keu-bg:#ffe6ea;  --keu-ink:#8f0d2d;
+    --brw:#b45309;  --brw-bg:#fdf0d5;  --brw-ink:#7c3a06;
+
+    --mens:#334155; --extern:#6d28d9; --bestand:#15803d; --app:#1f3a5f;
+    --radius:12px;
+    --shadow:0 1px 2px rgba(20,20,18,.06), 0 2px 8px rgba(20,20,18,.05);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  img{max-width:100%}
+  [hidden]{display:none!important}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; overflow-wrap:anywhere}
+
+  .wrap{max-width:1280px; margin:0 auto; padding:0 20px}
+  header.top{padding-block:40px 28px}
+  .eyebrow{font-size:12px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); font-weight:650; margin:0 0 10px}
+  h1{font-size:clamp(25px,4vw,38px); line-height:1.16; margin:0 0 12px; letter-spacing:-.02em}
+  .lead{font-size:clamp(15px,1.7vw,17px); color:var(--muted); max-width:68ch; margin:0}
+  .meta{margin-top:18px; font-size:13px; color:var(--faint); max-width:80ch}
+  .meta code{background:#fff; border:1px solid var(--line); border-radius:5px; padding:1px 5px; font-size:12px}
+
+  section{margin-block:44px}
+  h2{font-size:clamp(20px,2.6vw,26px); letter-spacing:-.015em; margin:0 0 6px}
+  h3{font-size:16px; margin:0 0 8px; letter-spacing:-.01em}
+  .sub{color:var(--muted); margin:0 0 22px; max-width:74ch}
+
+  .callout{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--db);
+           border-radius:var(--radius); padding:18px 20px; box-shadow:var(--shadow)}
+  .callout h3{margin-top:0}
+  .callout p{margin:0 0 10px; color:var(--muted)}
+  .callout p:last-child{margin-bottom:0}
+  .callout strong{color:var(--ink)}
+  .callout code{background:#f3f3ef; border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:12.5px}
+
+  .statusgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:14px; margin-top:18px}
+  .statuscard{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; box-shadow:var(--shadow)}
+  .statuscard .k{font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--faint); font-weight:680}
+  .statuscard .v{font-size:21px; font-weight:680; letter-spacing:-.02em; margin:4px 0 2px}
+  .statuscard .d{font-size:12.5px; color:var(--muted); line-height:1.45}
+
+  .panel{position:sticky; top:0; z-index:40; background:rgba(246,246,243,.94);
+         backdrop-filter:saturate(1.4) blur(8px); border-bottom:1px solid var(--line); margin-top:36px;
+         padding-top:calc(12px + env(safe-area-inset-top,0px)); padding-bottom:12px}
+  .panel-inner{max-width:1280px; margin:0 auto; padding:0 20px; display:flex; flex-wrap:wrap; gap:14px 26px; align-items:flex-start}
+  .ctrl{display:flex; flex-direction:column; gap:7px; min-width:0}
+  .ctrl>.lbl{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); font-weight:680}
+  .segment{display:flex; flex-wrap:wrap; gap:6px; background:#ecece7; border:1px solid var(--line); border-radius:10px; padding:4px}
+  .segment button{appearance:none; border:0; background:transparent; font:inherit; font-size:13px; font-weight:560;
+                  color:var(--muted); padding:6px 12px; border-radius:7px; cursor:pointer; white-space:nowrap}
+  .segment button[aria-pressed="true"]{background:var(--card); color:var(--brand); box-shadow:var(--shadow)}
+  .segment button:focus-visible{outline:2px solid var(--brand); outline-offset:2px}
+
+  .switch{display:inline-flex; align-items:center; gap:10px; background:var(--card); border:1px solid var(--line);
+          border-radius:10px; padding:7px 12px; cursor:pointer; font-size:13px; font-weight:560; box-shadow:var(--shadow)}
+  .switch input{appearance:none; width:38px; height:21px; border-radius:11px; background:#d4d4cd; position:relative;
+                transition:background .15s; margin:0; cursor:pointer; flex:none}
+  .switch input::after{content:""; position:absolute; top:2px; left:2px; width:17px; height:17px; border-radius:50%;
+                       background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.25); transition:transform .15s}
+  .switch input:checked{background:var(--brand)}
+  .switch input:checked::after{transform:translateX(17px)}
+  .switch input:focus-visible{outline:2px solid var(--brand); outline-offset:2px}
+  .hint{font-size:12.5px; color:var(--faint); margin:10px 0 0; max-width:86ch}
+  @media (max-width:700px){
+    .panel{padding-top:calc(9px + env(safe-area-inset-top,0px)); padding-bottom:9px}
+    .panel-inner{gap:9px 14px}
+    .ctrl{flex-direction:row; align-items:center; gap:9px; flex-wrap:wrap}
+    .ctrl>.lbl{font-size:10px}
+    .segment{padding:3px; gap:3px}
+    .segment button{font-size:12px; padding:5px 9px}
+    .switch{padding:5px 10px; font-size:12px}
+    .switch input{width:34px; height:19px}
+    .switch input::after{width:15px; height:15px}
+    .switch input:checked::after{transform:translateX(15px)}
+  }
+
+  .legend{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin-top:20px}
+  .legend-item{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:11px 13px; box-shadow:var(--shadow)}
+  .legend-item.uit{opacity:.62}
+  .legend-item .head{display:flex; align-items:center; gap:8px; font-weight:640; font-size:13.5px}
+  .legend-item .desc{font-size:12.5px; color:var(--muted); margin-top:5px; line-height:1.45}
+  .swatch{width:14px; height:14px; border-radius:4px; flex:none; border:1.5px solid}
+  .tagpill{font-size:10.5px; font-weight:700; letter-spacing:.05em; padding:2px 6px; border-radius:5px; border:1px solid; text-transform:uppercase; white-space:nowrap}
+
+  .cat-db .swatch,.cat-db.tagpill,.cat-db .tagpill{background:var(--db-bg); border-color:var(--db); color:var(--db-ink)}
+  .cat-repo .swatch,.cat-repo.tagpill,.cat-repo .tagpill{background:var(--repo-bg); border-color:var(--repo); color:var(--repo-ink)}
+  .cat-extern .swatch,.cat-extern.tagpill,.cat-extern .tagpill{background:var(--ext-bg); border-color:var(--ext); color:var(--ext-ink)}
+  .cat-tijdelijk .swatch,.cat-tijdelijk.tagpill,.cat-tijdelijk .tagpill{background:var(--tijd-bg); border-color:var(--tijd); color:var(--tijd-ink)}
+  .cat-keuze .swatch,.cat-keuze.tagpill,.cat-keuze .tagpill{background:var(--keu-bg); border-color:var(--keu); color:var(--keu-ink); border-style:dashed}
+  .cat-browser .swatch,.cat-browser.tagpill,.cat-browser .tagpill{background:var(--brw-bg); border-color:var(--brw); color:var(--brw-ink)}
+
+  .diagram-outer{background:var(--card); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden}
+  .diagram-bar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;
+               padding:12px 16px; border-bottom:1px solid var(--line); background:#fbfbf9}
+  .diagram-bar .t{font-size:12.5px; color:var(--muted); max-width:62ch}
+  .zoom{display:flex; gap:6px; align-items:center}
+  .zoom button{appearance:none; width:30px; height:30px; border-radius:8px; border:1px solid var(--line-strong);
+               background:#fff; font:inherit; font-size:15px; line-height:1; cursor:pointer; color:var(--ink)}
+  .zoom button:hover{background:#f2f2ee}
+  .zoom .z{font-size:12px; color:var(--faint); min-width:42px; text-align:center; font-variant-numeric:tabular-nums}
+
+  .scroller{overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch}
+  .scale-host{transform-origin:top left; will-change:transform}
+  .diagram{position:relative; width:1200px; padding:26px 20px 215px}
+
+  svg.edges{position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:1}
+  .labels{position:absolute; inset:0; pointer-events:none; z-index:3}
+  .lanes{position:relative; z-index:2; display:grid; grid-template-columns:250px 250px 250px; gap:0 205px}
+  .lane{display:flex; flex-direction:column; gap:20px}
+  .lane-head{font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); font-weight:700;
+             border-bottom:1px solid var(--line); padding-bottom:7px; margin-bottom:2px}
+
+  .node{position:relative; background:var(--card); border:1px solid var(--line-strong); border-radius:11px;
+        padding:11px 13px 11px 15px; box-shadow:var(--shadow); transition:opacity .2s, filter .2s}
+  .node::before{content:""; position:absolute; left:0; top:8px; bottom:8px; width:4px; border-radius:3px; background:var(--app)}
+  .node[data-kind="mens"]::before{background:var(--mens)}
+  .node[data-kind="extern"]::before{background:var(--extern)}
+  .node[data-kind="bestand"]::before{background:var(--bestand)}
+  .node[data-kind="opslag-db"]::before{background:var(--db)}
+  .node[data-kind="opslag-repo"]::before{background:var(--repo)}
+  .node[data-kind="weergave"]::before{background:var(--tijd)}
+  .node .kind{font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:var(--faint); font-weight:700}
+  .node .nm{font-weight:660; font-size:13.5px; letter-spacing:-.01em; margin:2px 0 3px; display:flex; gap:6px; align-items:baseline}
+  .node .nm .ico{font-size:14px; flex:none}
+  .node .nm code{font-size:12.5px; background:#f3f3ef; border:1px solid var(--line); border-radius:4px; padding:0 4px}
+  .node .ds{font-size:12px; color:var(--muted); line-height:1.45}
+  .node .st{margin-top:7px; display:inline-flex; align-items:center; gap:5px; font-size:10.5px; font-weight:680;
+            letter-spacing:.04em; text-transform:uppercase; padding:2px 7px; border-radius:20px; border:1px solid}
+  .st-gebouwd{background:#e2f4e8; border-color:#54a56f; color:#15602f}
+  .st-extern{background:#efe9fd; border-color:#a98cea; color:#4c1d95}
+  .st-strategie{background:#eef1f6; border-color:#a9b6cc; color:#33496e}
+  .st-aanname{background:#fff5da; border-color:#d9b551; color:#7a5a06}
+  .node.is-dim{opacity:.2; filter:grayscale(.85)}
+
+  .elabel{position:absolute; transform:translate(-50%,-50%); width:190px;
+          background:var(--card); border:1px solid var(--line-strong); border-left-width:3px; border-radius:8px;
+          padding:6px 9px; font-size:11px; line-height:1.35; color:var(--ink);
+          box-shadow:0 1px 3px rgba(20,20,18,.10); transition:opacity .2s}
+  .elabel .d{color:var(--muted); font-size:10.8px; display:block; margin-top:2px}
+  .elabel.is-hidden{opacity:0}
+  .elabel.cat-db{border-left-color:var(--db)}
+  .elabel.cat-repo{border-left-color:var(--repo)}
+  .elabel.cat-extern{border-left-color:var(--ext)}
+  .elabel.cat-tijdelijk{border-left-color:var(--tijd)}
+  .elabel.cat-keuze{border-left-color:var(--keu); border-style:dashed; border-left-style:solid}
+
+  .crud{display:flex; gap:2px; margin-top:5px; align-items:center; flex-wrap:wrap}
+  .crud b{display:inline-flex; align-items:center; justify-content:center; width:15px; height:15px; border-radius:4px;
+          font-size:9.5px; font-weight:800; border:1px solid var(--line-strong); background:#f3f3ef; color:#a8a8a0}
+  .crud b.on{background:var(--db-bg); border-color:var(--db); color:var(--db-ink)}
+  .crud b.on.repo{background:var(--repo-bg); border-color:var(--repo); color:var(--repo-ink)}
+  .crud .none{font-size:10px; font-weight:700; letter-spacing:.03em; color:var(--faint); text-transform:uppercase}
+  body.no-crud .crud{display:none}
+
+  path.edge{fill:none; stroke-width:1.7; transition:opacity .2s}
+  path.edge.is-dim{opacity:.09}
+  path.leader{fill:none; stroke:var(--line-strong); stroke-width:1; stroke-dasharray:2 3}
+
+  .tablewrap{background:var(--card); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden}
+  table{width:100%; table-layout:fixed; border-collapse:collapse; font-size:13.5px}
+  thead th{text-align:left; font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--faint);
+           font-weight:700; padding:13px 14px; background:#fbfbf9; border-bottom:1px solid var(--line-strong)}
+  tbody td{padding:15px 14px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.5; overflow-wrap:anywhere}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr.is-hidden{display:none}
+  tbody tr:hover{background:#fcfcfa}
+  .g-naam{font-weight:645; letter-spacing:-.005em}
+  .g-vb{display:block; font-size:12px; color:var(--faint); margin-top:5px}
+  .g-vb code{background:#f3f3ef; border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:11.5px}
+  .route{display:flex; flex-direction:column; gap:3px; font-size:12.5px; color:var(--muted)}
+  .route b{color:var(--ink); font-weight:600}
+  .route .arw{color:var(--faint); font-size:10px; line-height:1}
+  .reden{font-size:12.5px; color:var(--muted)}
+  .reden .q{display:block; margin-top:7px; padding-left:9px; border-left:2px solid var(--keu); color:var(--keu-ink); font-weight:560}
+  .blijft{font-size:12.5px; color:var(--muted)}
+  .blijft .ja{color:var(--db-ink); font-weight:650}
+  .blijft .nee{color:var(--tijd-ink); font-weight:650}
+  .advies{display:block; margin-top:8px; padding:8px 10px; background:var(--brand-soft); border-radius:7px;
+          font-size:12px; color:var(--brand); line-height:1.45}
+  body.no-crud td.cr, body.no-crud th.cr{display:none}
+
+  @media (max-width:980px){
+    table{table-layout:auto}
+    thead{display:none}
+    tbody td{display:block; border:0; padding:4px 16px}
+    tbody tr{display:block; border-bottom:1px solid var(--line-strong); padding:16px 0 18px}
+    tbody tr:last-child{border-bottom:0}
+    tbody td::before{content:attr(data-l); display:block; font-size:10.5px; letter-spacing:.07em; text-transform:uppercase;
+                     color:var(--faint); font-weight:700; margin:11px 0 3px}
+    tbody td:first-child::before{margin-top:0}
+  }
+
+  .propose{display:grid; grid-template-columns:repeat(auto-fit,minmax(285px,1fr)); gap:16px}
+  .pcard{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px; box-shadow:var(--shadow)}
+  .pcard.a1{border-left:4px solid var(--db)}
+  .pcard.a2{border-left:4px solid var(--tijd)}
+  .pcard.a3{border-left:4px solid var(--keu)}
+  .pcard h3{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+  .pcard ul{margin:10px 0 0; padding-left:19px; color:var(--muted); font-size:13.5px}
+  .pcard li{margin-bottom:10px; line-height:1.5}
+  .pcard li:last-child{margin-bottom:0}
+  .pcard li b{color:var(--ink); font-weight:620}
+  .pcard p{color:var(--muted); font-size:13.5px; margin:0 0 10px}
+  .pcard code{background:#f3f3ef; border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:12px}
+
+  .verdict{background:var(--brand); color:#fff; border-radius:16px; padding:26px 28px; margin-bottom:20px}
+  .verdict h3{color:#fff; font-size:19px; margin-bottom:8px}
+  .verdict p{color:#d7e1ef; margin:0; font-size:15px; line-height:1.6; max-width:74ch}
+  .verdict p + p{margin-top:11px}
+  .verdict b{color:#fff}
+  .verdict code{background:rgba(255,255,255,.14); border-radius:4px; padding:1px 5px; font-size:13px}
+
+  ol.aannames{counter-reset:a; list-style:none; padding:0; margin:0; display:grid; gap:11px}
+  ol.aannames li{counter-increment:a; background:var(--card); border:1px solid var(--line); border-left:4px solid #d9b551;
+                 border-radius:10px; padding:13px 16px; font-size:13.5px; color:var(--muted); line-height:1.5; box-shadow:var(--shadow)}
+  ol.aannames li::before{content:"Aanname " counter(a); display:block; font-size:10.5px; letter-spacing:.07em;
+                         text-transform:uppercase; color:#7a5a06; font-weight:700; margin-bottom:4px}
+  ol.aannames li b{color:var(--ink); font-weight:620}
+  ol.aannames code{background:#f3f3ef; border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:12px}
+
+  footer{padding:36px 0 60px; color:var(--faint); font-size:12.5px; border-top:1px solid var(--line); margin-top:44px}
+  footer p{margin:0 0 6px; max-width:82ch}
+
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      color-scheme:dark;
+      --bg:#141413; --card:#1e1e1c; --ink:#ecece7; --muted:#a5a59d; --faint:#82827b;
+      --line:#31312e; --line-strong:#43433f; --brand:#8fb3dd; --brand-soft:#22303f;
+      --db:#7ea4ff;  --db-bg:#1c2a4d;  --db-ink:#b9cdff;
+      --repo:#5ec27e; --repo-bg:#14301f; --repo-ink:#a4dfb8;
+      --ext:#b393f5; --ext-bg:#2a2141; --ext-ink:#d6c6fb;
+      --tijd:#94a3b8; --tijd-bg:#262d36; --tijd-ink:#c3cedb;
+      --keu:#f47a95; --keu-bg:#411923; --keu-ink:#ffc3cf;
+      --brw:#e0a24a; --brw-bg:#3a2a12; --brw-ink:#f3cf94;
+      --mens:#94a3b8; --extern:#b393f5; --bestand:#5ec27e; --app:#8fb3dd;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 2px 8px rgba(0,0,0,.3);
+    }
+    :root:not([data-theme="light"]) .panel{background:rgba(20,20,19,.94)}
+    :root:not([data-theme="light"]) .segment{background:#262623}
+    :root:not([data-theme="light"]) .diagram-bar, :root:not([data-theme="light"]) thead th{background:#232320}
+    :root:not([data-theme="light"]) .crud b{background:#2a2a27; border-color:var(--line-strong); color:#6d6d66}
+    :root:not([data-theme="light"]) .st-gebouwd{background:#16301f; border-color:#3f6b4c; color:#8fd3a5}
+    :root:not([data-theme="light"]) .st-extern{background:#271f3c; border-color:#5b4a8a; color:#c6b3f2}
+    :root:not([data-theme="light"]) .st-strategie{background:#1e2735; border-color:#41536f; color:#a8c0e2}
+    :root:not([data-theme="light"]) .st-aanname{background:#332811; border-color:#6b5520; color:#e3c377}
+    :root:not([data-theme="light"]) .verdict{background:#22303f}
+    :root:not([data-theme="light"]) .verdict p{color:#c3d3e6}
+    :root:not([data-theme="light"]) .zoom button{background:#262623}
+    :root:not([data-theme="light"]) code,
+    :root:not([data-theme="light"]) .node .nm code,
+    :root:not([data-theme="light"]) .g-vb code{background:#2a2a27}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">Reisadvies-Reviewer · datastromen</p>
+    <h1>Waar komen de gegevens vandaan, wat gebeurt ermee,<br>en wat moet er écht bewaard blijven?</h1>
+    <p class="lead">
+      De Reisadvies-Reviewer toetst reisadviezen van Nederlandwereldwijd.nl op wat objectief te toetsen is:
+      de schrijfwijzer, de onderwerpen-matrix, de vaste formuleringen uit het sjabloon, B1 en begrijpelijkheid.
+      Deze pagina brengt in kaart welke gegevens daarbij waarheen stromen. Het diagram en de matrix eronder
+      gebruiken dezelfde namen en dezelfde opslagkeuzes.
+    </p>
+    <p class="meta">
+      Opgesteld op 15 september 2026, op basis van de code op <code>main</code>:
+      <code>reisadvies-reviewer.html</code>, <code>src/</code>, <code>regels/</code>, <code>scripts/</code>,
+      <code>.github/workflows/corpus.yml</code>, <code>data/bulkrapport.md</code> en
+      <code>data/ophaalrapport.json</code>, plus <code>STRATEGY.md</code> en de vier bronbestanden.
+      Alle voorbeeldwaarden komen uit de eigen testuitvoer of zijn verzonnen; er staan geen sleutels of
+      persoonsgegevens in dit bestand.
+    </p>
+  </header>
+
+  <section>
+    <div class="callout">
+      <h3>Het belangrijkste in één alinea: je hebt al een database, en hij bewaart precies het goede.</h3>
+      <p>
+        De gepubliceerde pagina gebruikt <code>window.claude.use('db')</code> en schrijft naar één collectie:
+        <code>oordelen</code>. Daar gaat per bevinding in <code>{regel, fragment, oordeel, land, tijd}</code>,
+        met <code>oordeel</code> = <code>eens</code>, <code>oneens</code> of <code>onterecht</code>. Dat is
+        exact het gegeven uit het spoor <em>“Vertrouwen opbouwen in de toets”</em> — en het enige dat over
+        sessies heen moet stapelen.
+      </p>
+      <p>
+        Alle andere gegevens staan in de open data v2 API of als bestand in git, of zijn opnieuw te berekenen.
+        Er is <strong>geen localStorage, sessionStorage of IndexedDB</strong> in de pagina — dat is nagekeken.
+        Er is dus ook geen browseropslag die per ongeluk dingen vasthoudt.
+      </p>
+      <p>
+        Wat er wél nog ligt: het oordeel bevat <strong>geen wie</strong>, en de database van een Artifact is
+        gedeeld met iedereen die de link heeft. Zie het voorstel onderaan.
+      </p>
+    </div>
+
+    <div class="statusgrid">
+      <div class="statuscard"><div class="k">Al gebouwd</div><div class="v">12 van de 13</div>
+        <div class="d">Van de gegevens hieronder stroomt er één nog niet: het Word-concept uit fase 2.</div></div>
+      <div class="statuscard"><div class="k">In de eigen database</div><div class="v">1 gegeven</div>
+        <div class="d">De collectie <code>oordelen</code>, met alle vier de CRUD-acties in gebruik.</div></div>
+      <div class="statuscard"><div class="k">Corpus in de repo</div><div class="v">226 van 227</div>
+        <div class="d">Opgehaald op 14-09-2026; alleen VAT gaf 404 op zowel ISO-code als locationKey.</div></div>
+      <div class="statuscard"><div class="k">Browseropslag</div><div class="v">Geen</div>
+        <div class="d">Geen localStorage, sessionStorage of IndexedDB in de pagina.</div></div>
+    </div>
+  </section>
+</div>
+
+<div class="panel">
+  <div class="panel-inner">
+    <div class="ctrl">
+      <span class="lbl">Filter</span>
+      <div class="segment" role="group" aria-label="Filter op opslagkeuze">
+        <button type="button" data-filter="alles" aria-pressed="true">Alle data</button>
+        <button type="button" data-filter="db" aria-pressed="false">Databaseopslag</button>
+        <button type="button" data-filter="geendb" aria-pressed="false">Geen databaseopslag</button>
+      </div>
+    </div>
+    <div class="ctrl">
+      <span class="lbl">Labels</span>
+      <label class="switch"><input type="checkbox" id="crudToggle" checked> CRUD-labels tonen</label>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="hint" style="margin-top:14px">
+    Een filter laat de <strong>hele route</strong> van de geselecteerde gegevens staan — van bron tot bestemming — en dimt de rest.
+    “Databaseopslag” betekent hier: de database van de gepubliceerde Artifact. Bestanden in de repo tellen daar
+    niet onder; die vallen onder “geen eigen databaseopslag”, want git is geen database. Eén gegeven waarvan nog
+    openstaat óf het naar de database moet, verschijnt in beide filters.
+  </p>
+  <section>
+    <h2>Legenda</h2>
+    <p class="sub">Elke opslagcategorie heeft een eigen kleur én een tekstlabel, zodat het diagram ook zonder kleur te lezen is.</p>
+    <div class="legend" id="legend"></div>
+  </section>
+
+  <section>
+    <h2>1 · Het diagram</h2>
+    <p class="sub">
+      Mensen en automaten links, wat de code ermee doet in het midden, en rechts waar het terechtkomt.
+      Op elke pijl staat welke gegevens er stromen. Niet elke pijl is een databaseactie: pure verwerking,
+      transport en weergave krijgen het label <em>geen databaseactie</em>.
+    </p>
+
+    <div class="diagram-outer">
+      <div class="diagram-bar">
+        <span class="t">Sleep het diagram opzij als het niet past, of zoom uit. De matrix hieronder bevat dezelfde informatie in tekstvorm en leest op een telefoon prettiger.</span>
+        <div class="zoom">
+          <button type="button" id="zOut" aria-label="Uitzoomen">−</button>
+          <span class="z" id="zVal">100%</span>
+          <button type="button" id="zIn" aria-label="Inzoomen">+</button>
+        </div>
+      </div>
+      <div class="scroller" id="scroller">
+        <div class="scale-host" id="scaleHost">
+          <div class="diagram" id="diagram">
+            <svg class="edges" id="svg" aria-hidden="true"></svg>
+            <div class="lanes" id="lanes">
+              <div class="lane" id="lane1"><div class="lane-head">Waar het vandaan komt</div></div>
+              <div class="lane" id="lane2"><div class="lane-head">Wat de code ermee doet</div></div>
+              <div class="lane" id="lane3"><div class="lane-head">Waar het heen gaat</div></div>
+            </div>
+            <div class="labels" id="labels"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2 · De matrix</h2>
+    <p class="sub">
+      Per gegeven: bron → verwerking → bestemming, de CRUD-acties die er écht bij horen en waar die plaatsvinden,
+      de opslagkeuze met de reden vanuit de use case, en wat er blijft bestaan na afsluiten of herladen.
+      Ontbrekende CRUD-letters zijn niet ingevuld om het rijtje vol te maken.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:18%">Gegeven</th>
+            <th style="width:21%">Bron → verwerking → bestemming</th>
+            <th class="cr" style="width:14%">CRUD &amp; waar</th>
+            <th style="width:9%">Opslagkeuze</th>
+            <th style="width:24%">Reden vanuit de use case</th>
+            <th style="width:14%">Blijft na afsluiten?</th>
+          </tr>
+        </thead>
+        <tbody id="matrixBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>3 · Het voorstel</h2>
+    <p class="sub">Wat minimaal bewaard moet blijven, wat je niet hoeft te bewaren, en welke knopen nog doorgehakt moeten worden.</p>
+
+    <div class="verdict">
+      <h3>De minimale opslag is één collectie — en die heb je al.</h3>
+      <p>
+        Van de dertien gegevens in dit overzicht hoeft er precies <b>één</b> in een eigen database:
+        <b>het reviewoordeel per bevinding</b>, in de collectie <code>oordelen</code>. Dat is precies wat de
+        pagina vandaag doet. Er is geen tweede tabel nodig, geen gebruikersbeheer, geen tekstarchief.
+      </p>
+      <p>
+        De reisadviesteksten horen niet in de database: die staan in de open data v2 API, en een kopie is na de
+        eerstvolgende redactieronde verouderd. De regelset hoort in git, want <code>regels/HERKOMST.md</code>
+        koppelt elke regel aan zijn vindplaats en een pull request laat zien wát er veranderde. De bevindingen
+        zijn pure functies over de tekst — opnieuw toetsen kost seconden.
+      </p>
+      <p>
+        <b>Eén ding zou ik wel toevoegen voordat je de link breder deelt:</b> een veld dat zegt <em>wie</em> het
+        oordeel gaf. Nu bevat een document <code>{regel, fragment, oordeel, land, tijd}</code> — geen gebruiker.
+        Juist het verschil tussen jouw oordeel en dat van de redacteur is wat het spoor “vertrouwen opbouwen”
+        wil meten, en dat verschil is nu niet te zien.
+      </p>
+    </div>
+
+    <div class="propose">
+      <div class="pcard a1">
+        <h3><span class="tagpill cat-db">Database</span> Wat er in moet</h3>
+        <ul>
+          <li><b>De collectie <code>oordelen</code></b> — <code>{regel, fragment, oordeel, land, tijd}</code>.
+            Alle vier de CRUD-acties zijn er echt: aanmaken bij een nieuw oordeel, inlezen bij het openen van de
+            pagina, overschrijven als je van mening verandert, en verwijderen door nog een keer op hetzelfde
+            oordeel te klikken. <b>Staat er al in.</b></li>
+          <li><b>Toevoegen: wie het oordeel gaf.</b> Eén veld erbij, en de vergelijking tussen jouw oordeel en
+            dat van de redacteur wordt mogelijk. Zonder dat veld overschrijft de tweede beoordelaar de eerste.</li>
+        </ul>
+      </div>
+
+      <div class="pcard a2">
+        <h3><span class="tagpill cat-tijdelijk">Weg</span> Wat er niet in hoeft</h3>
+        <ul>
+          <li><b>Reisadviesteksten</b> — staan in de open data v2 API. De kopie in <code>data/corpus/</code> is
+            een bewuste uitzondering met een reden (zie hiernaast), geen database-kandidaat.</li>
+          <li><b>De regelset</b> — hoort in <code>regels/*.json</code> in git, met <code>HERKOMST.md</code> ernaast.
+            Een databaserij kan niet laten zien wat er aan een regel veranderde en waarom.</li>
+          <li><b>Het genormaliseerde document en de bevindingen</b> — pure functies over de tekst. Dezelfde tekst
+            geeft altijd hetzelfde resultaat.</li>
+          <li><b>De prompt en het antwoord van de oordeelstoets</b> — een herschrijfvoorstel is een suggestie.
+            Bewaren geeft het gewicht dat het niet heeft.</li>
+          <li><b>Geplakte tekst en de landnaam</b> — van de redacteur, niet van de tool.</li>
+          <li><b>Browseropslag</b> — de pagina gebruikt die niet, en dat hoeft ook niet. Zou je hem gaan
+            gebruiken: <code>localStorage</code> is echte opslag, geen werkgeheugen. Het blijft na afsluiten
+            staan in die ene browser, en jij kunt er niet bij.</li>
+        </ul>
+      </div>
+
+      <div class="pcard a3">
+        <h3><span class="tagpill cat-keuze">Keuze</span> Nog te beslissen</h3>
+        <ul>
+          <li><b>Wie mag oordelen vastleggen?</b> De database van een Artifact is gedeeld met iedereen die de
+            link heeft. Een collega kan jouw oordeel overschrijven of verwijderen. Zolang jij de enige bent die
+            markeert is dat prima; bij het delen met de redactie is het een echte vraag.</li>
+          <li><b>Hoe oud mag het corpus zijn?</b> De workflow ververst nu wekelijks (maandag 05.00 UTC). Is dat
+            het antwoord, of moet de bulkslag altijd eerst verversen? Een bevinding over een tekst van vorige
+            week is niet altijd nog waar.</li>
+          <li><b><code>data/bevindingen.json</code> in git?</b> Dat is ruim 45.000 regels afgeleide data in
+            versiebeheer. Wil je een momentopname per bulkrun bewaren — dan hoort die eerder bij de oordelen in
+            de database. Of moet hij herberekenbaar blijven en dus uit git.</li>
+          <li><b>Mag niet-gepubliceerde tekst naar de taalmodel-dienst?</b> Dit blokkeert fase 2. Merk op dat
+            het fase 2 niet helemáál blokkeert: de harde regels draaien volledig in de pagina, zonder netwerk.
+            Een Word-concept kan daar nú al doorheen, zolang je de oordeelstoets niet aanzet.</li>
+          <li><b>Twee varianten van de pagina naast elkaar.</b> <code>reisadvies-reviewer.html</code> en
+            <code>dist/app.html</code> bevatten allebei een kopie van de regelset. Dat is geen datastroom-probleem
+            maar wel een bron-van-waarheid-probleem: kies er één voordat er nieuwe regels bij komen.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Aannames</h2>
+    <p class="sub">Alles hieronder heb ik ingevuld of afgeleid. Corrigeer me waar het niet klopt.</p>
+    <ol class="aannames">
+      <li><b>Het document-id in de collectie <code>oordelen</code> kan botsen.</b> Het id is
+        <code>regel::fragment</code>, waarbij alles buiten <code>[A-Za-z0-9_.~:@+-]</code> wordt vervangen door
+        een onderstrepingsteken en de sleutel op 180 tekens wordt afgekapt. Twee lange fragmenten onder dezelfde regel die in de eerste
+        ~165 tekens gelijk zijn, delen dan één document — het tweede oordeel overschrijft het eerste. Kans is
+        klein, gevolg is stil. Ik heb dit niet met een testgeval bewezen.</li>
+      <li><b>Het corpus in <code>data/corpus/</code> telt als eigen duurzame opslag,</b> ook al is het een kopie
+        van een externe bron. Ik reken het onder “bestand in de repo” en niet onder “staat al ergens anders”,
+        omdat je er zelf verantwoordelijk voor bent dat het actueel is.</li>
+      <li><b>Het verschil tussen 227 en 226.</b> <code>regels/landen.json</code> kent 227 landen, het corpus heeft
+        er 226; <code>data/ophaalrapport.json</code> noemt VAT als enige mislukking. De ISO-landenlijst in de repo
+        heeft 228 regels. Die drie getallen lopen uiteen; ik neem aan dat dat klopt (niet elk land heeft een
+        reisadvies), maar controleer het voordat je op “226 van alles” rekent.</li>
+      <li><b>De cijfers uit <code>data/bulkrapport.md</code> zijn van 14 september 2026</b> en gaan over de
+        regelset van dat moment. De sjabloonregels zijn er daarna bijgekomen, dus een nieuwe bulkslag geeft
+        andere aantallen.</li>
+      <li><b>De taalmodel-dienst bewaart de doorgestuurde tekst niet.</b> Dat is de gebruikelijke aanname bij de
+        <code>sample</code>-capability, maar voor fase 2 (concepten) moet die aanname op papier staan, niet in
+        mijn hoofd.</li>
+      <li><b>“Geen browseropslag” geldt voor de pagina zoals die nu op main staat.</b> Gecontroleerd op
+        <code>localStorage</code>, <code>sessionStorage</code> en <code>indexedDB</code>; geen enkele treffer.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>Reisadvies-Reviewer — datastromen en opslagkeuzes. Dit is een analysedocument: er is niets aan de werking
+      van de app gewijzigd en er is geen database aangemaakt. De database die hier beschreven staat, bestond al.</p>
+    <p>Alle voorbeeldwaarden komen uit de eigen testuitvoer of zijn verzonnen. Er staan geen sleutels,
+      wachtwoorden of persoonsgegevens in dit bestand.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var CATS = {
+    db:       {label:"Artifact-database",      short:"Database",  desc:"Duurzaam bewaard in de database van de gepubliceerde pagina. Overleeft afsluiten, herladen en een nieuwe versie.", actief:true},
+    repo:     {label:"Bestand in de repo",     short:"Git",       desc:"Duurzaam bewaard als bestand onder versiebeheer. Wel opslag, geen database — git laat zien wát er veranderde.", actief:true},
+    extern:   {label:"Externe bron",           short:"Extern",    desc:"Staat al in een externe bron. De app leest het en hoeft er geen eigen kopie van te houden.", actief:true},
+    tijdelijk:{label:"Tijdelijk",              short:"Tijdelijk", desc:"Alleen nodig voor invoer, verwerking, berekening of weergave. Na afsluiten of herladen weg.", actief:true},
+    keuze:    {label:"Keuze nodig",            short:"Keuze",     desc:"Twijfelgeval. Er ligt nog een vraag open die beantwoord moet worden.", actief:true},
+    browser:  {label:"Browseropslag",          short:"Browser",   desc:"localStorage en verwanten. Zou blijven staan na afsluiten, in één browser. Komt in deze app niet voor — nagekeken.", actief:false}
+  };
+  var COLOR = {db:"--db", repo:"--repo", extern:"--ext", tijdelijk:"--tijd", keuze:"--keu", browser:"--brw"};
+  function col(cat){ return getComputedStyle(document.documentElement).getPropertyValue(COLOR[cat]).trim() || "#888"; }
+
+  var ROUTES = {
+    R1:{
+      naam:"Voorbeeld- of landkeuze", vb:"Tsjechië, Angola of Thailand uit de kiezer, of een getypte landnaam",
+      cat:"tijdelijk", status:"gebouwd",
+      bron:"Redacteur kiest een voorbeeld of typt een land bij geplakte tekst",
+      verwerking:"Gaat als <code>meta.land</code> mee naar <code>Parse.parseAdvies</code>",
+      bestemming:"Het genormaliseerde document en de kop boven de bevindingen",
+      crud:"", waar:"Alleen in het geheugen van de pagina",
+      reden:"Alleen nodig om de toets te labelen en de juiste woordenlimiet te kiezen. Bewaren voegt niets toe.",
+      blijft:"nee", blijftTekst:"Na herladen kiest de redacteur opnieuw."
+    },
+    R2:{
+      naam:"Geplakte reisadviestekst", vb:"HTML of platte tekst uit het cms, via de knop <em>Tekst plakken</em>",
+      cat:"tijdelijk", status:"gebouwd",
+      bron:"Redacteur plakt de tekst die hij net heeft aangepast",
+      verwerking:"<code>Parse.parseAdvies</code> maakt er blokken, zinnen, links en opmaak van",
+      bestemming:"De harde regeltoets, en op verzoek de oordeelstoets",
+      crud:"", waar:"Geheugen van de pagina. Bij de oordeelstoets ook onderweg naar de taalmodel-dienst",
+      reden:"Dit is de kern van de use case: de redacteur heeft net iets aangepast en wil weten of hij het kan publiceren. De tekst is van hem en staat al in het cms; de tool hoeft er geen kopie van te houden.",
+      blijft:"nee", blijftTekst:"Na herladen is het plakvak leeg. Dat is goed: de tekst leeft in het cms, niet hier."
+    },
+    R3:{
+      naam:"Reisadvies uit de open data v2 API", vb:"<code>opendata.nederlandwereldwijd.nl/v2/…/traveladvice</code> — XML, geen JSON",
+      cat:"extern", status:"gebouwd",
+      bron:"De open data v2 API van Nederland Wereldwijd",
+      verwerking:"<code>scripts/fetch-corpus.mjs</code> haalt op; <code>src/adapter.js</code> haalt titel, land, isocode, kleurcodes, de h2/h3-stroom en <code>modificationdate</code> eruit",
+      bestemming:"<code>data/corpus/&lt;iso&gt;.xml</code>",
+      crud:"R", waar:"Read bij de externe bron",
+      reden:"De API is de canonieke bron van de gepubliceerde tekst. De tool leest daar, en schrijft er nooit naar terug — de tool publiceert niet en corrigeert niet, hij signaleert alleen.",
+      blijft:"nee", blijftTekst:"De API houdt de tekst zelf bij. Wat de app ervan bewaart, staat in de rij hieronder."
+    },
+    R4:{
+      naam:"Corpus: de opgehaalde adviezen", vb:"<code>data/corpus/*.xml</code> — 226 bestanden, opgehaald op 14-09-2026",
+      cat:"repo", status:"gebouwd",
+      bron:"De GitHub Actions-runner schrijft de opgehaalde XML terug naar de repo",
+      verwerking:"<code>scripts/bulk.mjs</code> leest ze en toetst ze allemaal tegen de harde regels",
+      bestemming:"Git",
+      crud:"CRU", waar:"Create en Update door de workflow in de repo; Read door de bulkslag",
+      reden:"Dit is bewust een kopie van een externe bron, met twee redenen. De ontwikkelomgeving zit achter een netwerk-allowlist die alleen GitHub doorlaat, dus ophalen kan alleen op een runner. En een vást corpus maakt de bulkslag reproduceerbaar: je kunt een bijgestelde regel tegen precies dezelfde 226 teksten draaien en zien of hij beter werd. Dat is de norm die de README stelt.",
+      vraag:"Vraag: hoe oud mag het corpus zijn voordat een bevinding erover niets meer waard is? De workflow ververst nu wekelijks (maandag 05.00 UTC). Is dat het antwoord, of moet de bulkslag altijd eerst verversen?",
+      blijft:"ja", blijftTekst:"Ja — in git, bewust. Niet in een database."
+    },
+    R5:{
+      naam:"Ophaalrapport", vb:"<code>data/ophaalrapport.json</code> — gevraagd 227, gelukt 226, mislukt: VAT (404)",
+      cat:"repo", status:"gebouwd",
+      bron:"<code>scripts/fetch-corpus.mjs</code>",
+      verwerking:"Telt wat gevraagd, gelukt en mislukt is, met de reden erbij",
+      bestemming:"<code>data/ophaalrapport.json</code>, gecommit door de runner",
+      crud:"CU", waar:"Create en Update als bestand in de repo",
+      reden:"Zonder dit rapport is een ontbrekend advies niet te onderscheiden van een advies zonder bevindingen. Dat verschil is belangrijk: het eerste betekent dat je iets mist, het tweede dat het goed is.",
+      blijft:"ja", blijftTekst:"Ja — in git, bij het corpus waar het over gaat."
+    },
+    R6:{
+      naam:"De regelset", vb:"<code>regels/*.json</code>: matrix (31 koppen), kleurcodes, woordenlijsten, limieten, sjabloon — plus <code>HERKOMST.md</code>",
+      cat:"repo", status:"gebouwd",
+      bron:"De Schrijfwijzer, de format-matrix en het sjabloon, handmatig omgezet naar data",
+      verwerking:"<code>src/regels.js</code> maakt er een toetser van; <code>scripts/bouw-pagina.mjs</code> vouwt ze in de pagina",
+      bestemming:"De harde regeltoets én de prompt van de oordeelstoets",
+      crud:"R", waar:"Read uit bestanden in de repo. Aanmaken, wijzigen en verwijderen gebeurt in git, niet in de app",
+      reden:"Elke bevinding noemt zijn bron — SW voor de schrijfwijzer, MX voor de matrix, SJ voor het sjabloon — en <code>HERKOMST.md</code> legt per regel-id de vindplaats vast. Een pull request laat zien wát er aan een regel veranderde en waarom; een databaserij niet. En de norm uit de README — een nieuwe regel eerst tegen het hele corpus draaien voordat je hem gelooft — werkt alleen als de regelset in versiebeheer zit.",
+      blijft:"ja", blijftTekst:"Ja — in git. Niet in een database, en er hoeft geen beheerscherm voor."
+    },
+    R7:{
+      naam:"Het genormaliseerde document", vb:"<code>land, titel, kleurcodes, blokken, alineas, zinnen, links, opmaak, koppen, woorden, volledigeTekst</code>",
+      cat:"tijdelijk", status:"gebouwd",
+      bron:"Geplakte tekst, een ingebouwd voorbeeld, of een bestand uit het corpus",
+      verwerking:"<code>Parse.parseAdvies</code> — koppen herkennen, zinnen splitsen, woorden tellen, links en opmaak uitlezen",
+      bestemming:"De toetser",
+      crud:"", waar:"Alleen in het geheugen",
+      reden:"Puur tussenresultaat. Uit dezelfde tekst komt altijd hetzelfde document — er valt niets te bewaren wat je niet in een fractie van een seconde opnieuw hebt.",
+      blijft:"nee", blijftTekst:"Nee, en dat hoeft ook niet."
+    },
+    R8:{
+      naam:"Bevindingen uit de harde regels", vb:"<code>{regel, ernst, bron, boodschap, fragment, notitie}</code> — bijv. <code>h3-niet-melden · fout · MX, tab Koppen · “Geldzaken” hoort niet in een reisadvies</code>",
+      cat:"tijdelijk", status:"gebouwd",
+      bron:"<code>src/regels.js</code>, over het genormaliseerde document",
+      verwerking:"Samenvatten per ernst (fout / let op / info) en per regel, en koppelen aan de zin in de tekst",
+      bestemming:"Het scherm, gekoppeld aan de gemarkeerde zin",
+      crud:"", waar:"Alleen in beeld",
+      reden:"De regels zijn pure functies: dezelfde tekst geeft altijd dezelfde bevindingen. Zou je ze bewaren, dan kijk je later naar een oordeel over een tekst die intussen is aangepast — precies de verwarring die de tool moet wegnemen.",
+      blijft:"nee", blijftTekst:"Nee. Opnieuw toetsen levert een verse lijst op."
+    },
+    R9:{
+      naam:"De prompt voor de oordeelstoets", vb:"<code>volledigeTekst</code> afgekapt op 12.000 tekens, plus de matrixregels en de vaste sjabloonteksten",
+      cat:"tijdelijk", status:"gebouwd",
+      bron:"Het genormaliseerde document en de regelset",
+      verwerking:"Naar <code>window.claude.use('sample')</code>, <code>modelTier: 'complex'</code>; het antwoord komt stromend binnen",
+      bestemming:"De taalmodel-dienst",
+      crud:"", waar:"Onderweg naar een externe dienst. Niet in eigen opslag",
+      reden:"De afbakening uit de strategie zit in de prompt zelf: het model mag niets zeggen over politieke gevoeligheden, mag niet voorstellen om te schrappen, en mag de vaste sjabloonteksten nooit herschrijven. Dat is geen bijvangst maar het verschil tussen een bruikbare en een onbruikbare toets.",
+      vraag:"Vraag: in fase 1 gaat hier gepubliceerde tekst doorheen, die staat al openbaar. Voor Word-concepten moet eerst vaststaan of niet-gepubliceerde tekst hier langs mag, en dat op papier.",
+      blijft:"nee", blijftTekst:"Nee. De app bewaart de prompt niet."
+    },
+    R10:{
+      naam:"Oordeel en herschrijfvoorstel van het model", vb:"maximaal 8 bevindingen, elk met onderwerp, citaat, waarom het niet voldoet, en een herschrijfvoorstel op zinsniveau",
+      cat:"tijdelijk", status:"gebouwd",
+      bron:"De taalmodel-dienst",
+      verwerking:"Stromend in het uitvoervak gezet, naast de harde bevindingen",
+      bestemming:"Het scherm",
+      crud:"", waar:"Alleen in beeld",
+      reden:"Valt de oordeelstoets uit, dan blijven de harde regels gewoon werken — dat is met opzet zo gebouwd, en de pagina zegt dat ook. Een herschrijfvoorstel is een suggestie, geen vastgesteld feit; bewaren zou het het gewicht geven dat het niet heeft.",
+      blijft:"nee", blijftTekst:"Nee. Wat je ervan vindt, kun je wél vastleggen — zie de volgende rij."
+    },
+    R11:{
+      naam:"Reviewoordeel per bevinding", vb:"collectie <code>oordelen</code> · <code>{regel, fragment, oordeel, land, tijd}</code> · oordeel = <code>eens</code> | <code>oneens</code> | <code>onterecht</code>",
+      cat:"db", status:"gebouwd",
+      bron:"Klik op een oordeelknop bij een bevinding, door de reviewer of de redacteur",
+      verwerking:"De sleutel <code>regel::fragment</code> wordt gesaneerd tot een document-id; bij het openen van de pagina worden alle eerdere oordelen ingelezen en teruggetekend",
+      bestemming:"De database van de gepubliceerde Artifact",
+      crud:"CRUD", waar:"In de Artifact-database: <code>db.doc('oordelen/&lt;id&gt;').set()</code> en <code>.delete()</code>, <code>db.collection('oordelen').get()</code> bij het openen",
+      reden:"Het enige gegeven dat per definitie moet stapelen over sessies heen, en precies het spoor “Vertrouwen opbouwen in de toets”. Alle vier de acties zijn er echt in gebruik: aanmaken bij een nieuw oordeel, inlezen bij het openen, overschrijven als je van mening verandert, en verwijderen door nog een keer op hetzelfde oordeel te klikken. Zonder deze opslag begin je elke sessie opnieuw en kun je nooit laten zien dat de tool beter is geworden.",
+      vraag:"Twee vragen. (1) Er staat geen wíe bij — zodra de redacteur ook oordeelt, kun je jullie oordelen niet uit elkaar houden, terwijl juist dat verschil is wat je wilt meten. (2) De database van een Artifact is gedeeld met iedereen die de link heeft: een collega kan jouw oordeel overschrijven of verwijderen.",
+      advies:"Advies: voeg een gebruikersveld toe vóórdat je de link met de redactie deelt. Zolang jij de enige bent die markeert, is de huidige vorm precies genoeg — niets toevoegen.",
+      blijft:"ja", blijftTekst:"Ja. Dit overleeft afsluiten, herladen én een nieuwe versie van de pagina."
+    },
+    R12:{
+      naam:"Bulkrapport en bevindingenbestand", vb:"<code>data/bulkrapport.md</code> en <code>data/bevindingen.json</code> — 226 adviezen, 14-09-2026",
+      cat:"repo", dbKandidaat:true, status:"gebouwd",
+      bron:"<code>scripts/bulk.mjs</code> over het hele corpus",
+      verwerking:"Tellen per regel, en de bevindingen die uit de standaardtekst komen apart zetten",
+      bestemming:"Bestanden in de repo",
+      crud:"CU", waar:"Create en Update als bestand in de repo",
+      reden:"Dit rapport beantwoordt de vraag uit de strategie: hoe groot is de achterstand werkelijk. Nu: 41 van de 226 boven de woordenlimiet, gemiddeld 9,0 eigen fouten per advies, en acht zinnen die in ruim 200 adviezen woordelijk hetzelfde staan — die zijn met één aanpassing tegelijk opgelost, en daarom zet het rapport ze apart.",
+      vraag:"Vraag: <code>data/bevindingen.json</code> is ruim 45.000 regels afgeleide data in versiebeheer. Wil je een momentopname per bulkrun bewaren — dan hoort die eerder bij de oordelen in de database. Of moet hij herberekenbaar blijven en dus uit git.",
+      blijft:"ja", blijftTekst:"Ja, nu wel. Maar dat is een keuze, geen noodzaak."
+    },
+    R13:{
+      naam:"Conceptreisadvies uit Word", vb:"ingevuld <code>Sjabloon Reisadviezen - nieuwe format.docx</code> · fase 2",
+      cat:"keuze", status:"strategie",
+      bron:"Nog niet gebouwd. De strategie noemt dit als fase 2",
+      verwerking:"De redacteur zou de tekst in het plakvak kunnen plakken; de harde regels werken er dan meteen op",
+      bestemming:"De harde regeltoets. De oordeelstoets pas als de vraag hiernaast beantwoord is",
+      crud:"", waar:"Niet van toepassing — er wordt niets opgeslagen",
+      reden:"Goed nieuws dat in de strategie nog niet staat: de harde regels draaien volledig in de pagina, zonder netwerk. Een Word-concept kan daar nú al doorheen zonder dat er één letter de browser verlaat. Alleen de oordeelstoets stuurt tekst naar buiten.",
+      vraag:"Vraag: mag niet-gepubliceerde tekst naar de taalmodel-dienst? Zo nee, dan kan fase 2 alsnog beginnen — laat de oordeelstoets uit voor geplakte concepten en houd het bij de harde regels.",
+      blijft:"nee", blijftTekst:"Nee — niets van het concept bewaren. Het bestand blijft van de redacteur."
+    }
+  };
+
+  var NODES = [
+    {id:"runner",   lane:1, kind:"extern",  kindLbl:"Automaat",       ico:"⚙️", nm:"GitHub Actions-runner",
+     ds:"Workflow <em>Corpus ophalen</em>. Handmatig te starten, of elke maandag 05.00 UTC. De runner heeft wél gewoon internet; de ontwikkelomgeving niet.", status:"gebouwd"},
+    {id:"api",      lane:1, kind:"extern",  kindLbl:"Externe bron",   ico:"☁️", nm:"Open data v2 API",
+     ds:"Nederland Wereldwijd. Levert XML, geen JSON — dat is met een probe vastgesteld.", status:"extern"},
+    {id:"corpus",   lane:1, kind:"bestand", kindLbl:"Bestand in repo",ico:"📁", nm:"<code>data/corpus/*.xml</code>",
+     ds:"226 opgehaalde reisadviezen. De bron voor de bulkslag.", status:"gebouwd"},
+    {id:"redacteur",lane:1, kind:"mens",    kindLbl:"Gebruiker",      ico:"👤", nm:"Redacteur",
+     ds:"Primair. Opent de gepubliceerde pagina, plakt zijn tekst of kiest een voorbeeld.", status:"gebouwd"},
+    {id:"worddoc",  lane:1, kind:"bestand", kindLbl:"Bestand",        ico:"📄", nm:"Conceptreisadvies (.docx)",
+     ds:"Fase 2. Nog niet gebouwd; staat alleen in de strategie.", status:"strategie"},
+    {id:"regels",   lane:1, kind:"bestand", kindLbl:"Bestand in repo",ico:"📐", nm:"<code>regels/*.json</code>",
+     ds:"Matrix (31 koppen), kleurcodes, woordenlijsten, limieten, sjabloon. Met <code>HERKOMST.md</code> ernaast.", status:"gebouwd"},
+    {id:"model",    lane:1, kind:"extern",  kindLbl:"Externe dienst", ico:"☁️", nm:"Taalmodel · <code>sample</code>",
+     ds:"Aangeroepen met <code>modelTier: 'complex'</code>. Het antwoord komt stromend binnen.", status:"gebouwd"},
+    {id:"reviewer", lane:1, kind:"mens",    kindLbl:"Gebruiker",      ico:"👤", nm:"Reviewer",
+     ds:"Fase 1. Draait de bulkslag en markeert per bevinding of hij klopt.", status:"gebouwd"},
+
+    {id:"fetch",    lane:2, kind:"app", kindLbl:"Script",     ico:"⚙️", nm:"<code>scripts/fetch-corpus.mjs</code>",
+     ds:"Haalt op per ISO-code of <code>locationKey</code>. Draait op de runner, niet lokaal.", status:"gebouwd"},
+    {id:"adapter",  lane:2, kind:"app", kindLbl:"Module",     ico:"⚙️", nm:"<code>src/adapter.js</code>",
+     ds:"XML naar titel, land, isocode, kleurcodes, één h2/h3-stroom en <code>modificationdate</code>.", status:"gebouwd"},
+    {id:"parse",    lane:2, kind:"app", kindLbl:"Module",     ico:"⚙️", nm:"<code>src/parse.js</code>",
+     ds:"Genormaliseerd document: blokken, alinea's, zinnen, links, opmaak, koppen, woorden.", status:"gebouwd"},
+    {id:"harde",    lane:2, kind:"app", kindLbl:"Module",     ico:"⚙️", nm:"<code>src/regels.js</code>",
+     ds:"De harde regels als pure functies. Elke bevinding noemt zijn bron: SW, MX of SJ.", status:"gebouwd"},
+    {id:"bulk",     lane:2, kind:"app", kindLbl:"Script",     ico:"⚙️", nm:"<code>scripts/bulk.mjs</code>",
+     ds:"Toetst alle 226 adviezen en telt per regel. Zet standaardtekst apart.", status:"gebouwd"},
+    {id:"oordeelt", lane:2, kind:"app", kindLbl:"In de pagina",ico:"⚙️", nm:"Oordeelstoets",
+     ds:"Bouwt de prompt uit de tekst en de regelset, en roept het model aan.", status:"gebouwd"},
+    {id:"markeren", lane:2, kind:"app", kindLbl:"In de pagina",ico:"⚙️", nm:"Oordeelknoppen",
+     ds:"Bij elke bevinding: eens / oneens / onterecht. Nog een keer klikken wist het oordeel.", status:"gebouwd"},
+
+    {id:"corpusuit",lane:3, kind:"opslag-repo", kindLbl:"Opslag",   ico:"📁", nm:"<code>data/corpus/</code> + <code>ophaalrapport.json</code>",
+     ds:"De runner commit ze terug naar de repo. Dezelfde bestanden als links in kolom 1.", status:"gebouwd"},
+    {id:"scherm",   lane:3, kind:"weergave",    kindLbl:"Weergave", ico:"🖥️", nm:"Bevindingen in beeld",
+     ds:"Fout / let op / info, elk gekoppeld aan de zin in de tekst waar het over gaat.", status:"gebouwd"},
+    {id:"rapport",  lane:3, kind:"opslag-repo", kindLbl:"Opslag",   ico:"📄", nm:"<code>bulkrapport.md</code> + <code>bevindingen.json</code>",
+     ds:"De achterstand in cijfers. Momentopname van 14-09-2026.", status:"gebouwd"},
+    {id:"oordeeluit",lane:3,kind:"weergave",    kindLbl:"Weergave", ico:"🖥️", nm:"Herschrijfvoorstellen in beeld",
+     ds:"Maximaal 8 bevindingen, stromend binnenkomend naast de harde regels.", status:"gebouwd"},
+    {id:"db",       lane:3, kind:"opslag-db",   kindLbl:"Opslag",   ico:"🗄️", nm:"Artifact-database · <code>oordelen</code>",
+     ds:"De enige eigen database. Bestaat al en wordt gebruikt. Gedeeld met iedereen die de link heeft.", status:"gebouwd"}
+  ];
+
+  var EDGES = [
+    {from:"runner",   to:"fetch",     routes:["R4"],       lab:"startsein",                     det:"handmatig, of ma 05.00 UTC"},
+    {from:"api",      to:"fetch",     routes:["R3"],       lab:"XML-document per land",         det:"heen: GET per ISO-code of locationKey (227 gevraagd)", bidir:true},
+    {from:"fetch",    to:"corpusuit", routes:["R4","R5"],  lab:"226 XML-bestanden + ophaalrapport", det:"1 mislukt: VAT, 404"},
+    {from:"corpusuit",to:"corpus",    routes:["R4"],       lab:"dezelfde bestanden",            det:"de wekelijkse run ververst ze", bow:3},
+    {from:"corpus",   to:"adapter",   routes:["R4"],       lab:"opgeslagen XML per land"},
+    {from:"adapter",  to:"parse",     routes:["R7"],       lab:"titel, land, kleurcodes, h2/h3-stroom, wijzigingsdatum"},
+    {from:"redacteur",to:"parse",     routes:["R1","R2"],  lab:"geplakte tekst, of een van de drie voorbeelden", det:"+ landnaam"},
+    {from:"worddoc",  to:"parse",     routes:["R13"],      lab:"conceptreisadvies",             det:"fase 2 — nog niet gebouwd"},
+    {from:"parse",    to:"harde",     routes:["R7"],       lab:"document: blokken, zinnen, links, koppen, woorden"},
+    {from:"regels",   to:"harde",     routes:["R6"],       lab:"matrix, kleurcodes, woordenlijsten, limieten, sjabloon"},
+    {from:"harde",    to:"scherm",    routes:["R8","R11"], lab:"bevindingen: regel, ernst, bron, boodschap, fragment"},
+    {from:"harde",    to:"bulk",      routes:["R12"],      lab:"bevindingen van alle 226 adviezen"},
+    {from:"bulk",     to:"rapport",   routes:["R12"],      lab:"telling per regel + standaardtekst apart"},
+    {from:"parse",    to:"oordeelt",  routes:["R9"],       lab:"volledige tekst",               det:"afgekapt op 12.000 tekens"},
+    {from:"regels",   to:"oordeelt",  routes:["R6","R9"],  lab:"matrixregels + vaste sjabloonteksten in de prompt"},
+    {from:"model",    to:"oordeelt",  routes:["R9","R10"], lab:"max 8 bevindingen met herschrijfvoorstel", det:"heen: de prompt", bidir:true},
+    {from:"oordeelt", to:"oordeeluit",routes:["R10"],      lab:"herschrijfvoorstellen, stromend"},
+    {from:"scherm",   to:"redacteur", routes:["R8","R11"], lab:"bevindingen, gekoppeld aan de zin", bow:1},
+    {from:"scherm",   to:"reviewer",  routes:["R8","R11"], lab:"bevindingen om te vergelijken met het eigen oordeel", bow:2},
+    {from:"redacteur",to:"markeren",  routes:["R11"],      lab:"eens / oneens / onterecht"},
+    {from:"reviewer", to:"markeren",  routes:["R11"],      lab:"eens / oneens / onterecht"},
+    {from:"markeren", to:"db",        routes:["R11"],      lab:"{regel, fragment, oordeel, land, tijd}", det:"bij openen: alle eerdere oordelen terug", bidir:true}
+  ];
+
+  var LANE = {};
+  NODES.forEach(function(n){ LANE[n.id] = n.lane; });
+
+  var STATUS = {
+    gebouwd:  {cls:"st-gebouwd",  txt:"gebouwd"},
+    extern:   {cls:"st-extern",   txt:"bestaat buiten de app"},
+    strategie:{cls:"st-strategie",txt:"alleen in strategie"},
+    aanname:  {cls:"st-aanname",  txt:"aanname"}
+  };
+
+  function crudHtml(letters, cat){
+    var out = '<span class="crud">';
+    if(!letters){ out += '<span class="none">geen databaseactie</span>'; }
+    else {
+      var extra = (cat === "repo") ? " repo" : "";
+      ["C","R","U","D"].forEach(function(L){
+        out += '<b class="' + (letters.indexOf(L) > -1 ? "on" + extra : "") + '">' + L + '</b>';
+      });
+    }
+    return out + '</span>';
+  }
+
+  (function buildLegend(){
+    var el = document.getElementById("legend"), h = "";
+    Object.keys(CATS).forEach(function(k){
+      h += '<div class="legend-item cat-' + k + (CATS[k].actief ? '' : ' uit') + '">'
+         +   '<div class="head"><span class="swatch"></span><span>' + CATS[k].label + '</span>'
+         +     '<span class="tagpill" style="margin-left:auto">' + CATS[k].short + '</span></div>'
+         +   '<div class="desc">' + CATS[k].desc + '</div>'
+         + '</div>';
+    });
+    el.innerHTML = h;
+  })();
+
+  (function buildNodes(){
+    NODES.forEach(function(n){
+      var d = document.createElement("div");
+      d.className = "node"; d.dataset.id = n.id; d.dataset.kind = n.kind;
+      var st = STATUS[n.status];
+      d.innerHTML = '<div class="kind">' + n.kindLbl + '</div>'
+                  + '<div class="nm"><span class="ico">' + n.ico + '</span><span>' + n.nm + '</span></div>'
+                  + '<div class="ds">' + n.ds + '</div>'
+                  + '<span class="st ' + st.cls + '">' + st.txt + '</span>';
+      document.getElementById("lane" + n.lane).appendChild(d);
+    });
+  })();
+
+  var labelsHost = document.getElementById("labels");
+  var svg = document.getElementById("svg");
+  var SVGNS = "http://www.w3.org/2000/svg";
+
+  (function buildDefs(){
+    var defs = document.createElementNS(SVGNS, "defs");
+    Object.keys(CATS).forEach(function(k){
+      var m = document.createElementNS(SVGNS, "marker");
+      m.setAttribute("id", "arw-" + k);
+      m.setAttribute("viewBox", "0 0 10 10");
+      m.setAttribute("refX", "9"); m.setAttribute("refY", "5");
+      m.setAttribute("markerWidth", "5.5"); m.setAttribute("markerHeight", "5.5");
+      m.setAttribute("orient", "auto-start-reverse");
+      var p = document.createElementNS(SVGNS, "path");
+      p.setAttribute("d", "M0.5,1 L9,5 L0.5,9 z");
+      p.setAttribute("fill", col(k));
+      m.appendChild(p); defs.appendChild(m);
+    });
+    svg.appendChild(defs);
+  })();
+
+  EDGES.forEach(function(e){
+    e.cat = ROUTES[e.routes[0]].cat;
+    e._path = document.createElementNS(SVGNS, "path");
+    e._path.setAttribute("class", "edge");
+    e._path.setAttribute("stroke", col(e.cat));
+    if(e.cat === "keuze") e._path.setAttribute("stroke-dasharray", "6 4");
+    if(e.bow === 3) e._path.setAttribute("stroke-dasharray", "3 4");
+    e._path.setAttribute("marker-end", "url(#arw-" + e.cat + ")");
+    if(e.bidir) e._path.setAttribute("marker-start", "url(#arw-" + e.cat + ")");
+    svg.appendChild(e._path);
+
+    e._leader = document.createElementNS(SVGNS, "path");
+    e._leader.setAttribute("class", "leader");
+    svg.appendChild(e._leader);
+
+    var L = document.createElement("div");
+    L.className = "elabel cat-" + e.cat;
+    L.innerHTML = '<span>' + e.lab + '</span>'
+                + (e.det ? '<span class="d">' + e.det + '</span>' : '')
+                + crudHtml(ROUTES[e.routes[0]].crud, e.cat);
+    labelsHost.appendChild(L);
+    e._label = L;
+  });
+
+  (function buildMatrix(){
+    var tb = document.getElementById("matrixBody"), h = "";
+    Object.keys(ROUTES).forEach(function(key){
+      var r = ROUTES[key], st = STATUS[r.status];
+      h += '<tr data-route="' + key + '">'
+        +  '<td data-l="Gegeven"><span class="g-naam">' + r.naam + '</span>'
+        +    '<span class="g-vb">' + r.vb + '</span>'
+        +    '<span class="st ' + st.cls + '" style="margin-top:9px">' + st.txt + '</span></td>'
+        +  '<td data-l="Bron → verwerking → bestemming"><div class="route">'
+        +    '<span><b>Bron:</b> ' + r.bron + '</span><span class="arw">▼</span>'
+        +    '<span><b>Verwerking:</b> ' + r.verwerking + '</span><span class="arw">▼</span>'
+        +    '<span><b>Bestemming:</b> ' + r.bestemming + '</span></div></td>'
+        +  '<td class="cr" data-l="CRUD &amp; waar">' + crudHtml(r.crud, r.cat)
+        +    '<div class="reden" style="margin-top:8px">' + r.waar + '</div></td>'
+        +  '<td data-l="Opslagkeuze"><span class="tagpill cat-' + r.cat + '">' + CATS[r.cat].short + '</span>'
+        +    '<div class="reden" style="margin-top:8px">' + CATS[r.cat].label + '</div></td>'
+        +  '<td data-l="Reden vanuit de use case"><div class="reden">' + r.reden
+        +    (r.vraag ? '<span class="q">' + r.vraag + '</span>' : '')
+        +    (r.advies ? '<span class="advies">' + r.advies + '</span>' : '')
+        +    '</div></td>'
+        +  '<td data-l="Blijft na afsluiten?"><div class="blijft"><span class="' + (r.blijft === "ja" ? "ja" : "nee") + '">'
+        +    (r.blijft === "ja" ? "Ja" : "Nee") + '</span> — ' + r.blijftTekst + '</div></td>'
+        +  '</tr>';
+    });
+    tb.innerHTML = h;
+  })();
+
+  var diagram = document.getElementById("diagram");
+  var lanes = document.getElementById("lanes");
+
+  function draw(){
+    var W = diagram.offsetWidth, H = diagram.offsetHeight;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+
+    // offsetLeft/offsetTop worden gemeten vanaf de binnenrand van .diagram, terwijl de
+    // svg en de labels de buitenrand als nulpunt hebben. Het verschil is de padding.
+    var cs = getComputedStyle(diagram);
+    var padX = parseFloat(cs.paddingLeft) || 0, padY = parseFloat(cs.paddingTop) || 0;
+
+    var R = {};
+    diagram.querySelectorAll(".node").forEach(function(n){
+      R[n.dataset.id] = {x:n.offsetLeft + padX, y:n.offsetTop + padY, w:n.offsetWidth, h:n.offsetHeight};
+    });
+    if(!R.redacteur) return;
+    var lanesH = lanes.offsetHeight + lanes.offsetTop + padY;
+
+    var groups = {};
+    EDGES.forEach(function(e){
+      var sk = e.from + "|" + (e.bow ? "b" : "r");
+      var tk = e.to   + "|" + (e.bow ? "b" : "l");
+      (groups[sk] = groups[sk] || []).push({e:e, end:"s"});
+      (groups[tk] = groups[tk] || []).push({e:e, end:"t"});
+    });
+    Object.keys(groups).forEach(function(k){
+      var p = k.split("|"), side = p[1], list = groups[k], box = R[p[0]];
+      if(!box) return;
+      list.sort(function(a,b){
+        var oa = R[a.end === "s" ? a.e.to : a.e.from], ob = R[b.end === "s" ? b.e.to : b.e.from];
+        if(!oa || !ob) return 0;
+        return side === "b" ? (oa.x - ob.x) : ((oa.y + oa.h/2) - (ob.y + ob.h/2));
+      });
+      list.forEach(function(item, i){
+        var f = (i + 1) / (list.length + 1);
+        var pt = side === "b" ? {x:box.x + box.w * f, y:box.y + box.h}
+                              : {x:(side === "r" ? box.x + box.w : box.x), y:box.y + box.h * f};
+        if(item.end === "s") item.e._s = pt; else item.e._t = pt;
+      });
+    });
+
+    var L1 = document.getElementById("lane1"), L2 = document.getElementById("lane2"), L3 = document.getElementById("lane3");
+    var GUT = {
+      1: (L1.offsetLeft + L1.offsetWidth + L2.offsetLeft) / 2 + padX,
+      2: (L2.offsetLeft + L2.offsetWidth + L3.offsetLeft) / 2 + padX
+    };
+
+    /** Het punt op het pad dat het dichtst bij deze x ligt. */
+    function puntBijX(pad, len, gx){
+      var best = null, bd = Infinity;
+      for(var i = 0; i <= 64; i++){
+        var pt = pad.getPointAtLength(len * i / 64), dd = Math.abs(pt.x - gx);
+        if(dd < bd){ bd = dd; best = pt; }
+      }
+      return best;
+    }
+
+    var placed = [];
+    EDGES.forEach(function(e){
+      var s = e._s, t = e._t, d, gx, groep;
+      if(!s || !t) return;
+      var sl = LANE[e.from], tl = LANE[e.to];
+
+      if(e.bow){
+        var bowY = lanesH + (e.bow === 1 ? 46 : e.bow === 2 ? 104 : 162), r = 14;
+        var dir = t.x < s.x ? -1 : 1;
+        d = "M" + s.x + " " + s.y
+          + " L" + s.x + " " + (bowY - r)
+          + " Q" + s.x + " " + bowY + " " + (s.x + dir * r) + " " + bowY
+          + " L" + (t.x - dir * r) + " " + bowY
+          + " Q" + t.x + " " + bowY + " " + t.x + " " + (bowY - r)
+          + " L" + t.x + " " + (t.y + 3);
+        groep = "bow" + e.bow;
+      } else if(sl === tl){
+        // Binnen dezelfde kolom: een lus die de tussenruimte in buigt, zodat het label
+        // daar past en niet over een blok heen valt.
+        gx = GUT[sl];
+        d = "M" + s.x + " " + s.y + " C" + gx + " " + s.y + ", " + gx + " " + t.y + ", " + t.x + " " + t.y;
+        groep = "g" + sl;
+      } else {
+        gx = GUT[sl];
+        var dx = Math.max(46, (t.x - s.x) * 0.45);
+        d = "M" + s.x + " " + s.y + " C" + (s.x + dx) + " " + s.y + ", " + (t.x - dx) + " " + t.y + ", " + t.x + " " + t.y;
+        groep = "g" + sl;
+      }
+
+      e._path.setAttribute("d", d);
+      var len = e._path.getTotalLength();
+      var a = e.bow ? e._path.getPointAtLength(len * 0.5) : puntBijX(e._path, len, gx);
+      placed.push({e:e, ax:a.x, ay:a.y, x:(e.bow ? a.x : gx), y:a.y, h:e._label.offsetHeight, groep:groep});
+    });
+
+    // Labels binnen dezelfde tussenruimte verticaal uit elkaar duwen.
+    var buckets = {};
+    placed.forEach(function(p){ (buckets[p.groep] = buckets[p.groep] || []).push(p); });
+    Object.keys(buckets).forEach(function(b){
+      var list = buckets[b].sort(function(a, c){ return a.y - c.y; });
+      for(var i = 1; i < list.length; i++){
+        var gap = (list[i-1].h + list[i].h) / 2 + 10;
+        if(list[i].y - list[i-1].y < gap) list[i].y = list[i-1].y + gap;
+      }
+    });
+
+    placed.forEach(function(p){
+      p.e._label.style.left = p.x + "px";
+      p.e._label.style.top  = p.y + "px";
+      if(Math.abs(p.y - p.ay) > 10 || Math.abs(p.x - p.ax) > 10){
+        p.e._leader.setAttribute("d", "M" + p.ax + " " + p.ay + " L" + p.x + " " + p.y);
+        p.e._leader.style.display = "";
+      } else {
+        p.e._leader.style.display = "none";
+      }
+    });
+  }
+
+  var filter = "alles";
+  function routeMatches(key){
+    var r = ROUTES[key];
+    if(filter === "alles") return true;
+    if(filter === "db")    return r.cat === "db" || r.dbKandidaat === true;
+    return r.cat !== "db";
+  }
+
+  function apply(){
+    var live = {};
+    EDGES.forEach(function(e){
+      var on = e.routes.some(routeMatches);
+      e._path.classList.toggle("is-dim", !on);
+      e._label.classList.toggle("is-hidden", !on);
+      e._leader.style.opacity = on ? "1" : "0";
+      if(on){ live[e.from] = true; live[e.to] = true; }
+    });
+    diagram.querySelectorAll(".node").forEach(function(n){
+      n.classList.toggle("is-dim", !live[n.dataset.id]);
+    });
+    document.querySelectorAll("#matrixBody tr").forEach(function(tr){
+      tr.classList.toggle("is-hidden", !routeMatches(tr.dataset.route));
+    });
+  }
+
+  document.querySelectorAll("[data-filter]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      filter = btn.dataset.filter;
+      document.querySelectorAll("[data-filter]").forEach(function(b){
+        b.setAttribute("aria-pressed", String(b === btn));
+      });
+      apply();
+      requestAnimationFrame(draw);
+    });
+  });
+
+  document.getElementById("crudToggle").addEventListener("change", function(){
+    document.body.classList.toggle("no-crud", !this.checked);
+    requestAnimationFrame(draw);
+  });
+
+  var zoom = 1;
+  var host = document.getElementById("scaleHost");
+  var scroller = document.getElementById("scroller");
+  function setZoom(z){
+    zoom = Math.min(1.3, Math.max(0.5, Math.round(z * 100) / 100));
+    host.style.transform = "scale(" + zoom + ")";
+    scroller.style.height = (diagram.offsetHeight * zoom) + "px";
+    document.getElementById("zVal").textContent = Math.round(zoom * 100) + "%";
+  }
+  document.getElementById("zIn").addEventListener("click", function(){ setZoom(zoom + 0.1); });
+  document.getElementById("zOut").addEventListener("click", function(){ setZoom(zoom - 0.1); });
+  function fit(){ setZoom(Math.min(1, Math.max(0.6, scroller.clientWidth / 1215))); }
+
+  function boot(){ draw(); apply(); fit(); }
+  if(document.readyState === "complete") boot(); else window.addEventListener("load", boot);
+  setTimeout(boot, 400);
+
+  var t;
+  window.addEventListener("resize", function(){
+    clearTimeout(t);
+    t = setTimeout(function(){ draw(); fit(); }, 140);
+  });
+})();
+</script>
+</body>
+</html>

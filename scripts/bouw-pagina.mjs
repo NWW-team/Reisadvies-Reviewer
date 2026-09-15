@@ -37,6 +37,7 @@ const regeldata = {
   kleurcodes: JSON.parse(lees('regels', 'kleurcodes.json')),
   woordenlijsten: JSON.parse(lees('regels', 'woordenlijsten.json')),
   limieten: JSON.parse(lees('regels', 'limieten.json')),
+  sjabloon: JSON.parse(lees('regels', 'sjabloon.json')),
 };
 
 // Drie echte adviezen, gekozen om verschillende situaties te laten zien.

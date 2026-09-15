@@ -58,6 +58,18 @@ export function maakToetser(data) {
   const deelwoordRe = new RegExp('\\b(' + wl.lijdende_vorm.deelwoord_patroon + ')\\b', 'giu');
   const geenDeelwoord = new Set((wl.lijdende_vorm.geen_deelwoord || []).map((w) => w.toLowerCase()));
 
+  // Ingangen die niet letterlijk in de brondocumenten staan. Een bevinding die daarop
+  // steunt krijgt herkomst 'aanvulling', zodat bij de review zichtbaar is dat de regel
+  // wel wordt toegepast maar het woord niet geciteerd is.
+  const alsSet = (lijst) => new Set((lijst || []).map((x) => String(x).toLowerCase()));
+  const extraTwijfel = alsSet(wl.twijfeltaal._aanvullingen);
+  const extraGender = alsSet(wl.genderneutraal._aanvullingen);
+  const extraAfk = alsSet(wl.afkortingen._aanvullingen);
+  const extraEenheid = alsSet(wl.eenheden_voluit._aanvullingen);
+  const extraDomein = alsSet(wl.niet_linken_naar._aanvullingen);
+  const herkomst = (set, x) => (set.has(String(x).toLowerCase()) ? { herkomst: 'aanvulling' } : {});
+
+
   /** @returns {[hulpwerkwoord, deelwoord]|null} — zoekt door tot een echt deelwoord, zodat
    *  "er wordt een gebied afgesloten" niet op "gebied" blijft hangen. */
   function lijdendeVorm(zin) {
@@ -305,7 +317,7 @@ export function maakToetser(data) {
       for (const w of wl.twijfeltaal.woorden) {
         if (new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) {
           b.push(bevinding('zin-twijfeltaal', ERNST.letop, 'SW, Begrijpelijkheid > B1',
-            `Twijfeltaal: "${w}".`, { fragment: z.tekst, kop: z.h3 || z.h2 }));
+            `Twijfeltaal: "${w}".`, { fragment: z.tekst, kop: z.h3 || z.h2, ...herkomst(extraTwijfel, w) }));
         }
       }
       const lv = lijdendeVorm(z.tekst);
@@ -333,7 +345,7 @@ export function maakToetser(data) {
       if (dichtheid > wl.negatieve_lading.drempel_per_100_woorden) {
         b.push(bevinding('tekst-negatieve-lading', ERNST.info, 'SW, Begrijpelijkheid > Positieve taal',
           `${negAantal} woorden met negatieve lading op ${negWoorden} woorden (${dichtheid.toFixed(1)} per 100). Richtlijn is maximaal ${wl.negatieve_lading.drempel_per_100_woorden}.`,
-          { notitie: 'Vaste kleurcode-formuleringen tellen niet mee.' }));
+          { notitie: 'Vaste kleurcode-formuleringen tellen niet mee.', herkomst: 'aanvulling' }));
       }
     }
 
@@ -348,7 +360,7 @@ export function maakToetser(data) {
       if (verboden) {
         b.push(bevinding('link-verboden-partij', ERNST.fout, 'SW, Relevantie > Naar wie linken we niet?',
           `Link naar ${host}. We linken niet naar commerciële partijen, politieke partijen, belangenbehartigers of media.`,
-          { fragment: l.tekst }));
+          { fragment: l.tekst, ...herkomst(extraDomein, verboden) }));
       }
     }
     const ookNuttig = doc.blokken.find((x) => /ook nuttig/i.test(x.kop || ''));
@@ -439,7 +451,7 @@ export function maakToetser(data) {
       const m = tekst.match(re);
       if (m) {
         b.push(bevinding('afkortingen-uitschrijven', ERNST.letop, 'SW, Schrijfregels > Afkortingen',
-          `"${fout}" uitschrijven als "${goed}" (${m.length}×).`));
+          `"${fout}" uitschrijven als "${goed}" (${m.length}×).`, herkomst(extraAfk, fout)));
       }
     }
     for (const [fout, goed] of Object.entries(wl.eenheden_voluit.vervang)) {
@@ -447,7 +459,8 @@ export function maakToetser(data) {
       const m = tekst.match(re);
       if (m) {
         b.push(bevinding('eenheden-voluit', ERNST.info, 'SW, Schrijfregels > Afstanden/Gewicht/Hoeveelheden',
-          `"${m[0]}" voluit schrijven als ${goed}.`, { fragment: contextVan(tekst, tekst.indexOf(m[0])) }));
+          `"${m[0]}" voluit schrijven als ${goed}.`,
+          { fragment: contextVan(tekst, tekst.indexOf(m[0])), ...herkomst(extraEenheid, fout) }));
       }
     }
     for (const [fout, goed] of Object.entries(wl.vaste_schrijfwijze.vervang)) {
@@ -462,7 +475,8 @@ export function maakToetser(data) {
       const re = new RegExp('\\b' + esc(w) + '\\b', 'i');
       if (re.test(tekst)) {
         b.push(bevinding('genderneutraal', ERNST.letop, 'SW, Schrijfregels > Gender(neutraal) / lhbtiq+',
-          `"${w}" is niet genderneutraal.`, { fragment: contextVan(tekst, tekst.search(re)) }));
+          `"${w}" is niet genderneutraal.`,
+          { fragment: contextVan(tekst, tekst.search(re)), ...herkomst(extraGender, w) }));
       }
     }
     for (const { patroon, boodschap } of wl.genderneutraal.lhbtiq.patronen) {

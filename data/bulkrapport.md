@@ -7,6 +7,7 @@ Gedraaid op 2026-09-15 over 226 reisadviezen.
 - **0** van de 226 adviezen hebben geen enkele harde fout.
 - **41** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 9.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
+- **88** van de 5066 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 

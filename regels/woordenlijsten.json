@@ -21,7 +21,21 @@
       "over het algemeen",
       "kan voorkomen",
       "zou kunnen"
-    ]
+    ],
+    "_aanvullingen": [
+      "mogelijkerwijs",
+      "waarschijnlijk",
+      "wellicht",
+      "eventueel",
+      "veelal",
+      "doorgaans",
+      "vermoedelijk",
+      "in principe",
+      "over het algemeen",
+      "kan voorkomen",
+      "zou kunnen"
+    ],
+    "_aanvullingen_noot": "Woorden die niet letterlijk in de brondocumenten staan. Ze passen de regel toe maar zijn niet geciteerd; een bevinding erop krijgt herkomst \"aanvulling\"."
   },
   "negatieve_lading": {
     "_bron": "Begrijpelijkheid > Positieve taal: 'Gebruik zo min mogelijk woorden met een negatieve lading, zoals niet, nooit, probleem, mislukt etc.'",
@@ -42,7 +56,17 @@
       "fout",
       "gebrek"
     ],
-    "drempel_per_100_woorden": 6
+    "drempel_per_100_woorden": 6,
+    "_aanvullingen": [
+      "mislukken",
+      "onmogelijk",
+      "verboden",
+      "helaas",
+      "weiger",
+      "geweigerd"
+    ],
+    "_aanvullingen_noot": "Woorden die niet letterlijk in de brondocumenten staan. Ze passen de regel toe maar zijn niet geciteerd; een bevinding erop krijgt herkomst \"aanvulling\".",
+    "_drempel_herkomst": "aanvulling: de schrijfwijzer noemt geen getal. Deze drempel is door de bouwer gekozen en nog niet bevestigd."
   },
   "afkortingen": {
     "_bron": "Schrijfregels > Afkortingen: 'Schrijf afkortingen uit: bijvoorbeeld in plaats van bijv.'",
@@ -72,7 +96,20 @@
       "dhr.",
       "mw."
     ],
-    "_toegestaan_toelichting": "Organisatie-afkortingen (ANWB, RDW, SVB, CAK, RvIG, GGD, LCR, EU, NAVO, NS, VK, VAE) worden apart afgehandeld: eerste keer voluit met afkorting tussen haakjes."
+    "_toegestaan_toelichting": "Organisatie-afkortingen (ANWB, RDW, SVB, CAK, RvIG, GGD, LCR, EU, NAVO, NS, VK, VAE) worden apart afgehandeld: eerste keer voluit met afkorting tussen haakjes.",
+    "_aanvullingen": [
+      "e.d.",
+      "m.b.t.",
+      "d.w.z.",
+      "n.a.v.",
+      "z.s.m.",
+      "excl.",
+      "min.",
+      "ca.",
+      "t.o.v.",
+      "a.u.b."
+    ],
+    "_aanvullingen_noot": "Woorden die niet letterlijk in de brondocumenten staan. Ze passen de regel toe maar zijn niet geciteerd; een bevinding erop krijgt herkomst \"aanvulling\". Bij afkortingen is dit toepassing van een algemene regel (\"schrijf afkortingen uit\"), niet nieuw beleid."
   },
   "eenheden_voluit": {
     "_bron": "Schrijfregels > Afstanden, Gewicht, Hoeveelheden: 'Schrijf aanduidingen voluit.'",
@@ -84,7 +121,12 @@
       "gr": "gram",
       "ltr": "liter",
       "ml": "milliliter"
-    }
+    },
+    "_aanvullingen": [
+      "kg",
+      "ltr"
+    ],
+    "_aanvullingen_noot": "Woorden die niet letterlijk in de brondocumenten staan. Ze passen de regel toe maar zijn niet geciteerd; een bevinding erop krijgt herkomst \"aanvulling\". Idem: toepassing van \"schrijf aanduidingen voluit\"."
   },
   "vaste_schrijfwijze": {
     "_bron": "Schrijfregels: 'u heeft', 'u wilt', 'Caribisch', 'ID-bewijs niet gebruiken'",
@@ -133,7 +175,17 @@
           "boodschap": "verouderde afkorting; we gebruiken lhbtiq+."
         }
       ]
-    }
+    },
+    "_aanvullingen": [
+      "zij/hij",
+      "hij of zij",
+      "zijn/haar",
+      "haar/zijn",
+      "de aanvrager zijn",
+      "mannelijke reiziger",
+      "vrouwelijke reiziger"
+    ],
+    "_aanvullingen_noot": "Woorden die niet letterlijk in de brondocumenten staan. Ze passen de regel toe maar zijn niet geciteerd; een bevinding erop krijgt herkomst \"aanvulling\"."
   },
   "lijdende_vorm": {
     "_bron": "Begrijpelijkheid > B1: 'Schrijf actief. Dus vermijd de lijdende vorm.'",
@@ -184,7 +236,14 @@
       "beleid",
       "onthaal",
       "herkomst"
-    ]
+    ],
+    "_aanvullingen": [
+      "werd",
+      "werden",
+      "is geworden",
+      "zijn geworden"
+    ],
+    "_aanvullingen_noot": "Woorden die niet letterlijk in de brondocumenten staan. Ze passen de regel toe maar zijn niet geciteerd; een bevinding erop krijgt herkomst \"aanvulling\". Dit is grammatica (verleden tijd van worden), geen beleidskeuze."
   },
   "lidwoorden": [
     "de",
@@ -235,6 +294,26 @@
       "tripadvisor.com",
       "expedia.com",
       "skyscanner.net"
+    ],
+    "_herkomst": "AANVULLING. De schrijfwijzer noemt categorieen (commerciele partijen, politieke partijen, belangenbehartigers, media), geen domeinnamen. Alle 15 namen hieronder zijn door de bouwer gekozen en nog niet bevestigd.",
+    "_aanvullingen": [
+      "facebook.com",
+      "x.com",
+      "twitter.com",
+      "instagram.com",
+      "tiktok.com",
+      "nu.nl",
+      "nos.nl",
+      "telegraaf.nl",
+      "ad.nl",
+      "volkskrant.nl",
+      "nrc.nl",
+      "booking.com",
+      "tripadvisor.com",
+      "expedia.com",
+      "skyscanner.net"
     ]
-  }
+  },
+  "_herkomst_bepaald_op": "2026-09-15, door elke ingang te zoeken in de Schrijfwijzer, de Matrix en het Sjabloon. Opnieuw bepalen zodra een van die documenten wijzigt.",
+  "_let_op_code_in_dit_bestand": "Twee velden in dit bestand zijn geen data maar reguliere expressies die worden uitgevoerd: lijdende_vorm.deelwoord_patroon en genderneutraal.lhbtiq.patronen[].patroon. Alle andere ingangen worden ontsnapt voordat er een regex van wordt gemaakt, en de domeinen gaan via stringvergelijking. Pas die twee velden dus alleen aan met kennis van reguliere expressies, en meet daarna de looptijd: op 2026-09-15 bleef die onder 1 ms bij 12.000 tekens."
 }

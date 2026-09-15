@@ -57,6 +57,11 @@ function groepeerSleutel(bev) {
   return bev.regel + '\u0000' + String(bev.fragment || bev.boodschap || '').replace(/\s+/g, ' ').trim();
 }
 
+// Bevindingen die steunen op een lijst-ingang die niet letterlijk in de bronnen staat.
+// Zie regels/woordenlijsten.json, veld _aanvullingen.
+const alleBevindingen = resultaten.reduce((s, r) => s + r.bevindingen.length, 0);
+const aanvullingen = resultaten.reduce((s, r) => s + r.bevindingen.filter((b) => b.herkomst === 'aanvulling').length, 0);
+
 const teLang = resultaten.filter((r) => r.perRegel['doc-woordenaantal']);
 const zonderFouten = resultaten.filter((r) => r.fout === 0);
 
@@ -90,6 +95,8 @@ const regels = [
   `- **${teLang.length}** adviezen zitten boven de woordenlimiet.`,
   `- Gemiddeld ${(resultaten.reduce((s, r) => s + eigenFouten(r), 0) / resultaten.length).toFixed(1)} eigen fouten per advies,`
   + ` los van wat uit de standaardtekst komt.`,
+  `- **${aanvullingen}** van de ${alleBevindingen} bevindingen steunen op een aanvulling: de regel komt uit de`
+  + ` schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.`,
   '',
   ...(standaardtekst.length ? [
     '## Zit in de standaardtekst',

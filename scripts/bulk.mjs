@@ -10,18 +10,18 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { parseAdvies } from '../src/parse.js';
-import { maakToetser } from '../src/regels.js';
+import { createRequire } from 'node:module';
 import { uitApiRespons } from '../src/adapter.js';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
-const laad = (n) => JSON.parse(readFileSync(join(wortel, 'regels', n), 'utf8'));
-const toets = maakToetser({
-  matrix: laad('matrix.json'),
-  kleurcodes: laad('kleurcodes.json'),
-  woordenlijsten: laad('woordenlijsten.json'),
-  limieten: laad('limieten.json'),
-});
+
+// De regels komen uit reisadvies-reviewer.html, niet uit src/regels.js. Dat is de pagina die
+// gepubliceerd wordt, inclusief de sjabloonregels die (nog) niet in src/ staan. Anders zou dit
+// rapport andere getallen geven dan wat een redacteur in de tool ziet.
+const laadPagina = createRequire(import.meta.url)('../test/harnas.cjs');
+const { Parse, Regels, REGELDATA } = laadPagina(join(wortel, 'reisadvies-reviewer.html'));
+const parseAdvies = Parse.parseAdvies;
+const toets = Regels.maakToetser(REGELDATA);
 
 const corpusMap = join(wortel, 'data', 'corpus');
 if (!existsSync(corpusMap) || readdirSync(corpusMap).filter((f) => f.endsWith('.xml')).length === 0) {
@@ -29,6 +29,11 @@ if (!existsSync(corpusMap) || readdirSync(corpusMap).filter((f) => f.endsWith('.
     + '(op een machine met toegang tot opendata.nederlandwereldwijd.nl, of via de workflow Corpus ophalen).');
   process.exit(1);
 }
+
+const ERNST_NAAM = {
+  'fout': 'rood — fout', 'let-op': 'geel/oranje — let op', 'link-zin': 'lichtblauw — lange zin met link',
+  'info': 'grijs — ter overweging', 'twijfel': 'roze — twijfeltaal',
+};
 
 const resultaten = [];
 for (const bestand of readdirSync(corpusMap).filter((f) => f.endsWith('.xml')).sort()) {
@@ -110,6 +115,19 @@ const regels = [
       `| \`${x.regel}\` | ${x.landen.size} | ${String(x.boodschap).replace(/\|/g, '\\|').slice(0, 90)} |`),
     '',
   ] : []),
+  '## Per soort bevinding',
+  '',
+  'De ernst is een soort, geen rangorde: rood is echt fout, geel/oranje te lang of te passief,',
+  'lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.',
+  '',
+  '| soort | bevindingen | in hoeveel adviezen |',
+  '|---|---:|---:|',
+  ...Regels.ERNST_VOLGORDE.map((e) => {
+    const n = resultaten.reduce((s, r) => s + r.bevindingen.filter((b) => b.ernst === e).length, 0);
+    const adviezen = resultaten.filter((r) => r.bevindingen.some((b) => b.ernst === e)).length;
+    return `| ${ERNST_NAAM[e] || e} | ${n} | ${adviezen} |`;
+  }),
+  '',
   '## Per regel',
   '',
   '| regel | adviezen | bevindingen |',

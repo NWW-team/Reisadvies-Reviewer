@@ -441,19 +441,26 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
 
   // ---------- vullen ----------
   const kiezer = $('kies-advies');
-  VOORBEELDEN.forEach((v, i) => {
+
+  // De pagina draait op twee plekken. Als losse Artifact zit alles in het bestand zelf en zijn
+  // er geen verzoeken mogelijk; op Pages staat naast index.html de map adviezen/ met alle
+  // reisadviezen. Eerst vullen we de lijst met de meegeleverde voorbeelden, daarna proberen we
+  // de volledige lijst op te halen. Lukt dat niet, dan blijven de voorbeelden staan.
+  const optie = (waarde, label) => {
     const o = document.createElement('option');
-    o.value = String(i);
-    o.textContent = v.land + ' — ' + v.kenmerk;
+    o.value = waarde;
+    o.textContent = label;
     kiezer.appendChild(o);
-  });
+  };
+
+  VOORBEELDEN.forEach((v, i) => optie('voorbeeld:' + i, v.land + ' — ' + v.kenmerk));
   $('bron-regel').textContent = REGELDATA.matrix.koppen.length + ' koppen uit de matrix · '
     + Object.keys(REGELDATA.kleurcodes.kleuren).length + ' kleurcodes · schrijfwijzer en format-matrix van Nederlandwereldwijd.nl';
 
-  function toetsInvoer(html, land) {
-    const doc = Parse.parseAdvies(html, { land });
+  function toetsInvoer(html, land, meta = {}) {
+    const doc = Parse.parseAdvies(html, { land, titel: meta.titel, url: meta.url });
     const resultaat = toetser(doc);
-    huidig = { doc, resultaat, land };
+    huidig = { doc, resultaat, land, iso: meta.iso || null };
     tekenStatus();
     tekenAdvies();
     tekenBevindingen();
@@ -463,9 +470,50 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     $('knop-kopieer').disabled = false;
   }
 
-  function kiesVoorbeeld() {
-    const v = VOORBEELDEN[Number(kiezer.value) || 0];
-    toetsInvoer(v.html, v.land);
+  /** Haalt het gekozen advies op: uit de pagina zelf, of uit adviezen/<ISO>.json. */
+  async function kiesAdvies() {
+    const waarde = kiezer.value || 'voorbeeld:0';
+    if (!waarde.startsWith('iso:')) {
+      const v = VOORBEELDEN[Number(waarde.slice('voorbeeld:'.length)) || 0];
+      return toetsInvoer(v.html, v.land, { titel: v.titel, url: v.url, iso: v.iso });
+    }
+    const iso = waarde.slice('iso:'.length);
+    $('melding').textContent = 'Reisadvies ophalen…';
+    kiezer.disabled = true;
+    try {
+      const res = await fetch('adviezen/' + encodeURIComponent(iso) + '.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('status ' + res.status);
+      const a = await res.json();
+      toetsInvoer(a.html, a.land, { titel: a.titel, url: a.url, iso: a.iso });
+      $('melding').textContent = a.gewijzigd ? a.gewijzigd : '';
+    } catch (e) {
+      $('melding').textContent = 'Dit reisadvies kon niet worden opgehaald (' + e.message + '). '
+        + 'Kies een ander, of plak de tekst zelf.';
+    } finally {
+      kiezer.disabled = false;
+    }
+  }
+
+  /** Vult de lijst met alle reisadviezen, als die naast de pagina staan. */
+  async function haalLijst() {
+    let lijst;
+    try {
+      const res = await fetch('adviezen/index.json', { cache: 'no-cache' });
+      if (!res.ok) return;
+      lijst = await res.json();
+    } catch (e) {
+      return;                       // geen lijst bereikbaar; de voorbeelden blijven staan
+    }
+    if (!Array.isArray(lijst) || !lijst.length) return;
+    kiezer.innerHTML = '';
+    for (const a of lijst) {
+      optie('iso:' + a.iso, a.land + (a.kleurcodes && a.kleurcodes.length
+        ? ' — kleurcode ' + a.kleurcodes.join('/') : ''));
+    }
+    // Het advies dat al op het scherm staat blijft staan; alleen de lijst wordt ruimer.
+    const alStaat = huidig && huidig.land && [...kiezer.options].find((o) => o.textContent.startsWith(huidig.land));
+    if (alStaat) kiezer.value = alStaat.value;
+    else await kiesAdvies();
   }
 
   // ---------- status ----------
@@ -646,7 +694,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     if (!tekst) return;
     toetsInvoer(tekst, $('land-invoer').value.trim() || null);
   });
-  kiezer.addEventListener('change', kiesVoorbeeld);
+  kiezer.addEventListener('change', kiesAdvies);
 
   // ---------- laag 2: de oordeelstoets ----------
   $('knop-oordeel').addEventListener('click', async () => {
@@ -861,7 +909,8 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     return gelukt;
   }
   // ---------- start ----------
-  kiesVoorbeeld();
+  kiesAdvies();
+  haalLijst();
 
   (async () => {
     db = await window.claude?.use?.('db');

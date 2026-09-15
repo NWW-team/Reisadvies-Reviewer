@@ -53,7 +53,7 @@ for (const [iso, kenmerk] of keuze) {
     continue;
   }
   const v = uitApiRespons(readFileSync(pad, 'utf8'));
-  voorbeelden.push({ iso, land: v.land, kenmerk, html: v.html });
+  voorbeelden.push({ iso, land: v.land, kenmerk, titel: v.titel, url: v.url, html: v.html });
 }
 if (!voorbeelden.length) {
   console.error('Geen voorbeelden gevonden. Draai eerst de workflow "Corpus ophalen".');

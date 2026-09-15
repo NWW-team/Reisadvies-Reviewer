@@ -21,6 +21,13 @@ zonder bron hoort de tool niet te geven.
 
 ## In de tool
 
+**De lijst met reisadviezen.** Op de Pages-versie staan alle 226 reisadviezen in het keuzemenu.
+Ze staan niet in de pagina zelf — dat zou hem een paar megabytes groot maken — maar als losse
+bestanden ernaast in `docs/adviezen/`, gemaakt met `node scripts/bouw-adviezen.mjs`. De pagina
+haalt `adviezen/index.json` op om de lijst te vullen en pas bij het kiezen het advies zelf.
+Lukt dat ophalen niet (de Artifact-versie mag geen verzoeken doen), dan blijven de drie
+voorbeelden staan die wél in de pagina zijn gevouwen. Zo is er één pagina voor beide plekken.
+
 **Wat er getoetst wordt.** De introductiezin hoort erbij: die komt uit het cms-veld
 *Inhoudelijke wijzigingen* (in de API `modifications`) en heeft een eigen vaste formulering, met
 een aparte variant voor een advies dat alleen kleurcode rood kent. De intro en *In het kort* zijn
@@ -43,8 +50,8 @@ kunt aflopen:
 | rood | **Fout** | het mag echt niet: een onderwerp dat er niet hoort, een vaste formulering die niet is aangehouden |
 | geel/oranje | **Let op** | te lange zin zonder link, te lange linktekst, lijdende vorm |
 | lichtblauw | **Lange zin met link** | meer dan 15 woorden *en* een link in de zin — vaak op te lossen door de linktekst in te korten |
-| roze | **Twijfeltaal** | misschien, vaak, mogelijk, bijna … |
 | grijs | **Ter overweging** | de rest: notatieregels en signalen om over na te denken |
+| roze | **Twijfeltaal** | misschien, vaak, mogelijk, bijna … — onderaan, want het is bijna altijd een stapel losse woorden die je in één ronde wegwerkt |
 
 Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een fout moet je hoe
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
@@ -124,6 +131,8 @@ node --test test/toets-markering.cjs test/toets-in-het-kort.cjs test/toets-ernst
 node scripts/fetch-corpus.mjs    # reisadviezen ophalen (zie hieronder)
 node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
+node scripts/bouw-adviezen.mjs   # zet alle 226 adviezen klaar in docs/adviezen/
+node scripts/bouw-site.mjs       # bouwt docs/index.html uit reisadvies-reviewer.html
 ```
 
 ## Het corpus ophalen
@@ -151,11 +160,12 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 | `src/app.html` | de paginasjabloon; `scripts/bouw-pagina.mjs` vouwt de regels erin |
 | `scripts/fetch-corpus.mjs` | ophalen van de reisadviezen |
 | `scripts/bulk.mjs` | alle adviezen toetsen en een rapport schrijven |
+| `scripts/bouw-adviezen.mjs` | het corpus klaarzetten als `docs/adviezen/`, zodat alle landen in de lijst staan |
 | `data/corpus/` | 226 opgehaalde reisadviezen als XML |
 | `tests/` | per regel een fixture die faalt en een die slaagt |
 | `test/` | toetsloops over de voorbeeldadviezen en de sjabloonregels |
 | `datastromen.html` | overzicht van de datastromen en de opslagkeuzes |
-| `docs/` | de Pages-versie: index.html, config.js en toegang.js |
+| `docs/` | de Pages-versie: index.html, config.js, toegang.js en `adviezen/` met alle 226 reisadviezen |
 | `supabase/migrations/` | de toegangsregels: allowlist, oordelen, RLS-policies |
 
 `src/parse.js` en `src/regels.js` hebben geen dependencies en geen buildstap, zodat dezelfde
@@ -163,9 +173,9 @@ code in Node draait (tests, bulkslag) en in de browser (de deelbare prototypepag
 
 ## Wat de bulkslag oplevert
 
-Over 226 live reisadviezen (`data/bulkrapport.md`): 46 zitten boven de woordenlimiet, 154 hebben
-geen enkele harde fout, en 25 adviezen bevatten een onderwerp dat de matrix als *niet melden*
-aanmerkt. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
+Over 226 live reisadviezen (`data/bulkrapport.md`, gedraaid met dezelfde regelset als de
+gepubliceerde pagina): 46 zitten boven de woordenlimiet, 123 hebben geen enkele rode fout, en
+25 adviezen bevatten een onderwerp dat de matrix als *niet melden* aanmerkt. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
 ruim 200 adviezen woordelijk hetzelfde staan. Die zijn met één aanpassing tegelijk opgelost, en
 het rapport zet ze daarom apart.
 

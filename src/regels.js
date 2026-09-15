@@ -21,13 +21,14 @@ import { telWoorden } from './parse.js';
  *   let-op   geel/oranje  te lang of te passief geschreven: zinnen, linkteksten, lijdende vorm
  *   link-zin lichtblauw   te lange zin waarin een link staat — vaak los te maken door de
  *                         linktekst in te korten, dus een ander gesprek dan een lange lopende zin
- *   twijfel  roze         twijteltaal
  *   info     grijs        de rest: notatieregels en signalen om over na te denken
+ *   twijfel  roze         twijfeltaal — onderaan, want het is bijna altijd een stapel losse
+ *                         woorden ("vaak", "misschien") die je in één ronde wegwerkt
  */
 const ERNST = { fout: 'fout', letop: 'let-op', linkzin: 'link-zin', twijfel: 'twijfel', info: 'info' };
 
 /** De volgorde waarin bevindingen worden getoond en geteld. */
-const ERNST_VOLGORDE = [ERNST.fout, ERNST.letop, ERNST.linkzin, ERNST.twijfel, ERNST.info];
+const ERNST_VOLGORDE = [ERNST.fout, ERNST.letop, ERNST.linkzin, ERNST.info, ERNST.twijfel];
 
 /** Normaliseert voor tekstvergelijking: kleine letters, rechte apostrof, enkele spaties. */
 export function norm(s) {

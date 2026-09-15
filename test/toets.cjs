@@ -1,4 +1,4 @@
-const laad = require('./harnas.js');
+const laad = require('./harnas.cjs');
 const { Parse, Regels, REGELDATA, VOORBEELDEN } = laad(process.argv[2] || require('path').join(__dirname, '..', 'reisadvies-reviewer.html'));
 const toetser = Regels.maakToetser(REGELDATA);
 const filter = process.argv[3];

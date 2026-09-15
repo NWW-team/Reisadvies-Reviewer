@@ -40,9 +40,9 @@ of juist tot enige bron maken. Kies één van beide voordat er nieuwe regels bij
 
 ```bash
 node --test                      # de regels testen (tests/)
-node test/toets.js               # samenvatting per voorbeeldadvies
-node test/toets-sjabloon.js      # welke sjabloonregels vuren, en waarom
-node test/toets-dekking.js       # dekking van de vaste teksten
+node test/toets.cjs               # samenvatting per voorbeeldadvies
+node test/toets-sjabloon.cjs      # welke sjabloonregels vuren, en waarom
+node test/toets-dekking.cjs       # dekking van de vaste teksten
 node scripts/fetch-corpus.mjs    # reisadviezen ophalen (zie hieronder)
 node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html

@@ -19,6 +19,38 @@ Elke bevinding draagt zijn bron mee: **SW** = schrijfwijzer, **MX** = format-mat
 **SJ** = sjabloon. `regels/HERKOMST.md` legt per regel-id de vindplaats vast — een bevinding
 zonder bron hoort de tool niet te geven.
 
+## In de tool
+
+**Markering.** Een bevinding die een plek in de tekst heeft, kleurt die zin in het linkerpaneel;
+klikken op de zin of op het citaat springt naar de andere kant. Een fragment hoeft niet precies
+één zin te zijn: valt een zin binnen het fragment of omgekeerd, dan kleurt hij mee. Bevindingen
+over iets dat *ontbreekt* hebben niets om aan te wijzen en blijven ongemarkeerd — die staan
+alleen in de lijst, met de verwachte formulering erbij.
+
+**De drie oordelen** bij elke bevinding zeggen elk iets anders, en dat is met opzet:
+
+| oordeel | betekenis | wat het over de tool zegt |
+| --- | --- | --- |
+| Eens | de bevinding klopt; de tekst gaat hierop aan | niets, de regel deed zijn werk |
+| Oneens | de regel klopt, maar in dit advies wijken we er bewust van af | niets; het is een uitzondering in de tekst |
+| Onterecht | de bevinding zelf deugt niet: de tool ziet iets dat er niet staat | de regel of de parser moet bijgesteld |
+
+Kort: *oneens* gaat over het advies, *onterecht* gaat over de tool. Een regel die vaak
+"onterecht" krijgt, hoort bijgesteld te worden; zie "Over de regels" hieronder.
+
+**Delen met een collega.** Twee knoppen boven de panelen:
+
+- **Printen / pdf** zet het rapport klaar en opent het printvenster; kies daar "Opslaan als pdf".
+  In het rapport staan de samenvatting, alle bevindingen met bron en oordeel, en het hele advies
+  met de gemarkeerde zinnen onderstreept, zodat het ook zwart-wit leesbaar blijft.
+- **Kopiëren voor Word** zet hetzelfde rapport op het klembord, als opgemaakte tekst én als platte
+  tekst. Plakken in Word of Outlook houdt de koppen en de onderstrepingen; plakken in een
+  chatvenster levert de platte versie op. Mag de klembord-api niet in de omgeving waar de pagina
+  draait, dan valt de knop terug op platte tekst en anders op de printknop.
+
+Beide werken zonder bibliotheek, zonder server en zonder download — dat laatste met opzet, want
+de Artifact-omgeving blokkeert downloads die een pagina zelf start.
+
 ## Let op: twee varianten van de pagina naast elkaar
 
 Deze main bevat het resultaat van twee parallel ontwikkelde takken. Ze overlappen:
@@ -65,6 +97,7 @@ node --test                      # de regels testen (tests/)
 node test/toets.cjs               # samenvatting per voorbeeldadvies
 node test/toets-sjabloon.cjs      # welke sjabloonregels vuren, en waarom
 node test/toets-dekking.cjs       # dekking van de vaste teksten
+node --test test/toets-markering.cjs  # markering: wijst een bevinding de juiste zin aan?
 node scripts/fetch-corpus.mjs    # reisadviezen ophalen (zie hieronder)
 node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html

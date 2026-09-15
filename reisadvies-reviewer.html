@@ -244,6 +244,45 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
   margin-top: 6px; padding: 6px 9px; border-left: 3px solid #b08900;
   background: #fdf3d9; color: #6b5107; font-size: 12px; line-height: 1.45; border-radius: 0 3px 3px 0;
 }
+
+/* ---------- uitleg bij een gekozen oordeel ---------- */
+.bev .gekozen { margin-top: 6px; font-size: .76rem; color: var(--gedempt); }
+
+/* ---------- terugkoppeling bij de knoppen ---------- */
+.melding { margin: 0; padding-block: 10px 0; font-size: .83rem; color: var(--gedempt); }
+.melding:empty { display: none; }
+
+/* ---------- het rapport om te delen ---------- */
+/* Op het scherm onzichtbaar. Bij printen is dit juist het enige dat overblijft, zodat
+   "opslaan als pdf" een leesbaar rapport geeft in plaats van twee afgekapte panelen. */
+#rapport { display: none; }
+#rapport h1 { font-size: 1.25rem; margin: 0 0 3px; color: var(--donkerblauw); }
+#rapport .meta { font-size: .8rem; color: var(--gedempt); margin: 0 0 4px; }
+#rapport h2 { font-size: .95rem; margin: 17px 0 7px; color: var(--donkerblauw);
+  border-bottom: 1px solid var(--lijn); padding-bottom: 3px; }
+#rapport h3 { font-size: .86rem; margin: 13px 0 6px; }
+#rapport .r-bev { margin: 0 0 9px; padding-left: 9px; border-left: 3px solid var(--lijn-sterk);
+  break-inside: avoid; }
+#rapport .r-bev.fout { border-left-color: var(--fout-rand); }
+#rapport .r-bev.letop { border-left-color: var(--letop-rand); }
+#rapport .r-regel { font-family: var(--mono); font-size: .72rem; color: var(--gedempt); }
+#rapport .r-cite { font-style: italic; }
+#rapport .r-bij { font-size: .8rem; color: var(--gedempt); }
+/* In een pdf of op papier draagt kleur alleen niet: onderstrepen doet dat wel. */
+#rapport .r-tekst .m-fout, #rapport .r-tekst .m-letop, #rapport .r-tekst .m-info {
+  text-decoration: underline; text-underline-offset: 2px; }
+#rapport .r-tekst .m-fout { text-decoration-color: var(--fout-rand); text-decoration-thickness: 2px; }
+#rapport .r-tekst .m-letop { text-decoration-color: var(--letop-rand); text-decoration-thickness: 2px; }
+#rapport .r-tekst .m-info { text-decoration-color: var(--info-rand); text-decoration-thickness: 1px; }
+#rapport .r-tekst .zin { cursor: auto; }
+
+@media print {
+  .lint, .band, .balk, #plakvak, .status, .werkblad, .voorbehoud, .melding { display: none !important; }
+  .wrap { max-width: none; padding-inline: 0; }
+  body { background: #fff; color: #000; font-size: 10.5pt; }
+  #rapport { display: block; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @page { margin: 16mm; }
+}
 </style>
 
 <div class="lint">
@@ -284,8 +323,11 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
     </label>
     <button type="button" id="knop-plakken">Eigen tekst plakken</button>
     <span style="flex:1"></span>
+    <button type="button" id="knop-print" disabled>Printen / pdf</button>
+    <button type="button" id="knop-kopieer" disabled>Kopi&euml;ren voor Word</button>
     <button type="button" id="knop-oordeel" class="hoofd">Oordeelstoets uitvoeren</button>
   </div>
+  <p class="melding" id="melding" role="status" aria-live="polite"></p>
 
   <div id="plakvak" hidden style="padding-block:14px">
     <label class="veld" for="invoer" style="display:block;margin-bottom:6px">
@@ -333,6 +375,9 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
         de tool dat en toont hij de verwachte tekst &mdash; welke variant klopt, hangt van het land af.</li>
     </ul>
   </div>
+
+  <!-- Alleen zichtbaar bij printen en bij kopi&euml;ren; gevuld door rapportHtml(). -->
+  <div id="rapport"></div>
 </div>
 
 <script>const Parse = (function () {
@@ -647,6 +692,23 @@ function rubriekTekst(doc, patroon) {
     .join(' ');
 }
 
+/**
+ * De losse eenheden van een rubriek zoals de pagina ze toont: per alinea de zinnen, en de
+ * items van een opsomming. rubriekTekst plakt ze aaneen om op te toetsen; deze lijst dient om
+ * de plek van een treffer terug te vinden, zodat een bevinding de zin kan aanwijzen die de
+ * markering in het advies nodig heeft. Zonder patroon: het hele advies.
+ */
+function rubriekEenheden(doc, patroon) {
+  const re = patroon ? new RegExp(patroon, 'i') : null;
+  const blokken = re
+    ? doc.blokken.filter((x) => re.test(x.kop || '') || re.test(x.h2 || ''))
+    : doc.blokken;
+  return blokken.flatMap((x) => [
+    ...x.alineas.flatMap((a) => a.zinnen),
+    ...x.opsommingen.flatMap((o) => o.items),
+  ]);
+}
+
 function bevinding(regel, ernst, bron, boodschap, extra = {}) {
   return { regel, ernst, bron, boodschap, ...extra };
 }
@@ -916,10 +978,20 @@ function maakToetser(data) {
       const kern = vt.kern ? new RegExp(vt.kern, 'i') : vasteTekstRegex(vt.zin, doc.land);
       if (kern.test(bereikGenorm)) continue;
 
-      const wijktAf = !!vt.herken && new RegExp(vt.herken, 'i').test(bereikGenorm);
+      // Wijkt de tekst af, dan staat er dus wél iets — alleen anders. Zoek de zin op waar de
+      // herkenning op aanslaat en geef die mee als fragment, zodat de pagina hem in het advies
+      // kan markeren. Ontbreekt de vaste tekst helemaal, dan is er niets aan te wijzen en
+      // blijft het fragment leeg: de bevinding meldt dan alleen de verwachte formulering.
+      const herkenRe = vt.herken ? new RegExp(vt.herken, 'i') : null;
+      const wijktAf = !!herkenRe && herkenRe.test(bereikGenorm);
+      const fragment = wijktAf
+        ? rubriekEenheden(doc, vt.rubriek ? sj.rubriek_patronen[vt.rubriek] : null)
+            .find((e) => herkenRe.test(norm(e)))
+        : null;
       b.push(bevinding(vt.id, vt.ernst, vt.bron,
         wijktAf ? (vt.boodschap_afwijkend || vt.boodschap) : vt.boodschap,
-        { verwacht: vt.zin.replace(/\{land\}/g, doc.land || 'land X')
+        { ...(fragment ? { fragment } : {}),
+          verwacht: vt.zin.replace(/\{land\}/g, doc.land || 'land X')
             .replace(/\{kleur\}|\{gebieden\}/g, '…') }));
     }
 
@@ -1330,6 +1402,15 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
 
   const sleutelVan = (bev) => bev.regel + '::' + String(bev.fragment || bev.boodschap).slice(0, 80);
   const ernstKlasse = { 'fout': 'fout', 'let-op': 'letop', 'info': 'info' };
+  // Drie oordelen met drie verschillende gevolgen. "Oneens" zegt iets over dit advies: de regel
+  // klopt, maar hier geldt een bewuste uitzondering. "Onterecht" zegt iets over de tool: de
+  // bevinding had er niet moeten staan. Dat onderscheid is de reden dat ze naast elkaar staan.
+  const OORDEEL_LABEL = { eens: 'Eens', oneens: 'Oneens', onterecht: 'Onterecht' };
+  const OORDEEL_UITLEG = {
+    eens: 'De bevinding klopt; de tekst gaat hierop aangepast worden.',
+    oneens: 'De regel klopt, maar in dit advies wijken we er bewust van af.',
+    onterecht: 'De bevinding zelf deugt niet: de tool ziet iets dat er niet staat.',
+  };
   const ernstLabel = { 'fout': 'Fout', 'let-op': 'Let op', 'info': 'Ter overweging' };
 
   function esc(s) {
@@ -1358,6 +1439,9 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     tekenAdvies();
     tekenBevindingen();
     $('oordeelsuitvoer').textContent = '';
+    $('melding').textContent = '';
+    $('knop-print').disabled = false;
+    $('knop-kopieer').disabled = false;
   }
 
   function kiesVoorbeeld() {
@@ -1387,12 +1471,15 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
 
   // ---------- het advies met gemarkeerde zinnen ----------
   function tekenAdvies() {
-    const perZin = new Map();
+    const perZin = new Map();   // genormaliseerde zin -> bevindingen die er precies op slaan
+    const ruim = [];            // fragmenten die groter of kleiner zijn dan één zin
     huidig.resultaat.bevindingen.forEach((bev, i) => {
       if (!bev.fragment) return;
       const k = norm(bev.fragment);
+      if (!k) return;
       if (!perZin.has(k)) perZin.set(k, []);
       perZin.get(k).push(i);
+      if (k.length >= FRAGMENT_MIN) ruim.push({ k, i });
     });
 
     const stukken = [];
@@ -1407,18 +1494,32 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
           + '<span class="telling' + (lang ? ' lang' : '') + '">' + woorden + ' woorden</span></' + sluit + '>');
       }
       for (const a of blok.alineas) {
-        stukken.push('<p>' + a.zinnen.map((z) => markeer(z, perZin)).join(' ') + '</p>');
+        stukken.push('<p>' + a.zinnen.map((z) => markeer(z, perZin, ruim)).join(' ') + '</p>');
       }
       for (const o of blok.opsommingen) {
-        stukken.push('<ul>' + o.items.map((x) => '<li>' + markeer(x, perZin) + '</li>').join('') + '</ul>');
+        stukken.push('<ul>' + o.items.map((x) => '<li>' + markeer(x, perZin, ruim) + '</li>').join('') + '</ul>');
       }
     }
     $('advies').innerHTML = stukken.join('') || '<p class="leeg">Geen tekst gevonden.</p>';
   }
 
-  function markeer(zin, perZin) {
-    const treffers = perZin.get(norm(zin));
-    if (!treffers) return esc(zin);
+  // Een fragment valt lang niet altijd samen met precies één zin: de intro is een hele alinea,
+  // een vaste tekst uit het sjabloon loopt over meer zinnen, en contextVan knipt soms net
+  // binnen een zin. Slaat de letterlijke vergelijking niet aan, dan markeren we de zin die
+  // binnen het fragment valt of die het fragment bevat. De twee ondergrenzen houden dat
+  // eerlijk: een kort fragment (een tussenkop) of een kort zinnetje ("Let op:") zou anders
+  // halve adviezen kleuren.
+  const FRAGMENT_MIN = 24;
+  const ZIN_MIN = 12;
+
+  function markeer(zin, perZin, ruim) {
+    const k = norm(zin);
+    let treffers = perZin.get(k);
+    if (!treffers) {
+      treffers = k.length < ZIN_MIN ? []
+        : ruim.filter((x) => x.k.includes(k) || k.includes(x.k)).map((x) => x.i);
+      if (!treffers.length) return esc(zin);
+    }
     const ernsten = treffers.map((i) => huidig.resultaat.bevindingen[i].ernst);
     const zwaarste = ernsten.includes('fout') ? 'fout' : ernsten.includes('let-op') ? 'let-op' : 'info';
     return '<span class="zin m-' + ernstKlasse[zwaarste] + '" data-bev="' + treffers[0] + '" '
@@ -1454,8 +1555,9 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
   function kaart(bev, i) {
     const s = sleutelVan(bev);
     const gekozen = oordelen[s];
-    const knop = (w, tekst) => '<button type="button" data-oordeel="' + w + '" data-sleutel="' + esc(s)
-      + '" aria-pressed="' + (gekozen === w ? 'true' : 'false') + '">' + tekst + '</button>';
+    const knop = (w) => '<button type="button" data-oordeel="' + w + '" data-sleutel="' + esc(s)
+      + '" title="' + esc(OORDEEL_UITLEG[w]) + '"'
+      + ' aria-pressed="' + (gekozen === w ? 'true' : 'false') + '">' + OORDEEL_LABEL[w] + '</button>';
     return '<div class="bev" data-index="' + i + '">'
       + '<div class="regelnaam">' + esc(bev.regel) + '</div>'
       + '<p class="tekst">' + esc(bev.boodschap) + '</p>'
@@ -1469,7 +1571,8 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
             + 'staat er niet letterlijk in. Beoordeel of hij mag blijven.</div>'
           : '')
       + '<div class="oordeel"><span class="vraag">Klopt deze bevinding?</span>'
-        + knop('eens', 'Eens') + knop('oneens', 'Oneens') + knop('onterecht', 'Onterecht') + '</div>'
+        + knop('eens') + knop('oneens') + knop('onterecht') + '</div>'
+      + (gekozen ? '<div class="gekozen">' + esc(OORDEEL_UITLEG[gekozen]) + '</div>' : '')
       + '</div>';
   }
 
@@ -1581,6 +1684,163 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     }
   });
 
+  // ---------- rapport om te delen ----------
+  // Twee wegen naar buiten, allebei zonder bibliotheek en zonder server. Printen geeft via het
+  // printvenster van de browser een pdf of papier; kopieren zet het rapport als opgemaakte html
+  // en als platte tekst op het klembord, zodat plakken in Word of een mail de koppen en de
+  // onderstreepte zinnen meeneemt en plakken in een chatvenster leesbaar blijft.
+
+  // Word kent onze css-variabelen niet, dus het klembord krijgt een eigen stijlblok met
+  // uitgeschreven waarden. Bewust dezelfde kleuren als op het scherm.
+  const RAPPORT_STIJL = [
+    'body{font-family:Calibri,"Segoe UI",sans-serif;font-size:11pt;color:#000}',
+    'h1{font-size:16pt;color:#154273;margin:0 0 2pt}',
+    'h2{font-size:12pt;color:#154273;margin:14pt 0 4pt;border-bottom:1px solid #c8c8c8}',
+    'h3{font-size:11pt;margin:10pt 0 3pt}',
+    '.meta{font-size:9pt;color:#535353;margin:0 0 10pt}',
+    '.r-bev{margin:0 0 7pt;padding-left:7pt;border-left:3px solid #b4b4b4}',
+    '.r-bev.fout{border-left-color:#ca005d}',
+    '.r-bev.letop{border-left-color:#ffb612}',
+    '.r-regel{font-family:Consolas,monospace;font-size:8pt;color:#535353}',
+    '.r-cite{font-style:italic}',
+    '.r-bij{font-size:9.5pt;color:#535353}',
+    '.m-fout{text-decoration:underline;text-decoration-color:#ca005d}',
+    '.m-letop{text-decoration:underline;text-decoration-color:#8a5a00}',
+    '.m-info{text-decoration:underline;text-decoration-color:#767676}',
+  ].join('');
+
+  const ERNSTEN = ['fout', 'let-op', 'info'];
+
+  function rapportKop() {
+    const s = huidig.resultaat.samenvatting;
+    return {
+      s,
+      titel: 'Reisadvies-Reviewer - ' + (s.land || huidig.land || 'reisadvies'),
+      regel: 'Getoetst op ' + new Date().toLocaleString('nl-NL', { dateStyle: 'long', timeStyle: 'short' })
+        + ' - ' + s.fout + ' fout, ' + s.letop + ' let op, ' + s.info + ' ter overweging'
+        + ' - ' + s.woorden + ' van maximaal ' + s.woordenlimiet + ' woorden'
+        + (s.kleurcodes.length ? ' - kleurcode ' + s.kleurcodes.join(', ') : ' - geen kleurcode gevonden'),
+    };
+  }
+
+  function rapportHtml() {
+    const { titel, regel } = rapportKop();
+    const bevs = huidig.resultaat.bevindingen;
+    const delen = ['<h1>' + esc(titel) + '</h1>', '<p class="meta">' + esc(regel) + '</p>',
+      '<h2>Bevindingen</h2>'];
+    if (!bevs.length) {
+      delen.push('<p>Geen bevindingen. Dit advies voldoet aan alle regels die de tool kan toetsen.</p>');
+    }
+    for (const ernst of ERNSTEN) {
+      const groep = bevs.filter((x) => x.ernst === ernst);
+      if (!groep.length) continue;
+      delen.push('<h3>' + ernstLabel[ernst] + ' (' + groep.length + ')</h3>');
+      for (const bev of groep) {
+        const oordeel = oordelen[sleutelVan(bev)];
+        delen.push('<div class="r-bev ' + ernstKlasse[ernst] + '">'
+          + '<div class="r-regel">' + esc(bev.regel) + ' &middot; ' + esc(bev.bron) + '</div>'
+          + '<div>' + esc(bev.boodschap) + '</div>'
+          + (bev.fragment ? '<div class="r-cite">&bdquo;' + esc(bev.fragment) + '&rdquo;</div>' : '')
+          + (bev.verwacht ? '<div class="r-bij">Verwacht: ' + esc(bev.verwacht) + '</div>' : '')
+          + (bev.detail ? '<div class="r-bij">Langste blokken: ' + esc(bev.detail.join(' &middot; ')) + '</div>' : '')
+          + (bev.notitie ? '<div class="r-bij">' + esc(bev.notitie) + '</div>' : '')
+          + (oordeel ? '<div class="r-bij">Oordeel van de redacteur: ' + OORDEEL_LABEL[oordeel]
+              + ' &mdash; ' + esc(OORDEEL_UITLEG[oordeel]) + '</div>' : '')
+          + '</div>');
+      }
+    }
+    // Het advies zoals het op het scherm staat, markeringen en al: zo ziet de collega precies
+    // welke zin bij welke bevinding hoort.
+    delen.push('<h2>Het advies, met de gemarkeerde zinnen</h2>',
+      '<div class="r-tekst">' + $('advies').innerHTML + '</div>');
+    delen.push('<h2>Waar de tool niets over zegt</h2><ul>'
+      + huidig.resultaat.buitenScope.map((x) => '<li>' + esc(x) + '</li>').join('')
+      + '<li>Of de inhoud klopt: de tool toetst vorm en onderwerpkeuze, niet de juistheid.</li>'
+      + '</ul>');
+    return delen.join('\n');
+  }
+
+  function rapportTekst() {
+    const { titel, regel } = rapportKop();
+    const bevs = huidig.resultaat.bevindingen;
+    const r = [titel, regel, ''];
+    if (!bevs.length) r.push('Geen bevindingen. Dit advies voldoet aan alle regels die de tool kan toetsen.');
+    for (const ernst of ERNSTEN) {
+      const groep = bevs.filter((x) => x.ernst === ernst);
+      if (!groep.length) continue;
+      r.push('== ' + ernstLabel[ernst] + ' (' + groep.length + ') ==');
+      for (const bev of groep) {
+        const oordeel = oordelen[sleutelVan(bev)];
+        r.push('- ' + bev.boodschap + '  [' + bev.regel + ' / ' + bev.bron + ']');
+        if (bev.fragment) r.push('    tekst:    ' + bev.fragment);
+        if (bev.verwacht) r.push('    verwacht: ' + bev.verwacht);
+        if (bev.detail) r.push('    langste blokken: ' + bev.detail.join(' / '));
+        if (bev.notitie) r.push('    ' + bev.notitie);
+        if (oordeel) r.push('    oordeel:  ' + OORDEEL_LABEL[oordeel] + ' - ' + OORDEEL_UITLEG[oordeel]);
+      }
+      r.push('');
+    }
+    r.push('== Het advies ==', huidig.doc.volledigeTekst, '',
+      '== Waar de tool niets over zegt ==',
+      ...huidig.resultaat.buitenScope.map((x) => '- ' + x),
+      '- Of de inhoud klopt: de tool toetst vorm en onderwerpkeuze, niet de juistheid.');
+    return r.join('\n');
+  }
+
+  function vulRapport() {
+    if (!huidig) return false;
+    $('rapport').innerHTML = rapportHtml();
+    return true;
+  }
+
+  $('knop-print').addEventListener('click', () => {
+    if (!vulRapport()) return;
+    $('melding').textContent = 'Kies in het printvenster "Opslaan als pdf" om het rapport te delen.';
+    window.print();
+  });
+  // Ook ctrl+P moet het rapport opleveren, niet de halve pagina.
+  window.addEventListener('beforeprint', vulRapport);
+
+  $('knop-kopieer').addEventListener('click', async () => {
+    if (!huidig) return;
+    const tekst = rapportTekst();
+    const html = '<!doctype html><html><head><meta charset="utf-8"><style>' + RAPPORT_STIJL
+      + '</style></head><body>' + rapportHtml() + '</body></html>';
+    try {
+      if (navigator.clipboard && window.ClipboardItem) {
+        await navigator.clipboard.write([new ClipboardItem({
+          'text/html': new Blob([html], { type: 'text/html' }),
+          'text/plain': new Blob([tekst], { type: 'text/plain' }),
+        })]);
+        $('melding').textContent = 'Rapport gekopieerd. Plak het in Word, in een mail of in een bericht.';
+        return;
+      }
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText(tekst);
+        $('melding').textContent = 'Rapport als platte tekst gekopieerd.';
+        return;
+      }
+      throw new Error('geen klembord');
+    } catch (e) {
+      $('melding').textContent = kopieerViaVeld(tekst)
+        ? 'Rapport als platte tekst gekopieerd; opmaak lukt niet in deze omgeving.'
+        : 'Kopieren mag hier niet. Gebruik "Printen / pdf" en kies daar "Opslaan als pdf".';
+    }
+  });
+
+  /** Oude weg, voor omgevingen waar de klembord-api niet mag: selecteren en execCommand. */
+  function kopieerViaVeld(tekst) {
+    const veld = document.createElement('textarea');
+    veld.value = tekst;
+    veld.setAttribute('readonly', '');
+    veld.style.cssText = 'position:fixed;top:0;left:-9999px';
+    document.body.appendChild(veld);
+    veld.select();
+    let gelukt = false;
+    try { gelukt = document.execCommand('copy'); } catch (e) { gelukt = false; }
+    veld.remove();
+    return gelukt;
+  }
   // ---------- start ----------
   kiesVoorbeeld();
 

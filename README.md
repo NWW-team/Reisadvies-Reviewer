@@ -1,38 +1,51 @@
 # Reisadvies-Reviewer
 
 Toetst reisadviezen van Nederlandwereldwijd.nl op de dingen die objectief te toetsen zijn:
-de schrijfwijzer, de onderwerpen-matrix, B1 en begrijpelijkheid. Over politieke gevoeligheden
-doet de tool geen uitspraak — die weging blijft mensenwerk. Zie `STRATEGY.md`.
+de schrijfwijzer, de onderwerpen-matrix, de vaste formuleringen uit het sjabloon, B1 en
+begrijpelijkheid. Over politieke gevoeligheden doet de tool geen uitspraak — die weging blijft
+mensenwerk. Zie `STRATEGY.md`.
 
 ## Twee lagen
 
-**Harde regels** (`src/regels.js`) draaien in code, zonder model. Woordenaantallen, de vaste
-kleurcode-formuleringen, de koppen uit de matrix, zinslengte, en de schrijfregels uit de
-schrijfwijzer. Reproduceerbaar en gratis, dus bruikbaar over alle 227 adviezen tegelijk.
+**Harde regels** draaien in code, zonder model. Woordenaantallen, de vaste kleurcode-formuleringen,
+de koppen uit de matrix, zinslengte, en de schrijfregels uit de schrijfwijzer. Reproduceerbaar en
+gratis, dus bruikbaar over alle 226 adviezen tegelijk.
 
-**Oordeelsregels** vragen een model: B1-woordmoeilijkheid, begrijpelijkheid, en of een
-onderwerp dat de matrix als *verwijzen* aanmerkt niet te ver is uitgeschreven. Deze laag draait
-per advies, op verzoek, en doet een herschrijfvoorstel op zinsniveau.
+**Oordeelsregels** vragen een model: B1-woordmoeilijkheid, begrijpelijkheid, en of een onderwerp
+dat de matrix als *verwijzen* aanmerkt niet te ver is uitgeschreven. Deze laag draait per advies,
+op verzoek, en doet een herschrijfvoorstel op zinsniveau.
 
-Elke bevinding draagt zijn bron mee. `regels/HERKOMST.md` legt per regel-id vast waar in de
-schrijfwijzer of de matrix hij vandaan komt — een bevinding zonder bron hoort de tool niet te geven.
+Elke bevinding draagt zijn bron mee: **SW** = schrijfwijzer, **MX** = format-matrix,
+**SJ** = sjabloon. `regels/HERKOMST.md` legt per regel-id de vindplaats vast — een bevinding
+zonder bron hoort de tool niet te geven.
 
-## De pagina
+## Let op: twee varianten van de pagina naast elkaar
 
-Het prototype is een gepubliceerde Artifact: geen installatie, deelbaar via een link, geen
-interne hosting nodig. De harde regels draaien in de pagina zelf; de oordeelstoets vraagt Claude,
-waarbij de kijker toestemming geeft. Werkt de oordeelstoets niet, dan blijft de rest gewoon werken.
+Deze main bevat het resultaat van twee parallel ontwikkelde takken. Ze overlappen:
 
-```bash
-node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
-```
+| pad | wat | stand |
+| --- | --- | --- |
+| `reisadvies-reviewer.html` | de hele tool in één bestand, zonder build | **nieuwst** — bevat als enige de sjabloonregels (SJ) |
+| `src/` + `regels/` + `scripts/bouw-pagina.mjs` → `dist/app.html` | dezelfde tool, opgesplitst in modules en regeldata | heeft als enige het corpus, de bulkslag en de tests per regel |
+
+`reisadvies-reviewer.html` is opgebouwd uit `dist/app.html` (ruim duizend regels zijn woordelijk
+gelijk) met de sjabloonregels erbij. De twee zijn nog niet samengevoegd: de SJ-regels zitten
+alleen in het losse bestand en nog niet in `regels/*.json` en `src/regels.js`.
+
+**Nog te doen:** de SJ-regels terugbrengen naar `regels/` en `src/regels.js`, `dist/app.html`
+opnieuw bouwen met `scripts/bouw-pagina.mjs`, en daarna `reisadvies-reviewer.html` laten vervallen
+of juist tot enige bron maken. Kies één van beide voordat er nieuwe regels bij komen.
 
 ## Gebruik
 
 ```bash
-node --test                      # de regels testen
+node --test                      # de regels testen (tests/)
+node test/toets.js               # samenvatting per voorbeeldadvies
+node test/toets-sjabloon.js      # welke sjabloonregels vuren, en waarom
+node test/toets-dekking.js       # dekking van de vaste teksten
 node scripts/fetch-corpus.mjs    # reisadviezen ophalen (zie hieronder)
 node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
+node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
 ```
 
 ## Het corpus ophalen
@@ -51,15 +64,19 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 
 | pad | wat |
 |---|---|
+| `reisadvies-reviewer.html` | de tool als één bestand, inclusief de sjabloonregels |
 | `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, woordenlijsten, limieten, landen |
 | `regels/HERKOMST.md` | per regel-id de vindplaats in de schrijfwijzer of de matrix |
 | `src/parse.js` | reisadvies naar een genormaliseerd document (koppen, alinea's, zinnen, links) |
 | `src/regels.js` | de harde regels, als pure functies |
 | `src/adapter.js` | ruwe API-respons naar de velden die de toetser nodig heeft |
+| `src/app.html` | de paginasjabloon; `scripts/bouw-pagina.mjs` vouwt de regels erin |
 | `scripts/fetch-corpus.mjs` | ophalen van de reisadviezen |
 | `scripts/bulk.mjs` | alle adviezen toetsen en een rapport schrijven |
-| `src/app.html` | de paginasjabloon; `scripts/bouw-pagina.mjs` vouwt de regels erin |
+| `data/corpus/` | 226 opgehaalde reisadviezen als XML |
 | `tests/` | per regel een fixture die faalt en een die slaagt |
+| `test/` | toetsloops over de voorbeeldadviezen en de sjabloonregels |
+| `datastromen.html` | overzicht van de datastromen en de opslagkeuzes |
 
 `src/parse.js` en `src/regels.js` hebben geen dependencies en geen buildstap, zodat dezelfde
 code in Node draait (tests, bulkslag) en in de browser (de deelbare prototypepagina).
@@ -78,3 +95,10 @@ Een regel die op bijna elk advies afgaat is vrijwel altijd de regel, niet de tek
 gingen zo de eerste keer onderuit en zijn bijgesteld; de geschiedenis daarvan staat in de
 commits. Houd die norm aan bij nieuwe regels: toets een nieuwe regel eerst tegen het hele corpus
 voordat je hem gelooft.
+
+## Bronnen
+
+- `Schrijfwijzer Nederland Wereldwijd - website.docx`
+- `Matrix nieuwe format Reisadviezen (1).xlsx`
+- `Sjabloon Reisadviezen - nieuwe format.docx`
+- `Kopie van ISO Landenlijst.xlsx`

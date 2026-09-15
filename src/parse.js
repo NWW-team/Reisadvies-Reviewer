@@ -108,6 +108,7 @@ export function parseAdvies(invoer, meta = {}) {
     url: meta.url || null,
     kleurcodes: meta.kleurcodes || null,
     intro: null,
+    introIsVeld0: false,
     blokken: [],
     links: [],
     opmaak: { vet: [], cursief: [], onderstreept: [] },
@@ -204,10 +205,21 @@ export function parseAdvies(invoer, meta = {}) {
     if (lijst) blokVoorInhoud().opsommingen.push(lijst);
   }
 
-  // De intro is de eerste alinea vóór de eerste H2.
+  // De intro is de eerste alinea vóór de eerste H2. Begint het advies meteen met een H2, dan
+  // levert het cms het introveld (in het sjabloon 'veld-0') niet mee, en is de eerste alinea de
+  // tekst ónder die kop. introIsVeld0 houdt dat verschil vast, zodat de toets op de vaste
+  // introtekst niet losgaat op de eerste bullet van "In het kort".
   const eerste = blokken[0];
-  if (eerste && eerste.niveau === 0 && eerste.alineas.length) doc.intro = eerste.alineas[0].tekst;
-  else if (eerste && eerste.niveau === 2 && blokken[0].alineas.length) doc.intro = blokken[0].alineas[0].tekst;
+  if (meta.intro) {
+    // De aanroeper levert veld-0 apart aan (de API doet dat via <modifications>).
+    doc.intro = schoon(meta.intro);
+    doc.introIsVeld0 = true;
+  } else if (eerste && eerste.niveau === 0 && eerste.alineas.length) {
+    doc.intro = eerste.alineas[0].tekst;
+    doc.introIsVeld0 = true;
+  } else if (eerste && eerste.niveau === 2 && blokken[0].alineas.length) {
+    doc.intro = blokken[0].alineas[0].tekst;
+  }
 
   doc.alineas = blokken.flatMap((b) => b.alineas.map((a) => ({ ...a, h2: b.h2, h3: b.h3, kop: b.kop })));
   doc.zinnen = doc.alineas.flatMap((a) => a.zinnen.map((z) => ({ tekst: z, woorden: telWoorden(z), h2: a.h2, h3: a.h3 })));

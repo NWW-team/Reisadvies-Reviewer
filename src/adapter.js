@@ -33,7 +33,11 @@ function decodeer(s) {
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
     .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"').replace(/&apos;/g, "'")
-    .replace(/&amp;/g, '&');
+    .replace(/&amp;/g, '&')
+    // Sommige velden zijn dubbel gecodeerd (&amp;#39;); na het uitpakken van &amp; blijft er
+    // een numerieke entiteit over, die we hier alsnog omzetten.
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)));
 }
 
 /** Inhoud van het eerste element met deze naam, CDATA uitgepakt. */
@@ -89,6 +93,10 @@ export function uitApiRespons(xml) {
     titel,
     url: veld(xml, 'canonical'),
     html,
+    // Het introveld dat het sjabloon 'veld-0' noemt (in het cms 'Inhoudelijke wijzigingen')
+    // komt in de API terug als <modifications>, niet als onderdeel van de content. Zonder deze
+    // koppeling kan de toets op de vaste introtekst nooit afgaan.
+    intro: veld(xml, 'modifications'),
     kleurcodes,
     gewijzigd: veld(xml, 'modificationdate'),
     laatstGewijzigd: veld(xml, 'lastmodified'),
@@ -97,6 +105,7 @@ export function uitApiRespons(xml) {
       land: 'location',
       url: 'canonical',
       html: 'introduction + content/category/contentblock/paragraph + additionalinformation',
+      intro: 'modifications (het veld-0 uit het sjabloon)',
       kleurcodes: 'afgeleid uit de tekst',
     },
   };

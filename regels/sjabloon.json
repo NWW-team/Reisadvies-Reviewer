@@ -1,0 +1,316 @@
+{
+  "_bron": "Sjabloon Reisadviezen - nieuwe format.docx",
+  "_toelichting": "Het sjabloon legt per rubriek letterlijke teksten vast. De tool meldt alleen dát een vaste tekst ontbreekt of afwijkt en toont de verwachte formulering; invullen blijft aan de redacteur, want welke variant klopt hangt van het land af. Bronafkorting in een bevinding: SJ.",
+  "limieten": {
+    "in_het_kort": {
+      "max_bullets": 4,
+      "_bron": "blok In het kort: 'Maximaal 4 bullets'"
+    },
+    "rubrieken": {
+      "max_per_h2": 6,
+      "_bron": "'Richtlijn: max. 6 rubrieken onder veiligheidsrisico's' en 'Richtlijn max. 6 rubrieken onder reisvoorbereiding'"
+    }
+  },
+  "rubriek_patronen": {
+    "veiligheidsrisicos": "welke veiligheidsrisico",
+    "reisvoorbereiding": "hoe bereid ik mijn reis",
+    "nood": "in geval van nood|noodsituatie",
+    "regionaal": "regionale risico",
+    "reisverzekering": "^reisverzekering$",
+    "vaccinaties": "reisvaccinaties",
+    "medicijnen": "^medicijnen$",
+    "bagage": "bagageregels",
+    "criminaliteit": "^criminaliteit$",
+    "paspoort": "paspoort"
+  },
+  "rubriek_volgorde": [
+    "Terrorisme",
+    "Oorlog en conflict",
+    "Criminaliteit",
+    "Wetten en gebruiken",
+    "Natuurgeweld",
+    "Landmijnen",
+    "Demonstraties",
+    "Verkeersongevallen",
+    "Willekeurige arrestaties"
+  ],
+  "_rubriek_volgorde_bron": "Blok 'Risico dat van toepassing is, in volgorde van relevantie'. De rubriek met de naam van een virus of ziekte staat daar tussen Landmijnen en Demonstraties, maar heeft een variabele kop en kan daarom niet op naam worden herkend; die laten we staan waar hij staat.",
+  "intro": {
+    "standaard": "Reist u naar {land}? Lees welke veiligheidsrisico's er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
+    "alleen_rood": "Welke veiligheidsrisico's zijn er in {land}? En wat kunt u doen in geval van nood? Lees het reisadvies.",
+    "_bron": "blok Introductie, het veld dat in het cms 'Inhoudelijke wijzigingen' heet (veld-0)"
+  },
+  "contactcenter": {
+    "telefoon": "+31 247 247 247",
+    "whatsapp": "+31 857 737 400",
+    "_bron": "blok In geval van nood: 'bereikbaar via het contactcenter van NederlandWereldwijd'"
+  },
+  "kleurformulering": {
+    "_bron": "blok In het kort: 'Formuleringen als gele gebieden, de hoofdstad is oranje etc. gebruiken we niet meer.'",
+    "bijvoeglijk": {
+      "groen": "groene",
+      "geel": "gele",
+      "oranje": "oranje",
+      "rood": "rode"
+    },
+    "zelfstandig_naamwoorden": [
+      "gebied",
+      "gebieden",
+      "zone",
+      "zones",
+      "provincie",
+      "provincies",
+      "regio",
+      "regio's",
+      "stad",
+      "steden",
+      "deel",
+      "delen",
+      "land",
+      "landen"
+    ]
+  },
+  "vaste_koppen": [
+    "Lokale hulpdiensten",
+    "Nood- of crisissituatie",
+    "Contactgegevens Nederlandse ambassade in geval van nood",
+    "Nederlandse ambassade in {land}",
+    "Geen Nederlandse ambassade in {land}",
+    "Paspoort",
+    "Paspoort of ID-kaart",
+    "Visum",
+    "Reizen met kinderen",
+    "Registratieplicht",
+    "Rijbewijs",
+    "Reisvaccinaties",
+    "Gele koorts",
+    "Drugs",
+    "Lhbtiq+",
+    "Wat mag ik meenemen naar {land}?",
+    "Wat mag ik mee terugnemen naar Nederland?",
+    "Rood: niet reizen",
+    "Oranje: alleen noodzakelijke reizen",
+    "Geel: let op, er zijn risico's",
+    "Groen: u kunt erheen reizen"
+  ],
+  "_vaste_koppen_bron": "Tussenkoppen die het sjabloon letterlijk voorschrijft. Die toetsen we niet op woordenaantal of leestekens: de richtlijn is daar het sjabloon zelf.",
+  "conflicten_met_matrix": [
+    {
+      "onderwerp": "Geldzaken",
+      "matrix": "niet-melden",
+      "sjabloon": "alleen indien noodzakelijk",
+      "gevolg": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
+    }
+  ],
+  "vaste_teksten": [
+    {
+      "id": "informatieservice-vaste-tekst",
+      "ernst": "let-op",
+      "bron": "SJ, blok Oproep registratie Informatieservice",
+      "boodschap": "De standaardoproep om u aan te melden voor de Informatieservice ontbreekt of wijkt af.",
+      "zin": "E-mail ontvangen als het reisadvies wijzigt en bij (dreigende) crisis? Meld u aan voor de Informatieservice",
+      "kern": "meld u aan voor de informatieservice"
+    },
+    {
+      "id": "nood-contactcenter",
+      "rubriek": "nood",
+      "ernst": "fout",
+      "bron": "SJ, blok In geval van nood",
+      "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+      "zin": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+      "kern": "contactcenter van nederlandwereldwijd"
+    },
+    {
+      "id": "nood-lokale-hulpdiensten",
+      "rubriek": "nood",
+      "ernst": "let-op",
+      "bron": "SJ, blok In geval van nood",
+      "boodschap": "De vaste aanhef boven de alarmnummers ontbreekt.",
+      "zin": "Heeft u direct hulp nodig in {land}? Neem contact op met de lokale hulpdiensten:",
+      "kern": "neem contact op met de lokale hulpdiensten"
+    },
+    {
+      "id": "nood-verwijzing-nood",
+      "rubriek": "nood",
+      "ernst": "let-op",
+      "bron": "SJ, blok In geval van nood",
+      "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+      "zin": "Lees wat u kunt doen in geval van nood.",
+      "kern": "wat u kunt doen in geval van nood"
+    },
+    {
+      "id": "nood-verwijzing-crisis",
+      "rubriek": "nood",
+      "ernst": "let-op",
+      "bron": "SJ, blok In geval van nood",
+      "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+      "zin": "Lees wat u kunt doen in een crisissituatie.",
+      "kern": "wat u kunt doen in een crisissituatie"
+    },
+    {
+      "id": "reisverzekering-vaste-tekst",
+      "rubriek": "reisverzekering",
+      "ernst": "let-op",
+      "bron": "SJ, blok Reisverzekering",
+      "boodschap": "De vaste openingstekst over de reisverzekering ontbreekt.",
+      "zin": "Sluit altijd een goede reisverzekering af die extra kosten dekt.",
+      "kern": "sluit altijd een goede reisverzekering af"
+    },
+    {
+      "id": "reisverzekering-oranje-rood",
+      "rubriek": "reisverzekering",
+      "kleur": [
+        "oranje",
+        "rood"
+      ],
+      "ernst": "fout",
+      "bron": "SJ, blok Reisverzekering",
+      "boodschap": "Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij.",
+      "zin": "Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde risico's of kosten bij schade zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar.",
+      "kern": "passen veel nederlandse verzekeraars de voorwaarden"
+    },
+    {
+      "id": "reisverzekering-familie",
+      "rubriek": "reisverzekering",
+      "ernst": "let-op",
+      "bron": "SJ, blok Reisverzekering",
+      "boodschap": "De vaste let-op-tekst over familie en de verzekeraar ontbreekt.",
+      "zin": "Laat familie in Nederland weten hoe en waar u bent verzekerd. In een noodgeval kan uw familie dan hulp inschakelen van uw verzekeraar.",
+      "kern": "laat familie in nederland weten hoe en waar u bent verzekerd"
+    },
+    {
+      "id": "vaccinaties-ggd",
+      "rubriek": "vaccinaties",
+      "ernst": "let-op",
+      "bron": "SJ, blok Reisvaccinaties",
+      "boodschap": "De vaste verwijzing naar GGD Reisvaccinaties ontbreekt.",
+      "zin": "Check welke vaccinaties u nodig heeft voor {land} op de website van GGD Reisvaccinaties.",
+      "kern": "ggd reisvaccinaties|website van de ggd"
+    },
+    {
+      "id": "vaccinaties-lcr",
+      "rubriek": "vaccinaties",
+      "ernst": "let-op",
+      "bron": "SJ, blok Reisvaccinaties",
+      "boodschap": "De vaste verwijzing naar het LCR ontbreekt.",
+      "zin": "Check alle aanbieders van reisvaccinaties op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR).",
+      "kern": "landelijk co(?:ö|o)rdinatiecentrum reizigersadvisering|\\(lcr\\)"
+    },
+    {
+      "id": "medicijnen-voldoende",
+      "rubriek": "medicijnen",
+      "ernst": "info",
+      "bron": "SJ, blok Medicijnen",
+      "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+      "zin": "Neem voldoende medicijnen mee, ook voor extra dagen.",
+      "kern": "voldoende medicijnen mee"
+    },
+    {
+      "id": "medicijnen-verklaring",
+      "rubriek": "medicijnen",
+      "ernst": "let-op",
+      "bron": "SJ, blok Medicijnen",
+      "boodschap": "De vaste tekst over de medicijnverklaring ontbreekt.",
+      "zin": "Check of u een medicijnverklaring nodig heeft om uw medicijnen mee te mogen nemen naar {land}.",
+      "kern": "medicijnverklaring"
+    },
+    {
+      "id": "medicijnen-verpakking",
+      "rubriek": "medicijnen",
+      "ernst": "let-op",
+      "bron": "SJ, blok Medicijnen",
+      "boodschap": "De vaste tekst over de originele verpakking ontbreekt.",
+      "zin": "Neem de medicijnen altijd mee in de originele verpakking.",
+      "kern": "originele verpakking"
+    },
+    {
+      "id": "bagage-heen",
+      "rubriek": "bagage",
+      "ernst": "info",
+      "bron": "SJ, blok Bagageregels",
+      "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+      "zin": "Wat mag ik meenemen naar {land}? Check wat de regels zijn bij de lokale autoriteiten.",
+      "kern": "check wat .{0,40}(?:meenemen naar|mee mag nemen naar|de regels zijn)",
+      "_kern_toelichting": "De bron van de douaneregels verschilt per land (de lokale douane, IATA, een overheidssite). Het patroon toetst de vaste check-instructie, niet de bron."
+    },
+    {
+      "id": "bagage-terug",
+      "rubriek": "bagage",
+      "ernst": "let-op",
+      "bron": "SJ, blok Bagageregels",
+      "boodschap": "De vaste verwijzing naar 'Wat mag ik meenemen naar Nederland?' ontbreekt.",
+      "zin": "Bekijk wat u vanuit {land} mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?",
+      "kern": "mee terug mag nemen naar nederland|wat mag ik meenemen naar nederland"
+    },
+    {
+      "id": "criminaliteit-themapagina",
+      "rubriek": "criminaliteit",
+      "ernst": "let-op",
+      "bron": "SJ, blok Criminaliteit",
+      "boodschap": "Na het maatwerk hoort de vaste verwijzing naar de themapagina over criminaliteit.",
+      "zin": "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht. Lees meer op de pagina Hoe voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?",
+      "kern": "slachtoffer word van criminaliteit in het buitenland"
+    },
+    {
+      "id": "lhbtiq-verwijzing",
+      "ernst": "let-op",
+      "bron": "SJ, blok Wetten en gebruiken",
+      "alleen_als": "lhbtiq",
+      "boodschap": "Waar lhbtiq+ aan de orde komt, hoort de vaste verwijzing naar de themapagina erbij.",
+      "zin": "Lees de tips op de pagina Kan ik veilig reizen als lhbtiq+ persoon? om risico's te verkleinen.",
+      "kern": "kan ik veilig reizen als lhbtiq\\+ persoon"
+    },
+    {
+      "id": "paspoort-kopie",
+      "rubriek": "paspoort",
+      "ernst": "info",
+      "bron": "SJ, blok Paspoort, visum, rijbewijs",
+      "boodschap": "De vaste tekst over het delen van een kopie van het paspoort ontbreekt.",
+      "zin": "Deel een kopie van uw paspoort met familie in Nederland.",
+      "kern": "kopie van uw paspoort"
+    },
+    {
+      "id": "rijbewijs-anwb",
+      "rubriek": "paspoort",
+      "ernst": "let-op",
+      "alleen_als": "rijbewijs",
+      "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+      "bron": "SJ, blok Paspoort, visum, rijbewijs",
+      "zin": "Lees meer over rijden in {land} op de website van de ANWB.",
+      "kern": "website van de anwb"
+    },
+    {
+      "id": "kinderen-documenten",
+      "rubriek": "paspoort",
+      "ernst": "info",
+      "bron": "SJ, blok Paspoort, visum, rijbewijs",
+      "boodschap": "De vaste verwijzing over reizen met een minderjarig kind ontbreekt.",
+      "zin": "Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee.",
+      "kern": "reizen met een minderjarig kind"
+    },
+    {
+      "id": "regionaal-gebiedenzin",
+      "rubriek": "regionaal",
+      "ernst": "let-op",
+      "bron": "SJ, blok Regionale risico's",
+      "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+      "zin": "Voor de volgende gebieden geldt kleurcode {kleur}:",
+      "kern": "voor de volgende gebieden geldt kleurcode"
+    },
+    {
+      "id": "rood-herhaling-voorbereiding",
+      "rubriek": "reisvoorbereiding",
+      "alleen_rood": true,
+      "ernst": "let-op",
+      "bron": "SJ, blok Hoe bereid ik mijn reis voor",
+      "boodschap": "Bij een volledig rood reisadvies herhalen we de waarschuwing onder de reisvoorbereiding.",
+      "zin": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+      "kern": "reis niet naar gebieden met kleurcode rood"
+    }
+  ],
+  "geen_rubriek": [
+    "Actueel",
+    "Regionale risico's"
+  ],
+  "_geen_rubriek_bron": "Actueel en Regionale risico's hebben in het sjabloon een eigen blok, vóór het blok 'Risico dat van toepassing is'. Ze tellen daarom niet mee in de richtlijn van maximaal 6 rubrieken."
+}

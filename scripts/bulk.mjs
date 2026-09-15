@@ -21,6 +21,7 @@ const toets = maakToetser({
   kleurcodes: laad('kleurcodes.json'),
   woordenlijsten: laad('woordenlijsten.json'),
   limieten: laad('limieten.json'),
+  sjabloon: laad('sjabloon.json'),
 });
 
 const corpusMap = join(wortel, 'data', 'corpus');
@@ -34,7 +35,8 @@ const resultaten = [];
 for (const bestand of readdirSync(corpusMap).filter((f) => f.endsWith('.xml')).sort()) {
   const velden = uitApiRespons(readFileSync(join(corpusMap, bestand), 'utf8'));
   const doc = parseAdvies(velden.html, {
-    land: velden.land, titel: velden.titel, url: velden.url, kleurcodes: velden.kleurcodes,
+    land: velden.land, titel: velden.titel, url: velden.url,
+    kleurcodes: velden.kleurcodes, intro: velden.intro,
   });
   const r = toets(doc);
   resultaten.push({ bestand, iso: velden.isocode || bestand.replace('.xml', ''), ...r.samenvatting,

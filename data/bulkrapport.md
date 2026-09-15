@@ -7,7 +7,7 @@ Gedraaid op 2026-09-15 over 226 reisadviezen.
 - **0** van de 226 adviezen hebben geen enkele harde fout.
 - **41** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 9.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **88** van de 5066 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **88** van de 5242 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -38,27 +38,48 @@ de standaardtekst lost ze allemaal tegelijk op.
 | `zin-twijfeltaal` | 183 | 527 |
 | `kleur-eerste-bullet-voluit` | 68 | 68 |
 | `aanhalingstekens` | 53 | 87 |
+| `rubrieken-volgorde` | 53 | 53 |
 | `actueel-max-woorden` | 51 | 51 |
 | `doc-woordenaantal` | 41 | 41 |
 | `kleur-aanduiding` | 33 | 34 |
+| `regionaal-gebiedenzin` | 32 | 32 |
 | `h3-niet-melden` | 25 | 25 |
+| `nood-contactcenter` | 18 | 18 |
 | `getallen-cijfers` | 16 | 29 |
+| `bagage-heen` | 14 | 14 |
+| `rijbewijs-anwb` | 12 | 12 |
 | `tussenkop-leestekens` | 11 | 11 |
 | `vragen-opeenvolgend` | 10 | 11 |
+| `nood-lokale-hulpdiensten` | 7 | 7 |
+| `medicijnen-voldoende` | 6 | 6 |
 | `link-verboden-partij` | 6 | 7 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
+| `nood-verwijzing-nood` | 5 | 5 |
+| `nood-verwijzing-crisis` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
 | `titel-leestekens` | 5 | 5 |
 | `h2-vast` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
+| `rubrieken-max` | 3 | 3 |
+| `intro-vaste-tekst` | 3 | 3 |
+| `kinderen-documenten` | 3 | 3 |
 | `afkortingen-uitschrijven` | 3 | 3 |
+| `criminaliteit-themapagina` | 3 | 3 |
+| `lhbtiq-verwijzing` | 2 | 2 |
 | `lhbtiq-schrijfwijze` | 2 | 2 |
+| `kleur-formulering-verboden` | 2 | 2 |
 | `kleur-vaste-tekst` | 2 | 2 |
 | `alinea-max-woorden` | 2 | 4 |
 | `telefoon-notatie` | 2 | 3 |
+| `reisverzekering-oranje-rood` | 2 | 2 |
 | `genderneutraal` | 2 | 3 |
-| `kort-informatieservice` | 1 | 1 |
+| `reisverzekering-vaste-tekst` | 2 | 2 |
+| `informatieservice-vaste-tekst` | 1 | 1 |
+| `vaccinaties-ggd` | 1 | 1 |
+| `vaccinaties-lcr` | 1 | 1 |
+| `bagage-terug` | 1 | 1 |
 | `valuta-notatie` | 1 | 1 |
+| `rood-herhaling-voorbereiding` | 1 | 1 |
 | `tijd-notatie` | 1 | 1 |
 
 ## Langste adviezen

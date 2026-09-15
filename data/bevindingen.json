@@ -9,10 +9,11 @@
       "groen"
     ],
     "zinnen": 56,
-    "fout": 9,
+    "fout": 10,
     "letop": 6,
     "info": 1,
     "perRegel": {
+      "nood-contactcenter": 1,
       "tussenkop-leestekens": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 9,
@@ -21,6 +22,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
       {
         "regel": "tussenkop-leestekens",
         "ernst": "info",
@@ -158,11 +166,12 @@
     ],
     "zinnen": 114,
     "fout": 17,
-    "letop": 11,
+    "letop": 12,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "actueel-max-woorden": 1,
+      "nood-lokale-hulpdiensten": 1,
       "zin-max-woorden": 15,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 4,
@@ -188,6 +197,13 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 118 woorden. Maximaal 25."
+      },
+      {
+        "regel": "nood-lokale-hulpdiensten",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste aanhef boven de alarmnummers ontbreekt.",
+        "verwacht": "Heeft u direct hulp nodig in Afghanistan? Neem contact op met de lokale hulpdiensten:"
       },
       {
         "regel": "zin-max-woorden",
@@ -407,8 +423,8 @@
       "geel"
     ],
     "zinnen": 109,
-    "fout": 19,
-    "letop": 6,
+    "fout": 18,
+    "letop": 7,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
@@ -429,11 +445,11 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "actueel-max-woorden",
@@ -768,9 +784,12 @@
     ],
     "zinnen": 103,
     "fout": 11,
-    "letop": 9,
+    "letop": 12,
     "info": 0,
     "perRegel": {
+      "lhbtiq-verwijzing": 1,
+      "rubrieken-max": 1,
+      "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 3,
@@ -779,6 +798,28 @@
       "lhbtiq-schrijfwijze": 1
     },
     "bevindingen": [
+      {
+        "regel": "lhbtiq-verwijzing",
+        "ernst": "let-op",
+        "bron": "SJ, blok Wetten en gebruiken",
+        "boodschap": "Waar lhbtiq+ aan de orde komt, hoort de vaste verwijzing naar de themapagina erbij.",
+        "verwacht": "Lees de tips op de pagina Kan ik veilig reizen als lhbtiq+ persoon? om risico's te verkleinen."
+      },
+      {
+        "regel": "rubrieken-max",
+        "ernst": "let-op",
+        "bron": "SJ, richtlijn boven de rubrieken",
+        "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
+        "notitie": "De rubrieken: Terrorisme, Criminaliteit, Wetten en gebruiken, Landmijnen, Demonstraties, Verkeersongevallen, Natuurgeweld"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Verkeersongevallen\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -1058,13 +1099,15 @@
       "geel"
     ],
     "zinnen": 115,
-    "fout": 12,
-    "letop": 13,
+    "fout": 13,
+    "letop": 14,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "intro-vaste-tekst": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 11,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 2,
@@ -1092,6 +1135,21 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 78 woorden. Maximaal 25."
+      },
+      {
+        "regel": "intro-vaste-tekst",
+        "ernst": "fout",
+        "bron": "SJ, blok Introductie",
+        "boodschap": "De intro wijkt af van de vaste introductietekst.",
+        "fragment": "Reist u naar de Verenigde Arabische Emiraten (VAE)? Bijvoorbeeld naar Abu Dhabi of Dubai? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
+        "verwacht": "Reist u naar Verenigde Arabische Emiraten? Lees welke veiligheidsrisico's er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -1276,9 +1334,10 @@
     ],
     "zinnen": 110,
     "fout": 9,
-    "letop": 11,
+    "letop": 12,
     "info": 0,
     "perRegel": {
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 5,
       "zin-max-woorden": 9,
       "zin-lijdende-vorm": 1,
@@ -1287,6 +1346,14 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Demonstraties\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-twijfeltaal",
         "ernst": "let-op",
@@ -1457,10 +1524,12 @@
     ],
     "zinnen": 90,
     "fout": 10,
-    "letop": 7,
+    "letop": 9,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 10,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 1,
@@ -1474,6 +1543,21 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Armenië en Azerbeidzjan. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Demonstraties\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -1803,11 +1887,19 @@
       "geel"
     ],
     "zinnen": 44,
-    "fout": 6,
-    "letop": 7,
-    "info": 1,
+    "fout": 7,
+    "letop": 13,
+    "info": 2,
     "perRegel": {
-      "kort-informatieservice": 1,
+      "informatieservice-vaste-tekst": 1,
+      "nood-contactcenter": 1,
+      "nood-lokale-hulpdiensten": 1,
+      "nood-verwijzing-nood": 1,
+      "nood-verwijzing-crisis": 1,
+      "vaccinaties-ggd": 1,
+      "vaccinaties-lcr": 1,
+      "bagage-heen": 1,
+      "bagage-terug": 1,
       "tussenkop-leestekens": 1,
       "zin-twijfeltaal": 3,
       "zin-max-woorden": 6,
@@ -1816,10 +1908,67 @@
     },
     "bevindingen": [
       {
-        "regel": "kort-informatieservice",
+        "regel": "informatieservice-vaste-tekst",
         "ernst": "let-op",
-        "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De standaardtekst over aanmelden voor de informatieservice ontbreekt onder \"Let op\"."
+        "bron": "SJ, blok Oproep registratie Informatieservice",
+        "boodschap": "De standaardoproep om u aan te melden voor de Informatieservice ontbreekt of wijkt af.",
+        "verwacht": "E-mail ontvangen als het reisadvies wijzigt en bij (dreigende) crisis? Meld u aan voor de Informatieservice"
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "nood-lokale-hulpdiensten",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste aanhef boven de alarmnummers ontbreekt.",
+        "verwacht": "Heeft u direct hulp nodig in Antarctica? Neem contact op met de lokale hulpdiensten:"
+      },
+      {
+        "regel": "nood-verwijzing-nood",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in geval van nood."
+      },
+      {
+        "regel": "nood-verwijzing-crisis",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in een crisissituatie."
+      },
+      {
+        "regel": "vaccinaties-ggd",
+        "ernst": "let-op",
+        "bron": "SJ, blok Reisvaccinaties",
+        "boodschap": "De vaste verwijzing naar GGD Reisvaccinaties ontbreekt.",
+        "verwacht": "Check welke vaccinaties u nodig heeft voor Antarctica op de website van GGD Reisvaccinaties."
+      },
+      {
+        "regel": "vaccinaties-lcr",
+        "ernst": "let-op",
+        "bron": "SJ, blok Reisvaccinaties",
+        "boodschap": "De vaste verwijzing naar het LCR ontbreekt.",
+        "verwacht": "Check alle aanbieders van reisvaccinaties op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR)."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Antarctica? Check wat de regels zijn bij de lokale autoriteiten."
+      },
+      {
+        "regel": "bagage-terug",
+        "ernst": "let-op",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste verwijzing naar 'Wat mag ik meenemen naar Nederland?' ontbreekt.",
+        "verwacht": "Bekijk wat u vanuit Antarctica mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
       },
       {
         "regel": "tussenkop-leestekens",
@@ -2093,10 +2242,11 @@
     ],
     "zinnen": 84,
     "fout": 18,
-    "letop": 5,
+    "letop": 6,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 1,
       "zin-max-woorden": 17,
       "zin-lijdende-vorm": 1,
@@ -2115,6 +2265,14 @@
           "In geval van nood (271 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Natuurgeweld\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -2303,9 +2461,10 @@
     ],
     "zinnen": 77,
     "fout": 11,
-    "letop": 5,
+    "letop": 6,
     "info": 0,
     "perRegel": {
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 11,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2,
@@ -2313,6 +2472,14 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Natuurgeweld\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -2610,12 +2777,13 @@
       "geel"
     ],
     "zinnen": 120,
-    "fout": 14,
-    "letop": 11,
+    "fout": 13,
+    "letop": 13,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
       "h3-niet-melden": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 4,
       "zin-max-woorden": 13,
       "zin-lijdende-vorm": 2,
@@ -2633,11 +2801,19 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Demonstraties\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -2834,8 +3010,9 @@
     "zinnen": 55,
     "fout": 7,
     "letop": 8,
-    "info": 0,
+    "info": 1,
     "perRegel": {
+      "medicijnen-voldoende": 1,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 4,
       "zin-lijdende-vorm": 1,
@@ -2843,6 +3020,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "medicijnen-voldoende",
+        "ernst": "info",
+        "bron": "SJ, blok Medicijnen",
+        "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -3388,10 +3572,13 @@
     ],
     "zinnen": 137,
     "fout": 17,
-    "letop": 10,
-    "info": 1,
+    "letop": 12,
+    "info": 2,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "bagage-heen": 1,
+      "regionaal-gebiedenzin": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 17,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 2,
@@ -3406,6 +3593,28 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor de regio Chittagong Hill Tracts (inclusief de gebieden die grenzen aan Myanmar en India). Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Bangladesh? Check wat de regels zijn bij de lokale autoriteiten."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Criminaliteit\" staat na \"Wetten en gebruiken\".",
+        "fragment": "Criminaliteit",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -3632,9 +3841,10 @@
     ],
     "zinnen": 83,
     "fout": 9,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perRegel": {
+      "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 9,
       "zin-twijfeltaal": 2,
@@ -3642,6 +3852,14 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Demonstraties\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -3772,11 +3990,13 @@
       "rood"
     ],
     "zinnen": 88,
-    "fout": 12,
-    "letop": 6,
+    "fout": 13,
+    "letop": 7,
     "info": 0,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "nood-contactcenter": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 2,
       "zin-max-woorden": 11,
       "zin-lijdende-vorm": 1,
@@ -3789,6 +4009,21 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 133 woorden. Maximaal 25."
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Demonstraties\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -4244,12 +4479,14 @@
       "oranje"
     ],
     "zinnen": 108,
-    "fout": 12,
-    "letop": 8,
+    "fout": 11,
+    "letop": 11,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
       "h3-niet-melden": 1,
+      "regionaal-gebiedenzin": 1,
+      "rubrieken-volgorde": 1,
       "titel-leestekens": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 11,
@@ -4267,11 +4504,26 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Criminaliteit\" staat na \"Demonstraties\".",
+        "fragment": "Criminaliteit",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "titel-leestekens",
@@ -4603,12 +4855,13 @@
     ],
     "zinnen": 126,
     "fout": 28,
-    "letop": 18,
+    "letop": 19,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-twijfeltaal": 8,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 26,
@@ -4642,6 +4895,13 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 99 woorden. Maximaal 25."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-twijfeltaal",
@@ -4994,10 +5254,13 @@
       "groen"
     ],
     "zinnen": 72,
-    "fout": 10,
-    "letop": 6,
+    "fout": 11,
+    "letop": 8,
     "info": 1,
     "perRegel": {
+      "nood-contactcenter": 1,
+      "nood-verwijzing-nood": 1,
+      "nood-verwijzing-crisis": 1,
       "tussenkop-leestekens": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 10,
@@ -5006,6 +5269,27 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "nood-verwijzing-nood",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in geval van nood."
+      },
+      {
+        "regel": "nood-verwijzing-crisis",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in een crisissituatie."
+      },
       {
         "regel": "tussenkop-leestekens",
         "ernst": "info",
@@ -5150,16 +5434,48 @@
       "groen"
     ],
     "zinnen": 51,
-    "fout": 6,
-    "letop": 2,
+    "fout": 7,
+    "letop": 5,
     "info": 1,
     "perRegel": {
+      "nood-contactcenter": 1,
+      "nood-verwijzing-nood": 1,
+      "nood-verwijzing-crisis": 1,
+      "rijbewijs-anwb": 1,
       "tussenkop-leestekens": 1,
       "zin-max-woorden": 6,
       "link-tekstlengte": 1,
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "nood-verwijzing-nood",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in geval van nood."
+      },
+      {
+        "regel": "nood-verwijzing-crisis",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in een crisissituatie."
+      },
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Saba op de website van de ANWB."
+      },
       {
         "regel": "tussenkop-leestekens",
         "ernst": "info",
@@ -5242,10 +5558,14 @@
       "groen"
     ],
     "zinnen": 55,
-    "fout": 8,
-    "letop": 5,
+    "fout": 9,
+    "letop": 8,
     "info": 1,
     "perRegel": {
+      "nood-contactcenter": 1,
+      "nood-verwijzing-nood": 1,
+      "nood-verwijzing-crisis": 1,
+      "rijbewijs-anwb": 1,
       "tussenkop-leestekens": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 8,
@@ -5253,6 +5573,34 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "nood-verwijzing-nood",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in geval van nood."
+      },
+      {
+        "regel": "nood-verwijzing-crisis",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in een crisissituatie."
+      },
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Sint Eustatius op de website van de ANWB."
+      },
       {
         "regel": "tussenkop-leestekens",
         "ernst": "info",
@@ -5808,9 +6156,10 @@
     ],
     "zinnen": 80,
     "fout": 10,
-    "letop": 5,
+    "letop": 6,
     "info": 0,
     "perRegel": {
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
@@ -5818,6 +6167,14 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Natuurgeweld\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -5951,8 +6308,10 @@
     "zinnen": 75,
     "fout": 11,
     "letop": 5,
-    "info": 0,
+    "info": 2,
     "perRegel": {
+      "medicijnen-voldoende": 1,
+      "kinderen-documenten": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 1,
@@ -5960,6 +6319,20 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "medicijnen-voldoende",
+        "ernst": "info",
+        "bron": "SJ, blok Medicijnen",
+        "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
+      },
+      {
+        "regel": "kinderen-documenten",
+        "ernst": "info",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "De vaste verwijzing over reizen met een minderjarig kind ontbreekt.",
+        "verwacht": "Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -6233,10 +6606,12 @@
     ],
     "zinnen": 75,
     "fout": 12,
-    "letop": 9,
-    "info": 1,
+    "letop": 10,
+    "info": 2,
     "perRegel": {
       "kleur-aanduiding": 1,
+      "bagage-heen": 1,
+      "rijbewijs-anwb": 1,
       "zin-max-woorden": 12,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 2,
@@ -6251,6 +6626,20 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Centraal-Afrikaanse Republiek is rood."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Centraal-Afrikaanse Republiek? Check wat de regels zijn bij de lokale autoriteiten."
+      },
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Centraal-Afrikaanse Republiek op de website van de ANWB."
       },
       {
         "regel": "zin-max-woorden",
@@ -6429,9 +6818,10 @@
     "zinnen": 78,
     "fout": 16,
     "letop": 8,
-    "info": 0,
+    "info": 1,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "bagage-heen": 1,
       "zin-max-woorden": 15,
       "zin-lijdende-vorm": 2,
       "vragen-opeenvolgend": 1,
@@ -6444,6 +6834,13 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 55 woorden. Maximaal 25."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Canada? Check wat de regels zijn bij de lokale autoriteiten."
       },
       {
         "regel": "zin-max-woorden",
@@ -7088,13 +7485,14 @@
       "geel"
     ],
     "zinnen": 153,
-    "fout": 35,
-    "letop": 17,
-    "info": 0,
+    "fout": 34,
+    "letop": 18,
+    "info": 1,
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-niet-melden": 1,
       "actueel-max-woorden": 1,
+      "bagage-heen": 1,
       "zin-max-woorden": 32,
       "zin-lijdende-vorm": 7,
       "zin-twijfeltaal": 5,
@@ -7117,17 +7515,24 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 62 woorden. Maximaal 25."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar China? Check wat de regels zijn bij de lokale autoriteiten."
       },
       {
         "regel": "zin-max-woorden",
@@ -7683,11 +8088,12 @@
       "geel"
     ],
     "zinnen": 119,
-    "fout": 15,
+    "fout": 16,
     "letop": 11,
     "info": 1,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "nood-contactcenter": 1,
       "zin-max-woorden": 15,
       "zin-twijfeltaal": 5,
       "zin-lijdende-vorm": 1,
@@ -7702,6 +8108,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor de noordelijke punt van Kameroen en de grensgebieden met Nigeria en de Centraal-Afrikaanse Republiek. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
         "regel": "zin-max-woorden",
@@ -7921,12 +8334,13 @@
     ],
     "zinnen": 137,
     "fout": 19,
-    "letop": 20,
+    "letop": 21,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "titel-leestekens": 1,
       "zin-max-woorden": 17,
       "zin-twijfeltaal": 8,
@@ -7960,6 +8374,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 116 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Criminaliteit\" staat na \"Demonstraties\".",
+        "fragment": "Criminaliteit",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "titel-leestekens",
@@ -8258,10 +8680,11 @@
     ],
     "zinnen": 102,
     "fout": 14,
-    "letop": 11,
+    "letop": 12,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "rubrieken-volgorde": 1,
       "titel-leestekens": 1,
       "zin-max-woorden": 14,
       "zin-twijfeltaal": 4,
@@ -8276,6 +8699,14 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor het noordelijke grensgebied met de Centraal-Afrikaanse Republiek en voor gebieden in het zuiden van de Republiek Congo. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Demonstraties\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "titel-leestekens",
@@ -8623,12 +9054,13 @@
     ],
     "zinnen": 160,
     "fout": 18,
-    "letop": 19,
+    "letop": 20,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 9,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 6,
@@ -8660,6 +9092,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 52 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Wetten en gebruiken\" staat na \"Landmijnen\".",
+        "fragment": "Wetten en gebruiken",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -9265,11 +9705,12 @@
       "geel"
     ],
     "zinnen": 141,
-    "fout": 20,
+    "fout": 21,
     "letop": 11,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-formulering-verboden": 1,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 5,
       "zin-max-woorden": 19,
@@ -9288,6 +9729,15 @@
           "Natuurgeweld (264 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-formulering-verboden",
+        "ernst": "fout",
+        "bron": "SJ, blok In het kort",
+        "boodschap": "\"zijn rood\" benoemt de kleur zonder het woord kleurcode.",
+        "fragment": "Die zijn rood met een gele driehoek.",
+        "kop": "Criminaliteit",
+        "verwacht": "de kleurcode voor … is rood"
       },
       {
         "regel": "zin-twijfeltaal",
@@ -9539,8 +9989,8 @@
       "oranje"
     ],
     "zinnen": 110,
-    "fout": 22,
-    "letop": 12,
+    "fout": 21,
+    "letop": 13,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -9577,11 +10027,11 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "actueel-max-woorden",
@@ -9835,10 +10285,11 @@
       "groen"
     ],
     "zinnen": 55,
-    "fout": 8,
+    "fout": 9,
     "letop": 7,
     "info": 1,
     "perRegel": {
+      "nood-contactcenter": 1,
       "tussenkop-leestekens": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 8,
@@ -9847,6 +10298,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
       {
         "regel": "tussenkop-leestekens",
         "ernst": "info",
@@ -9982,11 +10440,12 @@
       "groen"
     ],
     "zinnen": 70,
-    "fout": 10,
+    "fout": 11,
     "letop": 6,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
+      "nood-contactcenter": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 10,
       "zin-twijfeltaal": 1,
@@ -10000,6 +10459,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Kaaimaneilanden is groen."
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -10353,8 +10819,8 @@
       "groen"
     ],
     "zinnen": 77,
-    "fout": 11,
-    "letop": 7,
+    "fout": 10,
+    "letop": 8,
     "info": 0,
     "perRegel": {
       "h3-niet-melden": 1,
@@ -10367,11 +10833,11 @@
     "bevindingen": [
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -11385,8 +11851,8 @@
       "geel"
     ],
     "zinnen": 153,
-    "fout": 15,
-    "letop": 13,
+    "fout": 14,
+    "letop": 14,
     "info": 1,
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -11422,11 +11888,11 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -11647,12 +12113,13 @@
     ],
     "zinnen": 179,
     "fout": 20,
-    "letop": 19,
+    "letop": 20,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 18,
       "zin-lijdende-vorm": 5,
       "zin-twijfeltaal": 7,
@@ -11685,6 +12152,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 67 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Demonstraties\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -12244,10 +12719,11 @@
     ],
     "zinnen": 69,
     "fout": 8,
-    "letop": 6,
+    "letop": 7,
     "info": 4,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 8,
       "link-tekstlengte": 2,
@@ -12261,6 +12737,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor grensgebieden van Eritrea met de buurlanden. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Eritrea op de website van de ANWB."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -12405,9 +12888,10 @@
     ],
     "zinnen": 99,
     "fout": 18,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perRegel": {
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 18,
       "zin-lijdende-vorm": 2,
       "link-tekstlengte": 2,
@@ -12415,6 +12899,14 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Criminaliteit\" staat na \"Natuurgeweld\".",
+        "fragment": "Criminaliteit",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -12830,13 +13322,15 @@
       "geel"
     ],
     "zinnen": 131,
-    "fout": 16,
-    "letop": 13,
+    "fout": 17,
+    "letop": 14,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "nood-contactcenter": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 14,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 2,
@@ -12871,6 +13365,21 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 59 woorden. Maximaal 25."
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Wetten en gebruiken\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -13235,10 +13744,11 @@
     ],
     "zinnen": 114,
     "fout": 20,
-    "letop": 8,
+    "letop": 9,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 19,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 3,
@@ -13258,6 +13768,14 @@
           "Paspoort, visum, rijbewijs (267 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Demonstraties\" staat na \"Verkeersongevallen\".",
+        "fragment": "Demonstraties",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -13486,10 +14004,11 @@
     ],
     "zinnen": 85,
     "fout": 17,
-    "letop": 8,
+    "letop": 9,
     "info": 0,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 16,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 2,
@@ -13503,6 +14022,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 69 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Criminaliteit\" staat na \"Natuurgeweld\".",
+        "fragment": "Criminaliteit",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -13807,9 +14334,10 @@
     ],
     "zinnen": 82,
     "fout": 11,
-    "letop": 8,
+    "letop": 9,
     "info": 0,
     "perRegel": {
+      "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 2,
@@ -13817,6 +14345,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Micronesië op de website van de ANWB."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -13981,8 +14516,9 @@
     "zinnen": 81,
     "fout": 10,
     "letop": 4,
-    "info": 2,
+    "info": 3,
     "perRegel": {
+      "kinderen-documenten": 1,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 2,
       "link-tekstlengte": 1,
@@ -13991,6 +14527,13 @@
       "getallen-cijfers": 1
     },
     "bevindingen": [
+      {
+        "regel": "kinderen-documenten",
+        "ernst": "info",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "De vaste verwijzing over reizen met een minderjarig kind ontbreekt.",
+        "verwacht": "Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -14128,11 +14671,13 @@
       "groen"
     ],
     "zinnen": 71,
-    "fout": 12,
+    "fout": 13,
     "letop": 11,
-    "info": 1,
+    "info": 2,
     "perRegel": {
       "kleur-aanduiding": 1,
+      "intro-vaste-tekst": 1,
+      "medicijnen-voldoende": 1,
       "tussenkop-leestekens": 1,
       "zin-max-woorden": 12,
       "zin-twijfeltaal": 1,
@@ -14149,6 +14694,21 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Verenigd Koninkrijk is groen."
+      },
+      {
+        "regel": "intro-vaste-tekst",
+        "ernst": "fout",
+        "bron": "SJ, blok Introductie",
+        "boodschap": "De intro wijkt af van de vaste introductietekst.",
+        "fragment": "Reist u naar het Verenigd Koninkrijk (VK)? Bijvoorbeeld naar Engeland, Wales, Schotland of Noord-Ierland? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
+        "verwacht": "Reist u naar Verenigd Koninkrijk? Lees welke veiligheidsrisico's er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
+      },
+      {
+        "regel": "medicijnen-voldoende",
+        "ernst": "info",
+        "bron": "SJ, blok Medicijnen",
+        "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
       },
       {
         "regel": "tussenkop-leestekens",
@@ -14596,10 +15156,11 @@
     ],
     "zinnen": 132,
     "fout": 17,
-    "letop": 10,
+    "letop": 11,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 17,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 2,
@@ -14614,6 +15175,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor de gebieden in het noorden en noordwesten van Ghana die grenzen aan Burkina Faso. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -15394,10 +15962,11 @@
     ],
     "zinnen": 81,
     "fout": 8,
-    "letop": 5,
+    "letop": 6,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 8,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2,
@@ -15410,6 +15979,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor het grensgebied tussen Guinee-Bissau en Senegal. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -15642,9 +16218,10 @@
     ],
     "zinnen": 86,
     "fout": 13,
-    "letop": 10,
+    "letop": 11,
     "info": 0,
     "perRegel": {
+      "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 13,
       "zin-twijfeltaal": 5,
@@ -15652,6 +16229,14 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Natuurgeweld\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -16586,9 +17171,10 @@
     ],
     "zinnen": 75,
     "fout": 12,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perRegel": {
+      "nood-lokale-hulpdiensten": 1,
       "zin-max-woorden": 12,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 1,
@@ -16596,6 +17182,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-lokale-hulpdiensten",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste aanhef boven de alarmnummers ontbreekt.",
+        "verwacht": "Heeft u direct hulp nodig in Guyana? Neem contact op met de lokale hulpdiensten:"
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -16750,10 +17343,13 @@
       "geel"
     ],
     "zinnen": 64,
-    "fout": 9,
-    "letop": 6,
-    "info": 0,
+    "fout": 10,
+    "letop": 7,
+    "info": 1,
     "perRegel": {
+      "nood-contactcenter": 1,
+      "bagage-heen": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 9,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 1,
@@ -16761,6 +17357,28 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Hongkong SAR? Check wat de regels zijn bij de lokale autoriteiten."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Wetten en gebruiken\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -17141,8 +17759,9 @@
     "zinnen": 69,
     "fout": 9,
     "letop": 6,
-    "info": 0,
+    "info": 1,
     "perRegel": {
+      "medicijnen-voldoende": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 9,
       "zin-twijfeltaal": 1,
@@ -17151,6 +17770,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "medicijnen-voldoende",
+        "ernst": "info",
+        "bron": "SJ, blok Medicijnen",
+        "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -17643,12 +18269,14 @@
       "geel"
     ],
     "zinnen": 197,
-    "fout": 23,
-    "letop": 19,
+    "fout": 24,
+    "letop": 20,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
+      "nood-contactcenter": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 22,
       "zin-twijfeltaal": 9,
       "zin-lijdende-vorm": 6,
@@ -17674,6 +18302,20 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor de provincies Papoea, Papoea-Hooglanden, Centraal- en Zuid-Papoea. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -18008,13 +18650,15 @@
     ],
     "zinnen": 229,
     "fout": 34,
-    "letop": 24,
-    "info": 3,
+    "letop": 25,
+    "info": 4,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-aanduiding": 2,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "bagage-heen": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 32,
       "zin-twijfeltaal": 10,
       "zin-lijdende-vorm": 4,
@@ -18063,6 +18707,20 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 175 woorden. Maximaal 25."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar India? Check wat de regels zijn bij de lokale autoriteiten."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -18516,10 +19174,11 @@
     ],
     "zinnen": 65,
     "fout": 12,
-    "letop": 7,
+    "letop": 8,
     "info": 0,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 1,
@@ -18532,6 +19191,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 56 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Demonstraties\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -18687,13 +19354,14 @@
       "rood"
     ],
     "zinnen": 148,
-    "fout": 25,
-    "letop": 19,
+    "fout": 24,
+    "letop": 21,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-niet-melden": 1,
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 22,
       "zin-twijfeltaal": 6,
       "zin-lijdende-vorm": 10,
@@ -18715,17 +19383,25 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 270 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Criminaliteit\" staat na \"Demonstraties\".",
+        "fragment": "Criminaliteit",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -19067,13 +19743,15 @@
     ],
     "zinnen": 118,
     "fout": 20,
-    "letop": 13,
+    "letop": 15,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-aanduiding": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "regionaal-gebiedenzin": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 3,
       "zin-max-woorden": 18,
       "zin-lijdende-vorm": 1,
@@ -19114,6 +19792,21 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 64 woorden. Maximaal 25."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Wetten en gebruiken\" staat na \"Demonstraties\".",
+        "fragment": "Wetten en gebruiken",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -19355,10 +20048,11 @@
     ],
     "zinnen": 76,
     "fout": 11,
-    "letop": 3,
+    "letop": 4,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 11,
       "link-tekstlengte": 1,
       "percentage-notatie": 1
@@ -19370,6 +20064,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is geel voor het schiereiland Reykjanes. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -20126,12 +20827,13 @@
     ],
     "zinnen": 120,
     "fout": 16,
-    "letop": 11,
+    "letop": 12,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 15,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 4,
@@ -20159,6 +20861,13 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 73 woorden. Maximaal 25."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -20362,12 +21071,13 @@
       "groen"
     ],
     "zinnen": 86,
-    "fout": 13,
-    "letop": 9,
+    "fout": 12,
+    "letop": 11,
     "info": 1,
     "perRegel": {
       "kleur-aanduiding": 1,
       "h3-niet-melden": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 4,
@@ -20386,11 +21096,18 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -20728,11 +21445,13 @@
     ],
     "zinnen": 146,
     "fout": 18,
-    "letop": 12,
+    "letop": 14,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "criminaliteit-themapagina": 1,
+      "rubrieken-max": 1,
       "zin-max-woorden": 17,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 1,
@@ -20754,6 +21473,20 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 57 woorden. Maximaal 25."
+      },
+      {
+        "regel": "criminaliteit-themapagina",
+        "ernst": "let-op",
+        "bron": "SJ, blok Criminaliteit",
+        "boodschap": "Na het maatwerk hoort de vaste verwijzing naar de themapagina over criminaliteit.",
+        "verwacht": "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht. Lees meer op de pagina Hoe voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?"
+      },
+      {
+        "regel": "rubrieken-max",
+        "ernst": "let-op",
+        "bron": "SJ, richtlijn boven de rubrieken",
+        "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
+        "notitie": "De rubrieken: Terrorisme, Conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
       },
       {
         "regel": "zin-max-woorden",
@@ -21152,11 +21885,13 @@
     ],
     "zinnen": 134,
     "fout": 18,
-    "letop": 21,
+    "letop": 23,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 18,
       "zin-twijfeltaal": 8,
       "zin-lijdende-vorm": 6,
@@ -21178,6 +21913,21 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor de strook van 5 kilometer vanaf de grens met Thailand. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Landmijnen\" staat na \"Demonstraties\".",
+        "fragment": "Landmijnen",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -21831,11 +22581,12 @@
     ],
     "zinnen": 103,
     "fout": 16,
-    "letop": 11,
+    "letop": 12,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 4,
       "zin-max-woorden": 16,
       "zin-twijfeltaal": 2,
@@ -21856,6 +22607,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Noord- en Zuid-Korea. Dit geldt ook voor de zee rondom het grensgebied. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -22069,10 +22827,11 @@
     ],
     "zinnen": 83,
     "fout": 13,
-    "letop": 9,
+    "letop": 10,
     "info": 0,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 12,
@@ -22086,6 +22845,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 59 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Wetten en gebruiken\" staat na \"Landmijnen\".",
+        "fragment": "Wetten en gebruiken",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -22617,11 +23384,12 @@
     ],
     "zinnen": 110,
     "fout": 19,
-    "letop": 10,
+    "letop": 11,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 17,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 3,
@@ -22647,6 +23415,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 185 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Wetten en gebruiken\" staat na \"Demonstraties\".",
+        "fragment": "Wetten en gebruiken",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -22874,12 +23650,13 @@
       "geel"
     ],
     "zinnen": 90,
-    "fout": 11,
-    "letop": 7,
+    "fout": 10,
+    "letop": 9,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
       "h3-niet-melden": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 10,
@@ -22896,11 +23673,18 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-twijfeltaal",
@@ -23040,12 +23824,14 @@
       "rood"
     ],
     "zinnen": 92,
-    "fout": 12,
-    "letop": 12,
+    "fout": 11,
+    "letop": 15,
     "info": 0,
     "perRegel": {
       "h3-niet-melden": 1,
       "actueel-max-woorden": 1,
+      "nood-lokale-hulpdiensten": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 7,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 2,
@@ -23055,17 +23841,32 @@
     "bevindingen": [
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 76 woorden. Maximaal 25."
+      },
+      {
+        "regel": "nood-lokale-hulpdiensten",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste aanhef boven de alarmnummers ontbreekt.",
+        "verwacht": "Heeft u direct hulp nodig in Libië? Neem contact op met de lokale hulpdiensten:"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Landmijnen\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -23394,15 +24195,32 @@
     ],
     "zinnen": 57,
     "fout": 9,
-    "letop": 3,
+    "letop": 5,
     "info": 0,
     "perRegel": {
+      "lhbtiq-verwijzing": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 9,
       "link-tekstlengte": 1,
       "percentage-notatie": 1,
       "lhbtiq-schrijfwijze": 1
     },
     "bevindingen": [
+      {
+        "regel": "lhbtiq-verwijzing",
+        "ernst": "let-op",
+        "bron": "SJ, blok Wetten en gebruiken",
+        "boodschap": "Waar lhbtiq+ aan de orde komt, hoort de vaste verwijzing naar de themapagina erbij.",
+        "verwacht": "Lees de tips op de pagina Kan ik veilig reizen als lhbtiq+ persoon? om risico's te verkleinen."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Wetten en gebruiken\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -23510,11 +24328,14 @@
     ],
     "zinnen": 129,
     "fout": 20,
-    "letop": 11,
-    "info": 0,
+    "letop": 13,
+    "info": 1,
     "perRegel": {
       "doc-woordenaantal": 1,
       "actueel-max-woorden": 1,
+      "bagage-heen": 1,
+      "rubrieken-max": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 18,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 4,
@@ -23539,6 +24360,28 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 45 woorden. Maximaal 25."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Sri Lanka? Check wat de regels zijn bij de lokale autoriteiten."
+      },
+      {
+        "regel": "rubrieken-max",
+        "ernst": "let-op",
+        "bron": "SJ, richtlijn boven de rubrieken",
+        "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
+        "notitie": "De rubrieken: Terrorisme, Criminaliteit, Verkeersongevallen, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Wetten en gebruiken\" staat na \"Verkeersongevallen\".",
+        "fragment": "Wetten en gebruiken",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -24167,11 +25010,13 @@
       "groen"
     ],
     "zinnen": 89,
-    "fout": 10,
-    "letop": 6,
+    "fout": 11,
+    "letop": 7,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "reisverzekering-oranje-rood": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 10,
       "zin-twijfeltaal": 1,
@@ -24185,6 +25030,20 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor het grensgebied tussen Letland en Belarus. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "reisverzekering-oranje-rood",
+        "ernst": "fout",
+        "bron": "SJ, blok Reisverzekering",
+        "boodschap": "Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij.",
+        "verwacht": "Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde risico's of kosten bij schade zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -24316,10 +25175,12 @@
       "geel"
     ],
     "zinnen": 65,
-    "fout": 10,
-    "letop": 6,
+    "fout": 11,
+    "letop": 7,
     "info": 0,
     "perRegel": {
+      "nood-contactcenter": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 1,
@@ -24327,6 +25188,21 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Wetten en gebruiken\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -24469,11 +25345,13 @@
     ],
     "zinnen": 132,
     "fout": 17,
-    "letop": 11,
+    "letop": 13,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 17,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 2,
@@ -24495,6 +25373,21 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Marokko en Mauritanië. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Landmijnen\" staat na \"Demonstraties\".",
+        "fragment": "Landmijnen",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -24716,9 +25609,10 @@
     "zinnen": 50,
     "fout": 8,
     "letop": 5,
-    "info": 0,
+    "info": 1,
     "perRegel": {
       "h2-vast": 1,
+      "bagage-heen": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 8,
       "link-tekstlengte": 2,
@@ -24731,6 +25625,13 @@
         "bron": "MX, tab Uitleg",
         "boodschap": "\"Welke veiilgheidsrisico's zijn er in Monaco?\" is geen vaste H2. Vast zijn: In het kort / Welke veiligheidsrisico's zijn er in Monaco? / Wat kan ik doen in een noodsituatie? / Hoe bereid ik mijn reis naar Monaco voor? / Ook nuttig.",
         "fragment": "Welke veiilgheidsrisico's zijn er in Monaco?"
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Monaco? Check wat de regels zijn bij de lokale autoriteiten."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -24840,10 +25741,11 @@
     ],
     "zinnen": 89,
     "fout": 9,
-    "letop": 7,
+    "letop": 8,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 9,
       "zin-twijfeltaal": 2,
@@ -24857,6 +25759,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor de regio Transnistrië. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -25429,12 +26338,15 @@
       "geel"
     ],
     "zinnen": 183,
-    "fout": 20,
-    "letop": 20,
+    "fout": 22,
+    "letop": 21,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
+      "kleur-formulering-verboden": 1,
+      "nood-contactcenter": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 19,
       "zin-twijfeltaal": 4,
       "zin-lijdende-vorm": 7,
@@ -25461,6 +26373,29 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor de actieve vulkanen Popocatépetl en Colima. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "kleur-formulering-verboden",
+        "ernst": "fout",
+        "bron": "SJ, blok In het kort",
+        "boodschap": "\"oranje gebied\" gebruiken we niet meer.",
+        "fragment": "Let op: Gaat u naar het rode en/of oranje gebied in Mexico?",
+        "verwacht": "gebied met kleurcode oranje"
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Demonstraties\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -26375,8 +27310,8 @@
       "oranje"
     ],
     "zinnen": 119,
-    "fout": 17,
-    "letop": 15,
+    "fout": 16,
+    "letop": 16,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -26411,11 +27346,11 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "actueel-max-woorden",
@@ -27397,10 +28332,12 @@
     ],
     "zinnen": 89,
     "fout": 14,
-    "letop": 7,
+    "letop": 9,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "rijbewijs-anwb": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 13,
       "zin-twijfeltaal": 1,
@@ -27415,6 +28352,20 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor het zuiden van Montserrat. Hier ligt de vulkaan Soufrière die sinds 1995 actief is. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Montserrat op de website van de ANWB."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -27934,9 +28885,10 @@
     ],
     "zinnen": 83,
     "fout": 13,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perRegel": {
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 13,
@@ -27944,6 +28896,14 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Demonstraties\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-twijfeltaal",
         "ernst": "let-op",
@@ -28108,10 +29068,11 @@
     ],
     "zinnen": 103,
     "fout": 11,
-    "letop": 7,
+    "letop": 8,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 2,
@@ -28125,6 +29086,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor een aantal eilanden rondom Sabah. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -28995,11 +29963,12 @@
     ],
     "zinnen": 131,
     "fout": 19,
-    "letop": 12,
+    "letop": 13,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 4,
       "zin-max-woorden": 17,
       "zin-lijdende-vorm": 5,
@@ -29024,6 +29993,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 28 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Verkeersongevallen\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -29269,8 +30246,9 @@
     "zinnen": 69,
     "fout": 7,
     "letop": 4,
-    "info": 0,
+    "info": 1,
     "perRegel": {
+      "kinderen-documenten": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 1,
@@ -29278,6 +30256,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "kinderen-documenten",
+        "ernst": "info",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "De vaste verwijzing over reizen met een minderjarig kind ontbreekt.",
+        "verwacht": "Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -29379,14 +30364,31 @@
     ],
     "zinnen": 65,
     "fout": 9,
-    "letop": 3,
+    "letop": 5,
     "info": 0,
     "perRegel": {
+      "reisverzekering-vaste-tekst": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 9,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "reisverzekering-vaste-tekst",
+        "ernst": "let-op",
+        "bron": "SJ, blok Reisverzekering",
+        "boodschap": "De vaste openingstekst over de reisverzekering ontbreekt.",
+        "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Wetten en gebruiken\" staat na \"Natuurgeweld\".",
+        "fragment": "Wetten en gebruiken",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -29690,8 +30692,8 @@
       "groen"
     ],
     "zinnen": 70,
-    "fout": 17,
-    "letop": 7,
+    "fout": 16,
+    "letop": 8,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
@@ -29711,11 +30713,11 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -29902,10 +30904,11 @@
     ],
     "zinnen": 103,
     "fout": 17,
-    "letop": 12,
+    "letop": 13,
     "info": 0,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 6,
       "zin-twijfeltaal": 3,
@@ -29918,6 +30921,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 34 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Natuurgeweld\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -30156,13 +31167,14 @@
     ],
     "zinnen": 120,
     "fout": 15,
-    "letop": 10,
+    "letop": 11,
     "info": 1,
     "perRegel": {
       "kleur-aanduiding": 1,
       "kleur-vaste-tekst": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 13,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 1,
@@ -30198,6 +31210,13 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 58 woorden. Maximaal 25."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -30386,8 +31405,8 @@
       "geel"
     ],
     "zinnen": 138,
-    "fout": 16,
-    "letop": 17,
+    "fout": 15,
+    "letop": 18,
     "info": 2,
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -30423,11 +31442,11 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -30693,11 +31712,13 @@
       "geel"
     ],
     "zinnen": 111,
-    "fout": 14,
-    "letop": 11,
+    "fout": 15,
+    "letop": 12,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "reisverzekering-oranje-rood": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-twijfeltaal": 5,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 14,
@@ -30711,6 +31732,20 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor het grensgebied tussen Panama en Colombia. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "reisverzekering-oranje-rood",
+        "ernst": "fout",
+        "bron": "SJ, blok Reisverzekering",
+        "boodschap": "Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij.",
+        "verwacht": "Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde risico's of kosten bij schade zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-twijfeltaal",
@@ -30915,12 +31950,16 @@
       "groen"
     ],
     "zinnen": 65,
-    "fout": 5,
-    "letop": 5,
-    "info": 0,
+    "fout": 4,
+    "letop": 9,
+    "info": 1,
     "perRegel": {
       "kleur-aanduiding": 1,
       "h3-niet-melden": 1,
+      "reisverzekering-vaste-tekst": 1,
+      "bagage-heen": 1,
+      "criminaliteit-themapagina": 1,
+      "rijbewijs-anwb": 1,
       "zin-max-woorden": 4,
       "zin-twijfeltaal": 1,
       "vragen-opeenvolgend": 1,
@@ -30937,11 +31976,39 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
+      },
+      {
+        "regel": "reisverzekering-vaste-tekst",
+        "ernst": "let-op",
+        "bron": "SJ, blok Reisverzekering",
+        "boodschap": "De vaste openingstekst over de reisverzekering ontbreekt.",
+        "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Pitcairneilanden? Check wat de regels zijn bij de lokale autoriteiten."
+      },
+      {
+        "regel": "criminaliteit-themapagina",
+        "ernst": "let-op",
+        "bron": "SJ, blok Criminaliteit",
+        "boodschap": "Na het maatwerk hoort de vaste verwijzing naar de themapagina over criminaliteit.",
+        "verwacht": "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht. Lees meer op de pagina Hoe voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?"
+      },
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Pitcairneilanden op de website van de ANWB."
       },
       {
         "regel": "zin-max-woorden",
@@ -31021,12 +32088,15 @@
     ],
     "zinnen": 165,
     "fout": 25,
-    "letop": 12,
-    "info": 0,
+    "letop": 14,
+    "info": 1,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "nood-lokale-hulpdiensten": 1,
+      "medicijnen-voldoende": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 23,
       "zin-lijdende-vorm": 5,
       "zin-twijfeltaal": 3,
@@ -31058,6 +32128,28 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 131 woorden. Maximaal 25."
+      },
+      {
+        "regel": "nood-lokale-hulpdiensten",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste aanhef boven de alarmnummers ontbreekt.",
+        "verwacht": "Heeft u direct hulp nodig in Peru? Neem contact op met de lokale hulpdiensten:"
+      },
+      {
+        "regel": "medicijnen-voldoende",
+        "ernst": "info",
+        "bron": "SJ, blok Medicijnen",
+        "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Demonstraties\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -31746,10 +32838,12 @@
       "groen"
     ],
     "zinnen": 98,
-    "fout": 18,
-    "letop": 8,
+    "fout": 19,
+    "letop": 9,
     "info": 0,
     "perRegel": {
+      "intro-vaste-tekst": 1,
+      "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 18,
       "zin-twijfeltaal": 1,
@@ -31758,6 +32852,21 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "intro-vaste-tekst",
+        "ernst": "fout",
+        "bron": "SJ, blok Introductie",
+        "boodschap": "De intro wijkt af van de vaste introductietekst.",
+        "fragment": "Reist u naar Palau? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood en hoe u zich voorbereidt op uw reis.",
+        "verwacht": "Reist u naar Palau? Lees welke veiligheidsrisico's er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
+      },
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Palau op de website van de ANWB."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -31977,12 +33086,14 @@
     ],
     "zinnen": 166,
     "fout": 18,
-    "letop": 16,
+    "letop": 18,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "regionaal-gebiedenzin": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 9,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 2,
@@ -32015,6 +33126,21 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 28 woorden. Maximaal 25."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Demonstraties\" staat na \"Verkeersongevallen\".",
+        "fragment": "Demonstraties",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -32604,14 +33730,54 @@
     ],
     "zinnen": 46,
     "fout": 6,
-    "letop": 2,
+    "letop": 7,
     "info": 0,
     "perRegel": {
+      "nood-lokale-hulpdiensten": 1,
+      "nood-verwijzing-nood": 1,
+      "nood-verwijzing-crisis": 1,
+      "rijbewijs-anwb": 1,
+      "rood-herhaling-voorbereiding": 1,
       "zin-max-woorden": 6,
       "link-tekstlengte": 1,
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-lokale-hulpdiensten",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste aanhef boven de alarmnummers ontbreekt.",
+        "verwacht": "Heeft u direct hulp nodig in Noord-Korea? Neem contact op met de lokale hulpdiensten:"
+      },
+      {
+        "regel": "nood-verwijzing-nood",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in geval van nood."
+      },
+      {
+        "regel": "nood-verwijzing-crisis",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "verwacht": "Lees wat u kunt doen in een crisissituatie."
+      },
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Noord-Korea op de website van de ANWB."
+      },
+      {
+        "regel": "rood-herhaling-voorbereiding",
+        "ernst": "let-op",
+        "bron": "SJ, blok Hoe bereid ik mijn reis voor",
+        "boodschap": "Bij een volledig rood reisadvies herhalen we de waarschuwing onder de reisvoorbereiding.",
+        "verwacht": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -33014,11 +34180,12 @@
     ],
     "zinnen": 112,
     "fout": 17,
-    "letop": 9,
+    "letop": 10,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 16,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 2,
@@ -33038,6 +34205,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 124 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Demonstraties\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -33783,10 +34958,11 @@
     ],
     "zinnen": 96,
     "fout": 12,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 12,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
@@ -33800,6 +34976,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is geel voor een deel van het grensgebied tussen Roemenië en Oekraïne. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -33948,10 +35131,11 @@
     ],
     "zinnen": 104,
     "fout": 13,
-    "letop": 13,
+    "letop": 14,
     "info": 0,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 12,
       "zin-lijdende-vorm": 5,
       "zin-twijfeltaal": 4,
@@ -33965,6 +35149,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 52 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Natuurgeweld\" staat na \"Landmijnen\".",
+        "fragment": "Natuurgeweld",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -34176,8 +35368,8 @@
       "oranje"
     ],
     "zinnen": 198,
-    "fout": 25,
-    "letop": 16,
+    "fout": 24,
+    "letop": 17,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -34213,11 +35405,11 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "actueel-max-woorden",
@@ -34528,11 +35720,13 @@
     ],
     "zinnen": 135,
     "fout": 21,
-    "letop": 10,
-    "info": 0,
+    "letop": 11,
+    "info": 1,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "bagage-heen": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 19,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 1,
@@ -34554,6 +35748,20 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 93 woorden. Maximaal 25."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Rwanda? Check wat de regels zijn bij de lokale autoriteiten."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -34798,12 +36006,14 @@
     ],
     "zinnen": 104,
     "fout": 12,
-    "letop": 7,
+    "letop": 9,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
       "kleur-eerste-bullet-voluit": 1,
       "actueel-max-woorden": 1,
+      "regionaal-gebiedenzin": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
@@ -34831,6 +36041,21 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 73 woorden. Maximaal 25."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Demonstraties\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -34971,10 +36196,11 @@
     ],
     "zinnen": 85,
     "fout": 12,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "nood-lokale-hulpdiensten": 1,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
@@ -34988,6 +36214,13 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 86 woorden. Maximaal 25."
+      },
+      {
+        "regel": "nood-lokale-hulpdiensten",
+        "ernst": "let-op",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste aanhef boven de alarmnummers ontbreekt.",
+        "verwacht": "Heeft u direct hulp nodig in Sudan? Neem contact op met de lokale hulpdiensten:"
       },
       {
         "regel": "zin-max-woorden",
@@ -35136,11 +36369,12 @@
     ],
     "zinnen": 92,
     "fout": 11,
-    "letop": 8,
+    "letop": 9,
     "info": 1,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
       "h3-niet-melden": 1,
+      "nood-contactcenter": 1,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 2,
@@ -35159,11 +36393,18 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
         "regel": "zin-max-woorden",
@@ -35319,8 +36560,9 @@
     "zinnen": 98,
     "fout": 15,
     "letop": 10,
-    "info": 0,
+    "info": 1,
     "perRegel": {
+      "bagage-heen": 1,
       "zin-lijdende-vorm": 5,
       "zin-max-woorden": 15,
       "zin-twijfeltaal": 2,
@@ -35328,6 +36570,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Singapore? Check wat de regels zijn bij de lokale autoriteiten."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -35921,8 +37170,8 @@
       "geel"
     ],
     "zinnen": 95,
-    "fout": 14,
-    "letop": 10,
+    "fout": 13,
+    "letop": 11,
     "info": 0,
     "perRegel": {
       "h3-niet-melden": 1,
@@ -35935,11 +37184,11 @@
     "bevindingen": [
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -36136,9 +37385,10 @@
     ],
     "zinnen": 102,
     "fout": 14,
-    "letop": 5,
+    "letop": 6,
     "info": 0,
     "perRegel": {
+      "criminaliteit-themapagina": 1,
       "zin-max-woorden": 14,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
@@ -36146,6 +37396,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "criminaliteit-themapagina",
+        "ernst": "let-op",
+        "bron": "SJ, blok Criminaliteit",
+        "boodschap": "Na het maatwerk hoort de vaste verwijzing naar de themapagina over criminaliteit.",
+        "verwacht": "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht. Lees meer op de pagina Hoe voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?"
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -36436,9 +37693,10 @@
     ],
     "zinnen": 125,
     "fout": 15,
-    "letop": 8,
+    "letop": 9,
     "info": 0,
     "perRegel": {
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 15,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 1,
@@ -36447,6 +37705,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "fout",
@@ -36641,9 +37906,10 @@
     ],
     "zinnen": 77,
     "fout": 9,
-    "letop": 9,
+    "letop": 10,
     "info": 0,
     "perRegel": {
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 9,
@@ -36651,6 +37917,14 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Demonstraties\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
       {
         "regel": "zin-twijfeltaal",
         "ernst": "let-op",
@@ -36806,11 +38080,12 @@
     ],
     "zinnen": 109,
     "fout": 13,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 11,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 1,
@@ -36835,6 +38110,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 37 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Landmijnen\" staat na \"Demonstraties\".",
+        "fragment": "Landmijnen",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -37155,8 +38438,8 @@
       "geel"
     ],
     "zinnen": 95,
-    "fout": 17,
-    "letop": 9,
+    "fout": 16,
+    "letop": 10,
     "info": 0,
     "perRegel": {
       "h3-niet-melden": 1,
@@ -37169,11 +38452,11 @@
     "bevindingen": [
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -38037,10 +39320,11 @@
       "groen"
     ],
     "zinnen": 60,
-    "fout": 8,
+    "fout": 9,
     "letop": 4,
     "info": 1,
     "perRegel": {
+      "nood-contactcenter": 1,
       "tussenkop-leestekens": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 8,
@@ -38048,6 +39332,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
       {
         "regel": "tussenkop-leestekens",
         "ernst": "info",
@@ -38294,10 +39585,11 @@
     ],
     "zinnen": 80,
     "fout": 14,
-    "letop": 9,
+    "letop": 10,
     "info": 0,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 13,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 4,
@@ -38310,6 +39602,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 119 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Criminaliteit\" staat na \"Wetten en gebruiken\".",
+        "fragment": "Criminaliteit",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -38499,10 +39799,11 @@
     ],
     "zinnen": 70,
     "fout": 10,
-    "letop": 5,
+    "letop": 6,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 10,
       "link-tekstlengte": 2,
@@ -38515,6 +39816,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is geel voor het eiland Providenciales. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -38639,12 +39947,13 @@
       "oranje"
     ],
     "zinnen": 111,
-    "fout": 11,
-    "letop": 8,
+    "fout": 10,
+    "letop": 10,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
       "h3-niet-melden": 1,
+      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 2,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 2,
@@ -38661,11 +39970,19 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Demonstraties\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -38816,11 +40133,13 @@
     ],
     "zinnen": 100,
     "fout": 11,
-    "letop": 7,
-    "info": 1,
+    "letop": 8,
+    "info": 2,
     "perRegel": {
       "kleur-aanduiding": 1,
       "kleur-eerste-bullet-voluit": 1,
+      "bagage-heen": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
@@ -38842,6 +40161,20 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor het noordelijke deel van de regio Savanes dat grenst aan Burkina Faso. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Togo? Check wat de regels zijn bij de lokale autoriteiten."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -38991,11 +40324,12 @@
     ],
     "zinnen": 217,
     "fout": 28,
-    "letop": 25,
+    "letop": 26,
     "info": 4,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 27,
       "zin-twijfeltaal": 9,
       "zin-lijdende-vorm": 9,
@@ -39024,6 +40358,14 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is rood voor de strook van 5 kilometer vanaf de grens met Cambodja. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Wetten en gebruiken\" staat na \"Verkeersongevallen\".",
+        "fragment": "Wetten en gebruiken",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -39986,11 +41328,12 @@
       "geel"
     ],
     "zinnen": 107,
-    "fout": 13,
-    "letop": 11,
+    "fout": 12,
+    "letop": 13,
     "info": 0,
     "perRegel": {
       "h3-niet-melden": 1,
+      "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 12,
       "zin-twijfeltaal": 5,
@@ -40001,11 +41344,19 @@
     "bevindingen": [
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Criminaliteit\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -40202,9 +41553,10 @@
     ],
     "zinnen": 73,
     "fout": 14,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perRegel": {
+      "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 13,
       "zin-twijfeltaal": 1,
@@ -40213,6 +41565,13 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Tonga op de website van de ANWB."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -41204,8 +42563,8 @@
       "groen"
     ],
     "zinnen": 65,
-    "fout": 11,
-    "letop": 6,
+    "fout": 10,
+    "letop": 7,
     "info": 0,
     "perRegel": {
       "h3-niet-melden": 1,
@@ -41218,11 +42577,11 @@
     "bevindingen": [
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -41530,11 +42889,12 @@
     ],
     "zinnen": 165,
     "fout": 17,
-    "letop": 16,
+    "letop": 17,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 16,
       "zin-twijfeltaal": 4,
       "zin-lijdende-vorm": 5,
@@ -41562,6 +42922,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor het grensgebied tussen Tanzania en Mozambique, in de regio Mtwara. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -42062,10 +43429,11 @@
     ],
     "zinnen": 75,
     "fout": 10,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 9,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 1,
@@ -42078,6 +43446,14 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 116 woorden. Maximaal 25."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Wetten en gebruiken\" staat na \"Landmijnen\".",
+        "fragment": "Wetten en gebruiken",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -42359,11 +43735,12 @@
     ],
     "zinnen": 88,
     "fout": 17,
-    "letop": 11,
+    "letop": 12,
     "info": 1,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-aanduiding": 1,
+      "rubrieken-volgorde": 1,
       "tussenkop-leestekens": 1,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 4,
@@ -42390,6 +43767,14 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Verenigde Staten van Amerika is groen."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Wetten en gebruiken\" staat na \"Demonstraties\".",
+        "fragment": "Wetten en gebruiken",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "tussenkop-leestekens",
@@ -43029,13 +44414,15 @@
     ],
     "zinnen": 130,
     "fout": 21,
-    "letop": 15,
+    "letop": 17,
     "info": 0,
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-eerste-bullet-voluit": 1,
       "h3-niet-melden": 1,
       "actueel-max-woorden": 1,
+      "nood-contactcenter": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 18,
       "zin-twijfeltaal": 6,
       "zin-lijdende-vorm": 4,
@@ -43065,17 +44452,32 @@
       },
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 82 woorden. Maximaal 25."
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Criminaliteit\" staat na \"Demonstraties\".",
+        "fragment": "Criminaliteit",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -43526,10 +44928,11 @@
     ],
     "zinnen": 66,
     "fout": 16,
-    "letop": 9,
+    "letop": 10,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
+      "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 16,
       "zin-twijfeltaal": 1,
@@ -43543,6 +44946,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Amerikaanse Maagdeneilanden is groen."
+      },
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Amerikaanse Maagdeneilanden op de website van de ANWB."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -43747,9 +45157,10 @@
     "zinnen": 113,
     "fout": 21,
     "letop": 14,
-    "info": 0,
+    "info": 1,
     "perRegel": {
       "doc-woordenaantal": 1,
+      "bagage-heen": 1,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 20,
       "zin-twijfeltaal": 7,
@@ -43768,6 +45179,13 @@
           "Wetten en gebruiken (182 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Wat mag ik meenemen naar Vietnam? Check wat de regels zijn bij de lokale autoriteiten."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -44051,8 +45469,8 @@
       "groen"
     ],
     "zinnen": 109,
-    "fout": 18,
-    "letop": 12,
+    "fout": 17,
+    "letop": 13,
     "info": 0,
     "perRegel": {
       "h3-niet-melden": 1,
@@ -44067,11 +45485,11 @@
     "bevindingen": [
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -44314,15 +45732,23 @@
     ],
     "zinnen": 54,
     "fout": 9,
-    "letop": 4,
+    "letop": 5,
     "info": 0,
     "perRegel": {
+      "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 9,
       "link-tekstlengte": 2,
       "percentage-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "rijbewijs-anwb",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort, visum, rijbewijs",
+        "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "verwacht": "Lees meer over rijden in Wallis en Futuna op de website van de ANWB."
+      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -44588,10 +46014,12 @@
     ],
     "zinnen": 102,
     "fout": 13,
-    "letop": 16,
-    "info": 0,
+    "letop": 17,
+    "info": 1,
     "perRegel": {
       "actueel-max-woorden": 1,
+      "medicijnen-voldoende": 1,
+      "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 9,
       "zin-max-woorden": 12,
       "zin-twijfeltaal": 4,
@@ -44604,6 +46032,21 @@
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Actueel telt 109 woorden. Maximaal 25."
+      },
+      {
+        "regel": "medicijnen-voldoende",
+        "ernst": "info",
+        "bron": "SJ, blok Medicijnen",
+        "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Criminaliteit\" staat na \"Willekeurige arrestaties\".",
+        "fragment": "Criminaliteit",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -44839,11 +46282,13 @@
       "geel"
     ],
     "zinnen": 93,
-    "fout": 17,
-    "letop": 14,
+    "fout": 18,
+    "letop": 15,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
+      "nood-contactcenter": 1,
+      "rubrieken-volgorde": 1,
       "zin-max-woorden": 17,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 1,
@@ -44859,6 +46304,21 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Zuid-Afrika is geel."
+      },
+      {
+        "regel": "nood-contactcenter",
+        "ernst": "fout",
+        "bron": "SJ, blok In geval van nood",
+        "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "rubrieken-volgorde",
+        "ernst": "let-op",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Terrorisme\" staat na \"Natuurgeweld\".",
+        "fragment": "Terrorisme",
+        "notitie": "De volgorde van relevantie is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -45106,10 +46566,11 @@
     ],
     "zinnen": 95,
     "fout": 13,
-    "letop": 12,
+    "letop": 13,
     "info": 0,
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
+      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 13,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 4,
@@ -45124,6 +46585,13 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De eerste bullet over de kleurcode moet voluit: \"De kleurcode van het reisadvies voor ... is ...\".",
         "fragment": "De kleurcode van het reisadvies is oranje voor het grensgebied tussen Zambia en de Democratische Republiek Congo (DRC), Angola en Mozambique. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico's",
+        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -45327,8 +46795,8 @@
       "geel"
     ],
     "zinnen": 86,
-    "fout": 13,
-    "letop": 7,
+    "fout": 12,
+    "letop": 8,
     "info": 0,
     "perRegel": {
       "h3-niet-melden": 1,
@@ -45341,11 +46809,11 @@
     "bevindingen": [
       {
         "regel": "h3-niet-melden",
-        "ernst": "fout",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen · SJ, eigen blok",
+        "boodschap": "\"Geldzaken\": de matrix zegt niet-melden, het nieuwere sjabloon zegt \"alleen indien noodzakelijk\".",
         "fragment": "Geldzaken",
-        "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+        "notitie": "De tool meldt Geldzaken als 'let op' in plaats van 'fout', met beide bronnen erbij. Welke bron voorgaat is een redactionele keuze, geen technische."
       },
       {
         "regel": "zin-lijdende-vorm",

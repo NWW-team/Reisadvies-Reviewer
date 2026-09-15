@@ -29,8 +29,12 @@ function alsNamespace(bron, naam, exports, vervang = []) {
 }
 
 const parse = alsNamespace(lees('src', 'parse.js'), 'Parse', ['parseAdvies', 'splitsZinnen', 'telWoorden']);
+// De import uit parse.js wordt een verwijzing naar de Parse-namespace. Welke namen er worden
+// geïmporteerd leest het script uit de importregel zelf, zodat een extra import hier niet stil
+// wegvalt: in Node draaien het echte modules en merken de tests zo'n omissie niet.
 const regels = alsNamespace(lees('src', 'regels.js'), 'Regels', ['maakToetser', 'norm', 'ERNST'],
-  [[/^import \{ telWoorden \} from '\.\/parse\.js';$/m, 'const telWoorden = Parse.telWoorden;']]);
+  [[/^import \{([^}]+)\} from '\.\/parse\.js';$/m,
+    (_, namen) => namen.split(',').map((n) => `const ${n.trim()} = Parse.${n.trim()};`).join('\n')]]);
 
 const regeldata = {
   matrix: JSON.parse(lees('regels', 'matrix.json')),

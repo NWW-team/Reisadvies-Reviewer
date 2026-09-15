@@ -1,0 +1,12 @@
+{
+  "name": "reisadvies-reviewer",
+  "version": "0.1.0",
+  "description": "Toetst reisadviezen van Nederlandwereldwijd.nl op de schrijfwijzer en de format-matrix.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "corpus": "node scripts/fetch-corpus.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

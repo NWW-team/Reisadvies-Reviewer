@@ -1,0 +1,240 @@
+{
+  "_bron": "Schrijfwijzer Nederland Wereldwijd - website.docx",
+  "twijfeltaal": {
+    "_bron": "Begrijpelijkheid > B1: 'Vermijd twijfeltaal. Denk aan woorden zoals: misschien, vaak, mogelijk, bijna, etc.'",
+    "woorden": [
+      "misschien",
+      "vaak",
+      "mogelijk",
+      "mogelijkerwijs",
+      "bijna",
+      "waarschijnlijk",
+      "wellicht",
+      "eventueel",
+      "eventuele",
+      "soms",
+      "veelal",
+      "doorgaans",
+      "regelmatig",
+      "vermoedelijk",
+      "in principe",
+      "over het algemeen",
+      "kan voorkomen",
+      "zou kunnen"
+    ]
+  },
+  "negatieve_lading": {
+    "_bron": "Begrijpelijkheid > Positieve taal: 'Gebruik zo min mogelijk woorden met een negatieve lading, zoals niet, nooit, probleem, mislukt etc.'",
+    "_toepassing": "Dichtheidstoets, geen fout per voorkomen. Vaste kleurcode-formuleringen tellen niet mee.",
+    "woorden": [
+      "niet",
+      "nooit",
+      "geen",
+      "probleem",
+      "problemen",
+      "mislukt",
+      "mislukken",
+      "onmogelijk",
+      "verboden",
+      "helaas",
+      "weiger",
+      "geweigerd",
+      "fout",
+      "gebrek"
+    ],
+    "drempel_per_100_woorden": 6
+  },
+  "afkortingen": {
+    "_bron": "Schrijfregels > Afkortingen: 'Schrijf afkortingen uit: bijvoorbeeld in plaats van bijv.'",
+    "vervang": {
+      "bijv.": "bijvoorbeeld",
+      "etc.": "enzovoort",
+      "e.d.": "en dergelijke",
+      "o.a.": "onder andere",
+      "m.b.t.": "met betrekking tot",
+      "i.v.m.": "in verband met",
+      "d.w.z.": "dat wil zeggen",
+      "n.a.v.": "naar aanleiding van",
+      "z.s.m.": "zo snel mogelijk",
+      "evt.": "eventueel",
+      "incl.": "inclusief",
+      "excl.": "exclusief",
+      "max.": "maximaal",
+      "min.": "minimaal",
+      "ca.": "ongeveer",
+      "t.o.v.": "ten opzichte van",
+      "i.p.v.": "in plaats van",
+      "a.u.b.": "alstublieft"
+    },
+    "toegestaan": [
+      "t/m",
+      "nr.",
+      "dhr.",
+      "mw."
+    ],
+    "_toegestaan_toelichting": "Organisatie-afkortingen (ANWB, RDW, SVB, CAK, RvIG, GGD, LCR, EU, NAVO, NS, VK, VAE) worden apart afgehandeld: eerste keer voluit met afkorting tussen haakjes."
+  },
+  "eenheden_voluit": {
+    "_bron": "Schrijfregels > Afstanden, Gewicht, Hoeveelheden: 'Schrijf aanduidingen voluit.'",
+    "vervang": {
+      "km": "kilometer",
+      "cm": "centimeter",
+      "mm": "millimeter",
+      "kg": "kilogram",
+      "gr": "gram",
+      "ltr": "liter",
+      "ml": "milliliter"
+    }
+  },
+  "vaste_schrijfwijze": {
+    "_bron": "Schrijfregels: 'u heeft', 'u wilt', 'Caribisch', 'ID-bewijs niet gebruiken'",
+    "vervang": {
+      "u hebt": "u heeft",
+      "u wil": "u wilt",
+      "Caraïbisch": "Caribisch",
+      "ID-bewijs": "identiteitsbewijs"
+    },
+    "_toelichting": "Hoofdletterongevoelig getoetst; het vervangwoord toont de juiste schrijfwijze."
+  },
+  "genderneutraal": {
+    "_bron": "Schrijfregels > Gender(neutraal) / lhbtiq+",
+    "woorden": [
+      "hij/zij",
+      "zij/hij",
+      "hij of zij",
+      "zijn/haar",
+      "haar/zijn",
+      "echtgenoot",
+      "echtgenote",
+      "dames en heren",
+      "beste dames",
+      "de aanvrager zijn",
+      "mannelijke reiziger",
+      "vrouwelijke reiziger"
+    ],
+    "lhbtiq": {
+      "_bron": "Schrijfregels > Gender(neutraal) / lhbtiq+",
+      "_regel": "We gebruiken de term lhbtiq+. Bijvoeglijk met spatie (lhbtiq+ personen), definiërend met koppelteken (lhbtiq+-rechten).",
+      "patronen": [
+        {
+          "patroon": "\\blhbtiq(?!\\+)\\b",
+          "boodschap": "\"lhbtiq\" zonder plusteken; we gebruiken de term lhbtiq+."
+        },
+        {
+          "patroon": "lhbtiq\\+(?=\\p{L})",
+          "boodschap": "\"lhbtiq+\" direct tegen het volgende woord; bijvoeglijk hoort er een spatie tussen (lhbtiq+ personen), definiërend een koppelteken (lhbtiq+-rechten)."
+        },
+        {
+          "patroon": "\\bLHBTIQ\\+",
+          "boodschap": "\"LHBTIQ+\" in hoofdletters; we schrijven lhbtiq+."
+        },
+        {
+          "patroon": "\\blhbti\\+|\\blhbt\\b",
+          "boodschap": "verouderde afkorting; we gebruiken lhbtiq+."
+        }
+      ]
+    }
+  },
+  "lijdende_vorm": {
+    "_bron": "Begrijpelijkheid > B1: 'Schrijf actief. Dus vermijd de lijdende vorm.'",
+    "hulpwerkwoorden": [
+      "wordt",
+      "worden",
+      "werd",
+      "werden",
+      "is geworden",
+      "zijn geworden"
+    ],
+    "_detectie": "hulpwerkwoord gevolgd door een voltooid deelwoord in dezelfde zin, inclusief scheidbare werkwoorden (wordt opgestuurd)",
+    "deelwoord_patroon": "(?:\\p{L}+)?ge\\p{L}+(?:d|t|en)|(?:be|ver|ont|her)\\p{L}+(?:d|t|en)",
+    "geen_deelwoord": [
+      "gebied",
+      "gebieden",
+      "geld",
+      "gebouw",
+      "gebouwen",
+      "gezin",
+      "geval",
+      "gevallen",
+      "gebrek",
+      "geluid",
+      "gewicht",
+      "gemeente",
+      "gerecht",
+      "gedrag",
+      "gevaar",
+      "geloof",
+      "geslacht",
+      "gewoonte",
+      "gedeelte",
+      "gebergte",
+      "gezondheid",
+      "gemak",
+      "genot",
+      "gehalte",
+      "geheel",
+      "verband",
+      "verschil",
+      "verkeer",
+      "verblijf",
+      "bericht",
+      "berichten",
+      "bedrag",
+      "begin",
+      "beleid",
+      "onthaal",
+      "herkomst"
+    ]
+  },
+  "lidwoorden": [
+    "de",
+    "het",
+    "een"
+  ],
+  "leestekens_in_koppen_verboden": [
+    ".",
+    ",",
+    ";",
+    ":",
+    "!",
+    "\"",
+    "'",
+    "(",
+    ")"
+  ],
+  "_leestekens_uitzondering": "Een vraagteken mag, want de vraagvorm is toegestaan in titels en tussenkoppen.",
+  "aanhalingstekens_verboden": [
+    "“",
+    "”",
+    "‘",
+    "’",
+    "\""
+  ],
+  "_aanhalingstekens_bron": "Schrijfregels > Aanhalingstekens: 'Gebruik geen aanhalingstekens. Kan het echt niet zonder? Gebruik dan alleen enkele en rechte.'",
+  "niet_linken_naar": {
+    "_bron": "Relevantie > Naar wie linken we niet?",
+    "categorieen": [
+      "commerciële partijen",
+      "politieke partijen",
+      "belangenbehartigers",
+      "uitzendingen of artikelen uit media"
+    ],
+    "domeinen": [
+      "facebook.com",
+      "x.com",
+      "twitter.com",
+      "instagram.com",
+      "tiktok.com",
+      "nu.nl",
+      "nos.nl",
+      "telegraaf.nl",
+      "ad.nl",
+      "volkskrant.nl",
+      "nrc.nl",
+      "booking.com",
+      "tripadvisor.com",
+      "expedia.com",
+      "skyscanner.net"
+    ]
+  }
+}

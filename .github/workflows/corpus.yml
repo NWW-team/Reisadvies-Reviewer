@@ -1,0 +1,64 @@
+name: Corpus ophalen
+
+# De Claude Code-omgeving waarin dit project wordt ontwikkeld zit achter een netwerk-allowlist
+# die alleen GitHub en de package-registries doorlaat. Een Actions-runner heeft wel gewone
+# internettoegang, dus het ophalen van de open data gebeurt hier, en het resultaat wordt naar
+# de repo gecommit. Daarmee is het corpus voor iedereen (en voor de bulkslag) beschikbaar.
+
+on:
+  workflow_dispatch:
+    inputs:
+      landen:
+        description: 'ISO-codes, spatiegescheiden. Leeg = alle 227.'
+        required: false
+        default: ''
+  schedule:
+    - cron: '0 5 * * 1'   # elke maandag 05.00 UTC
+  push:
+    # workflow_dispatch telt pas mee zodra deze workflow op de default branch staat. Tot die
+    # tijd is een marker in de commitboodschap de manier om hem bewust te starten.
+    branches: ['claude/**']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: corpus-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  ophalen:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[corpus]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Reisadviezen ophalen
+        run: node scripts/fetch-corpus.mjs ${{ github.event.inputs.landen }}
+
+      - name: Samenvatting tonen
+        run: |
+          echo '### Ophaalrapport' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat data/ophaalrapport.json >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "Bestanden: $(ls data/corpus | wc -l)"
+
+      - name: Bulkslag draaien
+        run: node scripts/bulk.mjs || true
+
+      - name: Corpus terugcommitten
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/
+          if git diff --staged --quiet; then
+            echo 'Geen wijzigingen in het corpus.'
+          else
+            git commit -m "Corpus bijwerken ($(ls data/corpus | wc -l) reisadviezen)"
+            git push
+          fi

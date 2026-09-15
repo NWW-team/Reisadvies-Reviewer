@@ -1,0 +1,915 @@
+{
+  "_bron": "Kopie van ISO Landenlijst.xlsx",
+  "_aantal": 227,
+  "_toelichting": "iso is het pad-segment voor de open data v2 API; locationKey is de terugval als de ISO-variant niets oplevert. Vier codes zijn geen ISO-3166 alfa-3 (BQ-BO, BQ-SA, BQ-SE, RS-KM).",
+  "landen": [
+    {
+      "iso": "AFG",
+      "locationKey": "afghanistan"
+    },
+    {
+      "iso": "ALB",
+      "locationKey": "albanie"
+    },
+    {
+      "iso": "DZA",
+      "locationKey": "algerije"
+    },
+    {
+      "iso": "ASM",
+      "locationKey": "amerikaans-samoa"
+    },
+    {
+      "iso": "AND",
+      "locationKey": "andorra"
+    },
+    {
+      "iso": "AGO",
+      "locationKey": "angola"
+    },
+    {
+      "iso": "AIA",
+      "locationKey": "anguilla"
+    },
+    {
+      "iso": "ATA",
+      "locationKey": "antarctica"
+    },
+    {
+      "iso": "ATG",
+      "locationKey": "antigua-en-barbuda"
+    },
+    {
+      "iso": "ARG",
+      "locationKey": "argentinie"
+    },
+    {
+      "iso": "ARM",
+      "locationKey": "armenie"
+    },
+    {
+      "iso": "ABW",
+      "locationKey": "aruba"
+    },
+    {
+      "iso": "AUS",
+      "locationKey": "australie"
+    },
+    {
+      "iso": "AUT",
+      "locationKey": "oostenrijk"
+    },
+    {
+      "iso": "AZE",
+      "locationKey": "azerbeidzjan"
+    },
+    {
+      "iso": "BHS",
+      "locationKey": "bahamas"
+    },
+    {
+      "iso": "BHR",
+      "locationKey": "bahrein"
+    },
+    {
+      "iso": "BGD",
+      "locationKey": "bangladesh"
+    },
+    {
+      "iso": "BRB",
+      "locationKey": "barbados"
+    },
+    {
+      "iso": "BLR",
+      "locationKey": "belarus-wit-rusland"
+    },
+    {
+      "iso": "BEL",
+      "locationKey": "belgie"
+    },
+    {
+      "iso": "BLZ",
+      "locationKey": "belize"
+    },
+    {
+      "iso": "BEN",
+      "locationKey": "benin"
+    },
+    {
+      "iso": "BTN",
+      "locationKey": "bhutan"
+    },
+    {
+      "iso": "BOL",
+      "locationKey": "bolivia"
+    },
+    {
+      "iso": "BIH",
+      "locationKey": "bosnie-en-herzegovina"
+    },
+    {
+      "iso": "BWA",
+      "locationKey": "botswana"
+    },
+    {
+      "iso": "BRA",
+      "locationKey": "brazilie"
+    },
+    {
+      "iso": "BRN",
+      "locationKey": "brunei-darussalam"
+    },
+    {
+      "iso": "BGR",
+      "locationKey": "bulgarije"
+    },
+    {
+      "iso": "BFA",
+      "locationKey": "burkina-faso"
+    },
+    {
+      "iso": "BDI",
+      "locationKey": "burundi"
+    },
+    {
+      "iso": "CPV",
+      "locationKey": "kaapverdie"
+    },
+    {
+      "iso": "KHM",
+      "locationKey": "cambodja"
+    },
+    {
+      "iso": "CMR",
+      "locationKey": "kameroen"
+    },
+    {
+      "iso": "CAN",
+      "locationKey": "canada"
+    },
+    {
+      "iso": "CYM",
+      "locationKey": "kaaimaneilanden"
+    },
+    {
+      "iso": "CAF",
+      "locationKey": "centraal-afrikaanse-republiek"
+    },
+    {
+      "iso": "TCD",
+      "locationKey": "tsjaad"
+    },
+    {
+      "iso": "CHL",
+      "locationKey": "chili"
+    },
+    {
+      "iso": "CHN",
+      "locationKey": "china"
+    },
+    {
+      "iso": "COL",
+      "locationKey": "colombia"
+    },
+    {
+      "iso": "COM",
+      "locationKey": "comoren"
+    },
+    {
+      "iso": "COG",
+      "locationKey": "congo-de-republiek"
+    },
+    {
+      "iso": "COD",
+      "locationKey": "congo-democratische-republiek"
+    },
+    {
+      "iso": "COK",
+      "locationKey": "cookeilanden"
+    },
+    {
+      "iso": "CRI",
+      "locationKey": "costa-rica"
+    },
+    {
+      "iso": "CIV",
+      "locationKey": "ivoorkust"
+    },
+    {
+      "iso": "HRV",
+      "locationKey": "kroatie"
+    },
+    {
+      "iso": "CUB",
+      "locationKey": "cuba"
+    },
+    {
+      "iso": "CUW",
+      "locationKey": "curacao"
+    },
+    {
+      "iso": "CYP",
+      "locationKey": "cyprus"
+    },
+    {
+      "iso": "CZE",
+      "locationKey": "tsjechie"
+    },
+    {
+      "iso": "DNK",
+      "locationKey": "denemarken"
+    },
+    {
+      "iso": "DJI",
+      "locationKey": "djibouti"
+    },
+    {
+      "iso": "DMA",
+      "locationKey": "dominica"
+    },
+    {
+      "iso": "DOM",
+      "locationKey": "dominicaanse-republiek"
+    },
+    {
+      "iso": "ECU",
+      "locationKey": "ecuador"
+    },
+    {
+      "iso": "EGY",
+      "locationKey": "egypte"
+    },
+    {
+      "iso": "SLV",
+      "locationKey": "el-salvador"
+    },
+    {
+      "iso": "GNQ",
+      "locationKey": "equatoriaal-guinea"
+    },
+    {
+      "iso": "ERI",
+      "locationKey": "eritrea"
+    },
+    {
+      "iso": "EST",
+      "locationKey": "estland"
+    },
+    {
+      "iso": "SWZ",
+      "locationKey": "eswatini"
+    },
+    {
+      "iso": "ETH",
+      "locationKey": "ethiopie"
+    },
+    {
+      "iso": "FRO",
+      "locationKey": "faeroer"
+    },
+    {
+      "iso": "FJI",
+      "locationKey": "fiji"
+    },
+    {
+      "iso": "FIN",
+      "locationKey": "finland"
+    },
+    {
+      "iso": "FRA",
+      "locationKey": "frankrijk"
+    },
+    {
+      "iso": "GUF",
+      "locationKey": "frans-guyana"
+    },
+    {
+      "iso": "PYF",
+      "locationKey": "frans-polynesie"
+    },
+    {
+      "iso": "GAB",
+      "locationKey": "gabon"
+    },
+    {
+      "iso": "GMB",
+      "locationKey": "gambia"
+    },
+    {
+      "iso": "GEO",
+      "locationKey": "georgie"
+    },
+    {
+      "iso": "DEU",
+      "locationKey": "duitsland"
+    },
+    {
+      "iso": "GHA",
+      "locationKey": "ghana"
+    },
+    {
+      "iso": "GRC",
+      "locationKey": "griekenland"
+    },
+    {
+      "iso": "GRL",
+      "locationKey": "groenland"
+    },
+    {
+      "iso": "GRD",
+      "locationKey": "grenada"
+    },
+    {
+      "iso": "GLP",
+      "locationKey": "guadeloupe"
+    },
+    {
+      "iso": "GTM",
+      "locationKey": "guatemala"
+    },
+    {
+      "iso": "GIN",
+      "locationKey": "guinee"
+    },
+    {
+      "iso": "GNB",
+      "locationKey": "guinee-bissau"
+    },
+    {
+      "iso": "GUY",
+      "locationKey": "guyana"
+    },
+    {
+      "iso": "HTI",
+      "locationKey": "haiti"
+    },
+    {
+      "iso": "VAT",
+      "locationKey": "vaticaanstad"
+    },
+    {
+      "iso": "HND",
+      "locationKey": "honduras"
+    },
+    {
+      "iso": "HKG",
+      "locationKey": "hongkong"
+    },
+    {
+      "iso": "HUN",
+      "locationKey": "hongarije"
+    },
+    {
+      "iso": "ISL",
+      "locationKey": "ijsland"
+    },
+    {
+      "iso": "IND",
+      "locationKey": "india"
+    },
+    {
+      "iso": "IDN",
+      "locationKey": "indonesie"
+    },
+    {
+      "iso": "IRN",
+      "locationKey": "iran"
+    },
+    {
+      "iso": "IRQ",
+      "locationKey": "irak"
+    },
+    {
+      "iso": "IRL",
+      "locationKey": "ierland"
+    },
+    {
+      "iso": "ISR",
+      "locationKey": "israel"
+    },
+    {
+      "iso": "ITA",
+      "locationKey": "italie"
+    },
+    {
+      "iso": "JAM",
+      "locationKey": "jamaica"
+    },
+    {
+      "iso": "JPN",
+      "locationKey": "japan"
+    },
+    {
+      "iso": "JOR",
+      "locationKey": "jordanie"
+    },
+    {
+      "iso": "KAZ",
+      "locationKey": "kazachstan"
+    },
+    {
+      "iso": "KEN",
+      "locationKey": "kenia"
+    },
+    {
+      "iso": "KIR",
+      "locationKey": "kiribati"
+    },
+    {
+      "iso": "PRK",
+      "locationKey": "noord-korea"
+    },
+    {
+      "iso": "KOR",
+      "locationKey": "zuid-korea"
+    },
+    {
+      "iso": "KWT",
+      "locationKey": "koeweit"
+    },
+    {
+      "iso": "KGZ",
+      "locationKey": "kirgizie"
+    },
+    {
+      "iso": "LAO",
+      "locationKey": "laos"
+    },
+    {
+      "iso": "LVA",
+      "locationKey": "letland"
+    },
+    {
+      "iso": "LBN",
+      "locationKey": "libanon"
+    },
+    {
+      "iso": "LSO",
+      "locationKey": "lesotho"
+    },
+    {
+      "iso": "LBR",
+      "locationKey": "liberia"
+    },
+    {
+      "iso": "LBY",
+      "locationKey": "libie"
+    },
+    {
+      "iso": "LIE",
+      "locationKey": "liechtenstein"
+    },
+    {
+      "iso": "LTU",
+      "locationKey": "litouwen"
+    },
+    {
+      "iso": "LUX",
+      "locationKey": "luxemburg"
+    },
+    {
+      "iso": "MAC",
+      "locationKey": "macau-sar"
+    },
+    {
+      "iso": "MDG",
+      "locationKey": "madagaskar"
+    },
+    {
+      "iso": "MWI",
+      "locationKey": "malawi"
+    },
+    {
+      "iso": "MYS",
+      "locationKey": "maleisie"
+    },
+    {
+      "iso": "MDV",
+      "locationKey": "maldiven"
+    },
+    {
+      "iso": "MLI",
+      "locationKey": "mali"
+    },
+    {
+      "iso": "MLT",
+      "locationKey": "malta"
+    },
+    {
+      "iso": "MHL",
+      "locationKey": "marshalleilanden"
+    },
+    {
+      "iso": "MTQ",
+      "locationKey": "martinique"
+    },
+    {
+      "iso": "MRT",
+      "locationKey": "mauritanie"
+    },
+    {
+      "iso": "MUS",
+      "locationKey": "mauritius"
+    },
+    {
+      "iso": "MEX",
+      "locationKey": "mexico"
+    },
+    {
+      "iso": "FSM",
+      "locationKey": "micronesie"
+    },
+    {
+      "iso": "MDA",
+      "locationKey": "moldavie"
+    },
+    {
+      "iso": "MCO",
+      "locationKey": "monaco"
+    },
+    {
+      "iso": "MNG",
+      "locationKey": "mongolie"
+    },
+    {
+      "iso": "MNE",
+      "locationKey": "montenegro"
+    },
+    {
+      "iso": "MSR",
+      "locationKey": "montserrat"
+    },
+    {
+      "iso": "MAR",
+      "locationKey": "marokko"
+    },
+    {
+      "iso": "MOZ",
+      "locationKey": "mozambique"
+    },
+    {
+      "iso": "MMR",
+      "locationKey": "myanmar"
+    },
+    {
+      "iso": "NAM",
+      "locationKey": "namibie"
+    },
+    {
+      "iso": "NRU",
+      "locationKey": "nauru"
+    },
+    {
+      "iso": "NPL",
+      "locationKey": "nepal"
+    },
+    {
+      "iso": "NCL",
+      "locationKey": "nieuw-caledonie"
+    },
+    {
+      "iso": "NZL",
+      "locationKey": "nieuw-zeeland"
+    },
+    {
+      "iso": "NIC",
+      "locationKey": "nicaragua"
+    },
+    {
+      "iso": "NER",
+      "locationKey": "niger"
+    },
+    {
+      "iso": "NGA",
+      "locationKey": "nigeria"
+    },
+    {
+      "iso": "NIU",
+      "locationKey": "niue"
+    },
+    {
+      "iso": "MKD",
+      "locationKey": "noord-macedonie"
+    },
+    {
+      "iso": "NOR",
+      "locationKey": "noorwegen"
+    },
+    {
+      "iso": "OMN",
+      "locationKey": "oman"
+    },
+    {
+      "iso": "PAK",
+      "locationKey": "pakistan"
+    },
+    {
+      "iso": "PLW",
+      "locationKey": "palau"
+    },
+    {
+      "iso": "PSE",
+      "locationKey": "palestijnse-gebieden"
+    },
+    {
+      "iso": "PAN",
+      "locationKey": "panama"
+    },
+    {
+      "iso": "PNG",
+      "locationKey": "papoea-nieuw-guinea"
+    },
+    {
+      "iso": "PRY",
+      "locationKey": "paraguay"
+    },
+    {
+      "iso": "PER",
+      "locationKey": "peru"
+    },
+    {
+      "iso": "PHL",
+      "locationKey": "filipijnen"
+    },
+    {
+      "iso": "PCN",
+      "locationKey": "pitcairneilanden"
+    },
+    {
+      "iso": "POL",
+      "locationKey": "polen"
+    },
+    {
+      "iso": "PRT",
+      "locationKey": "portugal"
+    },
+    {
+      "iso": "PRI",
+      "locationKey": "puerto-rico"
+    },
+    {
+      "iso": "QAT",
+      "locationKey": "qatar"
+    },
+    {
+      "iso": "REU",
+      "locationKey": "reunion"
+    },
+    {
+      "iso": "ROU",
+      "locationKey": "roemenie"
+    },
+    {
+      "iso": "RUS",
+      "locationKey": "rusland"
+    },
+    {
+      "iso": "RWA",
+      "locationKey": "rwanda"
+    },
+    {
+      "iso": "KNA",
+      "locationKey": "saint-kitts-en-nevis"
+    },
+    {
+      "iso": "LCA",
+      "locationKey": "saint-lucia"
+    },
+    {
+      "iso": "VCT",
+      "locationKey": "saint-vincent-en-de-grenadines"
+    },
+    {
+      "iso": "WSM",
+      "locationKey": "samoa"
+    },
+    {
+      "iso": "SMR",
+      "locationKey": "san-marino"
+    },
+    {
+      "iso": "STP",
+      "locationKey": "sao-tome-en-principe"
+    },
+    {
+      "iso": "SAU",
+      "locationKey": "saoedi-arabie"
+    },
+    {
+      "iso": "SEN",
+      "locationKey": "senegal"
+    },
+    {
+      "iso": "SRB",
+      "locationKey": "servie"
+    },
+    {
+      "iso": "SYC",
+      "locationKey": "seychellen"
+    },
+    {
+      "iso": "SLE",
+      "locationKey": "sierra-leone"
+    },
+    {
+      "iso": "SGP",
+      "locationKey": "singapore"
+    },
+    {
+      "iso": "SXM",
+      "locationKey": "sint-maarten"
+    },
+    {
+      "iso": "SVK",
+      "locationKey": "slowakije"
+    },
+    {
+      "iso": "SVN",
+      "locationKey": "slovenie"
+    },
+    {
+      "iso": "SLB",
+      "locationKey": "salomonseilanden"
+    },
+    {
+      "iso": "SOM",
+      "locationKey": "somalie"
+    },
+    {
+      "iso": "ZAF",
+      "locationKey": "zuid-afrika"
+    },
+    {
+      "iso": "SSD",
+      "locationKey": "zuid-sudan"
+    },
+    {
+      "iso": "ESP",
+      "locationKey": "spanje"
+    },
+    {
+      "iso": "LKA",
+      "locationKey": "sri-lanka"
+    },
+    {
+      "iso": "SDN",
+      "locationKey": "sudan"
+    },
+    {
+      "iso": "SUR",
+      "locationKey": "suriname"
+    },
+    {
+      "iso": "SJM",
+      "locationKey": "spitsbergen"
+    },
+    {
+      "iso": "SWE",
+      "locationKey": "zweden"
+    },
+    {
+      "iso": "CHE",
+      "locationKey": "zwitserland"
+    },
+    {
+      "iso": "SYR",
+      "locationKey": "syrie"
+    },
+    {
+      "iso": "TWN",
+      "locationKey": "taiwan"
+    },
+    {
+      "iso": "TJK",
+      "locationKey": "tadzjikistan"
+    },
+    {
+      "iso": "TZA",
+      "locationKey": "tanzania"
+    },
+    {
+      "iso": "THA",
+      "locationKey": "thailand"
+    },
+    {
+      "iso": "TLS",
+      "locationKey": "oost-timor"
+    },
+    {
+      "iso": "TGO",
+      "locationKey": "togo"
+    },
+    {
+      "iso": "TKL",
+      "locationKey": "tokelau-eilanden"
+    },
+    {
+      "iso": "TON",
+      "locationKey": "tonga"
+    },
+    {
+      "iso": "TTO",
+      "locationKey": "trinidad-en-tobago"
+    },
+    {
+      "iso": "TUN",
+      "locationKey": "tunesie"
+    },
+    {
+      "iso": "TUR",
+      "locationKey": "turkije"
+    },
+    {
+      "iso": "TKM",
+      "locationKey": "turkmenistan"
+    },
+    {
+      "iso": "TCA",
+      "locationKey": "turks-en-caicoseilanden"
+    },
+    {
+      "iso": "TUV",
+      "locationKey": "tuvalu"
+    },
+    {
+      "iso": "UGA",
+      "locationKey": "uganda"
+    },
+    {
+      "iso": "UKR",
+      "locationKey": "oekraine"
+    },
+    {
+      "iso": "ARE",
+      "locationKey": "verenigde-arabische-emiraten"
+    },
+    {
+      "iso": "GBR",
+      "locationKey": "verenigd-koninkrijk"
+    },
+    {
+      "iso": "USA",
+      "locationKey": "verenigde-staten-van-amerika"
+    },
+    {
+      "iso": "URY",
+      "locationKey": "uruguay"
+    },
+    {
+      "iso": "UZB",
+      "locationKey": "oezbekistan"
+    },
+    {
+      "iso": "VUT",
+      "locationKey": "vanuatu"
+    },
+    {
+      "iso": "VEN",
+      "locationKey": "venezuela"
+    },
+    {
+      "iso": "VNM",
+      "locationKey": "vietnam"
+    },
+    {
+      "iso": "VGB",
+      "locationKey": "britse-maagdeneilanden"
+    },
+    {
+      "iso": "VIR",
+      "locationKey": "amerikaanse-maagdeneilanden"
+    },
+    {
+      "iso": "WLF",
+      "locationKey": "wallis-en-futuna"
+    },
+    {
+      "iso": "YEM",
+      "locationKey": "jemen"
+    },
+    {
+      "iso": "ZMB",
+      "locationKey": "zambia"
+    },
+    {
+      "iso": "ZWE",
+      "locationKey": "zimbabwe"
+    },
+    {
+      "iso": "BQ-BO",
+      "locationKey": "bonaire"
+    },
+    {
+      "iso": "BQ-SA",
+      "locationKey": "saba"
+    },
+    {
+      "iso": "BQ-SE",
+      "locationKey": "sint-eustatius"
+    },
+    {
+      "iso": "RS-KM",
+      "locationKey": "kosovo"
+    }
+  ]
+}

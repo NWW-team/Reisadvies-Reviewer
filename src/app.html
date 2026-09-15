@@ -1,0 +1,598 @@
+<title>Reisadvies-Reviewer</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Fira+Mono:wght@400;500&display=swap">
+<style>
+/* Kleuren uit de Rijkshuisstijl zoals Nederlandwereldwijd.nl die gebruikt: hemelblauw voor de
+   band, donkerblauw voor koppen, en de vier officiele kleurcodes voor de reisadviezen zelf.
+   Die vier zijn inhoud, geen decoratie, dus de ernst van een bevinding gebruikt ze niet:
+   fout is robijnrood en let op is donkergeel, zodat rood en oranje "kleurcode" blijven betekenen.
+   RO Sans is niet vrij beschikbaar; Fira Sans is de dichtstbijzijnde humanistische schreefloze. */
+:root {
+  --blauw: #007bc7;
+  --donkerblauw: #154273;
+  --lichtblauw: #8fcae7;
+  --papier: #ffffff;
+  --vlak: #ffffff;
+  --vlak-2: #f3f3f3;
+  --lijn: #e0e0e0;
+  --lijn-sterk: #b4b4b4;
+  --inkt: #000000;
+  --gedempt: #535353;
+  --accent: var(--blauw);
+  --accent-zacht: #e5f1fa;
+  --fout: #ca005d;
+  --fout-vlak: #fbe5ef;
+  --fout-rand: #ca005d;
+  --letop: #8a5a00;
+  --letop-vlak: #fff3d6;
+  --letop-rand: #ffb612;
+  --info: #535353;
+  --info-vlak: #f0f0f0;
+  --info-rand: #b4b4b4;
+  --kc-groen: #39870c;
+  --kc-geel: #f9e11e;
+  --kc-oranje: #e17000;
+  --kc-rood: #d52b1e;
+  --band-tekst: #ffffff;
+  --schaduw: 0 1px 2px rgba(0,0,0,.08);
+  --sans: "Fira Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "Fira Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --blauw: #4aa3dd;
+    --donkerblauw: #0f2c4d;
+    --lichtblauw: #2b5f83;
+    --papier: #0e1621;
+    --vlak: #15202e;
+    --vlak-2: #1c2a3a;
+    --lijn: #26384b;
+    --lijn-sterk: #3b5168;
+    --inkt: #e9eff5;
+    --gedempt: #a2b4c6;
+    --accent: #4aa3dd;
+    --accent-zacht: #16293a;
+    --fout: #ff8ab9;
+    --fout-vlak: #33162a;
+    --fout-rand: #ff8ab9;
+    --letop: #ffc95e;
+    --letop-vlak: #2e2513;
+    --letop-rand: #ffb612;
+    --info: #a2b4c6;
+    --info-vlak: #1e2c3b;
+    --info-rand: #3b5168;
+    --kc-groen: #6fbf45;
+    --kc-geel: #f4dc4a;
+    --kc-oranje: #f08c37;
+    --kc-rood: #f0584a;
+    --schaduw: 0 1px 2px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"] {
+  --blauw: #4aa3dd;
+  --donkerblauw: #0f2c4d;
+  --lichtblauw: #2b5f83;
+  --papier: #0e1621;
+  --vlak: #15202e;
+  --vlak-2: #1c2a3a;
+  --lijn: #26384b;
+  --lijn-sterk: #3b5168;
+  --inkt: #e9eff5;
+  --gedempt: #a2b4c6;
+  --accent: #4aa3dd;
+  --accent-zacht: #16293a;
+  --fout: #ff8ab9;
+  --fout-vlak: #33162a;
+  --fout-rand: #ff8ab9;
+  --letop: #ffc95e;
+  --letop-vlak: #2e2513;
+  --letop-rand: #ffb612;
+  --info: #a2b4c6;
+  --info-vlak: #1e2c3b;
+  --info-rand: #3b5168;
+  --kc-groen: #6fbf45;
+  --kc-geel: #f4dc4a;
+  --kc-oranje: #f08c37;
+  --kc-rood: #f0584a;
+  --schaduw: 0 1px 2px rgba(0,0,0,.4);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--papier); color: var(--inkt);
+  font-family: var(--sans); font-size: 16px; line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1320px; margin: 0 auto; padding-inline: 20px; }
+.band-binnen { max-width: 1320px; margin: 0 auto; padding-inline: 20px; }
+
+/* ---------- lint en band, naar het model van Nederlandwereldwijd.nl ---------- */
+.lint { border-bottom: 1px solid var(--lijn); background: var(--vlak); }
+.lint .band-binnen {
+  display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline;
+  justify-content: space-between; padding-block: 11px;
+}
+.lint .afzender { font-size: .84rem; font-weight: 600; color: var(--donkerblauw); }
+:root[data-theme="dark"] .lint .afzender { color: var(--lichtblauw); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lint .afzender { color: var(--lichtblauw); }
+}
+.lint .stempel {
+  font-size: .72rem; color: var(--gedempt); border: 1px solid var(--lijn-sterk);
+  border-radius: 3px; padding: 1px 8px; white-space: nowrap;
+}
+
+.band { background: var(--blauw); color: var(--band-tekst); }
+.band .band-binnen { padding-block: 22px 26px; }
+.merk { display: flex; align-items: center; gap: 16px; }
+.merk svg { flex: 0 0 auto; width: 56px; height: 56px; }
+.merk h1 {
+  margin: 0; font-size: clamp(1.4rem, 3.2vw, 1.95rem); font-weight: 700;
+  letter-spacing: -.01em; color: var(--band-tekst); text-wrap: balance;
+}
+.band p.lead { margin: .8rem 0 0; max-width: 64ch; color: var(--band-tekst); opacity: .95; }
+.band .bron { font-family: var(--mono); font-size: .73rem; margin: .7rem 0 0; opacity: .8; }
+
+/* ---------- bediening ---------- */
+.balk { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-block: 16px; border-bottom: 1px solid var(--lijn); }
+label.veld { display: flex; align-items: center; gap: 7px; font-size: .85rem; color: var(--gedempt); }
+select, textarea, button, input { font: inherit; color: inherit; border-radius: 3px; border: 1px solid var(--lijn-sterk); background: var(--vlak); }
+select, input { padding: 7px 10px; font-size: .9rem; }
+button { padding: 8px 16px; cursor: pointer; font-size: .88rem; font-weight: 600; transition: background .12s, border-color .12s; }
+button:hover:not(:disabled) { background: var(--vlak-2); }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.hoofd { background: var(--blauw); border-color: var(--blauw); color: #fff; }
+:root[data-theme="dark"] button.hoofd, .hoofd-dark { color: #08131f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) button.hoofd { color: #08131f; } }
+button.hoofd:hover:not(:disabled) { background: var(--blauw); filter: brightness(1.1); }
+:focus-visible { outline: 3px solid var(--donkerblauw); outline-offset: 2px; }
+.band :focus-visible { outline-color: #fff; }
+textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(--mono); font-size: .82rem; line-height: 1.5; resize: vertical; }
+
+/* ---------- statusstrook ---------- */
+.status { display: grid; grid-template-columns: minmax(230px, 1.4fr) repeat(auto-fit, minmax(112px, 1fr)); gap: 1px;
+  background: var(--lijn); border: 1px solid var(--lijn); margin-block: 20px; }
+.cel { background: var(--vlak); padding: 13px 15px; }
+.cel .etiket { font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--gedempt); font-weight: 600; }
+.cel .waarde { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.2; margin-top: 3px; color: var(--donkerblauw); }
+:root[data-theme="dark"] .cel .waarde { color: var(--inkt); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cel .waarde { color: var(--inkt); } }
+.cel .waarde small { font-size: .78rem; font-weight: 400; color: var(--gedempt); }
+.cel.fout .waarde { color: var(--fout); }
+.cel.letop .waarde { color: var(--letop); }
+.meter { height: 8px; background: var(--vlak-2); margin-top: 9px; overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--blauw); transition: width .3s; }
+.meter.over i { background: var(--fout); }
+.kleurchips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.chip { font-size: .75rem; font-weight: 600; padding: 2px 10px; border-radius: 99px; color: #fff; text-transform: capitalize; }
+.chip.groen { background: var(--kc-groen); } .chip.oranje { background: var(--kc-oranje); }
+.chip.rood { background: var(--kc-rood); } .chip.geel { background: var(--kc-geel); color: #000; }
+.chip.leeg { background: transparent; color: var(--gedempt); border: 1px solid var(--lijn-sterk); }
+
+/* ---------- werkblad ---------- */
+.werkblad { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 26px; align-items: start; }
+@media (max-width: 940px) { .werkblad { grid-template-columns: 1fr; } .paneel.tekst { order: 2; } }
+.paneel { background: var(--vlak); border: 1px solid var(--lijn); box-shadow: var(--schaduw); }
+.paneel > h2 { font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; color: #fff;
+  margin: 0; padding: 11px 18px; background: var(--donkerblauw); font-weight: 700; }
+:root[data-theme="dark"] .paneel > h2 { background: var(--donkerblauw); color: var(--lichtblauw); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .paneel > h2 { color: var(--lichtblauw); } }
+.paneel .body { padding: 16px 18px; }
+
+.advies h3.blok-h2 { font-size: 1.1rem; font-weight: 700; color: var(--donkerblauw); margin: 1.5em 0 .35em;
+  padding-bottom: .25em; border-bottom: 2px solid var(--lichtblauw); display: flex; gap: 10px; align-items: baseline; justify-content: space-between; }
+:root[data-theme="dark"] .advies h3.blok-h2 { color: var(--lichtblauw); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .advies h3.blok-h2 { color: #9ccbe8; } }
+.advies h4.blok-h3 { font-size: .98rem; font-weight: 600; margin: 1.15em 0 .3em; display: flex; gap: 10px; align-items: baseline; justify-content: space-between; }
+.advies h3.blok-h2:first-child { margin-top: 0; }
+.telling { font-family: var(--mono); font-size: .7rem; color: var(--gedempt); font-weight: 400; white-space: nowrap; }
+.telling.lang { color: var(--letop); font-weight: 500; }
+.advies p { margin: 0 0 .65em; }
+.advies ul { margin: 0 0 .8em; padding-left: 1.15em; }
+.advies li { margin-bottom: .25em; }
+.zin { cursor: pointer; }
+.zin.m-fout { background: var(--fout-vlak); box-shadow: inset 0 -2px 0 var(--fout-rand); }
+.zin.m-letop { background: var(--letop-vlak); box-shadow: inset 0 -2px 0 var(--letop-rand); }
+.zin.m-info { background: var(--info-vlak); box-shadow: inset 0 -1px 0 var(--info-rand); }
+.zin.actief { outline: 2px solid var(--blauw); outline-offset: 1px; }
+
+.groep + .groep { margin-top: 22px; }
+.groep > h3 { font-size: .8rem; font-weight: 700; margin: 0 0 9px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: .05em; }
+.groep > h3 .aantal { font-family: var(--mono); font-weight: 400; color: var(--gedempt); font-size: .76rem; letter-spacing: 0; }
+.groep.fout > h3 { color: var(--fout); }
+.groep.letop > h3 { color: var(--letop); }
+.groep.info > h3 { color: var(--info); }
+
+.bev { border: 1px solid var(--lijn); border-left: 4px solid var(--lijn-sterk); padding: 11px 13px; margin-bottom: 9px; background: var(--vlak); }
+.groep.fout .bev { border-left-color: var(--fout-rand); }
+.groep.letop .bev { border-left-color: var(--letop-rand); }
+.groep.info .bev { border-left-color: var(--info-rand); }
+.bev.actief { outline: 2px solid var(--blauw); outline-offset: 1px; }
+.bev .regelnaam { font-family: var(--mono); font-size: .72rem; color: var(--gedempt); }
+.bev .tekst { margin: 3px 0 0; font-size: .91rem; }
+.bev blockquote { margin: 8px 0 0; padding: 6px 10px; border-left: 2px solid var(--lijn-sterk); background: var(--vlak-2); font-size: .84rem; cursor: pointer; }
+.bev .bron { margin-top: 7px; font-size: .74rem; color: var(--gedempt); }
+.bev .verwacht { margin-top: 7px; font-size: .8rem; color: var(--gedempt); }
+.bev .verwacht b { color: var(--inkt); font-weight: 600; }
+.oordeel { display: flex; gap: 5px; margin-top: 9px; flex-wrap: wrap; align-items: center; }
+.oordeel .vraag { font-size: .72rem; color: var(--gedempt); margin-right: 3px; }
+.oordeel button { padding: 2px 10px; font-size: .74rem; font-weight: 600; border-radius: 99px; }
+.oordeel button[aria-pressed="true"] { background: var(--donkerblauw); border-color: var(--donkerblauw); color: #fff; }
+
+.leeg { color: var(--gedempt); font-size: .9rem; padding: 8px 0; }
+.geen-fouten { color: var(--kc-groen); font-weight: 600; }
+
+.oordeelsblok { border-top: 1px solid var(--lijn); margin-top: 18px; padding-top: 16px; }
+.oordeelsblok h3 { font-size: .8rem; margin: 0 0 4px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--donkerblauw); }
+:root[data-theme="dark"] .oordeelsblok h3 { color: var(--lichtblauw); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .oordeelsblok h3 { color: #9ccbe8; } }
+.oordeelsblok p.uitleg { font-size: .82rem; color: var(--gedempt); margin: 0 0 10px; }
+.oordeelsuitvoer { font-size: .89rem; white-space: pre-wrap; }
+.oordeelsuitvoer:empty { display: none; }
+
+.voorbehoud { margin-block: 30px 56px; border: 1px solid var(--lijn); border-top: 4px solid var(--donkerblauw); padding: 15px 18px; background: var(--vlak-2); }
+.voorbehoud h2 { font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; color: var(--gedempt); margin: 0 0 7px; font-weight: 700; }
+.voorbehoud ul { margin: 0; padding-left: 1.15em; font-size: .87rem; color: var(--gedempt); }
+.voorbehoud li { margin-bottom: .3em; }
+.voorbehoud li b { color: var(--inkt); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="lint">
+  <div class="band-binnen">
+    <span class="afzender">Ministerie van Buitenlandse Zaken &middot; NederlandWereldwijd</span>
+    <span class="stempel">Intern prototype &mdash; geen offici&euml;le uitgave</span>
+  </div>
+</div>
+
+<header class="band">
+  <div class="band-binnen">
+    <div class="merk">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="32" r="30" fill="#fff"/>
+        <g stroke="#007bc7" stroke-width="2.4" fill="none">
+          <circle cx="32" cy="32" r="30"/>
+          <ellipse cx="32" cy="32" rx="13" ry="30"/>
+          <path d="M2 32h60M7 17h50M7 47h50"/>
+        </g>
+        <g fill="#007bc7">
+          <circle cx="32" cy="17" r="4"/><circle cx="19" cy="32" r="4.5"/>
+          <circle cx="45" cy="38" r="4"/><circle cx="32" cy="52" r="3.5"/>
+          <circle cx="52" cy="22" r="3"/>
+        </g>
+      </svg>
+      <h1>Reisadvies-Reviewer</h1>
+    </div>
+    <p class="lead">Toetst een reisadvies op wat objectief te toetsen is: de schrijfwijzer, de
+      onderwerpen-matrix, B1 en begrijpelijkheid. Elke bevinding verwijst naar de regel waar hij vandaan komt.</p>
+    <p class="bron" id="bron-regel"></p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="balk">
+    <label class="veld" for="kies-advies">Reisadvies
+      <select id="kies-advies"></select>
+    </label>
+    <button type="button" id="knop-plakken">Eigen tekst plakken</button>
+    <span style="flex:1"></span>
+    <button type="button" id="knop-oordeel" class="hoofd">Oordeelstoets uitvoeren</button>
+  </div>
+
+  <div id="plakvak" hidden style="padding-block:14px">
+    <label class="veld" for="invoer" style="display:block;margin-bottom:6px">
+      Plak hier de HTML of de platte tekst van het reisadvies
+    </label>
+    <textarea id="invoer" spellcheck="false"></textarea>
+    <div style="margin-top:9px;display:flex;gap:9px;align-items:center">
+      <button type="button" id="knop-toets" class="hoofd">Toetsen</button>
+      <label class="veld" for="land-invoer">Land
+        <input id="land-invoer" style="font:inherit;padding:7px 10px;border:1px solid var(--lijn-sterk);border-radius:5px;background:var(--vlak);color:inherit" placeholder="bijvoorbeeld Tsjechië">
+      </label>
+    </div>
+  </div>
+
+  <div class="status" id="status"></div>
+
+  <div class="werkblad">
+    <section class="paneel tekst">
+      <h2>Het advies</h2>
+      <div class="body advies" id="advies"></div>
+    </section>
+
+    <section class="paneel">
+      <h2>Bevindingen</h2>
+      <div class="body">
+        <div id="bevindingen"></div>
+        <div class="oordeelsblok">
+          <h3>Oordeelstoets</h3>
+          <p class="uitleg">B1-woordmoeilijkheid, begrijpelijkheid, en of een onderwerp dat de matrix als
+            <em>verwijzen</em> aanmerkt niet te ver is uitgeschreven. Met een herschrijfvoorstel op zinsniveau.</p>
+          <div class="oordeelsuitvoer" id="oordeelsuitvoer"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="voorbehoud">
+    <h2>Waar de tool niets over zegt</h2>
+    <ul>
+      <li><b>Politieke gevoeligheden.</b> Die weging blijft mensenwerk; de tool doet er geen uitspraak over.</li>
+      <li><b>Inkorten.</b> Bij een overschrijding wijst de tool de langste blokken aan, maar schrapt niet zelf —
+        wat weg kan is een inhoudelijke keuze.</li>
+      <li><b>Nog geen oordeel over juistheid.</b> De tool toetst vorm en onderwerpkeuze, niet of de inhoud klopt.</li>
+    </ul>
+  </div>
+</div>
+
+<script>/*__PARSE__*/</script>
+<script>/*__REGELS__*/</script>
+<script>
+const REGELDATA = /*__REGELDATA__*/;
+const VOORBEELDEN = /*__VOORBEELDEN__*/;
+</script>
+<script>
+(function () {
+  const toetser = Regels.maakToetser(REGELDATA);
+  const $ = (id) => document.getElementById(id);
+  let huidig = null;          // {doc, resultaat, land}
+  let oordelen = {};          // sleutel -> 'eens'|'oneens'|'onterecht'
+  let db = null;
+
+  const sleutelVan = (bev) => bev.regel + '::' + String(bev.fragment || bev.boodschap).slice(0, 80);
+  const ernstKlasse = { 'fout': 'fout', 'let-op': 'letop', 'info': 'info' };
+  const ernstLabel = { 'fout': 'Fout', 'let-op': 'Let op', 'info': 'Ter overweging' };
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  const norm = (s) => String(s || '').replace(/[‘’]/g, "'").replace(/\s+/g, ' ').trim();
+
+  // ---------- vullen ----------
+  const kiezer = $('kies-advies');
+  VOORBEELDEN.forEach((v, i) => {
+    const o = document.createElement('option');
+    o.value = String(i);
+    o.textContent = v.land + ' — ' + v.kenmerk;
+    kiezer.appendChild(o);
+  });
+  $('bron-regel').textContent = REGELDATA.matrix.koppen.length + ' koppen uit de matrix · '
+    + Object.keys(REGELDATA.kleurcodes.kleuren).length + ' kleurcodes · schrijfwijzer en format-matrix van Nederlandwereldwijd.nl';
+
+  function toetsInvoer(html, land) {
+    const doc = Parse.parseAdvies(html, { land });
+    const resultaat = toetser(doc);
+    huidig = { doc, resultaat, land };
+    tekenStatus();
+    tekenAdvies();
+    tekenBevindingen();
+    $('oordeelsuitvoer').textContent = '';
+  }
+
+  function kiesVoorbeeld() {
+    const v = VOORBEELDEN[Number(kiezer.value) || 0];
+    toetsInvoer(v.html, v.land);
+  }
+
+  // ---------- status ----------
+  function tekenStatus() {
+    const s = huidig.resultaat.samenvatting;
+    const pct = Math.min(100, Math.round((s.woorden / s.woordenlimiet) * 100));
+    const over = s.woorden >= s.woordenlimiet;
+    $('status').innerHTML = [
+      '<div class="cel"><div class="etiket">Woorden</div>'
+        + '<div class="waarde">' + s.woorden + ' <small>/ ' + s.woordenlimiet + '</small></div>'
+        + '<div class="meter' + (over ? ' over' : '') + '"><i style="width:' + pct + '%"></i></div></div>',
+      '<div class="cel"><div class="etiket">Kleurcode</div><div class="kleurchips">'
+        + (s.kleurcodes.length
+            ? s.kleurcodes.map((k) => '<span class="chip ' + k + '">' + k + '</span>').join('')
+            : '<span class="chip" style="color:var(--gedempt)">geen gevonden</span>')
+        + '</div></div>',
+      '<div class="cel fout"><div class="etiket">Fouten</div><div class="waarde">' + s.fout + '</div></div>',
+      '<div class="cel letop"><div class="etiket">Let op</div><div class="waarde">' + s.letop + '</div></div>',
+      '<div class="cel"><div class="etiket">Zinnen</div><div class="waarde">' + s.zinnen + '</div></div>',
+    ].join('');
+  }
+
+  // ---------- het advies met gemarkeerde zinnen ----------
+  function tekenAdvies() {
+    const perZin = new Map();
+    huidig.resultaat.bevindingen.forEach((bev, i) => {
+      if (!bev.fragment) return;
+      const k = norm(bev.fragment);
+      if (!perZin.has(k)) perZin.set(k, []);
+      perZin.get(k).push(i);
+    });
+
+    const stukken = [];
+    for (const blok of huidig.doc.blokken) {
+      const woorden = blok.alineas.reduce((n, a) => n + a.woorden, 0)
+        + blok.opsommingen.reduce((n, o) => n + o.items.reduce((m, x) => m + Parse.telWoorden(x), 0), 0);
+      if (blok.kop) {
+        const tag = blok.niveau === 2 ? 'h3 class="blok-h2"' : 'h4 class="blok-h3"';
+        const sluit = blok.niveau === 2 ? 'h3' : 'h4';
+        const lang = woorden > 250;
+        stukken.push('<' + tag + '><span>' + esc(blok.kop) + '</span>'
+          + '<span class="telling' + (lang ? ' lang' : '') + '">' + woorden + ' woorden</span></' + sluit + '>');
+      }
+      for (const a of blok.alineas) {
+        stukken.push('<p>' + a.zinnen.map((z) => markeer(z, perZin)).join(' ') + '</p>');
+      }
+      for (const o of blok.opsommingen) {
+        stukken.push('<ul>' + o.items.map((x) => '<li>' + markeer(x, perZin) + '</li>').join('') + '</ul>');
+      }
+    }
+    $('advies').innerHTML = stukken.join('') || '<p class="leeg">Geen tekst gevonden.</p>';
+  }
+
+  function markeer(zin, perZin) {
+    const treffers = perZin.get(norm(zin));
+    if (!treffers) return esc(zin);
+    const ernsten = treffers.map((i) => huidig.resultaat.bevindingen[i].ernst);
+    const zwaarste = ernsten.includes('fout') ? 'fout' : ernsten.includes('let-op') ? 'let-op' : 'info';
+    return '<span class="zin m-' + ernstKlasse[zwaarste] + '" data-bev="' + treffers[0] + '" '
+      + 'title="' + esc(treffers.length + ' bevinding' + (treffers.length > 1 ? 'en' : '')) + '">' + esc(zin) + '</span>';
+  }
+
+  // ---------- bevindingen ----------
+  function tekenBevindingen() {
+    const bevs = huidig.resultaat.bevindingen;
+    if (!bevs.length) {
+      $('bevindingen').innerHTML = '<p class="leeg geen-fouten">Geen bevindingen. Dit advies voldoet aan alle '
+        + 'regels die de tool kan toetsen.</p>';
+      return;
+    }
+    const volgorde = ['fout', 'let-op', 'info'];
+    const html = volgorde.map((ernst) => {
+      const groep = bevs.map((b, i) => [b, i]).filter(([b]) => b.ernst === ernst);
+      if (!groep.length) return '';
+      // per regel bundelen: 10× dezelfde regel is één kopje, niet tien losse kaarten
+      const perRegel = new Map();
+      for (const [b, i] of groep) {
+        if (!perRegel.has(b.regel)) perRegel.set(b.regel, []);
+        perRegel.get(b.regel).push([b, i]);
+      }
+      return '<div class="groep ' + ernstKlasse[ernst] + '"><h3>' + ernstLabel[ernst]
+        + ' <span class="aantal">' + groep.length + '</span></h3>'
+        + [...perRegel.values()].map((items) => items.map(([b, i]) => kaart(b, i)).join('')).join('')
+        + '</div>';
+    }).join('');
+    $('bevindingen').innerHTML = html;
+  }
+
+  function kaart(bev, i) {
+    const s = sleutelVan(bev);
+    const gekozen = oordelen[s];
+    const knop = (w, tekst) => '<button type="button" data-oordeel="' + w + '" data-sleutel="' + esc(s)
+      + '" aria-pressed="' + (gekozen === w ? 'true' : 'false') + '">' + tekst + '</button>';
+    return '<div class="bev" data-index="' + i + '">'
+      + '<div class="regelnaam">' + esc(bev.regel) + '</div>'
+      + '<p class="tekst">' + esc(bev.boodschap) + '</p>'
+      + (bev.fragment ? '<blockquote data-naar="' + i + '">' + esc(bev.fragment) + '</blockquote>' : '')
+      + (bev.verwacht ? '<div class="verwacht">Verwacht: <b>' + esc(bev.verwacht) + '</b></div>' : '')
+      + (bev.detail ? '<div class="verwacht">Langste blokken: <b>' + esc(bev.detail.join(' · ')) + '</b></div>' : '')
+      + (bev.notitie ? '<div class="verwacht">' + esc(bev.notitie) + '</div>' : '')
+      + '<div class="bron">' + esc(bev.bron) + '</div>'
+      + '<div class="oordeel"><span class="vraag">Klopt deze bevinding?</span>'
+        + knop('eens', 'Eens') + knop('oneens', 'Oneens') + knop('onterecht', 'Onterecht') + '</div>'
+      + '</div>';
+  }
+
+  // ---------- interactie ----------
+  document.addEventListener('click', (e) => {
+    const zin = e.target.closest('.zin');
+    if (zin) return richtOp(Number(zin.dataset.bev));
+
+    const quote = e.target.closest('blockquote[data-naar]');
+    if (quote) return richtOp(Number(quote.dataset.naar));
+
+    const knop = e.target.closest('[data-oordeel]');
+    if (knop) return legOordeelVast(knop.dataset.sleutel, knop.dataset.oordeel);
+  });
+
+  function richtOp(index) {
+    document.querySelectorAll('.bev.actief, .zin.actief').forEach((el) => el.classList.remove('actief'));
+    const kaartEl = document.querySelector('.bev[data-index="' + index + '"]');
+    const zinEl = document.querySelector('.zin[data-bev="' + index + '"]');
+    if (kaartEl) { kaartEl.classList.add('actief'); kaartEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+    if (zinEl) { zinEl.classList.add('actief'); zinEl.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+  }
+
+  async function legOordeelVast(sleutel, waarde) {
+    oordelen[sleutel] = oordelen[sleutel] === waarde ? undefined : waarde;
+    tekenBevindingen();
+    if (!db) return;
+    const id = sleutel.replace(/[^A-Za-z0-9_.~:@+-]/g, '_').slice(0, 180);
+    try {
+      if (oordelen[sleutel]) {
+        await db.doc('oordelen/' + id).set({
+          regel: sleutel.split('::')[0], fragment: sleutel.split('::')[1] || '',
+          oordeel: oordelen[sleutel], land: huidig && huidig.land, tijd: new Date().toISOString(),
+        });
+      } else {
+        await db.doc('oordelen/' + id).delete();
+      }
+    } catch (e) { /* vastleggen is een extra; de toets werkt ook zonder */ }
+  }
+
+  $('knop-plakken').addEventListener('click', () => {
+    const vak = $('plakvak');
+    vak.hidden = !vak.hidden;
+    if (!vak.hidden) $('invoer').focus();
+  });
+  $('knop-toets').addEventListener('click', () => {
+    const tekst = $('invoer').value.trim();
+    if (!tekst) return;
+    toetsInvoer(tekst, $('land-invoer').value.trim() || null);
+  });
+  kiezer.addEventListener('change', kiesVoorbeeld);
+
+  // ---------- laag 2: de oordeelstoets ----------
+  $('knop-oordeel').addEventListener('click', async () => {
+    const knop = $('knop-oordeel');
+    const uit = $('oordeelsuitvoer');
+    knop.disabled = true;
+    uit.textContent = 'Bezig…';
+    try {
+      const sample = await window.claude?.use?.('sample');
+      if (!sample) {
+        uit.textContent = 'De oordeelstoets is hier niet beschikbaar. De harde regels hierboven werken wel: '
+          + 'die draaien in de pagina zelf, zonder model.';
+        return;
+      }
+      const matrixRegels = REGELDATA.matrix.koppen
+        .filter((k) => k.h3)
+        .map((k) => '- ' + k.h3 + ': ' + k.richtlijn + (k.toelichting ? ' — ' + k.toelichting : ''))
+        .join('\n');
+      const prompt = [
+        'Je toetst een reisadvies van Nederlandwereldwijd.nl. Beoordeel ALLEEN het objectief toetsbare deel.',
+        'Zeg niets over politieke gevoeligheden en stel niet voor om te schrappen.',
+        '',
+        'Toets op:',
+        '1. B1-niveau: woorden die te moeilijk zijn. Geef per geval een eenvoudiger alternatief.',
+        '2. Begrijpelijkheid: zinnen die ondanks hun lengte lastig te volgen zijn.',
+        '3. Naamwoordstijl en jargon zonder uitleg.',
+        '4. Onderwerpen die volgens de matrix "verwijzen" zijn maar hier zijn uitgeschreven.',
+        '5. Onderwerpen die volgens de matrix "niet melden" zijn maar toch in de lopende tekst staan.',
+        '6. Blokken die het handelingsperspectief missen dat de matrix vraagt.',
+        '',
+        'De matrix:', matrixRegels,
+        '',
+        'Geef per bevinding: het onderwerp, het citaat uit de tekst, waarom het niet voldoet, en een',
+        'herschrijfvoorstel op zinsniveau. Kort en concreet, geen inleiding. Maximaal 8 bevindingen.',
+        '',
+        'Het reisadvies:',
+        huidig.doc.volledigeTekst.slice(0, 12000),
+      ].join('\n');
+
+      const res = await sample(prompt, {
+        modelTier: 'complex',
+        onText: ({ text }) => { uit.textContent = text; },
+      });
+      uit.textContent = res.text;
+    } catch (e) {
+      uit.textContent = 'De oordeelstoets kon niet worden uitgevoerd: ' + (e && e.message ? e.message : e)
+        + '. De harde regels hierboven werken wel.';
+    } finally {
+      knop.disabled = false;
+    }
+  });
+
+  // ---------- start ----------
+  kiesVoorbeeld();
+
+  (async () => {
+    db = await window.claude?.use?.('db');
+    if (!db) return;
+    try {
+      const rijen = await db.collection('oordelen').get();
+      for (const r of (rijen || [])) {
+        const d = r.data ? r.data() : r;
+        if (d && d.regel) oordelen[d.regel + '::' + (d.fragment || '')] = d.oordeel;
+      }
+      if (huidig) tekenBevindingen();
+    } catch (e) { /* geen eerdere oordelen; niet erg */ }
+  })();
+})();
+</script>

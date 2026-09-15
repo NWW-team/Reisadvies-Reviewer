@@ -78,3 +78,19 @@ Uit `STRATEGY.md`, *Niet aan werken*:
 - **politieke gevoeligheden** — de tool doet hier geen uitspraak over
 - **inkorten** — wel de overschrijding signaleren en de langste blokken aanwijzen, niet zelf schrappen
 - **SharePoint-koppeling** — Word-concepten gaan handmatig in en uit
+
+## Aangevuld na de review van 15 september 2026
+
+Deze drie regels vuurden al wel, maar hadden hier geen vindplaats. Dat is in strijd met de
+norm uit de README: een bevinding zonder bron hoort de tool niet te geven.
+
+| regel-id | vindplaats |
+|---|---|
+| `kleur-aanduiding` | Matrix, tabblad *Kleurcode-teksten*, kolom NB: "Bij de eerste bullet over kleurcode altijd voluit schrijven: De kleurcode van het reisadvies voor land X is ..." |
+| `metadescription-lengte` | Schrijfwijzer, *Vindbaarheid > SEO > Metadescriptions* |
+| `url-lengte` | Schrijfwijzer, *Schrijfregels in alfabetische volgorde > url* |
+
+De overige acht id's in dit document (`b1-woordmoeilijkheid`, `begrijpelijkheid`,
+`naamwoordstijl`, `jargon`, `subjectieve-taal`, `matrix-verwijzen-vs-uitschrijven`,
+`matrix-niet-melden-in-tekst`, `handelingsperspectief`) horen bij laag 2, de oordeelstoets.
+Die draait op een model en niet in `src/regels.js`; dat is met opzet zo.

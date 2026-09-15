@@ -51,6 +51,13 @@
   // De sleutel is lossy, dus we onthouden het origineel bij lezen en schrijven.
   var idKaart = Object.create(null);
 
+  /** Alles wat van buiten komt en in innerHTML belandt, moet hier langs. */
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
   function meld(tekst, soort) {
     ['toegang-melding', 'poort-melding'].forEach(function (id) {
       var el = document.getElementById(id);
@@ -291,8 +298,8 @@
     }
 
     b.innerHTML =
-      '<span>Ingelogd als <b>' + (gebruiker.email || '') + '</b>' +
-        (toegestaan ? ' <span class="rol">&middot; ' + (rol || 'reviewer') + '</span>' : '') + '</span>' +
+      '<span>Ingelogd als <b>' + esc(gebruiker.email) + '</b>' +
+        (toegestaan ? ' <span class="rol">&middot; ' + esc(rol || 'reviewer') + '</span>' : '') + '</span>' +
       '<button type="button" class="duw" id="toegang-uit">Uitloggen</button>' + melding;
 
     document.getElementById('toegang-uit').addEventListener('click', async function () {

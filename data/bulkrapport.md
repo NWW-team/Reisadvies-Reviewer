@@ -1,6 +1,6 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-09-14 over 226 reisadviezen.
+Gedraaid op 2026-09-15 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
@@ -44,10 +44,10 @@ de standaardtekst lost ze allemaal tegelijk op.
 | `getallen-cijfers` | 16 | 29 |
 | `tussenkop-leestekens` | 11 | 11 |
 | `vragen-opeenvolgend` | 10 | 11 |
-| `titel-leestekens` | 6 | 6 |
 | `link-verboden-partij` | 6 | 7 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
+| `titel-leestekens` | 5 | 5 |
 | `h2-vast` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
 | `afkortingen-uitschrijven` | 3 | 3 |

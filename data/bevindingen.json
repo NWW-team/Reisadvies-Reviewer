@@ -3932,11 +3932,10 @@
     ],
     "zinnen": 77,
     "fout": 12,
-    "letop": 8,
+    "letop": 7,
     "info": 0,
     "perRegel": {
       "kleur-aanduiding": 1,
-      "titel-leestekens": 1,
       "zin-max-woorden": 12,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
@@ -3950,13 +3949,6 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Bahama's is geel."
-      },
-      {
-        "regel": "titel-leestekens",
-        "ernst": "let-op",
-        "bron": "SW, Gebruiksvriendelijkheid > Titel",
-        "boodschap": "De titel bevat leestekens. Dat mag alleen bij de vraagvorm.",
-        "fragment": "Reisadvies Bahama's"
       },
       {
         "regel": "zin-max-woorden",

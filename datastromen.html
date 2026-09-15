@@ -307,8 +307,10 @@
       </p>
       <p>
         Alle andere gegevens staan in de open data v2 API of als bestand in git, of zijn opnieuw te berekenen.
-        Er is <strong>geen localStorage, sessionStorage of IndexedDB</strong> in de pagina — dat is nagekeken.
-        Er is dus ook geen browseropslag die per ongeluk dingen vasthoudt.
+        De pagina schrijft zelf niets in de browser. Sinds de koppeling met Supabase Auth bewaart de
+        Supabase-bibliotheek wél je <strong>sessie in localStorage</strong>, onder een sleutel als
+        <code>sb-&lt;projectref&gt;-auth-token</code>. Dat is echte opslag: die blijft na afsluiten staan
+        in die ene browser, tot je uitlogt of de sessie verloopt.
       </p>
       <p>
         Wat er wél nog ligt: het oordeel bevat <strong>geen wie</strong>, en de database van een Artifact is
@@ -323,8 +325,8 @@
         <div class="d">De collectie <code>oordelen</code>, met alle vier de CRUD-acties in gebruik.</div></div>
       <div class="statuscard"><div class="k">Corpus in de repo</div><div class="v">226 van 227</div>
         <div class="d">Opgehaald op 14-09-2026; alleen VAT gaf 404 op zowel ISO-code als locationKey.</div></div>
-      <div class="statuscard"><div class="k">Browseropslag</div><div class="v">Geen</div>
-        <div class="d">Geen localStorage, sessionStorage of IndexedDB in de pagina.</div></div>
+      <div class="statuscard"><div class="k">Browseropslag</div><div class="v">1 sleutel</div>
+        <div class="d">De Supabase-bibliotheek bewaart je sessie in localStorage. De pagina zelf schrijft er niets in.</div></div>
     </div>
   </section>
 </div>
@@ -466,9 +468,9 @@
           <li><b>De prompt en het antwoord van de oordeelstoets</b> — een herschrijfvoorstel is een suggestie.
             Bewaren geeft het gewicht dat het niet heeft.</li>
           <li><b>Geplakte tekst en de landnaam</b> — van de redacteur, niet van de tool.</li>
-          <li><b>Browseropslag</b> — de pagina gebruikt die niet, en dat hoeft ook niet. Zou je hem gaan
-            gebruiken: <code>localStorage</code> is echte opslag, geen werkgeheugen. Het blijft na afsluiten
-            staan in die ene browser, en jij kunt er niet bij.</li>
+          <li><b>De sessie in localStorage</b> — die zet de Supabase-bibliotheek er zelf neer, en dat is
+            nodig om ingelogd te blijven. Let op: dit is echte opslag, geen werkgeheugen. Uitloggen ruimt
+            hem op; het venster sluiten niet. Zet er zelf niets bij.</li>
         </ul>
       </div>
 
@@ -540,7 +542,7 @@
     extern:   {label:"Externe bron",           short:"Extern",    desc:"Staat al in een externe bron. De app leest het en hoeft er geen eigen kopie van te houden.", actief:true},
     tijdelijk:{label:"Tijdelijk",              short:"Tijdelijk", desc:"Alleen nodig voor invoer, verwerking, berekening of weergave. Na afsluiten of herladen weg.", actief:true},
     keuze:    {label:"Keuze nodig",            short:"Keuze",     desc:"Twijfelgeval. Er ligt nog een vraag open die beantwoord moet worden.", actief:true},
-    browser:  {label:"Browseropslag",          short:"Browser",   desc:"localStorage en verwanten. Zou blijven staan na afsluiten, in één browser. Komt in deze app niet voor — nagekeken.", actief:false}
+    browser:  {label:"Browseropslag",          short:"Browser",   desc:"localStorage. Blijft na afsluiten staan in déze browser. In deze app: alleen de sessie die de Supabase-bibliotheek bewaart.", actief:true}
   };
   var COLOR = {db:"--db", repo:"--repo", extern:"--ext", tijdelijk:"--tijd", keuze:"--keu", browser:"--brw"};
   function col(cat){ return getComputedStyle(document.documentElement).getPropertyValue(COLOR[cat]).trim() || "#888"; }

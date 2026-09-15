@@ -21,11 +21,33 @@ zonder bron hoort de tool niet te geven.
 
 ## In de tool
 
+**Wat er getoetst wordt.** De introductiezin hoort erbij: die komt uit het cms-veld
+*Inhoudelijke wijzigingen* (in de API `modifications`) en heeft een eigen vaste formulering, met
+een aparte variant voor een advies dat alleen kleurcode rood kent. De intro en *In het kort* zijn
+twee verschillende dingen met elk hun eigen regels; wordt een advies zonder opmaak geplakt, dan
+ziet de parser geen koppen en herkent de tool dat het introveld ontbreekt in plaats van *In het
+kort* als intro te toetsen.
+
 **Markering.** Een bevinding die een plek in de tekst heeft, kleurt die zin in het linkerpaneel;
 klikken op de zin of op het citaat springt naar de andere kant. Een fragment hoeft niet precies
 één zin te zijn: valt een zin binnen het fragment of omgekeerd, dan kleurt hij mee. Bevindingen
 over iets dat *ontbreekt* hebben niets om aan te wijzen en blijven ongemarkeerd — die staan
 alleen in de lijst, met de verwachte formulering erbij.
+
+**Vijf kleuren, vaste volgorde.** De ernst van een bevinding is een *soort*, geen rangorde van
+erg naar minder erg. De lijst staat altijd in deze volgorde, zodat je hem van boven naar beneden
+kunt aflopen:
+
+| kleur | soort | waarvoor |
+| --- | --- | --- |
+| rood | **Fout** | het mag echt niet: een onderwerp dat er niet hoort, een vaste formulering die niet is aangehouden |
+| geel/oranje | **Let op** | te lange zin zonder link, te lange linktekst, lijdende vorm |
+| lichtblauw | **Lange zin met link** | meer dan 15 woorden *en* een link in de zin — vaak op te lossen door de linktekst in te korten |
+| roze | **Twijfeltaal** | misschien, vaak, mogelijk, bijna … |
+| grijs | **Ter overweging** | de rest: notatieregels en signalen om over na te denken |
+
+Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een fout moet je hoe
+dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
 
 **De drie oordelen** bij elke bevinding zeggen elk iets anders, en dat is met opzet:
 
@@ -97,7 +119,8 @@ node --test                      # de regels testen (tests/)
 node test/toets.cjs               # samenvatting per voorbeeldadvies
 node test/toets-sjabloon.cjs      # welke sjabloonregels vuren, en waarom
 node test/toets-dekking.cjs       # dekking van de vaste teksten
-node --test test/toets-markering.cjs  # markering: wijst een bevinding de juiste zin aan?
+node --test test/toets-markering.cjs test/toets-in-het-kort.cjs test/toets-ernst.cjs
+                                 # markering, de regels van In het kort, en de ernstindeling
 node scripts/fetch-corpus.mjs    # reisadviezen ophalen (zie hieronder)
 node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
@@ -140,11 +163,15 @@ code in Node draait (tests, bulkslag) en in de browser (de deelbare prototypepag
 
 ## Wat de bulkslag oplevert
 
-Over 226 live reisadviezen (`data/bulkrapport.md`): 41 zitten boven de woordenlimiet, gemiddeld
-9 eigen fouten per advies, en 25 adviezen bevatten een onderwerp dat de matrix als *niet melden*
+Over 226 live reisadviezen (`data/bulkrapport.md`): 46 zitten boven de woordenlimiet, 154 hebben
+geen enkele harde fout, en 25 adviezen bevatten een onderwerp dat de matrix als *niet melden*
 aanmerkt. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
 ruim 200 adviezen woordelijk hetzelfde staan. Die zijn met één aanpassing tegelijk opgelost, en
 het rapport zet ze daarom apart.
+
+Let op bij het vergelijken met een ouder rapport: te lange zinnen tellen sinds de kleurindeling
+hierboven niet meer als *fout* maar als *let op* of *lange zin met link*. Het aantal "harde
+fouten" daalde daardoor scherp zonder dat er één advies veranderde.
 
 ## Over de regels
 

@@ -4,8 +4,10 @@
 <style>
 /* Kleuren uit de Rijkshuisstijl zoals Nederlandwereldwijd.nl die gebruikt: hemelblauw voor de
    band, donkerblauw voor koppen, en de vier officiele kleurcodes voor de reisadviezen zelf.
-   Die vier zijn inhoud, geen decoratie, dus de ernst van een bevinding gebruikt ze niet:
-   fout is robijnrood en let op is donkergeel, zodat rood en oranje "kleurcode" blijven betekenen.
+   De ernst van een bevinding gebruikt dezelfde familie — rood voor een echte fout, geel/oranje
+   voor te lang of te passief, lichtblauw voor een lange zin met een link, roze voor twijfeltaal —
+   omdat dat sneller scant dan een aparte set. De kleurcodes zelf staan altijd bij hun naam
+   ("kleurcode geel") en als chip met tekst, dus verwarring blijft beperkt tot de kleur alleen.
    RO Sans is niet vrij beschikbaar; Fira Sans is de dichtstbijzijnde humanistische schreefloze. */
 :root {
   --blauw: #007bc7;
@@ -20,12 +22,18 @@
   --gedempt: #535353;
   --accent: var(--blauw);
   --accent-zacht: #e5f1fa;
-  --fout: #ca005d;
-  --fout-vlak: #fbe5ef;
-  --fout-rand: #ca005d;
+  --fout: #d52b1e;
+  --fout-vlak: #fbe6e4;
+  --fout-rand: #d52b1e;
   --letop: #8a5a00;
   --letop-vlak: #fff3d6;
-  --letop-rand: #ffb612;
+  --letop-rand: #e17000;
+  --linkzin: #154273;
+  --linkzin-vlak: #dceefa;
+  --linkzin-rand: #007bc7;
+  --twijfel: #a90061;
+  --twijfel-vlak: #fce4f1;
+  --twijfel-rand: #f092cd;
   --info: #535353;
   --info-vlak: #f0f0f0;
   --info-rand: #b4b4b4;
@@ -58,6 +66,12 @@
     --letop: #ffc95e;
     --letop-vlak: #2e2513;
     --letop-rand: #ffb612;
+    --linkzin: #8fcae7;
+    --linkzin-vlak: #11293c;
+    --linkzin-rand: #4aa3dd;
+    --twijfel: #f9a8d4;
+    --twijfel-vlak: #2f1024;
+    --twijfel-rand: #d16bab;
     --info: #a2b4c6;
     --info-vlak: #1e2c3b;
     --info-rand: #3b5168;
@@ -160,6 +174,10 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .cel .waarde small { font-size: .78rem; font-weight: 400; color: var(--gedempt); }
 .cel.fout .waarde { color: var(--fout); }
 .cel.letop .waarde { color: var(--letop); }
+.cel.linkzin .waarde { color: var(--linkzin); }
+.cel.twijfel .waarde { color: var(--twijfel); }
+:root[data-theme="dark"] .cel.linkzin .waarde { color: var(--linkzin); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cel.linkzin .waarde { color: var(--linkzin); } }
 .meter { height: 8px; background: var(--vlak-2); margin-top: 9px; overflow: hidden; }
 .meter i { display: block; height: 100%; background: var(--blauw); transition: width .3s; }
 .meter.over i { background: var(--fout); }
@@ -193,6 +211,8 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .zin { cursor: pointer; }
 .zin.m-fout { background: var(--fout-vlak); box-shadow: inset 0 -2px 0 var(--fout-rand); }
 .zin.m-letop { background: var(--letop-vlak); box-shadow: inset 0 -2px 0 var(--letop-rand); }
+.zin.m-linkzin { background: var(--linkzin-vlak); box-shadow: inset 0 -2px 0 var(--linkzin-rand); }
+.zin.m-twijfel { background: var(--twijfel-vlak); box-shadow: inset 0 -2px 0 var(--twijfel-rand); }
 .zin.m-info { background: var(--info-vlak); box-shadow: inset 0 -1px 0 var(--info-rand); }
 .zin.actief { outline: 2px solid var(--blauw); outline-offset: 1px; }
 
@@ -201,11 +221,15 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .groep > h3 .aantal { font-family: var(--mono); font-weight: 400; color: var(--gedempt); font-size: .76rem; letter-spacing: 0; }
 .groep.fout > h3 { color: var(--fout); }
 .groep.letop > h3 { color: var(--letop); }
+.groep.linkzin > h3 { color: var(--linkzin); }
+.groep.twijfel > h3 { color: var(--twijfel); }
 .groep.info > h3 { color: var(--info); }
 
 .bev { border: 1px solid var(--lijn); border-left: 4px solid var(--lijn-sterk); padding: 11px 13px; margin-bottom: 9px; background: var(--vlak); }
 .groep.fout .bev { border-left-color: var(--fout-rand); }
 .groep.letop .bev { border-left-color: var(--letop-rand); }
+.groep.linkzin .bev { border-left-color: var(--linkzin-rand); }
+.groep.twijfel .bev { border-left-color: var(--twijfel-rand); }
 .groep.info .bev { border-left-color: var(--info-rand); }
 .bev.actief { outline: 2px solid var(--blauw); outline-offset: 1px; }
 .bev .regelnaam { font-family: var(--mono); font-size: .72rem; color: var(--gedempt); }
@@ -258,14 +282,19 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
   break-inside: avoid; }
 #rapport .r-bev.fout { border-left-color: var(--fout-rand); }
 #rapport .r-bev.letop { border-left-color: var(--letop-rand); }
+#rapport .r-bev.linkzin { border-left-color: var(--linkzin-rand); }
+#rapport .r-bev.twijfel { border-left-color: var(--twijfel-rand); }
 #rapport .r-regel { font-family: var(--mono); font-size: .72rem; color: var(--gedempt); }
 #rapport .r-cite { font-style: italic; }
 #rapport .r-bij { font-size: .8rem; color: var(--gedempt); }
 /* In een pdf of op papier draagt kleur alleen niet: onderstrepen doet dat wel. */
-#rapport .r-tekst .m-fout, #rapport .r-tekst .m-letop, #rapport .r-tekst .m-info {
+#rapport .r-tekst .m-fout, #rapport .r-tekst .m-letop, #rapport .r-tekst .m-linkzin,
+#rapport .r-tekst .m-twijfel, #rapport .r-tekst .m-info {
   text-decoration: underline; text-underline-offset: 2px; }
 #rapport .r-tekst .m-fout { text-decoration-color: var(--fout-rand); text-decoration-thickness: 2px; }
 #rapport .r-tekst .m-letop { text-decoration-color: var(--letop-rand); text-decoration-thickness: 2px; }
+#rapport .r-tekst .m-linkzin { text-decoration-color: var(--linkzin-rand); text-decoration-thickness: 2px; }
+#rapport .r-tekst .m-twijfel { text-decoration-color: var(--twijfel-rand); text-decoration-thickness: 2px; }
 #rapport .r-tekst .m-info { text-decoration-color: var(--info-rand); text-decoration-thickness: 1px; }
 #rapport .r-tekst .zin { cursor: auto; }
 
@@ -386,7 +415,10 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   let db = null;
 
   const sleutelVan = (bev) => bev.regel + '::' + String(bev.fragment || bev.boodschap).slice(0, 80);
-  const ernstKlasse = { 'fout': 'fout', 'let-op': 'letop', 'info': 'info' };
+  // De volgorde komt uit de regellaag, zodat paneel, balk en rapport hem niet los bijhouden.
+  const VOLGORDE = Regels.ERNST_VOLGORDE;
+  const ernstKlasse = { 'fout': 'fout', 'let-op': 'letop', 'link-zin': 'linkzin',
+    'twijfel': 'twijfel', 'info': 'info' };
   // Drie oordelen met drie verschillende gevolgen. "Oneens" zegt iets over dit advies: de regel
   // klopt, maar hier geldt een bewuste uitzondering. "Onterecht" zegt iets over de tool: de
   // bevinding had er niet moeten staan. Dat onderscheid is de reden dat ze naast elkaar staan.
@@ -396,7 +428,11 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     oneens: 'De regel klopt, maar in dit advies wijken we er bewust van af.',
     onterecht: 'De bevinding zelf deugt niet: de tool ziet iets dat er niet staat.',
   };
-  const ernstLabel = { 'fout': 'Fout', 'let-op': 'Let op', 'info': 'Ter overweging' };
+  const ernstLabel = { 'fout': 'Fout', 'let-op': 'Let op', 'link-zin': 'Lange zin met link',
+    'twijfel': 'Twijfeltaal', 'info': 'Ter overweging' };
+  // Korter, voor de tellers in de balk.
+  const ernstEtiket = { 'fout': 'Fout', 'let-op': 'Let op', 'link-zin': 'Zin met link',
+    'twijfel': 'Twijfeltaal', 'info': 'Overig' };
 
   function esc(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -446,8 +482,9 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
             ? s.kleurcodes.map((k) => '<span class="chip ' + k + '">' + k + '</span>').join('')
             : '<span class="chip" style="color:var(--gedempt)">geen gevonden</span>')
         + '</div></div>',
-      '<div class="cel fout"><div class="etiket">Fouten</div><div class="waarde">' + s.fout + '</div></div>',
-      '<div class="cel letop"><div class="etiket">Let op</div><div class="waarde">' + s.letop + '</div></div>',
+      ...VOLGORDE.map((e) => '<div class="cel ' + ernstKlasse[e] + '">'
+        + '<div class="etiket">' + ernstEtiket[e] + '</div>'
+        + '<div class="waarde">' + ((s.perErnst && s.perErnst[e]) || 0) + '</div></div>'),
       '<div class="cel"><div class="etiket">Zinnen</div><div class="waarde">' + s.zinnen + '</div></div>',
     ].join('');
   }
@@ -476,11 +513,16 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         stukken.push('<' + tag + '><span>' + esc(blok.kop) + '</span>'
           + '<span class="telling' + (lang ? ' lang' : '') + '">' + woorden + ' woorden</span></' + sluit + '>');
       }
-      for (const a of blok.alineas) {
-        stukken.push('<p>' + a.zinnen.map((z) => markeer(z, perZin, ruim)).join(' ') + '</p>');
-      }
-      for (const o of blok.opsommingen) {
-        stukken.push('<ul>' + o.items.map((x) => '<li>' + markeer(x, perZin, ruim) + '</li>').join('') + '</ul>');
+      // Op documentvolgorde: een alinea ná een opsomming hoort er ook ná te staan. Eerst alle
+      // alinea's en dan alle opsommingen tekenen zette bijvoorbeeld de oproep voor de
+      // Informatieservice bóven de bullets van "In het kort".
+      for (const onderdeel of blok.onderdelen) {
+        if (onderdeel.soort === 'alinea') {
+          stukken.push('<p>' + onderdeel.alinea.zinnen.map((z) => markeer(z, perZin, ruim)).join(' ') + '</p>');
+        } else {
+          stukken.push('<ul>' + onderdeel.opsomming.items
+            .map((x) => '<li>' + markeer(x, perZin, ruim) + '</li>').join('') + '</ul>');
+        }
       }
     }
     $('advies').innerHTML = stukken.join('') || '<p class="leeg">Geen tekst gevonden.</p>';
@@ -503,8 +545,10 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         : ruim.filter((x) => x.k.includes(k) || k.includes(x.k)).map((x) => x.i);
       if (!treffers.length) return esc(zin);
     }
-    const ernsten = treffers.map((i) => huidig.resultaat.bevindingen[i].ernst);
-    const zwaarste = ernsten.includes('fout') ? 'fout' : ernsten.includes('let-op') ? 'let-op' : 'info';
+    // Staan er meer bevindingen op één zin, dan wint de eerste uit de vaste volgorde: een fout
+    // moet je hoe dan ook zien, ook als er twijfeltaal in dezelfde zin staat.
+    const ernsten = new Set(treffers.map((i) => huidig.resultaat.bevindingen[i].ernst));
+    const zwaarste = VOLGORDE.find((e) => ernsten.has(e)) || 'info';
     return '<span class="zin m-' + ernstKlasse[zwaarste] + '" data-bev="' + treffers[0] + '" '
       + 'title="' + esc(treffers.length + ' bevinding' + (treffers.length > 1 ? 'en' : '')) + '">' + esc(zin) + '</span>';
   }
@@ -517,7 +561,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         + 'regels die de tool kan toetsen.</p>';
       return;
     }
-    const volgorde = ['fout', 'let-op', 'info'];
+    const volgorde = VOLGORDE;
     const html = volgorde.map((ernst) => {
       const groep = bevs.map((b, i) => [b, i]).filter(([b]) => b.ernst === ernst);
       if (!groep.length) return '';
@@ -671,16 +715,20 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     '.meta{font-size:9pt;color:#535353;margin:0 0 10pt}',
     '.r-bev{margin:0 0 7pt;padding-left:7pt;border-left:3px solid #b4b4b4}',
     '.r-bev.fout{border-left-color:#ca005d}',
-    '.r-bev.letop{border-left-color:#ffb612}',
+    '.r-bev.letop{border-left-color:#e17000}',
+    '.r-bev.linkzin{border-left-color:#007bc7}',
+    '.r-bev.twijfel{border-left-color:#f092cd}',
     '.r-regel{font-family:Consolas,monospace;font-size:8pt;color:#535353}',
     '.r-cite{font-style:italic}',
     '.r-bij{font-size:9.5pt;color:#535353}',
-    '.m-fout{text-decoration:underline;text-decoration-color:#ca005d}',
-    '.m-letop{text-decoration:underline;text-decoration-color:#8a5a00}',
+    '.m-fout{text-decoration:underline;text-decoration-color:#d52b1e}',
+    '.m-letop{text-decoration:underline;text-decoration-color:#e17000}',
+    '.m-linkzin{text-decoration:underline;text-decoration-color:#007bc7}',
+    '.m-twijfel{text-decoration:underline;text-decoration-color:#f092cd}',
     '.m-info{text-decoration:underline;text-decoration-color:#767676}',
   ].join('');
 
-  const ERNSTEN = ['fout', 'let-op', 'info'];
+  const ERNSTEN = VOLGORDE;
 
   function rapportKop() {
     const s = huidig.resultaat.samenvatting;

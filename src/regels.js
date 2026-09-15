@@ -12,7 +12,22 @@
 
 import { telWoorden } from './parse.js';
 
-const ERNST = { fout: 'fout', letop: 'let-op', info: 'info' };
+/**
+ * De ernst van een bevinding bepaalt de kleur en de volgorde in het paneel, en is een soort
+ * fout, niet een rangorde van erg naar minder erg:
+ *
+ *   fout     rood         het mag echt niet: een onderwerp dat er niet hoort, of een vaste
+ *                         formulering die niet is aangehouden
+ *   let-op   geel/oranje  te lang of te passief geschreven: zinnen, linkteksten, lijdende vorm
+ *   link-zin lichtblauw   te lange zin waarin een link staat — vaak los te maken door de
+ *                         linktekst in te korten, dus een ander gesprek dan een lange lopende zin
+ *   twijfel  roze         twijteltaal
+ *   info     grijs        de rest: notatieregels en signalen om over na te denken
+ */
+const ERNST = { fout: 'fout', letop: 'let-op', linkzin: 'link-zin', twijfel: 'twijfel', info: 'info' };
+
+/** De volgorde waarin bevindingen worden getoond en geteld. */
+const ERNST_VOLGORDE = [ERNST.fout, ERNST.letop, ERNST.linkzin, ERNST.twijfel, ERNST.info];
 
 /** Normaliseert voor tekstvergelijking: kleine letters, rechte apostrof, enkele spaties. */
 export function norm(s) {
@@ -103,11 +118,37 @@ export function maakToetser(data) {
     });
   }
 
+  /**
+   * Begint deze tekst met een van de vaste H2's? Wordt een advies als platte tekst geplakt, dan
+   * ziet de parser de koppen niet en wordt "In het kort" plus alles eronder één alinea. Die
+   * alinea staat op de plek van het introveld, maar is de intro niet: de intro staat ervóór en
+   * heeft een eigen vaste tekst, afhankelijk van de kleurcode. Dit herkent dat geval.
+   */
+  function beginMetVasteH2(tekst) {
+    const n = norm(tekst);
+    return matrix.h2_vast.some((sjabloon) => {
+      const p = esc(norm(sjabloon))
+        .replace(/\\\?/g, '\\?')
+        .replace(/\b(in|naar) \\\{land\\\}/g, '(?:in|op|naar) [^?]{2,45}')
+        .replace(/\\\{land\\\}/g, '[^?]{2,45}');
+      // Geen \b: een vaste kop kan op een vraagteken eindigen, en daarna is er geen
+      // woordgrens. Wel eisen dat er geen letter of cijfer op volgt, zodat "in het korter"
+      // niet meetelt.
+      return new RegExp('^' + p + '(?![a-z0-9])').test(n);
+    });
+  }
+
   /** @returns {{bevindingen: Array, samenvatting: object}} */
   return function toets(doc, opties = {}) {
     const b = [];
     const tekst = doc.volledigeTekst || '';
     const genorm = norm(tekst);
+
+    // "In het kort" is geen introductie: daar gelden eigen regels voor. Staat de eerste alinea
+    // op de plek van het introveld maar begint hij met een vaste kop, dan hebben we het
+    // introveld niet meegekregen en toetsen we er ook niet op.
+    const introIsKop = !!doc.intro && beginMetVasteH2(doc.intro);
+    const intro = introIsKop ? null : doc.intro;
     // "kleurcode groen" en "de kleurcode van het reisadvies voor X is groen" tellen allebei;
     // [^.] houdt de match binnen één zin, zodat twee kleuren niet in elkaar overlopen.
     const kleurenInTekst = kleurcodes.volgorde.filter((k) =>
@@ -175,6 +216,39 @@ export function maakToetser(data) {
     const kortBlok = doc.blokken.find((x) => norm(x.kop || '') === norm('In het kort'));
     if (kortBlok) {
       const bullets = kortBlok.opsommingen.flatMap((o) => o.items);
+
+      // De 25 woorden uit de matrix horen bij de bullet in "In het kort" die naar Actueel
+      // verwijst — de rij zegt "actuele ontwikkeling … met verwijzing naar Actueel" — en niet
+      // bij de rubriek Actueel zelf. De uitleg ónder die kop mag langer zijn: daar staat wat er
+      // speelt, waar, en wat de reiziger kan doen.
+      const actueelBullet = bullets.find((i) => /\bactueel\b/i.test(i));
+      if (actueelBullet) {
+        const nActueel = telWoorden(actueelBullet);
+        if (nActueel > lim.actueel.max_woorden) {
+          b.push(bevinding('actueel-max-woorden', ERNST.fout, 'MX, tab Koppen, rij In het kort',
+            `De bullet die naar Actueel verwijst telt ${nActueel} woorden. Maximaal ${lim.actueel.max_woorden}.`,
+            { fragment: actueelBullet }));
+        }
+      }
+
+      // De oproep voor de Informatieservice hoort onder de bullets, als laatste onderdeel van
+      // "In het kort" ("Daaronder in Let op: Aanmelden Informatieservice"). Of de tekst er staat
+      // en klopt toetst een andere regel; deze gaat alleen over de plek. Daarvoor is de
+      // documentvolgorde nodig, en die staat in blok.onderdelen.
+      const infoRe = /informatieservice/i;
+      const infoTekst = (o) => (o.soort === 'alinea' ? o.alinea.tekst : o.opsomming.items.join(' '));
+      const infoFragment = (o) => (o.soort === 'alinea'
+        ? o.alinea.tekst
+        : o.opsomming.items.find((i) => infoRe.test(i)) || o.opsomming.items.join(' '));
+      const kortOnderdelen = kortBlok.onderdelen || [];
+      const infoPlek = kortOnderdelen.findIndex((o) => infoRe.test(infoTekst(o)));
+      if (infoRe.test(genorm) && kortOnderdelen.length && infoPlek !== kortOnderdelen.length - 1) {
+        b.push(bevinding('kort-informatieservice-onderaan', ERNST.fout, 'MX, tab Koppen, rij In het kort',
+          infoPlek < 0
+            ? 'De oproep voor de Informatieservice staat niet in "In het kort". Hij hoort daar onderaan.'
+            : 'De oproep voor de Informatieservice staat niet onderaan "In het kort".',
+          infoPlek < 0 ? {} : { fragment: infoFragment(kortOnderdelen[infoPlek]) }));
+      }
       const eersteKleur = bullets.find((i) => /kleurcode/i.test(i));
       if (eersteKleur && !/^de kleurcode van het reisadvies voor /.test(norm(eersteKleur))) {
         b.push(bevinding('kleur-eerste-bullet-voluit', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
@@ -223,15 +297,6 @@ export function maakToetser(data) {
         'Regionale risico\'s hoort er alleen te staan bij meer dan 1 kleurcode.'));
     }
 
-    const actueelBlok = doc.blokken.find((x) => norm(x.kop || '') === 'actueel');
-    if (actueelBlok) {
-      const n = actueelBlok.alineas.reduce((s, a) => s + a.woorden, 0);
-      if (n > lim.actueel.max_woorden) {
-        b.push(bevinding('actueel-max-woorden', ERNST.fout, 'MX, tab Koppen, rij In het kort',
-          `Actueel telt ${n} woorden. Maximaal ${lim.actueel.max_woorden}.`));
-      }
-    }
-
     // ---------- titel en intro ----------
     if (doc.titel) {
       if (doc.titel.length > lim.titel.max_tekens) {
@@ -247,15 +312,15 @@ export function maakToetser(data) {
       }
     }
     const titelIsVraag = !!doc.titel && doc.titel.trim().endsWith('?');
-    if (doc.intro) {
-      const n = telWoorden(doc.intro);
+    if (intro) {
+      const n = telWoorden(intro);
       if (n > lim.intro.max_woorden) {
         b.push(bevinding('intro-max-woorden', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Intro',
-          `De intro telt ${n} woorden. Richtlijn is maximaal ${lim.intro.max_woorden}.`, { fragment: doc.intro }));
+          `De intro telt ${n} woorden. Richtlijn is maximaal ${lim.intro.max_woorden}.`, { fragment: intro }));
       }
-      if (titelIsVraag && doc.intro.trim().split(/(?<=[.?!])\s/)[0].endsWith('?')) {
+      if (titelIsVraag && intro.trim().split(/(?<=[.?!])\s/)[0].endsWith('?')) {
         b.push(bevinding('intro-geen-vraag-na-vraagtitel', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Intro',
-          'De titel is al een vraag, begin de intro dan niet met een vraag.', { fragment: doc.intro }));
+          'De titel is al een vraag, begin de intro dan niet met een vraag.', { fragment: intro }));
       }
     }
 
@@ -311,12 +376,19 @@ export function maakToetser(data) {
     for (const z of doc.zinnen) {
       if (isVasteZin(z.tekst)) continue;
       if (z.woorden > lim.zin.max_woorden) {
-        b.push(bevinding('zin-max-woorden', ERNST.fout, 'SW, Begrijpelijkheid > B1',
-          `Deze zin telt ${z.woorden} woorden. Maximaal ${lim.zin.max_woorden}.`, { fragment: z.tekst, kop: z.h3 || z.h2 }));
+        // Zit er een link in, dan zit de lengte vaak in de linktekst. Dat los je op door de
+        // linktekst in te korten, niet door de zin te splitsen — een eigen kleur dus, zodat de
+        // redacteur die twee apart kan aflopen.
+        const metLink = doc.links.some((l) => l.tekst && z.tekst.includes(l.tekst));
+        b.push(bevinding('zin-max-woorden', metLink ? ERNST.linkzin : ERNST.letop,
+          'SW, Begrijpelijkheid > B1',
+          `Deze zin telt ${z.woorden} woorden. Maximaal ${lim.zin.max_woorden}.`
+            + (metLink ? ' De linktekst telt mee — kort die eerst in.' : ''),
+          { fragment: z.tekst, kop: z.h3 || z.h2 }));
       }
       for (const w of wl.twijfeltaal.woorden) {
         if (new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) {
-          b.push(bevinding('zin-twijfeltaal', ERNST.letop, 'SW, Begrijpelijkheid > B1',
+          b.push(bevinding('zin-twijfeltaal', ERNST.twijfel, 'SW, Begrijpelijkheid > B1',
             `Twijfeltaal: "${w}".`, { fragment: z.tekst, kop: z.h3 || z.h2, ...herkomst(extraTwijfel, w) }));
         }
       }
@@ -435,10 +507,23 @@ export function maakToetser(data) {
 
     // Duizendtallen apart: telefoonnummers en jaartallen zijn geen "grote getallen".
     const zonderTelefoon = tekst.replace(/(\+|00)\d[\d\s().-]{6,}/g, (m) => ' '.repeat(m.length));
+    // Alarm- en servicenummers zijn geen grote getallen: 1155 hoort niet als 1.155 geschreven te
+    // worden. Internationale nummers vallen hierboven al weg; lokale nummers herkennen we aan
+    // wat er in dezelfde zin vóór staat ("Algemeen alarmnummer: 191 (Toeristen)politie: 1155").
+    // Bewust op woorddelen: "alarmnummers" en "Toeristenpolitie" horen er net zo goed bij.
+    const TELEFOONWOORDEN = /nummer|number|politie|brandweer|ambulance|hulpdienst|noodgeval|alarm|helpline|hotline|whatsapp|\bbel(t|len)?\b|\bsms\b/i;
+    const isTelefoonnummer = (index) => {
+      const voor = zonderTelefoon.slice(Math.max(0, index - 80), index);
+      const zinDeel = voor.slice(Math.max(voor.lastIndexOf('.'), voor.lastIndexOf('\n')) + 1);
+      // Een getal direct achter een dubbele punt is een opgegeven nummer, geen hoeveelheid:
+      // "Toeristenpolitie (alleen bereikbaar in New Delhi): 8750871111".
+      return /:\s*$/.test(zinDeel) || TELEFOONWOORDEN.test(zinDeel);
+    };
     const gezienGetal = new Set();
     for (const m of zonderTelefoon.matchAll(/(?<![\d.,+])[1-9]\d{3,}(?![\d.,])/g)) {
       const n = Number(m[0]);
       if (n >= 1900 && n <= 2100 && m[0].length === 4) continue;   // jaartal
+      if (isTelefoonnummer(m.index)) continue;                     // alarm- of servicenummer
       if (gezienGetal.has(m[0])) continue;
       gezienGetal.add(m[0]);
       b.push(bevinding('getallen-cijfers', ERNST.info, 'SW, Schrijfregels > Getallen / Cijfers',
@@ -513,7 +598,12 @@ export function maakToetser(data) {
         zinnen: doc.zinnen.length,
         fout: b.filter((x) => x.ernst === ERNST.fout).length,
         letop: b.filter((x) => x.ernst === ERNST.letop).length,
+        linkzin: b.filter((x) => x.ernst === ERNST.linkzin).length,
+        twijfel: b.filter((x) => x.ernst === ERNST.twijfel).length,
         info: b.filter((x) => x.ernst === ERNST.info).length,
+        // Hetzelfde nog eens, maar op volgorde en met de ernst als sleutel: daar tekent de
+        // pagina de balk mee, zonder de namen nog een keer te hoeven kennen.
+        perErnst: Object.fromEntries(ERNST_VOLGORDE.map((e) => [e, b.filter((x) => x.ernst === e).length])),
         perRegel,
       },
       buitenScope: [
@@ -551,5 +641,5 @@ function contextVan(tekst, index, marge = 220) {
   return zin || venster.replace(/\s+/g, ' ').trim();
 }
 
-export { ERNST };
-export default { maakToetser, norm, ERNST };
+export { ERNST, ERNST_VOLGORDE };
+export default { maakToetser, norm, ERNST, ERNST_VOLGORDE };

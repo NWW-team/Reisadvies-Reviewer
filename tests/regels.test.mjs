@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { advies, idsVan, bevindingenVan, regeldata } from './helpers.mjs';
+import { ERNST_VOLGORDE } from '../src/regels.js';
 
 /**
  * Per regel één fragment dat de regel moet laten afgaan en één dat dat niet mag.
@@ -164,7 +165,7 @@ test('elke bevinding draagt een bron mee', () => {
   assert.ok(b.length > 0);
   for (const x of b) {
     assert.ok(x.bron && x.bron.length > 3, `bevinding zonder bron: ${x.regel}`);
-    assert.ok(['fout', 'let-op', 'info'].includes(x.ernst), `onbekende ernst: ${x.ernst}`);
+    assert.ok(ERNST_VOLGORDE.includes(x.ernst), `onbekende ernst: ${x.ernst}`);
   }
 });
 

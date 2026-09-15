@@ -29,7 +29,7 @@ function alsNamespace(bron, naam, exports, vervang = []) {
 }
 
 const parse = alsNamespace(lees('src', 'parse.js'), 'Parse', ['parseAdvies', 'splitsZinnen', 'telWoorden']);
-const regels = alsNamespace(lees('src', 'regels.js'), 'Regels', ['maakToetser', 'norm', 'ERNST'],
+const regels = alsNamespace(lees('src', 'regels.js'), 'Regels', ['maakToetser', 'norm', 'ERNST', 'ERNST_VOLGORDE'],
   [[/^import \{ telWoorden \} from '\.\/parse\.js';$/m, 'const telWoorden = Parse.telWoorden;']]);
 
 const regeldata = {

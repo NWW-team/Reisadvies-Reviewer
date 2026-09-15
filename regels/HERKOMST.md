@@ -18,12 +18,13 @@ Twee bronnen:
 | `kleur-volgorde` | MX, tab *Kleurcode-teksten*, kolom NB | volgorde altijd rood → groen |
 | `kleur-eerste-bullet-voluit` | MX, tab *Kleurcode-teksten*, kolom NB | eerste bullet voluit, vervolgbullets verkort |
 | `kort-informatieservice` | MX, tab *Koppen*, rij *In het kort* | standaardtekst Aanmelden Informatieservice aanwezig |
-| `actueel-max-woorden` | MX, tab *Koppen*, rij *In het kort* | Actueel max 25 woorden |
+| `actueel-max-woorden` | MX, tab *Koppen*, rij *In het kort* | de bullet die naar Actueel verwijst: max 25 woorden — niet de rubriek Actueel zelf |
+| `kort-informatieservice-onderaan` | MX, tab *Koppen*, rij *In het kort* | "Daaronder in Let op: Aanmelden Informatieservice": onderaan het blok |
 | `gebieden-max-drie` | MX, tab *Koppen*, rij *In het kort* | max 3 gebieden/plaatsen noemen, daarna verwijzen |
 | `h2-vast` | MX, tab *Uitleg* | H2-koppen zijn vast |
 | `h3-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden* | onderwerp hoort niet in het reisadvies |
 | `h3-regionaal-alleen-bij-meerdere` | MX, tab *Koppen*, rij *Regionale risico's* | alleen bij meer dan 1 kleurcode |
-| `zin-max-woorden` | SW, *Begrijpelijkheid > B1* | max 15 woorden per zin |
+| `zin-max-woorden` | SW, *Begrijpelijkheid > B1* | max 15 woorden per zin; met een link erin een eigen ernst |
 | `zin-twijfeltaal` | SW, *Begrijpelijkheid > B1* | misschien, vaak, mogelijk, bijna … |
 | `zin-lijdende-vorm` | SW, *Begrijpelijkheid > B1* | schrijf actief |
 | `tekst-negatieve-lading` | SW, *Begrijpelijkheid > Positieve taal* | dichtheidstoets, geen fout per woord |
@@ -46,7 +47,7 @@ Twee bronnen:
 | `aanhalingstekens` | SW, *Schrijfregels > Aanhalingstekens* | geen aanhalingstekens |
 | `afkortingen-uitschrijven` | SW, *Schrijfregels > Afkortingen* | bijv. → bijvoorbeeld |
 | `eenheden-voluit` | SW, *Schrijfregels > Afstanden/Gewicht/Hoeveelheden* | km → kilometer |
-| `getallen-cijfers` | SW, *Schrijfregels > Getallen / Cijfers* | cijfer, duizendtal met punt |
+| `getallen-cijfers` | SW, *Schrijfregels > Getallen / Cijfers* | cijfer, duizendtal met punt; telefoon- en alarmnummers uitgezonderd |
 | `percentage-notatie` | SW, *Schrijfregels > Percentages* | `5%`, zonder spatie |
 | `valuta-notatie` | SW, *Schrijfregels > Euro's / Valuta* | `€ 9`, buitenlandse valuta als woord |
 | `tijd-notatie` | SW, *Schrijfregels > Tijd* | `8.00 uur`, geen voorloopnul |

@@ -8,6 +8,7 @@
  *     <id>CZE</id> <type>reisadvies</type>
  *     <canonical>…</canonical> <location>Tsjechië</location> <isocode>CZE</isocode>
  *     <title><![CDATA[Reisadvies Tsjechië | Ministerie van Buitenlandse Zaken]]></title>
+ *     <modifications>Reist u naar Tsjechië? Lees welke …</modifications>   ← de introzin (veld-0)
  *     <introduction><![CDATA[<h2>In het kort</h2><p>…</p>]]></introduction>
  *     <content>
  *       <category>
@@ -62,11 +63,16 @@ export function uitApiRespons(xml) {
   // "Reisadvies Tsjechië | Ministerie van Buitenlandse Zaken" -> het deel voor de pijp is de titel
   const titel = titelRuw ? titelRuw.split('|')[0].trim() : null;
 
+  // <modifications> is het introveld uit het cms ('Inhoudelijke wijzigingen', veld-0): de
+  // introzin die op de site boven "In het kort" staat. Het sjabloon legt die tekst vast, dus
+  // hij hoort in het document dat we toetsen. Hij zat er eerder niet in, en daarmee viel de
+  // hele introductie buiten de toets.
+  const introZin = veld(xml, 'modifications') || '';
   const introductie = veld(xml, 'introduction') || '';
   const extra = veld(xml, 'additionalinformation') || '';
 
   const contentXml = (xml.match(/<content>([\s\S]*)<\/content>/) || [])[1] || '';
-  const stukken = [introductie];
+  const stukken = [introZin ? `<p>${escapeHtml(introZin)}</p>` : '', introductie];
 
   for (const categorie of alleElementen(contentXml, 'category')) {
     const naam = veld(categorie, 'name');
@@ -96,7 +102,7 @@ export function uitApiRespons(xml) {
       titel: 'title (deel voor de pijp)',
       land: 'location',
       url: 'canonical',
-      html: 'introduction + content/category/contentblock/paragraph + additionalinformation',
+      html: 'modifications (de introzin) + introduction + content/category/contentblock/paragraph + additionalinformation',
       kleurcodes: 'afgeleid uit de tekst',
     },
   };

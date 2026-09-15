@@ -108,6 +108,7 @@ export function parseAdvies(invoer, meta = {}) {
     url: meta.url || null,
     kleurcodes: meta.kleurcodes || null,
     intro: null,
+    introIsVeld0: false,
     blokken: [],
     links: [],
     opmaak: { vet: [], cursief: [], onderstreept: [] },
@@ -120,7 +121,7 @@ export function parseAdvies(invoer, meta = {}) {
 
   function blokVoorInhoud() {
     if (blokken.length === 0) {
-      blokken.push({ niveau: 0, kop: null, h2: null, h3: null, alineas: [], opsommingen: [] });
+      blokken.push({ niveau: 0, kop: null, h2: null, h3: null, alineas: [], opsommingen: [], onderdelen: [] });
     }
     return blokken[blokken.length - 1];
   }
@@ -128,7 +129,24 @@ export function parseAdvies(invoer, meta = {}) {
   function nieuwBlok(niveau, kop) {
     if (niveau === 2) { huidigH2 = kop; huidigH3 = null; }
     if (niveau === 3) huidigH3 = kop;
-    blokken.push({ niveau, kop, h2: niveau === 2 ? kop : huidigH2, h3: niveau === 3 ? kop : null, alineas: [], opsommingen: [] });
+    blokken.push({ niveau, kop, h2: niveau === 2 ? kop : huidigH2, h3: niveau === 3 ? kop : null,
+      alineas: [], opsommingen: [], onderdelen: [] });
+  }
+
+  // alineas en opsommingen staan apart omdat de meeste regels maar een van de twee nodig hebben.
+  // onderdelen houdt daarnaast de documentvolgorde vast: nodig zodra een regel wil weten wat
+  // ónder wat staat (de Informatieservice hoort onderaan "In het kort"), en om het advies in
+  // dezelfde volgorde te tonen als waarin het geschreven is.
+  function voegAlinea(blok, alinea) {
+    blok.alineas.push(alinea);
+    blok.onderdelen.push({ soort: 'alinea', alinea });
+    return alinea;
+  }
+
+  function voegOpsomming(blok, opsomming) {
+    blok.opsommingen.push(opsomming);
+    blok.onderdelen.push({ soort: 'opsomming', opsomming });
+    return opsomming;
   }
 
   if (doc.bron === 'tekst') {
@@ -139,9 +157,9 @@ export function parseAdvies(invoer, meta = {}) {
       if (!t) continue;
       const bullets = stuk.split('\n').filter((r) => /^\s*[-*\u2022]/.test(r));
       if (bullets.length > 1) {
-        blokVoorInhoud().opsommingen.push({ items: bullets.map((b) => schoon(b.replace(/^\s*[-*\u2022]\s*/, ''))) });
+        voegOpsomming(blokVoorInhoud(), { items: bullets.map((b) => schoon(b.replace(/^\s*[-*\u2022]\s*/, ''))) });
       } else {
-        blokVoorInhoud().alineas.push({ tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
+        voegAlinea(blokVoorInhoud(), { tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
       }
     }
   } else {
@@ -160,7 +178,7 @@ export function parseAdvies(invoer, meta = {}) {
       if (context === 'h2') { nieuwBlok(2, t); return; }
       if (context === 'h3') { nieuwBlok(3, t); return; }
       if (context === 'li') { if (lijst) lijst.items.push(t); return; }
-      blokVoorInhoud().alineas.push({ tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
+      voegAlinea(blokVoorInhoud(), { tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
     };
 
     for (const tok of tokens) {
@@ -188,7 +206,7 @@ export function parseAdvies(invoer, meta = {}) {
       }
       if (naam === 'ul' || naam === 'ol') {
         if (!sluit) { spoel(); lijst = { items: [], geordend: naam === 'ol', h2: huidigH2, h3: huidigH3 }; }
-        else if (lijst) { spoel(); blokVoorInhoud().opsommingen.push(lijst); lijst = null; }
+        else if (lijst) { spoel(); voegOpsomming(blokVoorInhoud(), lijst); lijst = null; }
         continue;
       }
       if (!BLOKTAGS.has(naam)) continue;
@@ -201,13 +219,20 @@ export function parseAdvies(invoer, meta = {}) {
       else context = null;
     }
     spoel();
-    if (lijst) blokVoorInhoud().opsommingen.push(lijst);
+    if (lijst) voegOpsomming(blokVoorInhoud(), lijst);
   }
 
-  // De intro is de eerste alinea vóór de eerste H2.
+  // De intro is de eerste alinea vóór de eerste H2. Begint het advies meteen met een H2, dan
+  // levert het cms het introveld niet mee en is de eerste alinea de tekst ónder die kop.
+  // introIsVeld0 houdt dat verschil vast, zodat de toets op de vaste introtekst uit het sjabloon
+  // niet losgaat op de eerste bullet van "In het kort".
   const eerste = blokken[0];
-  if (eerste && eerste.niveau === 0 && eerste.alineas.length) doc.intro = eerste.alineas[0].tekst;
-  else if (eerste && eerste.niveau === 2 && blokken[0].alineas.length) doc.intro = blokken[0].alineas[0].tekst;
+  if (eerste && eerste.niveau === 0 && eerste.alineas.length) {
+    doc.intro = eerste.alineas[0].tekst;
+    doc.introIsVeld0 = true;
+  } else if (eerste && eerste.niveau === 2 && blokken[0].alineas.length) {
+    doc.intro = blokken[0].alineas[0].tekst;
+  }
 
   doc.alineas = blokken.flatMap((b) => b.alineas.map((a) => ({ ...a, h2: b.h2, h3: b.h3, kop: b.kop })));
   doc.zinnen = doc.alineas.flatMap((a) => a.zinnen.map((z) => ({ tekst: z, woorden: telWoorden(z), h2: a.h2, h3: a.h3 })));

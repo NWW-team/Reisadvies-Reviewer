@@ -18,6 +18,15 @@ Het is ook de pagina die als Artifact gepubliceerd staat. De pagina bevat drie m
 Een bevinding noemt altijd zijn bron: **SW** = schrijfwijzer, **MX** = format-matrix,
 **SJ** = sjabloon.
 
+De vaste teksten uit het sjabloon gelden als waarheid: de schrijfregels gaan er niet
+overheen. De tool meldt alleen dát een vaste tekst ontbreekt, en toont de verwachte
+formulering — invullen blijft aan de redacteur, want welke variant klopt hangt van het
+land af.
+
+Naast de pagina publiceert de Artifact `corpus.js` met alle 226 live reisadviezen (~2,8 MB).
+Dat bestand staat niet in de repo; zonder corpus valt de pagina terug op de drie
+ingebouwde voorbeelden, en daar draaien ook de tests op.
+
 De oordeelstoets (B1-woordmoeilijkheid, begrijpelijkheid, herschrijfvoorstellen) draait op
 een model en werkt alleen in de gepubliceerde Artifact. De harde regels draaien in de pagina
 zelf en in Node.

@@ -60,6 +60,24 @@ kunt aflopen:
 Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een fout moet je hoe
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
 
+**Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
+*Zinslengte* (met een subvinkje voor zinnen met een link erin), *Linkteksten*, *Lijdende vorm*,
+*Twijfeltaal*, *Volgorde van de rubrieken* en *Notatie en stijl*. De indeling staat in
+`regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
+
+Kleur en groep zijn met opzet twee verschillende dingen. De **kleur** zegt hoe ernstig een bevinding
+is en bepaalt de volgorde. De **groep** zegt wat voor soort het is en bepaalt alleen wat je opzij
+zet. Daarom valt *te veel rubrieken* onder *Fout en format* terwijl het geel blijft.
+
+Filteren verbergt, het schrapt niet. Elk advies begint met alles aan, er staat altijd bij hoeveel er
+buiten beeld is, en het rapport vermeldt de filterstand — het gaat naar iemand die hem niet ziet.
+Vier groepen zijn samen ruim 70% van alle bevindingen; met die uit ga je van bijna 17 naar krap 5
+bevindingen per advies, zonder dat er één regel verdwijnt.
+
+**Melding en zin naast elkaar.** Op een breed scherm heeft elk paneel zijn eigen scroll. Klik je een
+bevinding aan, dan schuiven beide panelen zo dat de melding en de gemarkeerde zin op dezelfde hoogte
+staan. Staat de pagina in één kolom, dan kan dat niet en springt hij naar de andere kant.
+
 **De drie oordelen** bij elke bevinding zeggen elk iets anders, en dat is met opzet:
 
 | oordeel | betekenis | wat het over de tool zegt |
@@ -162,6 +180,7 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 | pad | wat |
 |---|---|
 | `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, sjabloon, woordenlijsten, limieten, landen |
+| `regels/groepen.json` | de filterindeling: welke regel hoort bij welk vinkje boven de bevindingen |
 | `regels/HERKOMST.md` | per regel-id de vindplaats in de schrijfwijzer of de matrix |
 | `src/parse.js` | reisadvies naar een genormaliseerd document (koppen, alinea's, zinnen, links) |
 | `src/regels.js` | de harde regels, als pure functies |

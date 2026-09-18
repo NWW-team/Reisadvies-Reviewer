@@ -197,6 +197,19 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .paneel > h2 { color: var(--lichtblauw); } }
 .paneel .body { padding: 16px 18px; }
 
+/* Op een breed scherm krijgt elk paneel zijn eigen scroll. Dat is wat "de melding naast de zin"
+   mogelijk maakt: met een pagina die als geheel scrollt, kun je de tekst wel naar de juiste zin
+   brengen, maar schuift de bijbehorende melding mee uit beeld. Onder 940px staan de panelen
+   onder elkaar en scrollt de pagina gewoon; daar heeft opsplitsen geen zin. */
+@media (min-width: 941px) {
+  .werkblad .paneel {
+    position: sticky; top: 14px; max-height: calc(100vh - 28px);
+    display: flex; flex-direction: column;
+  }
+  .werkblad .paneel > h2 { flex: 0 0 auto; }
+  .werkblad .paneel .body { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; }
+}
+
 .advies h3.blok-h2 { font-size: 1.1rem; font-weight: 700; color: var(--donkerblauw); margin: 1.5em 0 .35em;
   padding-bottom: .25em; border-bottom: 2px solid var(--lichtblauw); display: flex; gap: 10px; align-items: baseline; justify-content: space-between; }
 :root[data-theme="dark"] .advies h3.blok-h2 { color: var(--lichtblauw); }
@@ -1992,10 +2005,10 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
   // ---------- interactie ----------
   document.addEventListener('click', (e) => {
     const zin = e.target.closest('.zin');
-    if (zin) return richtOp(Number(zin.dataset.bev));
+    if (zin) return richtOp(Number(zin.dataset.bev), 'zin');
 
     const quote = e.target.closest('blockquote[data-naar]');
-    if (quote) return richtOp(Number(quote.dataset.naar));
+    if (quote) return richtOp(Number(quote.dataset.naar), 'melding');
 
     const knop = e.target.closest('[data-oordeel]');
     if (knop) return legOordeelVast(knop.dataset.sleutel, knop.dataset.oordeel);
@@ -2014,12 +2027,63 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     tekenAdvies();
   }
 
-  function richtOp(index) {
+  // Waar melding en zin komen te staan, gemeten vanaf de bovenkant van hun eigen paneel. Geen
+  // 'center': dan staat het bovenste deel van een lange melding buiten beeld.
+  const RICHT_MARGE = 90;
+
+  /** Schuift het paneel waar dit element in staat, zodat het op `marge` van de bovenkant komt. */
+  function naarHoogte(el, marge) {
+    const bak = el.closest('.paneel .body');
+    // Scrollt het paneel niet zelf (smal scherm, of korte inhoud), dan doet de pagina het werk.
+    if (!bak || bak.scrollHeight <= bak.clientHeight + 4) {
+      el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      return;
+    }
+    const top = el.getBoundingClientRect().top - bak.getBoundingClientRect().top + bak.scrollTop;
+    bak.scrollTo({ top: Math.max(0, top - marge), behavior: 'smooth' });
+  }
+
+  /**
+   * Zet de melding en de gemarkeerde zin naast elkaar. Beide panelen scrollen naar dezelfde
+   * hoogte, dus je ziet wat er aan de hand is én waar het staat, zonder te onthouden waar je
+   * vandaan kwam. Ontbreekt een van de twee — een bevinding over iets dat ontbreekt heeft geen
+   * zin om aan te wijzen — dan richten we gewoon op wat er wel is.
+   */
+  /** Zet de panelen op hun plakpositie, zodat ze de volle hoogte benutten voordat we uitlijnen. */
+  function zetPanelenBovenaan() {
+    const werkblad = document.querySelector('.werkblad');
+    if (!werkblad) return;
+    const top = werkblad.getBoundingClientRect().top;
+    if (top > 14) window.scrollBy({ top: top - 14, behavior: 'smooth' });
+  }
+
+  /**
+   * Zet de melding en de gemarkeerde zin naast elkaar. Beide panelen scrollen naar dezelfde
+   * hoogte, dus je ziet wat er aan de hand is én waar het staat, zonder te onthouden waar je
+   * vandaan kwam. Ontbreekt een van de twee — een bevinding over iets dat ontbreekt heeft geen
+   * zin om aan te wijzen — dan richten we gewoon op wat er wel is.
+   *
+   * @param {'zin'|'melding'|null} vanaf waar je klikte. Staan de panelen onder elkaar (smal
+   *   scherm), dan kunnen ze niet allebei in beeld; dan springen we naar de andere kant en
+   *   laten we staan waar je al keek.
+   */
+  function richtOp(index, vanaf) {
     document.querySelectorAll('.bev.actief, .zin.actief').forEach((el) => el.classList.remove('actief'));
     const kaartEl = document.querySelector('.bev[data-index="' + index + '"]');
     const zinEl = document.querySelector('.zin[data-bev="' + index + '"]');
-    if (kaartEl) { kaartEl.classList.add('actief'); kaartEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
-    if (zinEl) { zinEl.classList.add('actief'); zinEl.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+    if (kaartEl) kaartEl.classList.add('actief');
+    if (zinEl) zinEl.classList.add('actief');
+
+    const naastElkaar = kaartEl && zinEl && kaartEl.closest('.paneel .body')
+      && kaartEl.closest('.paneel .body').scrollHeight > kaartEl.closest('.paneel .body').clientHeight + 4;
+    if (naastElkaar) {
+      zetPanelenBovenaan();
+      naarHoogte(kaartEl, RICHT_MARGE);
+      naarHoogte(zinEl, RICHT_MARGE);
+      return;
+    }
+    const doel = vanaf === 'zin' ? kaartEl : (vanaf === 'melding' ? zinEl : (zinEl || kaartEl));
+    if (doel) doel.scrollIntoView({ block: 'center', behavior: 'smooth' });
   }
 
   async function legOordeelVast(sleutel, waarde) {

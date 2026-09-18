@@ -27,13 +27,31 @@ const ontsnap = (s) => s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&
   .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&#(\d+);/g, (_, c) => String.fromCharCode(c));
 const kaal = (s) => s.normalize('NFD').replace(/\p{Mn}/gu, '').toLowerCase();
 
+// Dezelfde verbuigingsregel als in src/regels.js, hier op de brondata zelf. De open data is de
+// norm voor de standplaatsen, maar dat maakt hem niet foutloos: op 18 september 2026 stond er
+// "Nederlandse ambassadekantoor in Minsk", waar "Nederlands" hoort. Dat staat op de contactpagina
+// van de site en niet in een reisadvies, dus de tool komt het nooit tegen — vandaar hier.
+const HET_WOORDEN = ['consulaat-generaal', 'consulaat', 'ambassadekantoor'];
+const verbuigingsfout = (titel) => {
+  const m = titel.match(/^Nederlands(e)?\s+([\w-]+)/);
+  if (!m) return null;
+  const hetWoord = HET_WOORDEN.includes(m[2].toLowerCase());
+  // Zonder lidwoord — en een titel begint nooit met een lidwoord — krijgt een het-woord geen -e.
+  if (hetWoord && m[1]) return `"Nederlandse ${m[2]}" hoort "Nederlands ${m[2]}" te zijn`;
+  if (!hetWoord && !m[1]) return `"Nederlands ${m[2]}" hoort "Nederlandse ${m[2]}" te zijn`;
+  return null;
+};
+
 const plaatsen = new Map();
+const fouten = [];
 let posten = 0;
 for (const f of readdirSync(map).filter((x) => x.endsWith('.xml'))) {
   const xml = readFileSync(join(map, f), 'utf8');
   for (const m of xml.matchAll(/<title>([^<]*)<\/title>/g)) {
     const titel = ontsnap(m[1]).trim();
     posten += 1;
+    const fout = verbuigingsfout(titel);
+    if (fout) fouten.push(`${f.slice(0, 3)}  ${titel}\n        ${fout}`);
     // "Nederlandse ambassade in Praag, Tsjechië" — de standplaats staat tussen " in " en de komma.
     const plaats = (titel.match(/ in (.+?)(?:,|$)/) || [])[1];
     if (!plaats) continue;
@@ -58,3 +76,12 @@ const uit = {
 };
 writeFileSync(join(wortel, 'regels', 'postplaatsen.json'), JSON.stringify(uit, null, 2) + '\n');
 console.log(`${posten} posten, ${lijst.length} standplaatsen met een trema of accent: ${lijst.join(', ')}`);
+
+// De brondata is niet foutloos, en dat hoort zichtbaar te zijn: deze titels staan op de
+// contactpagina's van de site, waar de tool ze nooit tegenkomt.
+if (fouten.length) {
+  console.log(`\n${fouten.length} post${fouten.length === 1 ? '' : 'en'} met een verbuigingsfout in de open data:`);
+  for (const f of fouten) console.log('  ' + f);
+  console.log('\n  Dit staat op de contactpagina, niet in een reisadvies. De tool komt het dus niet');
+  console.log('  tegen; corrigeren gebeurt in de content achter de open data.');
+}

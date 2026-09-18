@@ -470,6 +470,34 @@ plaatsen waar die zitten. Die staan op de site goed, dus daarmee zou dezelfde to
 verkeerd gespelde postnaam vangen. Nog niet gebouwd: dat vraagt een ophaalronde langs een ander
 deel van de open data.
 
+## Gemeten en niet gebouwd: het posttype (18 september 2026)
+
+De open data weet per land welke post er zit: een ambassade, een consulaat-generaal of een
+ambassadekantoor. De verleiding is om te toetsen of het advies de juiste noemt. **Gemeten: 8
+meldingen, alle acht onterecht.** Daarom niet gebouwd.
+
+Waarom het niet kan, in twee soorten:
+
+1. **Het advies zegt juist dat er géén post is.** *"Geen Nederlandse ambassade op de Bahama's"*,
+   gevolgd door een verwijzing naar het consulaat-generaal in Miami. Dat klopt precies; de tool zou
+   het woord *ambassade* zien en een fout melden op een zin die zegt dat die er niet is. Zo ook bij
+   de Kaaimaneilanden, Puerto Rico, Martinique, de Turks- en Caicoseilanden en de Amerikaanse
+   Maagdeneilanden.
+2. **Het is de voorgeschreven kleurcodetekst.** *"De Nederlandse ambassade kan u minder goed helpen
+   als u in de problemen komt"* staat zo in de matrix, ongeacht welke post het land heeft. Bij
+   Tsjaad en Belarus komt de melding daarvandaan. Daar kan een redacteur niets aan doen zonder van
+   het format af te wijken.
+
+Dit is precies de ruis waar de opdrachtgever voor waarschuwde: meldingen op tekst die gewoon goed
+is, kosten vertrouwen, en een tool die je niet gelooft is geen tool.
+
+**Wel zichtbaar gemaakt: een fout in de brondata.** De open data zelf schrijft *"Nederlandse
+ambassadekantoor in Minsk"*, waar *Nederlands* hoort — dezelfde fout die `nederlands-verbuiging` in
+de adviezen vindt. Die titel staat op de contactpagina van de site en niet in een reisadvies, dus de
+tool komt hem nooit tegen. `scripts/bouw-postplaatsen.mjs` toetst de brondata daarom met dezelfde
+regel en drukt af wat er misgaat. Het Belarus-advies zelf schrijft het wél goed
+(*Nederlands ambassadekantoor in Belarus*), dus dit is alleen een kwestie van de contactpagina.
+
 ## Nog drie waterdichte controles (18 september 2026)
 
 | regel-id | vindplaats | ernst |

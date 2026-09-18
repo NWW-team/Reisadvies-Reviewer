@@ -74,11 +74,15 @@ function vasteTekstRegex(sjabloon, land) {
  * ("Reisverzekering") en soms een hele H2-sectie ("Wat kan ik doen in een noodsituatie?"),
  * daarom kijken we naar allebei.
  *
+ * Een rubriek loopt door tot en met haar h4-subkopjes: "Bagageregels" bevat "Wat mag ik meenemen
+ * naar {land}?". Daarom kijken we ook naar h3 — anders valt alles onder een h4 buiten de rubriek en
+ * lijkt elke vaste tekst te ontbreken.
+ *
  * @returns {string|null} null als de rubriek niet in dit advies staat — dan toetsen we niet.
  */
 function rubriekTekst(doc, patroon) {
   const re = new RegExp(patroon, 'i');
-  const blokken = doc.blokken.filter((x) => re.test(x.kop || '') || re.test(x.h2 || ''));
+  const blokken = doc.blokken.filter((x) => re.test(x.kop || '') || re.test(x.h2 || '') || re.test(x.h3 || ''));
   if (!blokken.length) return null;
   return blokken
     .flatMap((x) => [x.kop || '', ...x.alineas.map((a) => a.tekst), ...x.opsommingen.flatMap((o) => o.items)])
@@ -94,7 +98,7 @@ function rubriekTekst(doc, patroon) {
 function rubriekEenheden(doc, patroon) {
   const re = patroon ? new RegExp(patroon, 'i') : null;
   const blokken = re
-    ? doc.blokken.filter((x) => re.test(x.kop || '') || re.test(x.h2 || ''))
+    ? doc.blokken.filter((x) => re.test(x.kop || '') || re.test(x.h2 || '') || re.test(x.h3 || ''))
     : doc.blokken;
   return blokken.flatMap((x) => [
     ...x.alineas.flatMap((a) => a.zinnen),
@@ -924,8 +928,11 @@ function contextVan(tekst, index, marge = 220) {
   const venster = tekst.slice(vanaf, tot);
   const positie = index - vanaf;
 
+  // Een regeleinde scheidt blokken en lijstitems en knipt dus altijd, ook zonder spatie erachter.
+  // Stond dat er niet, dan liep een fragment door in de alinea ervoor: een treffer vlak na een
+  // vaste tekst werd dan onterecht als vaste formulering weggestreept.
   let start = 0;
-  for (const m of venster.slice(0, positie).matchAll(/[.!?\n]\s+/g)) start = m.index + m[0].length;
+  for (const m of venster.slice(0, positie).matchAll(/[.!?]\s+|\n\s*/g)) start = m.index + m[0].length;
   let eind = venster.length;
   const staart = venster.slice(positie).match(/[.!?\n]/);
   if (staart) eind = positie + staart.index + 1;

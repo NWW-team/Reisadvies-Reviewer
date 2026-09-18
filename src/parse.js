@@ -129,7 +129,11 @@ export function parseAdvies(invoer, meta = {}) {
   function nieuwBlok(niveau, kop) {
     if (niveau === 2) { huidigH2 = kop; huidigH3 = null; }
     if (niveau === 3) huidigH3 = kop;
-    blokken.push({ niveau, kop, h2: niveau === 2 ? kop : huidigH2, h3: niveau === 3 ? kop : null,
+    // Een h4 hangt onder de h3 waar hij in staat; die blijft dus de rubriek waartoe hij hoort.
+    // Zonder dit werd een h4 een gewone alinea, en stond "Rood: niet reizen" als zin in de tekst.
+    blokken.push({ niveau, kop,
+      h2: niveau === 2 ? kop : huidigH2,
+      h3: niveau === 3 ? kop : (niveau === 4 ? huidigH3 : null),
       alineas: [], opsommingen: [], onderdelen: [] });
   }
 
@@ -165,7 +169,7 @@ export function parseAdvies(invoer, meta = {}) {
   } else {
     const tokens = tokeniseer(invoer);
     let buffer = '';
-    let context = null;              // 'h1'|'h2'|'h3'|'p'|'li'
+    let context = null;              // 'h1'|'h2'|'h3'|'h4'|'p'|'li'
     let linkOpen = null;
     const opmaakStack = [];
     let lijst = null;
@@ -177,6 +181,7 @@ export function parseAdvies(invoer, meta = {}) {
       if (context === 'h1') { if (!doc.titel) doc.titel = t; return; }
       if (context === 'h2') { nieuwBlok(2, t); return; }
       if (context === 'h3') { nieuwBlok(3, t); return; }
+      if (context === 'h4') { nieuwBlok(4, t); return; }
       if (context === 'li') { if (lijst) lijst.items.push(t); return; }
       voegAlinea(blokVoorInhoud(), { tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
     };
@@ -213,7 +218,7 @@ export function parseAdvies(invoer, meta = {}) {
 
       spoel();
       if (sluit) { context = null; continue; }
-      if (naam === 'h1' || naam === 'h2' || naam === 'h3') context = naam;
+      if (naam === 'h1' || naam === 'h2' || naam === 'h3' || naam === 'h4') context = naam;
       else if (naam === 'li') context = 'li';
       else if (naam === 'p' || naam === 'div') context = 'p';
       else context = null;

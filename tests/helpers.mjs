@@ -13,6 +13,7 @@ export const regeldata = {
   woordenlijsten: laad('woordenlijsten.json'),
   limieten: laad('limieten.json'),
   sjabloon: laad('sjabloon.json'),
+  tekstcontrole: laad('tekstcontrole.json'),
   groepen: laad('groepen.json'),
 };
 

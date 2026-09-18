@@ -39,6 +39,7 @@ const regeldata = {
   woordenlijsten: JSON.parse(lees('regels', 'woordenlijsten.json')),
   limieten: JSON.parse(lees('regels', 'limieten.json')),
   sjabloon: JSON.parse(lees('regels', 'sjabloon.json')),
+  tekstcontrole: JSON.parse(lees('regels', 'tekstcontrole.json')),
   groepen: JSON.parse(lees('regels', 'groepen.json')),
 };
 

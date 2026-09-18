@@ -731,13 +731,13 @@
     ],
     "zinnen": 94,
     "fout": 2,
-    "letop": 13,
+    "letop": 14,
     "linkzin": 2,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 13,
+      "let-op": 14,
       "link-zin": 2,
       "info": 1,
       "twijfel": 2
@@ -751,6 +751,7 @@
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
+      "tekst-onzichtbaar-teken": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
@@ -817,6 +818,16 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico’s, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+      },
+      {
+        "regel": "tekst-onzichtbaar-teken",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een word joiner (U+2060) in de tekst.",
+        "fragment": "Blijf uit de buurt van kritieke infrastructuur, zoals gas- en olie-installaties.␣",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Dit teken is niet te zien maar staat er wel. Het hoort hier weg; in dit fragment staat er ␣ op de plek waar het stond."
       },
       {
         "regel": "zin-max-woorden",
@@ -2807,13 +2818,13 @@
       "oranje"
     ],
     "zinnen": 90,
-    "fout": 2,
+    "fout": 3,
     "letop": 7,
     "linkzin": 1,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 7,
       "link-zin": 1,
       "info": 1,
@@ -2826,6 +2837,7 @@
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
       "titel-leestekens": 1,
+      "tekst-plakfout": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 3,
       "vragen-opeenvolgend": 1
@@ -2876,6 +2888,16 @@
         "bron": "SW, Gebruiksvriendelijkheid > Titel",
         "boodschap": "De titel bevat leestekens. Dat mag alleen bij de vraagvorm.",
         "fragment": "Reisadvies Belarus (Wit-Rusland)"
+      },
+      {
+        "regel": "tekst-plakfout",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"verlaten.Lees\": hier is een spatie vergeten.",
+        "fragment": "Blijft u 30 dagen of korter in Belarus? En reist u met een Nederlands paspoort? Dan heeft u tot en met 31 december 2026 geen visum nodig om het land binnen te komen of te verlaten.Lees meer over reizen zonder visum naar Belarus op de website van het Belarussische ministerie van Buitenlandse Zaken (informatie in het Engels).",
+        "kop": "Paspoort, visum, rijbewijs",
+        "herkomst": "aanvulling",
+        "verwacht": "verlaten. Lees"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -3871,19 +3893,20 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 2,
+    "letop": 3,
     "linkzin": 1,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 3,
       "link-zin": 1,
       "info": 1,
       "twijfel": 0
     },
     "perRegel": {
       "rubrieken-volgorde": 1,
+      "tekst-onzichtbaar-teken": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 2
     },
@@ -3895,6 +3918,16 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "tekst-onzichtbaar-teken",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een zero width space (U+200B) in de tekst.",
+        "fragment": "␣␣␣␣␣Wat kunt u doen bij natuurgeweld?",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "Dit teken is niet te zien maar staat er wel. Het hoort hier weg; in dit fragment staat er ␣ op de plek waar het stond."
       },
       {
         "regel": "tekst-niet-melden",
@@ -4674,13 +4707,13 @@
     ],
     "zinnen": 126,
     "fout": 3,
-    "letop": 28,
+    "letop": 29,
     "linkzin": 5,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 28,
+      "let-op": 29,
       "link-zin": 5,
       "info": 1,
       "twijfel": 4
@@ -4690,6 +4723,7 @@
       "actueel-max-woorden": 1,
       "h3-niet-melden": 1,
       "bagage-heen": 1,
+      "tekst-onzichtbaar-teken": 1,
       "zin-max-woorden": 25,
       "zin-lijdende-vorm": 6,
       "zin-frequentiewoord": 3,
@@ -4731,6 +4765,16 @@
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van China."
+      },
+      {
+        "regel": "tekst-onzichtbaar-teken",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een zero width space (U+200B) in de tekst.",
+        "fragment": "Neem contact op met het visumaanvraagcentrum in Den Haag via het e-mailadres␣␣␣␣␣␣ haguecenter@visaforchina.org.",
+        "kop": "Paspoort, visum, rijbewijs",
+        "herkomst": "aanvulling",
+        "notitie": "Dit teken is niet te zien maar staat er wel. Het hoort hier weg; in dit fragment staat er ␣ op de plek waar het stond."
       },
       {
         "regel": "zin-max-woorden",
@@ -5277,13 +5321,13 @@
       "oranje"
     ],
     "zinnen": 112,
-    "fout": 3,
+    "fout": 4,
     "letop": 14,
     "linkzin": 3,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 14,
       "link-zin": 3,
       "info": 1,
@@ -5295,6 +5339,7 @@
       "intro-vaste-tekst": 1,
       "rubrieken-volgorde": 1,
       "titel-leestekens": 1,
+      "tekst-cms-rest": 1,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
@@ -5344,6 +5389,16 @@
         "bron": "SW, Gebruiksvriendelijkheid > Titel",
         "boodschap": "De titel bevat leestekens. Dat mag alleen bij de vraagvorm.",
         "fragment": "Reisadvies Congo, Democratische Republiek"
+      },
+      {
+        "regel": "tekst-cms-rest",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"&#39;\" hoort niet in de tekst te staan: dit is een rest van het CMS of het sjabloon.",
+        "fragment": "Lees welke veiligheidsrisico&#39;s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
+        "kop": null,
+        "herkomst": "aanvulling",
+        "notitie": "Een bezoeker ziet dit letterlijk op de pagina staan."
       },
       {
         "regel": "zin-max-woorden",
@@ -5997,13 +6052,13 @@
       "geel"
     ],
     "zinnen": 67,
-    "fout": 2,
+    "fout": 3,
     "letop": 4,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 4,
       "link-zin": 3,
       "info": 0,
@@ -6013,6 +6068,7 @@
       "kleur-aanduiding": 1,
       "kleur-variant": 1,
       "intro-vaste-tekst": 1,
+      "tekst-plakfout": 1,
       "zin-max-woorden": 5,
       "link-tekstlengte": 1
     },
@@ -6039,6 +6095,16 @@
         "boodschap": "De intro wijkt af van de vaste introductietekst.",
         "fragment": "Reist u naar de Comoren? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
         "verwacht": "Reist u naar Comoren? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
+      },
+      {
+        "regel": "tekst-plakfout",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"doen.n\": hier is een spatie vergeten.",
+        "fragment": "Voelt u aardschokken? Volg de berichten in de lokale media om te weten wat u moet doen.n.",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "Let op: hier staat een los teken tegen het woord aan. Kijk of dat weg moet in plaats van dat er een spatie bij komt."
       },
       {
         "regel": "zin-max-woorden",
@@ -6378,13 +6444,13 @@
       "oranje"
     ],
     "zinnen": 93,
-    "fout": 3,
+    "fout": 4,
     "letop": 13,
     "linkzin": 4,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 13,
       "link-zin": 4,
       "info": 0,
@@ -6394,6 +6460,7 @@
       "doc-woordenaantal": 1,
       "kleur-vaste-tekst": 1,
       "h3-niet-melden": 1,
+      "tekst-plakfout": 1,
       "zin-max-woorden": 11,
       "zin-lijdende-vorm": 3,
       "zin-frequentiewoord": 1,
@@ -6429,6 +6496,16 @@
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+      },
+      {
+        "regel": "tekst-plakfout",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"III.Let\": hier is een spatie vergeten.",
+        "fragment": "Cuba heeft 3 officiële wisselkoersen voor de Cubaanse peso (CUP). Bekijk de wisselkoersen in Cuba op de website van de Centrale Bank van Cuba (informatie in het Spaans). Let op dat u de juiste koers krijgt als u geld wisselt. Voor toeristen geldt de koers van segmento III.Let op dat u de juiste koers krijgt als u geld wisselt. Voor toeristen geldt de koers van segmento III.",
+        "kop": "Geldzaken",
+        "herkomst": "aanvulling",
+        "verwacht": "III. Let"
       },
       {
         "regel": "zin-max-woorden",
@@ -6799,13 +6876,13 @@
       "groen"
     ],
     "zinnen": 88,
-    "fout": 0,
+    "fout": 1,
     "letop": 10,
     "linkzin": 4,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 10,
       "link-zin": 4,
       "info": 0,
@@ -6814,6 +6891,7 @@
     "perRegel": {
       "h4-vaste-kop": 1,
       "reisverzekering-vaste-tekst": 1,
+      "tekst-plakfout": 1,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 1,
       "aanhalingstekens": 1
@@ -6834,6 +6912,16 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
+      },
+      {
+        "regel": "tekst-plakfout",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"demonstraties.Volg\": hier is een spatie vergeten.",
+        "fragment": "Vermijd samenscholingen, mensenmassa’s en demonstraties.Volg het nieuws via de (lokale) media.",
+        "kop": "Demonstraties",
+        "herkomst": "aanvulling",
+        "verwacht": "demonstraties. Volg"
       },
       {
         "regel": "zin-max-woorden",
@@ -8459,13 +8547,13 @@
       "groen"
     ],
     "zinnen": 63,
-    "fout": 0,
+    "fout": 1,
     "letop": 5,
     "linkzin": 5,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 5,
       "link-zin": 5,
       "info": 0,
@@ -8473,6 +8561,7 @@
     },
     "perRegel": {
       "h2-vast": 1,
+      "tekst-cms-rest": 1,
       "zin-max-woorden": 8,
       "zin-frequentiewoord": 1,
       "link-tekstlengte": 1
@@ -8484,6 +8573,16 @@
         "bron": "MX, tab Uitleg",
         "boodschap": "\"undefined\" is geen vaste H2. Vast zijn: In het kort / Welke veiligheidsrisico's zijn er in Estland? / Wat kan ik doen in een noodsituatie? / Hoe bereid ik mijn reis naar Estland voor? / Ook nuttig.",
         "fragment": "undefined"
+      },
+      {
+        "regel": "tekst-cms-rest",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"undefined\" hoort niet in de tekst te staan: dit is een rest van het CMS of het sjabloon.",
+        "fragment": "undefined",
+        "kop": "undefined",
+        "herkomst": "aanvulling",
+        "notitie": "Een bezoeker ziet dit letterlijk op de pagina staan."
       },
       {
         "regel": "zin-max-woorden",
@@ -8776,13 +8875,13 @@
       "groen"
     ],
     "zinnen": 51,
-    "fout": 0,
+    "fout": 1,
     "letop": 2,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 2,
       "link-zin": 3,
       "info": 0,
@@ -8790,6 +8889,7 @@
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
+      "tekst-plakfout": 1,
       "zin-max-woorden": 3,
       "zin-lijdende-vorm": 1,
       "zin-frequentiewoord": 1
@@ -8802,6 +8902,16 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
+      },
+      {
+        "regel": "tekst-plakfout",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"gearresteerd.Lees\": hier is een spatie vergeten.",
+        "fragment": "U wordt gearresteerd.Lees informatie over de gesloten grensovergangen op de website van de Finse grenswacht (informatie in het Engels).",
+        "kop": "Wetten en gebruiken",
+        "herkomst": "aanvulling",
+        "verwacht": "gearresteerd. Lees"
       },
       {
         "regel": "zin-max-woorden",
@@ -11261,13 +11371,13 @@
       "groen"
     ],
     "zinnen": 55,
-    "fout": 0,
+    "fout": 1,
     "letop": 2,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 2,
       "link-zin": 2,
       "info": 1,
@@ -11276,6 +11386,7 @@
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
+      "tekst-plakfout": 1,
       "zin-max-woorden": 2,
       "zin-frequentiewoord": 1,
       "opmaak-vet-onderstreept": 1
@@ -11295,6 +11406,16 @@
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
+      },
+      {
+        "regel": "tekst-plakfout",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"aardbevingen.Lees\": hier is een spatie vergeten.",
+        "fragment": "Op het vasteland van Kroatië en op de eilanden zijn soms lichte aardbevingen.Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "verwacht": "aardbevingen. Lees"
       },
       {
         "regel": "zin-max-woorden",
@@ -14761,13 +14882,13 @@
     ],
     "zinnen": 69,
     "fout": 1,
-    "letop": 6,
+    "letop": 7,
     "linkzin": 1,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 7,
       "link-zin": 1,
       "info": 1,
       "twijfel": 2
@@ -14775,6 +14896,7 @@
     "perRegel": {
       "kleur-variant": 1,
       "rubrieken-volgorde": 1,
+      "tekst-onzichtbaar-teken": 1,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 4,
@@ -14797,6 +14919,16 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Landmijnen\".",
         "fragment": "Wetten en gebruiken",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "tekst-onzichtbaar-teken",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een word joiner (U+2060) in de tekst.",
+        "fragment": "␣Blijf uit de buurt van kritieke infrastructuur, zoals gas- en olie-installaties. Hier vinden aanvallen plaats.",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Dit teken is niet te zien maar staat er wel. Het hoort hier weg; in dit fragment staat er ␣ op de plek waar het stond."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -17347,13 +17479,13 @@
       "rood"
     ],
     "zinnen": 79,
-    "fout": 2,
+    "fout": 3,
     "letop": 3,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 3,
       "link-zin": 1,
       "info": 0,
@@ -17363,6 +17495,7 @@
       "actueel-max-woorden": 1,
       "h4-vaste-kop": 1,
       "intro-vaste-tekst": 1,
+      "tekst-cms-rest": 1,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 1
     },
@@ -17390,6 +17523,16 @@
         "boodschap": "De intro wijkt af van de vaste introductietekst.",
         "fragment": "Welke veiligheidsrisico&#39;s zijn er in Mali? En wat kunt u doen in geval van nood? Lees het reisadvies.",
         "verwacht": "Welke veiligheidsrisico’s zijn er in Mali? En wat kunt u doen in geval van nood? Lees het reisadvies."
+      },
+      {
+        "regel": "tekst-cms-rest",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"&#39;\" hoort niet in de tekst te staan: dit is een rest van het CMS of het sjabloon.",
+        "fragment": "Welke veiligheidsrisico&#39;s zijn er in Mali?",
+        "kop": null,
+        "herkomst": "aanvulling",
+        "notitie": "Een bezoeker ziet dit letterlijk op de pagina staan."
       },
       {
         "regel": "zin-max-woorden",
@@ -18360,13 +18503,13 @@
       "geel"
     ],
     "zinnen": 60,
-    "fout": 0,
+    "fout": 1,
     "letop": 4,
     "linkzin": 5,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 4,
       "link-zin": 5,
       "info": 0,
@@ -18374,6 +18517,7 @@
     },
     "perRegel": {
       "h2-vast": 1,
+      "tekst-plakfout": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 8
     },
@@ -18384,6 +18528,16 @@
         "bron": "MX, tab Uitleg",
         "boodschap": "\"Hoe bereid ik mijn reis voor naar Mauritius?\" is geen vaste H2. Vast zijn: In het kort / Welke veiligheidsrisico's zijn er in Mauritius? / Wat kan ik doen in een noodsituatie? / Hoe bereid ik mijn reis naar Mauritius voor? / Ook nuttig.",
         "fragment": "Hoe bereid ik mijn reis voor naar Mauritius?"
+      },
+      {
+        "regel": "tekst-plakfout",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"invullen.n\": hier is een spatie vergeten.",
+        "fragment": "Als u het formulier bij aankomst nog niet heeft ingevuld, dan moet u op het vliegveld alsnog een immigratieformulier invullen.n.",
+        "kop": "Paspoort, visum, rijbewijs",
+        "herkomst": "aanvulling",
+        "notitie": "Let op: hier staat een los teken tegen het woord aan. Kijk of dat weg moet in plaats van dat er een spatie bij komt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -19863,13 +20017,13 @@
     ],
     "zinnen": 98,
     "fout": 3,
-    "letop": 8,
+    "letop": 9,
     "linkzin": 1,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 8,
+      "let-op": 9,
       "link-zin": 1,
       "info": 0,
       "twijfel": 2
@@ -19881,6 +20035,7 @@
       "h3-vaste-kop": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
+      "tekst-onzichtbaar-teken": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 2,
       "aanhalingstekens": 1
@@ -19930,6 +20085,16 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Conflict"
+      },
+      {
+        "regel": "tekst-onzichtbaar-teken",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een word joiner (U+2060) in de tekst.",
+        "fragment": "␣␣Blijf uit de buurt van kritieke infrastructuur, zoals gas- en olie-installaties.␣",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Dit teken is niet te zien maar staat er wel. Het hoort hier weg; in dit fragment staat er ␣ op de plek waar het stond."
       },
       {
         "regel": "zin-max-woorden",
@@ -22312,24 +22477,35 @@
     ],
     "zinnen": 78,
     "fout": 0,
-    "letop": 8,
+    "letop": 9,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
+      "let-op": 9,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
+      "tekst-onzichtbaar-teken": 1,
       "zin-max-woorden": 4,
       "zin-lijdende-vorm": 3,
       "zin-frequentiewoord": 1,
       "genderneutraal": 2
     },
     "bevindingen": [
+      {
+        "regel": "tekst-onzichtbaar-teken",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een word joiner (U+2060) in de tekst.",
+        "fragment": "Blijf uit de buurt van kritieke infrastructuur, zoals gas- en olie-installaties.␣",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Dit teken is niet te zien maar staat er wel. Het hoort hier weg; in dit fragment staat er ␣ op de plek waar het stond."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -23234,13 +23410,13 @@
     ],
     "zinnen": 86,
     "fout": 1,
-    "letop": 9,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 10,
       "link-zin": 1,
       "info": 2,
       "twijfel": 1
@@ -23252,6 +23428,7 @@
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
+      "tekst-onzichtbaar-teken": 1,
       "zin-max-woorden": 6,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1
@@ -23300,6 +23477,16 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
         "fragment": "Terrorisme",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "tekst-onzichtbaar-teken",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een word joiner (U+2060) in de tekst.",
+        "fragment": "Blijf uit de buurt van kritieke infrastructuur, zoals gas- en olie-installaties.␣",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Dit teken is niet te zien maar staat er wel. Het hoort hier weg; in dit fragment staat er ␣ op de plek waar het stond."
       },
       {
         "regel": "zin-max-woorden",

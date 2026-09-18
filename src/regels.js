@@ -123,7 +123,8 @@ function bevinding(regel, ernst, bron, boodschap, extra = {}) {
  * @param {object} data  {matrix, kleurcodes, woordenlijsten, limieten}
  */
 export function maakToetser(data) {
-  const { matrix, kleurcodes, woordenlijsten: wl, limieten: lim, sjabloon: sj } = data;
+  const { matrix, kleurcodes, woordenlijsten: wl, limieten: lim, sjabloon: sj,
+    tekstcontrole: tc } = data;
 
   const koppenOpNaam = new Map(matrix.koppen.filter((k) => k.h3).map((k) => [norm(k.h3), k]));
 
@@ -875,6 +876,79 @@ export function maakToetser(data) {
       const n = norm(t).replace(/[?.!]\s*$/, '');
       return n.length > 20 && sjabloonZinnen.some((kern) => kern.includes(n));
     };
+
+    // ---------- tekstfouten ----------
+    // Overgenomen uit SpellingSpeurneus, het spellingtooltje van de redactie. Dit zijn de drie
+    // controles die daar geen woordenlijst voor nodig hebben; die passen hier, want de regellaag
+    // draait zonder dependencies. Het zijn geen schrijfregels: er is iets misgegaan tussen het CMS
+    // en de pagina, of er staat een tikfout die je bij snel lezen niet ziet.
+    if (tc) {
+      // Alles wat de bezoeker leest, niet alleen de lopende zinnen: Estland had "undefined" als
+      // H2 staan en vijf Golfstaten hebben een word joiner in een opsommingsregel. Beide vallen
+      // buiten doc.zinnen.
+      const teLezen = [
+        ...doc.zinnen.map((z) => ({ tekst: z.tekst, kop: z.h3 || z.h2 })),
+        ...doc.koppen.map((k) => ({ tekst: k.tekst, kop: k.h3 || k.h2 })),
+        ...doc.opsommingen.flatMap((o) => o.items.map((i) => ({ tekst: i, kop: o.h3 || o.h2 }))),
+      ].filter((x) => x.tekst);
+
+      const resten = new RegExp(tc.cms_resten.patroon, 'g');
+      const gezienRest = new Set();
+      for (const z of teLezen) {
+        for (const m of z.tekst.matchAll(resten)) {
+          if (gezienRest.has(m[0])) continue;
+          gezienRest.add(m[0]);
+          b.push(bevinding('tekst-cms-rest', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+            `"${m[0]}" hoort niet in de tekst te staan: dit is een rest van het CMS of het sjabloon.`,
+            { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+              notitie: 'Een bezoeker ziet dit letterlijk op de pagina staan.' }));
+        }
+      }
+
+      // Een punt middenin een woord wijst op een vergeten spatie. Een webadres en een afkorting
+      // van losse letters ("U.S") zijn dat niet.
+      const isPlakfout = (w) => {
+        const delen = w.split('.').filter(Boolean);
+        if (delen.length < 2) return false;
+        if ((tc.plakfout.domeinen || []).some((d) => w.toLowerCase().endsWith(d))) return false;
+        return !delen.every((d) => d.length === 1);
+      };
+      const gezienPlak = new Set();
+      for (const z of teLezen) {
+        for (const ruw of z.tekst.split(/[\s/()[\]]+/)) {
+          const w = ruw.replace(/[\u2019]/g, "'").replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}']+$/gu, '');
+          if (!w || !/\p{L}/u.test(w) || /\d/.test(w) || w.includes('@')) continue;
+          if (!isPlakfout(w) || gezienPlak.has(w)) continue;
+          gezienPlak.add(w);
+          // Alleen een suggestie doen als beide kanten een woord zijn. Bij "invullen.n" is een
+          // spatie niet de oplossing - daar staat een losse letter die weg moet - en dan is een
+          // verkeerde suggestie erger dan geen.
+          const beideWoorden = w.split('.').filter(Boolean).every((d) => d.length > 1);
+          b.push(bevinding('tekst-plakfout', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+            `"${w}": hier is een spatie vergeten.`,
+            { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+              ...(beideWoorden ? { verwacht: w.replace(/\.(?=\S)/g, '. ') } : {}),
+              ...(beideWoorden ? {} : { notitie: 'Let op: hier staat een los teken tegen het '
+                + 'woord aan. Kijk of dat weg moet in plaats van dat er een spatie bij komt.' }) }));
+        }
+      }
+
+      // Tekens zonder breedte. Niet te zien in de tekst, maar ze breken het zoeken, het kopieren
+      // en de schermlezer. Hier kan een redacteur niet zelf overheen lezen.
+      const gezienTeken = new Set();
+      for (const z of teLezen) {
+        for (const [teken, naam] of Object.entries(tc.onzichtbare_tekens.tekens || {})) {
+          if (!z.tekst.includes(teken) || gezienTeken.has(teken)) continue;
+          gezienTeken.add(teken);
+          b.push(bevinding('tekst-onzichtbaar-teken', ERNST.letop, 'Tekstcontrole (SpellingSpeurneus)',
+            `Er staat een ${naam} in de tekst.`,
+            { fragment: z.tekst.replace(new RegExp(teken, 'g'), '\u2423'), kop: z.kop,
+              herkomst: 'aanvulling',
+              notitie: 'Dit teken is niet te zien maar staat er wel. Het hoort hier weg; '
+                + 'in dit fragment staat er \u2423 op de plek waar het stond.' }));
+        }
+      }
+    }
 
     // Een onderwerp dat de matrix als "niet melden" aanmerkt, hoort ook niet in de lopende tekst.
     // Vaste teksten tellen niet mee: het trefwoord "ziekenhuis" staat in de voorgeschreven noodzin

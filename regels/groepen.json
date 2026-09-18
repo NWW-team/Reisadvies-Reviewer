@@ -79,6 +79,16 @@
       ]
     },
     {
+      "id": "tekstfouten",
+      "label": "Tekstfouten",
+      "toelichting": "Resten van het CMS, een vergeten spatie, een onzichtbaar teken. Geen schrijfregels maar dingen die gewoon fout staan. Overgenomen uit SpellingSpeurneus.",
+      "regels": [
+        "tekst-cms-rest",
+        "tekst-onzichtbaar-teken",
+        "tekst-plakfout"
+      ]
+    },
+    {
       "id": "linktekst",
       "label": "Linkteksten",
       "toelichting": "Te lange linkteksten en urls.",

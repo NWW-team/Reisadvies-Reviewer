@@ -156,6 +156,23 @@ const gevallen = [
       + '<h4>Lawines</h4><p>In de winter vallen er lawines.</p>',
   },
   {
+    // Overgenomen uit SpellingSpeurneus: het CMS lekt zijn eigen resten de pagina op.
+    regel: 'tekst-cms-rest',
+    faalt: '<p>De Estse reddingsbrigade helpt u. undefined</p>',
+    slaagt: '<p>De Estse reddingsbrigade helpt u.</p>',
+  },
+  {
+    regel: 'tekst-plakfout',
+    faalt: '<p>Vermijd demonstraties.Volg het nieuws via de lokale media.</p>',
+    slaagt: '<p>Vermijd demonstraties. Volg het nieuws via de lokale media.</p>',
+  },
+  {
+    // Een woord joiner, hier expres in de zin gezet. In de tool niet te zien, in de tekst wel aanwezig.
+    regel: 'tekst-onzichtbaar-teken',
+    faalt: '<p>Blijf uit de buurt van de grens.\u2060 Volg het nieuws.</p>',
+    slaagt: '<p>Blijf uit de buurt van de grens. Volg het nieuws.</p>',
+  },
+  {
     // Niet alleen in een kop: een niet-melden-onderwerp in de lopende tekst telt ook.
     regel: 'tekst-niet-melden',
     faalt: '<p>In zee zwemmen haaien.</p>',
@@ -389,6 +406,16 @@ test('een natuurrisico telt ook als het achterin een samenstelling staat', () =>
   }
   assert.ok(idsVan(advies(kop('Bergen')), { land: 'Tsjechi\u00eb' }).includes('h4-natuurrisico'),
     'een plaats is geen risico');
+});
+
+test('een webadres en een letterafkorting zijn geen vergeten spatie', () => {
+  // Overgenomen uit SpellingSpeurneus: zonder deze twee uitzonderingen meldt de regel elke url.
+  for (const zin of ['Kijk op Windy.com voor het weer daar.', 'Dit geldt in de U.S voor iedereen.']) {
+    assert.ok(!idsVan(advies('<p>' + zin + '</p>'), { land: 'Tsjechi\u00eb' }).includes('tekst-plakfout'),
+      'geen plakfout: ' + zin);
+  }
+  assert.ok(idsVan(advies('<p>Let op de grens.Reis niet verder.</p>'), { land: 'Tsjechi\u00eb' })
+    .includes('tekst-plakfout'), 'een echte vergeten spatie hoort wel gemeld te worden');
 });
 
 test('elke bevinding valt in precies een filtergroep', () => {

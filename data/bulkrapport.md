@@ -4,10 +4,10 @@ Gedraaid op 2026-09-18 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **96** van de 226 adviezen hebben geen enkele harde fout.
+- **91** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
-- Gemiddeld 0.9 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **34** van de 2816 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
+- **51** van de 2833 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Per soort bevinding
 
@@ -16,8 +16,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 214 | 130 |
-| geel/oranje — let op | 1452 | 219 |
+| rood — fout | 224 | 135 |
+| geel/oranje — let op | 1459 | 219 |
 | lichtblauw — lange zin met link | 542 | 202 |
 | grijs — ter overweging | 135 | 101 |
 | roze — twijfeltaal | 473 | 164 |
@@ -52,9 +52,11 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
+| `tekst-onzichtbaar-teken` | 7 | 7 |
 | `nood-verwijzing-nood` | 7 | 7 |
 | `nood-verwijzing-crisis` | 7 | 7 |
 | `medicijnen-voldoende` | 7 | 7 |
+| `tekst-plakfout` | 7 | 7 |
 | `link-verboden-partij` | 6 | 7 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `kleur-vervolg-bullet-kort` | 5 | 5 |
@@ -67,6 +69,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `schuine-streep` | 4 | 4 |
 | `h4-niet-melden` | 4 | 4 |
 | `kleur-eerste-bullet-voluit` | 3 | 3 |
+| `tekst-cms-rest` | 3 | 3 |
 | `afkortingen-uitschrijven` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
 | `lhbtiq-verwijzing` | 2 | 2 |

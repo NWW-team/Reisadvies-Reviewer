@@ -72,7 +72,7 @@ Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
-*Te lange zinnen*, *Te lange zinnen incl. link*, *Linkteksten*, *Lijdende vorm*,
+*Te lange zinnen*, *Te lange zinnen incl. link*, *Tekstfouten*, *Linkteksten*, *Lijdende vorm*,
 *Twijfeltaal*, *Hoe vaak iets gebeurt*, *Volgorde van de rubrieken* en *Notatie en stijl*. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
 
@@ -196,6 +196,7 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 |---|---|
 | `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, sjabloon, woordenlijsten, limieten, landen |
 | `regels/groepen.json` | de filterindeling: welke regel hoort bij welk vinkje boven de bevindingen |
+| `regels/tekstcontrole.json` | resten van het CMS, vergeten spaties en onzichtbare tekens — overgenomen uit SpellingSpeurneus |
 | `regels/HERKOMST.md` | per regel-id de vindplaats in de schrijfwijzer of de matrix |
 | `src/parse.js` | reisadvies naar een genormaliseerd document (koppen, alinea's, zinnen, links) |
 | `src/regels.js` | de harde regels, als pure functies |
@@ -244,10 +245,15 @@ veranderde:
   429 meldingen.
 - Op 18 september 2026 kwamen daar de tussenkoppen op h4-niveau bij, werd twijfeltaal in twee
   filters gesplitst en gaat de tool nu ook af op niet-melden-onderwerpen in de lopende tekst. Het
-  totaal staat op **2816** bevindingen. Drie meetronden waren nodig voordat die regels klopten:
+  totaal staat op **2833** bevindingen. Drie meetronden waren nodig voordat die regels klopten:
   woordgrenzen (*beren* zit in *proberen*), de rubriek die de matrix zelf aanwijst (*Foto's maken*
   mag bij lokale wetten, 65 meldingen minder) en samenstellingen (*zandstormen* benoemt wel een
   risico).
+- Uit [SpellingSpeurneus](https://github.com/NWW-team/SpellingSpeurneus), het spellingtooltje van
+  de redactie, zijn de drie controles overgenomen die geen woordenlijst nodig hebben: resten van
+  het CMS, een vergeten spatie na een punt, en tekens zonder breedte. Samen 17 meldingen over 226
+  adviezen, alle zeventien terecht — Estland had letterlijk het woord *undefined* op de pagina
+  staan. De spellingtoets zelf is niet overgenomen; zie `regels/HERKOMST.md` voor waarom.
 
 ## Over de regels
 

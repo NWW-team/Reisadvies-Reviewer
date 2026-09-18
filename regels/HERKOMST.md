@@ -314,3 +314,30 @@ De overige acht id's in dit document (`b1-woordmoeilijkheid`, `begrijpelijkheid`
 `naamwoordstijl`, `jargon`, `subjectieve-taal`, `matrix-verwijzen-vs-uitschrijven`,
 `matrix-niet-melden-in-tekst`, `handelingsperspectief`) horen bij laag 2, de oordeelstoets.
 Die draait op een model en niet in `src/regels.js`; dat is met opzet zo.
+
+## Tekstfouten, overgenomen uit SpellingSpeurneus (18 september 2026)
+
+De redactie heeft een tweede tooltje: [SpellingSpeurneus](https://github.com/NWW-team/SpellingSpeurneus),
+dat nederlandwereldwijd.nl langsloopt met de OpenTaal-woordenlijst. Drie van zijn controles hebben
+die lijst helemaal niet nodig, en die horen hier thuis — zonder dependency, zonder buildstap.
+
+| regel-id | vindplaats | wat |
+|---|---|---|
+| `tekst-cms-rest` | **Geen brondocument.** `scripts/crawl.py`, `SJABLOONRESTEN` | `undefined`, `[object Object]`, `{{titel}}`, `&#39;`: resten van het CMS die de bezoeker ziet staan |
+| `tekst-plakfout` | **Geen brondocument.** `scripts/crawl.py`, `is_plakfout` | een punt middenin een woord: "demonstraties.Volg het nieuws" |
+| `tekst-onzichtbaar-teken` | **Geen brondocument.** `scripts/crawl.py`, `ONZICHTBAAR` | tekens zonder breedte, uit Word of een ander CMS |
+
+Ze dragen `herkomst: 'aanvulling'`, want ze staan niet in schrijfwijzer, matrix of sjabloon. Het zijn
+ook geen schrijfregels: er is iets misgegaan tussen het CMS en de pagina. Daarom een eigen
+filtergroep — dat is een ander gesprek dan *kan deze zin korter*.
+
+Gemeten op 18 september 2026 over 226 adviezen: **3 + 4 + 7 = 14 meldingen, alle veertien terecht.**
+Estland had letterlijk het woord *undefined* boven een kop staan, Congo en Mali tonen `&#39;` in de
+introzin (die tekst is dubbel ge-escaped), en vier adviezen missen een spatie na een punt.
+
+**Wat hier níét uit is overgenomen: de spellingtoets zelf.** Die draait op de OpenTaal-lijst van
+ruim 413.000 woorden. Die lijst bij de pagina insluiten kan niet — `dist/app.html` is nu 238 kB — en
+hem apart lazy laden is een keuze die de opdrachtgever moet maken, niet de bouwer. De indeling die
+SpellingSpeurneus daarvoor bedacht (een hoofdletter middenin een zin is een naam, aan het zinsbegin
+niet, en een vergeten spatie gaat voor) is wel het overnemen waard als dat een keer gebeurt: die
+haalt 87% van de meldingen uit beeld zonder ze weg te gooien.

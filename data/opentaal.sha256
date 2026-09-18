@@ -1,0 +1,9 @@
+# De OpenTaal-woordenlijst zoals deze tool die gebruikt.
+#
+# Vastgelegd op 18 september 2026: 413.937 woorden. Dezelfde versie waarop SpellingSpeurneus
+# zich baseert; die sha256 is nagetoetst en gelijk.
+#
+# scripts/haal-woordenlijst.mjs waarschuwt als OpenTaal de lijst wijzigt, zodat de tool niet
+# stilletjes op andere spelling gaat toetsen. Klopt de nieuwe lijst? Vervang dan de regel
+# hieronder door de sha256 die het script afdrukt.
+12e5fb5e3c73840b583b30016926d1f63a75e9bf1652a3a6634b2ba7c49ad7be

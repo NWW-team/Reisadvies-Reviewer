@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { maakToetser } from '../src/regels.js';
 import { parseAdvies } from '../src/parse.js';
+import { laadWoordenlijst } from '../src/woordenlijst.mjs';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
 const laad = (naam) => JSON.parse(readFileSync(join(wortel, 'regels', naam), 'utf8'));
@@ -18,6 +19,26 @@ export const regeldata = {
 };
 
 const toetser = maakToetser(regeldata);
+
+/**
+ * Een tweede toetser mét de woordenlijst, voor de spellingtoets. Die staat los omdat de lijst
+ * 409.487 woorden is en de andere tests hem niet nodig hebben. Ontbreekt docs/woordenlijst.txt.gz,
+ * dan is dit null en slaan de spellingtests zichzelf over — draai scripts/haal-woordenlijst.mjs.
+ */
+export const woordenlijst = laadWoordenlijst();
+const spellingToetser = woordenlijst ? maakToetser({ ...regeldata, woordenlijst }) : null;
+
+/** Toetst mét de woordenlijst en geeft de regel-ids terug. Null als de lijst ontbreekt. */
+export function idsVanMetSpelling(invoer, meta = {}) {
+  if (!spellingToetser) return null;
+  return spellingToetser(parseAdvies(invoer, meta)).bevindingen.map((x) => x.regel);
+}
+
+/** Zoals hierboven, maar met de hele bevinding, zodat een test het gemelde woord kan nakijken. */
+export function bevindingenMetSpelling(invoer, meta = {}) {
+  if (!spellingToetser) return null;
+  return spellingToetser(parseAdvies(invoer, meta)).bevindingen;
+}
 
 /** Toetst een stuk HTML of tekst en geeft de regel-ids terug die afgingen. */
 export function idsVan(invoer, meta = {}) {

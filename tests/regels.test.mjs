@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { advies, idsVan, bevindingenVan, regeldata } from './helpers.mjs';
+import { advies, idsVan, bevindingenVan, regeldata,
+  idsVanMetSpelling, bevindingenMetSpelling } from './helpers.mjs';
 import { ERNST_VOLGORDE } from '../src/regels.js';
 
 /**
@@ -381,20 +382,38 @@ test('een vaste linktekst uit het sjabloon telt niet als te lang', () => {
 });
 
 test('een niet-melden-onderwerp mag staan in de rubriek die de matrix zelf noemt', () => {
-  // De matrix zegt over Foto's maken: "Kan evt. bij lokale wetten als het echt moet." Staat het
-  // daar, dan is het geen formatfout. Zonder deze uitzondering ging de regel in 49 adviezen af.
-  const onderWetten = "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2>"
+  // De matrix zegt over Gezondheidszorg: "Evt. tekst opnemen bij Reisverzekering." Staat het daar,
+  // dan is het geen formatfout maar een afweging, en die hoort bij de oordeelstoets.
+  const bij = (h3) => '<h2>Hoe bereid ik mijn reis voor naar Tsjechi\u00eb?</h2><h3>' + h3 + '</h3>'
+    + '<h4>Gezondheidszorg</h4><p>Regel dit vooraf.</p>';
+  assert.ok(!idsVan(advies(bij('Reisverzekering')), { land: 'Tsjechi\u00eb' }).includes('h4-niet-melden'),
+    'bij Reisverzekering wijst de matrix dit onderwerp zelf een plek toe');
+  assert.ok(idsVan(advies(bij('Criminaliteit')), { land: 'Tsjechi\u00eb' }).includes('h4-niet-melden'),
+    'buiten die rubriek blijft het een melding');
+});
+
+test("Foto's maken is overal een melding, ook onder Wetten en gebruiken", () => {
+  // Instructie van de opdrachtgever, 18 september 2026: fotograferen van militaire objecten is
+  // nergens slim en nergens toegestaan, dus het hoort niet in elk reisadvies herhaald te worden.
+  const kop = "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2>"
     + '<h3>Wetten en gebruiken</h3>'
     + "<h4>Foto\u2019s maken</h4><p>Fotografeer geen militaire installaties.</p>";
-  assert.ok(!idsVan(advies(onderWetten), { land: 'Tsjechi\u00eb' }).includes('h4-niet-melden'),
-    'onder lokale wetten wijst de matrix dit onderwerp zelf een plek toe');
+  assert.ok(idsVan(advies(kop), { land: 'Tsjechi\u00eb' }).includes('h4-niet-melden'),
+    'ook onder lokale wetten hoort dit gemeld te worden');
+});
 
-  // Tegenproef: dezelfde kop onder een andere rubriek hoort wel gemeld te worden.
-  const elders = "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2>"
-    + '<h3>Criminaliteit</h3>'
-    + "<h4>Foto\u2019s maken</h4><p>Fotografeer geen militaire installaties.</p>";
-  assert.ok(idsVan(advies(elders), { land: 'Tsjechi\u00eb' }).includes('h4-niet-melden'),
-    'buiten de rubriek die de matrix noemt blijft het een melding');
+test('alledaagse trefwoorden tellen alleen als kop, niet in de lopende tekst', () => {
+  // "Gedwongen naar een pinautomaat rijden en geld pinnen" is een zin over ontvoering, niet over
+  // geldzaken. Daarom staat er alleen_als_kop bij dat onderwerp in de matrix.
+  const zin = '<p>Soms worden automobilisten ontvoerd en gedwongen geld te pinnen.</p>';
+  assert.ok(!idsVan(advies(zin), { land: 'Tsjechi\u00eb' }).includes('tekst-niet-melden'),
+    'een alledaags trefwoord in een zin over iets anders is geen melding');
+
+  // Tegenproef: als kop wordt het onderwerp wel gemeld.
+  const alsKop = '<h2>Hoe bereid ik mijn reis voor naar Tsjechi\u00eb?</h2><h3>Geldzaken</h3>'
+    + '<p>Neem contant geld mee.</p>';
+  assert.ok(idsVan(advies(alsKop), { land: 'Tsjechi\u00eb' }).includes('h3-niet-melden'),
+    'als kop hoort Geldzaken wel gemeld te worden');
 });
 
 test('een natuurrisico telt ook als het achterin een samenstelling staat', () => {
@@ -416,6 +435,62 @@ test('een webadres en een letterafkorting zijn geen vergeten spatie', () => {
   }
   assert.ok(idsVan(advies('<p>Let op de grens.Reis niet verder.</p>'), { land: 'Tsjechi\u00eb' })
     .includes('tekst-plakfout'), 'een echte vergeten spatie hoort wel gemeld te worden');
+});
+
+/**
+ * De spellingtoets, overgenomen uit SpellingSpeurneus. Deze tests draaien alleen als de
+ * woordenlijst is opgehaald; zonder lijst hoort de tool er niets over te zeggen.
+ */
+test('een spelfout wordt gemeld en een goed woord niet', () => {
+  const ids = idsVanMetSpelling(advies('<p>Registeer u bij de ambassade.</p>'), { land: 'Tsjechi\u00eb' });
+  if (ids === null) return;                       // geen woordenlijst opgehaald
+  assert.ok(ids.includes('woord-onbekend'), '"Registeer" hoort een melding te geven');
+  assert.ok(!idsVanMetSpelling(advies('<p>Registreer u bij de ambassade.</p>'), { land: 'Tsjechi\u00eb' })
+    .includes('woord-onbekend'), 'het goed gespelde woord hoort niets te geven');
+});
+
+test('zonder woordenlijst zegt de tool niets over spelling', () => {
+  // idsVan gebruikt de toetser zonder lijst. De regel hoort dan niet te vuren, en de rest wel.
+  const ids = idsVan(advies('<p>Registeer u bij de ambassade.</p>'), { land: 'Tsjechi\u00eb' });
+  assert.ok(!ids.includes('woord-onbekend') && !ids.includes('woord-naam'),
+    'zonder lijst hoort de spellingtoets te zwijgen');
+});
+
+test('een hoofdletter middenin een zin is een naam, aan het begin niet', () => {
+  const naam = bevindingenMetSpelling(advies('<p>Kijk op de site van Kanlaon voor meer.</p>'),
+    { land: 'Tsjechi\u00eb' });
+  if (naam === null) return;
+  assert.ok(naam.some((b) => b.regel === 'woord-naam' && b.boodschap.includes('Kanlaon')),
+    'middenin de zin hoort dit als naam te tellen');
+
+  // Aan het zinsbegin zegt een hoofdletter niets, dus daar blijft het een spelfout.
+  assert.ok(idsVanMetSpelling(advies('<p>Registeer u vandaag.</p>'), { land: 'Tsjechi\u00eb' })
+    .includes('woord-onbekend'), 'aan het zinsbegin telt de hoofdletter niet mee');
+
+  // Maar namen komen in reeksen: dan is het ook aan het zinsbegin een naam.
+  const reeks = bevindingenMetSpelling(advies('<p>National Hurricane Center</p>'), { land: 'Tsjechi\u00eb' });
+  assert.ok(reeks.some((b) => b.regel === 'woord-naam' && b.boodschap.includes('National')),
+    'een hoofdletterwoord naast een ander hoofdletterwoord is een naam');
+  assert.ok(!reeks.some((b) => b.regel === 'woord-onbekend'),
+    'dan hoort er geen spelfout bij te staan');
+});
+
+test('de spellingtoets struikelt niet over samenstellingen en citaten', () => {
+  const ids = idsVanMetSpelling(advies(
+    "<p>Neem identiteits- en reisdocumenten mee. Pas op voor \u2018bagsnatching\u2019 "
+    + "en bewaar uw foto's goed. Ga naar het consulaat-generaal.</p>"), { land: 'Tsjechi\u00eb' });
+  if (ids === null) return;
+  assert.ok(!ids.includes('woord-onbekend'),
+    'een weggelaten samenstellingsdeel, een citaat en een apostrof-meervoud zijn geen spelfouten');
+});
+
+test('een vergeten spatie wordt niet twee keer gemeld', () => {
+  const b = bevindingenMetSpelling(advies('<p>Vermijd demonstraties.Volg het nieuws.</p>'),
+    { land: 'Tsjechi\u00eb' });
+  if (b === null) return;
+  assert.ok(b.some((x) => x.regel === 'tekst-plakfout'), 'de vergeten spatie hoort gemeld te worden');
+  assert.ok(!b.some((x) => x.regel === 'woord-onbekend'),
+    'maar niet nog een keer als onbekend woord: dat is de minder nuttige boodschap');
 });
 
 test('elke bevinding valt in precies een filtergroep', () => {

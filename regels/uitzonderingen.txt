@@ -1,0 +1,415 @@
+# Uitzonderingen op de woordenlijst
+#
+# Woorden die goed zijn maar niet in de OpenTaal-woordenlijst staan. Deze lijst hoort bij de
+# webredactie, niet bij de techniek: hij groeit met het gebruik. Eén woord per regel, een regel
+# die met # begint is commentaar.
+#
+# De basis komt uit SpellingSpeurneus (NWW-team), het spellingtooltje van de redactie:
+# https://github.com/NWW-team/SpellingSpeurneus — data/uitzonderingen.txt. Aanvullingen die
+# daarna zijn gemeten over de 226 reisadviezen staan onderaan, onder een eigen kop.
+#
+# Hoofdletters doen er niet toe: de toets vergelijkt op kleine letters.
+
+# Overheid en organisaties
+DigiD
+SVB
+BZ
+RVIG
+IND
+CJIB
+RDW
+Nederlandwereldwijd
+
+# Consulaire en reizende termen
+Schengen
+Schengenvisum
+Schengengebied
+consulaat-generaal
+consulaten-generaal
+reisadvies
+reisadviezen
+Caribisch
+machtiging
+mvv
+
+# Digitaal
+url
+urls
+e-mailadres
+webformulier
+cookies
+
+# --- Toegevoegd na de eerste echte crawl (50 reisadviespagina's) ---
+
+# Mensen en groepen
+Oeigoerse
+Rohingya-vluchtelingen
+Mapuche-bevolking
+
+# Reizen en documenten
+reisvaccinaties
+vaccinatieboekje
+medicijnverklaring
+bagageregels
+inreisregels
+inreisdocumenten
+doorreisvliegticket
+uitreisticket
+immigratiekaart
+immigratiebureau
+passagierskaart
+paspoortstempels
+Paspoortdienst
+visumaanvraagcentrum
+visumzaken
+onderzoeksvergunning
+geslachtsvermelding
+douanebewijs
+Koninkrijksdelen
+
+# Vervoer
+luchthaventaxi
+motortaxi
+radiotaxi
+langeafstandsbussen
+expeditieschepen
+helikoptervervoer
+tolbetalingen
+Burgerluchtvaartautoriteit
+huurvoertuigen
+safarivoertuigen
+
+# Veiligheid en noodsituaties
+crisiswebsite
+waarschuwingsbericht
+veiligheidsautoriteiten
+veiligheidsborden
+Toeristenpolitie
+Wegpolitie
+Risicobestrijding
+Kampvuurverbod
+bergreddingsdiensten
+decompressietank
+overheidsziekenhuizen
+quarantaineplicht
+orkaangebied
+orkaanschuilplaatsen
+sneeuwomstandigheden
+kampeergebieden
+aardbevingsgevoelig
+Geowetenschappen
+Riftvallei
+muistromen
+windkaart
+bereikbaarheidsdienst
+crisisorganisatie
+informatiebericht
+veiligheidsadviezen
+
+# Criminaliteit
+pinfraude
+afleidingstrucs
+verkeersruzies
+smokkelbendes
+wapensmokkelaars
+bagsnatching
+snatching
+bootkapingen
+
+# Gezondheid en middelen
+zikakoorts
+opioïden
+oxycodon
+vapes
+haartest
+ayahuasca
+ayahuasca-ceremonies
+voodooceremonie
+
+# Digitaal en betalen
+datingapps
+betaalapps
+creditcard
+ambassadekantoor
+
+# Afkortingen
+DRC
+LCR
+IATA
+USGS
+ESTA
+CPR
+CBD
+THC
+
+# --- Tweede ronde, na het wegnemen van de tokenizer-ruis ---
+
+# Ziekten en vaccinaties
+zika
+oropouche-virus
+gelekoortsvaccinatie
+
+# Reizen en documenten
+eTA
+e-Arrival
+immigratieformulier
+inreisstempel
+uitreisstempel
+inreisvergunning
+inreizen
+doorreisticket
+reisautorisatie
+uitreisbelasting
+terugwisselen
+douanestempel
+immigratiesysteem
+reisperiodes
+
+# Natuur en veiligheid
+aardbevingscentrum
+landverschuivingen
+natuurrisico's
+ramppreventie
+camouflagekleding
+off-piste
+wegenautoriteit
+regeringskantoren
+riviergrenzen
+
+
+# --- Huisstijl NederlandWereldwijd ---
+# Altijd met de plus. Zonder plus is het fout, en dat meldt de app nu ook:
+# de plus wordt niet meer weggestreept bij het opdelen van de zin.
+lhbtiq+
+lhbtiq+-vriendelijke
+
+# Ziekten waarvan de site beide namen geeft: "Mpox-virus (apenpokken)".
+# Nagekeken op burundi en congo-democratische-republiek: consequent gebruikt.
+mpox
+mpox-virus
+apenpokken
+
+# --- Derde ronde, na de volledige crawl van 226 reisadviezen ---
+#
+# Alleen woorden die op meer dan één reisadvies voorkwamen. Woorden die maar
+# op één pagina staan zijn bewust blijven staan: juist daar zitten de echte
+# tikfouten, want een tikfout komt één keer voor. Deze ronde haalt 87 van de
+# 427 meldingen weg; de rest is de staart, en die hoort er te zijn.
+
+# Reizen, documenten en bagage
+inreisvoorwaarden
+visumregels
+visumstempel
+zakenvisum
+eVisa
+gezondheidsformulier
+reizigersverklaring
+grensautoriteiten
+nooddocumenten
+hoteltaxi
+navulverpakkingen
+varkensvleesproducten
+
+# Gezondheid en verzekering
+ziektekostenverzekeringskaart
+zorgverzekeringspas
+methylfenidaat
+bilharzia
+
+# Veiligheid en natuur
+alarmberichten
+tsunamiwaarschuwingen
+droneaanvallen
+bergreddingsdienst
+fijnstofconcentratie
+milieustickers
+bootvervoer
+
+# Criminaliteit
+liefdesfraude
+smokkelactiviteiten
+namaakproducten
+
+# Organisaties en gebieden
+Al-Shabaab
+oblasten
+Zuid-Kivu
+
+# "etc." is goed; onze zinsopdeling haalt de laatste punt weg, waardoor "etc"
+# overblijft. Hier goedgekeurd, want het is geen spelfout. Datzelfde geldt voor
+# "o.a."; die stond maar op één pagina en valt dus buiten deze ronde.
+etc
+
+
+# --- Vierde ronde: woorden aangeleverd door de redactie (15 september 2026) ---
+
+# Engelse woorden, bewust goedgekeurd door de redactie ondanks de terughoudendheid
+# hieronder. Gevolg: deze woorden worden voortaan nergens meer als fout gezien,
+# ook niet los in een Nederlandse zin.
+and
+arrival
+currents
+electronic
+emergency
+female
+flood
+floods
+for
+foreign
+police
+travel
+
+# --- Nog te beslissen door de webredactie ---
+#
+# Weggehaald omdat het redactiekeuzes zijn en geen spellingfeiten. "and", "for",
+# "travel", "female" en "control" zijn op 15 september 2026 alsnog goedgekeurd,
+# zie hierboven en de vijfde ronde; deze toelichting blijft staan voor
+# vergelijkbare, nog niet beoordeelde gevallen.
+#
+# Overweeg per geval: woorden uit een andere taal (Engels, Spaans, Frans en
+# dergelijke) die alleen in namen van buitenlandse diensten of lokale termen
+# voorkomen. Ze goedkeuren betekent dat zo'n woord middenin een Nederlandse
+# zin nooit meer opvalt. Dat is aan de redactie, niet aan de techniek.
+
+# --- Vijfde ronde: woorden aangeleverd door de redactie (15 september 2026) ---
+#
+# "motodop" was in dezelfde dag al verwijderd (zie eerdere commit op main) en
+# is op uitdrukkelijk verzoek van de redactie hier opnieuw toegevoegd.
+
+# Reizen, documenten en grenscontrole
+immigration
+customs
+control
+immigratieprocedures
+administrative
+boundary
+lines
+line
+division
+identiteitsnummer
+verblijfsstempel
+douaneregels
+sedula
+dalasi
+lari
+permit
+entry
+declaration
+approval
+officer
+nooddocument
+immigratieautoriteiten
+migratieambtenaar
+migration
+visitors
+tolbetaling
+
+# Vervoer
+lancha
+pirogues
+tuktuks
+bajaj
+matutu's
+boda
+motodop
+scooterrijders
+off-road
+scooterverhuur
+huurscooters
+huurvoertuig
+veerbootmaatschappij
+kaartverkopers
+grab
+vliegtuigspotten
+
+# Veiligheid, criminaliteit en noodsituaties
+bezness
+scams
+scamming
+love
+guerillabeweging
+gevangenisrellen
+nepuniform
+aswolken
+harmattan
+poolklimaat
+zonweerkaatsing
+oogschade
+klimaatheffing
+busongelukken
+stadsgrenzen
+flooding
+severe
+crisisinformatie
+filmverbod
+jamming
+alarmtonen
+
+# Gezondheid en natuur
+mazelenuitbraak
+lassakoorts
+anti-choleramedicijn
+decompressiekamers
+khat
+iboga-plant
+bwiti-rituelen
+kruidenbrouwsel
+palmlikeur
+drankmerken
+hersluitbare
+
+# Cultuur, religie en gewoonten
+abaya
+hijab
+shisha
+hookah
+vastende
+nazisymbolen
+
+# Buitenlandse termen (Spaans, Frans en andere talen)
+casa
+turismo
+sivetur
+viajeros
+segmento
+ambiente
+bruma
+seca
+nacional
+metrologia
+geofisica
+colonias
+barrio's
+l'Ouest
+valmis
+
+# Overige Engelse woorden
+public
+vehicles
+information
+digital
+
+
+# --- Aanvullingen uit de Reisadvies-Reviewer, gemeten 18 september 2026 ---
+
+# De schrijfwijzer schrijft deze schrijfwijze voor. Goed voor 395 van de 686 meldingen in de
+# eerste meting: dit woord staat in bijna elk reisadvies, twee keer.
+lhbtiq
+
+# Samenstellingen die de redactie gebruikt en die OpenTaal niet kent.
+veiligheidstips
+visumpagina
+themapagina
+waarschuwings-app
+overheidsleger
+decontactgegevens
+
+# Medisch en technisch vakjargon uit de reisadviezen.
+shigellose
+shigellabacterie
+dexamfetamine
+muistroming
+muistromingen
+skimming
+carjacking
+bagsnatching

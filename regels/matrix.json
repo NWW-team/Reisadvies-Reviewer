@@ -143,7 +143,6 @@
       "h2": "Veiligheidsrisico's",
       "h3": "Foto's maken",
       "richtlijn": "niet-melden",
-      "mag_onder": ["Wetten en gebruiken"],
       "toelichting": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet.",
       "trefwoorden": [
         "foto's maken",
@@ -263,6 +262,8 @@
       "h2": "Reisvoorbereiding",
       "h3": "Geldzaken",
       "richtlijn": "niet-melden",
+      "alleen_als_kop": true,
+      "_alleen_als_kop_noot": "Instructie van de opdrachtgever, 18 september 2026. De trefwoorden van Geldzaken zijn alledaagse woorden: pinnen, contant geld en geldautomaat staan vooral in zinnen over criminaliteit (gedwongen worden geld te pinnen) of vervoer (een taxi-app op je creditcard). Dat is een zin over ontvoering of over taxi's, niet over geldzaken. Het onderwerp Geldzaken hoort alleen in een reisadvies als je er echt contant geld nodig hebt om weg te kunnen of te kunnen eten, zoals in Cuba; dan staat er een kop boven, en die wordt via h3-niet-melden gemeld.",
       "toelichting": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden.",
       "trefwoorden": [
         "pinnen",

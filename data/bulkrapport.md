@@ -4,10 +4,19 @@ Gedraaid op 2026-09-18 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **91** van de 226 adviezen hebben geen enkele harde fout.
+- **71** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **51** van de 2833 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **2171** van de 5010 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+
+## Zit in de standaardtekst
+
+Deze bevindingen staan woordelijk gelijk in 45 adviezen of meer. Eén keer aanpassen in
+de standaardtekst lost ze allemaal tegelijk op.
+
+| regel | in hoeveel adviezen | wat |
+|---|---:|---|
+| `h4-niet-melden` | 49 | "Foto’s maken" gaat over foto's maken, en dat hoort niet in een reisadvies. |
 
 ## Per soort bevinding
 
@@ -16,10 +25,10 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 224 | 135 |
-| geel/oranje — let op | 1459 | 219 |
+| rood — fout | 285 | 155 |
+| geel/oranje — let op | 1601 | 221 |
 | lichtblauw — lange zin met link | 542 | 202 |
-| grijs — ter overweging | 135 | 101 |
+| grijs — ter overweging | 2109 | 213 |
 | roze — twijfeltaal | 473 | 164 |
 
 ## Per regel
@@ -27,9 +36,12 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | regel | adviezen | bevindingen |
 |---|---:|---:|
 | `zin-max-woorden` | 220 | 1303 |
+| `woord-naam` | 207 | 1974 |
 | `zin-frequentiewoord` | 148 | 389 |
 | `zin-lijdende-vorm` | 123 | 272 |
+| `woord-onbekend` | 76 | 146 |
 | `zin-twijfeltaal` | 65 | 84 |
+| `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
 | `rubrieken-volgorde` | 53 | 53 |
 | `kleur-variant` | 47 | 53 |
@@ -45,7 +57,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `h4-vaste-kop` | 21 | 22 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |
-| `tekst-niet-melden` | 16 | 23 |
+| `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
 | `h3-vaste-kop` | 11 | 11 |
 | `actueel-max-woorden` | 10 | 10 |
@@ -67,7 +79,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `h2-vast` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
-| `h4-niet-melden` | 4 | 4 |
 | `kleur-eerste-bullet-voluit` | 3 | 3 |
 | `tekst-cms-rest` | 3 | 3 |
 | `afkortingen-uitschrijven` | 3 | 3 |

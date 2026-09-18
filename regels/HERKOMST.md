@@ -341,3 +341,58 @@ hem apart lazy laden is een keuze die de opdrachtgever moet maken, niet de bouwe
 SpellingSpeurneus daarvoor bedacht (een hoofdletter middenin een zin is een naam, aan het zinsbegin
 niet, en een vergeten spatie gaat voor) is wel het overnemen waard als dat een keer gebeurt: die
 haalt 87% van de meldingen uit beeld zonder ze weg te gooien.
+
+## De spellingtoets zelf, alsnog overgenomen (18 september 2026)
+
+Op verzoek van de opdrachtgever is ook de spellingtoets uit SpellingSpeurneus overgenomen.
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `woord-onbekend` | **Geen brondocument.** OpenTaal-woordenlijst + `regels/uitzonderingen.txt` | let op |
+| `woord-naam` | **Geen brondocument.** Dezelfde toets, andere indeling | ter overweging |
+
+**Waar de woordenlijst staat.** `docs/woordenlijst.txt.gz`: 409.487 woorden van OpenTaal, kleine
+letters, ontdubbeld, 1,3 MB ingepakt. `scripts/haal-woordenlijst.mjs` haalt hem op en vergelijkt de
+sha256 met `data/opentaal.sha256` — wijkt die af, dan stopt het script, want dan toets je aan een
+andere spelling dan de vorige keer. Diezelfde sha256 staat in SpellingSpeurneus; nagetoetst en
+gelijk, dus beide tools oordelen over dezelfde spelling.
+
+**Hij wordt pas opgehaald als een redacteur hem aanzet.** In de pagina vouwen kan niet: die is
+259 kB en zou vertienvoudigen. Dus staat er een knop, en pas daarna draait de toets. Lukt ophalen
+niet — geen internet, of de pagina staat los op schijf — dan zegt de knop dat en werkt de rest
+gewoon door. De eigen uitzonderingen zitten wél in de pagina: dat zijn een paar honderd woorden en
+ze horen bij elke herbouw mee te komen.
+
+**Namen apart.** De woordenlijst kent geen plaats- en organisatienamen, en in reisadviezen staan
+die overal: *National Hurricane Center*, *EMSC*, *Boko Haram*. Zonder scheiding verdrinken de echte
+fouten daarin. De regel van SpellingSpeurneus: een hoofdletter middenin een zin is een naam, aan het
+zinsbegin zegt een hoofdletter niets. Hier is er één ding bij gekomen: **namen komen in reeksen**.
+Zonder dat werd *National* in "National Hurricane Center" als spelfout gemeld, want het staat
+vooraan. Staat er direct naast nóg een woord met een hoofdletter, dan is het ook aan het zinsbegin
+een naam. Dat scheelde 51 onterechte spelfouten.
+
+**Gemeten op 18 september 2026 over 226 adviezen.** 146 mogelijke spelfouten (0,6 per advies) en
+1974 namen (8,7 per advies). Die namen zijn veel, en daarom staan ze in een eigen filter — meestal
+het eerste vinkje dat je uitzet. Ze worden niet weggegooid: een verkeerd gespelde plaatsnaam blijft
+zo op te zoeken.
+
+Drie dingen die de meting nodig had voordat de toets bruikbaar was:
+
+1. **`lhbtiq` in de uitzonderingen.** Dat woord staat twee keer in bijna elk reisadvies en de
+   schrijfwijzer schrijft die schrijfwijze voor. Goed voor 395 van de eerste 686 meldingen.
+2. **Een aanhalingsteken aan het eind is een citaatteken, geen apostrof.** ‘bagsnatching’ werd
+   *bagsnatching'* en dus onbekend. Bij "foto's" hoort de apostrof er wél bij, maar die staat niet
+   aan het eind.
+3. **Een woord dat op een streepje eindigt is een weglating, geen woord**: "identiteits- en
+   reisdocumenten".
+
+Wat de tekstfouten hierboven al melden, meldt de spellingtoets niet nog een keer: *undefined* is
+een CMS-rest en *demonstraties.Volg* een vergeten spatie, en dat is telkens de nuttiger boodschap.
+
+**Wat de toets níét kan.** Beoordelen of een naam goed gespeld is. *Cochabamba* en een verkeerd
+gespelde variant krijgen dezelfde melding, want geen van beide staat in de woordenlijst. Dat
+nakijken blijft mensenwerk — dat is in SpellingSpeurneus ook zo.
+
+**Vals alarm.** Klopt een woord wel? Dan hoort het in `regels/uitzonderingen.txt`. Die lijst hoort
+bij de webredactie, niet bij de techniek, en groeit met het gebruik. De basis komt uit
+SpellingSpeurneus; wat daarna is gemeten over de reisadviezen staat er onderaan bij.

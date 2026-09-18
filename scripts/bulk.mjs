@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { createRequire } from 'node:module';
 import { uitApiRespons } from '../src/adapter.js';
+import { laadWoordenlijst } from '../src/woordenlijst.mjs';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -21,7 +22,15 @@ const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
 const laadPagina = createRequire(import.meta.url)('../test/harnas.cjs');
 const { Parse, Regels, REGELDATA } = laadPagina(join(wortel, 'dist', 'app.html'));
 const parseAdvies = Parse.parseAdvies;
-const toets = Regels.maakToetser(REGELDATA);
+// De woordenlijst zit niet in de pagina - die is 409.487 woorden en wordt pas opgehaald als een
+// redacteur de spellingtoets aanzet. Hier laden we hem van schijf, zodat het bulkrapport dezelfde
+// getallen geeft als de tool met de toets aan.
+const woordenlijst = laadWoordenlijst();
+if (!woordenlijst) {
+  console.warn('Geen docs/woordenlijst.txt.gz gevonden: de spellingtoets telt niet mee. '
+    + 'Draai scripts/haal-woordenlijst.mjs om hem op te halen.');
+}
+const toets = Regels.maakToetser({ ...REGELDATA, woordenlijst });
 
 const corpusMap = join(wortel, 'data', 'corpus');
 if (!existsSync(corpusMap) || readdirSync(corpusMap).filter((f) => f.endsWith('.xml')).length === 0) {

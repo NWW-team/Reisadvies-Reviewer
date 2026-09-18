@@ -89,6 +89,22 @@
       ]
     },
     {
+      "id": "spelling",
+      "label": "Mogelijke spelfouten",
+      "toelichting": "Woorden die niet in de OpenTaal-woordenlijst staan en er geen naam uitzien. Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer.",
+      "regels": [
+        "woord-onbekend"
+      ]
+    },
+    {
+      "id": "namen",
+      "label": "Namen",
+      "toelichting": "Plaatsen, organisaties en anderstalige bronnen. De woordenlijst kent die niet, dus de tool kan niet zien of ze goed gespeld staan - maar een verkeerd gespelde plaatsnaam blijft zo wel op te zoeken. Dit is meestal het eerste vinkje dat je uitzet.",
+      "regels": [
+        "woord-naam"
+      ]
+    },
+    {
       "id": "linktekst",
       "label": "Linkteksten",
       "toelichting": "Te lange linkteksten en urls.",

@@ -126,6 +126,48 @@ export function maakToetser(data) {
   const { matrix, kleurcodes, woordenlijsten: wl, limieten: lim, sjabloon: sj,
     tekstcontrole: tc } = data;
 
+  /**
+   * De spellingtoets, overgenomen uit SpellingSpeurneus. Optioneel: `data.woordenlijst` is een Set
+   * met kleine letters, of hij ontbreekt. De OpenTaal-lijst is 409.487 woorden en past niet in de
+   * pagina zelf, dus die wordt pas opgehaald als een redacteur de toets aanzet. Ontbreekt hij, dan
+   * vuren deze twee regels niet en werkt de rest van de tool gewoon.
+   */
+  // Op gedrag toetsen, niet met instanceof: de gebouwde pagina draait in het testharnas in een
+  // eigen realm, en een Set van daar is geen `instanceof Set` van hier.
+  const wlijst = data.woordenlijst;
+  const spelling = wlijst && typeof wlijst.has === 'function' && wlijst.size ? wlijst : null;
+
+  // De tekens zonder breedte uit tekstcontrole.json, als regex. Ze moeten uit een woord voordat
+  // het tegen de woordenlijst gaat: onzichtbaar of niet, ze maken er een onbekend woord van.
+  const onzichtbaarRe = new RegExp('[' + Object.keys((tc && tc.onzichtbare_tekens.tekens) || {})
+    .map((t) => '\\u' + t.charCodeAt(0).toString(16).padStart(4, '0')).join('') + ']', 'g');
+
+  /**
+   * Een ruw stuk tekst tot een woord terugbrengen, of tot een lege string als er geen woord in zit.
+   *
+   * Twee dingen die bij snel lezen misgaan. Een aanhalingsteken aan het eind is een citaatteken en
+   * geen apostrof (‘bagsnatching’), maar bij "foto's" hoort hij er wél bij — en daar staat hij niet
+   * aan het eind. En een woord dat op een streepje eindigt is een weglating, geen woord:
+   * "identiteits- en reisdocumenten".
+   */
+  const schoonWoord = (ruw) => {
+    const kaal = ruw.replace(onzichtbaarRe, '').replace(/’/g, "'");
+    if (/^\p{L}+-$/u.test(kaal)) return '';
+    return kaal.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}']+$/gu, '').replace(/'$/, '');
+  };
+
+  /** Bekend als het woord in de lijst staat, of als alle delen dat doen. Dat tweede vangt
+   *  samenstellingen met een koppelteken of apostrof ('consulaat-generaal', "euro's") die niet
+   *  altijd los in de lijst staan. */
+  const isBekendWoord = (w) => {
+    const k = w.toLowerCase();
+    if (spelling.has(k)) return true;
+    const zonderS = k.replace(/'s$/, '');
+    if (zonderS !== k && spelling.has(zonderS)) return true;
+    const delen = k.split(/['-]/).filter(Boolean);
+    return delen.length > 1 && delen.every((d) => spelling.has(d));
+  };
+
   const koppenOpNaam = new Map(matrix.koppen.filter((k) => k.h3).map((k) => [norm(k.h3), k]));
 
   // Lijdende vorm: hulpwerkwoord + voltooid deelwoord in dezelfde zin. Het deelwoord-patroon
@@ -226,7 +268,7 @@ export function maakToetser(data) {
     .flatMap((k) => k.trefwoorden.map((t) => ({
       re: new RegExp('\\b' + esc(norm(t)) + '\\b'), woord: norm(t),
       onderwerp: (k.h3 || '').toLowerCase(), toelichting: k.toelichting,
-      magOnder: (k.mag_onder || []).map(norm) })));
+      magOnder: (k.mag_onder || []).map(norm), alleenAlsKop: !!k.alleen_als_kop })));
 
   /**
    * De matrix noemt bij sommige niet-melden-onderwerpen zelf de rubriek waar het wél mag staan:
@@ -882,22 +924,28 @@ export function maakToetser(data) {
     // controles die daar geen woordenlijst voor nodig hebben; die passen hier, want de regellaag
     // draait zonder dependencies. Het zijn geen schrijfregels: er is iets misgegaan tussen het CMS
     // en de pagina, of er staat een tikfout die je bij snel lezen niet ziet.
-    if (tc) {
-      // Alles wat de bezoeker leest, niet alleen de lopende zinnen: Estland had "undefined" als
-      // H2 staan en vijf Golfstaten hebben een word joiner in een opsommingsregel. Beide vallen
-      // buiten doc.zinnen.
-      const teLezen = [
-        ...doc.zinnen.map((z) => ({ tekst: z.tekst, kop: z.h3 || z.h2 })),
-        ...doc.koppen.map((k) => ({ tekst: k.tekst, kop: k.h3 || k.h2 })),
-        ...doc.opsommingen.flatMap((o) => o.items.map((i) => ({ tekst: i, kop: o.h3 || o.h2 }))),
-      ].filter((x) => x.tekst);
+    // Alles wat de bezoeker leest, niet alleen de lopende zinnen: Estland had "undefined" als
+    // H2 staan en vijf Golfstaten hebben een word joiner in een opsommingsregel. Beide vallen
+    // buiten doc.zinnen. Zowel de tekstfouten als de spellingtoets lopen hierover.
+    const teLezen = [
+      ...doc.zinnen.map((z) => ({ tekst: z.tekst, kop: z.h3 || z.h2 })),
+      ...doc.koppen.map((k) => ({ tekst: k.tekst, kop: k.h3 || k.h2 })),
+      ...doc.opsommingen.flatMap((o) => o.items.map((i) => ({ tekst: i, kop: o.h3 || o.h2 }))),
+    ].filter((x) => x.tekst);
 
+    // Wat de tekstfouten hierboven al melden, meldt de spellingtoets niet nog een keer: "undefined"
+    // en "demonstraties.Volg" zijn geen onbekende woorden maar een CMS-rest en een vergeten spatie,
+    // en dat is de nuttiger boodschap.
+    const alGemeldWoord = new Set();
+
+    if (tc) {
       const resten = new RegExp(tc.cms_resten.patroon, 'g');
       const gezienRest = new Set();
       for (const z of teLezen) {
         for (const m of z.tekst.matchAll(resten)) {
           if (gezienRest.has(m[0])) continue;
           gezienRest.add(m[0]);
+          alGemeldWoord.add(m[0].toLowerCase());
           b.push(bevinding('tekst-cms-rest', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
             `"${m[0]}" hoort niet in de tekst te staan: dit is een rest van het CMS of het sjabloon.`,
             { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
@@ -920,6 +968,7 @@ export function maakToetser(data) {
           if (!w || !/\p{L}/u.test(w) || /\d/.test(w) || w.includes('@')) continue;
           if (!isPlakfout(w) || gezienPlak.has(w)) continue;
           gezienPlak.add(w);
+          alGemeldWoord.add(w.toLowerCase());
           // Alleen een suggestie doen als beide kanten een woord zijn. Bij "invullen.n" is een
           // spatie niet de oplossing - daar staat een losse letter die weg moet - en dan is een
           // verkeerde suggestie erger dan geen.
@@ -950,6 +999,55 @@ export function maakToetser(data) {
       }
     }
 
+    // ---------- spelling ----------
+    // Overgenomen uit SpellingSpeurneus. Draait alleen als de woordenlijst geladen is.
+    //
+    // De woordenlijst kent geen plaats- en organisatienamen, en in reisadviezen staan die overal:
+    // National Hurricane Center, EMSC, Boko Haram. Zonder scheiding verdrinken de echte fouten
+    // daarin. Daarom deelt de tool elke melding in, net als SpellingSpeurneus dat doet, en staan
+    // namen in een eigen filter.
+    if (spelling) {
+      const gezienWoord = new Set();
+      for (const z of teLezen) {
+        // De zin één keer in woorden knippen, met de plek erbij. Daarmee is te zien of er naast
+        // een woord nóg een hoofdletterwoord staat, en dat is wat een naam een naam maakt.
+        const stukken = z.tekst.split(/[\s/()[\]]+/).map(schoonWoord);
+        const beginWoord = schoonWoord(
+          z.tekst.replace(/^[“‘'"([\s]+/, '').split(/[\s/()[\]]+/)[0] || '');
+
+        for (let i = 0; i < stukken.length; i += 1) {
+          const w = stukken[i];
+          if (!w || !/\p{L}/u.test(w)) continue;
+          if (/\d/.test(w) || w.includes('@')) continue;   // jaartallen, codes, e-mailadressen
+          if (isBekendWoord(w)) continue;
+          if (alGemeldWoord.has(w.toLowerCase()) || gezienWoord.has(w)) continue;
+          gezienWoord.add(w);
+
+          // Een hoofdletter middenin een zin is vrijwel altijd een naam. Aan het zinsbegin zegt
+          // een hoofdletter niets — zo blijft "Registeer" een spelfout. Maar namen komen in
+          // reeksen ("National Hurricane Center"), dus staat er direct naast nog een woord met
+          // een hoofdletter, dan is het ook aan het zinsbegin een naam.
+          const metHoofd = /^\p{Lu}/u.test(w);
+          const buurHoofd = [stukken[i - 1], stukken[i + 1]].some((x) => x && /^\p{Lu}/u.test(x));
+          const isNaam = metHoofd && (w !== beginWoord || buurHoofd);
+
+          if (isNaam) {
+            b.push(bevinding('woord-naam', ERNST.info, 'Tekstcontrole (SpellingSpeurneus)',
+              `"${w}" lijkt een naam. Staat die goed gespeld?`,
+              { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+                notitie: 'De woordenlijst kent geen plaats- en organisatienamen, dus de tool kan '
+                  + 'niet zien of deze goed staat. Dat blijft mensenwerk.' }));
+          } else {
+            b.push(bevinding('woord-onbekend', ERNST.letop, 'Tekstcontrole (SpellingSpeurneus)',
+              `"${w}" staat niet in de woordenlijst.`,
+              { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+                notitie: 'Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, '
+                  + 'dan meldt de tool het niet meer.' }));
+          }
+        }
+      }
+    }
+
     // Een onderwerp dat de matrix als "niet melden" aanmerkt, hoort ook niet in de lopende tekst.
     // Vaste teksten tellen niet mee: het trefwoord "ziekenhuis" staat in de voorgeschreven noodzin
     // ("u bent opgenomen in het ziekenhuis"), en daar kan een redacteur niets aan doen.
@@ -958,6 +1056,7 @@ export function maakToetser(data) {
       if (isVasteZin(z.tekst)) continue;
       const n = norm(z.tekst);
       for (const tref of nietMeldenTref) {
+        if (tref.alleenAlsKop) continue;                  // te alledaagse woorden voor de lopende tekst
         if (nmGemeld.has(tref.onderwerp)) continue;      // er staat al een blok over; dat is de melding
         if (magHierStaan(tref, z.h3 || z.h2)) continue;   // de matrix noemt deze rubriek zelf
         if (!tref.re.test(n) || gezienNm.has(tref.onderwerp + '::' + tref.woord)) continue;

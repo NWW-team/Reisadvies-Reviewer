@@ -11,6 +11,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { leesUitzonderingen } from '../src/woordenlijst.mjs';
 import { uitApiRespons } from '../src/adapter.js';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -41,6 +42,10 @@ const regeldata = {
   sjabloon: JSON.parse(lees('regels', 'sjabloon.json')),
   tekstcontrole: JSON.parse(lees('regels', 'tekstcontrole.json')),
   groepen: JSON.parse(lees('regels', 'groepen.json')),
+  // De uitzonderingen gaan wél mee in de pagina: het zijn een paar honderd woorden die de
+  // redactie beheert. De OpenTaal-lijst zelf niet — die is 409.487 woorden en wordt pas opgehaald
+  // als een redacteur de spellingtoets aanzet.
+  uitzonderingen: leesUitzonderingen(),
 };
 
 // Drie echte adviezen, gekozen om verschillende situaties te laten zien.

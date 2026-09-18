@@ -6,7 +6,7 @@
 const assert = require('node:assert');
 const { test } = require('node:test');
 const laad = require('./harnas.cjs');
-const { Parse, Regels, REGELDATA } = laad(require('path').join(__dirname, '..', 'reisadvies-reviewer.html'));
+const { Parse, Regels, REGELDATA } = laad(require('path').join(__dirname, '..', 'dist', 'app.html'));
 const toetser = Regels.maakToetser(REGELDATA);
 
 const bevindingen = (html) => toetser(Parse.parseAdvies(html, { land: 'Testland' })).bevindingen;

@@ -8,6 +8,7 @@ Twee bronnen:
 
 - **SW** — `Schrijfwijzer Nederland Wereldwijd - website.docx`
 - **MX** — `Matrix nieuwe format Reisadviezen (1).xlsx`
+- **SJ** — `Sjabloon Reisadviezen - nieuwe format.docx`
 
 ## Harde regels (laag 1, in code)
 
@@ -17,7 +18,6 @@ Twee bronnen:
 | `kleur-vaste-tekst` | MX, tab *Kleurcode-teksten* | vaste formulering per kleurcode, volledig én deels |
 | `kleur-volgorde` | MX, tab *Kleurcode-teksten*, kolom NB | volgorde altijd rood → groen |
 | `kleur-eerste-bullet-voluit` | MX, tab *Kleurcode-teksten*, kolom NB | eerste bullet voluit, vervolgbullets verkort |
-| `kort-informatieservice` | MX, tab *Koppen*, rij *In het kort* | standaardtekst Aanmelden Informatieservice aanwezig |
 | `actueel-max-woorden` | MX, tab *Koppen*, rij *In het kort* | de bullet die naar Actueel verwijst: max 25 woorden — niet de rubriek Actueel zelf |
 | `kort-informatieservice-onderaan` | MX, tab *Koppen*, rij *In het kort* | "Daaronder in Let op: Aanmelden Informatieservice": onderaan het blok |
 | `gebieden-max-drie` | MX, tab *Koppen*, rij *In het kort* | max 3 gebieden/plaatsen noemen, daarna verwijzen |
@@ -79,6 +79,52 @@ Uit `STRATEGY.md`, *Niet aan werken*:
 - **politieke gevoeligheden** — de tool doet hier geen uitspraak over
 - **inkorten** — wel de overschrijding signaleren en de langste blokken aanwijzen, niet zelf schrappen
 - **SharePoint-koppeling** — Word-concepten gaan handmatig in en uit
+
+## Vaste teksten en vorm uit het sjabloon (SJ)
+
+Het sjabloon legt per rubriek letterlijke teksten vast. De tool meldt alleen *dat* een vaste tekst
+ontbreekt of afwijkt en toont de verwachte formulering; invullen blijft aan de redacteur, want welke
+variant klopt hangt van het land af. Teksten die het sjabloon als voorbeeld geeft (`[Bijv.] …`) zijn
+geen vaste formulering en worden niet getoetst.
+
+`informatieservice-vaste-tekst` verving `kort-informatieservice`: die MX-regel keek alleen of het
+woord *informatieservice* ergens stond, het sjabloon legt de hele oproep vast.
+
+| regel-id | bron | wat |
+|---|---|---|
+| `informatieservice-vaste-tekst` | SJ, blok Oproep registratie Informatieservice | De standaardoproep om u aan te melden voor de Informatieservice ontbreekt. |
+| `nood-contactcenter` | SJ, blok In geval van nood | De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt. |
+| `nood-lokale-hulpdiensten` | SJ, blok In geval van nood | De vaste aanhef boven de alarmnummers ontbreekt. |
+| `nood-verwijzing-nood` | SJ, blok In geval van nood | De vaste verwijzing naar de pagina over nood ontbreekt. |
+| `nood-verwijzing-crisis` | SJ, blok In geval van nood | De vaste verwijzing naar de pagina over een crisissituatie ontbreekt. |
+| `reisverzekering-vaste-tekst` | SJ, blok Reisverzekering | De vaste openingstekst over de reisverzekering ontbreekt. |
+| `reisverzekering-oranje-rood` | SJ, blok Reisverzekering | Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij. |
+| `reisverzekering-familie` | SJ, blok Reisverzekering, let-op-tekst | De vaste let-op-tekst over familie en de verzekeraar ontbreekt. |
+| `vaccinaties-ggd` | SJ, blok Reisvaccinaties | De vaste verwijzing naar GGD Reisvaccinaties ontbreekt. |
+| `vaccinaties-lcr` | SJ, blok Reisvaccinaties | De vaste verwijzing naar het LCR ontbreekt. |
+| `medicijnen-verklaring` | SJ, blok Medicijnen | De vaste tekst over de medicijnverklaring ontbreekt. |
+| `medicijnen-verpakking` | SJ, blok Medicijnen | De vaste tekst over de originele verpakking ontbreekt. |
+| `medicijnen-voldoende` | SJ, blok Medicijnen | De vaste tekst over voldoende medicijnen ontbreekt. |
+| `bagage-heen` | SJ, blok Bagageregels | De vaste tekst over de douaneregels van het land zelf ontbreekt. |
+| `bagage-terug` | SJ, blok Bagageregels | De vaste verwijzing naar 'Wat mag ik meenemen naar Nederland?' ontbreekt. |
+| `criminaliteit-themapagina` | SJ, blok Criminaliteit | Na het maatwerk hoort de vaste verwijzing naar de themapagina over criminaliteit. |
+| `lhbtiq-verwijzing` | SJ, blok Wetten en gebruiken | Waar lhbtiq+ aan de orde komt, hoort de vaste verwijzing naar de themapagina erbij. |
+| `paspoort-kopie` | SJ, blok Paspoort, visum, rijbewijs | De vaste tekst over het delen van een kopie van het paspoort ontbreekt. |
+| `rijbewijs-anwb` | SJ, blok Paspoort, visum, rijbewijs | Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij. |
+| `kinderen-documenten` | SJ, blok Paspoort, visum, rijbewijs | De vaste verwijzing over reizen met een minderjarig kind ontbreekt. |
+| `regionaal-gebiedenzin` | SJ, blok Regionale risico’s | De vaste aanhef boven de opsomming van gebieden ontbreekt. |
+| `rood-herhaling-voorbereiding` | SJ, boven de blokken onder reisvoorbereiding | Bij een volledig rood reisadvies herhalen we de waarschuwing onder de reisvoorbereiding. |
+
+Daarnaast toetst de tool op vorm die het sjabloon voorschrijft:
+
+| regel-id | bron | wat |
+|---|---|---|
+| `intro-vaste-tekst` | SJ, blok *Introductie* | de vaste introductiezin, met een eigen variant voor een advies met alleen kleurcode rood |
+| `kort-max-bullets` | SJ, blok *In het kort*: "Maximaal 4 bullets" | max 4 bullets onder *In het kort* |
+| `kleur-formulering-verboden` | SJ, blok *In het kort* | niet "gele gebieden" of "de hoofdstad is oranje", maar "gebieden met kleurcode geel" |
+| `rubrieken-max` | SJ, richtlijn boven de rubrieken | max 6 rubrieken onder veiligheidsrisico's en onder reisvoorbereiding |
+| `rubrieken-volgorde` | SJ, blok *Risico dat van toepassing is, in volgorde van relevantie* | de vaste volgorde van de rubrieken onder veiligheidsrisico's |
+| `nood-contactnummer` | SJ, blok *In geval van nood* | alleen de vaste nummers van het contactcenter |
 
 ## Aangevuld na de review van 15 september 2026
 

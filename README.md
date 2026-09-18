@@ -17,7 +17,11 @@ op verzoek, en doet een herschrijfvoorstel op zinsniveau.
 
 Elke bevinding draagt zijn bron mee: **SW** = schrijfwijzer, **MX** = format-matrix,
 **SJ** = sjabloon. `regels/HERKOMST.md` legt per regel-id de vindplaats vast — een bevinding
-zonder bron hoort de tool niet te geven.
+zonder bron hoort de tool niet te geven, en een test bewaakt dat.
+
+Steunt een bevinding op een woord dat de tool zelf heeft toegevoegd in plaats van op een geciteerde
+regel, dan staat dat erbij als **aanvulling**. Zo is bij de review te zien welk deel van het oordeel
+uit de bron komt en welk deel een keuze van de bouwer is.
 
 ## In de tool
 
@@ -80,26 +84,32 @@ Kort: *oneens* gaat over het advies, *onterecht* gaat over de tool. Een regel di
 Beide werken zonder bibliotheek, zonder server en zonder download — dat laatste met opzet, want
 de Artifact-omgeving blokkeert downloads die een pagina zelf start.
 
-## Let op: twee varianten van de pagina naast elkaar
+## Eén bron, twee bouwstappen
 
-Deze main bevat het resultaat van twee parallel ontwikkelde takken. Ze overlappen:
+De regels staan op één plek: `src/` voor de code, `regels/*.json` voor de data. Alles wat
+gepubliceerd wordt, komt daaruit:
 
-| pad | wat | stand |
-| --- | --- | --- |
-| `reisadvies-reviewer.html` | de hele tool in één bestand, zonder build | **nieuwst** — bevat als enige de sjabloonregels (SJ) |
-| `src/` + `regels/` + `scripts/bouw-pagina.mjs` → `dist/app.html` | dezelfde tool, opgesplitst in modules en regeldata | heeft als enige het corpus, de bulkslag en de tests per regel |
+```
+src/ + regels/  --bouw-pagina.mjs-->  dist/app.html  --bouw-site.mjs-->  docs/index.html
+                                      (de Artifact)                      (GitHub Pages)
+```
 
-`reisadvies-reviewer.html` is opgebouwd uit `dist/app.html` (ruim duizend regels zijn woordelijk
-gelijk) met de sjabloonregels erbij. De twee zijn nog niet samengevoegd: de SJ-regels zitten
-alleen in het losse bestand en nog niet in `regels/*.json` en `src/regels.js`.
+`dist/app.html` is de tool als één bestand, met parser, regels, regeldata en drie echte adviezen
+erin gevouwen — nodig omdat de Artifact-omgeving geen externe verzoeken mag doen. `bouw-site.mjs`
+zet daar alleen een compleet html-document omheen, met `config.js` en `toegang.js` ervoor.
 
-**Nog te doen:** de SJ-regels terugbrengen naar `regels/` en `src/regels.js`, `dist/app.html`
-opnieuw bouwen met `scripts/bouw-pagina.mjs`, en daarna `reisadvies-reviewer.html` laten vervallen
-of juist tot enige bron maken. Kies één van beide voordat er nieuwe regels bij komen.
+Beide zijn gegenereerd. Wijzig ze nooit met de hand: een aanpassing hoort in `src/` of `regels/`,
+daarna opnieuw bouwen. De tests en de bulkslag draaien tegen `dist/app.html`, zodat ze meten wat
+een redacteur werkelijk in de tool ziet.
+
+Tot september 2026 stond hier een tweede, losse variant (`reisadvies-reviewer.html`) die als enige
+de sjabloonregels had. Die is samengevoegd en vervallen; de SJ-regels zitten nu in `regels/sjabloon.json`
+en `src/regels.js`. Over alle 226 adviezen geeft de gebouwde pagina exact dezelfde bevindingen als
+de losse variant daarvoor.
 
 ## Toegang (de Pages-versie)
 
-`docs/` is de versie die op GitHub Pages draait, gebouwd uit `reisadvies-reviewer.html`
+`docs/` is de versie die op GitHub Pages draait, gebouwd uit `dist/app.html`
 met `node scripts/bouw-site.mjs`. De bronpagina wordt daarbij niet aangepast.
 
 Wat wel en niet is afgeschermd:
@@ -132,7 +142,7 @@ node scripts/fetch-corpus.mjs    # reisadviezen ophalen (zie hieronder)
 node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
 node scripts/bouw-adviezen.mjs   # zet alle 226 adviezen klaar in docs/adviezen/
-node scripts/bouw-site.mjs       # bouwt docs/index.html uit reisadvies-reviewer.html
+node scripts/bouw-site.mjs       # bouwt docs/index.html uit dist/app.html
 ```
 
 ## Het corpus ophalen
@@ -151,13 +161,13 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 
 | pad | wat |
 |---|---|
-| `reisadvies-reviewer.html` | de tool als één bestand, inclusief de sjabloonregels |
-| `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, woordenlijsten, limieten, landen |
+| `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, sjabloon, woordenlijsten, limieten, landen |
 | `regels/HERKOMST.md` | per regel-id de vindplaats in de schrijfwijzer of de matrix |
 | `src/parse.js` | reisadvies naar een genormaliseerd document (koppen, alinea's, zinnen, links) |
 | `src/regels.js` | de harde regels, als pure functies |
 | `src/adapter.js` | ruwe API-respons naar de velden die de toetser nodig heeft |
 | `src/app.html` | de paginasjabloon; `scripts/bouw-pagina.mjs` vouwt de regels erin |
+| `dist/app.html` | de gebouwde tool als één bestand — gegenereerd, niet met de hand bijwerken |
 | `scripts/fetch-corpus.mjs` | ophalen van de reisadviezen |
 | `scripts/bulk.mjs` | alle adviezen toetsen en een rapport schrijven |
 | `scripts/bouw-adviezen.mjs` | het corpus klaarzetten als `docs/adviezen/`, zodat alle landen in de lijst staan |

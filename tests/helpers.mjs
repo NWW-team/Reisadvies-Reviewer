@@ -12,6 +12,7 @@ export const regeldata = {
   kleurcodes: laad('kleurcodes.json'),
   woordenlijsten: laad('woordenlijsten.json'),
   limieten: laad('limieten.json'),
+  sjabloon: laad('sjabloon.json'),
 };
 
 const toetser = maakToetser(regeldata);

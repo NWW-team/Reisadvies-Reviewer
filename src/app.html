@@ -262,6 +262,13 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 
+/* Bevindingen die op een aanvulling steunen: de regel komt uit de schrijfwijzer, het woord
+   of domein niet. Zichtbaar maken, zodat de reviewer dat verschil kan wegen. */
+.bev .aanvulling {
+  margin-top: 6px; padding: 6px 9px; border-left: 3px solid #b08900;
+  background: #fdf3d9; color: #6b5107; font-size: 12px; line-height: 1.45; border-radius: 0 3px 3px 0;
+}
+
 /* ---------- uitleg bij een gekozen oordeel ---------- */
 .bev .gekozen { margin-top: 6px; font-size: .76rem; color: var(--gedempt); }
 
@@ -392,6 +399,8 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
       <li><b>Politieke gevoeligheden.</b> Die weging blijft mensenwerk; de tool doet er geen uitspraak over.</li>
       <li><b>Inkorten.</b> Bij een overschrijding wijst de tool de langste blokken aan, maar schrapt niet zelf —
         wat weg kan is een inhoudelijke keuze.</li>
+      <li><b>Invullen van een vaste tekst.</b> Ontbreekt een vaste formulering uit het sjabloon, dan meldt
+        de tool dat en toont hij de verwachte tekst &mdash; welke variant klopt, hangt van het land af.</li>
       <li><b>Nog geen oordeel over juistheid.</b> De tool toetst vorm en onderwerpkeuze, niet of de inhoud klopt.</li>
     </ul>
   </div>
@@ -455,7 +464,9 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
 
   VOORBEELDEN.forEach((v, i) => optie('voorbeeld:' + i, v.land + ' — ' + v.kenmerk));
   $('bron-regel').textContent = REGELDATA.matrix.koppen.length + ' koppen uit de matrix · '
-    + Object.keys(REGELDATA.kleurcodes.kleuren).length + ' kleurcodes · schrijfwijzer en format-matrix van Nederlandwereldwijd.nl';
+    + Object.keys(REGELDATA.kleurcodes.kleuren).length + ' kleurcodes · '
+    + REGELDATA.sjabloon.vaste_teksten.length + ' vaste teksten uit het sjabloon · '
+    + 'schrijfwijzer, format-matrix en sjabloon van Nederlandwereldwijd.nl';
 
   function toetsInvoer(html, land, meta = {}) {
     const doc = Parse.parseAdvies(html, { land, titel: meta.titel, url: meta.url });
@@ -640,6 +651,10 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       + (bev.verwacht ? '<div class="verwacht">Verwacht: <b>' + esc(bev.verwacht) + '</b></div>' : '')
       + (bev.detail ? '<div class="verwacht">Langste blokken: <b>' + esc(bev.detail.join(' · ')) + '</b></div>' : '')
       + (bev.notitie ? '<div class="verwacht">' + esc(bev.notitie) + '</div>' : '')
+      + (bev.herkomst === 'aanvulling'
+          ? '<div class="aanvulling">Aanvulling &mdash; deze regel past de schrijfwijzer toe, maar dit woord '
+            + 'staat er niet letterlijk in. Beoordeel of hij mag blijven.</div>'
+          : '')
       + '<div class="bron">' + esc(bev.bron) + '</div>'
       + '<div class="oordeel"><span class="vraag">Klopt deze bevinding?</span>'
         + knop('eens') + knop('oneens') + knop('onterecht') + '</div>'
@@ -713,6 +728,11 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         .filter((k) => k.h3)
         .map((k) => '- ' + k.h3 + ': ' + k.richtlijn + (k.toelichting ? ' — ' + k.toelichting : ''))
         .join('\n');
+      const vasteTeksten = [
+        REGELDATA.sjabloon.intro.standaard,
+        REGELDATA.sjabloon.contactcenter.zin,
+        ...REGELDATA.sjabloon.vaste_teksten.map((v) => v.zin),
+      ].map((s) => '- ' + s).join('\n');
       const prompt = [
         'Je toetst een reisadvies van Nederlandwereldwijd.nl. Beoordeel ALLEEN het objectief toetsbare deel.',
         'Zeg niets over politieke gevoeligheden en stel niet voor om te schrappen.',
@@ -726,6 +746,10 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         '6. Blokken die het handelingsperspectief missen dat de matrix vraagt.',
         '',
         'De matrix:', matrixRegels,
+        '',
+        'Onderstaande teksten liggen vast in het sjabloon. Stel daar NOOIT een herschrijving voor,',
+        'ook niet als ze te lang of te moeilijk lijken:',
+        vasteTeksten,
         '',
         'Geef per bevinding: het onderwerp, het citaat uit de tekst, waarom het niet voldoet, en een',
         'herschrijfvoorstel op zinsniveau. Kort en concreet, geen inleiding. Maximaal 8 bevindingen.',

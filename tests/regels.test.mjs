@@ -140,7 +140,9 @@ const gevallen = [
     slaagt: '<p>Er waren 12.500 aanvragen.</p>',
   },
   {
-    regel: 'kort-informatieservice',
+    // Heette kort-informatieservice zolang de regel alleen op het woord "informatieservice"
+    // lette. Het sjabloon legt de hele oproep vast, dus toetst de tool nu op die vaste tekst.
+    regel: 'informatieservice-vaste-tekst',
     faalt: '<h2>In het kort</h2><ul><li>Tekst zonder de standaardtekst.</li></ul>',
     slaagt: null, // de advies()-wrapper bevat de standaardtekst al
   },

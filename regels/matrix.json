@@ -309,6 +309,31 @@
         "reis mee app",
         "ggd-app"
       ]
+    },
+    {
+      "id": "oorlog-en-conflict",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Oorlog en conflict",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Meestal onder Actueel; alleen een eigen rubriek als het een structureel risico is.",
+      "_bron": "SJ, blok Risico dat van toepassing is"
+    },
+    {
+      "id": "willekeurige-arrestaties",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Willekeurige arrestaties",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Meestal onder Actueel, of onder Wetten en gebruiken. Alleen herhalen als het een structureel risico is.",
+      "_bron": "SJ, blok Risico dat van toepassing is"
+    },
+    {
+      "id": "coronaregels",
+      "h2": "Reisvoorbereiding",
+      "h3": "Coronaregels",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Alleen als er nog coronaregels gelden om het land in te reizen.",
+      "alleen_bij_uitzondering": true,
+      "_bron": "SJ, blok Coronaregels"
     }
   ],
   "_h2_toelichting": "Vastgesteld op een echte API-respons (data/voorbeeld/CZE.xml). De matrix zegt 'Deze koppen zijn vast en in vraagvorm'; de korte labels (Veiligheidsrisico's, Noodsituatie, Reisvoorbereiding) zijn de matrixnamen, de vraagvormen staan in de gepubliceerde tekst. {land} is de landnaam; 'in {land}' mag ook 'op {land}' zijn volgens de schrijfwijzerregel over op/in bij eilanden. 'Ook nuttig' komt uit de schrijfwijzer (Gebruiksvriendelijkheid > Links onderaan de pagina) en staat in het veld additionalinformation.",

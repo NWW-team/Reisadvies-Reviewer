@@ -178,6 +178,9 @@ node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
 node scripts/bouw-adviezen.mjs   # zet alle 226 adviezen klaar in docs/adviezen/
 node scripts/haal-woordenlijst.mjs  # haalt de OpenTaal-woordenlijst op voor de spellingtoets
+node scripts/fetch-posten.mjs       # haalt de ambassades en consulaten op (alleen op een runner)
+node scripts/bouw-postplaatsen.mjs  # leest daar de standplaatsen uit
+node scripts/bouw-koppenlijst.mjs   # telt welke h4-koppen in gebruik zijn
 node scripts/bouw-site.mjs       # bouwt docs/index.html uit dist/app.html
 ```
 
@@ -199,6 +202,7 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 |---|---|
 | `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, sjabloon, woordenlijsten, limieten, landen |
 | `regels/groepen.json` | de filterindeling: welke regel hoort bij welk vinkje boven de bevindingen |
+| `regels/postplaatsen.json` | de standplaatsen van de posten, uit de open data; voor de schrijfwijzetoets |
 | `regels/koppen-in-gebruik.json` | welke h4-tussenkoppen de adviezen gebruiken en hoe vaak; afgeleid uit het corpus, geen norm |
 | `regels/tekstcontrole.json` | resten van het CMS, vergeten spaties en onzichtbare tekens — overgenomen uit SpellingSpeurneus |
 | `regels/uitzonderingen.txt` | goedgekeurde woorden die niet in de OpenTaal-woordenlijst staan; deze lijst hoort bij de redactie |
@@ -256,6 +260,12 @@ veranderde:
   woordgrenzen (*beren* zit in *proberen*), de rubriek die de matrix zelf aanwijst (*Foto's maken*
   mag bij lokale wetten, 65 meldingen minder) en samenstellingen (*zandstormen* benoemt wel een
   risico).
+- Vier controles erbij die op hetzelfde criterium zijn gekozen — het antwoord staat vast, dus de
+  tool kan niet gokken: een dubbel woord (*Het het departement*), een spatie voor een leesteken
+  (*Algemeen alarmnummer : 101*), de standplaats van een post (*Bogota* → *Bogotá*) en een vaste
+  tekst waarin de landnaam niet is ingevuld. Die laatste dichtte een gat: Denemarken en Ierland
+  hebben allebei *"Heeft u direct hulp nodig in ?"* staan, en daar zweeg de tool over. Samen 19
+  meldingen, alle negentien terecht.
 - `nederlands-verbuiging` kijkt of *Nederlands* of *Nederlandse* goed staat voor de vaste termen
   voor een post. Geen grammaticacontrole, maar een gesloten verzameling van vijf woorden waarvan het
   geslacht vaststaat — daarvoor klopt de regel altijd, en daarbuiten zwijgt hij. Over 226 adviezen:

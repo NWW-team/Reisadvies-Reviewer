@@ -970,13 +970,13 @@
       "geel"
     ],
     "zinnen": 91,
-    "fout": 0,
+    "fout": 1,
     "letop": 3,
     "linkzin": 1,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 3,
       "link-zin": 1,
       "info": 1,
@@ -984,6 +984,7 @@
     },
     "perRegel": {
       "rubrieken-volgorde": 1,
+      "tekst-spatie-leesteken": 1,
       "zin-frequentiewoord": 5,
       "zin-max-woorden": 2,
       "aanhalingstekens": 2
@@ -996,6 +997,16 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
         "fragment": "Natuurgeweld",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \":\".",
+        "fragment": "Algemeen alarmnummer␣: 101",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -1440,22 +1451,33 @@
       "groen"
     ],
     "zinnen": 57,
-    "fout": 0,
+    "fout": 1,
     "letop": 1,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 1,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "tekst-spatie-leesteken": 1,
       "zin-max-woorden": 3
     },
     "bevindingen": [
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \"?\".",
+        "fragment": "Heeft u direct hulp nodig in Antigua en Barbuda␣?",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -3029,22 +3051,33 @@
       "geel"
     ],
     "zinnen": 54,
-    "fout": 0,
+    "fout": 1,
     "letop": 2,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 2,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "tekst-spatie-leesteken": 1,
       "zin-max-woorden": 5
     },
     "bevindingen": [
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \"?\".",
+        "fragment": "Blijft u 30 dagen of korter in Belize? En reist u met een Nederlands paspoort␣? Dan heeft u geen visum nodig.",
+        "kop": "Paspoort, visum, rijbewijs",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -6001,13 +6034,13 @@
       "geel"
     ],
     "zinnen": 135,
-    "fout": 2,
+    "fout": 4,
     "letop": 13,
     "linkzin": 1,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 4,
       "let-op": 13,
       "link-zin": 1,
       "info": 1,
@@ -6018,6 +6051,8 @@
       "kleur-variant": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
+      "tekst-dubbel-woord": 1,
+      "postplaats-schrijfwijze": 1,
       "zin-frequentiewoord": 7,
       "zin-max-woorden": 8,
       "zin-lijdende-vorm": 5,
@@ -6058,6 +6093,28 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Landmijnen\".",
         "fragment": "Wetten en gebruiken",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "tekst-dubbel-woord",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Het\" staat er twee keer achter elkaar.",
+        "fragment": "Het het departement Guainía. Behalve de stad Inírida (kleurcode geel).",
+        "kop": "Regionale risico's",
+        "verwacht": "Het",
+        "herkomst": "aanvulling",
+        "notitie": "Meestal blijft bij het herschrijven van een zin het oude woord staan."
+      },
+      {
+        "regel": "postplaats-schrijfwijze",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Bogota\" hoort \"Bogotá\" te zijn.",
+        "fragment": "In de bergen en hooggelegen steden, zoals Bogota, kunt u last krijgen van hoogteziekte. Lees informatie over hoogteziekte op de website van de GGD.",
+        "kop": "Reisvaccinaties",
+        "verwacht": "Bogotá",
+        "herkomst": "aanvulling",
+        "notitie": "Zo schrijft de open data de standplaats van de Nederlandse post daar."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -7093,13 +7150,13 @@
       "groen"
     ],
     "zinnen": 89,
-    "fout": 0,
+    "fout": 1,
     "letop": 9,
     "linkzin": 4,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 9,
       "link-zin": 4,
       "info": 0,
@@ -7107,6 +7164,7 @@
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
+      "tekst-dubbel-woord": 1,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 1,
       "aanhalingstekens": 1
@@ -7119,6 +7177,17 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
+      },
+      {
+        "regel": "tekst-dubbel-woord",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"de\" staat er twee keer achter elkaar.",
+        "fragment": "Ook niet in de bufferzone, behalve de de officiële checkpoints.",
+        "kop": "Wetten en gebruiken",
+        "verwacht": "de",
+        "herkomst": "aanvulling",
+        "notitie": "Meestal blijft bij het herschrijven van een zin het oude woord staan."
       },
       {
         "regel": "zin-max-woorden",
@@ -7673,22 +7742,44 @@
       "groen"
     ],
     "zinnen": 38,
-    "fout": 0,
+    "fout": 2,
     "letop": 0,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 2,
       "let-op": 0,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "vaste-tekst-land-leeg": 1,
+      "tekst-spatie-leesteken": 1,
       "zin-max-woorden": 2
     },
     "bevindingen": [
+      {
+        "regel": "vaste-tekst-land-leeg",
+        "ernst": "fout",
+        "bron": "SJ, de vaste teksten met {land}",
+        "boodschap": "De naam van het land is hier niet ingevuld.",
+        "fragment": "Heeft u direct hulp nodig in ?",
+        "kop": "In geval van nood",
+        "verwacht": "Heeft u direct hulp nodig in Denemarken? Neem contact op met de lokale hulpdiensten:",
+        "notitie": "Het sjabloon zet hier de landnaam neer. Waarschijnlijk is die bij het samenstellen van de pagina weggevallen."
+      },
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \"?\".",
+        "fragment": "Heeft u direct hulp nodig in␣?",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
@@ -8060,13 +8151,13 @@
       "geel"
     ],
     "zinnen": 148,
-    "fout": 4,
+    "fout": 5,
     "letop": 18,
     "linkzin": 6,
     "twijfel": 7,
     "info": 1,
     "perErnst": {
-      "fout": 4,
+      "fout": 5,
       "let-op": 18,
       "link-zin": 6,
       "info": 1,
@@ -8077,6 +8168,7 @@
       "kleur-variant": 2,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
+      "tekst-dubbel-woord": 1,
       "woord-onbekend": 5,
       "zin-max-woorden": 12,
       "zin-lijdende-vorm": 4,
@@ -8127,6 +8219,17 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
         "fragment": "Natuurgeweld",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "tekst-dubbel-woord",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"via\" staat er twee keer achter elkaar.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood",
+        "verwacht": "via",
+        "herkomst": "aanvulling",
+        "notitie": "Meestal blijft bij het herschrijven van een zin het oude woord staan."
       },
       {
         "regel": "woord-onbekend",
@@ -8398,13 +8501,13 @@
       "geel"
     ],
     "zinnen": 149,
-    "fout": 1,
+    "fout": 2,
     "letop": 13,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 13,
       "link-zin": 2,
       "info": 1,
@@ -8415,6 +8518,7 @@
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
       "alinea-max-woorden": 2,
+      "postplaats-schrijfwijze": 1,
       "zin-max-woorden": 8,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 3,
@@ -8463,6 +8567,17 @@
         "boodschap": "Deze alinea telt 81 woorden. Maximaal 80.",
         "fragment": "Reist u naar de Sinaï (inclusief Sharm-El-Sheikh, Dahab, Nuweiba en Taba)? En komt u het land binnen via het vliegveld v…",
         "kop": "Visum"
+      },
+      {
+        "regel": "postplaats-schrijfwijze",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Cairo\" hoort \"Caïro\" te zijn.",
+        "fragment": "In maart en april kunt u door de Khamsin-wind last krijgen van uw luchtwegen en ogen. Ook is de luchtkwaliteit in Cairo soms slecht. Lees meer over de luchtkwaliteit in Egypte op de website van de World Air Quality Index (informatie in het Engels).",
+        "kop": "Reisvaccinaties",
+        "verwacht": "Caïro",
+        "herkomst": "aanvulling",
+        "notitie": "Zo schrijft de open data de standplaats van de Nederlandse post daar."
       },
       {
         "regel": "zin-max-woorden",
@@ -11968,13 +12083,13 @@
       "geel"
     ],
     "zinnen": 163,
-    "fout": 3,
+    "fout": 4,
     "letop": 24,
     "linkzin": 7,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 24,
       "link-zin": 7,
       "info": 1,
@@ -11988,6 +12103,7 @@
       "nood-contactcenter": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
+      "tekst-spatie-leesteken": 1,
       "woord-onbekend": 8,
       "zin-max-woorden": 15,
       "zin-frequentiewoord": 8,
@@ -12052,6 +12168,16 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+      },
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \".\".",
+        "fragment": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Indonesië␣.",
+        "kop": "Paspoort, visum, rijbewijs",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
       },
       {
         "regel": "woord-onbekend",
@@ -12953,13 +13079,13 @@
       "groen"
     ],
     "zinnen": 54,
-    "fout": 1,
+    "fout": 3,
     "letop": 2,
     "linkzin": 1,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 3,
       "let-op": 2,
       "link-zin": 1,
       "info": 1,
@@ -12967,8 +13093,10 @@
     },
     "perRegel": {
       "actueel-max-woorden": 1,
+      "vaste-tekst-land-leeg": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-volgorde": 1,
+      "tekst-spatie-leesteken": 1,
       "zin-max-woorden": 2,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 2
@@ -12980,6 +13108,16 @@
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "De bullet die naar Actueel verwijst telt 28 woorden. Maximaal 25.",
         "fragment": "Van 1 juli tot en met 31 december 2026 is Ierland voorzitter van de Raad van de Europese Unie. Houd rekening met extra veiligheidsmaatregelen. Lees meer onder Actueel."
+      },
+      {
+        "regel": "vaste-tekst-land-leeg",
+        "ernst": "fout",
+        "bron": "SJ, de vaste teksten met {land}",
+        "boodschap": "De naam van het land is hier niet ingevuld.",
+        "fragment": "Heeft u direct hulp nodig in ?",
+        "kop": "In geval van nood",
+        "verwacht": "Heeft u direct hulp nodig in Ierland? Neem contact op met de lokale hulpdiensten:",
+        "notitie": "Het sjabloon zet hier de landnaam neer. Waarschijnlijk is die bij het samenstellen van de pagina weggevallen."
       },
       {
         "regel": "reisverzekering-vaste-tekst",
@@ -12996,6 +13134,16 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
         "fragment": "Natuurgeweld",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \"?\".",
+        "fragment": "Heeft u direct hulp nodig in␣?",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
       },
       {
         "regel": "zin-max-woorden",
@@ -17449,13 +17597,13 @@
       "geel"
     ],
     "zinnen": 74,
-    "fout": 2,
+    "fout": 3,
     "letop": 2,
     "linkzin": 0,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 2,
       "link-zin": 0,
       "info": 0,
@@ -17465,6 +17613,7 @@
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
+      "postplaats-schrijfwijze": 1,
       "zin-max-woorden": 1,
       "zin-frequentiewoord": 1
     },
@@ -17491,6 +17640,17 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "postplaats-schrijfwijze",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Chisinau\" hoort \"Chișinău\" te zijn.",
+        "fragment": "Bekijk de contactgegevens van de Nederlandse ambassade in Chisinau.",
+        "kop": "In geval van nood",
+        "verwacht": "Chișinău",
+        "herkomst": "aanvulling",
+        "notitie": "Zo schrijft de open data de standplaats van de Nederlandse post daar."
       },
       {
         "regel": "zin-max-woorden",
@@ -18134,13 +18294,13 @@
       "groen"
     ],
     "zinnen": 58,
-    "fout": 2,
+    "fout": 4,
     "letop": 4,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 4,
       "let-op": 4,
       "link-zin": 2,
       "info": 1,
@@ -18152,6 +18312,7 @@
       "h3-alleen-bij-uitzondering": 1,
       "intro-vaste-tekst": 1,
       "bagage-terug": 1,
+      "tekst-spatie-leesteken": 2,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 3,
       "link-tekstlengte": 1
@@ -18195,6 +18356,26 @@
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
         "fragment": "Bekijk wat u vanuit de Marshalleilanden mee terug nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?",
         "verwacht": "Bekijk wat u vanuit Marshalleilanden mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
+      },
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \"?\".",
+        "fragment": "Heeft u direct hulp nodig op de Marshalleilanden␣?",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
+      },
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \".\".",
+        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar de Marshalleilanden␣.",
+        "kop": "Paspoort, visum, rijbewijs",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -25087,13 +25268,13 @@
       "geel"
     ],
     "zinnen": 76,
-    "fout": 2,
+    "fout": 3,
     "letop": 6,
     "linkzin": 2,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 6,
       "link-zin": 2,
       "info": 0,
@@ -25102,6 +25283,7 @@
     "perRegel": {
       "h3-niet-melden": 1,
       "nood-contactcenter": 1,
+      "tekst-spatie-leesteken": 1,
       "woord-onbekend": 2,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 4,
@@ -25124,6 +25306,16 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \".\".",
+        "fragment": "Bel het lokale nummer van de Nederlandse ambassade␣.",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
       },
       {
         "regel": "woord-onbekend",
@@ -25898,13 +26090,13 @@
       "groen"
     ],
     "zinnen": 42,
-    "fout": 0,
+    "fout": 1,
     "letop": 2,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 2,
       "link-zin": 1,
       "info": 0,
@@ -25912,6 +26104,7 @@
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
+      "tekst-spatie-leesteken": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 2
     },
@@ -25923,6 +26116,16 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
+      },
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \":\".",
+        "fragment": "Brandweer␣: 115",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -27632,13 +27835,13 @@
       "geel"
     ],
     "zinnen": 187,
-    "fout": 2,
+    "fout": 3,
     "letop": 31,
     "linkzin": 3,
     "twijfel": 9,
     "info": 4,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 31,
       "link-zin": 3,
       "info": 4,
@@ -27652,6 +27855,7 @@
       "bagage-heen": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
+      "tekst-dubbel-woord": 1,
       "woord-onbekend": 2,
       "zin-max-woorden": 19,
       "zin-frequentiewoord": 6,
@@ -27718,6 +27922,17 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Verkeersongevallen\".",
         "fragment": "Wetten en gebruiken",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "tekst-dubbel-woord",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"de\" staat er twee keer achter elkaar.",
+        "fragment": "Dan moet u de de Thailand Digital Arrival Card invullen.",
+        "kop": "Paspoort, visum, rijbewijs",
+        "verwacht": "de",
+        "herkomst": "aanvulling",
+        "notitie": "Meestal blijft bij het herschrijven van een zin het oude woord staan."
       },
       {
         "regel": "woord-onbekend",
@@ -29805,13 +30020,13 @@
       "rood"
     ],
     "zinnen": 62,
-    "fout": 1,
+    "fout": 2,
     "letop": 2,
     "linkzin": 0,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 2,
       "link-zin": 0,
       "info": 1,
@@ -29820,6 +30035,7 @@
     "perRegel": {
       "actueel-max-woorden": 1,
       "rubrieken-volgorde": 1,
+      "tekst-spatie-leesteken": 1,
       "zin-max-woorden": 2,
       "zin-frequentiewoord": 1
     },
@@ -29838,6 +30054,16 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Landmijnen\".",
         "fragment": "Wetten en gebruiken",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "tekst-spatie-leesteken",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "Er staat een spatie vóór \":\".",
+        "fragment": "Algemeen alarmnummer␣: 112",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
       },
       {
         "regel": "zin-max-woorden",

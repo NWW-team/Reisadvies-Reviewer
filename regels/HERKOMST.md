@@ -470,6 +470,56 @@ plaatsen waar die zitten. Die staan op de site goed, dus daarmee zou dezelfde to
 verkeerd gespelde postnaam vangen. Nog niet gebouwd: dat vraagt een ophaalronde langs een ander
 deel van de open data.
 
+## Nog drie waterdichte controles (18 september 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `tekst-dubbel-woord` | **Geen brondocument.** Tikfout | fout |
+| `tekst-spatie-leesteken` | **Geen brondocument.** Leestekenregel | fout |
+| `postplaats-schrijfwijze` | `regels/postplaatsen.json`, uit de open data (ConsularData) | fout |
+| `vaste-tekst-land-leeg` | SJ, de vaste teksten waarin `{land}` staat | fout |
+
+Alle vier gekozen op hetzelfde criterium: het antwoord staat vast, dus de tool kan niet gokken.
+
+**`tekst-dubbel-woord`** — hetzelfde woord twee keer achter elkaar. Twee dingen herhalen zichzelf
+wél legitiem, en daar staat bewaking op: een eigennaam (*Pom Pom*, *Tawi Tawi* — twee hoofdletters
+achter elkaar) en een aangehaalde vreemde term (‘boda boda’s’). Aan het zinsbegin telt een hoofdletter
+niet mee, anders zou *Het het departement* wegvallen. 3 meldingen: *Het het departement*, *via via*
+en *u de de Thailand Digital Arrival Card*.
+
+Bij het bouwen bleek een valkuil die het noteren waard is: `matchAll` verbruikt wat het matcht. Met
+het patroon `(woord)(spatie)(woord)` mist de lus *"naar het het noorden"*, want *"naar het"* eet de
+eerste *het* op. Het tweede woord staat daarom in een vooruitblik en niet in de match zelf.
+
+**`tekst-spatie-leesteken`** — een spatie voor `, . ; : ! ?`. Geen bewaking nodig: er is geen
+Nederlandse zin waarin dat goed is. 11 meldingen, waaronder *"Algemeen alarmnummer : 101"* en
+*"Bel het lokale nummer van de Nederlandse ambassade ."*.
+
+**`postplaats-schrijfwijze`** — dezelfde opzet als `landnaam-schrijfwijze`, met de standplaatsen van
+de posten in plaats van de landen. Bron: het infotype `nl-representation` uit de open data, in de
+documentatie *ConsularData*, "contact information for all representations abroad". Opgehaald met
+`scripts/fetch-posten.mjs`, uitgelezen met `scripts/bouw-postplaatsen.mjs`. Van de 143 standplaatsen
+hebben er 8 een trema of accent; bij de rest valt niets te vergelijken. 3 meldingen: *Bogota* →
+*Bogotá*, *Cairo* → *Caïro*, *Chisinau* → *Chișinău*.
+
+**`vaste-tekst-land-leeg`** — dit dichtte een gat dat de tool zelf aan het licht bracht. Denemarken
+en Ierland hebben allebei *"Heeft u direct hulp nodig in ?"* staan: de landnaam is niet ingevuld. De
+bestaande regel `nood-lokale-hulpdiensten` zweeg daarover, en dat was geen fout maar een keuze met
+een blinde vlek: die toetst op `kern`, en dat is met opzet het stuk zonder landnaam (*"neem contact
+op met de lokale hulpdiensten"*). Anders zou elke legitieme afkorting — *de VS*, *het VK* — een
+melding geven. Daardoor werd de helft mét de landnaam nooit getoetst.
+
+De nieuwe regel vraagt daarom niet *staat hier precies deze landnaam?* maar *staat hier überhaupt
+iets?*. Een lege plek is altijd fout, hoe het land ook wordt afgekort. Gemeten: 2 meldingen, allebei
+terecht. De strengere variant — vergelijken met de volledige landnaam — gaf er 38, waarvan 36
+onterecht, juist door die afkortingen.
+
+**Wat is afgevallen.** Twee andere kandidaten zijn gemeten en niet gebouwd, omdat het corpus schoon
+is: dubbele spaties (0 treffers) en een komma zonder spatie erachter (0). Een derde is afgevallen
+omdat hij niet waterdicht te krijgen was: een zin die met een kleine letter begint. Dat gaf 2
+treffers, allebei onterecht — *o.a. dengue* en *iPerú*, waar een afkorting en een merknaam de punt
+veroorzaken.
+
 ## Nederlands of Nederlandse (18 september 2026)
 
 | regel-id | vindplaats | ernst |

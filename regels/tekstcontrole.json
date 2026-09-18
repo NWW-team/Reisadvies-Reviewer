@@ -75,5 +75,22 @@
       "haar",
       "hun"
     ]
+  },
+  "dubbel_woord": {
+    "_toelichting": "Hetzelfde woord twee keer achter elkaar. Klassieke tikfout bij het herschrijven van een zin: je typt het nieuwe woord en vergeet het oude weg te halen.",
+    "_bewaking": "Twee dingen herhalen zichzelf wel legitiem. Een eigennaam: 'Pom Pom', 'Tawi Tawi'. Twee hoofdletters achter elkaar is dus een naam — behalve aan het zinsbegin, want daar zegt een hoofdletter niets, en 'Het het departement' moet wél gemeld worden. En een aangehaalde vreemde term: ‘boda boda’s’ in Kenia.",
+    "_meting": "18 september 2026 over 226 adviezen: 7 herhalingen gevonden, waarvan 4 een tikfout ('Het het departement', 'de de officiële checkpoints', 'via via', 'u de de Thailand Digital Arrival Card') en 3 terecht overgeslagen."
+  },
+  "spatie_leesteken": {
+    "_toelichting": "Een spatie voor een komma, punt, puntkomma, dubbele punt, uitroepteken of vraagteken. Er is geen Nederlandse zin waarin dat goed is, dus dit kan zonder bewaking.",
+    "_meting": "18 september 2026 over 226 adviezen: 11 treffers, allemaal terecht.",
+    "leestekens": [
+      ",",
+      ".",
+      ";",
+      ":",
+      "!",
+      "?"
+    ]
   }
 }

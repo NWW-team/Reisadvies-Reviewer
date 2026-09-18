@@ -1,0 +1,16 @@
+{
+  "_bron": "Open data Nederland Wereldwijd, infotype nl-representation (ConsularData). Opgehaald met scripts/fetch-posten.mjs, uitgelezen met scripts/bouw-postplaatsen.mjs.",
+  "_toelichting": "De standplaatsen van de Nederlandse ambassades en consulaten-generaal, voor zover hun naam een trema of accent heeft. Hiermee kan postplaats-schrijfwijze zien of de naam goed staat. Bij plaatsen zonder trema of accent valt niets te vergelijken: de toets kijkt of het accent klopt, niet of de naam bestaat.",
+  "_gedraaid": "2026-09-18",
+  "_posten": 253,
+  "plaatsen": [
+    "Bogotá",
+    "Brasília",
+    "Caïro",
+    "Chișinău",
+    "Düsseldorf",
+    "München",
+    "San José",
+    "São Paulo"
+  ]
+}

@@ -158,6 +158,16 @@ const gevallen = [
       + '<h4>Lawines</h4><p>In de winter vallen er lawines.</p>',
   },
   {
+    regel: 'tekst-dubbel-woord',
+    faalt: '<p>Reis niet naar het het noorden van het land.</p>',
+    slaagt: '<p>Reis niet naar het noorden van het land.</p>',
+  },
+  {
+    regel: 'tekst-spatie-leesteken',
+    faalt: '<p>Bel het alarmnummer : 112 als u hulp nodig heeft.</p>',
+    slaagt: '<p>Bel het alarmnummer: 112 als u hulp nodig heeft.</p>',
+  },
+  {
     // Overgenomen uit SpellingSpeurneus: het CMS lekt zijn eigen resten de pagina op.
     regel: 'tekst-cms-rest',
     faalt: '<p>De Estse reddingsbrigade helpt u. undefined</p>',
@@ -487,6 +497,42 @@ test('Nederlands of Nederlandse: de verbuiging hangt aan lidwoord en geslacht', 
     '"Nederlands" als taalnaam hoort de regel niet te raken');
   assert.ok(!ids('Het Nederlands elftal speelt daar.').includes(regel),
     'een woord buiten de gesloten lijst hoort de regel niet te raken');
+});
+
+test('een herhaalde eigennaam is geen dubbel woord', () => {
+  const ids = (t) => idsVan(advies('<p>' + t + '</p>'), { land: 'Tsjechi\u00eb' });
+
+  // Twee hoofdletters achter elkaar is een naam: Pom Pom, Tawi Tawi.
+  assert.ok(!ids('Vermijd de eilanden Pom Pom en Sipadan.').includes('tekst-dubbel-woord'));
+  // Een aangehaalde vreemde term telt ook niet.
+  assert.ok(!ids('Pas op met \u2018boda boda\u2019s\u2019 in het verkeer.').includes('tekst-dubbel-woord'));
+  // Maar aan het zinsbegin zegt een hoofdletter niets, dus dit hoort w\u00e9l gemeld te worden.
+  assert.ok(ids('Het het departement is afgesloten.').includes('tekst-dubbel-woord'));
+});
+
+test('de standplaats van een post wordt getoetst', () => {
+  const ids = (t) => idsVan(advies('<p>' + t + '</p>'), { land: 'Colombia' });
+  assert.ok(ids('In hooggelegen steden zoals Bogota krijgt u hoogteziekte.')
+    .includes('postplaats-schrijfwijze'), 'Bogota zonder accent hoort gemeld te worden');
+  assert.ok(!ids('In hooggelegen steden zoals Bogot\u00e1 krijgt u hoogteziekte.')
+    .includes('postplaats-schrijfwijze'), 'goed geschreven hoort niets te geven');
+});
+
+test('een vaste tekst zonder ingevulde landnaam wordt gemeld', () => {
+  const ids = (t) => idsVan(advies('<h2>Wat kan ik doen in een noodsituatie?</h2>'
+    + '<h3>In geval van nood</h3><p>' + t + '</p>'), { land: 'Denemarken' });
+
+  assert.ok(ids('Heeft u direct hulp nodig in ? Neem contact op met de lokale hulpdiensten:')
+    .includes('vaste-tekst-land-leeg'), 'een lege plek hoort gemeld te worden');
+  assert.ok(!ids('Heeft u direct hulp nodig in Denemarken? Neem contact op met de lokale hulpdiensten:')
+    .includes('vaste-tekst-land-leeg'), 'ingevuld hoort niets te geven');
+
+  // Een afkorting is geen lege plek. De toets vraagt niet welke naam er staat, alleen of er iets
+  // staat \u2014 anders zou "de VS" of "het VK" onterecht afgaan.
+  assert.ok(!idsVan(advies('<h2>Wat kan ik doen in een noodsituatie?</h2><h3>In geval van nood</h3>'
+    + '<p>Heeft u direct hulp nodig in de VS? Neem contact op met de lokale hulpdiensten:</p>'),
+  { land: 'Verenigde Staten van Amerika' }).includes('vaste-tekst-land-leeg'),
+  'een legitieme afkorting hoort niets te geven');
 });
 
 test('de naam van het land wordt wel getoetst', () => {

@@ -137,6 +137,12 @@ export function maakToetser(data) {
   const wlijst = data.woordenlijst;
   const spelling = wlijst && typeof wlijst.has === 'function' && wlijst.size ? wlijst : null;
 
+  // De leestekens die niet achter een spatie horen. Een eigen const, niet in de regeldata
+  // terugschrijven: die is gedeeld en maakToetser kan meer dan een keer worden aangeroepen.
+  const spatieRe = tc && tc.spatie_leesteken
+    ? new RegExp('\\s+[' + tc.spatie_leesteken.leestekens.map(esc).join('') + ']', 'g')
+    : null;
+
   /**
    * "Nederlands(e)" gevolgd door een van de vaste termen voor een post. Het woord ervoor wordt
    * meegevangen, want daar hangt de verbuiging aan. Langste zelfstandige naamwoorden eerst, anders
@@ -183,6 +189,15 @@ export function maakToetser(data) {
   const landOpKale = new Map();
   for (const l of ((data.landen && data.landen.landen) || [])) {
     if (l.naam && zonderTekens(l.naam) !== l.naam.toLowerCase()) landOpKale.set(zonderTekens(l.naam), l.naam);
+  }
+
+  /**
+   * Hetzelfde voor de standplaatsen van de posten, uit de open data. Ook hiervan weet de tool hoe
+   * het hoort; verder worden namen niet beoordeeld.
+   */
+  const plaatsOpKale = new Map();
+  for (const naam of ((data.postplaatsen && data.postplaatsen.plaatsen) || [])) {
+    if (zonderTekens(naam) !== naam.toLowerCase()) plaatsOpKale.set(zonderTekens(naam), naam);
   }
 
   /** Bekend als het woord in de lijst staat, of als alle delen dat doen. Dat tweede vangt
@@ -799,6 +814,44 @@ export function maakToetser(data) {
       }
     }
 
+    // Alles wat de bezoeker leest, niet alleen de lopende zinnen: Estland had "undefined" als
+    // H2 staan en vijf Golfstaten hebben een word joiner in een opsommingsregel. Beide vallen
+    // buiten doc.zinnen. Zowel de tekstfouten als de spellingtoets lopen hierover.
+    const teLezen = [
+      ...doc.zinnen.map((z) => ({ tekst: z.tekst, kop: z.h3 || z.h2 })),
+      ...doc.koppen.map((k) => ({ tekst: k.tekst, kop: k.h3 || k.h2 })),
+      ...doc.opsommingen.flatMap((o) => o.items.map((i) => ({ tekst: i, kop: o.h3 || o.h2 }))),
+    ].filter((x) => x.tekst);
+
+    // Een vaste tekst waarin {land} staat, maar waar de landnaam niet is ingevuld. Denemarken en
+    // Ierland hebben allebei "Heeft u direct hulp nodig in ?" staan.
+    //
+    // Dit valt buiten de lus hieronder, en dat is geen toeval: die toetst op `kern`, en dat is met
+    // opzet het stuk zonder landnaam ("neem contact op met de lokale hulpdiensten"). Anders zou
+    // elke legitieme afkorting — "de VS", "het VK" — een melding geven. Daardoor werd de helft
+    // mét de landnaam nooit getoetst.
+    //
+    // De toets vraagt dus niet "staat hier precies deze landnaam?" maar "staat hier überhaupt
+    // iets?". Een lege plek is altijd fout, hoe het land ook wordt afgekort.
+    for (const vt of sj.vaste_teksten.filter((v) => v.zin.includes('{land}'))) {
+      const voorLand = norm(vt.zin.split('{land}')[0]).trim();
+      if (voorLand.length < 12) continue;                 // te kort om op te herkennen
+      for (const e of teLezen) {
+        const n = norm(e.tekst);
+        const i = n.indexOf(voorLand);
+        if (i < 0) continue;
+        const staart = n.slice(i + voorLand.length).replace(/^[\s,]+/, '');
+        if (/^\p{L}/u.test(staart)) continue;              // er staat een naam, welke dan ook
+        b.push(bevinding('vaste-tekst-land-leeg', ERNST.fout, 'SJ, de vaste teksten met {land}',
+          'De naam van het land is hier niet ingevuld.',
+          { fragment: e.tekst, kop: e.kop,
+            verwacht: vt.zin.replace('{land}', doc.land || 'land X'),
+            notitie: 'Het sjabloon zet hier de landnaam neer. Waarschijnlijk is die bij het '
+              + 'samenstellen van de pagina weggevallen.' }));
+        break;                                            // één melding per vaste tekst is genoeg
+      }
+    }
+
     for (const vt of sj.vaste_teksten) {
       const bereik = vt.rubriek ? rubriekTekst(doc, sj.rubriek_patronen[vt.rubriek]) : tekst;
       if (bereik === null) continue;                                   // rubriek staat niet in dit advies
@@ -989,15 +1042,6 @@ export function maakToetser(data) {
     // controles die daar geen woordenlijst voor nodig hebben; die passen hier, want de regellaag
     // draait zonder dependencies. Het zijn geen schrijfregels: er is iets misgegaan tussen het CMS
     // en de pagina, of er staat een tikfout die je bij snel lezen niet ziet.
-    // Alles wat de bezoeker leest, niet alleen de lopende zinnen: Estland had "undefined" als
-    // H2 staan en vijf Golfstaten hebben een word joiner in een opsommingsregel. Beide vallen
-    // buiten doc.zinnen. Zowel de tekstfouten als de spellingtoets lopen hierover.
-    const teLezen = [
-      ...doc.zinnen.map((z) => ({ tekst: z.tekst, kop: z.h3 || z.h2 })),
-      ...doc.koppen.map((k) => ({ tekst: k.tekst, kop: k.h3 || k.h2 })),
-      ...doc.opsommingen.flatMap((o) => o.items.map((i) => ({ tekst: i, kop: o.h3 || o.h2 }))),
-    ].filter((x) => x.tekst);
-
     // Wat de tekstfouten hierboven al melden, meldt de spellingtoets niet nog een keer: "undefined"
     // en "demonstraties.Volg" zijn geen onbekende woorden maar een CMS-rest en een vergeten spatie,
     // en dat is de nuttiger boodschap.
@@ -1044,6 +1088,55 @@ export function maakToetser(data) {
               ...(beideWoorden ? { verwacht: w.replace(/\.(?=\S)/g, '. ') } : {}),
               ...(beideWoorden ? {} : { notitie: 'Let op: hier staat een los teken tegen het '
                 + 'woord aan. Kijk of dat weg moet in plaats van dat er een spatie bij komt.' }) }));
+        }
+      }
+
+      // Hetzelfde woord twee keer achter elkaar. Klassieke tikfout bij het herschrijven van een
+      // zin: het nieuwe woord staat er, het oude is blijven staan.
+      if (tc.dubbel_woord) {
+        const gezienDubbel = new Set();
+        for (const z of teLezen) {
+          // Het tweede woord staat in een vooruitblik, niet in de match zelf. Anders wordt het
+          // meegeconsumeerd en mist de volgende ronde het: in "naar het het noorden" verbruikt
+          // "naar het" de eerste "het", en dan ziet de lus "het het" nooit.
+          for (const m of z.tekst.matchAll(/\b(\p{L}{2,})(\s+)(?=(\p{L}{2,})\b)/gu)) {
+            const [, een, , twee] = m;
+            if (een.toLowerCase() !== twee.toLowerCase()) continue;
+            // Een eigennaam herhaalt zichzelf: "Pom Pom", "Tawi Tawi". Twee hoofdletters achter
+            // elkaar is dus een naam. Aan het zinsbegin telt dat niet, want daar zegt een
+            // hoofdletter niets — "Het het departement" hoort wél gemeld te worden.
+            if (/^\p{Lu}/u.test(een) && /^\p{Lu}/u.test(twee)) continue;
+            // Een aangehaalde vreemde term: ‘boda boda’s’.
+            const eind = m.index + m[0].length + twee.length;
+            const voor = z.tekst.slice(Math.max(0, m.index - 2), m.index);
+            const na = z.tekst.slice(eind, eind + 3);
+            if (/["'\u2018\u201c]/.test(voor) && /["'\u2019\u201d]/.test(na)) continue;
+            const paar = een + m[2] + twee;
+            if (gezienDubbel.has(paar)) continue;
+            gezienDubbel.add(paar);
+            b.push(bevinding('tekst-dubbel-woord', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+              `"${een}" staat er twee keer achter elkaar.`,
+              { fragment: z.tekst, kop: z.kop, verwacht: een, herkomst: 'aanvulling',
+                notitie: 'Meestal blijft bij het herschrijven van een zin het oude woord staan.' }));
+          }
+        }
+      }
+
+      // Een spatie voor een leesteken. Geen bewaking nodig: er is geen Nederlandse zin waarin dat
+      // goed is.
+      if (spatieRe) {
+        const gezienSp = new Set();
+        for (const z of teLezen) {
+          for (const m of z.tekst.matchAll(spatieRe)) {
+            const teken = m[0].trim();
+            if (gezienSp.has(teken)) continue;
+            gezienSp.add(teken);
+            b.push(bevinding('tekst-spatie-leesteken', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+              `Er staat een spatie v\u00f3\u00f3r "${teken}".`,
+              { fragment: z.tekst.replace(m[0], '\u2423' + teken), kop: z.kop, herkomst: 'aanvulling',
+                notitie: 'Een leesteken sluit aan op het woord ervoor. In dit fragment staat er '
+                  + '\u2423 op de plek van de spatie.' }));
+          }
         }
       }
 
@@ -1106,6 +1199,27 @@ export function maakToetser(data) {
               `"${w}" hoort "${hoort}" te zijn.`,
               { fragment: z.tekst, kop: z.kop, verwacht: hoort, herkomst: 'aanvulling',
                 notitie: 'Deze schrijfwijze komt uit de landenlijst van de open data.' }));
+          }
+        }
+      }
+
+      // Dezelfde toets voor de standplaatsen van de posten: Bogotá, Caïro, Chișinău.
+      if (plaatsOpKale.size) {
+        const gezienPlaats = new Set();
+        for (const z of teLezen) {
+          const stukken = z.tekst.split(/[\s/()[\]]+/).map(schoonWoord);
+          for (let i = 0; i < stukken.length; i += 1) {
+            const w = stukken[i];
+            if (!w) continue;
+            const hoort = plaatsOpKale.get(zonderTekens(w));
+            if (!hoort || hoort === w) continue;
+            if ([stukken[i - 1], stukken[i + 1]].some((x) => x && /^\p{Lu}/u.test(x))) continue;
+            if (gezienPlaats.has(w)) continue;
+            gezienPlaats.add(w);
+            b.push(bevinding('postplaats-schrijfwijze', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+              `"${w}" hoort "${hoort}" te zijn.`,
+              { fragment: z.tekst, kop: z.kop, verwacht: hoort, herkomst: 'aanvulling',
+                notitie: 'Zo schrijft de open data de standplaats van de Nederlandse post daar.' }));
           }
         }
       }

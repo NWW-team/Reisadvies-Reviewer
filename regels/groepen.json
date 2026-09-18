@@ -55,6 +55,7 @@
         "rijbewijs-anwb",
         "rood-herhaling-voorbereiding",
         "rubrieken-max",
+        "vaste-tekst-land-leeg",
         "tekst-niet-melden",
         "vaccinaties-ggd",
         "vaccinaties-lcr"
@@ -85,7 +86,10 @@
       "regels": [
         "tekst-cms-rest",
         "landnaam-schrijfwijze",
+        "postplaats-schrijfwijze",
         "nederlands-verbuiging",
+        "tekst-dubbel-woord",
+        "tekst-spatie-leesteken",
         "tekst-onzichtbaar-teken",
         "tekst-plakfout"
       ]

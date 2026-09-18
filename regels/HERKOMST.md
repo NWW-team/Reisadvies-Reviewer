@@ -125,6 +125,32 @@ Daarnaast toetst de tool op vorm die het sjabloon voorschrijft:
 | `rubrieken-max` | SJ, richtlijn boven de rubrieken | max 6 rubrieken onder veiligheidsrisico's en onder reisvoorbereiding |
 | `rubrieken-volgorde` | SJ, blok *Risico dat van toepassing is, in volgorde van relevantie* | de vaste volgorde van de rubrieken onder veiligheidsrisico's |
 | `nood-contactnummer` | SJ, blok *In geval van nood* | alleen de vaste nummers van het contactcenter |
+| `h3-vaste-kop` | SJ, blok *Risico dat van toepassing is*; MX, tab *Koppen* | de tussenkoppen liggen letterlijk vast: "Terrorisme", niet "Terroristische aanslagen" |
+
+## Aangevuld na de review van 18 september 2026
+
+| regel-id | vindplaats |
+|---|---|
+| `kleur-vervolg-bullet-kort` | Matrix, tabblad *Kleurcode-teksten*, kolom NB: "de eerste bullet voluit, vervolgbullets verkort" |
+| `h3-alleen-bij-uitzondering` | Matrix, tabblad *Koppen*, kolom Toelichting bij *Verkeersongevallen* ("Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders") en bij *Coronaregels*. In de regeldata het veld `alleen_bij_uitzondering`. |
+
+Drie keuzes bij deze ronde zijn **geen** letterlijke vindplaats maar een besluit, en horen daarom
+hier vermeld:
+
+- **`kleur-eerste-bullet-voluit` accepteert nu twee vormen.** De NB-kolom noemt naast
+  "De kleurcode van het reisadvies voor X is KLEUR" ook de aanpassing "De kleurcode van het
+  reisadvies is KLEUR voor gebieden X, Y en Z". Die tweede stond niet in de regel, terwijl 66 van
+  de 68 eerste bullets in het corpus hem gebruiken. Uitbreiding, geen versoepeling.
+- **De omgedraaide vervolgbullet** ("Kleurcode oranje geldt voor …", 23× in het corpus) staat niet
+  letterlijk in de matrix. Op 18 september 2026 goedgekeurd als geldige variant.
+- **`rubrieken-volgorde` is verzacht** van *let op* naar *ter overweging*, met een vragende
+  formulering. Het sjabloon noemt de volgorde dwingend; de praktijk kent goede redenen om af te
+  wijken (in de zomer natuurgeweld bovenaan vanwege bosbranden). Dit is dus een keuze, geen bron.
+
+De kop *Paspoort, visum, rijbewijs* is in `matrix.json` omgezet van een lijst vaste varianten naar
+`kop_elementen`: de documenten die voor dit land gelden, in vaste volgorde, waarbij een land mag
+overslaan wat het niet kent. Daarmee vervielen ook elf onterechte `tussenkop-leestekens`-meldingen
+over de komma in die kop — een komma die de matrix zelf voorschrijft.
 
 ## Aangevuld na de review van 15 september 2026
 

@@ -16,6 +16,20 @@
     "De kleurcode van het reisadvies voor de gebieden {gebieden} is {kleur}."
   ],
   "_vervolg_bullet_kort": "Voor de gebieden {gebieden} geldt kleurcode {kleur}.",
+  "bullet_vormen": {
+    "_toelichting": "De vormen die een kleurbullet in \"In het kort\" mag hebben, per positie. De eerste bullet staat voluit, de vervolgbullets verkort. Dit zijn reguliere expressies die tegen genormaliseerde tekst (kleine letters, rechte apostrof, enkele spaties) worden aangehouden; KLEUR staat voor rood/oranje/geel/groen.",
+    "eerste_voluit": [
+      "^de kleurcode van het reisadvies voor .+ is (rood|oranje|geel|groen)\\b",
+      "^de kleurcode van het reisadvies is (rood|oranje|geel|groen) voor "
+    ],
+    "_eerste_voluit_bron": "Tabblad Kleurcode-teksten, kolom NB. De tweede vorm staat er als toegestane aanpassing bij een opsomming van meerdere gebieden en is met 66 van de 68 eerste bullets in het corpus de gangbare vorm.",
+    "vervolg_kort": [
+      "^voor .+ geldt kleurcode (rood|oranje|geel|groen)\\b",
+      "^kleurcode (rood|oranje|geel|groen) geldt voor "
+    ],
+    "_vervolg_kort_bron": "Tabblad Kleurcode-teksten, kolom NB: vervolgbullets verkort. De omgedraaide vorm (\"Kleurcode oranje geldt voor ...\") komt 23 keer voor in het corpus en is op 18 september 2026 door de opdrachtgever goedgekeurd als geldige variant; de matrix noemt hem niet letterlijk.",
+    "_herkennen_als_kleurbullet": "kleurcode"
+  },
   "_regionale_afsluiter": "De kleurcode van het reisadvies voor de rest van {land} is {kleur}.",
   "_woordenaantal": {
     "1 kleurcode": 1500,

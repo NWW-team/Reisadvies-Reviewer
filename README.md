@@ -184,14 +184,20 @@ code in Node draait (tests, bulkslag) en in de browser (de deelbare prototypepag
 ## Wat de bulkslag oplevert
 
 Over 226 live reisadviezen (`data/bulkrapport.md`, gedraaid met dezelfde regelset als de
-gepubliceerde pagina): 46 zitten boven de woordenlimiet, 123 hebben geen enkele rode fout, en
+gepubliceerde pagina): 46 zitten boven de woordenlimiet, 119 hebben geen enkele rode fout, en
 25 adviezen bevatten een onderwerp dat de matrix als *niet melden* aanmerkt. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
 ruim 200 adviezen woordelijk hetzelfde staan. Die zijn met één aanpassing tegelijk opgelost, en
 het rapport zet ze daarom apart.
 
-Let op bij het vergelijken met een ouder rapport: te lange zinnen tellen sinds de kleurindeling
-hierboven niet meer als *fout* maar als *let op* of *lange zin met link*. Het aantal "harde
-fouten" daalde daardoor scherp zonder dat er één advies veranderde.
+Let op bij het vergelijken met een ouder rapport. Twee dingen verschoven zonder dat er één advies
+veranderde:
+
+- Te lange zinnen tellen sinds de kleurindeling hierboven niet meer als *fout* maar als *let op*
+  of *lange zin met link*. Het aantal "harde fouten" daalde daardoor scherp.
+- Sinds 18 september 2026 vervielen 76 onterechte meldingen (65 over de eerste kleurbullet, 11 over
+  de komma in "Paspoort, rijbewijs") en kwamen er 56 bij uit drie regels die er nog niet waren:
+  afwijkende tussenkoppen, rubrieken die alleen bij uitzondering horen, en vervolgbullets over de
+  kleurcode. Het totaal ging van 3812 naar 3792, maar de samenstelling is wezenlijk anders.
 
 ## Over de regels
 

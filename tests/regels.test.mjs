@@ -24,6 +24,38 @@ const gevallen = [
     slaagt: "<h2>Veiligheidsrisico’s</h2><h3>Criminaliteit</h3><p>Er zijn zakkenrollers.</p>",
   },
   {
+    // Het sjabloon schrijft de tussenkoppen letterlijk voor.
+    regel: 'h3-vaste-kop',
+    faalt: "<h2>Veiligheidsrisico’s</h2><h3>Terroristische aanslagen</h3><p>Er is dreiging.</p>",
+    slaagt: "<h2>Veiligheidsrisico’s</h2><h3>Terrorisme</h3><p>Er is dreiging.</p>",
+  },
+  {
+    // "Paspoort, visum, rijbewijs" noemt de documenten die voor dit land gelden. Een land zonder
+    // visumplicht laat dat element weg; dat mag, een andere volgorde niet.
+    regel: 'h3-vaste-kop',
+    faalt: '<h2>Hoe bereid ik mijn reis voor?</h2><h3>Rijbewijs, paspoort</h3><p>Tekst.</p>',
+    slaagt: '<h2>Hoe bereid ik mijn reis voor?</h2><h3>Paspoort, rijbewijs</h3><p>Tekst.</p>',
+  },
+  {
+    regel: 'h3-alleen-bij-uitzondering',
+    faalt: "<h2>Veiligheidsrisico’s</h2><h3>Verkeersongevallen</h3><p>Er vallen doden.</p>",
+    slaagt: "<h2>Veiligheidsrisico’s</h2><h3>Criminaliteit</h3><p>Er zijn zakkenrollers.</p>",
+  },
+  {
+    // De eerste kleurbullet staat voluit; beide voluit-vormen uit de matrix zijn geldig.
+    regel: 'kleur-eerste-bullet-voluit',
+    faalt: '<h2>In het kort</h2><ul><li>Kleurcode groen geldt voor Tsjechië.</li></ul>',
+    slaagt: null, // gedekt door schoon.test.mjs
+  },
+  {
+    // Alleen de eerste bullet staat voluit; een vervolgbullet die dat herhaalt maakt het blok lang.
+    regel: 'kleur-vervolg-bullet-kort',
+    faalt: '<h2>In het kort</h2><ul>'
+      + '<li>De kleurcode van het reisadvies voor Tsjechië is groen.</li>'
+      + '<li>De kleurcode van het reisadvies voor de gebieden Noord is oranje.</li></ul>',
+    slaagt: null, // gedekt door schoon.test.mjs
+  },
+  {
     regel: 'h2-vast',
     faalt: '<h2>Handige tips</h2><p>Tekst.</p>',
     // De vaste H2's staan in vraagvorm; zie regels/matrix.json en data/voorbeeld/CZE.xml.

@@ -146,12 +146,55 @@ export function maakToetser(data) {
   }
 
   /** Koppen die de matrix letterlijk voorschrijft, inclusief de toegestane varianten. */
-  const matrixKoppen = new Set(matrix.koppen.flatMap((k) =>
+  const matrixKoppen = new Set(matrix.koppen.filter((k) => !k.kop_is_variabel).flatMap((k) =>
     [k.h3, ...(k.kop_varianten || [])].filter(Boolean).map(norm)));
   // Het sjabloon schrijft daarnaast tussenkoppen letterlijk voor ("Lokale hulpdiensten",
   // "Wat mag ik meenemen naar {land}?"). Die toetsen we net zomin op woordenaantal of
   // leestekens: de richtlijn is daar het sjabloon zelf.
+  /**
+   * Sommige koppen zijn een opsomming in plaats van een vaste zin: "Paspoort, visum, rijbewijs"
+   * noemt de documenten die voor dít land gelden. Niet elk land kent een visum of een ETA, dus
+   * een kop mag elementen overslaan — maar niet van volgorde wisselen en niets anders noemen.
+   */
+  const elementenKoppen = matrix.koppen.filter((k) => k.kop_elementen);
+  function isElementenKop(kop) {
+    return elementenKoppen.some((k) => {
+      const toegestaan = k.kop_elementen.map(norm);
+      const delen = norm(kop).split(',').map((x) => x.trim()).filter(Boolean);
+      if (!delen.length) return false;
+      let vorige = -1;
+      for (const deel of delen) {
+        const plek = toegestaan.indexOf(deel);
+        if (plek <= vorige) return false;          // onbekend, of niet in de vaste volgorde
+        vorige = plek;
+      }
+      return true;
+    });
+  }
+
+  /**
+   * De bekende kop die het dichtst bij deze afwijkende kop ligt, op gedeelde woorden. Bedoeld om
+   * de bevinding bruikbaar te maken ("Conflict" -> "Oorlog en conflict"); vindt de tool niets dat
+   * genoeg lijkt, dan noemt de bevinding geen verwachte kop in plaats van een gok.
+   */
+  function dichtstbijKop(kop) {
+    const woorden = (t) => new Set(norm(t).split(/[^a-z0-9\u00c0-\u017f]+/).filter((w) => w.length > 3));
+    const doel = woorden(kop);
+    if (!doel.size) return null;
+    let beste = null;
+    let besteScore = 0;
+    for (const k of matrix.koppen) {
+      if (!k.h3 || k.kop_is_variabel) continue;
+      const kandidaat = woorden(k.h3);
+      const gedeeld = [...doel].filter((w) => kandidaat.has(w)).length;
+      const score = gedeeld / Math.max(doel.size, kandidaat.size);
+      if (score > besteScore) { besteScore = score; beste = k.h3; }
+    }
+    return besteScore >= 0.5 ? beste : null;
+  }
+
   const isVasteKop = (kop, land) => matrixKoppen.has(norm(kop))
+    || isElementenKop(kop)
     || (sj.vaste_koppen || []).some((s) => new RegExp('^' + vasteTekstRegex(s, land).source + '$').test(norm(kop)));
 
   /** De vaste H2's staan in vraagvorm met de landnaam erin; 'in {land}' mag ook 'op {land}'
@@ -306,11 +349,28 @@ export function maakToetser(data) {
         b.push(bevinding('kort-max-bullets', ERNST.fout, 'SJ, blok In het kort',
           `"In het kort" heeft ${bullets.length} bullets. Het sjabloon staat er maximaal ${sj.limieten.in_het_kort.max_bullets} toe.`));
       }
-      const eersteKleur = bullets.find((i) => /kleurcode/i.test(i));
-      if (eersteKleur && !/^de kleurcode van het reisadvies voor /.test(norm(eersteKleur))) {
+      // De eerste bullet over de kleurcode staat voluit, de vervolgbullets verkort. Voor beide
+      // posities zijn twee formuleringen geldig; ze staan als patroon in regels/kleurcodes.json,
+      // zodat een nieuwe toegestane vorm geen codewijziging is.
+      const bv = kleurcodes.bullet_vormen;
+      const kleurBullets = bullets.filter((i) => new RegExp(bv._herkennen_als_kleurbullet, 'i').test(i));
+      const past = (tekst, patronen) => patronen.some((pat) => new RegExp(pat).test(norm(tekst)));
+      if (kleurBullets.length && !past(kleurBullets[0], bv.eerste_voluit)) {
         b.push(bevinding('kleur-eerste-bullet-voluit', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
-          'De eerste bullet over de kleurcode moet voluit: "De kleurcode van het reisadvies voor ... is ...".',
-          { fragment: eersteKleur }));
+          'De eerste bullet over de kleurcode staat niet voluit.',
+          { fragment: kleurBullets[0],
+            verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is … `
+              + '(of: De kleurcode van het reisadvies is … voor …)' }));
+      }
+      // Een vervolgbullet die de volledige vorm herhaalt maakt "In het kort" onnodig lang; het is
+      // juist de bedoeling dat alleen de eerste voluit staat.
+      for (const vervolg of kleurBullets.slice(1)) {
+        if (past(vervolg, bv.vervolg_kort)) continue;
+        b.push(bevinding('kleur-vervolg-bullet-kort', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+          past(vervolg, bv.eerste_voluit)
+            ? 'Deze vervolgbullet staat voluit. Alleen de eerste bullet over de kleurcode staat voluit.'
+            : 'Deze vervolgbullet over de kleurcode heeft niet de verkorte vaste vorm.',
+          { fragment: vervolg, verwacht: 'Voor … geldt kleurcode … (of: Kleurcode … geldt voor …)' }));
       }
       // Deze regel gaat over "In het kort", dus alleen die tekst doorzoeken.
       // Een opsomming van gebieden onder Regionale risico's mag juist wel lang zijn.
@@ -339,6 +399,26 @@ export function maakToetser(data) {
         if (regel && regel.richtlijn === 'niet-melden') {
           b.push(bevinding('h3-niet-melden', ERNST.fout, 'MX, tab Koppen, richtlijn Niet melden',
             `"${kop.tekst}" hoort niet in een reisadvies.`, { fragment: kop.tekst, notitie: regel.toelichting }));
+        }
+        // De matrix merkt een paar rubrieken aan als uitzonderingsgeval. Ze mogen er dus staan,
+        // maar niet standaard: de redacteur hoort te wegen of dit advies die uitzondering is.
+        if (regel && regel.alleen_bij_uitzondering) {
+          b.push(bevinding('h3-alleen-bij-uitzondering', ERNST.info, 'MX, tab Koppen, kolom Toelichting',
+            `"${kop.tekst}" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?`,
+            { fragment: kop.tekst, notitie: regel.toelichting }));
+        }
+        // Het sjabloon schrijft de tussenkoppen letterlijk voor: "Terrorisme", niet "Terroristische
+        // aanslagen". Een afwijkende kop is niet alleen zelf een formatbreuk — de vaste teksten
+        // worden per rubriek op de kop gezocht, dus een kop die de tool niet kent zet de controles
+        // eronder stil. Daarom melden we hem, met die waarschuwing erbij.
+        if (!isVasteKop(kop.tekst, doc.land)) {
+          b.push(bevinding('h3-vaste-kop', ERNST.fout, 'SJ, blok Risico dat van toepassing is; MX, tab Koppen',
+            `"${kop.tekst}" is geen vaste tussenkop.`,
+            { fragment: kop.tekst,
+              ...(dichtstbijKop(kop.tekst) ? { verwacht: dichtstbijKop(kop.tekst) } : {}),
+              notitie: 'Heet deze rubriek naar zijn eigen onderwerp (een ziekte bijvoorbeeld), dan mag '
+                + 'de kop vrij zijn; kies dan "oneens". Zo niet: de vaste teksten onder deze rubriek '
+                + 'worden niet getoetst zolang de kop afwijkt.' }));
         }
       }
     }
@@ -462,10 +542,12 @@ export function maakToetser(data) {
       .filter((x) => x.plek >= 0);
     for (let i = 1; i < rubriekenOpVolgorde.length; i++) {
       if (rubriekenOpVolgorde[i].plek < rubriekenOpVolgorde[i - 1].plek) {
-        b.push(bevinding('rubrieken-volgorde', ERNST.letop, 'SJ, blok Risico dat van toepassing is',
-          `"${rubriekenOpVolgorde[i].tekst}" staat na "${rubriekenOpVolgorde[i - 1].tekst}".`,
+        b.push(bevinding('rubrieken-volgorde', ERNST.info, 'SJ, blok Risico dat van toepassing is',
+          `Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? "${rubriekenOpVolgorde[i].tekst}" `
+            + `staat na "${rubriekenOpVolgorde[i - 1].tekst}".`,
           { fragment: rubriekenOpVolgorde[i].tekst,
-            notitie: 'De volgorde van relevantie is: ' + sj.rubriek_volgorde.join(' > ') + '.' }));
+            notitie: 'Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. '
+              + 'De standaardvolgorde van relevantie is: ' + sj.rubriek_volgorde.join(' > ') + '.' }));
         break;
       }
     }

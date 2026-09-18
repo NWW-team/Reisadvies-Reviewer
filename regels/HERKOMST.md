@@ -135,10 +135,56 @@ lijst kan dat nooit dekken, want een kop heet vaak naar zijn eigen onderwerp.
 
 | regel-id | vindplaats |
 |---|---|
-| `h4-vaste-kop` | SJ, de blokken *In geval van nood* en *Bagageregels*: daar schrijft het sjabloon de tussenkoppen letterlijk voor |
+| `h4-kop-variant` | SJ, de blokken *In geval van nood* en *Bagageregels*; `regels/koppen-in-gebruik.json` |
 | `h4-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden*, kolom trefwoorden |
 | `tekst-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden*, kolom trefwoorden |
 | `h4-natuurrisico` | **Geen letterlijke vindplaats.** Instructie van de opdrachtgever, 18 september 2026: een tussenkop onder Natuurgeweld moet een risico benoemen zoals vulkanen, orkanen of overstromingen — niet de plaats of de activiteit. |
+
+**Niet "staat niet op de lijst", maar "heet elders anders" (18 september 2026).** De regel heette
+eerst `h4-vaste-kop` en meldde elke kop die niet in het sjabloon stond. Dat klopte niet, en de
+opdrachtgever wees erop waarom: niet elk land heeft dezelfde informatie. *Achtergelaten of gedwongen
+te trouwen* hoort bij Somalië en nergens anders; dat de tool dat als afwijking meldt, is de regel
+die het mis heeft. Wat wél misgaat is hetzelfde onderwerp in het ene land anders noemen dan in het
+andere — dan zie je als lezer twee dingen waar er één is.
+
+De regel heet nu `h4-kop-variant` en meldt een kop alleen als er elders een andere formulering
+rondgaat die duidelijk de huisstijl is. Twee voorwaarden, allebei nodig:
+
+1. **Genoeg gelijkenis** — 60% woordoverlap, dezelfde maat die `dichtstbijKop` gebruikt. Minder is
+   een ander onderwerp.
+2. **Genoeg adviezen** — de andere formulering staat in minstens 20 adviezen (`variant_drempel` in
+   `sjabloon.json`). Anders is het geen huisstijl maar toeval: *Geen Nederlandse ambassade of
+   consulaat op Antarctica* lijkt op *Geen Nederlandse ambassade op Aruba*, maar die staat zelf ook
+   maar in één advies, en dan zegt de gelijkenis niets.
+
+`regels/koppen-in-gebruik.json` bevat de 468 h4-koppen die onder deze rubrieken in gebruik zijn, met
+hoe vaak. Gemaakt met `scripts/bouw-koppenlijst.mjs` uit het corpus; na een nieuwe ophaalronde
+opnieuw draaien. Het is géén norm: een kop die daar vaak in staat is de gangbare formulering, niet
+per se de juiste — dat is ook precies waarom de regel *let op* geeft en geen fout.
+
+Wat dat oplevert, gemeten over 226 adviezen: van de 22 meldingen blijven er dertien over. Die
+dertien zijn terecht, en laten zien hoe scheef het staat:
+
+| gemeld | wat elders staat |
+|---|---|
+| *Wat mag mee terugnemen naar Nederland?* | *Wat mag ik mee terugnemen naar Nederland?* (224×) — er mist een woord |
+| *Nood- of crisissituatie?* (3×) | *Nood- of crisissituatie* (222×) — een vraagteken te veel |
+| *Contactgegevens Nederlandse ambassade* (6×), *Contactgegevens ambassade*, *Contactgegevens in geval van nood*, *Contactgegevens ambassade in geval van nood*, *Contactgegevens Nederlandse vertegenwoordiging in geval van nood* | *Contactgegevens Nederlandse ambassade in geval van nood* (208×) — vijf namen voor één ding |
+
+Eén melding valt weg die wel klopte: *Contactgegevens ambassade* in Bahrein. De volledige vorm
+heeft te weinig woordoverlap met die korte kop om de drempel te halen. Dat is de prijs van een maat
+die streng genoeg is om de rest buiten de deur te houden.
+
+De negen die wegvallen zijn verder terecht landspecifiek: *Achtergelaten of gedwongen te trouwen*
+(Somalië), *Beperkte consulaire hulp in het noorden van Cyprus*, *Geen Nederlandse ambassade of
+consulaat op Antarctica*, *Geen Nederlands consulaat-generaal in Macau SAR*, *Wat mag ik niet
+meenemen naar Thailand?*.
+
+**Wat deze regel niet meer vangt.** Drie koppen met een de/het-fout — *Nederlandse consulaat-generaal
+in Australië*, *Nederlandse consulaat-generaal in Turkije*, *Nederlandse ambassadekantoor in Tsjaad*
+(alle drie horen *Nederlands* te zijn). Die vielen eerder mee omdat ze niet op de lijst stonden, niet
+omdat de tool de fout zag. Dat is een taalregel over lidwoord en bijvoeglijk naamwoord, en die hoort
+in een eigen regel thuis, niet hier.
 
 **Alleen nood en bagage.** Onder *Paspoort, visum, rijbewijs* en *Regionale risico's* voegen
 redacteuren terecht landspecifieke kopjes toe (*Inreisstempel*, *De provincie Cabinda*, *Grens met
@@ -423,6 +469,128 @@ buurland.
 plaatsen waar die zitten. Die staan op de site goed, dus daarmee zou dezelfde toets ook een
 verkeerd gespelde postnaam vangen. Nog niet gebouwd: dat vraagt een ophaalronde langs een ander
 deel van de open data.
+
+## Gemeten en niet gebouwd: het posttype (18 september 2026)
+
+De open data weet per land welke post er zit: een ambassade, een consulaat-generaal of een
+ambassadekantoor. De verleiding is om te toetsen of het advies de juiste noemt. **Gemeten: 8
+meldingen, alle acht onterecht.** Daarom niet gebouwd.
+
+Waarom het niet kan, in twee soorten:
+
+1. **Het advies zegt juist dat er géén post is.** *"Geen Nederlandse ambassade op de Bahama's"*,
+   gevolgd door een verwijzing naar het consulaat-generaal in Miami. Dat klopt precies; de tool zou
+   het woord *ambassade* zien en een fout melden op een zin die zegt dat die er niet is. Zo ook bij
+   de Kaaimaneilanden, Puerto Rico, Martinique, de Turks- en Caicoseilanden en de Amerikaanse
+   Maagdeneilanden.
+2. **Het is de voorgeschreven kleurcodetekst.** *"De Nederlandse ambassade kan u minder goed helpen
+   als u in de problemen komt"* staat zo in de matrix, ongeacht welke post het land heeft. Bij
+   Tsjaad en Belarus komt de melding daarvandaan. Daar kan een redacteur niets aan doen zonder van
+   het format af te wijken.
+
+Dit is precies de ruis waar de opdrachtgever voor waarschuwde: meldingen op tekst die gewoon goed
+is, kosten vertrouwen, en een tool die je niet gelooft is geen tool.
+
+**Wel zichtbaar gemaakt: een fout in de brondata.** De open data zelf schrijft *"Nederlandse
+ambassadekantoor in Minsk"*, waar *Nederlands* hoort — dezelfde fout die `nederlands-verbuiging` in
+de adviezen vindt. Die titel staat op de contactpagina van de site en niet in een reisadvies, dus de
+tool komt hem nooit tegen. `scripts/bouw-postplaatsen.mjs` toetst de brondata daarom met dezelfde
+regel en drukt af wat er misgaat. Het Belarus-advies zelf schrijft het wél goed
+(*Nederlands ambassadekantoor in Belarus*), dus dit is alleen een kwestie van de contactpagina.
+
+## Nog drie waterdichte controles (18 september 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `tekst-dubbel-woord` | **Geen brondocument.** Tikfout | fout |
+| `tekst-spatie-leesteken` | **Geen brondocument.** Leestekenregel | fout |
+| `postplaats-schrijfwijze` | `regels/postplaatsen.json`, uit de open data (ConsularData) | fout |
+| `vaste-tekst-land-leeg` | SJ, de vaste teksten waarin `{land}` staat | fout |
+
+Alle vier gekozen op hetzelfde criterium: het antwoord staat vast, dus de tool kan niet gokken.
+
+**`tekst-dubbel-woord`** — hetzelfde woord twee keer achter elkaar. Twee dingen herhalen zichzelf
+wél legitiem, en daar staat bewaking op: een eigennaam (*Pom Pom*, *Tawi Tawi* — twee hoofdletters
+achter elkaar) en een aangehaalde vreemde term (‘boda boda’s’). Aan het zinsbegin telt een hoofdletter
+niet mee, anders zou *Het het departement* wegvallen. 3 meldingen: *Het het departement*, *via via*
+en *u de de Thailand Digital Arrival Card*.
+
+Bij het bouwen bleek een valkuil die het noteren waard is: `matchAll` verbruikt wat het matcht. Met
+het patroon `(woord)(spatie)(woord)` mist de lus *"naar het het noorden"*, want *"naar het"* eet de
+eerste *het* op. Het tweede woord staat daarom in een vooruitblik en niet in de match zelf.
+
+**`tekst-spatie-leesteken`** — een spatie voor `, . ; : ! ?`. Geen bewaking nodig: er is geen
+Nederlandse zin waarin dat goed is. 11 meldingen, waaronder *"Algemeen alarmnummer : 101"* en
+*"Bel het lokale nummer van de Nederlandse ambassade ."*.
+
+**`postplaats-schrijfwijze`** — dezelfde opzet als `landnaam-schrijfwijze`, met de standplaatsen van
+de posten in plaats van de landen. Bron: het infotype `nl-representation` uit de open data, in de
+documentatie *ConsularData*, "contact information for all representations abroad". Opgehaald met
+`scripts/fetch-posten.mjs`, uitgelezen met `scripts/bouw-postplaatsen.mjs`. Van de 143 standplaatsen
+hebben er 8 een trema of accent; bij de rest valt niets te vergelijken. 3 meldingen: *Bogota* →
+*Bogotá*, *Cairo* → *Caïro*, *Chisinau* → *Chișinău*.
+
+**`vaste-tekst-land-leeg`** — dit dichtte een gat dat de tool zelf aan het licht bracht. Denemarken
+en Ierland hebben allebei *"Heeft u direct hulp nodig in ?"* staan: de landnaam is niet ingevuld. De
+bestaande regel `nood-lokale-hulpdiensten` zweeg daarover, en dat was geen fout maar een keuze met
+een blinde vlek: die toetst op `kern`, en dat is met opzet het stuk zonder landnaam (*"neem contact
+op met de lokale hulpdiensten"*). Anders zou elke legitieme afkorting — *de VS*, *het VK* — een
+melding geven. Daardoor werd de helft mét de landnaam nooit getoetst.
+
+De nieuwe regel vraagt daarom niet *staat hier precies deze landnaam?* maar *staat hier überhaupt
+iets?*. Een lege plek is altijd fout, hoe het land ook wordt afgekort. Gemeten: 2 meldingen, allebei
+terecht. De strengere variant — vergelijken met de volledige landnaam — gaf er 38, waarvan 36
+onterecht, juist door die afkortingen.
+
+**Wat is afgevallen.** Twee andere kandidaten zijn gemeten en niet gebouwd, omdat het corpus schoon
+is: dubbele spaties (0 treffers) en een komma zonder spatie erachter (0). Een derde is afgevallen
+omdat hij niet waterdicht te krijgen was: een zin die met een kleine letter begint. Dat gaf 2
+treffers, allebei onterecht — *o.a. dengue* en *iPerú*, waar een afkorting en een merknaam de punt
+veroorzaken.
+
+## Nederlands of Nederlandse (18 september 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `nederlands-verbuiging` | **Geen brondocument.** Nederlandse spellingregel; de woorden staan in `regels/tekstcontrole.json` | fout |
+
+Een bijvoeglijk naamwoord voor een zelfstandig naamwoord krijgt wel of geen **-e**, en dat hangt van
+twee dingen af:
+
+| | de-woord | het-woord |
+|---|---|---|
+| **met** bepaald lidwoord | de Nederlands**e** ambassade | het Nederlands**e** consulaat-generaal |
+| **een**, **geen** of geen lidwoord | een Nederlands**e** ambassade | een Nederlands consulaat-generaal |
+| **meervoud** | de Nederlands**e** ambassades | de Nederlands**e** consulaten-generaal |
+
+**Met opzet geen grammaticacontrole.** Het Nederlands volledig toetsen vraagt woordsoortherkenning
+en zinsontleding — een ander soort programma, met een server erachter, en zelfs dan niet waterdicht.
+Erger nog: een halfwerkende grammaticacontrole gaat op bijna elk advies af, en dan geldt de norm uit
+de README — dan is de regel het probleem, niet de tekst.
+
+Wat hier staat is daarom een **gesloten verzameling**: vijf zelfstandige naamwoorden waarvan het
+geslacht vaststaat. *ambassade*, *vertegenwoordiging* en *post* zijn de-woorden; *consulaat*,
+*consulaat-generaal* en *ambassadekantoor* zijn het-woorden. Daarvoor is de regel bewijsbaar
+compleet, en daarbuiten zwijgt hij — ook bij *Nederlands* als taalnaam ("informatie in het
+Nederlands") en bij woorden die niet in de lijst staan.
+
+**Gemeten over 226 adviezen: 1478 keer staat "Nederlands(e)" voor een van deze woorden, en zes keer
+staat het fout.** Drie in een kop: *Nederlandse consulaat-generaal in Australië*, *idem in Turkije*
+en *Nederlandse ambassadekantoor in Tsjaad* — zonder lidwoord hoort daar *Nederlands*. Twee in de
+lopende tekst, andersom: *van het Nederlands consulaat-generaal in Dubai* en *in Milaan* — daar
+hoort na *het* juist wél een -e.
+
+De zesde is Martinique: *"met de Nederlandse ambassade of Nederlandse consulaat-generaal"*. Daar
+mist eigenlijk een lidwoord. De melding zegt dat er ook: staat er een lidwoord te weinig, dan is
+*het Nederlandse consulaat-generaal* net zo goed.
+
+Dat het in hetzelfde corpus ook goed staat — *Nederlands consulaat-generaal in Dubai*, als kop —
+laat zien dat dit geen huisafspraak is maar slordigheid.
+
+**Deze regel verving een toevalstreffer.** De drie koppen vielen eerder op omdat ze niet op de lijst
+met vaste tussenkoppen stonden, niet omdat de tool de taalfout zag. Toen `h4-vaste-kop` werd
+omgebouwd tot `h4-kop-variant` vielen ze weg. Nu worden ze gemeld om de juiste reden, en de twee in
+de lopende tekst erbij — die zag de oude regel helemaal niet.
 
 **Vals alarm.** Klopt een woord wel? Dan hoort het in `regels/uitzonderingen.txt`. Die lijst hoort
 bij de webredactie, niet bij de techniek, en groeit met het gebruik. De basis komt uit

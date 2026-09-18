@@ -42,6 +42,8 @@ const regeldata = {
   sjabloon: JSON.parse(lees('regels', 'sjabloon.json')),
   tekstcontrole: JSON.parse(lees('regels', 'tekstcontrole.json')),
   landen: JSON.parse(lees('regels', 'landen.json')),
+  koppenInGebruik: JSON.parse(lees('regels', 'koppen-in-gebruik.json')),
+  postplaatsen: JSON.parse(lees('regels', 'postplaatsen.json')),
   groepen: JSON.parse(lees('regels', 'groepen.json')),
   // De uitzonderingen gaan wél mee in de pagina: het zijn een paar honderd woorden die de
   // redactie beheert. De OpenTaal-lijst zelf niet — die is 409.487 woorden en wordt pas opgehaald

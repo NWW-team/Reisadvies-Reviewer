@@ -37,6 +37,15 @@ jobs:
         with:
           node-version: '22'
 
+      # De Nederlandse vertegenwoordigingen: ambassades, consulaten-generaal en hun standplaats.
+      # Die staan op de site goed gespeld en zijn daarmee bruikbaar voor de schrijfwijzetoets.
+      - name: Vertegenwoordigingen ophalen
+        run: |
+          echo '### Vertegenwoordigingen' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          node scripts/fetch-posten.mjs 2>&1 | tee -a "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
       - name: Reisadviezen ophalen
         run: node scripts/fetch-corpus.mjs ${{ github.event.inputs.landen }}
 

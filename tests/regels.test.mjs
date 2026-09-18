@@ -133,8 +133,9 @@ const gevallen = [
     slaagt: '<p>Dit is een korte zin.</p>',
   },
   {
-    // Onder In geval van nood liggen de tussenkoppen vast in het sjabloon.
-    regel: 'h4-vaste-kop',
+    // "Contactgegevens Nederlandse ambassade" staat in 6 adviezen, de volledige vorm in 208.
+    // Dan is die laatste de huisstijl en is de korte een afwijking.
+    regel: 'h4-kop-variant',
     faalt: "<h2>Wat kan ik doen in een noodsituatie?</h2><h3>In geval van nood</h3>"
       + '<h4>Contactgegevens Nederlandse ambassade</h4><p>Bel de ambassade.</p>',
     slaagt: "<h2>Wat kan ik doen in een noodsituatie?</h2><h3>In geval van nood</h3>"
@@ -155,6 +156,16 @@ const gevallen = [
       + '<h4>IJsberen</h4><p>Er leven ijsberen in dit gebied.</p>',
     slaagt: "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2><h3>Natuurgeweld</h3>"
       + '<h4>Lawines</h4><p>In de winter vallen er lawines.</p>',
+  },
+  {
+    regel: 'tekst-dubbel-woord',
+    faalt: '<p>Reis niet naar het het noorden van het land.</p>',
+    slaagt: '<p>Reis niet naar het noorden van het land.</p>',
+  },
+  {
+    regel: 'tekst-spatie-leesteken',
+    faalt: '<p>Bel het alarmnummer : 112 als u hulp nodig heeft.</p>',
+    slaagt: '<p>Bel het alarmnummer: 112 als u hulp nodig heeft.</p>',
   },
   {
     // Overgenomen uit SpellingSpeurneus: het CMS lekt zijn eigen resten de pagina op.
@@ -454,6 +465,74 @@ test('zonder woordenlijst zegt de tool niets over spelling', () => {
   const ids = idsVan(advies('<p>Registeer u bij de ambassade.</p>'), { land: 'Tsjechi\u00eb' });
   assert.ok(!ids.includes('woord-onbekend') && !ids.includes('woord-naam'),
     'zonder lijst hoort de spellingtoets te zwijgen');
+});
+
+test('Nederlands of Nederlandse: de verbuiging hangt aan lidwoord en geslacht', () => {
+  const ids = (t) => idsVan(advies('<p>' + t + '</p>'), { land: 'Tsjechi\u00eb' });
+  const regel = 'nederlands-verbuiging';
+
+  // Een het-woord zonder lidwoord: geen -e.
+  assert.ok(ids('Bel het nummer van Nederlandse consulaat-generaal.').includes(regel));
+  assert.ok(!ids('Bel het nummer van Nederlands consulaat-generaal.').includes(regel));
+
+  // Hetzelfde het-woord m\u00e9t bepaald lidwoord: w\u00e9l -e.
+  assert.ok(ids('Bel het Nederlands consulaat-generaal in Dubai.').includes(regel));
+  assert.ok(!ids('Bel het Nederlandse consulaat-generaal in Dubai.').includes(regel));
+
+  // Na "een" blijft het een het-woord zonder -e.
+  assert.ok(!ids('In dit land is een Nederlands consulaat-generaal.').includes(regel));
+  assert.ok(ids('In dit land is een Nederlandse consulaat-generaal.').includes(regel));
+
+  // Een de-woord krijgt altijd -e, met of zonder lidwoord.
+  assert.ok(!ids('Neem contact op met de Nederlandse ambassade.').includes(regel));
+  assert.ok(!ids('Neem contact op met Nederlandse ambassade.').includes(regel));
+  assert.ok(ids('Neem contact op met de Nederlands ambassade.').includes(regel));
+
+  // Meervoud is altijd -e.
+  assert.ok(!ids('De Nederlandse consulaten-generaal zijn gesloten.').includes(regel));
+  assert.ok(ids('De Nederlands consulaten-generaal zijn gesloten.').includes(regel));
+
+  // En buiten deze woorden zwijgt de regel: dit is geen grammaticacontrole.
+  assert.ok(!ids('De informatie staat in het Nederlands op de website.').includes(regel),
+    '"Nederlands" als taalnaam hoort de regel niet te raken');
+  assert.ok(!ids('Het Nederlands elftal speelt daar.').includes(regel),
+    'een woord buiten de gesloten lijst hoort de regel niet te raken');
+});
+
+test('een herhaalde eigennaam is geen dubbel woord', () => {
+  const ids = (t) => idsVan(advies('<p>' + t + '</p>'), { land: 'Tsjechi\u00eb' });
+
+  // Twee hoofdletters achter elkaar is een naam: Pom Pom, Tawi Tawi.
+  assert.ok(!ids('Vermijd de eilanden Pom Pom en Sipadan.').includes('tekst-dubbel-woord'));
+  // Een aangehaalde vreemde term telt ook niet.
+  assert.ok(!ids('Pas op met \u2018boda boda\u2019s\u2019 in het verkeer.').includes('tekst-dubbel-woord'));
+  // Maar aan het zinsbegin zegt een hoofdletter niets, dus dit hoort w\u00e9l gemeld te worden.
+  assert.ok(ids('Het het departement is afgesloten.').includes('tekst-dubbel-woord'));
+});
+
+test('de standplaats van een post wordt getoetst', () => {
+  const ids = (t) => idsVan(advies('<p>' + t + '</p>'), { land: 'Colombia' });
+  assert.ok(ids('In hooggelegen steden zoals Bogota krijgt u hoogteziekte.')
+    .includes('postplaats-schrijfwijze'), 'Bogota zonder accent hoort gemeld te worden');
+  assert.ok(!ids('In hooggelegen steden zoals Bogot\u00e1 krijgt u hoogteziekte.')
+    .includes('postplaats-schrijfwijze'), 'goed geschreven hoort niets te geven');
+});
+
+test('een vaste tekst zonder ingevulde landnaam wordt gemeld', () => {
+  const ids = (t) => idsVan(advies('<h2>Wat kan ik doen in een noodsituatie?</h2>'
+    + '<h3>In geval van nood</h3><p>' + t + '</p>'), { land: 'Denemarken' });
+
+  assert.ok(ids('Heeft u direct hulp nodig in ? Neem contact op met de lokale hulpdiensten:')
+    .includes('vaste-tekst-land-leeg'), 'een lege plek hoort gemeld te worden');
+  assert.ok(!ids('Heeft u direct hulp nodig in Denemarken? Neem contact op met de lokale hulpdiensten:')
+    .includes('vaste-tekst-land-leeg'), 'ingevuld hoort niets te geven');
+
+  // Een afkorting is geen lege plek. De toets vraagt niet welke naam er staat, alleen of er iets
+  // staat \u2014 anders zou "de VS" of "het VK" onterecht afgaan.
+  assert.ok(!idsVan(advies('<h2>Wat kan ik doen in een noodsituatie?</h2><h3>In geval van nood</h3>'
+    + '<p>Heeft u direct hulp nodig in de VS? Neem contact op met de lokale hulpdiensten:</p>'),
+  { land: 'Verenigde Staten van Amerika' }).includes('vaste-tekst-land-leeg'),
+  'een legitieme afkorting hoort niets te geven');
 });
 
 test('de naam van het land wordt wel getoetst', () => {

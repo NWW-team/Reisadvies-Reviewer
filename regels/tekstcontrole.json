@@ -1,19 +1,30 @@
 {
   "_bron": "Geen brondocument. Overgenomen uit SpellingSpeurneus (NWW-team), het spellingtooltje van de redactie: https://github.com/NWW-team/SpellingSpeurneus — scripts/crawl.py. Dit zijn de controles die daar géén woordenlijst nodig hebben; die passen in deze tool, want de regellaag hier draait zonder dependencies en zonder buildstap.",
   "_toelichting": "Dit zijn geen schrijfregels maar tekstfouten: iets is misgegaan tussen het CMS en de pagina, of er staat een tikfout die je niet ziet als je snel leest. Ze staan bewust in een eigen filtergroep, want ze horen bij een ander gesprek dan 'kan deze zin korter'.",
-
   "cms_resten": {
     "_toelichting": "Resten van het sjabloon of het CMS die zichtbaar op de pagina staan. Hoofdlettergevoelig waar het om JavaScript-waarden gaat: undefined, null, NaN en Infinity worden precies zo geschreven, en dat scheelt treffers op Nederlandse woorden die erop lijken.",
     "_meting": "18 september 2026 over 226 adviezen: 3 treffers. Estland had letterlijk het woord 'undefined' boven een kop staan; Congo en Mali tonen &#39; in de introzin, omdat die tekst dubbel is ge-escaped.",
     "patroon": "\\[object [A-Za-z]+\\]|\\{\\{[^{}]{0,60}\\}\\}|\\$\\{[^{}]{0,60}\\}|&(?:nbsp|amp|quot|lt|gt|#\\d+);|\\b(?:undefined|null|NaN|Infinity)\\b"
   },
-
   "plakfout": {
     "_toelichting": "Een punt middenin een woord wijst op een vergeten spatie: 'demonstraties.Volg het nieuws'. Een webadres en een afkorting met losse letters ('U.S') zijn dat niet.",
     "_meting": "18 september 2026 over 226 adviezen: 4 treffers, allemaal terecht.",
-    "domeinen": [".com", ".nl", ".org", ".net", ".eu", ".gov", ".int", ".be", ".de", ".fr", ".uk", ".info", ".travel"]
+    "domeinen": [
+      ".com",
+      ".nl",
+      ".org",
+      ".net",
+      ".eu",
+      ".gov",
+      ".int",
+      ".be",
+      ".de",
+      ".fr",
+      ".uk",
+      ".info",
+      ".travel"
+    ]
   },
-
   "onzichtbare_tekens": {
     "_toelichting": "Tekens zonder breedte. Ze komen mee uit Word of uit een ander CMS en zijn in de tekst niet te zien, maar ze breken wel het zoeken, het kopiëren en de schermlezer. Een redacteur kan er niet naar kijken en het opmerken — de tool wel.",
     "_meting": "18 september 2026 over 226 adviezen: 7 adviezen, waaronder vijf keer een word joiner (U+2060) direct achter een punt.",
@@ -25,5 +36,61 @@
       "﻿": "byte order mark (U+FEFF)",
       "­": "soft hyphen (U+00AD)"
     }
+  },
+  "nederlands_verbuiging": {
+    "_toelichting": "Nederlands of Nederlandse? Dat hangt af van het woord erachter en van het lidwoord ervoor. Een de-woord krijgt altijd -e ('de Nederlandse ambassade'). Een het-woord krijgt -e na een bepaald lidwoord ('het Nederlandse consulaat-generaal'), maar niet na een/geen of zonder lidwoord ('een Nederlands consulaat-generaal', 'Nederlands consulaat-generaal in Dubai'). Meervoud is altijd -e.",
+    "_waarom_zo_smal": "Dit is met opzet geen grammaticacontrole. Het Nederlands volledig toetsen vraagt woordsoortherkenning en zinsontleding — een ander soort programma, met een server erachter, en zelfs dan niet waterdicht. Wat hier staat is een gesloten verzameling: vijf zelfstandige naamwoorden waarvan het geslacht vaststaat. Daarvoor is de regel bewijsbaar compleet, zonder gokwerk.",
+    "_meting": "18 september 2026 over 226 adviezen: 1478 keer komt 'Nederlands(e)' voor een van deze woorden, en 6 keer staat het fout. Drie in een kop (Australië, Turkije, Tsjaad, alle drie 'Nederlandse' waar 'Nederlands' hoort), twee in de tekst (de VAE en Italië, 'het Nederlands consulaat-generaal' waar 'Nederlandse' hoort) en één bij Martinique, waar eigenlijk een lidwoord mist.",
+    "bijvoeglijk": {
+      "zonder_e": "Nederlands",
+      "met_e": "Nederlandse"
+    },
+    "de_woorden": [
+      "ambassade",
+      "ambassades",
+      "vertegenwoordiging",
+      "vertegenwoordigingen",
+      "post",
+      "posten"
+    ],
+    "het_woorden": [
+      "consulaat-generaal",
+      "consulaat",
+      "ambassadekantoor"
+    ],
+    "meervouden": [
+      "consulaten-generaal",
+      "consulaten",
+      "ambassadekantoren"
+    ],
+    "_bepaald_noot": "Na deze woorden krijgt ook een het-woord de -e. 'een' en 'geen' staan er bewust niet bij.",
+    "bepaalde_bepalers": [
+      "het",
+      "dit",
+      "dat",
+      "ons",
+      "onze",
+      "hetzelfde",
+      "zijn",
+      "haar",
+      "hun"
+    ]
+  },
+  "dubbel_woord": {
+    "_toelichting": "Hetzelfde woord twee keer achter elkaar. Klassieke tikfout bij het herschrijven van een zin: je typt het nieuwe woord en vergeet het oude weg te halen.",
+    "_bewaking": "Twee dingen herhalen zichzelf wel legitiem. Een eigennaam: 'Pom Pom', 'Tawi Tawi'. Twee hoofdletters achter elkaar is dus een naam — behalve aan het zinsbegin, want daar zegt een hoofdletter niets, en 'Het het departement' moet wél gemeld worden. En een aangehaalde vreemde term: ‘boda boda’s’ in Kenia.",
+    "_meting": "18 september 2026 over 226 adviezen: 7 herhalingen gevonden, waarvan 4 een tikfout ('Het het departement', 'de de officiële checkpoints', 'via via', 'u de de Thailand Digital Arrival Card') en 3 terecht overgeslagen."
+  },
+  "spatie_leesteken": {
+    "_toelichting": "Een spatie voor een komma, punt, puntkomma, dubbele punt, uitroepteken of vraagteken. Er is geen Nederlandse zin waarin dat goed is, dus dit kan zonder bewaking.",
+    "_meting": "18 september 2026 over 226 adviezen: 11 treffers, allemaal terecht.",
+    "leestekens": [
+      ",",
+      ".",
+      ";",
+      ":",
+      "!",
+      "?"
+    ]
   }
 }

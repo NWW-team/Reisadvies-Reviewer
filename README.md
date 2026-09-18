@@ -73,8 +73,8 @@ dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
 *Te lange zinnen*, *Te lange zinnen incl. link*, *Tekstfouten*, *Mogelijke spelfouten*,
-*Linkteksten*, *Lijdende vorm*, *Twijfeltaal*, *Hoe vaak iets gebeurt*, *Volgorde van de rubrieken*
-en *Notatie en stijl*. Alles staat aan; een klik zet een soort weg. Een aangevinkte knop is gevuld
+*Linkteksten*, *Lijdende vorm*, *Twijfeltaal: misschien, mogelijk*, *Twijfeltaal: vaak, soms*,
+*Volgorde van de rubrieken* en *Notatie en stijl*. Alles staat aan; een klik zet een soort weg. Een aangevinkte knop is gevuld
 met een vinkje, een uitgezette is doorgestreept met een kruisje, zodat je ziet wat een klik doet. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
 
@@ -178,6 +178,9 @@ node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
 node scripts/bouw-adviezen.mjs   # zet alle 226 adviezen klaar in docs/adviezen/
 node scripts/haal-woordenlijst.mjs  # haalt de OpenTaal-woordenlijst op voor de spellingtoets
+node scripts/fetch-posten.mjs       # haalt de ambassades en consulaten op (alleen op een runner)
+node scripts/bouw-postplaatsen.mjs  # leest daar de standplaatsen uit
+node scripts/bouw-koppenlijst.mjs   # telt welke h4-koppen in gebruik zijn
 node scripts/bouw-site.mjs       # bouwt docs/index.html uit dist/app.html
 ```
 
@@ -199,6 +202,8 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 |---|---|
 | `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, sjabloon, woordenlijsten, limieten, landen |
 | `regels/groepen.json` | de filterindeling: welke regel hoort bij welk vinkje boven de bevindingen |
+| `regels/postplaatsen.json` | de standplaatsen van de posten, uit de open data; voor de schrijfwijzetoets |
+| `regels/koppen-in-gebruik.json` | welke h4-tussenkoppen de adviezen gebruiken en hoe vaak; afgeleid uit het corpus, geen norm |
 | `regels/tekstcontrole.json` | resten van het CMS, vergeten spaties en onzichtbare tekens — overgenomen uit SpellingSpeurneus |
 | `regels/uitzonderingen.txt` | goedgekeurde woorden die niet in de OpenTaal-woordenlijst staan; deze lijst hoort bij de redactie |
 | `docs/woordenlijst.txt.gz` | de OpenTaal-woordenlijst, ingepakt. Ophalen met `scripts/haal-woordenlijst.mjs` |
@@ -255,6 +260,16 @@ veranderde:
   woordgrenzen (*beren* zit in *proberen*), de rubriek die de matrix zelf aanwijst (*Foto's maken*
   mag bij lokale wetten, 65 meldingen minder) en samenstellingen (*zandstormen* benoemt wel een
   risico).
+- Vier controles erbij die op hetzelfde criterium zijn gekozen — het antwoord staat vast, dus de
+  tool kan niet gokken: een dubbel woord (*Het het departement*), een spatie voor een leesteken
+  (*Algemeen alarmnummer : 101*), de standplaats van een post (*Bogota* → *Bogotá*) en een vaste
+  tekst waarin de landnaam niet is ingevuld. Die laatste dichtte een gat: Denemarken en Ierland
+  hebben allebei *"Heeft u direct hulp nodig in ?"* staan, en daar zweeg de tool over. Samen 19
+  meldingen, alle negentien terecht.
+- `nederlands-verbuiging` kijkt of *Nederlands* of *Nederlandse* goed staat voor de vaste termen
+  voor een post. Geen grammaticacontrole, maar een gesloten verzameling van vijf woorden waarvan het
+  geslacht vaststaat — daarvoor klopt de regel altijd, en daarbuiten zwijgt hij. Over 226 adviezen:
+  1478 keer komt die combinatie voor, 6 keer staat het fout.
 - Uit [SpellingSpeurneus](https://github.com/NWW-team/SpellingSpeurneus), het spellingtooltje van
   de redactie, zijn de drie controles overgenomen die geen woordenlijst nodig hebben: resten van
   het CMS, een vergeten spatie na een punt, en tekens zonder breedte. Samen 17 meldingen over 226
@@ -271,6 +286,38 @@ veranderde:
   geen woordenlijst voor is aan te leggen, en ze staan vrijwel altijd goed. Eén groep namen kent de
   tool wél: de landen zelf, uit de landenlijst van de open data. `landnaam-schrijfwijze` vond zo dat
   op het Tsjechië-advies *"Bent u in Tsjechie en bent u in nood?"* staat, zonder trema.
+
+## Vals alarm in de spellingtoets wegwerken
+
+Meldt de tool een woord dat gewoon goed is? Dat hoort in
+[`regels/uitzonderingen.txt`](regels/uitzonderingen.txt). Die lijst hoort bij de webredactie, niet
+bij de techniek: hij groeit met het gebruik.
+
+De weg ernaartoe: zet de spellingtoets aan, en klik op **Kopieer deze N woorden als uitzondering**.
+Die knop staat naast de spellingknop zodra er onbekende woorden zijn, en zet ze als lijst op het
+klembord. Plak ze onderaan in `uitzonderingen.txt`, één woord per regel. Hoofdletters doen er niet
+toe — de toets vergelijkt op kleine letters.
+
+Dit staat los van de knoppen *Eens / Oneens / Onterecht* onder een bevinding. Die leggen een oordeel
+vast over dít advies; de uitzonderingenlijst verandert de regel voor alle adviezen tegelijk.
+
+## Tussenkoppen: eenduidig, niet uniform
+
+Onder *In geval van nood* en *Bagageregels* schrijft het sjabloon de tussenkoppen voor, maar niet
+elk land heeft dezelfde informatie. *Achtergelaten of gedwongen te trouwen* hoort bij Somalië en
+nergens anders — een eigen kop is daar geen fout.
+
+Wat wél misgaat is hetzelfde onderwerp in het ene land anders noemen dan in het andere. `h4-kop-variant`
+meldt daarom alleen een kop waarvan elders een andere formulering rondgaat die duidelijk de huisstijl
+is: genoeg woordoverlap én in minstens 20 adviezen. Over het corpus geeft dat 13 meldingen, waaronder
+vijf verschillende namen voor één ding:
+
+> *Contactgegevens Nederlandse ambassade*, *Contactgegevens ambassade*, *Contactgegevens in geval van
+> nood*, *Contactgegevens ambassade in geval van nood*, *Contactgegevens Nederlandse vertegenwoordiging
+> in geval van nood* — tegen *Contactgegevens Nederlandse ambassade in geval van nood* in 208 adviezen.
+
+De lijst met koppen die in gebruik zijn staat in `regels/koppen-in-gebruik.json`, gemaakt met
+`scripts/bouw-koppenlijst.mjs` uit het corpus. Na een nieuwe ophaalronde opnieuw draaien.
 
 ## Over de regels
 

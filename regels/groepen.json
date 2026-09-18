@@ -20,7 +20,7 @@
         "h3-vaste-kop",
         "h4-natuurrisico",
         "h4-niet-melden",
-        "h4-vaste-kop",
+        "h4-kop-variant",
         "informatieservice-vaste-tekst",
         "intro-vaste-tekst",
         "kinderen-documenten",
@@ -55,6 +55,7 @@
         "rijbewijs-anwb",
         "rood-herhaling-voorbereiding",
         "rubrieken-max",
+        "vaste-tekst-land-leeg",
         "tekst-niet-melden",
         "vaccinaties-ggd",
         "vaccinaties-lcr"
@@ -85,6 +86,10 @@
       "regels": [
         "tekst-cms-rest",
         "landnaam-schrijfwijze",
+        "postplaats-schrijfwijze",
+        "nederlands-verbuiging",
+        "tekst-dubbel-woord",
+        "tekst-spatie-leesteken",
         "tekst-onzichtbaar-teken",
         "tekst-plakfout"
       ]
@@ -117,7 +122,7 @@
     },
     {
       "id": "twijfeltaal",
-      "label": "Twijfeltaal",
+      "label": "Twijfeltaal: misschien, mogelijk",
       "toelichting": "Misschien, mogelijk, waarschijnlijk: woorden die de bewering zelf verzwakken. Daar is bijna altijd een stelliger formulering voor.",
       "regels": [
         "zin-twijfeltaal"
@@ -125,7 +130,7 @@
     },
     {
       "id": "frequentiewoorden",
-      "label": "Hoe vaak iets gebeurt",
+      "label": "Twijfeltaal: vaak, soms",
       "toelichting": "Vaak, soms, regelmatig. Ook twijfeltaal volgens de schrijfwijzer, maar soms feitelijke nuance: over terroristische groepen kun je niet schrijven dat ze aanslagen plegen.",
       "regels": [
         "zin-frequentiewoord"

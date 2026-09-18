@@ -285,7 +285,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 /* ---------- filters boven de bevindingen ---------- */
 .filters {
   display: flex; flex-wrap: wrap; gap: 5px 6px;
-  padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid var(--rand);
+  padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid var(--lijn);
 }
 .filters .kop {
   flex-basis: 100%; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em;
@@ -293,15 +293,23 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 }
 .filters button {
   display: inline-flex; align-items: baseline; gap: 5px;
-  padding: 4px 9px; border: 1px solid var(--rand); border-radius: 999px;
+  padding: 4px 11px 4px 8px; border: 1px solid var(--lijn); border-radius: 999px;
   background: var(--vlak); color: var(--inkt); font: inherit; font-size: .78rem;
   cursor: pointer; transition: background .12s, border-color .12s, color .12s, opacity .12s;
 }
+/* Aan krijgt een vinkje en een gevulde achtergrond, uit een kruisje. Zonder dat zien alle knoppen
+   er hetzelfde uit zolang je nog niets hebt gefilterd, en is niet te raden wat een klik doet. */
+.filters button::before {
+  content: '\2713'; font-size: .8em; line-height: 1; opacity: .75;
+}
+.filters button[aria-pressed="false"]::before { content: '\00d7'; opacity: .6; }
+.filters button[aria-pressed="true"] { background: var(--accent-zacht); border-color: var(--accent); }
 .filters button:hover { border-color: var(--gedempt); }
 .filters button .n { font-variant-numeric: tabular-nums; color: var(--gedempt); font-size: .72rem; }
 /* Uit is doelbewust gedempt en doorgestreept, niet onzichtbaar: je moet kunnen zien dat je filtert. */
 .filters button[aria-pressed="false"] { opacity: .5; text-decoration: line-through; }
-.filters button[aria-pressed="false"] .n { text-decoration: none; }
+.filters button[aria-pressed="false"] .n,
+.filters button[aria-pressed="false"]::before { text-decoration: none; }
 .filters .alles {
   margin-left: auto; border-style: none; background: none; color: var(--gedempt);
   text-decoration: underline; padding: 4px 2px;
@@ -310,7 +318,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
    gehaald. Daarom staat hij eronder en ziet hij er anders uit dan de vinkjes. */
 .spellingknop { margin: 0 0 10px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
 .spellingknop button {
-  padding: 4px 11px; border: 1px solid var(--rand); border-radius: 999px;
+  padding: 4px 11px; border: 1px solid var(--lijn); border-radius: 999px;
   background: var(--vlak); color: var(--inkt); font: inherit; font-size: .78rem; cursor: pointer;
 }
 .spellingknop button:hover:not(:disabled) { border-color: var(--gedempt); }
@@ -565,7 +573,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         + ' <span class="n">' + tel[g.id] + '</span></button>').join('');
     if (!knoppen) { doel.hidden = true; return; }
     doel.hidden = false;
-    doel.innerHTML = '<div class="kop">Tonen</div>' + knoppen
+    doel.innerHTML = '<div class="kop">Klik een soort aan om hem te verbergen</div>' + knoppen
       + (zichtbaarAantal < totaal
           ? '<button type="button" class="alles" data-filter-alles="1">Alles weer tonen</button>'
           : '');
@@ -657,7 +665,8 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       woordenlijst = lijst;
       toetser = Regels.maakToetser({ ...REGELDATA, woordenlijst });
       zetSpellingStand(lijst.size.toLocaleString('nl-NL') + ' woorden geladen. '
-        + 'Onbekende woorden staan nu onder "Mogelijke spelfouten" en "Namen".');
+        + 'Onbekende woorden staan nu onder "Mogelijke spelfouten". Namen worden overgeslagen: '
+        + 'die staan niet in de woordenlijst en zijn dus niet te beoordelen.');
       if (huidig) toetsInvoer(huidig.html, huidig.land, huidig.meta);
     } catch (e) {
       zetSpellingStand('De woordenlijst is niet op te halen: ' + e.message

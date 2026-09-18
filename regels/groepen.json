@@ -84,6 +84,7 @@
       "toelichting": "Resten van het CMS, een vergeten spatie, een onzichtbaar teken. Geen schrijfregels maar dingen die gewoon fout staan. Overgenomen uit SpellingSpeurneus.",
       "regels": [
         "tekst-cms-rest",
+        "landnaam-schrijfwijze",
         "tekst-onzichtbaar-teken",
         "tekst-plakfout"
       ]
@@ -94,14 +95,6 @@
       "toelichting": "Woorden die niet in de OpenTaal-woordenlijst staan en er geen naam uitzien. Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer.",
       "regels": [
         "woord-onbekend"
-      ]
-    },
-    {
-      "id": "namen",
-      "label": "Namen",
-      "toelichting": "Plaatsen, organisaties en anderstalige bronnen. De woordenlijst kent die niet, dus de tool kan niet zien of ze goed gespeld staan - maar een verkeerd gespelde plaatsnaam blijft zo wel op te zoeken. Dit is meestal het eerste vinkje dat je uitzet.",
-      "regels": [
-        "woord-naam"
       ]
     },
     {

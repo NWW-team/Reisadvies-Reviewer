@@ -7,7 +7,7 @@ Gedraaid op 2026-09-18 over 226 reisadviezen.
 - **74** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **187** van de 3021 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **187** van de 3012 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,7 +26,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 281 | 152 |
-| geel/oranje — let op | 1589 | 220 |
+| geel/oranje — let op | 1580 | 220 |
 | lichtblauw — lange zin met link | 542 | 201 |
 | grijs — ter overweging | 137 | 102 |
 | roze — twijfeltaal | 472 | 164 |
@@ -53,11 +53,11 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `kleur-aanduiding` | 31 | 32 |
 | `intro-vaste-tekst` | 26 | 26 |
 | `h3-niet-melden` | 25 | 25 |
-| `h4-vaste-kop` | 21 | 22 |
 | `bagage-heen` | 21 | 21 |
 | `nood-contactcenter` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
+| `h4-kop-variant` | 12 | 13 |
 | `h3-vaste-kop` | 11 | 11 |
 | `actueel-max-woorden` | 10 | 10 |
 | `bagage-terug` | 7 | 7 |

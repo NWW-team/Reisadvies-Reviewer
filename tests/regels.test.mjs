@@ -133,8 +133,9 @@ const gevallen = [
     slaagt: '<p>Dit is een korte zin.</p>',
   },
   {
-    // Onder In geval van nood liggen de tussenkoppen vast in het sjabloon.
-    regel: 'h4-vaste-kop',
+    // "Contactgegevens Nederlandse ambassade" staat in 6 adviezen, de volledige vorm in 208.
+    // Dan is die laatste de huisstijl en is de korte een afwijking.
+    regel: 'h4-kop-variant',
     faalt: "<h2>Wat kan ik doen in een noodsituatie?</h2><h3>In geval van nood</h3>"
       + '<h4>Contactgegevens Nederlandse ambassade</h4><p>Bel de ambassade.</p>',
     slaagt: "<h2>Wat kan ik doen in een noodsituatie?</h2><h3>In geval van nood</h3>"

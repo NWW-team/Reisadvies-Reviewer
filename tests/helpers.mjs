@@ -16,6 +16,7 @@ export const regeldata = {
   sjabloon: laad('sjabloon.json'),
   tekstcontrole: laad('tekstcontrole.json'),
   landen: laad('landen.json'),
+  koppenInGebruik: laad('koppen-in-gebruik.json'),
   groepen: laad('groepen.json'),
 };
 

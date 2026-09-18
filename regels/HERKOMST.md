@@ -135,10 +135,56 @@ lijst kan dat nooit dekken, want een kop heet vaak naar zijn eigen onderwerp.
 
 | regel-id | vindplaats |
 |---|---|
-| `h4-vaste-kop` | SJ, de blokken *In geval van nood* en *Bagageregels*: daar schrijft het sjabloon de tussenkoppen letterlijk voor |
+| `h4-kop-variant` | SJ, de blokken *In geval van nood* en *Bagageregels*; `regels/koppen-in-gebruik.json` |
 | `h4-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden*, kolom trefwoorden |
 | `tekst-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden*, kolom trefwoorden |
 | `h4-natuurrisico` | **Geen letterlijke vindplaats.** Instructie van de opdrachtgever, 18 september 2026: een tussenkop onder Natuurgeweld moet een risico benoemen zoals vulkanen, orkanen of overstromingen — niet de plaats of de activiteit. |
+
+**Niet "staat niet op de lijst", maar "heet elders anders" (18 september 2026).** De regel heette
+eerst `h4-vaste-kop` en meldde elke kop die niet in het sjabloon stond. Dat klopte niet, en de
+opdrachtgever wees erop waarom: niet elk land heeft dezelfde informatie. *Achtergelaten of gedwongen
+te trouwen* hoort bij Somalië en nergens anders; dat de tool dat als afwijking meldt, is de regel
+die het mis heeft. Wat wél misgaat is hetzelfde onderwerp in het ene land anders noemen dan in het
+andere — dan zie je als lezer twee dingen waar er één is.
+
+De regel heet nu `h4-kop-variant` en meldt een kop alleen als er elders een andere formulering
+rondgaat die duidelijk de huisstijl is. Twee voorwaarden, allebei nodig:
+
+1. **Genoeg gelijkenis** — 60% woordoverlap, dezelfde maat die `dichtstbijKop` gebruikt. Minder is
+   een ander onderwerp.
+2. **Genoeg adviezen** — de andere formulering staat in minstens 20 adviezen (`variant_drempel` in
+   `sjabloon.json`). Anders is het geen huisstijl maar toeval: *Geen Nederlandse ambassade of
+   consulaat op Antarctica* lijkt op *Geen Nederlandse ambassade op Aruba*, maar die staat zelf ook
+   maar in één advies, en dan zegt de gelijkenis niets.
+
+`regels/koppen-in-gebruik.json` bevat de 468 h4-koppen die onder deze rubrieken in gebruik zijn, met
+hoe vaak. Gemaakt met `scripts/bouw-koppenlijst.mjs` uit het corpus; na een nieuwe ophaalronde
+opnieuw draaien. Het is géén norm: een kop die daar vaak in staat is de gangbare formulering, niet
+per se de juiste — dat is ook precies waarom de regel *let op* geeft en geen fout.
+
+Wat dat oplevert, gemeten over 226 adviezen: van de 22 meldingen blijven er dertien over. Die
+dertien zijn terecht, en laten zien hoe scheef het staat:
+
+| gemeld | wat elders staat |
+|---|---|
+| *Wat mag mee terugnemen naar Nederland?* | *Wat mag ik mee terugnemen naar Nederland?* (224×) — er mist een woord |
+| *Nood- of crisissituatie?* (3×) | *Nood- of crisissituatie* (222×) — een vraagteken te veel |
+| *Contactgegevens Nederlandse ambassade* (6×), *Contactgegevens ambassade*, *Contactgegevens in geval van nood*, *Contactgegevens ambassade in geval van nood*, *Contactgegevens Nederlandse vertegenwoordiging in geval van nood* | *Contactgegevens Nederlandse ambassade in geval van nood* (208×) — vijf namen voor één ding |
+
+Eén melding valt weg die wel klopte: *Contactgegevens ambassade* in Bahrein. De volledige vorm
+heeft te weinig woordoverlap met die korte kop om de drempel te halen. Dat is de prijs van een maat
+die streng genoeg is om de rest buiten de deur te houden.
+
+De negen die wegvallen zijn verder terecht landspecifiek: *Achtergelaten of gedwongen te trouwen*
+(Somalië), *Beperkte consulaire hulp in het noorden van Cyprus*, *Geen Nederlandse ambassade of
+consulaat op Antarctica*, *Geen Nederlands consulaat-generaal in Macau SAR*, *Wat mag ik niet
+meenemen naar Thailand?*.
+
+**Wat deze regel niet meer vangt.** Drie koppen met een de/het-fout — *Nederlandse consulaat-generaal
+in Australië*, *Nederlandse consulaat-generaal in Turkije*, *Nederlandse ambassadekantoor in Tsjaad*
+(alle drie horen *Nederlands* te zijn). Die vielen eerder mee omdat ze niet op de lijst stonden, niet
+omdat de tool de fout zag. Dat is een taalregel over lidwoord en bijvoeglijk naamwoord, en die hoort
+in een eigen regel thuis, niet hier.
 
 **Alleen nood en bagage.** Onder *Paspoort, visum, rijbewijs* en *Regionale risico's* voegen
 redacteuren terecht landspecifieke kopjes toe (*Inreisstempel*, *De provincie Cabinda*, *Grens met

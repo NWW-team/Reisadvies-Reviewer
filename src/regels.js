@@ -249,8 +249,11 @@ export function maakToetser(data) {
    * de bevinding bruikbaar te maken ("Conflict" -> "Oorlog en conflict"); vindt de tool niets dat
    * genoeg lijkt, dan noemt de bevinding geen verwachte kop in plaats van een gok.
    */
+  /** De inhoudswoorden van een kop; korte woorden zeggen te weinig om op te vergelijken. */
+  const kopWoorden = (t) => new Set(norm(t).split(/[^a-z0-9\u00c0-\u017f]+/).filter((w) => w.length > 3));
+
   function dichtstbijKop(kop) {
-    const woorden = (t) => new Set(norm(t).split(/[^a-z0-9\u00c0-\u017f]+/).filter((w) => w.length > 3));
+    const woorden = kopWoorden;
     const doel = woorden(kop);
     if (!doel.size) return null;
     let beste = null;
@@ -294,6 +297,31 @@ export function maakToetser(data) {
    */
   const magHierStaan = (tref, rubriek) => (tref.magOnder || [])
     .some((r) => norm(rubriek || '').includes(r));
+
+  /**
+   * Zoekt of deze tussenkop elders onder een andere naam rondgaat, en geeft de gangbaarste terug.
+   *
+   * Op woordoverlap, dezelfde maat die dichtstbijKop gebruikt. Twee voorwaarden, allebei nodig:
+   * de andere kop moet genoeg lijken (anders is het een ander onderwerp), en hij moet in genoeg
+   * adviezen staan (anders is het geen huisstijl maar toeval — twee landspecifieke koppen lijken
+   * ook op elkaar). De drempel staat in sjabloon.json.
+   */
+  const koppenInGebruik = ((data.koppenInGebruik && data.koppenInGebruik.koppen) || [])
+    .map((k) => ({ ...k, w: kopWoorden(k.kop) }));
+  const drempel = (sj.h4_toetsen && sj.h4_toetsen.variant_drempel) || 20;
+
+  function gangbareKop(kop) {
+    const doel = kopWoorden(kop);
+    if (!doel.size) return null;
+    let beste = null;
+    for (const k of koppenInGebruik) {
+      if (k.adviezen < drempel || norm(k.kop) === norm(kop) || !k.w.size) continue;
+      const gedeeld = [...doel].filter((w) => k.w.has(w)).length;
+      if (gedeeld / Math.max(doel.size, k.w.size) < 0.6) continue;
+      if (!beste || k.adviezen > beste.adviezen) beste = k;
+    }
+    return beste;
+  }
 
   const isVasteKop = (kop) => matrixKoppen.has(norm(kop))
     || isElementenKop(kop)
@@ -607,12 +635,20 @@ export function maakToetser(data) {
           const patroon = sj.rubriek_patronen[sleutel];
           return patroon && new RegExp(patroon, 'i').test(kop.h3 || '');
         };
+        // Een eigen tussenkop is hier geen fout. Niet elk land heeft dezelfde informatie:
+        // "Achtergelaten of gedwongen te trouwen" hoort bij Soemalieë en nergens anders, en dat
+        // hoort de tool niet te bestrijden. Wél fout is hetzelfde onderwerp in het ene land anders
+        // noemen dan in het andere. Daarom meldt de regel alleen een kop waarvan elders een andere
+        // formulering rondgaat die duidelijk de huisstijl is.
         if ((sj.h4_toetsen.rubrieken || []).some(hoortBij) && !isVasteKop(kop.tekst)) {
-          b.push(bevinding('h4-vaste-kop', ERNST.letop, 'SJ, de blokken met voorgeschreven tussenkoppen',
-            `"${kop.tekst}" is geen vaste tussenkop onder "${kop.h3}".`,
-            { fragment: kop.tekst,
-              ...(dichtstbijKop(kop.tekst) ? { verwacht: dichtstbijKop(kop.tekst) } : {}),
-              notitie: 'Onder deze rubriek liggen de tussenkoppen vast in het sjabloon.' }));
+          const gangbaar = gangbareKop(kop.tekst);
+          if (gangbaar) {
+            b.push(bevinding('h4-kop-variant', ERNST.letop, 'SJ, de blokken met voorgeschreven tussenkoppen',
+              `"${kop.tekst}" heet in ${gangbaar.adviezen} andere adviezen "${gangbaar.kop}".`,
+              { fragment: kop.tekst, verwacht: gangbaar.kop,
+                notitie: 'Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar '
+                  + 'staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend.' }));
+          }
         }
         // Een onderwerp dat de matrix als "niet melden" aanmerkt, hoort er ook niet als tussenkop
         // te staan. Een kop is een bewuste keuze om er een blok aan te wijden, dus dat weegt

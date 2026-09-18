@@ -311,9 +311,12 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .filters button[aria-pressed="false"] .n,
 .filters button[aria-pressed="false"]::before { text-decoration: none; }
 .filters .alles {
-  margin-left: auto; border-style: none; background: none; color: var(--gedempt);
+  border-style: none; background: none; color: var(--gedempt);
   text-decoration: underline; padding: 4px 2px;
 }
+.filters .alles::before { content: none; }
+/* De eerste tekstknop duwt de rest naar rechts; staan er twee, dan blijven ze bij elkaar. */
+.filters .alles:not(.alles ~ .alles) { margin-left: auto; }
 /* De spellingtoets is geen filter maar een schakelaar: de woordenlijst moet er eerst bij worden
    gehaald. Daarom staat hij eronder en ziet hij er anders uit dan de vinkjes. */
 .spellingknop { margin: 0 0 10px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
@@ -577,9 +580,15 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         + ' <span class="n">' + tel[g.id] + '</span></button>').join('');
     if (!knoppen) { doel.hidden = true; return; }
     doel.hidden = false;
+    // Twee wegen naar hetzelfde: van alles-aan soorten wegklikken, of alles uitzetten en er een
+    // paar aanzetten. Dat tweede is bij tien filters vaak korter.
+    const aanAantal = GROEPEN.filter((g) => filters[g.id]).length;
     doel.innerHTML = '<div class="kop">Klik een soort aan om hem te verbergen</div>' + knoppen
       + (zichtbaarAantal < totaal
           ? '<button type="button" class="alles" data-filter-alles="1">Alles weer tonen</button>'
+          : '')
+      + (aanAantal
+          ? '<button type="button" class="alles" data-filter-niets="1">Alles uitzetten</button>'
           : '');
     const verborgen = totaal - zichtbaarAantal;
     $('verborgen').textContent = verborgen
@@ -918,6 +927,10 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     const f = e.target.closest('[data-filter]');
     if (f) { filters[f.dataset.filter] = !filters[f.dataset.filter]; return tekenNaFilter(); }
     if (e.target.closest('[data-filter-alles]')) { zetFiltersTerug(); return tekenNaFilter(); }
+    if (e.target.closest('[data-filter-niets]')) {
+      for (const g of GROEPEN) filters[g.id] = false;
+      return tekenNaFilter();
+    }
   });
 
   /** Na een filterwijziging: balk, paneel en de markering in de tekst lopen samen op. */

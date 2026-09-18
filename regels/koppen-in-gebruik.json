@@ -1,0 +1,1880 @@
+{
+  "_bron": "Afgeleid uit data/corpus/: de tussenkoppen die de reisadviezen zelf gebruiken. Geen brondocument, dus ook geen norm — een kop die hier vaak in staat is de gangbare formulering, niet per se de juiste.",
+  "_toelichting": "Alleen h4-koppen onder de rubrieken uit sjabloon.json > h4_toetsen.rubrieken. Hiermee kan h4-kop-variant zien of een afwijkende kop landspecifiek is (dan zwijgt hij) of een andere formulering van iets wat elders anders heet (dan meldt hij het, met die andere formulering erbij).",
+  "_gedraaid": "2026-09-18",
+  "_adviezen": 226,
+  "koppen": [
+    {
+      "kop": "Lokale hulpdiensten",
+      "adviezen": 225
+    },
+    {
+      "kop": "Wat mag ik mee terugnemen naar Nederland?",
+      "adviezen": 224
+    },
+    {
+      "kop": "Nood- of crisissituatie",
+      "adviezen": 222
+    },
+    {
+      "kop": "Contactgegevens Nederlandse ambassade in geval van nood",
+      "adviezen": 208
+    },
+    {
+      "kop": "Contactgegevens Nederlandse ambassade",
+      "adviezen": 6
+    },
+    {
+      "kop": "Nood- of crisissituatie?",
+      "adviezen": 3
+    },
+    {
+      "kop": "Achtergelaten of gedwongen te trouwen",
+      "adviezen": 1
+    },
+    {
+      "kop": "Beperkte consulaire hulp in het noorden van Cyprus",
+      "adviezen": 1
+    },
+    {
+      "kop": "Contactgegevens ambassade",
+      "adviezen": 1
+    },
+    {
+      "kop": "Contactgegevens ambassade in geval van nood",
+      "adviezen": 1
+    },
+    {
+      "kop": "Contactgegevens in geval van nood",
+      "adviezen": 1
+    },
+    {
+      "kop": "Contactgegevens Nederlandse vertegenwoordiging in geval van nood",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen honorair consul van Nederland in El Salvador",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen honorair consul van Nederland in Nicaragua",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlands consulaat-generaal in Macau SAR",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Afghanistan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Amerikaans-Samoa",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Andorra",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Anguilla",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Antigua en Barbuda",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Bahrein",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Belize",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Bhutan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Bolivia",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Botswana",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Brunei Darussalam",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Cambodja",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in de Centraal-Afrikaanse Republiek",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in de Republiek Congo",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Djibouti",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Ecuador",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in El Salvador",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Equatoriaal-Guinea",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Eritrea",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Eswatini",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Fiji",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Frans-Guyana",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Frans-Polynesië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Gabon",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Gambia",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Grenada",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Groenland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Guadeloupe",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Guatemala",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Guinee",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Guinee-Bissau",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Guyana",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Haïti",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Honduras",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in IJsland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Jemen",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Kaapverdië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Kameroen",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Kirgizië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Kiribati",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Laos",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Lesotho",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Liberia",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Liechtenstein",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Madagaskar",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Malawi",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Martinique",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Mauritanië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Mauritius",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Micronesië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Monaco",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Mongolië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Montenegro",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Namibië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Nepal",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Nicaragua",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Nieuw-Caledonië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Noord-Korea",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Oezbekistan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Oost-Timor",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in op de Comoren",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Palau",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Papoea-Nieuw-Guinea",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Paraguay",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Puerto Rico",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Saint Kitts en Nevis",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Saint Vincent en de Grenadines",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Samoa",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in San Marino",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Sao Tomé en Principe",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Sierra Leone",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Somalië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Syrië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Tadzjikistan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Taiwan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Togo",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Tonga",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Turkmenistan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Tuvalu",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Uruguay",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Vanuatu",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Wallis en Futuna",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in Zambia",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade of consulaat op Antarctica",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Aruba",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Barbados",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Bonaire",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Amerikaanse Maagdeneilanden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Britse Maagdeneilanden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Cookeilanden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Faeröer",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Kaaimaneilanden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Maldiven",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Marshalleilanden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Pitcairneilanden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Salomonseilanden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Seychellen",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Tokelau-eilanden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de Turks- en Caicoseilanden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Dominica",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Jamaica",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Montserrat",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Naoero",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Niue",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Réunion",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Saba",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Saint Lucia",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Sint Eustatius",
+      "adviezen": 1
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op Spitsbergen",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlands ambassadekantoor in Belarus",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlands consulaat-generaal in Dubai",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlands consulaat-generaal in Hongkong SAR",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlands consulaat-generaal in Milaan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade en consulaat-generaal in Irak",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade en consulaat-generaal in Zuid-Afrika",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade en consulaten-generaal in de VS",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Albanië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Algerije",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Angola",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Argentinië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Armenië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Azerbeidzjan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Bangladesh",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in België",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Benin",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Bosnië en Herzegovina",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Brazilië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Bulgarije",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Burkina Faso",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Burundi",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Canada",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Chili",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in China",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Colombia",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Costa Rica",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Cuba",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Cyprus",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in de Dominicaanse Republiek",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in de DRC",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in de VAE",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Denemarken",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Duitsland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Egypte",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Estland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Ethiopië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Finland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Frankrijk",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Georgië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Ghana",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Griekenland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in het VK",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Hongarije",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Ierland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in India",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Indonesië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Israël",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Ivoorkust",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Japan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Jordanië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Kazachstan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Kenia",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Koeweit",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Kosovo",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Kroatië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Letland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Libanon",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Libië gesloten",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Litouwen",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Luxemburg",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Maleisië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Mali",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Malta",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Marokko",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Mexico",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Moldavië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Mozambique",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Myanmar",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Nieuw-Zeeland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Niger",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Nigeria",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Noord-Macedonië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Noorwegen",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Oekraïne",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Oman",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Oostenrijk",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Pakistan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Panama",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Peru",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Polen",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Portugal",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Qatar",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Roemenië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Rome",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Rwanda",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Saoedi-Arabië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Senegal",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Servië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Singapore",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Slovenië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Slowakije",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Spanje",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Sri Lanka",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Sudan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Suriname",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Tanzania",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Thailand",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Trinidad en Tobago",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Tsjechië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Tunesië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Turkije",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Uganda",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Venezuela",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Vietnam",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Zimbabwe",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Zuid-Korea",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Zuid-Sudan",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Zweden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade in Zwitserland",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassade op de Filipijnen",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse ambassadekantoor in Tsjaad",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse consulaat-generaal in Australië",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse consulaat-generaal in Turkije",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse vertegenwoordiging in de Palestijnse Gebieden",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse Vertegenwoordiging op Curaçao",
+      "adviezen": 1
+    },
+    {
+      "kop": "Nederlandse Vertegenwoordiging op Sint Maarten",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Afghanistan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Albanië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Algerije?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Amerikaans-Samoa?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Andorra?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Angola?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Anguilla?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Antarctica?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Antigua en Barbuda?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Argentinië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Armenië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Aruba?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Australië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Azerbeidzjan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Bahrein?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Bangladesh?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Barbados?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Belarus?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar België?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Belize?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Benin?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Bhutan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Bolivia?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Bonaire?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Bosnië en Herzegovina?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Botswana?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Brazilië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Brunei Darussalam?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Bulgarije?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Burkina Faso?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Burundi?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Cambodja?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Canada?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Centraal-Afrikaanse Republiek?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Chili?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar China?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Colombia?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Comoren?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Costa Rica?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Cuba?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Curaçao?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Cyprus?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Amerikaanse Maagdeneilanden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Bahama's?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Britse Maagdeneilanden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Cookeilanden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Democratische Republiek Congo (DRC)?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Dominicaanse Republiek?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Faeröer?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Filipijnen?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Kaaimaneilanden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Maldiven?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Marshalleilanden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Palestijnse Gebieden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Pitcairneilanden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Republiek Congo?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Salomonseilanden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Seychellen?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Tokelau-eilanden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Turks- en Caicoseilanden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de Verenigde Arabische Emiraten (VAE)?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de VS?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Denemarken?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Djibouti?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Dominica?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Duitsland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Ecuador?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Egypte?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar El Salvador?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Equatoriaal-Guinea?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Eritrea?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Estland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Eswatini?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Ethiopië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Fiji?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Finland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Frankrijk?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Frans-Guyana?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Frans-Polynesië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Gabon?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Gambia?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Georgië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Ghana?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Grenada?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Griekenland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Groenland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Guadeloupe?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Guatemala?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Guinee-Bissau?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Guinee?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Guyana?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Haïti?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar het VK?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Honduras?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Hongarije?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Hongkong SAR?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Ierland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar IJsland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar India?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Indonesië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Irak?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Iran?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Israël?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Italië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Ivoorkust?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Jamaica?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Japan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Jemen?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Jordanië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Kaapverdië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Kameroen?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Kazachstan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Kenia?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Kirgizië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Kiribati?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Koeweit?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Kosovo?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Kroatië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Laos?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Lesotho?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Letland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Libanon?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Liberia?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Libië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Liechtenstein?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Litouwen?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Luxemburg?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Macau SAR?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Madagaskar?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Malawi?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Maleisië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Mali?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Malta?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Marokko?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Martinique?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Mauritanië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Mauritius?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Mexico?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Micronesië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Moldavië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Monaco?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Mongolië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Montenegro?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Montserrat?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Mozambique?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Myanmar?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Namibië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Naoero?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Nederland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Nepal?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Nicaragua?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Nieuw-Caledonië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Nieuw-Zeeland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Niger?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Nigeria?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Niue?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Noord-Korea?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Noord-Macedonië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Noorwegen?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Oekraïne?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Oezbekistan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Oman?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Oost-Timor?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Oostenrijk?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Pakistan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Palau?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Panama?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Papoea-Nieuw-Guinea?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Paraguay?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Peru?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Polen?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Portugal?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Puerto Rico?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Qatar?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Réunion?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Roemenië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Rusland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Rwanda?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Saba?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Saint Kitts en Nevis?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Saint Lucia?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Saint Vincent en de Grenadines?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Samoa?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar San Marino?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Sao Tomé en Principe?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Saoedi-Arabië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Senegal?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Servië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Sierra Leone?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Singapore?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Sint Eustatius?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Sint Maarten?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Slovenië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Slowakije?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Somalië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Spanje?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Spitsbergen?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Sri Lanka?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Sudan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Suriname?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Syrië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Tadzjikistan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Taiwan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Tanzania?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Togo?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Tonga?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Trinidad en Tobago?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Tsjaad?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Tsjechië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Tunesië?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Turkije?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Turkmenistan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Tuvalu?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Uganda?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Uruguay?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Vanuatu?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Venezuela?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Vietnam?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Wallis en Futuna?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Zambia?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Zimbabwe?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Zuid-Afrika?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Zuid-Korea?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Zuid-Sudan?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Zweden?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik meenemen naar Zwitserland?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag ik niet meenemen naar Thailand?",
+      "adviezen": 1
+    },
+    {
+      "kop": "Wat mag mee terugnemen naar Nederland?",
+      "adviezen": 1
+    }
+  ]
+}

@@ -199,6 +199,7 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 |---|---|
 | `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, sjabloon, woordenlijsten, limieten, landen |
 | `regels/groepen.json` | de filterindeling: welke regel hoort bij welk vinkje boven de bevindingen |
+| `regels/koppen-in-gebruik.json` | welke h4-tussenkoppen de adviezen gebruiken en hoe vaak; afgeleid uit het corpus, geen norm |
 | `regels/tekstcontrole.json` | resten van het CMS, vergeten spaties en onzichtbare tekens — overgenomen uit SpellingSpeurneus |
 | `regels/uitzonderingen.txt` | goedgekeurde woorden die niet in de OpenTaal-woordenlijst staan; deze lijst hoort bij de redactie |
 | `docs/woordenlijst.txt.gz` | de OpenTaal-woordenlijst, ingepakt. Ophalen met `scripts/haal-woordenlijst.mjs` |
@@ -285,6 +286,24 @@ toe — de toets vergelijkt op kleine letters.
 
 Dit staat los van de knoppen *Eens / Oneens / Onterecht* onder een bevinding. Die leggen een oordeel
 vast over dít advies; de uitzonderingenlijst verandert de regel voor alle adviezen tegelijk.
+
+## Tussenkoppen: eenduidig, niet uniform
+
+Onder *In geval van nood* en *Bagageregels* schrijft het sjabloon de tussenkoppen voor, maar niet
+elk land heeft dezelfde informatie. *Achtergelaten of gedwongen te trouwen* hoort bij Somalië en
+nergens anders — een eigen kop is daar geen fout.
+
+Wat wél misgaat is hetzelfde onderwerp in het ene land anders noemen dan in het andere. `h4-kop-variant`
+meldt daarom alleen een kop waarvan elders een andere formulering rondgaat die duidelijk de huisstijl
+is: genoeg woordoverlap én in minstens 20 adviezen. Over het corpus geeft dat 13 meldingen, waaronder
+vijf verschillende namen voor één ding:
+
+> *Contactgegevens Nederlandse ambassade*, *Contactgegevens ambassade*, *Contactgegevens in geval van
+> nood*, *Contactgegevens ambassade in geval van nood*, *Contactgegevens Nederlandse vertegenwoordiging
+> in geval van nood* — tegen *Contactgegevens Nederlandse ambassade in geval van nood* in 208 adviezen.
+
+De lijst met koppen die in gebruik zijn staat in `regels/koppen-in-gebruik.json`, gemaakt met
+`scripts/bouw-koppenlijst.mjs` uit het corpus. Na een nieuwe ophaalronde opnieuw draaien.
 
 ## Over de regels
 

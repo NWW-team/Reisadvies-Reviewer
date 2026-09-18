@@ -128,7 +128,7 @@
       "doc-woordenaantal": 1,
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "nood-lokale-hulpdiensten": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 10,
@@ -166,13 +166,13 @@
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens in geval van nood\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Contactgegevens in geval van nood\" heet in 208 andere adviezen \"Contactgegevens Nederlandse ambassade in geval van nood\".",
         "fragment": "Contactgegevens in geval van nood",
-        "verwacht": "In geval van nood",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "nood-lokale-hulpdiensten",
@@ -570,7 +570,7 @@
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "h4-natuurrisico": 1,
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
@@ -597,12 +597,13 @@
         "notitie": "Een tussenkop onder Natuurgeweld noemt het risico zelf, zoals Vulkanen, Orkanen of Overstromingen — niet de plaats of de activiteit."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens Nederlandse ambassade\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Contactgegevens Nederlandse ambassade\" heet in 208 andere adviezen \"Contactgegevens Nederlandse ambassade in geval van nood\".",
         "fragment": "Contactgegevens Nederlandse ambassade",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "reisverzekering-vaste-tekst",
@@ -760,7 +761,7 @@
       "kleur-variant": 1,
       "kleur-vervolg-bullet-kort": 1,
       "h4-niet-melden": 1,
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "intro-vaste-tekst": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
@@ -805,12 +806,13 @@
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Wat mag mee terugnemen naar Nederland?\" is geen vaste tussenkop onder \"Bagageregels\".",
+        "boodschap": "\"Wat mag mee terugnemen naar Nederland?\" heet in 224 andere adviezen \"Wat mag ik mee terugnemen naar Nederland?\".",
         "fragment": "Wat mag mee terugnemen naar Nederland?",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Wat mag ik mee terugnemen naar Nederland?",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "intro-vaste-tekst",
@@ -1252,19 +1254,18 @@
     ],
     "zinnen": 36,
     "fout": 1,
-    "letop": 13,
+    "letop": 12,
     "linkzin": 0,
     "twijfel": 3,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 13,
+      "let-op": 12,
       "link-zin": 0,
       "info": 2,
       "twijfel": 3
     },
     "perRegel": {
-      "h4-vaste-kop": 1,
       "informatieservice-vaste-tekst": 1,
       "nood-contactcenter": 1,
       "nood-lokale-hulpdiensten": 1,
@@ -1280,14 +1281,6 @@
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "h4-vaste-kop",
-        "ernst": "let-op",
-        "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Geen Nederlandse ambassade of consulaat op Antarctica\" is geen vaste tussenkop onder \"In geval van nood\".",
-        "fragment": "Geen Nederlandse ambassade of consulaat op Antarctica",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
-      },
       {
         "regel": "informatieservice-vaste-tekst",
         "ernst": "let-op",
@@ -1489,13 +1482,13 @@
     ],
     "zinnen": 69,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 5,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 5,
       "info": 2,
       "twijfel": 1
@@ -1503,7 +1496,6 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "h4-vaste-kop": 1,
       "rubrieken-volgorde": 1,
       "tekst-niet-melden": 1,
       "zin-frequentiewoord": 1,
@@ -1529,14 +1521,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "h4-vaste-kop",
-        "ernst": "let-op",
-        "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Nederlandse consulaat-generaal in Australië\" is geen vaste tussenkop onder \"In geval van nood\".",
-        "fragment": "Nederlandse consulaat-generaal in Australië",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -1975,7 +1959,7 @@
       "twijfel": 4
     },
     "perRegel": {
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
       "zin-max-woorden": 2,
@@ -1984,12 +1968,13 @@
     },
     "bevindingen": [
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens Nederlandse ambassade\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Contactgegevens Nederlandse ambassade\" heet in 208 andere adviezen \"Contactgegevens Nederlandse ambassade in geval van nood\".",
         "fragment": "Contactgegevens Nederlandse ambassade",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "reisverzekering-vaste-tekst",
@@ -2620,19 +2605,18 @@
     ],
     "zinnen": 74,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 1,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 1,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
-      "h4-vaste-kop": 1,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
       "zin-frequentiewoord": 1,
@@ -2640,14 +2624,6 @@
       "zin-twijfeltaal": 1
     },
     "bevindingen": [
-      {
-        "regel": "h4-vaste-kop",
-        "ernst": "let-op",
-        "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens ambassade\" is geen vaste tussenkop onder \"In geval van nood\".",
-        "fragment": "Contactgegevens ambassade",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
-      },
       {
         "regel": "nood-contactcenter",
         "ernst": "fout",
@@ -7010,7 +6986,7 @@
     },
     "perRegel": {
       "kleur-aanduiding": 1,
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "intro-vaste-tekst": 1,
       "nood-contactcenter": 1,
       "zin-max-woorden": 4
@@ -7024,12 +7000,13 @@
         "verwacht": "De kleurcode van het reisadvies voor Kaaimaneilanden is groen."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens Nederlandse ambassade\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Contactgegevens Nederlandse ambassade\" heet in 208 andere adviezen \"Contactgegevens Nederlandse ambassade in geval van nood\".",
         "fragment": "Contactgegevens Nederlandse ambassade",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "intro-vaste-tekst",
@@ -7093,33 +7070,24 @@
     ],
     "zinnen": 89,
     "fout": 0,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 4,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 4,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "h4-vaste-kop": 1,
       "reisverzekering-vaste-tekst": 1,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 1,
       "aanhalingstekens": 1
     },
     "bevindingen": [
-      {
-        "regel": "h4-vaste-kop",
-        "ernst": "let-op",
-        "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Beperkte consulaire hulp in het noorden van Cyprus\" is geen vaste tussenkop onder \"In geval van nood\".",
-        "fragment": "Beperkte consulaire hulp in het noorden van Cyprus",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
-      },
       {
         "regel": "reisverzekering-vaste-tekst",
         "ernst": "let-op",
@@ -17048,20 +17016,19 @@
     ],
     "zinnen": 52,
     "fout": 2,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 2,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 2,
       "info": 1,
       "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "h4-vaste-kop": 1,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
       "zin-max-woorden": 4,
@@ -17075,14 +17042,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
-      },
-      {
-        "regel": "h4-vaste-kop",
-        "ernst": "let-op",
-        "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Geen Nederlands consulaat-generaal in Macau SAR\" is geen vaste tussenkop onder \"In geval van nood\".",
-        "fragment": "Geen Nederlands consulaat-generaal in Macau SAR",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
       },
       {
         "regel": "nood-contactcenter",
@@ -17678,7 +17637,7 @@
       "doc-woordenaantal": 1,
       "kleur-aanduiding": 1,
       "h4-niet-melden": 1,
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "intro-vaste-tekst": 1,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 7
@@ -17712,13 +17671,13 @@
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Nood- of crisissituatie?\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Nood- of crisissituatie?\" heet in 222 andere adviezen \"Nood- of crisissituatie\".",
         "fragment": "Nood- of crisissituatie?",
-        "verwacht": "In geval van nood",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Nood- of crisissituatie",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "intro-vaste-tekst",
@@ -18322,7 +18281,7 @@
     "perRegel": {
       "actueel-max-woorden": 1,
       "h4-niet-melden": 1,
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "intro-vaste-tekst": 1,
       "tekst-cms-rest": 1,
       "woord-onbekend": 1,
@@ -18346,13 +18305,13 @@
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens ambassade in geval van nood\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Contactgegevens ambassade in geval van nood\" heet in 208 andere adviezen \"Contactgegevens Nederlandse ambassade in geval van nood\".",
         "fragment": "Contactgegevens ambassade in geval van nood",
-        "verwacht": "In geval van nood",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "intro-vaste-tekst",
@@ -18560,7 +18519,7 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "actueel-max-woorden": 1,
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "h3-niet-melden": 1,
       "woord-onbekend": 1,
       "zin-twijfeltaal": 3,
@@ -18590,13 +18549,13 @@
         "fragment": "Sinds de militaire staatsgreep in 2021 is de veiligheidssituatie in Myanmar slecht. Er zijn gevechten, aanslagen en bombardementen in delen van het land. Lees meer onder Actueel."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Nood- of crisissituatie?\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Nood- of crisissituatie?\" heet in 222 andere adviezen \"Nood- of crisissituatie\".",
         "fragment": "Nood- of crisissituatie?",
-        "verwacht": "In geval van nood",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Nood- of crisissituatie",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "h3-niet-melden",
@@ -23257,28 +23216,29 @@
       "twijfel": 1
     },
     "perRegel": {
-      "h4-vaste-kop": 2,
+      "h4-kop-variant": 2,
       "zin-max-woorden": 2,
       "zin-twijfeltaal": 1,
       "link-verboden-partij": 1
     },
     "bevindingen": [
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Nood- of crisissituatie?\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Nood- of crisissituatie?\" heet in 222 andere adviezen \"Nood- of crisissituatie\".",
         "fragment": "Nood- of crisissituatie?",
-        "verwacht": "In geval van nood",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Nood- of crisissituatie",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens Nederlandse ambassade\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Contactgegevens Nederlandse ambassade\" heet in 208 andere adviezen \"Contactgegevens Nederlandse ambassade in geval van nood\".",
         "fragment": "Contactgegevens Nederlandse ambassade",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "zin-max-woorden",
@@ -23338,7 +23298,7 @@
       "twijfel": 2
     },
     "perRegel": {
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 5,
       "zin-twijfeltaal": 1,
@@ -23347,12 +23307,13 @@
     },
     "bevindingen": [
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens Nederlandse ambassade\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Contactgegevens Nederlandse ambassade\" heet in 208 andere adviezen \"Contactgegevens Nederlandse ambassade in geval van nood\".",
         "fragment": "Contactgegevens Nederlandse ambassade",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "woord-onbekend",
@@ -23458,7 +23419,7 @@
     "perRegel": {
       "kleur-variant": 2,
       "regionaal-kleur-tekst": 2,
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "intro-vaste-tekst": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
@@ -23501,12 +23462,13 @@
         "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens Nederlandse vertegenwoordiging in geval van nood\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Contactgegevens Nederlandse vertegenwoordiging in geval van nood\" heet in 208 andere adviezen \"Contactgegevens Nederlandse ambassade in geval van nood\".",
         "fragment": "Contactgegevens Nederlandse vertegenwoordiging in geval van nood",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "intro-vaste-tekst",
@@ -25953,19 +25915,18 @@
     ],
     "zinnen": 103,
     "fout": 0,
-    "letop": 12,
+    "letop": 11,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 12,
+      "let-op": 11,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "h4-vaste-kop": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 7,
@@ -25974,14 +25935,6 @@
       "vragen-opeenvolgend": 1
     },
     "bevindingen": [
-      {
-        "regel": "h4-vaste-kop",
-        "ernst": "let-op",
-        "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Achtergelaten of gedwongen te trouwen\" is geen vaste tussenkop onder \"In geval van nood\".",
-        "fragment": "Achtergelaten of gedwongen te trouwen",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
-      },
       {
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
@@ -27360,20 +27313,19 @@
     ],
     "zinnen": 93,
     "fout": 2,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 0,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 0,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "h4-vaste-kop": 1,
       "h3-niet-melden": 1,
       "rubrieken-volgorde": 1,
       "woord-onbekend": 2,
@@ -27390,14 +27342,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
-      },
-      {
-        "regel": "h4-vaste-kop",
-        "ernst": "let-op",
-        "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Nederlandse ambassadekantoor in Tsjaad\" is geen vaste tussenkop onder \"In geval van nood\".",
-        "fragment": "Nederlandse ambassadekantoor in Tsjaad",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
       },
       {
         "regel": "h3-niet-melden",
@@ -27629,13 +27573,13 @@
     ],
     "zinnen": 187,
     "fout": 2,
-    "letop": 32,
+    "letop": 31,
     "linkzin": 3,
     "twijfel": 9,
     "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 32,
+      "let-op": 31,
       "link-zin": 3,
       "info": 4,
       "twijfel": 9
@@ -27645,7 +27589,6 @@
       "kleur-variant": 1,
       "regionaal-kleur-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "h4-vaste-kop": 1,
       "bagage-heen": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
@@ -27693,14 +27636,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "h4-vaste-kop",
-        "ernst": "let-op",
-        "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Wat mag ik niet meenemen naar Thailand?\" is geen vaste tussenkop onder \"Bagageregels\".",
-        "fragment": "Wat mag ik niet meenemen naar Thailand?",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
       },
       {
         "regel": "bagage-heen",
@@ -28835,13 +28770,13 @@
     ],
     "zinnen": 142,
     "fout": 3,
-    "letop": 30,
+    "letop": 29,
     "linkzin": 1,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 30,
+      "let-op": 29,
       "link-zin": 1,
       "info": 1,
       "twijfel": 9
@@ -28851,7 +28786,6 @@
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "h4-vaste-kop": 1,
       "rubrieken-max": 1,
       "alinea-max-woorden": 2,
       "woord-onbekend": 3,
@@ -28898,14 +28832,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "h4-vaste-kop",
-        "ernst": "let-op",
-        "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Nederlandse consulaat-generaal in Turkije\" is geen vaste tussenkop onder \"In geval van nood\".",
-        "fragment": "Nederlandse consulaat-generaal in Turkije",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
       },
       {
         "regel": "rubrieken-max",
@@ -29626,7 +29552,7 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-vaste-kop": 1,
-      "h4-vaste-kop": 1,
+      "h4-kop-variant": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-twijfeltaal": 1,
@@ -29656,12 +29582,13 @@
         "notitie": "Heet deze rubriek naar zijn eigen onderwerp (een ziekte bijvoorbeeld), dan mag de kop vrij zijn; kies dan \"oneens\". Zo niet: de vaste teksten onder deze rubriek worden niet getoetst zolang de kop afwijkt."
       },
       {
-        "regel": "h4-vaste-kop",
+        "regel": "h4-kop-variant",
         "ernst": "let-op",
         "bron": "SJ, de blokken met voorgeschreven tussenkoppen",
-        "boodschap": "\"Contactgegevens Nederlandse ambassade\" is geen vaste tussenkop onder \"In geval van nood\".",
+        "boodschap": "\"Contactgegevens Nederlandse ambassade\" heet in 208 andere adviezen \"Contactgegevens Nederlandse ambassade in geval van nood\".",
         "fragment": "Contactgegevens Nederlandse ambassade",
-        "notitie": "Onder deze rubriek liggen de tussenkoppen vast in het sjabloon."
+        "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
+        "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
       },
       {
         "regel": "woord-onbekend",

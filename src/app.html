@@ -306,6 +306,17 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
   margin-left: auto; border-style: none; background: none; color: var(--gedempt);
   text-decoration: underline; padding: 4px 2px;
 }
+/* De spellingtoets is geen filter maar een schakelaar: de woordenlijst moet er eerst bij worden
+   gehaald. Daarom staat hij eronder en ziet hij er anders uit dan de vinkjes. */
+.spellingknop { margin: 0 0 10px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.spellingknop button {
+  padding: 4px 11px; border: 1px solid var(--rand); border-radius: 999px;
+  background: var(--vlak); color: var(--inkt); font: inherit; font-size: .78rem; cursor: pointer;
+}
+.spellingknop button:hover:not(:disabled) { border-color: var(--gedempt); }
+.spellingknop button:disabled { opacity: .55; cursor: default; }
+.spellingknop span { font-size: .76rem; color: var(--gedempt); line-height: 1.4; }
+
 .verborgen-melding {
   margin: 0 0 10px; padding: 7px 10px; border-radius: 4px;
   background: #fdf3d9; color: #6b5107; font-size: .8rem; line-height: 1.45;
@@ -428,6 +439,12 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
         <!-- Gevuld door tekenFilters(). Filteren verbergt; het schrapt niets, en de teller
              hieronder blijft zeggen hoeveel er buiten beeld staat. -->
         <div class="filters" id="filters" hidden></div>
+        <!-- De spellingtoets staat apart van de filters: hij is niet uit te vinken maar aan te
+             zetten, want de woordenlijst moet er eerst bij worden gehaald. -->
+        <p class="spellingknop">
+          <button type="button" id="spelling-aan">Spelling ook nakijken</button>
+          <span id="spelling-stand" role="status" aria-live="polite"></span>
+        </p>
         <p class="verborgen-melding" id="verborgen" role="status" aria-live="polite"></p>
         <div id="bevindingen"></div>
         <div class="oordeelsblok">
@@ -464,7 +481,24 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
 </script>
 <script>
 (function () {
-  const toetser = Regels.maakToetser(REGELDATA);
+  // De spellingtoets staat uit tot een redacteur hem aanzet. De OpenTaal-woordenlijst is 409.487
+  // woorden; die in de pagina vouwen zou hem tien keer zo groot maken, terwijl lang niet elke
+  // controleronde de spelling nodig heeft. Daarom wordt hij één keer opgehaald en blijft hij daarna
+  // in het geheugen staan. Lukt ophalen niet — geen internet, of de pagina staat los op schijf —
+  // dan werkt de rest van de tool gewoon door en zegt de knop waarom.
+  let toetser = Regels.maakToetser(REGELDATA);
+  let woordenlijst = null;
+
+  async function haalWoordenlijst() {
+    const antwoord = await fetch('woordenlijst.txt.gz');
+    if (!antwoord.ok) throw new Error('de woordenlijst is niet te bereiken (' + antwoord.status + ')');
+    // DecompressionStream zit in de browser zelf; dat scheelt een bibliotheek én 3,8 MB download.
+    const uit = antwoord.body.pipeThrough(new DecompressionStream('gzip'));
+    const tekst = await new Response(uit).text();
+    const set = new Set();
+    for (const w of tekst.split('\n')) if (w) set.add(w);
+    return set;
+  }
   const $ = (id) => document.getElementById(id);
   let huidig = null;          // {doc, resultaat, land}
   let oordelen = {};          // sleutel -> 'eens'|'oneens'|'onterecht'
@@ -588,7 +622,9 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   function toetsInvoer(html, land, meta = {}) {
     const doc = Parse.parseAdvies(html, { land, titel: meta.titel, url: meta.url });
     const resultaat = toetser(doc);
-    huidig = { doc, resultaat, land, iso: meta.iso || null };
+    // De ruwe html blijft bewaard, zodat het advies opnieuw getoetst kan worden zonder het
+    // opnieuw op te halen — dat gebeurt als de spellingtoets erbij wordt gezet.
+    huidig = { doc, resultaat, land, html, meta, iso: meta.iso || null };
     // Elk nieuw advies begint met alles aan. Een filterstand die blijft hangen zou betekenen dat
     // je bij het volgende land iets mist zonder dat je eraan denkt.
     zetFiltersTerug();
@@ -601,6 +637,36 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     $('knop-print').disabled = false;
     $('knop-kopieer').disabled = false;
   }
+
+  // ---------- spellingtoets aanzetten ----------
+  // Eén keer ophalen, daarna blijft de lijst staan. De toetser wordt opnieuw gemaakt mét de lijst
+  // en het huidige advies opnieuw getoetst, zodat je meteen ziet wat het oplevert.
+  function zetSpellingStand(tekst, bezig) {
+    $('spelling-stand').textContent = tekst;
+    $('spelling-aan').disabled = !!bezig || !!woordenlijst;
+  }
+
+  async function zetSpellingAan() {
+    if (woordenlijst) return;
+    zetSpellingStand('bezig met ophalen van de woordenlijst (1,3 MB)…', true);
+    try {
+      const lijst = await haalWoordenlijst();
+      // De eigen uitzonderingen zitten in de pagina zelf, niet in het opgehaalde bestand: die
+      // beheert de redactie in regels/uitzonderingen.txt en ze horen bij elke herbouw mee te komen.
+      for (const w of (REGELDATA.uitzonderingen || [])) lijst.add(w);
+      woordenlijst = lijst;
+      toetser = Regels.maakToetser({ ...REGELDATA, woordenlijst });
+      zetSpellingStand(lijst.size.toLocaleString('nl-NL') + ' woorden geladen. '
+        + 'Onbekende woorden staan nu onder "Mogelijke spelfouten" en "Namen".');
+      if (huidig) toetsInvoer(huidig.html, huidig.land, huidig.meta);
+    } catch (e) {
+      zetSpellingStand('De woordenlijst is niet op te halen: ' + e.message
+        + ' De rest van de tool werkt gewoon.');
+      $('spelling-aan').disabled = false;
+    }
+  }
+
+  $('spelling-aan').addEventListener('click', zetSpellingAan);
 
   /** Haalt het gekozen advies op: uit de pagina zelf, of uit adviezen/<ISO>.json. */
   async function kiesAdvies() {

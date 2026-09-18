@@ -123,7 +123,50 @@ function bevinding(regel, ernst, bron, boodschap, extra = {}) {
  * @param {object} data  {matrix, kleurcodes, woordenlijsten, limieten}
  */
 export function maakToetser(data) {
-  const { matrix, kleurcodes, woordenlijsten: wl, limieten: lim, sjabloon: sj } = data;
+  const { matrix, kleurcodes, woordenlijsten: wl, limieten: lim, sjabloon: sj,
+    tekstcontrole: tc } = data;
+
+  /**
+   * De spellingtoets, overgenomen uit SpellingSpeurneus. Optioneel: `data.woordenlijst` is een Set
+   * met kleine letters, of hij ontbreekt. De OpenTaal-lijst is 409.487 woorden en past niet in de
+   * pagina zelf, dus die wordt pas opgehaald als een redacteur de toets aanzet. Ontbreekt hij, dan
+   * vuren deze twee regels niet en werkt de rest van de tool gewoon.
+   */
+  // Op gedrag toetsen, niet met instanceof: de gebouwde pagina draait in het testharnas in een
+  // eigen realm, en een Set van daar is geen `instanceof Set` van hier.
+  const wlijst = data.woordenlijst;
+  const spelling = wlijst && typeof wlijst.has === 'function' && wlijst.size ? wlijst : null;
+
+  // De tekens zonder breedte uit tekstcontrole.json, als regex. Ze moeten uit een woord voordat
+  // het tegen de woordenlijst gaat: onzichtbaar of niet, ze maken er een onbekend woord van.
+  const onzichtbaarRe = new RegExp('[' + Object.keys((tc && tc.onzichtbare_tekens.tekens) || {})
+    .map((t) => '\\u' + t.charCodeAt(0).toString(16).padStart(4, '0')).join('') + ']', 'g');
+
+  /**
+   * Een ruw stuk tekst tot een woord terugbrengen, of tot een lege string als er geen woord in zit.
+   *
+   * Twee dingen die bij snel lezen misgaan. Een aanhalingsteken aan het eind is een citaatteken en
+   * geen apostrof (‘bagsnatching’), maar bij "foto's" hoort hij er wél bij — en daar staat hij niet
+   * aan het eind. En een woord dat op een streepje eindigt is een weglating, geen woord:
+   * "identiteits- en reisdocumenten".
+   */
+  const schoonWoord = (ruw) => {
+    const kaal = ruw.replace(onzichtbaarRe, '').replace(/’/g, "'");
+    if (/^\p{L}+-$/u.test(kaal)) return '';
+    return kaal.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}']+$/gu, '').replace(/'$/, '');
+  };
+
+  /** Bekend als het woord in de lijst staat, of als alle delen dat doen. Dat tweede vangt
+   *  samenstellingen met een koppelteken of apostrof ('consulaat-generaal', "euro's") die niet
+   *  altijd los in de lijst staan. */
+  const isBekendWoord = (w) => {
+    const k = w.toLowerCase();
+    if (spelling.has(k)) return true;
+    const zonderS = k.replace(/'s$/, '');
+    if (zonderS !== k && spelling.has(zonderS)) return true;
+    const delen = k.split(/['-]/).filter(Boolean);
+    return delen.length > 1 && delen.every((d) => spelling.has(d));
+  };
 
   const koppenOpNaam = new Map(matrix.koppen.filter((k) => k.h3).map((k) => [norm(k.h3), k]));
 
@@ -139,6 +182,7 @@ export function maakToetser(data) {
   // wel wordt toegepast maar het woord niet geciteerd is.
   const alsSet = (lijst) => new Set((lijst || []).map((x) => String(x).toLowerCase()));
   const extraTwijfel = alsSet(wl.twijfeltaal._aanvullingen);
+  const frequentieWoorden = alsSet(wl.twijfeltaal.frequentie);
   const extraGender = alsSet(wl.genderneutraal._aanvullingen);
   const extraAfk = alsSet(wl.afkortingen._aanvullingen);
   const extraEenheid = alsSet(wl.eenheden_voluit._aanvullingen);
@@ -206,9 +250,39 @@ export function maakToetser(data) {
     return besteScore >= 0.5 ? beste : null;
   }
 
-  const isVasteKop = (kop, land) => matrixKoppen.has(norm(kop))
+  /**
+   * Een vaste kop met een landnaam erin. De naam in de kop wijkt legitiem af van het location-veld:
+   * adviezen gebruiken lidwoorden ("de Bahama's", "het VK"), afkortingen ("de VAE") en de
+   * schrijfwijzer laat per (ei)land in of op toe. Daarom een jokerteken in plaats van de exacte
+   * naam — net als isVasteH2 dat voor de H2-koppen doet.
+   */
+  const vasteKopPatronen = (sj.vaste_koppen || []).map((s) => esc(norm(s))
+    .replace(/\b(in|op|naar) \\\{land\\\}/g, '(?:in|op|naar) .{2,45}')
+    .replace(/\\\{land\\\}/g, '.{2,45}'));
+
+  /** De trefwoorden van onderwerpen die de matrix als "niet melden" aanmerkt, plat en genormaliseerd. */
+  // Op hele woorden vergelijken, niet op deelstrings: "beren" zit in "proberen" en zou anders
+  // een zin over afpersing als een zin over wilde dieren aanmerken.
+  const nietMeldenTref = matrix.koppen
+    .filter((k) => k.richtlijn === 'niet-melden' && (k.trefwoorden || []).length)
+    .flatMap((k) => k.trefwoorden.map((t) => ({
+      re: new RegExp('\\b' + esc(norm(t)) + '\\b'), woord: norm(t),
+      onderwerp: (k.h3 || '').toLowerCase(), toelichting: k.toelichting,
+      magOnder: (k.mag_onder || []).map(norm), alleenAlsKop: !!k.alleen_als_kop })));
+
+  /**
+   * De matrix noemt bij sommige niet-melden-onderwerpen zelf de rubriek waar het wél mag staan:
+   * foto's maken "kan evt. bij lokale wetten", gezondheidszorg "evt. bij Reisverzekering". Staat
+   * het daar, dan is het geen formatfout maar een afweging, en die hoort bij de oordeelstoets.
+   * Zonder deze uitzondering ging `h4-niet-melden` in 49 adviezen af op precies de kop die de
+   * matrix toestaat.
+   */
+  const magHierStaan = (tref, rubriek) => (tref.magOnder || [])
+    .some((r) => norm(rubriek || '').includes(r));
+
+  const isVasteKop = (kop) => matrixKoppen.has(norm(kop))
     || isElementenKop(kop)
-    || (sj.vaste_koppen || []).some((s) => new RegExp('^' + vasteTekstRegex(s, land).source + '$').test(norm(kop)));
+    || vasteKopPatronen.some((p) => new RegExp('^' + p + '$').test(norm(kop)));
 
   /** De vaste H2's staan in vraagvorm met de landnaam erin; 'in {land}' mag ook 'op {land}'
    *  zijn, want de schrijfwijzer kent die keuze per (ei)land. */
@@ -498,6 +572,10 @@ export function maakToetser(data) {
       }
     }
 
+    // Welke niet-melden-onderwerpen al via een kop zijn gemeld. Staat er een blok over, dan is dat
+    // de melding; elke zin daarbinnen nog eens noemen voegt niets toe.
+    const nmGemeld = new Set();
+
     // ---------- koppen tegen de matrix ----------
     for (const kop of doc.koppen) {
       if (kop.niveau === 2 && !isVasteH2(kop.tekst, doc.land)) {
@@ -505,9 +583,63 @@ export function maakToetser(data) {
           `"${kop.tekst}" is geen vaste H2. Vast zijn: ${matrix.h2_vast.map((h) => h.replace('{land}', doc.land || 'land X')).join(' / ')}.`,
           { fragment: kop.tekst }));
       }
+      // ---------- tussenkoppen op h4-niveau ----------
+      // Alleen onder de rubrieken waar het sjabloon ze voorschrijft. Elders heet een kop naar zijn
+      // eigen onderwerp - een ziekte, een gebeurtenis - en valt er niets te toetsen: van de 996
+      // verschillende h4-koppen in het corpus komen er 839 precies een keer voor.
+      if (kop.niveau === 4 && sj.h4_toetsen) {
+        const hoortBij = (sleutel) => {
+          const patroon = sj.rubriek_patronen[sleutel];
+          return patroon && new RegExp(patroon, 'i').test(kop.h3 || '');
+        };
+        if ((sj.h4_toetsen.rubrieken || []).some(hoortBij) && !isVasteKop(kop.tekst)) {
+          b.push(bevinding('h4-vaste-kop', ERNST.letop, 'SJ, de blokken met voorgeschreven tussenkoppen',
+            `"${kop.tekst}" is geen vaste tussenkop onder "${kop.h3}".`,
+            { fragment: kop.tekst,
+              ...(dichtstbijKop(kop.tekst) ? { verwacht: dichtstbijKop(kop.tekst) } : {}),
+              notitie: 'Onder deze rubriek liggen de tussenkoppen vast in het sjabloon.' }));
+        }
+        // Een onderwerp dat de matrix als "niet melden" aanmerkt, hoort er ook niet als tussenkop
+        // te staan. Een kop is een bewuste keuze om er een blok aan te wijden, dus dat weegt
+        // even zwaar als bij een H3.
+        const nmKop = nietMeldenTref.find((t) => t.re.test(norm(kop.tekst))
+          && !magHierStaan(t, kop.h3));
+        if (nmKop) {
+          nmGemeld.add(nmKop.onderwerp);
+          b.push(bevinding('h4-niet-melden', ERNST.fout, 'MX, tab Koppen, richtlijn Niet melden',
+            `"${kop.tekst}" gaat over ${nmKop.onderwerp}, en dat hoort niet in een reisadvies.`,
+            { fragment: kop.tekst, notitie: nmKop.toelichting || undefined }));
+        }
+
+        // Onder Natuurgeweld liggen de koppen niet vast, maar ze horen wel een risico te benoemen.
+        // "Bergen" of "Slecht weer in de bergen" zegt niet welk risico er speelt.
+        // Is de kop al gemeld omdat het onderwerp er niet in hoort, dan is "benoemt geen risico"
+        // een overbodige tweede melding over dezelfde kop.
+        const ng = sj.h4_toetsen.natuurgeweld;
+        if (ng && !nmKop && hoortBij(ng.rubriek)) {
+          const n = norm(kop.tekst);
+          // Nederlands plakt woorden aan elkaar: "zandstormen" en "zeestromingen" benoemen wel
+          // degelijk een risico, maar het risicowoord staat niet vooraan. Een stam van vijf letters
+          // of meer mag daarom ook middenin een woord staan; bij kortere stammen zou dat misgaan
+          // ("ijs" zit in "prijs"), dus die moeten aan het woordbegin.
+          const benoemtRisico = (ng.risicowoorden || []).some((x) => {
+            const stam = esc(norm(x));
+            return new RegExp(norm(x).length >= 5 ? stam : '\\b' + stam).test(n);
+          });
+          if (!isVasteKop(kop.tekst) && !benoemtRisico) {
+            b.push(bevinding('h4-natuurrisico', ERNST.letop, 'SJ, blok Natuurgeweld',
+              `"${kop.tekst}" benoemt geen natuurrisico.`,
+              { fragment: kop.tekst,
+                notitie: 'Een tussenkop onder Natuurgeweld noemt het risico zelf, zoals '
+                  + 'Vulkanen, Orkanen of Overstromingen — niet de plaats of de activiteit.' }));
+          }
+        }
+      }
+
       if (kop.niveau === 3) {
         const regel = koppenOpNaam.get(norm(kop.tekst));
         if (regel && regel.richtlijn === 'niet-melden') {
+          nmGemeld.add((regel.h3 || '').toLowerCase());
           b.push(bevinding('h3-niet-melden', ERNST.fout, 'MX, tab Koppen, richtlijn Niet melden',
             `"${kop.tekst}" hoort niet in een reisadvies.`, { fragment: kop.tekst, notitie: regel.toelichting }));
         }
@@ -522,7 +654,7 @@ export function maakToetser(data) {
         // aanslagen". Een afwijkende kop is niet alleen zelf een formatbreuk — de vaste teksten
         // worden per rubriek op de kop gezocht, dus een kop die de tool niet kent zet de controles
         // eronder stil. Daarom melden we hem, met die waarschuwing erbij.
-        if (!isVasteKop(kop.tekst, doc.land)) {
+        if (!isVasteKop(kop.tekst)) {
           b.push(bevinding('h3-vaste-kop', ERNST.fout, 'SJ, blok Risico dat van toepassing is; MX, tab Koppen',
             `"${kop.tekst}" is geen vaste tussenkop.`,
             { fragment: kop.tekst,
@@ -712,7 +844,7 @@ export function maakToetser(data) {
     // Alleen H3: de H2's zijn door de matrix voorgeschreven vraagvormen en mogen langer zijn.
     // Koppen die de matrix letterlijk voorschrijft ("Paspoort, ID-kaart, rijbewijs") toetsen we
     // niet op woordenaantal of leestekens — de richtlijn is daar de matrix zelf.
-    for (const kop of doc.koppen.filter((k) => k.niveau === 3 && !isVasteKop(k.tekst, doc.land))) {
+    for (const kop of doc.koppen.filter((k) => k.niveau === 3 && !isVasteKop(k.tekst))) {
       const w = telWoorden(kop.tekst);
       if (w > lim.tussenkop.max_woorden) {
         b.push(bevinding('tussenkop-max-woorden', ERNST.letop, 'SW, Gebruiksvriendelijkheid > (Tussen)koppen',
@@ -787,6 +919,154 @@ export function maakToetser(data) {
       return n.length > 20 && sjabloonZinnen.some((kern) => kern.includes(n));
     };
 
+    // ---------- tekstfouten ----------
+    // Overgenomen uit SpellingSpeurneus, het spellingtooltje van de redactie. Dit zijn de drie
+    // controles die daar geen woordenlijst voor nodig hebben; die passen hier, want de regellaag
+    // draait zonder dependencies. Het zijn geen schrijfregels: er is iets misgegaan tussen het CMS
+    // en de pagina, of er staat een tikfout die je bij snel lezen niet ziet.
+    // Alles wat de bezoeker leest, niet alleen de lopende zinnen: Estland had "undefined" als
+    // H2 staan en vijf Golfstaten hebben een word joiner in een opsommingsregel. Beide vallen
+    // buiten doc.zinnen. Zowel de tekstfouten als de spellingtoets lopen hierover.
+    const teLezen = [
+      ...doc.zinnen.map((z) => ({ tekst: z.tekst, kop: z.h3 || z.h2 })),
+      ...doc.koppen.map((k) => ({ tekst: k.tekst, kop: k.h3 || k.h2 })),
+      ...doc.opsommingen.flatMap((o) => o.items.map((i) => ({ tekst: i, kop: o.h3 || o.h2 }))),
+    ].filter((x) => x.tekst);
+
+    // Wat de tekstfouten hierboven al melden, meldt de spellingtoets niet nog een keer: "undefined"
+    // en "demonstraties.Volg" zijn geen onbekende woorden maar een CMS-rest en een vergeten spatie,
+    // en dat is de nuttiger boodschap.
+    const alGemeldWoord = new Set();
+
+    if (tc) {
+      const resten = new RegExp(tc.cms_resten.patroon, 'g');
+      const gezienRest = new Set();
+      for (const z of teLezen) {
+        for (const m of z.tekst.matchAll(resten)) {
+          if (gezienRest.has(m[0])) continue;
+          gezienRest.add(m[0]);
+          alGemeldWoord.add(m[0].toLowerCase());
+          b.push(bevinding('tekst-cms-rest', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+            `"${m[0]}" hoort niet in de tekst te staan: dit is een rest van het CMS of het sjabloon.`,
+            { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+              notitie: 'Een bezoeker ziet dit letterlijk op de pagina staan.' }));
+        }
+      }
+
+      // Een punt middenin een woord wijst op een vergeten spatie. Een webadres en een afkorting
+      // van losse letters ("U.S") zijn dat niet.
+      const isPlakfout = (w) => {
+        const delen = w.split('.').filter(Boolean);
+        if (delen.length < 2) return false;
+        if ((tc.plakfout.domeinen || []).some((d) => w.toLowerCase().endsWith(d))) return false;
+        return !delen.every((d) => d.length === 1);
+      };
+      const gezienPlak = new Set();
+      for (const z of teLezen) {
+        for (const ruw of z.tekst.split(/[\s/()[\]]+/)) {
+          const w = ruw.replace(/[\u2019]/g, "'").replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}']+$/gu, '');
+          if (!w || !/\p{L}/u.test(w) || /\d/.test(w) || w.includes('@')) continue;
+          if (!isPlakfout(w) || gezienPlak.has(w)) continue;
+          gezienPlak.add(w);
+          alGemeldWoord.add(w.toLowerCase());
+          // Alleen een suggestie doen als beide kanten een woord zijn. Bij "invullen.n" is een
+          // spatie niet de oplossing - daar staat een losse letter die weg moet - en dan is een
+          // verkeerde suggestie erger dan geen.
+          const beideWoorden = w.split('.').filter(Boolean).every((d) => d.length > 1);
+          b.push(bevinding('tekst-plakfout', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+            `"${w}": hier is een spatie vergeten.`,
+            { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+              ...(beideWoorden ? { verwacht: w.replace(/\.(?=\S)/g, '. ') } : {}),
+              ...(beideWoorden ? {} : { notitie: 'Let op: hier staat een los teken tegen het '
+                + 'woord aan. Kijk of dat weg moet in plaats van dat er een spatie bij komt.' }) }));
+        }
+      }
+
+      // Tekens zonder breedte. Niet te zien in de tekst, maar ze breken het zoeken, het kopieren
+      // en de schermlezer. Hier kan een redacteur niet zelf overheen lezen.
+      const gezienTeken = new Set();
+      for (const z of teLezen) {
+        for (const [teken, naam] of Object.entries(tc.onzichtbare_tekens.tekens || {})) {
+          if (!z.tekst.includes(teken) || gezienTeken.has(teken)) continue;
+          gezienTeken.add(teken);
+          b.push(bevinding('tekst-onzichtbaar-teken', ERNST.letop, 'Tekstcontrole (SpellingSpeurneus)',
+            `Er staat een ${naam} in de tekst.`,
+            { fragment: z.tekst.replace(new RegExp(teken, 'g'), '\u2423'), kop: z.kop,
+              herkomst: 'aanvulling',
+              notitie: 'Dit teken is niet te zien maar staat er wel. Het hoort hier weg; '
+                + 'in dit fragment staat er \u2423 op de plek waar het stond.' }));
+        }
+      }
+    }
+
+    // ---------- spelling ----------
+    // Overgenomen uit SpellingSpeurneus. Draait alleen als de woordenlijst geladen is.
+    //
+    // De woordenlijst kent geen plaats- en organisatienamen, en in reisadviezen staan die overal:
+    // National Hurricane Center, EMSC, Boko Haram. Zonder scheiding verdrinken de echte fouten
+    // daarin. Daarom deelt de tool elke melding in, net als SpellingSpeurneus dat doet, en staan
+    // namen in een eigen filter.
+    if (spelling) {
+      const gezienWoord = new Set();
+      for (const z of teLezen) {
+        // De zin één keer in woorden knippen, met de plek erbij. Daarmee is te zien of er naast
+        // een woord nóg een hoofdletterwoord staat, en dat is wat een naam een naam maakt.
+        const stukken = z.tekst.split(/[\s/()[\]]+/).map(schoonWoord);
+        const beginWoord = schoonWoord(
+          z.tekst.replace(/^[“‘'"([\s]+/, '').split(/[\s/()[\]]+/)[0] || '');
+
+        for (let i = 0; i < stukken.length; i += 1) {
+          const w = stukken[i];
+          if (!w || !/\p{L}/u.test(w)) continue;
+          if (/\d/.test(w) || w.includes('@')) continue;   // jaartallen, codes, e-mailadressen
+          if (isBekendWoord(w)) continue;
+          if (alGemeldWoord.has(w.toLowerCase()) || gezienWoord.has(w)) continue;
+          gezienWoord.add(w);
+
+          // Een hoofdletter middenin een zin is vrijwel altijd een naam. Aan het zinsbegin zegt
+          // een hoofdletter niets — zo blijft "Registeer" een spelfout. Maar namen komen in
+          // reeksen ("National Hurricane Center"), dus staat er direct naast nog een woord met
+          // een hoofdletter, dan is het ook aan het zinsbegin een naam.
+          const metHoofd = /^\p{Lu}/u.test(w);
+          const buurHoofd = [stukken[i - 1], stukken[i + 1]].some((x) => x && /^\p{Lu}/u.test(x));
+          const isNaam = metHoofd && (w !== beginWoord || buurHoofd);
+
+          if (isNaam) {
+            b.push(bevinding('woord-naam', ERNST.info, 'Tekstcontrole (SpellingSpeurneus)',
+              `"${w}" lijkt een naam. Staat die goed gespeld?`,
+              { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+                notitie: 'De woordenlijst kent geen plaats- en organisatienamen, dus de tool kan '
+                  + 'niet zien of deze goed staat. Dat blijft mensenwerk.' }));
+          } else {
+            b.push(bevinding('woord-onbekend', ERNST.letop, 'Tekstcontrole (SpellingSpeurneus)',
+              `"${w}" staat niet in de woordenlijst.`,
+              { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+                notitie: 'Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, '
+                  + 'dan meldt de tool het niet meer.' }));
+          }
+        }
+      }
+    }
+
+    // Een onderwerp dat de matrix als "niet melden" aanmerkt, hoort ook niet in de lopende tekst.
+    // Vaste teksten tellen niet mee: het trefwoord "ziekenhuis" staat in de voorgeschreven noodzin
+    // ("u bent opgenomen in het ziekenhuis"), en daar kan een redacteur niets aan doen.
+    const gezienNm = new Set();
+    for (const z of doc.zinnen) {
+      if (isVasteZin(z.tekst)) continue;
+      const n = norm(z.tekst);
+      for (const tref of nietMeldenTref) {
+        if (tref.alleenAlsKop) continue;                  // te alledaagse woorden voor de lopende tekst
+        if (nmGemeld.has(tref.onderwerp)) continue;      // er staat al een blok over; dat is de melding
+        if (magHierStaan(tref, z.h3 || z.h2)) continue;   // de matrix noemt deze rubriek zelf
+        if (!tref.re.test(n) || gezienNm.has(tref.onderwerp + '::' + tref.woord)) continue;
+        gezienNm.add(tref.onderwerp + '::' + tref.woord);
+        b.push(bevinding('tekst-niet-melden', ERNST.letop, 'MX, tab Koppen, richtlijn Niet melden',
+          `"${tref.woord}" gaat over ${tref.onderwerp}, en dat onderwerp hoort niet in een reisadvies.`,
+          { fragment: z.tekst, kop: z.h3 || z.h2, notitie: tref.toelichting || undefined }));
+      }
+    }
+
     for (const z of doc.zinnen) {
       if (isVasteZin(z.tekst)) continue;
       if (z.woorden > lim.zin.max_woorden) {
@@ -801,10 +1081,19 @@ export function maakToetser(data) {
           { fragment: z.tekst, kop: z.h3 || z.h2 }));
       }
       for (const w of wl.twijfeltaal.woorden) {
-        if (new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) {
-          b.push(bevinding('zin-twijfeltaal', ERNST.twijfel, 'SW, Begrijpelijkheid > B1',
-            `Twijfeltaal: "${w}".`, { fragment: z.tekst, kop: z.h3 || z.h2, ...herkomst(extraTwijfel, w) }));
-        }
+        if (!new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) continue;
+        // Twee soorten twijfeltaal, met dezelfde herkomst maar een ander gesprek. "Misschien" en
+        // "mogelijk" verzwakken de bewering zelf; daar is bijna altijd een stelliger zin voor.
+        // "Regelmatig" en "soms" zeggen hoe váák iets gebeurt, en dat is soms feitelijke nuance:
+        // over terroristische groepen kun je niet schrijven dát ze aanslagen plegen. Ze blijven
+        // allebei gemeld — de schrijfwijzer noemt "vaak" letterlijk — maar apart te filteren.
+        const isFrequentie = frequentieWoorden.has(w.toLowerCase());
+        b.push(bevinding(isFrequentie ? 'zin-frequentiewoord' : 'zin-twijfeltaal',
+          ERNST.twijfel, 'SW, Begrijpelijkheid > B1',
+          isFrequentie
+            ? `"${w}" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?`
+            : `Twijfeltaal: "${w}".`,
+          { fragment: z.tekst, kop: z.h3 || z.h2, ...herkomst(extraTwijfel, w) }));
       }
       const lv = lijdendeVorm(z.tekst);
       if (lv) {

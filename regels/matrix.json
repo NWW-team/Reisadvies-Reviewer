@@ -129,6 +129,7 @@
       "h2": "Veiligheidsrisico's",
       "h3": "Smog",
       "richtlijn": "niet-melden",
+      "mag_onder": ["Natuurgeweld"],
       "toelichting": "Evt. alleen indien er ernstig gevaar is voor iedereen. Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld.",
       "trefwoorden": [
         "smog",
@@ -172,8 +173,11 @@
         "wilde dieren",
         "slangen",
         "haaien",
-        "krokodillen"
-      ]
+        "krokodillen",
+        "beren",
+        "ijsberen"
+      ],
+      "_trefwoorden_aanvulling": "beren en ijsberen toegevoegd op verzoek, 18 september 2026: ze staan als tussenkop in reisadviezen terwijl de matrix wilde dieren als niet-melden aanmerkt."
     },
     {
       "id": "weeshuistoerisme",
@@ -258,6 +262,8 @@
       "h2": "Reisvoorbereiding",
       "h3": "Geldzaken",
       "richtlijn": "niet-melden",
+      "alleen_als_kop": true,
+      "_alleen_als_kop_noot": "Instructie van de opdrachtgever, 18 september 2026. De trefwoorden van Geldzaken zijn alledaagse woorden: pinnen, contant geld en geldautomaat staan vooral in zinnen over criminaliteit (gedwongen worden geld te pinnen) of vervoer (een taxi-app op je creditcard). Dat is een zin over ontvoering of over taxi's, niet over geldzaken. Het onderwerp Geldzaken hoort alleen in een reisadvies als je er echt contant geld nodig hebt om weg te kunnen of te kunnen eten, zoals in Cuba; dan staat er een kop boven, en die wordt via h3-niet-melden gemeld.",
       "toelichting": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden.",
       "trefwoorden": [
         "pinnen",
@@ -285,6 +291,7 @@
       "h2": "Reisvoorbereiding",
       "h3": "Thuisblijvers",
       "richtlijn": "niet-melden",
+      "mag_onder": ["In geval van nood"],
       "toelichting": "Evt. deels overhevelen naar In geval van nood.",
       "trefwoorden": [
         "thuisblijvers",
@@ -297,6 +304,7 @@
       "h2": "Reisvoorbereiding",
       "h3": "Gezondheidszorg",
       "richtlijn": "niet-melden",
+      "mag_onder": ["Reisverzekering"],
       "toelichting": "Evt. tekst opnemen bij Reisverzekering. Let op: slechte gezondheidszorg is nooit een reden om de kleurcode te wijzigen.",
       "trefwoorden": [
         "ziekenhuis",

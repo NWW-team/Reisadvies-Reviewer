@@ -72,8 +72,9 @@ Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
-*Te lange zinnen*, *Te lange zinnen incl. link*, *Linkteksten*, *Lijdende vorm*,
-*Twijfeltaal*, *Volgorde van de rubrieken* en *Notatie en stijl*. De indeling staat in
+*Te lange zinnen*, *Te lange zinnen incl. link*, *Tekstfouten*, *Mogelijke spelfouten*, *Namen*,
+*Linkteksten*, *Lijdende vorm*, *Twijfeltaal*, *Hoe vaak iets gebeurt*, *Volgorde van de rubrieken*
+en *Notatie en stijl*. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
 
 Te lange zinnen staan in twee filters, want het zijn twee klussen: zit de lengte in de linktekst,
@@ -175,6 +176,7 @@ node scripts/fetch-corpus.mjs    # reisadviezen ophalen (zie hieronder)
 node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
 node scripts/bouw-adviezen.mjs   # zet alle 226 adviezen klaar in docs/adviezen/
+node scripts/haal-woordenlijst.mjs  # haalt de OpenTaal-woordenlijst op voor de spellingtoets
 node scripts/bouw-site.mjs       # bouwt docs/index.html uit dist/app.html
 ```
 
@@ -196,6 +198,10 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 |---|---|
 | `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, sjabloon, woordenlijsten, limieten, landen |
 | `regels/groepen.json` | de filterindeling: welke regel hoort bij welk vinkje boven de bevindingen |
+| `regels/tekstcontrole.json` | resten van het CMS, vergeten spaties en onzichtbare tekens — overgenomen uit SpellingSpeurneus |
+| `regels/uitzonderingen.txt` | goedgekeurde woorden die niet in de OpenTaal-woordenlijst staan; deze lijst hoort bij de redactie |
+| `docs/woordenlijst.txt.gz` | de OpenTaal-woordenlijst, ingepakt. Ophalen met `scripts/haal-woordenlijst.mjs` |
+| `data/opentaal.sha256` | de versie van de woordenlijst waarop deze tool zich baseert |
 | `regels/HERKOMST.md` | per regel-id de vindplaats in de schrijfwijzer of de matrix |
 | `src/parse.js` | reisadvies naar een genormaliseerd document (koppen, alinea's, zinnen, links) |
 | `src/regels.js` | de harde regels, als pure functies |
@@ -219,8 +225,9 @@ code in Node draait (tests, bulkslag) en in de browser (de deelbare prototypepag
 ## Wat de bulkslag oplevert
 
 Over 226 live reisadviezen (`data/bulkrapport.md`, gedraaid met dezelfde regelset als de
-gepubliceerde pagina): 46 zitten boven de woordenlimiet, 99 hebben geen enkele rode fout, en
-25 adviezen bevatten een onderwerp dat de matrix als *niet melden* aanmerkt. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
+gepubliceerde pagina): 46 zitten boven de woordenlimiet, 96 hebben geen enkele rode fout, en
+44 adviezen bevatten een onderwerp dat de matrix als *niet melden* aanmerkt — als tussenkop of in
+de lopende tekst. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
 ruim 200 adviezen woordelijk hetzelfde staan. Die zijn met één aanpassing tegelijk opgelost, en
 het rapport zet ze daarom apart.
 
@@ -241,6 +248,23 @@ veranderde:
   ze dat als vaste tekst al waren. Dat scheelde 1085 meldingen (3845 → 2760): zinnen en linkteksten
   die te lang zijn omdat het sjabloon ze zo voorschrijft. Twee linkteksten alleen al waren goed voor
   429 meldingen.
+- Op 18 september 2026 kwamen daar de tussenkoppen op h4-niveau bij, werd twijfeltaal in twee
+  filters gesplitst en gaat de tool nu ook af op niet-melden-onderwerpen in de lopende tekst. Het
+  totaal staat op **2833** bevindingen. Drie meetronden waren nodig voordat die regels klopten:
+  woordgrenzen (*beren* zit in *proberen*), de rubriek die de matrix zelf aanwijst (*Foto's maken*
+  mag bij lokale wetten, 65 meldingen minder) en samenstellingen (*zandstormen* benoemt wel een
+  risico).
+- Uit [SpellingSpeurneus](https://github.com/NWW-team/SpellingSpeurneus), het spellingtooltje van
+  de redactie, zijn de drie controles overgenomen die geen woordenlijst nodig hebben: resten van
+  het CMS, een vergeten spatie na een punt, en tekens zonder breedte. Samen 17 meldingen over 226
+  adviezen, alle zeventien terecht — Estland had letterlijk het woord *undefined* op de pagina
+  staan.
+- Daarna is ook de **spellingtoets** zelf overgenomen. Die staat uit tot je hem aanzet: de
+  OpenTaal-woordenlijst is 409.487 woorden en wordt pas dan opgehaald (1,3 MB). Over 226 adviezen
+  geeft hij 146 mogelijke spelfouten — met daarin achttien echte tikfouten die nu live staan,
+  zoals *Registeer*, *doodstaf*, *riscio*, *prvincie* en *veiligsheidsrisico's* — en 1974 namen,
+  die in een eigen filter staan omdat de woordenlijst geen plaatsnamen kent. Het totaal met de
+  toets aan is **5010**; zonder blijft het 2890.
 
 ## Over de regels
 

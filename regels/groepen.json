@@ -18,6 +18,9 @@
         "h3-niet-melden",
         "h3-regionaal-alleen-bij-meerdere",
         "h3-vaste-kop",
+        "h4-natuurrisico",
+        "h4-niet-melden",
+        "h4-vaste-kop",
         "informatieservice-vaste-tekst",
         "intro-vaste-tekst",
         "kinderen-documenten",
@@ -52,6 +55,7 @@
         "rijbewijs-anwb",
         "rood-herhaling-voorbereiding",
         "rubrieken-max",
+        "tekst-niet-melden",
         "vaccinaties-ggd",
         "vaccinaties-lcr"
       ]
@@ -75,6 +79,32 @@
       ]
     },
     {
+      "id": "tekstfouten",
+      "label": "Tekstfouten",
+      "toelichting": "Resten van het CMS, een vergeten spatie, een onzichtbaar teken. Geen schrijfregels maar dingen die gewoon fout staan. Overgenomen uit SpellingSpeurneus.",
+      "regels": [
+        "tekst-cms-rest",
+        "tekst-onzichtbaar-teken",
+        "tekst-plakfout"
+      ]
+    },
+    {
+      "id": "spelling",
+      "label": "Mogelijke spelfouten",
+      "toelichting": "Woorden die niet in de OpenTaal-woordenlijst staan en er geen naam uitzien. Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer.",
+      "regels": [
+        "woord-onbekend"
+      ]
+    },
+    {
+      "id": "namen",
+      "label": "Namen",
+      "toelichting": "Plaatsen, organisaties en anderstalige bronnen. De woordenlijst kent die niet, dus de tool kan niet zien of ze goed gespeld staan - maar een verkeerd gespelde plaatsnaam blijft zo wel op te zoeken. Dit is meestal het eerste vinkje dat je uitzet.",
+      "regels": [
+        "woord-naam"
+      ]
+    },
+    {
       "id": "linktekst",
       "label": "Linkteksten",
       "toelichting": "Te lange linkteksten en urls.",
@@ -95,9 +125,17 @@
     {
       "id": "twijfeltaal",
       "label": "Twijfeltaal",
-      "toelichting": "Misschien, vaak, mogelijk, bijna. Let op: soms is een woord als \"regelmatig\" feitelijke nuance en geen slap taalgebruik.",
+      "toelichting": "Misschien, mogelijk, waarschijnlijk: woorden die de bewering zelf verzwakken. Daar is bijna altijd een stelliger formulering voor.",
       "regels": [
         "zin-twijfeltaal"
+      ]
+    },
+    {
+      "id": "frequentiewoorden",
+      "label": "Hoe vaak iets gebeurt",
+      "toelichting": "Vaak, soms, regelmatig. Ook twijfeltaal volgens de schrijfwijzer, maar soms feitelijke nuance: over terroristische groepen kun je niet schrijven dat ze aanslagen plegen.",
+      "regels": [
+        "zin-frequentiewoord"
       ]
     },
     {

@@ -127,6 +127,98 @@ Daarnaast toetst de tool op vorm die het sjabloon voorschrijft:
 | `nood-contactnummer` | SJ, blok *In geval van nood* | alleen de vaste nummers van het contactcenter |
 | `h3-vaste-kop` | SJ, blok *Risico dat van toepassing is*; MX, tab *Koppen* | de tussenkoppen liggen letterlijk vast: "Terrorisme", niet "Terroristische aanslagen" |
 
+## Tussenkoppen op h4-niveau (18 september 2026)
+
+Sinds de parser h4 kent, kunnen de tussenkoppen op dat niveau getoetst worden. Er staan er 4331 in
+de 226 adviezen, verdeeld over 996 verschillende koppen — waarvan 839 precies één keer. Een gesloten
+lijst kan dat nooit dekken, want een kop heet vaak naar zijn eigen onderwerp.
+
+| regel-id | vindplaats |
+|---|---|
+| `h4-vaste-kop` | SJ, de blokken *In geval van nood* en *Bagageregels*: daar schrijft het sjabloon de tussenkoppen letterlijk voor |
+| `h4-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden*, kolom trefwoorden |
+| `tekst-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden*, kolom trefwoorden |
+| `h4-natuurrisico` | **Geen letterlijke vindplaats.** Instructie van de opdrachtgever, 18 september 2026: een tussenkop onder Natuurgeweld moet een risico benoemen zoals vulkanen, orkanen of overstromingen — niet de plaats of de activiteit. |
+
+**Alleen nood en bagage.** Onder *Paspoort, visum, rijbewijs* en *Regionale risico's* voegen
+redacteuren terecht landspecifieke kopjes toe (*Inreisstempel*, *De provincie Cabinda*, *Grens met
+Mali*). Gemeten: die twee rubrieken leverden 85 meldingen op die inhoudelijk allemaal klopten, dus
+daar geldt geen vaste lijst.
+
+**De landnaam in een kop wordt soepel vergeleken.** Adviezen schrijven *"naar de Bahama's"*, *"naar
+het VK"*, *"op de Seychellen"*, terwijl het sjabloon `{land}` zegt. Zonder die soepelheid gaf de
+regel 198 meldingen in plaats van 22, vrijwel allemaal onterecht. Dit is dezelfde aanpak die
+`isVasteH2` al gebruikte voor de H2-koppen.
+
+`vaste_koppen` is aangevuld met de vertegenwoordigingsvarianten: niet elk land heeft een ambassade,
+sommige hebben een consulaat-generaal, een ambassadekantoor of alleen een honorair consul. Dat is
+een feit over het land, geen afwijking van het format.
+
+**`beren` en `ijsberen`** zijn op verzoek toegevoegd aan de trefwoorden van *Wilde dieren*. Ze staan
+als tussenkop in reisadviezen terwijl de matrix dat onderwerp als niet-melden aanmerkt.
+
+**Ook in de lopende tekst (`tekst-niet-melden`).** Op verzoek van de opdrachtgever, 18 september
+2026: staat een niet-melden-onderwerp in de tekst zelf, dan is dat ook een melding. Eerst was dit
+afgeraden, omdat een eerste meting *Gezondheidszorg* in alle 226 adviezen liet afgaan: het trefwoord
+*ziekenhuis* staat in de voorgeschreven noodtekst (*"u bent opgenomen in het ziekenhuis"*). Drie
+dingen maken de regel alsnog bruikbaar, en samen brengen ze hem van 226 naar 39 meldingen:
+
+1. **Vaste teksten tellen niet mee.** Wat het sjabloon voorschrijft, kan de redacteur niet
+   veranderen. Gezondheidszorg ging daarmee van 226 naar 3.
+2. **Staat er al een kop over, dan is dat de melding.** `h3-niet-melden` en `h4-niet-melden` melden
+   het blok; de tool zegt niet twee keer hetzelfde. Dat halveerde de rest, van 121 naar 50.
+3. **Op hele woorden, niet op deelstrings.** *beren* zit in *proberen*: zonder woordgrenzen werd
+   *"automobilisten proberen af te persen"* een zin over wilde dieren.
+
+**De matrix wijst sommige onderwerpen zelf een plek aan (`mag_onder`).** Bij vier niet-melden-koppen
+staat in de toelichting wáár het onderwerp wél mag staan:
+
+| onderwerp | wat de matrix zegt | mag onder |
+|---|---|---|
+| Foto's maken | "Kan evt. bij lokale wetten als het echt moet." | Wetten en gebruiken |
+| Gezondheidszorg | "Evt. tekst opnemen bij Reisverzekering." | Reisverzekering |
+| Thuisblijvers | "Evt. deels overhevelen naar In geval van nood." | In geval van nood |
+| Smog | "Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld." | Natuurgeweld |
+
+Staat het onderwerp daar, dan meldt de tool het niet. De afweging *is het hier echt nodig* kan een
+harde regel niet maken; die hoort bij de oordeelstoets. Zonder deze uitzondering ging
+`h4-niet-melden` in 49 adviezen af op precies de kop die de matrix toestaat: *Foto's maken* onder
+*Wetten en gebruiken*. Daarmee gaat de regel van 69 naar 4 meldingen en `tekst-niet-melden` van 39
+naar 23.
+
+**Samenstellingen bij `h4-natuurrisico`.** Nederlands plakt woorden aan elkaar: *zandstormen* en
+*zeestromingen* benoemen een risico, maar het risicowoord staat niet vooraan. Een stam van vijf
+letters of meer mag daarom ook middenin een woord staan; kortere stammen moeten aan het woordbegin
+staan, anders valt *ijs* in *prijs*.
+
+Een kop blijft een zwaarder signaal dan een woord in een zin — een kop is een bewuste keuze om een
+blok aan een onderwerp te wijden. Daarom is dit *let op* en geen fout: de redacteur kijkt ernaar en
+beslist zelf.
+
+## Twijfeltaal gesplitst in twee regels (18 september 2026)
+
+| regel-id | vindplaats |
+|---|---|
+| `zin-twijfeltaal` | SW, *Begrijpelijkheid > B1*: "Vermijd twijfeltaal. Denk aan woorden zoals: misschien, vaak, mogelijk, bijna, etc." |
+| `zin-frequentiewoord` | Dezelfde vindplaats. Alleen de indeling is nieuw. |
+
+Beide regels komen uit dezelfde zin in de schrijfwijzer en melden allebei nog steeds. Wat verandert
+is dat je ze apart kunt filteren, omdat het twee verschillende gesprekken zijn:
+
+- **Verzwakkers** (*misschien, mogelijk, waarschijnlijk*) verzwakken de bewering zelf. Daar is bijna
+  altijd een stelliger formulering voor.
+- **Frequentiewoorden** (*vaak, soms, regelmatig*) zeggen hoe váák iets gebeurt. Dat is soms
+  feitelijke nuance: over terroristische groepen kun je niet schrijven dát ze aanslagen plegen — ze
+  doen het regelmatig of soms.
+
+**Let op bij het lezen van deze indeling.** De schrijfwijzer noemt *"vaak"* letterlijk als voorbeeld
+van twijfeltaal. Het onderscheid hierboven is dus een hulpmiddel bij het nalopen en géén uitspraak
+dat frequentiewoorden buiten de regel vallen. De boodschap bij een frequentiewoord is daarom een
+vraag — *"klopt dat hier, of kan het stelliger?"* — en geen constatering.
+
+Gemeten op 18 september 2026 over 226 reisadviezen: regelmatig 153, vaak 129, soms 107 — samen 389
+van de 473 twijfeltaal-bevindingen (82%). De verzwakkers samen 58.
+
 ## Vaste formuleringen zijn vrijgesteld van de schrijfregels (18 september 2026)
 
 Het sjabloon legt formuleringen vast die zelf niet binnen de schrijfwijzer passen. *"Check welke
@@ -222,3 +314,85 @@ De overige acht id's in dit document (`b1-woordmoeilijkheid`, `begrijpelijkheid`
 `naamwoordstijl`, `jargon`, `subjectieve-taal`, `matrix-verwijzen-vs-uitschrijven`,
 `matrix-niet-melden-in-tekst`, `handelingsperspectief`) horen bij laag 2, de oordeelstoets.
 Die draait op een model en niet in `src/regels.js`; dat is met opzet zo.
+
+## Tekstfouten, overgenomen uit SpellingSpeurneus (18 september 2026)
+
+De redactie heeft een tweede tooltje: [SpellingSpeurneus](https://github.com/NWW-team/SpellingSpeurneus),
+dat nederlandwereldwijd.nl langsloopt met de OpenTaal-woordenlijst. Drie van zijn controles hebben
+die lijst helemaal niet nodig, en die horen hier thuis — zonder dependency, zonder buildstap.
+
+| regel-id | vindplaats | wat |
+|---|---|---|
+| `tekst-cms-rest` | **Geen brondocument.** `scripts/crawl.py`, `SJABLOONRESTEN` | `undefined`, `[object Object]`, `{{titel}}`, `&#39;`: resten van het CMS die de bezoeker ziet staan |
+| `tekst-plakfout` | **Geen brondocument.** `scripts/crawl.py`, `is_plakfout` | een punt middenin een woord: "demonstraties.Volg het nieuws" |
+| `tekst-onzichtbaar-teken` | **Geen brondocument.** `scripts/crawl.py`, `ONZICHTBAAR` | tekens zonder breedte, uit Word of een ander CMS |
+
+Ze dragen `herkomst: 'aanvulling'`, want ze staan niet in schrijfwijzer, matrix of sjabloon. Het zijn
+ook geen schrijfregels: er is iets misgegaan tussen het CMS en de pagina. Daarom een eigen
+filtergroep — dat is een ander gesprek dan *kan deze zin korter*.
+
+Gemeten op 18 september 2026 over 226 adviezen: **3 + 4 + 7 = 14 meldingen, alle veertien terecht.**
+Estland had letterlijk het woord *undefined* boven een kop staan, Congo en Mali tonen `&#39;` in de
+introzin (die tekst is dubbel ge-escaped), en vier adviezen missen een spatie na een punt.
+
+**Wat hier níét uit is overgenomen: de spellingtoets zelf.** Die draait op de OpenTaal-lijst van
+ruim 413.000 woorden. Die lijst bij de pagina insluiten kan niet — `dist/app.html` is nu 238 kB — en
+hem apart lazy laden is een keuze die de opdrachtgever moet maken, niet de bouwer. De indeling die
+SpellingSpeurneus daarvoor bedacht (een hoofdletter middenin een zin is een naam, aan het zinsbegin
+niet, en een vergeten spatie gaat voor) is wel het overnemen waard als dat een keer gebeurt: die
+haalt 87% van de meldingen uit beeld zonder ze weg te gooien.
+
+## De spellingtoets zelf, alsnog overgenomen (18 september 2026)
+
+Op verzoek van de opdrachtgever is ook de spellingtoets uit SpellingSpeurneus overgenomen.
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `woord-onbekend` | **Geen brondocument.** OpenTaal-woordenlijst + `regels/uitzonderingen.txt` | let op |
+| `woord-naam` | **Geen brondocument.** Dezelfde toets, andere indeling | ter overweging |
+
+**Waar de woordenlijst staat.** `docs/woordenlijst.txt.gz`: 409.487 woorden van OpenTaal, kleine
+letters, ontdubbeld, 1,3 MB ingepakt. `scripts/haal-woordenlijst.mjs` haalt hem op en vergelijkt de
+sha256 met `data/opentaal.sha256` — wijkt die af, dan stopt het script, want dan toets je aan een
+andere spelling dan de vorige keer. Diezelfde sha256 staat in SpellingSpeurneus; nagetoetst en
+gelijk, dus beide tools oordelen over dezelfde spelling.
+
+**Hij wordt pas opgehaald als een redacteur hem aanzet.** In de pagina vouwen kan niet: die is
+259 kB en zou vertienvoudigen. Dus staat er een knop, en pas daarna draait de toets. Lukt ophalen
+niet — geen internet, of de pagina staat los op schijf — dan zegt de knop dat en werkt de rest
+gewoon door. De eigen uitzonderingen zitten wél in de pagina: dat zijn een paar honderd woorden en
+ze horen bij elke herbouw mee te komen.
+
+**Namen apart.** De woordenlijst kent geen plaats- en organisatienamen, en in reisadviezen staan
+die overal: *National Hurricane Center*, *EMSC*, *Boko Haram*. Zonder scheiding verdrinken de echte
+fouten daarin. De regel van SpellingSpeurneus: een hoofdletter middenin een zin is een naam, aan het
+zinsbegin zegt een hoofdletter niets. Hier is er één ding bij gekomen: **namen komen in reeksen**.
+Zonder dat werd *National* in "National Hurricane Center" als spelfout gemeld, want het staat
+vooraan. Staat er direct naast nóg een woord met een hoofdletter, dan is het ook aan het zinsbegin
+een naam. Dat scheelde 51 onterechte spelfouten.
+
+**Gemeten op 18 september 2026 over 226 adviezen.** 146 mogelijke spelfouten (0,6 per advies) en
+1974 namen (8,7 per advies). Die namen zijn veel, en daarom staan ze in een eigen filter — meestal
+het eerste vinkje dat je uitzet. Ze worden niet weggegooid: een verkeerd gespelde plaatsnaam blijft
+zo op te zoeken.
+
+Drie dingen die de meting nodig had voordat de toets bruikbaar was:
+
+1. **`lhbtiq` in de uitzonderingen.** Dat woord staat twee keer in bijna elk reisadvies en de
+   schrijfwijzer schrijft die schrijfwijze voor. Goed voor 395 van de eerste 686 meldingen.
+2. **Een aanhalingsteken aan het eind is een citaatteken, geen apostrof.** ‘bagsnatching’ werd
+   *bagsnatching'* en dus onbekend. Bij "foto's" hoort de apostrof er wél bij, maar die staat niet
+   aan het eind.
+3. **Een woord dat op een streepje eindigt is een weglating, geen woord**: "identiteits- en
+   reisdocumenten".
+
+Wat de tekstfouten hierboven al melden, meldt de spellingtoets niet nog een keer: *undefined* is
+een CMS-rest en *demonstraties.Volg* een vergeten spatie, en dat is telkens de nuttiger boodschap.
+
+**Wat de toets níét kan.** Beoordelen of een naam goed gespeld is. *Cochabamba* en een verkeerd
+gespelde variant krijgen dezelfde melding, want geen van beide staat in de woordenlijst. Dat
+nakijken blijft mensenwerk — dat is in SpellingSpeurneus ook zo.
+
+**Vals alarm.** Klopt een woord wel? Dan hoort het in `regels/uitzonderingen.txt`. Die lijst hoort
+bij de webredactie, niet bij de techniek, en groeit met het gebruik. De basis komt uit
+SpellingSpeurneus; wat daarna is gemeten over de reisadviezen staat er onderaan bij.

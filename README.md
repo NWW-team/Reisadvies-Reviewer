@@ -15,9 +15,19 @@ gratis, dus bruikbaar over alle 226 adviezen tegelijk.
 dat de matrix als *verwijzen* aanmerkt niet te ver is uitgeschreven. Deze laag draait per advies,
 op verzoek, en doet een herschrijfvoorstel op zinsniveau.
 
+**Eén of meerdere kleurcodes.** Geldt er één kleurcode, dan staat in *In het kort* de volledige
+uitleg. Zijn het er meer, dan staat daar per gebied de verkorte variant en volgt de volledige uitleg
+onder *Regionale risico's*, onder een vast kopje per kleur. De tool toetst welke variant hoort en of
+*In het kort* doorverwijst met "Lees meer onder Regionale risico's". Welke kleuren een advies heeft
+komt uit het cms-veld, niet uit de lopende tekst — een advies kan een ánder land noemen.
+
 Elke bevinding draagt zijn bron mee: **SW** = schrijfwijzer, **MX** = format-matrix,
 **SJ** = sjabloon. `regels/HERKOMST.md` legt per regel-id de vindplaats vast — een bevinding
-zonder bron hoort de tool niet te geven.
+zonder bron hoort de tool niet te geven, en een test bewaakt dat.
+
+Steunt een bevinding op een woord dat de tool zelf heeft toegevoegd in plaats van op een geciteerde
+regel, dan staat dat erbij als **aanvulling**. Zo is bij de review te zien welk deel van het oordeel
+uit de bron komt en welk deel een keuze van de bouwer is.
 
 ## In de tool
 
@@ -56,6 +66,28 @@ kunt aflopen:
 Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een fout moet je hoe
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
 
+**Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
+*Te lange zinnen*, *Te lange zinnen incl. link*, *Linkteksten*, *Lijdende vorm*,
+*Twijfeltaal*, *Volgorde van de rubrieken* en *Notatie en stijl*. De indeling staat in
+`regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
+
+Te lange zinnen staan in twee filters, want het zijn twee klussen: zit de lengte in de linktekst,
+dan kort je die in; is het een lange lopende zin, dan splits je hem. Ze komen uit dezelfde regel,
+dus een filtergroep mag zich met het veld `ernst` beperken tot bevindingen van die soort.
+
+Kleur en groep zijn met opzet twee verschillende dingen. De **kleur** zegt hoe ernstig een bevinding
+is en bepaalt de volgorde. De **groep** zegt wat voor soort het is en bepaalt alleen wat je opzij
+zet. Daarom valt *te veel rubrieken* onder *Fout en format* terwijl het geel blijft.
+
+Filteren verbergt, het schrapt niet. Elk advies begint met alles aan, er staat altijd bij hoeveel er
+buiten beeld is, en het rapport vermeldt de filterstand — het gaat naar iemand die hem niet ziet.
+Vier groepen zijn samen ruim 70% van alle bevindingen; met die uit ga je van bijna 17 naar krap 5
+bevindingen per advies, zonder dat er één regel verdwijnt.
+
+**Melding en zin naast elkaar.** Op een breed scherm heeft elk paneel zijn eigen scroll. Klik je een
+bevinding aan, dan schuiven beide panelen zo dat de melding en de gemarkeerde zin op dezelfde hoogte
+staan. Staat de pagina in één kolom, dan kan dat niet en springt hij naar de andere kant.
+
 **De drie oordelen** bij elke bevinding zeggen elk iets anders, en dat is met opzet:
 
 | oordeel | betekenis | wat het over de tool zegt |
@@ -80,26 +112,32 @@ Kort: *oneens* gaat over het advies, *onterecht* gaat over de tool. Een regel di
 Beide werken zonder bibliotheek, zonder server en zonder download — dat laatste met opzet, want
 de Artifact-omgeving blokkeert downloads die een pagina zelf start.
 
-## Let op: twee varianten van de pagina naast elkaar
+## Eén bron, twee bouwstappen
 
-Deze main bevat het resultaat van twee parallel ontwikkelde takken. Ze overlappen:
+De regels staan op één plek: `src/` voor de code, `regels/*.json` voor de data. Alles wat
+gepubliceerd wordt, komt daaruit:
 
-| pad | wat | stand |
-| --- | --- | --- |
-| `reisadvies-reviewer.html` | de hele tool in één bestand, zonder build | **nieuwst** — bevat als enige de sjabloonregels (SJ) |
-| `src/` + `regels/` + `scripts/bouw-pagina.mjs` → `dist/app.html` | dezelfde tool, opgesplitst in modules en regeldata | heeft als enige het corpus, de bulkslag en de tests per regel |
+```
+src/ + regels/  --bouw-pagina.mjs-->  dist/app.html  --bouw-site.mjs-->  docs/index.html
+                                      (de Artifact)                      (GitHub Pages)
+```
 
-`reisadvies-reviewer.html` is opgebouwd uit `dist/app.html` (ruim duizend regels zijn woordelijk
-gelijk) met de sjabloonregels erbij. De twee zijn nog niet samengevoegd: de SJ-regels zitten
-alleen in het losse bestand en nog niet in `regels/*.json` en `src/regels.js`.
+`dist/app.html` is de tool als één bestand, met parser, regels, regeldata en drie echte adviezen
+erin gevouwen — nodig omdat de Artifact-omgeving geen externe verzoeken mag doen. `bouw-site.mjs`
+zet daar alleen een compleet html-document omheen, met `config.js` en `toegang.js` ervoor.
 
-**Nog te doen:** de SJ-regels terugbrengen naar `regels/` en `src/regels.js`, `dist/app.html`
-opnieuw bouwen met `scripts/bouw-pagina.mjs`, en daarna `reisadvies-reviewer.html` laten vervallen
-of juist tot enige bron maken. Kies één van beide voordat er nieuwe regels bij komen.
+Beide zijn gegenereerd. Wijzig ze nooit met de hand: een aanpassing hoort in `src/` of `regels/`,
+daarna opnieuw bouwen. De tests en de bulkslag draaien tegen `dist/app.html`, zodat ze meten wat
+een redacteur werkelijk in de tool ziet.
+
+Tot september 2026 stond hier een tweede, losse variant (`reisadvies-reviewer.html`) die als enige
+de sjabloonregels had. Die is samengevoegd en vervallen; de SJ-regels zitten nu in `regels/sjabloon.json`
+en `src/regels.js`. Over alle 226 adviezen geeft de gebouwde pagina exact dezelfde bevindingen als
+de losse variant daarvoor.
 
 ## Toegang (de Pages-versie)
 
-`docs/` is de versie die op GitHub Pages draait, gebouwd uit `reisadvies-reviewer.html`
+`docs/` is de versie die op GitHub Pages draait, gebouwd uit `dist/app.html`
 met `node scripts/bouw-site.mjs`. De bronpagina wordt daarbij niet aangepast.
 
 Wat wel en niet is afgeschermd:
@@ -132,7 +170,7 @@ node scripts/fetch-corpus.mjs    # reisadviezen ophalen (zie hieronder)
 node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
 node scripts/bouw-adviezen.mjs   # zet alle 226 adviezen klaar in docs/adviezen/
-node scripts/bouw-site.mjs       # bouwt docs/index.html uit reisadvies-reviewer.html
+node scripts/bouw-site.mjs       # bouwt docs/index.html uit dist/app.html
 ```
 
 ## Het corpus ophalen
@@ -151,13 +189,14 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 
 | pad | wat |
 |---|---|
-| `reisadvies-reviewer.html` | de tool als één bestand, inclusief de sjabloonregels |
-| `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, woordenlijsten, limieten, landen |
+| `regels/*.json` | de regelset als data: matrix, kleurcode-teksten, sjabloon, woordenlijsten, limieten, landen |
+| `regels/groepen.json` | de filterindeling: welke regel hoort bij welk vinkje boven de bevindingen |
 | `regels/HERKOMST.md` | per regel-id de vindplaats in de schrijfwijzer of de matrix |
 | `src/parse.js` | reisadvies naar een genormaliseerd document (koppen, alinea's, zinnen, links) |
 | `src/regels.js` | de harde regels, als pure functies |
 | `src/adapter.js` | ruwe API-respons naar de velden die de toetser nodig heeft |
 | `src/app.html` | de paginasjabloon; `scripts/bouw-pagina.mjs` vouwt de regels erin |
+| `dist/app.html` | de gebouwde tool als één bestand — gegenereerd, niet met de hand bijwerken |
 | `scripts/fetch-corpus.mjs` | ophalen van de reisadviezen |
 | `scripts/bulk.mjs` | alle adviezen toetsen en een rapport schrijven |
 | `scripts/bouw-adviezen.mjs` | het corpus klaarzetten als `docs/adviezen/`, zodat alle landen in de lijst staan |
@@ -174,14 +213,24 @@ code in Node draait (tests, bulkslag) en in de browser (de deelbare prototypepag
 ## Wat de bulkslag oplevert
 
 Over 226 live reisadviezen (`data/bulkrapport.md`, gedraaid met dezelfde regelset als de
-gepubliceerde pagina): 46 zitten boven de woordenlimiet, 123 hebben geen enkele rode fout, en
+gepubliceerde pagina): 46 zitten boven de woordenlimiet, 99 hebben geen enkele rode fout, en
 25 adviezen bevatten een onderwerp dat de matrix als *niet melden* aanmerkt. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
 ruim 200 adviezen woordelijk hetzelfde staan. Die zijn met één aanpassing tegelijk opgelost, en
 het rapport zet ze daarom apart.
 
-Let op bij het vergelijken met een ouder rapport: te lange zinnen tellen sinds de kleurindeling
-hierboven niet meer als *fout* maar als *let op* of *lange zin met link*. Het aantal "harde
-fouten" daalde daardoor scherp zonder dat er één advies veranderde.
+Let op bij het vergelijken met een ouder rapport. Twee dingen verschoven zonder dat er één advies
+veranderde:
+
+- Te lange zinnen tellen sinds de kleurindeling hierboven niet meer als *fout* maar als *let op*
+  of *lange zin met link*. Het aantal "harde fouten" daalde daardoor scherp.
+- Sinds 18 september 2026 vervielen 76 onterechte meldingen (65 over de eerste kleurbullet, 11 over
+  de komma in "Paspoort, rijbewijs") en kwamen er 56 bij uit drie regels die er nog niet waren:
+  afwijkende tussenkoppen, rubrieken die alleen bij uitzondering horen, en vervolgbullets over de
+  kleurcode. Het totaal ging van 3812 naar 3792, maar de samenstelling is wezenlijk anders.
+- Daarna kwam het onderscheid tussen één en meerdere kleurcodes erbij (60 bevindingen), en leerde de
+  parser h4-koppen kennen. Het aantal adviezen zonder harde fout daalde van 119 naar 99; niet omdat
+  er iets verslechterde, maar omdat de tool nu ziet of de juiste variant van de vaste kleurtekst is
+  gebruikt.
 
 ## Over de regels
 

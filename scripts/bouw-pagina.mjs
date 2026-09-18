@@ -30,13 +30,16 @@ function alsNamespace(bron, naam, exports, vervang = []) {
 
 const parse = alsNamespace(lees('src', 'parse.js'), 'Parse', ['parseAdvies', 'splitsZinnen', 'telWoorden']);
 const regels = alsNamespace(lees('src', 'regels.js'), 'Regels', ['maakToetser', 'norm', 'ERNST', 'ERNST_VOLGORDE'],
-  [[/^import \{ telWoorden \} from '\.\/parse\.js';$/m, 'const telWoorden = Parse.telWoorden;']]);
+  [[/^import \{ telWoorden, splitsZinnen \} from '\.\/parse\.js';$/m,
+    'const telWoorden = Parse.telWoorden;\nconst splitsZinnen = Parse.splitsZinnen;']]);
 
 const regeldata = {
   matrix: JSON.parse(lees('regels', 'matrix.json')),
   kleurcodes: JSON.parse(lees('regels', 'kleurcodes.json')),
   woordenlijsten: JSON.parse(lees('regels', 'woordenlijsten.json')),
   limieten: JSON.parse(lees('regels', 'limieten.json')),
+  sjabloon: JSON.parse(lees('regels', 'sjabloon.json')),
+  groepen: JSON.parse(lees('regels', 'groepen.json')),
 };
 
 // Drie echte adviezen, gekozen om verschillende situaties te laten zien.

@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-09-15 over 226 reisadviezen.
+Gedraaid op 2026-09-18 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **123** van de 226 adviezen hebben geen enkele harde fout.
+- **99** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
-- Gemiddeld 0.6 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **88** van de 3812 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- Gemiddeld 0.9 eigen fouten per advies, los van wat uit de standaardtekst komt.
+- **88** van de 3845 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -28,10 +28,10 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 141 | 103 |
-| geel/oranje — let op | 2146 | 226 |
+| rood — fout | 210 | 127 |
+| geel/oranje — let op | 2028 | 226 |
 | lichtblauw — lange zin met link | 945 | 226 |
-| grijs — ter overweging | 53 | 43 |
+| grijs — ter overweging | 135 | 101 |
 | roze — twijfeltaal | 527 | 183 |
 
 ## Per regel
@@ -42,10 +42,11 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `link-tekstlengte` | 226 | 486 |
 | `zin-twijfeltaal` | 183 | 527 |
 | `zin-lijdende-vorm` | 123 | 272 |
-| `kleur-eerste-bullet-voluit` | 68 | 68 |
-| `aanhalingstekens` | 53 | 87 |
+| `aanhalingstekens` | 53 | 86 |
 | `rubrieken-volgorde` | 53 | 53 |
+| `kleur-variant` | 47 | 53 |
 | `doc-woordenaantal` | 46 | 46 |
+| `h3-alleen-bij-uitzondering` | 40 | 40 |
 | `rubrieken-max` | 36 | 36 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
@@ -55,8 +56,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |
 | `rijbewijs-anwb` | 13 | 13 |
-| `tussenkop-leestekens` | 11 | 11 |
-| `vragen-opeenvolgend` | 10 | 11 |
+| `h3-vaste-kop` | 11 | 11 |
 | `actueel-max-woorden` | 10 | 10 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
@@ -65,14 +65,17 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `medicijnen-voldoende` | 7 | 7 |
 | `link-verboden-partij` | 6 | 7 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
+| `kleur-vervolg-bullet-kort` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
 | `titel-leestekens` | 5 | 5 |
+| `vragen-opeenvolgend` | 5 | 6 |
+| `regionaal-kleur-tekst` | 4 | 5 |
 | `h2-vast` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
+| `kleur-eerste-bullet-voluit` | 3 | 3 |
 | `afkortingen-uitschrijven` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
-| `criminaliteit-themapagina` | 3 | 3 |
 | `lhbtiq-verwijzing` | 2 | 2 |
 | `lhbtiq-schrijfwijze` | 2 | 2 |
 | `kleur-formulering-verboden` | 2 | 2 |
@@ -80,7 +83,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |
 | `telefoon-notatie` | 2 | 3 |
+| `criminaliteit-themapagina` | 2 | 2 |
 | `genderneutraal` | 2 | 3 |
+| `regionaal-kleur-kop` | 2 | 2 |
 | `informatieservice-vaste-tekst` | 1 | 1 |
 | `vaccinaties-ggd` | 1 | 1 |
 | `vaccinaties-lcr` | 1 | 1 |

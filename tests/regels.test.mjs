@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { advies, idsVan, bevindingenVan, regeldata } from './helpers.mjs';
 import { ERNST_VOLGORDE } from '../src/regels.js';
 
@@ -22,6 +23,102 @@ const gevallen = [
     regel: 'h3-niet-melden',
     faalt: "<h2>Veiligheidsrisico’s</h2><h3>Wilde dieren</h3><p>Er zijn beren.</p>",
     slaagt: "<h2>Veiligheidsrisico’s</h2><h3>Criminaliteit</h3><p>Er zijn zakkenrollers.</p>",
+  },
+  {
+    // Bij een kleurcode geldt de kleur voor het hele land: dan hoort de volledige uitleg in
+    // "In het kort". De verkorte variant is voor een advies met meer dan een kleurcode.
+    regel: 'kleur-variant',
+    faalt: '<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Tsjechi\u00eb is groen. '
+      + 'U kunt hierheen reizen. Lees welke veiligheidsrisico&#39;s er zijn.</li></ul>',
+    slaagt: null, // gedekt door schoon.test.mjs
+  },
+  {
+    // Bij meerdere kleurcodes staat de volledige uitleg onder Regionale risico&#39;s, onder een vast
+    // kopje per kleur.
+    regel: 'regionaal-kleur-kop',
+    faalt: '<h2>In het kort</h2><ul>'
+      + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
+      + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+      + '<li>Voor de rest van Tsjechi\u00eb geldt kleurcode groen. U kunt hierheen reizen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</li>'
+      + '<li>Lees meer onder Regionale risico&#39;s.</li></ul>'
+      + "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2><h3>Regionale risico&#39;s</h3>"
+      + '<h4>Oranje: hier niet heen</h4><p>Reis alleen naar gebieden met kleurcode oranje als dit '
+      + 'noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen '
+      + 'moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u '
+      + 'minder goed helpen als u in de problemen komt.</p>'
+      + '<h4>Groen: u kunt erheen reizen</h4><p>U kunt reizen naar gebieden met kleurcode groen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</p>',
+    slaagt: null,
+    meta: { kleurcodes: ['oranje', 'groen'] },
+  },
+  {
+    // En onder dat kopje hoort de volledige uitleg voor die kleur.
+    regel: 'regionaal-kleur-tekst',
+    faalt: '<h2>In het kort</h2><ul>'
+      + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
+      + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+      + '<li>Voor de rest van Tsjechi\u00eb geldt kleurcode groen. U kunt hierheen reizen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</li>'
+      + '<li>Lees meer onder Regionale risico&#39;s.</li></ul>'
+      + "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2><h3>Regionale risico&#39;s</h3>"
+      + '<h4>Oranje: alleen noodzakelijke reizen</h4><p>Ga hier liever niet heen.</p>'
+      + '<h4>Groen: u kunt erheen reizen</h4><p>U kunt reizen naar gebieden met kleurcode groen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</p>',
+    slaagt: null,
+    meta: { kleurcodes: ['oranje', 'groen'] },
+  },
+  {
+    // Elke verwijzing vanuit "In het kort" heeft de vorm "Lees meer onder X".
+    regel: 'kort-verwijzing-vorm',
+    faalt: '<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Tsjechi\u00eb is groen. '
+      + 'U kunt erheen reizen. Lees welke veiligheidsrisico&#39;s er zijn.</li>'
+      + '<li>Zie onder Actueel wat er speelt.</li></ul>',
+    slaagt: null,
+  },
+  {
+    // Bij meerdere kleurcodes moet "In het kort" naar Regionale risico&#39;s verwijzen, want daar
+    // staat de volledige uitleg.
+    regel: 'kort-verwijst-regionaal',
+    faalt: '<h2>In het kort</h2><ul>'
+      + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
+      + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+      + '<li>Voor de rest van Tsjechi\u00eb geldt kleurcode groen. U kunt hierheen reizen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</li></ul>',
+    slaagt: null,
+    meta: { kleurcodes: ['oranje', 'groen'] },
+  },
+  {
+    // Het sjabloon schrijft de tussenkoppen letterlijk voor.
+    regel: 'h3-vaste-kop',
+    faalt: "<h2>Veiligheidsrisico’s</h2><h3>Terroristische aanslagen</h3><p>Er is dreiging.</p>",
+    slaagt: "<h2>Veiligheidsrisico’s</h2><h3>Terrorisme</h3><p>Er is dreiging.</p>",
+  },
+  {
+    // "Paspoort, visum, rijbewijs" noemt de documenten die voor dit land gelden. Een land zonder
+    // visumplicht laat dat element weg; dat mag, een andere volgorde niet.
+    regel: 'h3-vaste-kop',
+    faalt: '<h2>Hoe bereid ik mijn reis voor?</h2><h3>Rijbewijs, paspoort</h3><p>Tekst.</p>',
+    slaagt: '<h2>Hoe bereid ik mijn reis voor?</h2><h3>Paspoort, rijbewijs</h3><p>Tekst.</p>',
+  },
+  {
+    regel: 'h3-alleen-bij-uitzondering',
+    faalt: "<h2>Veiligheidsrisico’s</h2><h3>Verkeersongevallen</h3><p>Er vallen doden.</p>",
+    slaagt: "<h2>Veiligheidsrisico’s</h2><h3>Criminaliteit</h3><p>Er zijn zakkenrollers.</p>",
+  },
+  {
+    // De eerste kleurbullet staat voluit; beide voluit-vormen uit de matrix zijn geldig.
+    regel: 'kleur-eerste-bullet-voluit',
+    faalt: '<h2>In het kort</h2><ul><li>Kleurcode groen geldt voor Tsjechië.</li></ul>',
+    slaagt: null, // gedekt door schoon.test.mjs
+  },
+  {
+    // Alleen de eerste bullet staat voluit; een vervolgbullet die dat herhaalt maakt het blok lang.
+    regel: 'kleur-vervolg-bullet-kort',
+    faalt: '<h2>In het kort</h2><ul>'
+      + '<li>De kleurcode van het reisadvies voor Tsjechië is groen.</li>'
+      + '<li>De kleurcode van het reisadvies voor de gebieden Noord is oranje.</li></ul>',
+    slaagt: null, // gedekt door schoon.test.mjs
   },
   {
     regel: 'h2-vast',
@@ -140,7 +237,9 @@ const gevallen = [
     slaagt: '<p>Er waren 12.500 aanvragen.</p>',
   },
   {
-    regel: 'kort-informatieservice',
+    // Heette kort-informatieservice zolang de regel alleen op het woord "informatieservice"
+    // lette. Het sjabloon legt de hele oproep vast, dus toetst de tool nu op die vaste tekst.
+    regel: 'informatieservice-vaste-tekst',
     faalt: '<h2>In het kort</h2><ul><li>Tekst zonder de standaardtekst.</li></ul>',
     slaagt: null, // de advies()-wrapper bevat de standaardtekst al
   },
@@ -148,7 +247,8 @@ const gevallen = [
 
 for (const g of gevallen) {
   test(`${g.regel} — gaat af bij een overtreding`, () => {
-    const ids = idsVan(g.faalt.startsWith('<h2>In het kort</h2>') ? g.faalt : advies(g.faalt), { land: 'Tsjechië' });
+    const ids = idsVan(g.faalt.startsWith('<h2>In het kort</h2>') ? g.faalt : advies(g.faalt),
+      { land: 'Tsjechië', ...(g.meta || {}) });
     assert.ok(ids.includes(g.regel), `verwachtte ${g.regel}, kreeg: ${[...new Set(ids)].join(', ')}`);
   });
 
@@ -174,6 +274,63 @@ test('elke regel-id uit de tests staat ook in HERKOMST.md', async () => {
   const herkomst = readFileSync(new URL('../regels/HERKOMST.md', import.meta.url), 'utf8');
   for (const g of gevallen) {
     assert.ok(herkomst.includes('`' + g.regel + '`'), `${g.regel} ontbreekt in HERKOMST.md`);
+  }
+});
+
+/**
+ * De filterindeling is bediening, geen toets: hij bepaalt alleen wat je met een vinkje opzij kunt
+ * zetten. Maar hij moet wel volledig zijn, anders verdwijnt een nieuwe regel stilletjes uit beeld
+ * zodra iemand filtert. Daarom leest deze test de regel-id's uit de code zelf.
+ */
+function alleRegelIds() {
+  const bron = readFileSync(new URL('../src/regels.js', import.meta.url), 'utf8');
+  const ids = new Set([...bron.matchAll(/bevinding\('([a-z0-9-]+)'/g)].map((m) => m[1]));
+  for (const m of bron.matchAll(/\[\s*'([a-z0-9-]+)',\s*ERNST\./g)) ids.add(m[1]);
+  for (const v of regeldata.sjabloon.vaste_teksten) ids.add(v.id);
+  return ids;
+}
+
+test('elke bevinding valt in precies een filtergroep', () => {
+  const ids = alleRegelIds();
+  // Een regel mag in meer dan een groep staan, mits die groepen zich op ernst onderscheiden: te
+  // lange zinnen met en zonder link komen uit dezelfde regel maar zijn twee filters. Wat niet mag:
+  // twee groepen die dezelfde bevinding claimen (dan valt hij in twee filters tegelijk), of een
+  // regel die nergens staat (dan verdwijnt hij stilletjes zodra iemand filtert).
+  const plek = new Map();                 // regel-id -> lijst van groepen die hem noemen
+  for (const g of regeldata.groepen.groepen) {
+    for (const id of g.regels) {
+      if (!plek.has(id)) plek.set(id, []);
+      plek.get(id).push(g);
+    }
+  }
+  for (const [id, groepen] of plek) {
+    if (groepen.length === 1) continue;
+    const ernsten = groepen.map((g) => g.ernst);
+    assert.ok(ernsten.every(Boolean),
+      `${id} staat in ${groepen.length} groepen, maar niet elke groep bakent af op ernst`);
+    assert.equal(new Set(ernsten).size, ernsten.length,
+      `${id} staat in twee groepen met dezelfde ernst; een bevinding zou in beide filters vallen`);
+  }
+  for (const id of ids) {
+    assert.ok(plek.has(id), `${id} heeft geen filtergroep in regels/groepen.json`);
+  }
+  for (const id of plek.keys()) {
+    assert.ok(ids.has(id), `regels/groepen.json noemt ${id}, maar die regel bestaat niet (meer)`);
+  }
+});
+
+test('elke ernst die een regel kan geven valt onder een filter', () => {
+  // Bakent een groep af op ernst, dan moeten alle ernsten die die regel kan opleveren gedekt zijn.
+  // Anders valt een bevinding buiten elk filter en is hij nooit uit te zetten.
+  const zin = regeldata.groepen.groepen.filter((g) => g.regels.includes('zin-max-woorden'));
+  assert.deepEqual(new Set(zin.map((g) => g.ernst)), new Set(['let-op', 'link-zin']),
+    'zin-max-woorden geeft let-op en link-zin; beide horen een eigen filter te hebben');
+});
+
+test('elke filtergroep heeft een label en een toelichting', () => {
+  for (const g of regeldata.groepen.groepen) {
+    assert.ok(g.id && g.label && g.toelichting, `groep ${g.id || '(zonder id)'} is niet compleet`);
+    assert.ok(g.regels.length > 0, `groep ${g.id} heeft geen regels`);
   }
 });
 

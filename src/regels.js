@@ -1,16 +1,18 @@
 /**
- * De harde regels (laag 1) uit de schrijfwijzer en de format-matrix.
+ * De harde regels (laag 1) uit de schrijfwijzer, de format-matrix en het sjabloon.
  *
  * Elke regel is een pure functie: document in, bevindingen uit. Geen model, geen netwerk,
  * volledig reproduceerbaar. De regeldata komt van buiten (regels/*.json) zodat dezelfde
  * code in Node draait voor de tests en de bulkslag, en in de Artifact voor de redacteur.
+ *
+ * Bronafkortingen in een bevinding: SW = schrijfwijzer, MX = format-matrix, SJ = sjabloon.
  *
  * Wat de tool bewust NIET doet, conform STRATEGY.md:
  *  - geen uitspraak over politieke gevoeligheden
  *  - niet zelf inkorten: wel de overschrijding melden en de langste blokken aanwijzen
  */
 
-import { telWoorden } from './parse.js';
+import { telWoorden, splitsZinnen } from './parse.js';
 
 /**
  * De ernst van een bevinding bepaalt de kleur en de volgorde in het paneel, en is een soort
@@ -55,6 +57,64 @@ function sjabloonRegex(sjabloon, land) {
   return new RegExp(p);
 }
 
+/**
+ * Als sjabloonRegex, maar zonder ankers: toetst of een vaste tekst érgens in een stuk tekst
+ * voorkomt. Kent naast {land} en {gebieden} ook {kleur}, want het sjabloon gebruikt die.
+ */
+function vasteTekstRegex(sjabloon, land) {
+  let p = esc(norm(sjabloon));
+  p = p.replace(/\\\{land\\\}/g, land ? '(?:' + esc(norm(land)) + ')' : "[^.?!]{2,45}");
+  p = p.replace(/\\\{kleur\\\}/g, '(?:rood|oranje|geel|groen)');
+  p = p.replace(/\\\{gebieden\\\}/g, '[^.?!]{2,160}');
+  return new RegExp(p);
+}
+
+/**
+ * De tekst van een rubriek: de kop plus alles wat eronder staat. Een rubriek is soms een H3
+ * ("Reisverzekering") en soms een hele H2-sectie ("Wat kan ik doen in een noodsituatie?"),
+ * daarom kijken we naar allebei.
+ *
+ * Een rubriek loopt door tot en met haar h4-subkopjes: "Bagageregels" bevat "Wat mag ik meenemen
+ * naar {land}?". Daarom kijken we ook naar h3 — anders valt alles onder een h4 buiten de rubriek en
+ * lijkt elke vaste tekst te ontbreken.
+ *
+ * @returns {string|null} null als de rubriek niet in dit advies staat — dan toetsen we niet.
+ */
+function rubriekTekst(doc, patroon) {
+  const re = new RegExp(patroon, 'i');
+  const blokken = doc.blokken.filter((x) => re.test(x.kop || '') || re.test(x.h2 || '') || re.test(x.h3 || ''));
+  if (!blokken.length) return null;
+  return blokken
+    .flatMap((x) => [x.kop || '', ...x.alineas.map((a) => a.tekst), ...x.opsommingen.flatMap((o) => o.items)])
+    .join(' ');
+}
+
+/**
+ * De losse eenheden van een rubriek zoals de pagina ze toont: per alinea de zinnen, en de
+ * items van een opsomming. rubriekTekst plakt ze aaneen om op te toetsen; deze lijst dient om
+ * de plek van een treffer terug te vinden, zodat een bevinding de zin kan aanwijzen die de
+ * markering in het advies nodig heeft. Zonder patroon: het hele advies.
+ */
+function rubriekEenheden(doc, patroon) {
+  const re = patroon ? new RegExp(patroon, 'i') : null;
+  const blokken = re
+    ? doc.blokken.filter((x) => re.test(x.kop || '') || re.test(x.h2 || '') || re.test(x.h3 || ''))
+    : doc.blokken;
+  return blokken.flatMap((x) => [
+    ...x.alineas.flatMap((a) => a.zinnen),
+    ...x.opsommingen.flatMap((o) => o.items),
+  ]);
+}
+
+/**
+ * De handelingsinstructie van een vaste kleurtekst: alles ná de openingszin. De openingszin noemt
+ * het land of het gebied en wisselt dus per advies; de instructie erachter ligt vast.
+ */
+function instructieVan(vasteTekst) {
+  const zinnen = norm(vasteTekst || '').split(/(?<=\.)\s+/);
+  return zinnen.slice(1).join(' ').replace(/\{land\}|\{gebieden\}/g, '').trim();
+}
+
 function bevinding(regel, ernst, bron, boodschap, extra = {}) {
   return { regel, ernst, bron, boodschap, ...extra };
 }
@@ -63,7 +123,7 @@ function bevinding(regel, ernst, bron, boodschap, extra = {}) {
  * @param {object} data  {matrix, kleurcodes, woordenlijsten, limieten}
  */
 export function maakToetser(data) {
-  const { matrix, kleurcodes, woordenlijsten: wl, limieten: lim } = data;
+  const { matrix, kleurcodes, woordenlijsten: wl, limieten: lim, sjabloon: sj } = data;
 
   const koppenOpNaam = new Map(matrix.koppen.filter((k) => k.h3).map((k) => [norm(k.h3), k]));
 
@@ -99,9 +159,56 @@ export function maakToetser(data) {
   }
 
   /** Koppen die de matrix letterlijk voorschrijft, inclusief de toegestane varianten. */
-  const matrixKoppen = new Set(matrix.koppen.flatMap((k) =>
+  const matrixKoppen = new Set(matrix.koppen.filter((k) => !k.kop_is_variabel).flatMap((k) =>
     [k.h3, ...(k.kop_varianten || [])].filter(Boolean).map(norm)));
-  const isMatrixKop = (kop) => matrixKoppen.has(norm(kop));
+  // Het sjabloon schrijft daarnaast tussenkoppen letterlijk voor ("Lokale hulpdiensten",
+  // "Wat mag ik meenemen naar {land}?"). Die toetsen we net zomin op woordenaantal of
+  // leestekens: de richtlijn is daar het sjabloon zelf.
+  /**
+   * Sommige koppen zijn een opsomming in plaats van een vaste zin: "Paspoort, visum, rijbewijs"
+   * noemt de documenten die voor dít land gelden. Niet elk land kent een visum of een ETA, dus
+   * een kop mag elementen overslaan — maar niet van volgorde wisselen en niets anders noemen.
+   */
+  const elementenKoppen = matrix.koppen.filter((k) => k.kop_elementen);
+  function isElementenKop(kop) {
+    return elementenKoppen.some((k) => {
+      const toegestaan = k.kop_elementen.map(norm);
+      const delen = norm(kop).split(',').map((x) => x.trim()).filter(Boolean);
+      if (!delen.length) return false;
+      let vorige = -1;
+      for (const deel of delen) {
+        const plek = toegestaan.indexOf(deel);
+        if (plek <= vorige) return false;          // onbekend, of niet in de vaste volgorde
+        vorige = plek;
+      }
+      return true;
+    });
+  }
+
+  /**
+   * De bekende kop die het dichtst bij deze afwijkende kop ligt, op gedeelde woorden. Bedoeld om
+   * de bevinding bruikbaar te maken ("Conflict" -> "Oorlog en conflict"); vindt de tool niets dat
+   * genoeg lijkt, dan noemt de bevinding geen verwachte kop in plaats van een gok.
+   */
+  function dichtstbijKop(kop) {
+    const woorden = (t) => new Set(norm(t).split(/[^a-z0-9\u00c0-\u017f]+/).filter((w) => w.length > 3));
+    const doel = woorden(kop);
+    if (!doel.size) return null;
+    let beste = null;
+    let besteScore = 0;
+    for (const k of matrix.koppen) {
+      if (!k.h3 || k.kop_is_variabel) continue;
+      const kandidaat = woorden(k.h3);
+      const gedeeld = [...doel].filter((w) => kandidaat.has(w)).length;
+      const score = gedeeld / Math.max(doel.size, kandidaat.size);
+      if (score > besteScore) { besteScore = score; beste = k.h3; }
+    }
+    return besteScore >= 0.5 ? beste : null;
+  }
+
+  const isVasteKop = (kop, land) => matrixKoppen.has(norm(kop))
+    || isElementenKop(kop)
+    || (sj.vaste_koppen || []).some((s) => new RegExp('^' + vasteTekstRegex(s, land).source + '$').test(norm(kop)));
 
   /** De vaste H2's staan in vraagvorm met de landnaam erin; 'in {land}' mag ook 'op {land}'
    *  zijn, want de schrijfwijzer kent die keuze per (ei)land. */
@@ -150,10 +257,18 @@ export function maakToetser(data) {
     // introveld niet meegekregen en toetsen we er ook niet op.
     const introIsKop = !!doc.intro && beginMetVasteH2(doc.intro);
     const intro = introIsKop ? null : doc.intro;
+    const introIsVeld0 = doc.introIsVeld0 && !introIsKop;
     // "kleurcode groen" en "de kleurcode van het reisadvies voor X is groen" tellen allebei;
     // [^.] houdt de match binnen één zin, zodat twee kleuren niet in elkaar overlopen.
     const kleurenInTekst = kleurcodes.volgorde.filter((k) =>
       new RegExp('kleurcode[^.]{0,80}\\b' + k + '\\b').test(genorm));
+    // De kleuren uit de lopende tekst zijn niet betrouwbaar genoeg om een regel op te bouwen: een
+    // advies kan een ánder land noemen ("de kleurcode van het reisadvies voor Jemen is rood") en
+    // dan telt die kleur ten onrechte mee. Het cms-veld is hier de bron; alleen als dat ontbreekt
+    // (geplakte tekst) vallen we terug op wat er in de tekst staat.
+    const kleurenVanAdvies = (doc.kleurcodes && doc.kleurcodes.length)
+      ? kleurcodes.volgorde.filter((k) => doc.kleurcodes.includes(k))
+      : kleurenInTekst;
     const aantalKleuren = doc.kleurcodes ? doc.kleurcodes.length : kleurenInTekst.length;
     const meerdereKleuren = aantalKleuren > 1;
 
@@ -195,6 +310,69 @@ export function maakToetser(data) {
         b.push(bevinding('kleur-vaste-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
           `Bij kleurcode ${kleur} ontbreekt de vaste handelingsinstructie.`,
           { verwacht: k.in_het_kort_volledig.replace('{land}', doc.land || 'land X') }));
+        continue;                            // dan is de variant toetsen dubbelop
+      }
+
+      // Welke variant hoort hier? Eén kleurcode betekent: het hele land, dus de volledige uitleg.
+      // Meerdere kleurcodes betekent: per gebied de verkorte variant, en de volledige uitleg volgt
+      // onder Regionale risico's. Zo blijft "In het kort" kort en staat hetzelfde niet twee keer.
+      //
+      // We vergelijken de handelingsinstructie: alles ná de openingszin. De openingszin zelf is al
+      // gedekt door kleur-eerste-bullet-voluit en kleur-vervolg-bullet-kort. Let op dat het
+      // verschil niet één woord is: groen en geel zetten "erheen" tegenover "hierheen", rood zet
+      // "er niet heen" tegenover "niet hierheen", en bij oranje is de instructie in beide
+      // varianten gelijk. Daarom toetsen we de hele instructie en niet dat ene woord.
+      if (!kleurenVanAdvies.includes(kleur)) continue;   // kleur van een ánder land
+      const hoortVolledig = kleurenVanAdvies.length === 1;
+      const verwachteTekst = hoortVolledig ? k.in_het_kort_volledig : k.in_het_kort_deels;
+      const andereTekst = hoortVolledig ? k.in_het_kort_deels : k.in_het_kort_volledig;
+      if (instructieVan(verwachteTekst) && !genorm.includes(instructieVan(verwachteTekst))) {
+        const staatDeAndere = instructieVan(andereTekst) && genorm.includes(instructieVan(andereTekst));
+        b.push(bevinding('kleur-variant', ERNST.fout, 'MX, tab Kleurcode-teksten',
+          staatDeAndere
+            ? (hoortVolledig
+                ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.`
+                : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.`)
+            : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
+          { verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
+              .replace(/\{gebieden\}/g, 'de gebieden X en Y'),
+            notitie: hoortVolledig
+              ? 'Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in "In het kort".'
+              : 'Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));
+      }
+    }
+
+    // ---------- Regionale risico's: de volledige uitleg per kleur ----------
+    // Bij meerdere kleurcodes houdt "In het kort" het kort en volgt de volledige uitleg hier, onder
+    // een vast kopje per kleur ("Oranje: alleen noodzakelijke reizen"). De kop en de tekst staan in
+    // regels/kleurcodes.json. Staat de rubriek er niet, dan toetsen we niet: dat is de zaak van
+    // h3-regionaal-alleen-bij-meerdere.
+    const regioPatroon = sj.rubriek_patronen && sj.rubriek_patronen.regionaal;
+    const regioTekst = regioPatroon ? rubriekTekst(doc, regioPatroon) : null;
+    if (regioTekst && kleurenVanAdvies.length > 1) {
+      const regioRe = new RegExp(regioPatroon, 'i');
+      const regioKoppen = doc.koppen
+        .filter((k) => k.niveau === 4 && regioRe.test(k.h3 || ''))
+        .map((k) => norm(k.tekst));
+      const regioGenorm = norm(regioTekst);
+
+      for (const kleur of kleurenVanAdvies) {
+        const k = kleurcodes.kleuren[kleur];
+        if (!k) continue;
+
+        if (k.regionaal_kop && !regioKoppen.some((x) => x === norm(k.regionaal_kop))) {
+          b.push(bevinding('regionaal-kleur-kop', ERNST.letop, 'MX, tab Kleurcode-teksten',
+            `Onder "Regionale risico's" ontbreekt het vaste kopje voor kleurcode ${kleur}.`,
+            { verwacht: k.regionaal_kop }));
+        }
+        const instructie = instructieVan(k.regionaal_tekst);
+        if (instructie && !regioGenorm.includes(instructie)) {
+          b.push(bevinding('regionaal-kleur-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
+            `Onder "Regionale risico's" ontbreekt de vaste uitleg bij kleurcode ${kleur}.`,
+            { verwacht: k.regionaal_tekst,
+              notitie: 'Dit is de plek waar de volledige uitleg hoort te staan, omdat "In het kort" '
+                + 'bij meerdere kleurcodes alleen de verkorte variant geeft.' }));
+        }
       }
     }
 
@@ -250,12 +428,61 @@ export function maakToetser(data) {
             : 'De oproep voor de Informatieservice staat niet onderaan "In het kort".',
           infoPlek < 0 ? {} : { fragment: infoFragment(kortOnderdelen[infoPlek]) }));
       }
-      const eersteKleur = bullets.find((i) => /kleurcode/i.test(i));
-      if (eersteKleur && !/^de kleurcode van het reisadvies voor /.test(norm(eersteKleur))) {
-        b.push(bevinding('kleur-eerste-bullet-voluit', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
-          'De eerste bullet over de kleurcode moet voluit: "De kleurcode van het reisadvies voor ... is ...".',
-          { fragment: eersteKleur }));
+      if (bullets.length > sj.limieten.in_het_kort.max_bullets) {
+        b.push(bevinding('kort-max-bullets', ERNST.fout, 'SJ, blok In het kort',
+          `"In het kort" heeft ${bullets.length} bullets. Het sjabloon staat er maximaal ${sj.limieten.in_het_kort.max_bullets} toe.`));
       }
+      // De eerste bullet over de kleurcode staat voluit, de vervolgbullets verkort. Voor beide
+      // posities zijn twee formuleringen geldig; ze staan als patroon in regels/kleurcodes.json,
+      // zodat een nieuwe toegestane vorm geen codewijziging is.
+      const bv = kleurcodes.bullet_vormen;
+      const kleurBullets = bullets.filter((i) => new RegExp(bv._herkennen_als_kleurbullet, 'i').test(i));
+      const past = (tekst, patronen) => patronen.some((pat) => new RegExp(pat).test(norm(tekst)));
+      if (kleurBullets.length && !past(kleurBullets[0], bv.eerste_voluit)) {
+        b.push(bevinding('kleur-eerste-bullet-voluit', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+          'De eerste bullet over de kleurcode staat niet voluit.',
+          { fragment: kleurBullets[0],
+            verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is … `
+              + '(of: De kleurcode van het reisadvies is … voor …)' }));
+      }
+      // Een vervolgbullet die de volledige vorm herhaalt maakt "In het kort" onnodig lang; het is
+      // juist de bedoeling dat alleen de eerste voluit staat.
+      for (const vervolg of kleurBullets.slice(1)) {
+        if (past(vervolg, bv.vervolg_kort)) continue;
+        b.push(bevinding('kleur-vervolg-bullet-kort', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+          past(vervolg, bv.eerste_voluit)
+            ? 'Deze vervolgbullet staat voluit. Alleen de eerste bullet over de kleurcode staat voluit.'
+            : 'Deze vervolgbullet over de kleurcode heeft niet de verkorte vaste vorm.',
+          { fragment: vervolg, verwacht: 'Voor … geldt kleurcode … (of: Kleurcode … geldt voor …)' }));
+      }
+      // ---------- verwijzingen vanuit "In het kort" ----------
+      // Elke verwijzing heeft dezelfde vorm: "Lees meer onder X". Bij meerdere kleurcodes hoort
+      // daar in elk geval "Lees meer onder Regionale risico's" bij, want daar staat de volledige
+      // uitleg die "In het kort" juist weglaat.
+      const vw = sj.verwijzing;
+      if (vw) {
+        const kortGenorm = norm([...kortBlok.alineas.map((a) => a.tekst),
+          ...kortBlok.opsommingen.flatMap((o) => o.items)].join(' '));
+        for (const fout of vw.afwijkende_vormen || []) {
+          const plek = kortGenorm.indexOf(norm(fout) + ' ');
+          if (plek < 0) continue;
+          b.push(bevinding('kort-verwijzing-vorm', ERNST.letop, 'SJ, vaste vorm van de verwijzing',
+            `Een verwijzing in "In het kort" begint met "${fout}".`,
+            { fragment: contextVan(kortGenorm, plek),
+              verwacht: vw.vorm.replace('{rubriek}', 'de rubriek') }));
+          break;                                     // één melding per advies is genoeg
+        }
+        const doelRubriek = vw.verplicht_bij_meerdere_kleurcodes;
+        if (kleurenVanAdvies.length > 1 && doelRubriek
+            && !kortGenorm.includes(norm(vw.patroon + doelRubriek))) {
+          b.push(bevinding('kort-verwijst-regionaal', ERNST.letop, 'MX, tab Koppen, rij In het kort',
+            `Dit advies heeft meerdere kleurcodes, maar "In het kort" verwijst niet naar ${doelRubriek}.`,
+            { verwacht: vw.vorm.replace('{rubriek}', doelRubriek) + '.',
+              notitie: 'Bij meerdere kleurcodes staat in "In het kort" alleen de verkorte uitleg; '
+                + 'de lezer moet weten waar de volledige uitleg staat.' }));
+        }
+      }
+
       // Deze regel gaat over "In het kort", dus alleen die tekst doorzoeken.
       // Een opsomming van gebieden onder Regionale risico's mag juist wel lang zijn.
       const kortEigen = [...kortBlok.alineas.map((a) => a.tekst),
@@ -271,11 +498,6 @@ export function maakToetser(data) {
       }
     }
 
-    if (!/informatieservice/i.test(tekst)) {
-      b.push(bevinding('kort-informatieservice', ERNST.letop, 'MX, tab Koppen, rij In het kort',
-        'De standaardtekst over aanmelden voor de informatieservice ontbreekt onder "Let op".'));
-    }
-
     // ---------- koppen tegen de matrix ----------
     for (const kop of doc.koppen) {
       if (kop.niveau === 2 && !isVasteH2(kop.tekst, doc.land)) {
@@ -289,6 +511,26 @@ export function maakToetser(data) {
           b.push(bevinding('h3-niet-melden', ERNST.fout, 'MX, tab Koppen, richtlijn Niet melden',
             `"${kop.tekst}" hoort niet in een reisadvies.`, { fragment: kop.tekst, notitie: regel.toelichting }));
         }
+        // De matrix merkt een paar rubrieken aan als uitzonderingsgeval. Ze mogen er dus staan,
+        // maar niet standaard: de redacteur hoort te wegen of dit advies die uitzondering is.
+        if (regel && regel.alleen_bij_uitzondering) {
+          b.push(bevinding('h3-alleen-bij-uitzondering', ERNST.info, 'MX, tab Koppen, kolom Toelichting',
+            `"${kop.tekst}" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?`,
+            { fragment: kop.tekst, notitie: regel.toelichting }));
+        }
+        // Het sjabloon schrijft de tussenkoppen letterlijk voor: "Terrorisme", niet "Terroristische
+        // aanslagen". Een afwijkende kop is niet alleen zelf een formatbreuk — de vaste teksten
+        // worden per rubriek op de kop gezocht, dus een kop die de tool niet kent zet de controles
+        // eronder stil. Daarom melden we hem, met die waarschuwing erbij.
+        if (!isVasteKop(kop.tekst, doc.land)) {
+          b.push(bevinding('h3-vaste-kop', ERNST.fout, 'SJ, blok Risico dat van toepassing is; MX, tab Koppen',
+            `"${kop.tekst}" is geen vaste tussenkop.`,
+            { fragment: kop.tekst,
+              ...(dichtstbijKop(kop.tekst) ? { verwacht: dichtstbijKop(kop.tekst) } : {}),
+              notitie: 'Heet deze rubriek naar zijn eigen onderwerp (een ziekte bijvoorbeeld), dan mag '
+                + 'de kop vrij zijn; kies dan "oneens". Zo niet: de vaste teksten onder deze rubriek '
+                + 'worden niet getoetst zolang de kop afwijkt.' }));
+        }
       }
     }
 
@@ -296,6 +538,147 @@ export function maakToetser(data) {
     if (heeftRegionaal && !meerdereKleuren) {
       b.push(bevinding('h3-regionaal-alleen-bij-meerdere', ERNST.letop, 'MX, tab Koppen, rij Regionale risico\'s',
         'Regionale risico\'s hoort er alleen te staan bij meer dan 1 kleurcode.'));
+    }
+
+    // ---------- vaste formuleringen bij de kleuruitleg ----------
+    // Het sjabloon schaft de oude manier van kleuren benoemen af: niet "gele gebieden" of
+    // "de hoofdstad is oranje", maar "gebieden met kleurcode geel" en "de kleurcode voor de
+    // hoofdstad X is oranje". Twee vormen dus: het bijvoeglijk naamwoord vóór een plaatsaanduiding,
+    // en een koppelwerkwoord met een kleur zonder dat het woord kleurcode in de zin staat.
+    const kfNaamwoorden = sj.kleurformulering.zelfstandig_naamwoorden.map(esc).join('|');
+    for (const [kleur, bijvoeglijk] of Object.entries(sj.kleurformulering.bijvoeglijk)) {
+      const re = new RegExp('\\b' + esc(bijvoeglijk) + '\\s+(' + kfNaamwoorden + ')\\b', 'gi');
+      const gezienKf = new Set();
+      for (const m of tekst.matchAll(re)) {
+        const sleutel = m[0].toLowerCase();
+        if (gezienKf.has(sleutel)) continue;
+        gezienKf.add(sleutel);
+        b.push(bevinding('kleur-formulering-verboden', ERNST.fout, 'SJ, blok In het kort',
+          `"${m[0]}" gebruiken we niet meer.`,
+          { fragment: contextVan(tekst, m.index), verwacht: `${m[1]} met kleurcode ${kleur}` }));
+      }
+    }
+    // De bullets staan niet in doc.zinnen — dat zijn de alinea's — en juist onder "In het kort"
+    // staat de kleuruitleg in bullets. Voor deze regel tellen ze dus wel mee.
+    const zinnenMetBullets = [
+      ...doc.zinnen,
+      ...doc.opsommingen.flatMap((o) => o.items.flatMap((item) =>
+        splitsZinnen(item).map((t) => ({ tekst: t, h2: o.h2, h3: o.h3 })))),
+    ];
+    for (const z of zinnenMetBullets) {
+      const m = z.tekst.match(/\b(is|zijn)\s+(rood|oranje|geel|groen)\b/i);
+      // "De kleurcode van het reisadvies voor Spanje is groen" is juist; het gaat mis zodra de
+      // kleur zonder het woord kleurcode aan een plaats wordt gehangen.
+      if (!m || /kleurcode/i.test(z.tekst.slice(0, m.index))) continue;
+      b.push(bevinding('kleur-formulering-verboden', ERNST.fout, 'SJ, blok In het kort',
+        `"${m[0]}" benoemt de kleur zonder het woord kleurcode.`,
+        { fragment: z.tekst, kop: z.h3 || z.h2,
+          verwacht: `de kleurcode voor … is ${m[2].toLowerCase()}` }));
+    }
+
+    // ---------- vaste teksten uit het sjabloon ----------
+    // Per rubriek legt het sjabloon letterlijke teksten vast. De tool meldt alleen dát een vaste
+    // tekst ontbreekt of afwijkt en toont de verwachte formulering. Invullen blijft aan de
+    // redacteur: welke variant klopt, hangt af van het land.
+    const alleenRood = kleurenInTekst.length === 1 && kleurenInTekst[0] === 'rood';
+
+    if (introIsVeld0 && intro) {
+      const introGenorm = norm(intro);
+      const heeftStandaard = vasteTekstRegex(sj.intro.standaard, doc.land).test(introGenorm);
+      const heeftRood = vasteTekstRegex(sj.intro.alleen_rood, doc.land).test(introGenorm);
+      const verwachteIntro = (alleenRood ? sj.intro.alleen_rood : sj.intro.standaard)
+        .replace(/\{land\}/g, doc.land || 'land X');
+      if (!heeftStandaard && !heeftRood) {
+        b.push(bevinding('intro-vaste-tekst', ERNST.fout, 'SJ, blok Introductie',
+          'De intro wijkt af van de vaste introductietekst.', { fragment: intro, verwacht: verwachteIntro }));
+      } else if (alleenRood && !heeftRood) {
+        b.push(bevinding('intro-vaste-tekst', ERNST.letop, 'SJ, blok Introductie',
+          'Dit advies heeft alleen kleurcode rood; daarvoor geldt de afwijkende intro.',
+          { fragment: intro, verwacht: verwachteIntro }));
+      } else if (!alleenRood && heeftRood) {
+        b.push(bevinding('intro-vaste-tekst', ERNST.letop, 'SJ, blok Introductie',
+          'De intro is de uitzonderingsvariant voor volledig rode adviezen, maar dit advies heeft meer dan kleurcode rood.',
+          { fragment: intro, verwacht: verwachteIntro }));
+      }
+    }
+
+    for (const vt of sj.vaste_teksten) {
+      const bereik = vt.rubriek ? rubriekTekst(doc, sj.rubriek_patronen[vt.rubriek]) : tekst;
+      if (bereik === null) continue;                                   // rubriek staat niet in dit advies
+      const bereikGenorm = norm(bereik);
+      if (vt.alleen_als && !new RegExp(vt.alleen_als, 'i').test(bereikGenorm)) continue;
+      if (vt.kleur && !vt.kleur.some((k) => kleurenInTekst.includes(k))) continue;
+      if (vt.alleen_rood && !alleenRood) continue;
+
+      const kern = vt.kern ? new RegExp(vt.kern, 'i') : vasteTekstRegex(vt.zin, doc.land);
+      if (kern.test(bereikGenorm)) continue;
+
+      // Wijkt de tekst af, dan staat er dus wél iets — alleen anders. Zoek de zin op waar de
+      // herkenning op aanslaat en geef die mee als fragment, zodat de pagina hem in het advies
+      // kan markeren. Ontbreekt de vaste tekst helemaal, dan is er niets aan te wijzen en
+      // blijft het fragment leeg: de bevinding meldt dan alleen de verwachte formulering.
+      const herkenRe = vt.herken ? new RegExp(vt.herken, 'i') : null;
+      const wijktAf = !!herkenRe && herkenRe.test(bereikGenorm);
+      const fragment = wijktAf
+        ? rubriekEenheden(doc, vt.rubriek ? sj.rubriek_patronen[vt.rubriek] : null)
+            .find((e) => herkenRe.test(norm(e)))
+        : null;
+      b.push(bevinding(vt.id, vt.ernst, vt.bron,
+        wijktAf ? (vt.boodschap_afwijkend || vt.boodschap) : vt.boodschap,
+        { ...(fragment ? { fragment } : {}),
+          verwacht: vt.zin.replace(/\{land\}/g, doc.land || 'land X')
+            .replace(/\{kleur\}|\{gebieden\}/g, '…') }));
+    }
+
+    // ---------- aantal en volgorde van de rubrieken ----------
+    for (const [sleutel, label] of [['veiligheidsrisicos', "Welke veiligheidsrisico's zijn er"],
+      ['reisvoorbereiding', 'Hoe bereid ik mijn reis voor']]) {
+      const re = new RegExp(sj.rubriek_patronen[sleutel], 'i');
+      const rubrieken = doc.koppen.filter((k) => k.niveau === 3 && re.test(k.h2 || ''));
+      if (rubrieken.length > sj.limieten.rubrieken.max_per_h2) {
+        b.push(bevinding('rubrieken-max', ERNST.letop, 'SJ, richtlijn boven de rubrieken',
+          `Onder "${label}" staan ${rubrieken.length} rubrieken. De richtlijn is maximaal ${sj.limieten.rubrieken.max_per_h2}.`,
+          { notitie: 'De rubrieken: ' + rubrieken.map((k) => k.tekst).join(', ') }));
+      }
+    }
+
+    // De rubrieken onder veiligheidsrisico's staan in volgorde van relevantie. Koppen die het
+    // sjabloon niet noemt (een ziekte bijvoorbeeld, die heet naar het virus) laten we staan waar
+    // ze staan; die hebben geen vaste plek.
+    const volgordeRe = new RegExp(sj.rubriek_patronen.veiligheidsrisicos, 'i');
+    const gewensteVolgorde = sj.rubriek_volgorde.map(norm);
+    const rubriekenOpVolgorde = doc.koppen
+      .filter((k) => k.niveau === 3 && volgordeRe.test(k.h2 || ''))
+      .map((k) => ({ tekst: k.tekst, plek: gewensteVolgorde.indexOf(norm(k.tekst)) }))
+      .filter((x) => x.plek >= 0);
+    for (let i = 1; i < rubriekenOpVolgorde.length; i++) {
+      if (rubriekenOpVolgorde[i].plek < rubriekenOpVolgorde[i - 1].plek) {
+        b.push(bevinding('rubrieken-volgorde', ERNST.info, 'SJ, blok Risico dat van toepassing is',
+          `Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? "${rubriekenOpVolgorde[i].tekst}" `
+            + `staat na "${rubriekenOpVolgorde[i - 1].tekst}".`,
+          { fragment: rubriekenOpVolgorde[i].tekst,
+            notitie: 'Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. '
+              + 'De standaardvolgorde van relevantie is: ' + sj.rubriek_volgorde.join(' > ') + '.' }));
+        break;
+      }
+    }
+
+    // De nummers van het contactcenter liggen vast. Een ander Nederlands nummer in deze rubriek
+    // is een fout, geen stijlkwestie — daar belt iemand in nood mee.
+    const noodTekst = rubriekTekst(doc, sj.rubriek_patronen.nood);
+    if (noodTekst) {
+      const vasteNummers = new Set([sj.contactcenter.telefoon, sj.contactcenter.whatsapp]
+        .map((x) => x.replace(/\D/g, '')));
+      const gezienNr = new Set();
+      for (const m of noodTekst.matchAll(/\+31[\s\d]{7,}\d/g)) {
+        const cijfers = m[0].replace(/\D/g, '');
+        if (vasteNummers.has(cijfers) || gezienNr.has(cijfers)) continue;
+        gezienNr.add(cijfers);
+        b.push(bevinding('nood-contactnummer', ERNST.fout, 'SJ, blok In geval van nood',
+          `"${m[0].trim()}" is niet een van de vaste nummers van het contactcenter.`,
+          { fragment: contextVan(noodTekst, m.index),
+            verwacht: `${sj.contactcenter.telefoon} (telefoon) of ${sj.contactcenter.whatsapp} (WhatsApp)` }));
+      }
     }
 
     // ---------- titel en intro ----------
@@ -329,7 +712,7 @@ export function maakToetser(data) {
     // Alleen H3: de H2's zijn door de matrix voorgeschreven vraagvormen en mogen langer zijn.
     // Koppen die de matrix letterlijk voorschrijft ("Paspoort, ID-kaart, rijbewijs") toetsen we
     // niet op woordenaantal of leestekens — de richtlijn is daar de matrix zelf.
-    for (const kop of doc.koppen.filter((k) => k.niveau === 3 && !isMatrixKop(k.tekst))) {
+    for (const kop of doc.koppen.filter((k) => k.niveau === 3 && !isVasteKop(k.tekst, doc.land))) {
       const w = telWoorden(kop.tekst);
       if (w > lim.tussenkop.max_woorden) {
         b.push(bevinding('tussenkop-max-woorden', ERNST.letop, 'SW, Gebruiksvriendelijkheid > (Tussen)koppen',
@@ -365,13 +748,27 @@ export function maakToetser(data) {
         if (k[veld]) for (const z of k[veld].split(/(?<=\.)\s+/)) vasteZinnen.add(norm(z).replace(/\{land\}|\{gebieden\}/g, ''));
       }
     }
+    // Ook de vaste teksten uit het sjabloon zijn vaste formulering: die mogen langer zijn dan
+    // 15 woorden en de schrijfregels erover zijn al afgewogen toen de tekst werd vastgesteld
+    // ("Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent"). We knippen elke
+    // vaste tekst op de plaatshouders, zodat het herkenbare deel overblijft.
+    const sjabloonZinnen = [];
+    for (const bronTekst of [...sj.vaste_teksten.map((x) => x.zin), sj.intro.standaard,
+      sj.intro.alleen_rood, sj.contactcenter.zin, sj.regionaal.afsluiter, sj.regionaal.gebiedenzin]) {
+      for (const vasteZin of norm(bronTekst).split(/(?<=[.?!])\s+/)) {
+        for (const deel of vasteZin.split(/\{land\}|\{gebieden\}|\{kleur\}/)) {
+          const kern = deel.replace(/\s+/g, ' ').trim();
+          if (kern.length > 25) sjabloonZinnen.push(kern);
+        }
+      }
+    }
     const isVasteZin = (z) => {
       const n = norm(z);
       for (const v of vasteZinnen) {
         const kern = v.replace(/^de kleurcode van het reisadvies voor\s*/, '').trim();
         if (kern.length > 12 && n.includes(kern)) return true;
       }
-      return false;
+      return sjabloonZinnen.some((kern) => n.includes(kern));
     };
 
     for (const z of doc.zinnen) {
@@ -501,8 +898,12 @@ export function maakToetser(data) {
       const gezien = new Set();
       for (const m of tekst.matchAll(re)) {
         if (gezien.has(m[0])) continue;
+        const fragment = contextVan(tekst, m.index);
+        // Staat de treffer in een vaste formulering, dan is het onze schrijfregel niet: die tekst
+        // is zo vastgesteld. Pas als dezelfde notatie elders in eigen tekst staat, melden we hem.
+        if (isVasteZin(fragment)) continue;
         gezien.add(m[0]);
-        b.push(bevinding(id, ernst, bron, maakBoodschap(m[0]), { fragment: contextVan(tekst, m.index) }));
+        b.push(bevinding(id, ernst, bron, maakBoodschap(m[0]), { fragment }));
       }
     }
 
@@ -526,10 +927,12 @@ export function maakToetser(data) {
       if (n >= 1900 && n <= 2100 && m[0].length === 4) continue;   // jaartal
       if (isTelefoonnummer(m.index)) continue;                     // alarm- of servicenummer
       if (gezienGetal.has(m[0])) continue;
+      const fragmentGetal = contextVan(tekst, m.index);
+      if (isVasteZin(fragmentGetal)) continue;
       gezienGetal.add(m[0]);
       b.push(bevinding('getallen-cijfers', ERNST.info, 'SW, Schrijfregels > Getallen / Cijfers',
         `"${m[0]}" scheiden met een punt per 3 cijfers: ${n.toLocaleString('nl-NL')}.`,
-        { fragment: contextVan(tekst, m.index) }));
+        { fragment: fragmentGetal }));
     }
 
     for (const [fout, goed] of Object.entries(wl.afkortingen.vervang)) {
@@ -632,8 +1035,11 @@ function contextVan(tekst, index, marge = 220) {
   const venster = tekst.slice(vanaf, tot);
   const positie = index - vanaf;
 
+  // Een regeleinde scheidt blokken en lijstitems en knipt dus altijd, ook zonder spatie erachter.
+  // Stond dat er niet, dan liep een fragment door in de alinea ervoor: een treffer vlak na een
+  // vaste tekst werd dan onterecht als vaste formulering weggestreept.
   let start = 0;
-  for (const m of venster.slice(0, positie).matchAll(/[.!?\n]\s+/g)) start = m.index + m[0].length;
+  for (const m of venster.slice(0, positie).matchAll(/[.!?]\s+|\n\s*/g)) start = m.index + m[0].length;
   let eind = venster.length;
   const staart = venster.slice(positie).match(/[.!?\n]/);
   if (staart) eind = positie + staart.index + 1;
@@ -641,6 +1047,8 @@ function contextVan(tekst, index, marge = 220) {
   const zin = venster.slice(start, eind).replace(/\s+/g, ' ').trim();
   return zin || venster.replace(/\s+/g, ' ').trim();
 }
+
+
 
 export { ERNST, ERNST_VOLGORDE };
 export default { maakToetser, norm, ERNST, ERNST_VOLGORDE };

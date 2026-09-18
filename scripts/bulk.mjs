@@ -15,11 +15,11 @@ import { uitApiRespons } from '../src/adapter.js';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-// De regels komen uit reisadvies-reviewer.html, niet uit src/regels.js. Dat is de pagina die
-// gepubliceerd wordt, inclusief de sjabloonregels die (nog) niet in src/ staan. Anders zou dit
-// rapport andere getallen geven dan wat een redacteur in de tool ziet.
+// De regels komen uit dist/app.html, niet rechtstreeks uit src/regels.js. Dat is de pagina die
+// gepubliceerd wordt, met de regeldata er al in gevouwen. Zo geeft dit rapport dezelfde getallen
+// als wat een redacteur in de tool ziet. Draai zo nodig eerst scripts/bouw-pagina.mjs.
 const laadPagina = createRequire(import.meta.url)('../test/harnas.cjs');
-const { Parse, Regels, REGELDATA } = laadPagina(join(wortel, 'reisadvies-reviewer.html'));
+const { Parse, Regels, REGELDATA } = laadPagina(join(wortel, 'dist', 'app.html'));
 const parseAdvies = Parse.parseAdvies;
 const toets = Regels.maakToetser(REGELDATA);
 

@@ -207,10 +207,16 @@
       "h3": "Paspoort, visum, rijbewijs",
       "richtlijn": "uitschrijven-verwijzen",
       "toelichting": "Zo kort mogelijk: is een NL paspoort of ID-kaart nodig en hoelang geldig; is een visum nodig, bij welke verblijfsduur en waar aan te vragen; kan ik er met NL rijbewijs rijden of is een internationaal rijbewijs nodig (verwijzing ANWB).",
-      "kop_varianten": [
-        "Paspoort, visum, rijbewijs",
-        "Paspoort, ID-kaart, rijbewijs"
-      ]
+      "kop_elementen": [
+        "Paspoort",
+        "ID-kaart",
+        "Visum",
+        "Visum/ESTA",
+        "ESTA",
+        "ETA",
+        "Rijbewijs"
+      ],
+      "_kop_elementen_toelichting": "Deze kop noemt de reisdocumenten die voor dit land gelden, in deze vaste volgorde. Niet elk land kent een visum, een ESTA of een ETA, dus een kop mag elementen overslaan. Wat niet mag: een andere volgorde, of een woord dat hier niet tussen staat. In het corpus komen zo Paspoort, rijbewijs / Paspoort, visum / Paspoort, visum/ESTA, rijbewijs en Paspoort, ID-kaart, ETA, rijbewijs voor; alle vier geldig."
     },
     {
       "id": "reisvaccinaties",
@@ -309,6 +315,31 @@
         "reis mee app",
         "ggd-app"
       ]
+    },
+    {
+      "id": "oorlog-en-conflict",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Oorlog en conflict",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Meestal onder Actueel; alleen een eigen rubriek als het een structureel risico is.",
+      "_bron": "SJ, blok Risico dat van toepassing is"
+    },
+    {
+      "id": "willekeurige-arrestaties",
+      "h2": "Veiligheidsrisico's",
+      "h3": "Willekeurige arrestaties",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Meestal onder Actueel, of onder Wetten en gebruiken. Alleen herhalen als het een structureel risico is.",
+      "_bron": "SJ, blok Risico dat van toepassing is"
+    },
+    {
+      "id": "coronaregels",
+      "h2": "Reisvoorbereiding",
+      "h3": "Coronaregels",
+      "richtlijn": "uitschrijven",
+      "toelichting": "Alleen als er nog coronaregels gelden om het land in te reizen.",
+      "alleen_bij_uitzondering": true,
+      "_bron": "SJ, blok Coronaregels"
     }
   ],
   "_h2_toelichting": "Vastgesteld op een echte API-respons (data/voorbeeld/CZE.xml). De matrix zegt 'Deze koppen zijn vast en in vraagvorm'; de korte labels (Veiligheidsrisico's, Noodsituatie, Reisvoorbereiding) zijn de matrixnamen, de vraagvormen staan in de gepubliceerde tekst. {land} is de landnaam; 'in {land}' mag ook 'op {land}' zijn volgens de schrijfwijzerregel over op/in bij eilanden. 'Ook nuttig' komt uit de schrijfwijzer (Gebruiksvriendelijkheid > Links onderaan de pagina) en staat in het veld additionalinformation.",

@@ -73,7 +73,7 @@ dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
 *Te lange zinnen*, *Te lange zinnen incl. link*, *Linkteksten*, *Lijdende vorm*,
-*Twijfeltaal*, *Volgorde van de rubrieken* en *Notatie en stijl*. De indeling staat in
+*Twijfeltaal*, *Hoe vaak iets gebeurt*, *Volgorde van de rubrieken* en *Notatie en stijl*. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
 
 Te lange zinnen staan in twee filters, want het zijn twee klussen: zit de lengte in de linktekst,
@@ -219,8 +219,9 @@ code in Node draait (tests, bulkslag) en in de browser (de deelbare prototypepag
 ## Wat de bulkslag oplevert
 
 Over 226 live reisadviezen (`data/bulkrapport.md`, gedraaid met dezelfde regelset als de
-gepubliceerde pagina): 46 zitten boven de woordenlimiet, 99 hebben geen enkele rode fout, en
-25 adviezen bevatten een onderwerp dat de matrix als *niet melden* aanmerkt. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
+gepubliceerde pagina): 46 zitten boven de woordenlimiet, 96 hebben geen enkele rode fout, en
+44 adviezen bevatten een onderwerp dat de matrix als *niet melden* aanmerkt — als tussenkop of in
+de lopende tekst. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
 ruim 200 adviezen woordelijk hetzelfde staan. Die zijn met één aanpassing tegelijk opgelost, en
 het rapport zet ze daarom apart.
 
@@ -241,6 +242,12 @@ veranderde:
   ze dat als vaste tekst al waren. Dat scheelde 1085 meldingen (3845 → 2760): zinnen en linkteksten
   die te lang zijn omdat het sjabloon ze zo voorschrijft. Twee linkteksten alleen al waren goed voor
   429 meldingen.
+- Op 18 september 2026 kwamen daar de tussenkoppen op h4-niveau bij, werd twijfeltaal in twee
+  filters gesplitst en gaat de tool nu ook af op niet-melden-onderwerpen in de lopende tekst. Het
+  totaal staat op **2816** bevindingen. Drie meetronden waren nodig voordat die regels klopten:
+  woordgrenzen (*beren* zit in *proberen*), de rubriek die de matrix zelf aanwijst (*Foto's maken*
+  mag bij lokale wetten, 65 meldingen minder) en samenstellingen (*zandstormen* benoemt wel een
+  risico).
 
 ## Over de regels
 

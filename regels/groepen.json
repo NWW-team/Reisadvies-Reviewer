@@ -18,6 +18,9 @@
         "h3-niet-melden",
         "h3-regionaal-alleen-bij-meerdere",
         "h3-vaste-kop",
+        "h4-natuurrisico",
+        "h4-niet-melden",
+        "h4-vaste-kop",
         "informatieservice-vaste-tekst",
         "intro-vaste-tekst",
         "kinderen-documenten",
@@ -52,6 +55,7 @@
         "rijbewijs-anwb",
         "rood-herhaling-voorbereiding",
         "rubrieken-max",
+        "tekst-niet-melden",
         "vaccinaties-ggd",
         "vaccinaties-lcr"
       ]
@@ -95,9 +99,17 @@
     {
       "id": "twijfeltaal",
       "label": "Twijfeltaal",
-      "toelichting": "Misschien, vaak, mogelijk, bijna. Let op: soms is een woord als \"regelmatig\" feitelijke nuance en geen slap taalgebruik.",
+      "toelichting": "Misschien, mogelijk, waarschijnlijk: woorden die de bewering zelf verzwakken. Daar is bijna altijd een stelliger formulering voor.",
       "regels": [
         "zin-twijfeltaal"
+      ]
+    },
+    {
+      "id": "frequentiewoorden",
+      "label": "Hoe vaak iets gebeurt",
+      "toelichting": "Vaak, soms, regelmatig. Ook twijfeltaal volgens de schrijfwijzer, maar soms feitelijke nuance: over terroristische groepen kun je niet schrijven dat ze aanslagen plegen.",
+      "regels": [
+        "zin-frequentiewoord"
       ]
     },
     {

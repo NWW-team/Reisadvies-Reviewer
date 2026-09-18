@@ -21,7 +21,8 @@
     "criminaliteit": "criminaliteit",
     "paspoort": "paspoort",
     "reisvoorbereiding": "hoe bereid ik|reisvoorbereiding",
-    "veiligheidsrisicos": "welke veiligheidsrisico"
+    "veiligheidsrisicos": "welke veiligheidsrisico",
+    "natuurgeweld": "natuurgeweld"
   },
   "rubriek_volgorde": [
     "Actueel",
@@ -61,9 +62,16 @@
     "Geel: let op, er zijn risico’s",
     "Groen: u kunt erheen reizen",
     "Voorkom dat u slachtoffer wordt van criminaliteit",
-    "Wat kunt u doen bij natuurgeweld?"
+    "Wat kunt u doen bij natuurgeweld?",
+    "Nederlands consulaat-generaal in {land}",
+    "Nederlandse vertegenwoordiging in {land}",
+    "Nederlands ambassadekantoor in {land}",
+    "Nederlandse ambassade en consulaat-generaal in {land}",
+    "Nederlandse ambassade en consulaten-generaal in {land}",
+    "Honorair consul van Nederland in {land}",
+    "Geen honorair consul van Nederland in {land}"
   ],
-  "_vaste_koppen_bron": "de tussenkoppen die het sjabloon letterlijk voorschrijft; die toetsen we niet op woordenaantal of leestekens",
+  "_vaste_koppen_bron": "de tussenkoppen die het sjabloon letterlijk voorschrijft; die toetsen we niet op woordenaantal of leestekens Aangevuld op 18 september 2026 met de vertegenwoordigingsvarianten: niet elk land heeft een ambassade, sommige hebben een consulaat-generaal, een ambassadekantoor of alleen een honorair consul. Dat is een feit over het land, geen afwijking van het format.",
   "intro": {
     "_bron": "blok Introductie (in het cms 'veld-0' / 'Inhoudelijke wijzigingen')",
     "standaard": "Reist u naar {land}? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
@@ -135,6 +143,67 @@
     "verplicht_bij_meerdere_kleurcodes": "Regionale risico's",
     "_bron": "Instructie van de opdrachtgever, 18 september 2026: elke verwijzing vanuit \"In het kort\" heeft de vorm \"Lees meer onder X\" - Actueel, Regionale risico's, of bij uitzondering een andere rubriek zoals Natuurgeweld of Paspoort. De matrix schrijft bij \"In het kort\" wel voor dat er verwezen wordt (\"max. 3 noemen en verwijzen\"), maar legt de bewoording niet vast. Gemeten op 18 september 2026: alle 149 verwijzingen in het corpus gebruiken deze vorm al, en alle 71 adviezen met meerdere kleurcodes verwijzen naar Regionale risico's.",
     "_afwijkende_vormen_noot": "Deze lijst dient om een verkeerde verwijzing te herkennen. Hij komt in het corpus niet voor; het zijn de formuleringen die er redelijkerwijs in kunnen sluipen."
+  },
+  "h4_toetsen": {
+    "_toelichting": "Onder welke rubrieken de tussenkoppen op h4-niveau vastliggen. Elders heten koppen naar hun eigen onderwerp - een ziekte, een gebeurtenis, een plaats - en valt er niets te toetsen. In het corpus komen 996 verschillende h4-koppen voor, waarvan er 839 precies een keer voorkomen; een gesloten lijst kan dat nooit dekken.",
+    "_bron": "Sjabloon Reisadviezen - nieuwe format.docx: alleen voor deze rubrieken schrijft het sjabloon de tussenkoppen letterlijk voor.",
+    "rubrieken": [
+      "nood",
+      "bagage"
+    ],
+    "natuurgeweld": {
+      "_toelichting": "Onder Natuurgeweld liggen de koppen niet vast - elk land kent andere risico's - maar ze horen wel een natuurrisico te benoemen. Een kop als \"Bergen\", \"Slecht weer in de bergen\" of \"Risico's bij activiteiten\" zegt niet welk risico er speelt. Een kop die een van de woorden hieronder bevat, telt als een benoemd risico.",
+      "_bron": "Instructie van de opdrachtgever, 18 september 2026: onder natuurgeweld moet het altijd een risico zijn zoals vulkanen, orkanen of overstromingen.",
+      "rubriek": "natuurgeweld",
+      "risicowoorden": [
+        "aardbeving",
+        "aardschok",
+        "tsunami",
+        "vloedgolf",
+        "vulka",
+        "overstroming",
+        "aardverschuiving",
+        "modderstroom",
+        "lawine",
+        "bosbrand",
+        "natuurbrand",
+        "brand",
+        "orka",
+        "cyclo",
+        "tyfoon",
+        "storm",
+        "sneeuw",
+        "regen",
+        "moesson",
+        "droogte",
+        "hitte",
+        "koude",
+        "stroming",
+        "muistro",
+        "flash flood",
+        "wadi",
+        "el nino",
+        "el niño",
+        "harmattan",
+        "luchtvervuiling",
+        "smog",
+        "gletsjer",
+        "ijs",
+        "rots",
+        "steenslag",
+        "natuurgeweld",
+        "natuurrisico",
+        "weer",
+        "onweer",
+        "bliksem",
+        "mist",
+        "vallende rotsen"
+      ],
+      "_meting": "Op 18 september 2026 over 226 reisadviezen: 467 van de 484 koppen onder Natuurgeweld benoemen een risico. De 17 overige zijn plaatsen (Bergen, Sahara), omschrijvingen (Slecht weer in de bergen, Risico's bij activiteiten) en dieren (Haaien, Beren).",
+      "_samenstelling_noot": "Een stam van vijf letters of meer mag ook middenin een woord staan, want Nederlands plakt woorden aan elkaar: 'zandstormen' en 'zeestromingen' benoemen een risico. Bij kortere stammen moet de stam aan het woordbegin staan, anders zou 'ijs' in 'prijs' vallen.",
+    "_weer_noot": "'weer' staat er bewust in: slecht weer of onvoorspelbaar weer is zelf het risico, dus een kop als 'Slecht weer in de bergen' benoemt wel degelijk waar het over gaat."
+    },
+    "_rubrieken_noot": "Alleen nood en bagage. Onder Paspoort/visum/rijbewijs en Regionale risico's voegen redacteuren terecht landspecifieke kopjes toe (Inreisstempel, De provincie Cabinda, Grens met Mali); daar is geen vaste lijst. Gemeten op 18 september 2026: die twee rubrieken leverden samen 85 meldingen op die inhoudelijk allemaal klopten."
   },
   "vrijgestelde_formuleringen": {
     "_toelichting": "Vaste formuleringen uit het sjabloon die NIET verplicht zijn: welke variant geldt hangt van het land af. Ze staan hier alleen om ze vrij te stellen van de schrijfregels (zinslengte, lengte van de linktekst, notatie). De tool meldt dus niet dat ze ontbreken - daarvoor is vaste_teksten - maar valt er ook niet over zodra ze er staan. Dat is de bedoeling: de tekst volgt keurig het format, dus de tool hoort te zwijgen. Willen we deze teksten korter, dan is dat een herziening van het sjabloon en geen bevinding per advies.",

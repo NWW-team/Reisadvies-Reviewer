@@ -35,7 +35,16 @@
       "kan voorkomen",
       "zou kunnen"
     ],
-    "_aanvullingen_noot": "Woorden die niet letterlijk in de brondocumenten staan. Ze passen de regel toe maar zijn niet geciteerd; een bevinding erop krijgt herkomst \"aanvulling\"."
+    "_aanvullingen_noot": "Woorden die niet letterlijk in de brondocumenten staan. Ze passen de regel toe maar zijn niet geciteerd; een bevinding erop krijgt herkomst \"aanvulling\".",
+    "frequentie": [
+      "vaak",
+      "soms",
+      "regelmatig",
+      "veelal",
+      "doorgaans"
+    ],
+    "_frequentie_noot": "Deze woorden blijven twijfeltaal en blijven dus gemeld; ze zijn alleen apart te filteren. Het verschil: ze zeggen hoe vaak iets gebeurt, en dat is soms feitelijke nuance in plaats van slap taalgebruik. Over terroristische groepen kun je niet schrijven dat ze aanslagen plegen; ze doen het regelmatig of soms. Bij de overige woorden (misschien, mogelijk, waarschijnlijk) verzwakt het woord de bewering zelf, en daar is bijna altijd een stelliger formulering voor. Let op: de schrijfwijzer noemt \"vaak\" letterlijk als voorbeeld van twijfeltaal, dus dit onderscheid is een hulpmiddel bij het nalopen en geen versoepeling van de regel.",
+    "_frequentie_meting": "Op 18 september 2026 over 226 reisadviezen: regelmatig 153, vaak 129, soms 107 - samen 389 van de 473 twijfeltaal-bevindingen (82%). De verzwakkers samen 58."
   },
   "negatieve_lading": {
     "_bron": "Begrijpelijkheid > Positieve taal: 'Gebruik zo min mogelijk woorden met een negatieve lading, zoals niet, nooit, probleem, mislukt etc.'",

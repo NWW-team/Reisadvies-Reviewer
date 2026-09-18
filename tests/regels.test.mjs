@@ -132,6 +132,42 @@ const gevallen = [
     slaagt: '<p>Dit is een korte zin.</p>',
   },
   {
+    // Onder In geval van nood liggen de tussenkoppen vast in het sjabloon.
+    regel: 'h4-vaste-kop',
+    faalt: "<h2>Wat kan ik doen in een noodsituatie?</h2><h3>In geval van nood</h3>"
+      + '<h4>Contactgegevens Nederlandse ambassade</h4><p>Bel de ambassade.</p>',
+    slaagt: "<h2>Wat kan ik doen in een noodsituatie?</h2><h3>In geval van nood</h3>"
+      + '<h4>Contactgegevens Nederlandse ambassade in geval van nood</h4><p>Bel de ambassade.</p>',
+  },
+  {
+    // Onder Natuurgeweld hoeft de kop niet vast te liggen, maar moet hij wel een risico benoemen.
+    regel: 'h4-natuurrisico',
+    faalt: "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2><h3>Natuurgeweld</h3>"
+      + '<h4>Bergen</h4><p>Wees voorzichtig in het hooggebergte.</p>',
+    slaagt: "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2><h3>Natuurgeweld</h3>"
+      + '<h4>Slecht weer in de bergen</h4><p>Wees voorzichtig in het hooggebergte.</p>',
+  },
+  {
+    // Een onderwerp dat de matrix als niet-melden aanmerkt, hoort er ook niet als tussenkop te staan.
+    regel: 'h4-niet-melden',
+    faalt: "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2><h3>Natuurgeweld</h3>"
+      + '<h4>IJsberen</h4><p>Er leven ijsberen in dit gebied.</p>',
+    slaagt: "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2><h3>Natuurgeweld</h3>"
+      + '<h4>Lawines</h4><p>In de winter vallen er lawines.</p>',
+  },
+  {
+    // Niet alleen in een kop: een niet-melden-onderwerp in de lopende tekst telt ook.
+    regel: 'tekst-niet-melden',
+    faalt: '<p>In zee zwemmen haaien.</p>',
+    slaagt: '<p>In zee zwemmen dolfijnen.</p>',
+  },
+  {
+    // Zelfde regel, ander gesprek: dit woord zegt hoe vaak iets gebeurt.
+    regel: 'zin-frequentiewoord',
+    faalt: '<p>In dit gebied komen regelmatig overvallen voor.</p>',
+    slaagt: '<p>In dit gebied komen overvallen voor.</p>',
+  },
+  {
     regel: 'zin-twijfeltaal',
     faalt: '<p>U heeft misschien een visum nodig.</p>',
     slaagt: '<p>U heeft een visum nodig.</p>',
@@ -285,6 +321,11 @@ test('elke regel-id uit de tests staat ook in HERKOMST.md', async () => {
 function alleRegelIds() {
   const bron = readFileSync(new URL('../src/regels.js', import.meta.url), 'utf8');
   const ids = new Set([...bron.matchAll(/bevinding\('([a-z0-9-]+)'/g)].map((m) => m[1]));
+  // Een regel mag zijn id in een keuze-expressie bepalen: twijfeltaal splitst zo in verzwakkers
+  // en frequentiewoorden. Beide takken tellen mee.
+  for (const m of bron.matchAll(/bevinding\(\s*\w+\s*\?\s*'([a-z0-9-]+)'\s*:\s*'([a-z0-9-]+)'/g)) {
+    ids.add(m[1]); ids.add(m[2]);
+  }
   for (const m of bron.matchAll(/\[\s*'([a-z0-9-]+)',\s*ERNST\./g)) ids.add(m[1]);
   for (const v of regeldata.sjabloon.vaste_teksten) ids.add(v.id);
   return ids;
@@ -320,6 +361,34 @@ test('een vaste linktekst uit het sjabloon telt niet als te lang', () => {
     + 'over de regels die op dit moment in dit gebied gelden</a>.</p>';
   assert.ok(idsVan(advies(eigen), { land: 'Tsjechi\u00eb' }).includes('link-tekstlengte'),
     'een te lange linktekst in eigen woorden hoort wel gemeld te worden');
+});
+
+test('een niet-melden-onderwerp mag staan in de rubriek die de matrix zelf noemt', () => {
+  // De matrix zegt over Foto's maken: "Kan evt. bij lokale wetten als het echt moet." Staat het
+  // daar, dan is het geen formatfout. Zonder deze uitzondering ging de regel in 49 adviezen af.
+  const onderWetten = "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2>"
+    + '<h3>Wetten en gebruiken</h3>'
+    + "<h4>Foto\u2019s maken</h4><p>Fotografeer geen militaire installaties.</p>";
+  assert.ok(!idsVan(advies(onderWetten), { land: 'Tsjechi\u00eb' }).includes('h4-niet-melden'),
+    'onder lokale wetten wijst de matrix dit onderwerp zelf een plek toe');
+
+  // Tegenproef: dezelfde kop onder een andere rubriek hoort wel gemeld te worden.
+  const elders = "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2>"
+    + '<h3>Criminaliteit</h3>'
+    + "<h4>Foto\u2019s maken</h4><p>Fotografeer geen militaire installaties.</p>";
+  assert.ok(idsVan(advies(elders), { land: 'Tsjechi\u00eb' }).includes('h4-niet-melden'),
+    'buiten de rubriek die de matrix noemt blijft het een melding');
+});
+
+test('een natuurrisico telt ook als het achterin een samenstelling staat', () => {
+  const kop = (t) => "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2>"
+    + '<h3>Natuurgeweld</h3><h4>' + t + '</h4><p>Wees voorzichtig.</p>';
+  for (const t of ['Zandstormen', 'Zeestromingen']) {
+    assert.ok(!idsVan(advies(kop(t)), { land: 'Tsjechi\u00eb' }).includes('h4-natuurrisico'),
+      t + ' benoemt wel degelijk een risico');
+  }
+  assert.ok(idsVan(advies(kop('Bergen')), { land: 'Tsjechi\u00eb' }).includes('h4-natuurrisico'),
+    'een plaats is geen risico');
 });
 
 test('elke bevinding valt in precies een filtergroep', () => {

@@ -139,6 +139,7 @@ export function maakToetser(data) {
   // wel wordt toegepast maar het woord niet geciteerd is.
   const alsSet = (lijst) => new Set((lijst || []).map((x) => String(x).toLowerCase()));
   const extraTwijfel = alsSet(wl.twijfeltaal._aanvullingen);
+  const frequentieWoorden = alsSet(wl.twijfeltaal.frequentie);
   const extraGender = alsSet(wl.genderneutraal._aanvullingen);
   const extraAfk = alsSet(wl.afkortingen._aanvullingen);
   const extraEenheid = alsSet(wl.eenheden_voluit._aanvullingen);
@@ -206,9 +207,39 @@ export function maakToetser(data) {
     return besteScore >= 0.5 ? beste : null;
   }
 
-  const isVasteKop = (kop, land) => matrixKoppen.has(norm(kop))
+  /**
+   * Een vaste kop met een landnaam erin. De naam in de kop wijkt legitiem af van het location-veld:
+   * adviezen gebruiken lidwoorden ("de Bahama's", "het VK"), afkortingen ("de VAE") en de
+   * schrijfwijzer laat per (ei)land in of op toe. Daarom een jokerteken in plaats van de exacte
+   * naam — net als isVasteH2 dat voor de H2-koppen doet.
+   */
+  const vasteKopPatronen = (sj.vaste_koppen || []).map((s) => esc(norm(s))
+    .replace(/\b(in|op|naar) \\\{land\\\}/g, '(?:in|op|naar) .{2,45}')
+    .replace(/\\\{land\\\}/g, '.{2,45}'));
+
+  /** De trefwoorden van onderwerpen die de matrix als "niet melden" aanmerkt, plat en genormaliseerd. */
+  // Op hele woorden vergelijken, niet op deelstrings: "beren" zit in "proberen" en zou anders
+  // een zin over afpersing als een zin over wilde dieren aanmerken.
+  const nietMeldenTref = matrix.koppen
+    .filter((k) => k.richtlijn === 'niet-melden' && (k.trefwoorden || []).length)
+    .flatMap((k) => k.trefwoorden.map((t) => ({
+      re: new RegExp('\\b' + esc(norm(t)) + '\\b'), woord: norm(t),
+      onderwerp: (k.h3 || '').toLowerCase(), toelichting: k.toelichting,
+      magOnder: (k.mag_onder || []).map(norm) })));
+
+  /**
+   * De matrix noemt bij sommige niet-melden-onderwerpen zelf de rubriek waar het wél mag staan:
+   * foto's maken "kan evt. bij lokale wetten", gezondheidszorg "evt. bij Reisverzekering". Staat
+   * het daar, dan is het geen formatfout maar een afweging, en die hoort bij de oordeelstoets.
+   * Zonder deze uitzondering ging `h4-niet-melden` in 49 adviezen af op precies de kop die de
+   * matrix toestaat.
+   */
+  const magHierStaan = (tref, rubriek) => (tref.magOnder || [])
+    .some((r) => norm(rubriek || '').includes(r));
+
+  const isVasteKop = (kop) => matrixKoppen.has(norm(kop))
     || isElementenKop(kop)
-    || (sj.vaste_koppen || []).some((s) => new RegExp('^' + vasteTekstRegex(s, land).source + '$').test(norm(kop)));
+    || vasteKopPatronen.some((p) => new RegExp('^' + p + '$').test(norm(kop)));
 
   /** De vaste H2's staan in vraagvorm met de landnaam erin; 'in {land}' mag ook 'op {land}'
    *  zijn, want de schrijfwijzer kent die keuze per (ei)land. */
@@ -498,6 +529,10 @@ export function maakToetser(data) {
       }
     }
 
+    // Welke niet-melden-onderwerpen al via een kop zijn gemeld. Staat er een blok over, dan is dat
+    // de melding; elke zin daarbinnen nog eens noemen voegt niets toe.
+    const nmGemeld = new Set();
+
     // ---------- koppen tegen de matrix ----------
     for (const kop of doc.koppen) {
       if (kop.niveau === 2 && !isVasteH2(kop.tekst, doc.land)) {
@@ -505,9 +540,63 @@ export function maakToetser(data) {
           `"${kop.tekst}" is geen vaste H2. Vast zijn: ${matrix.h2_vast.map((h) => h.replace('{land}', doc.land || 'land X')).join(' / ')}.`,
           { fragment: kop.tekst }));
       }
+      // ---------- tussenkoppen op h4-niveau ----------
+      // Alleen onder de rubrieken waar het sjabloon ze voorschrijft. Elders heet een kop naar zijn
+      // eigen onderwerp - een ziekte, een gebeurtenis - en valt er niets te toetsen: van de 996
+      // verschillende h4-koppen in het corpus komen er 839 precies een keer voor.
+      if (kop.niveau === 4 && sj.h4_toetsen) {
+        const hoortBij = (sleutel) => {
+          const patroon = sj.rubriek_patronen[sleutel];
+          return patroon && new RegExp(patroon, 'i').test(kop.h3 || '');
+        };
+        if ((sj.h4_toetsen.rubrieken || []).some(hoortBij) && !isVasteKop(kop.tekst)) {
+          b.push(bevinding('h4-vaste-kop', ERNST.letop, 'SJ, de blokken met voorgeschreven tussenkoppen',
+            `"${kop.tekst}" is geen vaste tussenkop onder "${kop.h3}".`,
+            { fragment: kop.tekst,
+              ...(dichtstbijKop(kop.tekst) ? { verwacht: dichtstbijKop(kop.tekst) } : {}),
+              notitie: 'Onder deze rubriek liggen de tussenkoppen vast in het sjabloon.' }));
+        }
+        // Een onderwerp dat de matrix als "niet melden" aanmerkt, hoort er ook niet als tussenkop
+        // te staan. Een kop is een bewuste keuze om er een blok aan te wijden, dus dat weegt
+        // even zwaar als bij een H3.
+        const nmKop = nietMeldenTref.find((t) => t.re.test(norm(kop.tekst))
+          && !magHierStaan(t, kop.h3));
+        if (nmKop) {
+          nmGemeld.add(nmKop.onderwerp);
+          b.push(bevinding('h4-niet-melden', ERNST.fout, 'MX, tab Koppen, richtlijn Niet melden',
+            `"${kop.tekst}" gaat over ${nmKop.onderwerp}, en dat hoort niet in een reisadvies.`,
+            { fragment: kop.tekst, notitie: nmKop.toelichting || undefined }));
+        }
+
+        // Onder Natuurgeweld liggen de koppen niet vast, maar ze horen wel een risico te benoemen.
+        // "Bergen" of "Slecht weer in de bergen" zegt niet welk risico er speelt.
+        // Is de kop al gemeld omdat het onderwerp er niet in hoort, dan is "benoemt geen risico"
+        // een overbodige tweede melding over dezelfde kop.
+        const ng = sj.h4_toetsen.natuurgeweld;
+        if (ng && !nmKop && hoortBij(ng.rubriek)) {
+          const n = norm(kop.tekst);
+          // Nederlands plakt woorden aan elkaar: "zandstormen" en "zeestromingen" benoemen wel
+          // degelijk een risico, maar het risicowoord staat niet vooraan. Een stam van vijf letters
+          // of meer mag daarom ook middenin een woord staan; bij kortere stammen zou dat misgaan
+          // ("ijs" zit in "prijs"), dus die moeten aan het woordbegin.
+          const benoemtRisico = (ng.risicowoorden || []).some((x) => {
+            const stam = esc(norm(x));
+            return new RegExp(norm(x).length >= 5 ? stam : '\\b' + stam).test(n);
+          });
+          if (!isVasteKop(kop.tekst) && !benoemtRisico) {
+            b.push(bevinding('h4-natuurrisico', ERNST.letop, 'SJ, blok Natuurgeweld',
+              `"${kop.tekst}" benoemt geen natuurrisico.`,
+              { fragment: kop.tekst,
+                notitie: 'Een tussenkop onder Natuurgeweld noemt het risico zelf, zoals '
+                  + 'Vulkanen, Orkanen of Overstromingen — niet de plaats of de activiteit.' }));
+          }
+        }
+      }
+
       if (kop.niveau === 3) {
         const regel = koppenOpNaam.get(norm(kop.tekst));
         if (regel && regel.richtlijn === 'niet-melden') {
+          nmGemeld.add((regel.h3 || '').toLowerCase());
           b.push(bevinding('h3-niet-melden', ERNST.fout, 'MX, tab Koppen, richtlijn Niet melden',
             `"${kop.tekst}" hoort niet in een reisadvies.`, { fragment: kop.tekst, notitie: regel.toelichting }));
         }
@@ -522,7 +611,7 @@ export function maakToetser(data) {
         // aanslagen". Een afwijkende kop is niet alleen zelf een formatbreuk — de vaste teksten
         // worden per rubriek op de kop gezocht, dus een kop die de tool niet kent zet de controles
         // eronder stil. Daarom melden we hem, met die waarschuwing erbij.
-        if (!isVasteKop(kop.tekst, doc.land)) {
+        if (!isVasteKop(kop.tekst)) {
           b.push(bevinding('h3-vaste-kop', ERNST.fout, 'SJ, blok Risico dat van toepassing is; MX, tab Koppen',
             `"${kop.tekst}" is geen vaste tussenkop.`,
             { fragment: kop.tekst,
@@ -712,7 +801,7 @@ export function maakToetser(data) {
     // Alleen H3: de H2's zijn door de matrix voorgeschreven vraagvormen en mogen langer zijn.
     // Koppen die de matrix letterlijk voorschrijft ("Paspoort, ID-kaart, rijbewijs") toetsen we
     // niet op woordenaantal of leestekens — de richtlijn is daar de matrix zelf.
-    for (const kop of doc.koppen.filter((k) => k.niveau === 3 && !isVasteKop(k.tekst, doc.land))) {
+    for (const kop of doc.koppen.filter((k) => k.niveau === 3 && !isVasteKop(k.tekst))) {
       const w = telWoorden(kop.tekst);
       if (w > lim.tussenkop.max_woorden) {
         b.push(bevinding('tussenkop-max-woorden', ERNST.letop, 'SW, Gebruiksvriendelijkheid > (Tussen)koppen',
@@ -787,6 +876,24 @@ export function maakToetser(data) {
       return n.length > 20 && sjabloonZinnen.some((kern) => kern.includes(n));
     };
 
+    // Een onderwerp dat de matrix als "niet melden" aanmerkt, hoort ook niet in de lopende tekst.
+    // Vaste teksten tellen niet mee: het trefwoord "ziekenhuis" staat in de voorgeschreven noodzin
+    // ("u bent opgenomen in het ziekenhuis"), en daar kan een redacteur niets aan doen.
+    const gezienNm = new Set();
+    for (const z of doc.zinnen) {
+      if (isVasteZin(z.tekst)) continue;
+      const n = norm(z.tekst);
+      for (const tref of nietMeldenTref) {
+        if (nmGemeld.has(tref.onderwerp)) continue;      // er staat al een blok over; dat is de melding
+        if (magHierStaan(tref, z.h3 || z.h2)) continue;   // de matrix noemt deze rubriek zelf
+        if (!tref.re.test(n) || gezienNm.has(tref.onderwerp + '::' + tref.woord)) continue;
+        gezienNm.add(tref.onderwerp + '::' + tref.woord);
+        b.push(bevinding('tekst-niet-melden', ERNST.letop, 'MX, tab Koppen, richtlijn Niet melden',
+          `"${tref.woord}" gaat over ${tref.onderwerp}, en dat onderwerp hoort niet in een reisadvies.`,
+          { fragment: z.tekst, kop: z.h3 || z.h2, notitie: tref.toelichting || undefined }));
+      }
+    }
+
     for (const z of doc.zinnen) {
       if (isVasteZin(z.tekst)) continue;
       if (z.woorden > lim.zin.max_woorden) {
@@ -801,10 +908,19 @@ export function maakToetser(data) {
           { fragment: z.tekst, kop: z.h3 || z.h2 }));
       }
       for (const w of wl.twijfeltaal.woorden) {
-        if (new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) {
-          b.push(bevinding('zin-twijfeltaal', ERNST.twijfel, 'SW, Begrijpelijkheid > B1',
-            `Twijfeltaal: "${w}".`, { fragment: z.tekst, kop: z.h3 || z.h2, ...herkomst(extraTwijfel, w) }));
-        }
+        if (!new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) continue;
+        // Twee soorten twijfeltaal, met dezelfde herkomst maar een ander gesprek. "Misschien" en
+        // "mogelijk" verzwakken de bewering zelf; daar is bijna altijd een stelliger zin voor.
+        // "Regelmatig" en "soms" zeggen hoe váák iets gebeurt, en dat is soms feitelijke nuance:
+        // over terroristische groepen kun je niet schrijven dát ze aanslagen plegen. Ze blijven
+        // allebei gemeld — de schrijfwijzer noemt "vaak" letterlijk — maar apart te filteren.
+        const isFrequentie = frequentieWoorden.has(w.toLowerCase());
+        b.push(bevinding(isFrequentie ? 'zin-frequentiewoord' : 'zin-twijfeltaal',
+          ERNST.twijfel, 'SW, Begrijpelijkheid > B1',
+          isFrequentie
+            ? `"${w}" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?`
+            : `Twijfeltaal: "${w}".`,
+          { fragment: z.tekst, kop: z.h3 || z.h2, ...herkomst(extraTwijfel, w) }));
       }
       const lv = lijdendeVorm(z.tekst);
       if (lv) {

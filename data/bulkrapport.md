@@ -4,10 +4,10 @@ Gedraaid op 2026-09-18 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **99** van de 226 adviezen hebben geen enkele harde fout.
+- **96** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 0.9 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **34** van de 2760 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **34** van de 2816 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Per soort bevinding
 
@@ -16,8 +16,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 210 | 127 |
-| geel/oranje — let op | 1400 | 217 |
+| rood — fout | 214 | 130 |
+| geel/oranje — let op | 1452 | 219 |
 | lichtblauw — lange zin met link | 542 | 202 |
 | grijs — ter overweging | 135 | 101 |
 | roze — twijfeltaal | 473 | 164 |
@@ -27,8 +27,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | regel | adviezen | bevindingen |
 |---|---:|---:|
 | `zin-max-woorden` | 220 | 1303 |
-| `zin-twijfeltaal` | 164 | 473 |
+| `zin-frequentiewoord` | 148 | 389 |
 | `zin-lijdende-vorm` | 123 | 272 |
+| `zin-twijfeltaal` | 65 | 84 |
 | `aanhalingstekens` | 53 | 86 |
 | `rubrieken-volgorde` | 53 | 53 |
 | `kleur-variant` | 47 | 53 |
@@ -41,13 +42,16 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `kleur-aanduiding` | 31 | 32 |
 | `intro-vaste-tekst` | 26 | 26 |
 | `h3-niet-melden` | 25 | 25 |
+| `h4-vaste-kop` | 21 | 22 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |
+| `tekst-niet-melden` | 16 | 23 |
 | `rijbewijs-anwb` | 13 | 13 |
 | `h3-vaste-kop` | 11 | 11 |
 | `actueel-max-woorden` | 10 | 10 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
+| `h4-natuurrisico` | 7 | 7 |
 | `nood-verwijzing-nood` | 7 | 7 |
 | `nood-verwijzing-crisis` | 7 | 7 |
 | `medicijnen-voldoende` | 7 | 7 |
@@ -61,6 +65,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `h2-vast` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
+| `h4-niet-melden` | 4 | 4 |
 | `kleur-eerste-bullet-voluit` | 3 | 3 |
 | `afkortingen-uitschrijven` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |

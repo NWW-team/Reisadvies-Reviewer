@@ -127,6 +127,98 @@ Daarnaast toetst de tool op vorm die het sjabloon voorschrijft:
 | `nood-contactnummer` | SJ, blok *In geval van nood* | alleen de vaste nummers van het contactcenter |
 | `h3-vaste-kop` | SJ, blok *Risico dat van toepassing is*; MX, tab *Koppen* | de tussenkoppen liggen letterlijk vast: "Terrorisme", niet "Terroristische aanslagen" |
 
+## Tussenkoppen op h4-niveau (18 september 2026)
+
+Sinds de parser h4 kent, kunnen de tussenkoppen op dat niveau getoetst worden. Er staan er 4331 in
+de 226 adviezen, verdeeld over 996 verschillende koppen — waarvan 839 precies één keer. Een gesloten
+lijst kan dat nooit dekken, want een kop heet vaak naar zijn eigen onderwerp.
+
+| regel-id | vindplaats |
+|---|---|
+| `h4-vaste-kop` | SJ, de blokken *In geval van nood* en *Bagageregels*: daar schrijft het sjabloon de tussenkoppen letterlijk voor |
+| `h4-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden*, kolom trefwoorden |
+| `tekst-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden*, kolom trefwoorden |
+| `h4-natuurrisico` | **Geen letterlijke vindplaats.** Instructie van de opdrachtgever, 18 september 2026: een tussenkop onder Natuurgeweld moet een risico benoemen zoals vulkanen, orkanen of overstromingen — niet de plaats of de activiteit. |
+
+**Alleen nood en bagage.** Onder *Paspoort, visum, rijbewijs* en *Regionale risico's* voegen
+redacteuren terecht landspecifieke kopjes toe (*Inreisstempel*, *De provincie Cabinda*, *Grens met
+Mali*). Gemeten: die twee rubrieken leverden 85 meldingen op die inhoudelijk allemaal klopten, dus
+daar geldt geen vaste lijst.
+
+**De landnaam in een kop wordt soepel vergeleken.** Adviezen schrijven *"naar de Bahama's"*, *"naar
+het VK"*, *"op de Seychellen"*, terwijl het sjabloon `{land}` zegt. Zonder die soepelheid gaf de
+regel 198 meldingen in plaats van 22, vrijwel allemaal onterecht. Dit is dezelfde aanpak die
+`isVasteH2` al gebruikte voor de H2-koppen.
+
+`vaste_koppen` is aangevuld met de vertegenwoordigingsvarianten: niet elk land heeft een ambassade,
+sommige hebben een consulaat-generaal, een ambassadekantoor of alleen een honorair consul. Dat is
+een feit over het land, geen afwijking van het format.
+
+**`beren` en `ijsberen`** zijn op verzoek toegevoegd aan de trefwoorden van *Wilde dieren*. Ze staan
+als tussenkop in reisadviezen terwijl de matrix dat onderwerp als niet-melden aanmerkt.
+
+**Ook in de lopende tekst (`tekst-niet-melden`).** Op verzoek van de opdrachtgever, 18 september
+2026: staat een niet-melden-onderwerp in de tekst zelf, dan is dat ook een melding. Eerst was dit
+afgeraden, omdat een eerste meting *Gezondheidszorg* in alle 226 adviezen liet afgaan: het trefwoord
+*ziekenhuis* staat in de voorgeschreven noodtekst (*"u bent opgenomen in het ziekenhuis"*). Drie
+dingen maken de regel alsnog bruikbaar, en samen brengen ze hem van 226 naar 39 meldingen:
+
+1. **Vaste teksten tellen niet mee.** Wat het sjabloon voorschrijft, kan de redacteur niet
+   veranderen. Gezondheidszorg ging daarmee van 226 naar 3.
+2. **Staat er al een kop over, dan is dat de melding.** `h3-niet-melden` en `h4-niet-melden` melden
+   het blok; de tool zegt niet twee keer hetzelfde. Dat halveerde de rest, van 121 naar 50.
+3. **Op hele woorden, niet op deelstrings.** *beren* zit in *proberen*: zonder woordgrenzen werd
+   *"automobilisten proberen af te persen"* een zin over wilde dieren.
+
+**De matrix wijst sommige onderwerpen zelf een plek aan (`mag_onder`).** Bij vier niet-melden-koppen
+staat in de toelichting wáár het onderwerp wél mag staan:
+
+| onderwerp | wat de matrix zegt | mag onder |
+|---|---|---|
+| Foto's maken | "Kan evt. bij lokale wetten als het echt moet." | Wetten en gebruiken |
+| Gezondheidszorg | "Evt. tekst opnemen bij Reisverzekering." | Reisverzekering |
+| Thuisblijvers | "Evt. deels overhevelen naar In geval van nood." | In geval van nood |
+| Smog | "Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld." | Natuurgeweld |
+
+Staat het onderwerp daar, dan meldt de tool het niet. De afweging *is het hier echt nodig* kan een
+harde regel niet maken; die hoort bij de oordeelstoets. Zonder deze uitzondering ging
+`h4-niet-melden` in 49 adviezen af op precies de kop die de matrix toestaat: *Foto's maken* onder
+*Wetten en gebruiken*. Daarmee gaat de regel van 69 naar 4 meldingen en `tekst-niet-melden` van 39
+naar 23.
+
+**Samenstellingen bij `h4-natuurrisico`.** Nederlands plakt woorden aan elkaar: *zandstormen* en
+*zeestromingen* benoemen een risico, maar het risicowoord staat niet vooraan. Een stam van vijf
+letters of meer mag daarom ook middenin een woord staan; kortere stammen moeten aan het woordbegin
+staan, anders valt *ijs* in *prijs*.
+
+Een kop blijft een zwaarder signaal dan een woord in een zin — een kop is een bewuste keuze om een
+blok aan een onderwerp te wijden. Daarom is dit *let op* en geen fout: de redacteur kijkt ernaar en
+beslist zelf.
+
+## Twijfeltaal gesplitst in twee regels (18 september 2026)
+
+| regel-id | vindplaats |
+|---|---|
+| `zin-twijfeltaal` | SW, *Begrijpelijkheid > B1*: "Vermijd twijfeltaal. Denk aan woorden zoals: misschien, vaak, mogelijk, bijna, etc." |
+| `zin-frequentiewoord` | Dezelfde vindplaats. Alleen de indeling is nieuw. |
+
+Beide regels komen uit dezelfde zin in de schrijfwijzer en melden allebei nog steeds. Wat verandert
+is dat je ze apart kunt filteren, omdat het twee verschillende gesprekken zijn:
+
+- **Verzwakkers** (*misschien, mogelijk, waarschijnlijk*) verzwakken de bewering zelf. Daar is bijna
+  altijd een stelliger formulering voor.
+- **Frequentiewoorden** (*vaak, soms, regelmatig*) zeggen hoe váák iets gebeurt. Dat is soms
+  feitelijke nuance: over terroristische groepen kun je niet schrijven dát ze aanslagen plegen — ze
+  doen het regelmatig of soms.
+
+**Let op bij het lezen van deze indeling.** De schrijfwijzer noemt *"vaak"* letterlijk als voorbeeld
+van twijfeltaal. Het onderscheid hierboven is dus een hulpmiddel bij het nalopen en géén uitspraak
+dat frequentiewoorden buiten de regel vallen. De boodschap bij een frequentiewoord is daarom een
+vraag — *"klopt dat hier, of kan het stelliger?"* — en geen constatering.
+
+Gemeten op 18 september 2026 over 226 reisadviezen: regelmatig 153, vaak 129, soms 107 — samen 389
+van de 473 twijfeltaal-bevindingen (82%). De verzwakkers samen 58.
+
 ## Vaste formuleringen zijn vrijgesteld van de schrijfregels (18 september 2026)
 
 Het sjabloon legt formuleringen vast die zelf niet binnen de schrijfwijzer passen. *"Check welke

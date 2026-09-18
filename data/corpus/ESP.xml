@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><document><id>ESP</id><type>reisadvies</type><canonical>https://www.nederlandwereldwijd.nl/reisadvies/spanje</canonical><dataurl>https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/infotypes/countries/esp/traveladvice</dataurl><title><![CDATA[Reisadvies Spanje | Ministerie van Buitenlandse Zaken]]></title><introduction><![CDATA[<h2>In het kort</h2>
-     <ul>  <li>In delen van Spanje kunnen door langdurige droogte en
-    hoge     temperaturen natuurbranden voorkomen. Lees meer onder
+  <ul>  <li>In delen van Spanje kunnen door langdurige droogte en hoge
+    temperaturen natuurbranden voorkomen. Lees meer onder
   Natuurgeweld.</li>  <li>De kleurcode van het reisadvies voor Spanje is
     groen. U kunt erheen reizen. Lees welke veiligheidsrisico’s er
   zijn.</li> </ul><div class="notification attention">E-mail ontvangen als het reisadvies
   wijzigt en bij (dreigende) crisis? <a
     href="https://informatieservice.nederlandwereldwijd.nl">Meld u aan
-    voor de Informatieservice</a></div>]]></introduction><location>Spanje</location><locationkey>spanje</locationkey><isocode>ESP</isocode><modificationdate>Laatst gewijzigd op: 05-08-2026 | Nog steeds geldig op: 14-09-2026</modificationdate><modifications>Reist u naar Spanje? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.</modifications><content><category><name>Welke veiligheidsrisico's zijn er in Spanje?</name><contentblock><paragraphtitle>Terrorisme</paragraphtitle><paragraph><![CDATA[<p>Volgens de Spaanse autoriteiten is de kans op een terroristische
+    voor de Informatieservice</a></div>]]></introduction><location>Spanje</location><locationkey>spanje</locationkey><isocode>ESP</isocode><modificationdate>Laatst gewijzigd op: 05-08-2026 | Nog steeds geldig op: 18-09-2026</modificationdate><modifications>Reist u naar Spanje? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.</modifications><content><category><name>Welke veiligheidsrisico's zijn er in Spanje?</name><contentblock><paragraphtitle>Terrorisme</paragraphtitle><paragraph><![CDATA[<p>Volgens de Spaanse autoriteiten is de kans op een terroristische
   aanslag in Spanje aanwezig.</p>
-                               <p>Wat kunt u doen?</p>
-                               <ul>  <li>Houd het nieuws in de
-  gaten.</li>     <li>       <a
+  <p>Wat kunt u doen?</p>
+  <ul>  <li>Houd het nieuws in de gaten.</li>  <li>
+    <a
       href="https://www.interior.gob.es/opencms/es/prensa/nivel-alerta-terrorista/">Lees
       actuele informatie over het dreigingsniveau</a> op de website van
     de Spaanse overheid (informatie in het Spaans).</li>  <li>Wees alert
@@ -18,7 +18,7 @@
   autoriteiten.</li> </ul>]]></paragraph></contentblock><contentblock><paragraphtitle>Natuurgeweld</paragraphtitle><paragraph><![CDATA[<h4>Natuurbranden</h4>
   <p>In verschillende regio’s in Spanje kunnen natuurbranden voorkomen.
   De natuurbranden kunnen leiden tot wegafsluitingen, slechte
-  luchtkwaliteit en verstoringen van het verkeer en andere voorzieningen. </p>
+  luchtkwaliteit en verstoringen van het verkeer en andere voorzieningen.</p>
   <p>Wat kunt u doen?</p>
   <ul>  <li>Is uw bestemming getroffen door een natuurbrand? Pas uw
     reisplanning aan.</li>  <li>Houd het lokale nieuws en de
@@ -34,7 +34,7 @@
           agentschap van de Spaanse overheid (AEMET)</a> (informatie in
         het Engels)</li>   <li>
         <a
-          href="https://www.comunidad.madrid/seguridad-emergencias-asem-112/incendio-forestal-sierra-oeste-ifsierraoeste-julio-2026">Comunidad
+          href="https://www.comunidad.madrid/salud/calor-salud">Comunidad
           de Madrid</a> (informatie in het Spaans)</li>  </ul>  </li>  <li>
     <a
       href="https://www.nederlandwereldwijd.nl/reisadvies/bosbrand-buitenland">Lees
@@ -208,7 +208,7 @@
   <p>Bekijk wat u vanuit Spanje mee terug mag nemen naar Nederland op de
   pagina <a
     href="https://www.nederlandwereldwijd.nl/reizen-naar-nederland/meenemen-nederland">Wat
-    mag ik meenemen naar Nederland?</a></p>]]></paragraph></contentblock></category></content><files><file><fileurl>https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/infotypes/countries/spanje/traveladvice/map?type=legend&amp;t=1785920659126</fileurl><mimetype>image/png</mimetype><filesize>202736</filesize><filename>Reisadvies_Spanje_05-08-2026.png</filename><filetitle>Reisadvies_Spanje_05-08-2026.png</filetitle><filedescription>Kaart bij reisadvies Spanje</filedescription><filemodifieddate>2026-08-05T09:04:19.126Z</filemodifieddate><maptype>legend</maptype></file><file><fileurl>https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/infotypes/countries/spanje/traveladvice/map?type=standard&amp;t=1785920694093</fileurl><mimetype>image/png</mimetype><filesize>904785</filesize><filename>AppVersie_Reisadvies_Spanje_05-08-2026.png</filename><filetitle>AppVersie_Reisadvies_Spanje_05-08-2026.png</filetitle><filedescription>Kaart bij reisadvies Spanje</filedescription><filemodifieddate>2026-08-05T09:04:54.093Z</filemodifieddate><maptype>standard</maptype></file></files><authorities><department>Ministerie van Buitenlandse Zaken</department></authorities><creators><department>Ministerie van Buitenlandse Zaken</department></creators><lastmodified>2026-08-05T09:23:35.512Z</lastmodified><issued>2026-08-05T21:13:00.000Z</issued><available>2012-09-06T14:49:00.000Z</available><license>CC0 1.0 Universal</license><rightsholders><department>Ministerie van Buitenlandse Zaken</department></rightsholders><language>nl</language><additionalinformation><![CDATA[<h2>Ook nuttig</h2>
+    mag ik meenemen naar Nederland?</a></p>]]></paragraph></contentblock></category></content><files><file><fileurl>https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/infotypes/countries/spanje/traveladvice/map?type=legend&amp;t=1785920659126</fileurl><mimetype>image/png</mimetype><filesize>202736</filesize><filename>Reisadvies_Spanje_05-08-2026.png</filename><filetitle>Reisadvies_Spanje_05-08-2026.png</filetitle><filedescription>Kaart bij reisadvies Spanje</filedescription><filemodifieddate>2026-08-05T09:04:19.126Z</filemodifieddate><maptype>legend</maptype></file><file><fileurl>https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/infotypes/countries/spanje/traveladvice/map?type=standard&amp;t=1785920694093</fileurl><mimetype>image/png</mimetype><filesize>904785</filesize><filename>AppVersie_Reisadvies_Spanje_05-08-2026.png</filename><filetitle>AppVersie_Reisadvies_Spanje_05-08-2026.png</filetitle><filedescription>Kaart bij reisadvies Spanje</filedescription><filemodifieddate>2026-08-05T09:04:54.093Z</filemodifieddate><maptype>standard</maptype></file></files><authorities><department>Ministerie van Buitenlandse Zaken</department></authorities><creators><department>Ministerie van Buitenlandse Zaken</department></creators><lastmodified>2026-09-15T13:45:43.714Z</lastmodified><issued>2026-08-05T21:13:00.000Z</issued><available>2012-09-06T14:49:00.000Z</available><license>CC0 1.0 Universal</license><rightsholders><department>Ministerie van Buitenlandse Zaken</department></rightsholders><language>nl</language><additionalinformation><![CDATA[<h2>Ook nuttig</h2>
     <p>   <a
     href="https://www.nederlandwereldwijd.nl/reisadvies/reisadviezen-kleurcodes">Lees
     meer over reisadviezen en kleurcodes</a></p>]]></additionalinformation></document>

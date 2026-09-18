@@ -100,7 +100,7 @@
         "fragment": "ijk op de website van de Arubaanse overheid voor welke landen dit geldt"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "AFG.xml",
@@ -328,7 +328,7 @@
         "fragment": "Vrouwen moeten altijd vergezeld worden door een ‘mahram’ (een mannelijk familielid)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "AGO.xml",
@@ -482,7 +482,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "AIA.xml",
@@ -543,7 +543,7 @@
         "fragment": "Orkanen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-11-2025 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-11-2025 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ALB.xml",
@@ -556,13 +556,13 @@
     ],
     "zinnen": 85,
     "fout": 0,
-    "letop": 9,
+    "letop": 6,
     "linkzin": 3,
     "twijfel": 3,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 9,
+      "let-op": 6,
       "link-zin": 3,
       "info": 2,
       "twijfel": 3
@@ -572,15 +572,12 @@
       "h4-natuurrisico": 1,
       "h4-vaste-kop": 1,
       "reisverzekering-vaste-tekst": 1,
-      "lhbtiq-verwijzing": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
-      "woord-onbekend": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 2,
-      "zin-twijfeltaal": 1,
-      "lhbtiq-schrijfwijze": 1
+      "zin-twijfeltaal": 1
     },
     "bevindingen": [
       {
@@ -616,13 +613,6 @@
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
       },
       {
-        "regel": "lhbtiq-verwijzing",
-        "ernst": "let-op",
-        "bron": "SJ, blok Wetten en gebruiken",
-        "boodschap": "Waar lhbtiq+ aan de orde komt, hoort de vaste verwijzing naar de themapagina erbij.",
-        "verwacht": "Lees de tips op de pagina Kan ik veilig reizen als lhbtiq+ persoon? om risico’s te verkleinen."
-      },
-      {
         "regel": "rubrieken-max",
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
@@ -636,16 +626,6 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Verkeersongevallen\".",
         "fragment": "Natuurgeweld",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"lhbtiq+persoon\" staat niet in de woordenlijst.",
-        "fragment": "Lees de tips op de pagina Kan ik veilig reizen als lhbtiq+persoon? om risico’s te verkleinen.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -711,16 +691,9 @@
         "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor een reis naar Albanië.",
         "kop": "Paspoort, ID-kaart, rijbewijs",
         "herkomst": "aanvulling"
-      },
-      {
-        "regel": "lhbtiq-schrijfwijze",
-        "ernst": "let-op",
-        "bron": "SW, Schrijfregels > Gender(neutraal) / lhbtiq+",
-        "boodschap": "\"lhbtiq+\" direct tegen het volgende woord; bijvoeglijk hoort er een spatie tussen (lhbtiq+ personen), definiërend een koppelteken (lhbtiq+-rechten).",
-        "fragment": "Lees de tips op de pagina Kan ik veilig reizen als lhbtiq+persoon?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "AND.xml",
@@ -757,7 +730,7 @@
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ARE.xml",
@@ -971,7 +944,7 @@
         "fragment": "De geboortedatum is niet volledig als er ‘00’ of ‘XX’ staat bij uw geboortedag, -maand of -jaar."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ARG.xml",
@@ -1081,7 +1054,7 @@
         "fragment": "Omstanders ‘helpen’ zogenaamd dit te verwijderen, terwijl u beroofd wordt."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ARM.xml",
@@ -1180,7 +1153,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ASM.xml",
@@ -1266,7 +1239,7 @@
         "fragment": "Neem contact op met de Department of Legal Affairs van Amerikaans-Samoa"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ATA.xml",
@@ -1450,7 +1423,7 @@
         "fragment": "Richtlijnen van de International Association of Antarctica Tour Operators (IAATO)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ATG.xml",
@@ -1503,7 +1476,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-03-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-03-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "AUS.xml",
@@ -1655,7 +1628,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "AUT.xml",
@@ -1725,7 +1698,7 @@
         "fragment": "Sinds oktober 2023 is het dreigingsniveau in Oostenrijk aangepast naar het niveau ‘hoog’, als gevolg van de situatie in het Midden-Oosten."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "AZE.xml",
@@ -1796,7 +1769,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BDI.xml",
@@ -1977,7 +1950,7 @@
         "fragment": "Reis ook niet op de RN9 (tussen Bubanza en Bukinanyana, langs het Kibirawoud) en op de RN5 (tussen Bujumbura en Bukavu) tussen 18.00 uur ‘s avonds en 8."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BEL.xml",
@@ -1990,13 +1963,13 @@
     ],
     "zinnen": 46,
     "fout": 0,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 1,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 1,
       "info": 1,
       "twijfel": 4
@@ -2005,7 +1978,6 @@
       "h4-vaste-kop": 1,
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 2,
       "zin-twijfeltaal": 2,
       "zin-frequentiewoord": 2
@@ -2033,16 +2005,6 @@
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Registeer\" staat niet in de woordenlijst.",
-        "fragment": "Registeer u bij de gemeente waar u verblijft op de website van de Belgische overheid.",
-        "kop": "Paspoort, ID-kaart, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       },
       {
         "regel": "zin-max-woorden",
@@ -2094,7 +2056,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 06-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 06-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BEN.xml",
@@ -2216,7 +2178,7 @@
         "fragment": "De grensstrook (50 km) tussen Benin en Nigeria, in de departementen Alibori en Borgou."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BFA.xml",
@@ -2370,7 +2332,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BGD.xml",
@@ -2574,7 +2536,7 @@
         "fragment": "Neem hiervoor contact op met het ministerie van Buitenlandse Zaken van Bangladesh"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BGR.xml",
@@ -2645,7 +2607,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BHR.xml",
@@ -2743,7 +2705,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BHS.xml",
@@ -2849,7 +2811,7 @@
         "fragment": "contact op met het Nederlandse consulaat-generaal in Miami, Verenigde Staten"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BIH.xml",
@@ -2921,7 +2883,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BLR.xml",
@@ -3055,7 +3017,7 @@
         "fragment": "Heeft u naast de Nederlandse ook de Belarussische nationaliteit?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BLZ.xml",
@@ -3124,7 +3086,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BOL.xml",
@@ -3428,7 +3390,7 @@
         "fragment": "U kunt ook de app ‘An sivetur’ downloaden."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BQ-BO.xml",
@@ -3555,7 +3517,7 @@
         "fragment": "Lees wat u kunt doen op de crisiswebsite van het Openbaar Lichaam Bonaire"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BQ-SA.xml",
@@ -3624,7 +3586,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BQ-SE.xml",
@@ -3726,7 +3688,7 @@
         "fragment": "Lees wat u kunt doen op de website van het Openbaar Lichaam Sint Eustatius"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BRA.xml",
@@ -3739,13 +3701,13 @@
     ],
     "zinnen": 112,
     "fout": 1,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 2,
     "twijfel": 11,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 2,
       "info": 1,
       "twijfel": 11
@@ -3753,7 +3715,7 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "woord-onbekend": 3,
+      "woord-onbekend": 2,
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 4,
       "zin-max-woorden": 5,
@@ -3796,16 +3758,6 @@
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Afrânio\" staat niet in de woordenlijst.",
         "fragment": "Afrânio de Melo Franco 159",
-        "kop": "In geval van nood",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"nieet\" staat niet in de woordenlijst.",
-        "fragment": "Let op: hulpverleners spreken nieet of nauwelijks Engels.",
         "kop": "In geval van nood",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
@@ -3973,7 +3925,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BRB.xml",
@@ -4027,7 +3979,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BRN.xml",
@@ -4102,7 +4054,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BTN.xml",
@@ -4213,7 +4165,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "BWA.xml",
@@ -4276,7 +4228,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CAF.xml",
@@ -4409,7 +4361,7 @@
         "fragment": "Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CAN.xml",
@@ -4564,7 +4516,7 @@
         "fragment": "Bekijk of u een verklaring nodig heeft voor uw medicijnen op de website van de Canadese overheid"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CHE.xml",
@@ -4609,7 +4561,7 @@
         "fragment": "Europese ziektekostenverzekeringskaart (European Health Insurance Card, EHIC)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CHL.xml",
@@ -4861,7 +4813,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CHN.xml",
@@ -5238,7 +5190,7 @@
         "fragment": "Wees alert op Chinese jongeren die goed Engels spreken en zich als ‘gids’ aanbieden."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CIV.xml",
@@ -5321,7 +5273,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CMR.xml",
@@ -5484,27 +5436,27 @@
         "fragment": "Het grensgebied tussen Kameroen en Nigeria (40 km vanaf de grens)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "COD.xml",
     "iso": "COD",
     "land": "Congo, Democratische Republiek",
-    "woorden": 2042,
+    "woorden": 2034,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
       "oranje"
     ],
-    "zinnen": 112,
+    "zinnen": 111,
     "fout": 5,
-    "letop": 14,
+    "letop": 19,
     "linkzin": 3,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
       "fout": 5,
-      "let-op": 14,
+      "let-op": 19,
       "link-zin": 3,
       "info": 1,
       "twijfel": 8
@@ -5517,6 +5469,7 @@
       "rubrieken-volgorde": 1,
       "titel-leestekens": 1,
       "tekst-cms-rest": 1,
+      "woord-onbekend": 5,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
@@ -5528,9 +5481,9 @@
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 2042 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
+        "boodschap": "Het advies telt 2034 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Ebola-uitbraak (202 woorden)",
+          "Ebola-uitbraak (194 woorden)",
           "Rood: niet reizen (165 woorden)",
           "Reisverzekering (132 woorden)"
         ],
@@ -5584,6 +5537,56 @@
         "kop": null,
         "herkomst": "aanvulling",
         "notitie": "Een bezoeker ziet dit letterlijk op de pagina staan."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"lturi\" staat niet in de woordenlijst.",
+        "fragment": "lturi",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Bas-Uélé\" staat niet in de woordenlijst.",
+        "fragment": "Bas-Uélé",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Haut-Uélé\" staat niet in de woordenlijst.",
+        "fragment": "Haut-Uélé",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Zuid-Ubangi\" staat niet in de woordenlijst.",
+        "fragment": "Zuid-Ubangi",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Tshopo\" staat niet in de woordenlijst.",
+        "fragment": "Tshopo",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       },
       {
         "regel": "zin-max-woorden",
@@ -5776,7 +5779,7 @@
         "fragment": "Lees meer over rijden in de DRC op de website van de ANWB onder ‘Congo-Kinshasa’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "COG.xml",
@@ -5790,13 +5793,13 @@
     ],
     "zinnen": 83,
     "fout": 1,
-    "letop": 7,
+    "letop": 6,
     "linkzin": 2,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
+      "let-op": 6,
       "link-zin": 2,
       "info": 1,
       "twijfel": 4
@@ -5805,7 +5808,6 @@
       "intro-vaste-tekst": 1,
       "rubrieken-volgorde": 1,
       "titel-leestekens": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 6,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 1
@@ -5833,16 +5835,6 @@
         "bron": "SW, Gebruiksvriendelijkheid > Titel",
         "boodschap": "De titel bevat leestekens. Dat mag alleen bij de vraagvorm.",
         "fragment": "Reisadvies Congo, de Republiek"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"doodstaf\" staat niet in de woordenlijst.",
-        "fragment": "U kunt de doodstaf krijgen voor het bezit van een kleine hoeveelheid drugs.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       },
       {
         "regel": "zin-max-woorden",
@@ -5933,7 +5925,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "COK.xml",
@@ -5995,7 +5987,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "COL.xml",
@@ -6236,25 +6228,25 @@
         "kop": "Demonstraties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "COM.xml",
     "iso": "COM",
     "land": "Comoren",
-    "woorden": 1131,
+    "woorden": 1130,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "geel"
     ],
     "zinnen": 67,
-    "fout": 4,
+    "fout": 3,
     "letop": 4,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 4,
+      "fout": 3,
       "let-op": 4,
       "link-zin": 3,
       "info": 0,
@@ -6265,7 +6257,6 @@
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "intro-vaste-tekst": 1,
-      "tekst-plakfout": 1,
       "zin-max-woorden": 5,
       "link-tekstlengte": 1
     },
@@ -6300,16 +6291,6 @@
         "boodschap": "De intro wijkt af van de vaste introductietekst.",
         "fragment": "Reist u naar de Comoren? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
         "verwacht": "Reist u naar Comoren? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
-      },
-      {
-        "regel": "tekst-plakfout",
-        "ernst": "fout",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"doen.n\": hier is een spatie vergeten.",
-        "fragment": "Voelt u aardschokken? Volg de berichten in de lokale media om te weten wat u moet doen.n.",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Let op: hier staat een los teken tegen het woord aan. Kijk of dat weg moet in plaats van dat er een spatie bij komt."
       },
       {
         "regel": "zin-max-woorden",
@@ -6359,7 +6340,7 @@
         "fragment": "Neem contact op met de ambassade van de Comoren in Brussel voor meer informatie over visa"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CPV.xml",
@@ -6442,7 +6423,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CRI.xml",
@@ -6667,7 +6648,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CUB.xml",
@@ -6679,13 +6660,13 @@
       "oranje"
     ],
     "zinnen": 93,
-    "fout": 4,
+    "fout": 3,
     "letop": 13,
     "linkzin": 4,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 4,
+      "fout": 3,
       "let-op": 13,
       "link-zin": 4,
       "info": 0,
@@ -6695,7 +6676,6 @@
       "doc-woordenaantal": 1,
       "kleur-vaste-tekst": 1,
       "h3-niet-melden": 1,
-      "tekst-plakfout": 1,
       "zin-max-woorden": 11,
       "zin-lijdende-vorm": 3,
       "zin-frequentiewoord": 1,
@@ -6731,16 +6711,6 @@
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
-      },
-      {
-        "regel": "tekst-plakfout",
-        "ernst": "fout",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"III.Let\": hier is een spatie vergeten.",
-        "fragment": "Cuba heeft 3 officiële wisselkoersen voor de Cubaanse peso (CUP). Bekijk de wisselkoersen in Cuba op de website van de Centrale Bank van Cuba (informatie in het Spaans). Let op dat u de juiste koers krijgt als u geld wisselt. Voor toeristen geldt de koers van segmento III.Let op dat u de juiste koers krijgt als u geld wisselt. Voor toeristen geldt de koers van segmento III.",
-        "kop": "Geldzaken",
-        "herkomst": "aanvulling",
-        "verwacht": "III. Let"
       },
       {
         "regel": "zin-max-woorden",
@@ -6891,7 +6861,7 @@
         "boodschap": "\"etc.\" uitschrijven als \"enzovoort\" (1×)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CUW.xml",
@@ -7014,7 +6984,7 @@
         "fragment": "Slachtoffers worden ook wel ‘trago-meisjes’ genoemd."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CYM.xml",
@@ -7110,7 +7080,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CYP.xml",
@@ -7121,14 +7091,14 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 88,
-    "fout": 1,
+    "zinnen": 89,
+    "fout": 0,
     "letop": 10,
     "linkzin": 4,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 0,
       "let-op": 10,
       "link-zin": 4,
       "info": 0,
@@ -7137,7 +7107,6 @@
     "perRegel": {
       "h4-vaste-kop": 1,
       "reisverzekering-vaste-tekst": 1,
-      "tekst-plakfout": 1,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 1,
       "aanhalingstekens": 1
@@ -7158,16 +7127,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "tekst-plakfout",
-        "ernst": "fout",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"demonstraties.Volg\": hier is een spatie vergeten.",
-        "fragment": "Vermijd samenscholingen, mensenmassa’s en demonstraties.Volg het nieuws via de (lokale) media.",
-        "kop": "Demonstraties",
-        "herkomst": "aanvulling",
-        "verwacht": "demonstraties. Volg"
       },
       {
         "regel": "zin-max-woorden",
@@ -7273,7 +7232,7 @@
         "fragment": "Dit deel noemt zich de ‘Turkse Republiek van Noord-Cyprus’ en wordt alleen door Turkije erkend."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "CZE.xml",
@@ -7382,7 +7341,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-03-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-03-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "DEU.xml",
@@ -7492,7 +7451,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "DJI.xml",
@@ -7614,7 +7573,7 @@
         "fragment": "het grensgebied tussen Djibouti en Eritrea (10 km tot de grens)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "DMA.xml",
@@ -7710,7 +7669,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "DNK.xml",
@@ -7755,7 +7714,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "DOM.xml",
@@ -7884,7 +7843,7 @@
         "fragment": "Neem contact op met de ambassade van de Dominicaanse Republiek in Den Haag"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "DZA.xml",
@@ -8095,7 +8054,7 @@
         "fragment": "Zoals een bonnetje van de winkel of een ‘certificaat van authenticiteit’, waarop staat dat uw souvenir een kopie is en geen origineel antiek voorwerp."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ECU.xml",
@@ -8110,13 +8069,13 @@
     ],
     "zinnen": 148,
     "fout": 4,
-    "letop": 19,
+    "letop": 18,
     "linkzin": 6,
     "twijfel": 7,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 19,
+      "let-op": 18,
       "link-zin": 6,
       "info": 1,
       "twijfel": 7
@@ -8126,7 +8085,7 @@
       "kleur-variant": 2,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
-      "woord-onbekend": 6,
+      "woord-onbekend": 5,
       "zin-max-woorden": 12,
       "zin-lijdende-vorm": 4,
       "zin-frequentiewoord": 7,
@@ -8176,16 +8135,6 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
         "fragment": "Natuurgeweld",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"niet-Ecudoraans\" staat niet in de woordenlijst.",
-        "fragment": "Reist u vanuit Peru of Colombia via land- of riviergrenzen naar Ecuador met een niet-Ecudoraans paspoort?",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       },
       {
         "regel": "woord-onbekend",
@@ -8418,7 +8367,7 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Reist u vanuit Peru of Colombia via land- of riviergrenzen naar Ecuador met een niet-Ecudoraans paspoort?",
+        "fragment": "Reist u vanuit Peru of Colombia via land- of riviergrenzen naar Ecuador met een niet-Ecuadoraans paspoort?",
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
@@ -8443,7 +8392,7 @@
         "fragment": "De periode van 365 dagen (het ‘chronologische jaar’) gaat in op de dag van uw (eerste) aankomst als toerist."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "EGY.xml",
@@ -8627,7 +8576,7 @@
         "fragment": "U kunt het slachtoffer worden van ‘bezness’ (liefdesfraude)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ERI.xml",
@@ -8690,7 +8639,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ESP.xml",
@@ -8847,55 +8796,36 @@
         "fragment": "Kijk in de grote steden uit voor de ‘spuugtruc’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "EST.xml",
     "iso": "EST",
     "land": "Estland",
-    "woorden": 1171,
+    "woorden": 1170,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "groen"
     ],
     "zinnen": 63,
-    "fout": 1,
-    "letop": 5,
+    "fout": 0,
+    "letop": 4,
     "linkzin": 5,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 5,
+      "fout": 0,
+      "let-op": 4,
       "link-zin": 5,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "h2-vast": 1,
-      "tekst-cms-rest": 1,
       "zin-max-woorden": 8,
       "zin-frequentiewoord": 1,
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "h2-vast",
-        "ernst": "let-op",
-        "bron": "MX, tab Uitleg",
-        "boodschap": "\"undefined\" is geen vaste H2. Vast zijn: In het kort / Welke veiligheidsrisico's zijn er in Estland? / Wat kan ik doen in een noodsituatie? / Hoe bereid ik mijn reis naar Estland voor? / Ook nuttig.",
-        "fragment": "undefined"
-      },
-      {
-        "regel": "tekst-cms-rest",
-        "ernst": "fout",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"undefined\" hoort niet in de tekst te staan: dit is een rest van het CMS of het sjabloon.",
-        "fragment": "undefined",
-        "kop": "undefined",
-        "herkomst": "aanvulling",
-        "notitie": "Een bezoeker ziet dit letterlijk op de pagina staan."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -8976,7 +8906,7 @@
         "fragment": "En bekijk actuele informatie over welke documenten u nodig heeft om de grens over te steken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ETH.xml",
@@ -9186,7 +9116,7 @@
         "boodschap": "\"o.a.\" uitschrijven als \"onder andere\" (1×)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "FIN.xml",
@@ -9277,7 +9207,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "FJI.xml",
@@ -9434,7 +9364,7 @@
         "fragment": "Houd bij hevige regenval ook rekening met ‘flash floods’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-03-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-03-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "FRA.xml",
@@ -9591,7 +9521,7 @@
         "fragment": "De Franse overheid schat de kans op een terroristische aanslag op dit moment in als ‘waarschijnlijk’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "FRO.xml",
@@ -9645,26 +9575,26 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "FSM.xml",
     "iso": "FSM",
     "land": "Micronesië",
-    "woorden": 1270,
+    "woorden": 1271,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "groen"
     ],
     "zinnen": 67,
     "fout": 1,
-    "letop": 7,
+    "letop": 6,
     "linkzin": 3,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
+      "let-op": 6,
       "link-zin": 3,
       "info": 1,
       "twijfel": 2
@@ -9673,7 +9603,6 @@
       "h3-vaste-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rijbewijs-anwb": 1,
-      "woord-onbekend": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 6,
       "zin-frequentiewoord": 1,
@@ -9703,16 +9632,6 @@
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
         "verwacht": "Lees meer over rijden in Micronesië op de website van de ANWB."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"doenals\" staat niet in de woordenlijst.",
-        "fragment": "Lees wat u kunt doenals u hiermee te maken krijgt:",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -9795,7 +9714,7 @@
         "fragment": "Neem contact op met de ambassade van Micronesië in Washington D.C., Verenigde Staten"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GAB.xml",
@@ -9874,7 +9793,7 @@
         "fragment": "Ambulance: 1300 / 01 73 30 99"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GBR.xml",
@@ -10034,7 +9953,7 @@
         "fragment": "Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GEO.xml",
@@ -10247,7 +10166,7 @@
         "fragment": "het grensgebied tussen de regio’s Abchazië en Zuid-Ossetië en de rest van Georgië (‘administrative boundary lines’)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GHA.xml",
@@ -10408,7 +10327,7 @@
         "fragment": "Pas op voor ‘love scams’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GIN.xml",
@@ -10514,7 +10433,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GLP.xml",
@@ -10575,7 +10494,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GMB.xml",
@@ -10727,7 +10646,7 @@
         "fragment": "Deze toeslag is 20 euro, 20 Amerikaanse dollar of 1."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GNB.xml",
@@ -10773,7 +10692,7 @@
         "kop": "Regionale risico's"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GNQ.xml",
@@ -10810,13 +10729,13 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GRC.xml",
     "iso": "GRC",
     "land": "Griekenland",
-    "woorden": 1287,
+    "woorden": 1286,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "groen"
@@ -10984,7 +10903,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GRD.xml",
@@ -11054,7 +10973,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GRL.xml",
@@ -11066,43 +10985,23 @@
       "groen"
     ],
     "zinnen": 40,
-    "fout": 1,
-    "letop": 3,
+    "fout": 0,
+    "letop": 2,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 3,
+      "fout": 0,
+      "let-op": 2,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
-      "woord-onbekend": 1,
       "zin-twijfeltaal": 1,
       "zin-max-woorden": 3
     },
     "bevindingen": [
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "De uitleg bij kleurcode groen wijkt af van de vaste tekst.",
-        "verwacht": "De kleurcode van het reisadvies voor Groenland is groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"veiligsheidsrisico's\" staat niet in de woordenlijst.",
-        "fragment": "Lees welke veiligsheidsrisico's er zijn.",
-        "kop": "In het kort",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
-      },
       {
         "regel": "zin-twijfeltaal",
         "ernst": "twijfel",
@@ -11136,7 +11035,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GTM.xml",
@@ -11149,13 +11048,13 @@
     ],
     "zinnen": 94,
     "fout": 4,
-    "letop": 7,
+    "letop": 6,
     "linkzin": 8,
     "twijfel": 6,
     "info": 0,
     "perErnst": {
       "fout": 4,
-      "let-op": 7,
+      "let-op": 6,
       "link-zin": 8,
       "info": 0,
       "twijfel": 6
@@ -11163,7 +11062,6 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "h4-niet-melden": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 5,
       "zin-lijdende-vorm": 2,
@@ -11190,16 +11088,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"riscio\" staat niet in de woordenlijst.",
-        "fragment": "In alle zones van Guatemala-Stad. Vooral in het historisch centrum (zone 1) lopen toeristen riscio op overvallen. Ook het uitgaans- en zakendistrict (zone 10) is niet veilig. Het zelfde geldt voor de steden Mixco en Villa Nueva, die naast Guatemala-Stad liggen.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       },
       {
         "regel": "zin-max-woorden",
@@ -11378,7 +11266,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GUF.xml",
@@ -11450,7 +11338,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "GUY.xml",
@@ -11559,7 +11447,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "HKG.xml",
@@ -11673,7 +11561,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "HND.xml",
@@ -11820,7 +11708,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "HRV.xml",
@@ -11910,7 +11798,7 @@
         "fragment": "Bos- en natuurbranden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "HTI.xml",
@@ -12029,7 +11917,7 @@
         "fragment": "Alleen kleine regionale luchtvaartmaatschappijen voeren nog een beperkt aantal vluchten uit vanuit het vliegveld Cap-Haïtien."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "HUN.xml",
@@ -12075,7 +11963,7 @@
         "kop": "Demonstraties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 31-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 31-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "IDN.xml",
@@ -12486,7 +12374,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "IND.xml",
@@ -13061,7 +12949,7 @@
         "fragment": "U kunt uw visum verlengen via de Indian Bureau of Immigration / Foreigners Regional Registration Office (FRRO)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "IRL.xml",
@@ -13158,29 +13046,29 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "IRN.xml",
     "iso": "IRN",
     "land": "Iran",
-    "woorden": 2130,
+    "woorden": 2128,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 124,
+    "zinnen": 126,
     "fout": 2,
     "letop": 22,
     "linkzin": 2,
-    "twijfel": 6,
+    "twijfel": 5,
     "info": 2,
     "perErnst": {
       "fout": 2,
       "let-op": 22,
       "link-zin": 2,
       "info": 2,
-      "twijfel": 6
+      "twijfel": 5
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -13188,9 +13076,9 @@
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 14,
-      "zin-twijfeltaal": 3,
-      "zin-lijdende-vorm": 9,
+      "zin-max-woorden": 13,
+      "zin-lijdende-vorm": 10,
+      "zin-twijfeltaal": 2,
       "zin-frequentiewoord": 3
     },
     "bevindingen": [
@@ -13198,10 +13086,10 @@
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 2130 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
+        "boodschap": "Het advies telt 2128 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
           "Willekeurige arrestaties (261 woorden)",
-          "In het kort (131 woorden)",
+          "Spanningen in het Midden-Oosten (134 woorden)",
           "Reisverzekering (128 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
@@ -13241,16 +13129,16 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Sinds eind juni 2026 zijn de spanningen tussen de Verenigde Staten (VS) en Iran weer opgelopen.",
+        "boodschap": "Deze zin telt 21 woorden. Maximaal 15.",
+        "fragment": "De afgelopen periode heeft de VS luchtaanvallen uitgevoerd rondom de Perzische Golf, maar ook verder het land in werden doelen getroffen..",
         "kop": "Actueel"
       },
       {
-        "regel": "zin-max-woorden",
+        "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "De VS voert luchtaanvallen uit rondom de Perzische Golf, maar ook verder het land in zijn doelen getroffen.",
+        "boodschap": "Lijdende vorm: \"werden … getroffen\". Schrijf actief.",
+        "fragment": "De afgelopen periode heeft de VS luchtaanvallen uitgevoerd rondom de Perzische Golf, maar ook verder het land in werden doelen getroffen..",
         "kop": "Actueel"
       },
       {
@@ -13258,7 +13146,7 @@
         "ernst": "twijfel",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Twijfeltaal: \"mogelijk\".",
-        "fragment": "Op dit moment is er geen consulaire hulp mogelijk voor Nederlanders in Iran.",
+        "fragment": "Op dit moment is er beperkte consulaire hulp mogelijk voor Nederlanders in Iran.",
         "kop": "Actueel"
       },
       {
@@ -13454,14 +13342,6 @@
         "kop": "Natuurgeweld"
       },
       {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"mogelijk\".",
-        "fragment": "Op dit moment is er geen consulaire hulp mogelijk voor Nederlanders in Iran.",
-        "kop": "In geval van nood"
-      },
-      {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -13470,7 +13350,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "IRQ.xml",
@@ -13712,7 +13592,7 @@
         "fragment": "Algemeen alarmnummer: +964 (0) 751 501 9756 (alleen in de provincie Erbil)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ISL.xml",
@@ -13800,7 +13680,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ISR.xml",
@@ -14018,7 +13898,7 @@
         "fragment": "Neem voor vertrek naar Israël contact op met de ambassade van Israël in Den Haag"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ITA.xml",
@@ -14149,7 +14029,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "JAM.xml",
@@ -14211,7 +14091,7 @@
         "fragment": "Neem hiervoor contact op met de ambassade van Jamaica in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "JOR.xml",
@@ -14400,7 +14280,7 @@
         "fragment": "Droge ‘wadi’s’ (valleien) lopen dan snel onder water."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "JPN.xml",
@@ -14577,7 +14457,7 @@
         "fragment": "U mag in Japan maximaal 120 ml per maand aan e-sigarettenvloeistof bij u hebben voor eigen gebruik."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "KAZ.xml",
@@ -14664,7 +14544,7 @@
         "fragment": "In december 2025 is in Kazachstan wetgeving aangenomen die gericht is op het tegengaan van wat de autoriteiten beschouwen als ‘lhbtiq+-propaganda’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "KEN.xml",
@@ -14900,7 +14780,7 @@
         "boodschap": "\"etc.\" uitschrijven als \"enzovoort\" (1×)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "KGZ.xml",
@@ -14971,7 +14851,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "KHM.xml",
@@ -15270,7 +15150,7 @@
         "fragment": "Of gaat u reizen met de bus of motortaxi (‘motodop’)?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "KIR.xml",
@@ -15393,7 +15273,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "KNA.xml",
@@ -15462,7 +15342,7 @@
         "fragment": "Neem contact op met de ambassade van Saint Kitts en Nevis in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "KOR.xml",
@@ -15646,37 +15526,36 @@
         "kop": "Medicijnen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "KWT.xml",
     "iso": "KWT",
     "land": "Koeweit",
-    "woorden": 1271,
+    "woorden": 1327,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "oranje"
     ],
-    "zinnen": 69,
+    "zinnen": 73,
     "fout": 1,
-    "letop": 7,
+    "letop": 9,
     "linkzin": 1,
-    "twijfel": 2,
+    "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
+      "let-op": 9,
       "link-zin": 1,
       "info": 1,
-      "twijfel": 2
+      "twijfel": 1
     },
     "perRegel": {
       "kleur-variant": 1,
       "rubrieken-volgorde": 1,
       "tekst-onzichtbaar-teken": 1,
-      "zin-frequentiewoord": 1,
-      "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 5,
+      "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 1,
       "aanhalingstekens": 2
     },
@@ -15708,11 +15587,19 @@
         "notitie": "Dit teken is niet te zien maar staat er wel. Het hoort hier weg; in dit fragment staat er ␣ op de plek waar het stond."
       },
       {
-        "regel": "zin-frequentiewoord",
-        "ernst": "twijfel",
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
-        "fragment": "Sinds half juli 2026 voert Iran weer regelmatig aanvallen uit op militaire doelen in Koeweit.",
+        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
+        "fragment": "Er is sprake van een verhoogd risico op aanvallen door Iran en groepen die met Iran samenwerken.",
+        "kop": "Actueel"
+      },
+      {
+        "regel": "zin-lijdende-vorm",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Lijdende vorm: \"wordt … geraakt\". Schrijf actief.",
+        "fragment": "Bij deze aanvallen wordt ook civiele infrastructuur geraakt, waaronder woonwijken in dichtbebouwde stedelijke gebieden.",
         "kop": "Actueel"
       },
       {
@@ -15778,7 +15665,7 @@
         "fragment": "Koeweit erkent alleen paspoorten die het geslacht aangeven met de letters ‘M’ (man) of ‘F’ (vrouw)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LAO.xml",
@@ -16078,7 +15965,7 @@
         "fragment": "Ook bieden personen die ‘samenwerken’ met de lokale politie soms drugs aan op straat en in bars, om toeristen in de val te lokken."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LBN.xml",
@@ -16268,7 +16155,7 @@
         "fragment": "Diefstal uit en van auto’s (‘carjacking’) komt voor."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LBR.xml",
@@ -16348,7 +16235,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-03-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-03-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LBY.xml",
@@ -16522,7 +16409,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LCA.xml",
@@ -16583,7 +16470,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LIE.xml",
@@ -16596,32 +16483,22 @@
     ],
     "zinnen": 45,
     "fout": 0,
-    "letop": 6,
-    "linkzin": 1,
+    "letop": 2,
+    "linkzin": 0,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
-      "link-zin": 1,
+      "let-op": 2,
+      "link-zin": 0,
       "info": 1,
       "twijfel": 0
     },
     "perRegel": {
-      "lhbtiq-verwijzing": 1,
       "rubrieken-volgorde": 1,
-      "woord-onbekend": 2,
-      "zin-max-woorden": 3,
-      "lhbtiq-schrijfwijze": 1
+      "zin-max-woorden": 2
     },
     "bevindingen": [
-      {
-        "regel": "lhbtiq-verwijzing",
-        "ernst": "let-op",
-        "bron": "SJ, blok Wetten en gebruiken",
-        "boodschap": "Waar lhbtiq+ aan de orde komt, hoort de vaste verwijzing naar de themapagina erbij.",
-        "verwacht": "Lees de tips op de pagina Kan ik veilig reizen als lhbtiq+ persoon? om risico’s te verkleinen."
-      },
       {
         "regel": "rubrieken-volgorde",
         "ernst": "info",
@@ -16631,39 +16508,11 @@
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"lhbtiq+persoon\" staat niet in de woordenlijst.",
-        "fragment": "Bent u een lhbtiq+persoon?",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"lhbtiq+personen\" staat niet in de woordenlijst.",
-        "fragment": "De wetten en gebruiken in dit land tegenover lhbtiq+personen zijn vergelijkbaar met die van Nederland.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
-      },
-      {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "De wetten en gebruiken in dit land tegenover lhbtiq+personen zijn vergelijkbaar met die van Nederland.",
-        "kop": "Wetten en gebruiken"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "link-zin",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "Lees de tips op de pagina Kan ik veilig reizen als lhbtiq+persoon? om de risico’s te verkleinen.",
+        "fragment": "De wetten en gebruiken in dit land tegenover lhbtiq+ personen zijn vergelijkbaar met die van Nederland.",
         "kop": "Wetten en gebruiken"
       },
       {
@@ -16673,22 +16522,15 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Houd hier rekening mee, vooral als u gaat skiën of snowboarden buiten de officiële skipistes (off-piste).",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "lhbtiq-schrijfwijze",
-        "ernst": "let-op",
-        "bron": "SW, Schrijfregels > Gender(neutraal) / lhbtiq+",
-        "boodschap": "\"lhbtiq+\" direct tegen het volgende woord; bijvoeglijk hoort er een spatie tussen (lhbtiq+ personen), definiërend een koppelteken (lhbtiq+-rechten).",
-        "fragment": "Bent u een lhbtiq+persoon?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LKA.xml",
     "iso": "LKA",
     "land": "Sri Lanka",
-    "woorden": 1742,
+    "woorden": 1741,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "geel"
@@ -16724,7 +16566,7 @@
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 1742 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
+        "boodschap": "Het advies telt 1741 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
           "Visum (148 woorden)",
           "Reisverzekering (120 woorden)",
@@ -16940,7 +16782,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LSO.xml",
@@ -16994,7 +16836,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LTU.xml",
@@ -17065,7 +16907,7 @@
         "fragment": "Download de LT72 app om notificaties te ontvangen en volg de laatste adviezen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LUX.xml",
@@ -17111,7 +16953,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "LVA.xml",
@@ -17193,7 +17035,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MAC.xml",
@@ -17299,7 +17141,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MAR.xml",
@@ -17525,13 +17367,13 @@
         "fragment": "Wilt u samen met uw echtgenoot of partner in een hotel of andere accommodatie verblijven?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MCO.xml",
     "iso": "MCO",
     "land": "Monaco",
-    "woorden": 808,
+    "woorden": 815,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "groen"
@@ -17575,7 +17417,7 @@
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"meenenemen\" staat niet in de woordenlijst.",
-        "fragment": "Check wat u mag meenenemen naar Monaco op de website van de Franse douane (in het Engels).",
+        "fragment": "Check wat u mag meenenemen naar Monaco op de website van de Franse douane (informatie in het Engels).",
         "kop": "Bagageregels",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
@@ -17594,12 +17436,12 @@
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "Check wat u mag meenenemen naar Monaco op de website van de Franse douane (in het Engels).",
+        "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
+        "fragment": "Check wat u mag meenenemen naar Monaco op de website van de Franse douane (informatie in het Engels).",
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MDA.xml",
@@ -17672,7 +17514,7 @@
         "kop": "Demonstraties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MDG.xml",
@@ -17808,7 +17650,7 @@
         "fragment": "Vliegreis via Midden-Oosten"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MDV.xml",
@@ -17967,7 +17809,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MEX.xml",
@@ -18285,7 +18127,7 @@
         "fragment": "In de steden van Mexico is er risico op ‘express’-ontvoeringen."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MHL.xml",
@@ -18399,7 +18241,7 @@
         "fragment": "Neem contact op met het Ministerie van Immigratie van de Marshalleilanden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MKD.xml",
@@ -18453,7 +18295,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MLI.xml",
@@ -18573,7 +18415,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MLT.xml",
@@ -18690,7 +18532,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MMR.xml",
@@ -18926,7 +18768,7 @@
         "fragment": "Hier zijn drugsbendes actief en ‘scamming kartels’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MNE.xml",
@@ -19034,7 +18876,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MNG.xml",
@@ -19129,7 +18971,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MOZ.xml",
@@ -19336,7 +19178,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MRT.xml",
@@ -19450,7 +19292,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MSR.xml",
@@ -19580,7 +19422,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MTQ.xml",
@@ -19658,7 +19500,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MUS.xml",
@@ -19790,7 +19632,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MWI.xml",
@@ -19885,7 +19727,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "MYS.xml",
@@ -19994,7 +19836,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NAM.xml",
@@ -20075,7 +19917,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NCL.xml",
@@ -20088,20 +19930,19 @@
     ],
     "zinnen": 53,
     "fout": 1,
-    "letop": 1,
+    "letop": 0,
     "linkzin": 1,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 1,
+      "let-op": 0,
       "link-zin": 1,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 1
     },
     "bevindingen": [
@@ -20114,16 +19955,6 @@
         "notitie": "Reisgidsinfo."
       },
       {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"zakenrollers\" staat niet in de woordenlijst.",
-        "fragment": "Houd in Nieuw-Caledonië rekening met zakenrollers en berovingen.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
-      },
-      {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -20132,7 +19963,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NER.xml",
@@ -20234,7 +20065,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NGA.xml",
@@ -20471,46 +20302,48 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NIC.xml",
     "iso": "NIC",
     "land": "Nicaragua",
-    "woorden": 1890,
+    "woorden": 1800,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 107,
+    "zinnen": 105,
     "fout": 1,
     "letop": 12,
     "linkzin": 3,
     "twijfel": 4,
-    "info": 2,
+    "info": 3,
     "perErnst": {
       "fout": 1,
       "let-op": 12,
       "link-zin": 3,
-      "info": 2,
+      "info": 3,
       "twijfel": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
+      "bagage-heen": 1,
       "rubrieken-volgorde": 1,
-      "zin-frequentiewoord": 4,
-      "zin-max-woorden": 11,
-      "zin-lijdende-vorm": 4
+      "zin-max-woorden": 12,
+      "zin-frequentiewoord": 3,
+      "zin-lijdende-vorm": 3,
+      "zin-twijfeltaal": 1
     },
     "bevindingen": [
       {
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 1890 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
+        "boodschap": "Het advies telt 1800 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Berovingen en overvallen (152 woorden)",
+          "Berovingen en overvallen (137 woorden)",
           "Reisverzekering (109 woorden)",
           "Visum (108 woorden)"
         ],
@@ -20525,20 +20358,19 @@
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
       },
       {
+        "regel": "bagage-heen",
+        "ernst": "info",
+        "bron": "SJ, blok Bagageregels",
+        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Nicaragua."
+      },
+      {
         "regel": "rubrieken-volgorde",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Verkeersongevallen\".",
         "fragment": "Natuurgeweld",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
-      },
-      {
-        "regel": "zin-frequentiewoord",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
-        "fragment": "In Nicaragua komt regelmatig gewelddadige criminaliteit voor.",
-        "kop": "Criminaliteit"
       },
       {
         "regel": "zin-max-woorden",
@@ -20569,15 +20401,7 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 23 woorden. Maximaal 15.",
-        "fragment": "Als u kritische uitspraken doet over politieke of sociale zaken in Nicaragua, loopt u het risico dat u het land niet wordt binnengelaten.",
-        "kop": "Wetten en gebruiken"
-      },
-      {
-        "regel": "zin-lijdende-vorm",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Lijdende vorm: \"wordt … binnengelaten\". Schrijf actief.",
-        "fragment": "Als u kritische uitspraken doet over politieke of sociale zaken in Nicaragua, loopt u het risico dat u het land niet wordt binnengelaten.",
+        "fragment": "Als u kritische uitspraken doet over politieke of sociale zaken in Nicaragua, loopt u het risico dat u het land niet binnen mag.",
         "kop": "Wetten en gebruiken"
       },
       {
@@ -20592,8 +20416,8 @@
         "regel": "zin-frequentiewoord",
         "ernst": "twijfel",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
-        "fragment": "Alcoholmisbruik in het verkeer komt in Nicaragua vaak voor.",
+        "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
+        "fragment": "Alcoholmisbruik in het verkeer komt in Nicaragua regelmatig voor.",
         "kop": "Verkeersongevallen"
       },
       {
@@ -20605,11 +20429,19 @@
         "kop": "Natuurgeweld"
       },
       {
+        "regel": "zin-frequentiewoord",
+        "ernst": "twijfel",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
+        "fragment": "In Nicaragua komen regelmatig aardbevingen voor.",
+        "kop": "Natuurgeweld"
+      },
+      {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 21 woorden. Maximaal 15.",
-        "fragment": "Volg de berichten in de lokale media en informeer vooraf naar de situatie in het gebied waar u naartoe wilt reizen.",
+        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
+        "fragment": "Kijk daarom voor uw vertrek hoe de situatie is in het gebied waar u naartoe gaat.",
         "kop": "Natuurgeweld"
       },
       {
@@ -20637,19 +20469,11 @@
         "kop": "Natuurgeweld"
       },
       {
-        "regel": "zin-frequentiewoord",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
-        "fragment": "In Nicaragua zijn regelmatig demonstraties.",
-        "kop": "Demonstraties"
-      },
-      {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Lijdende vorm: \"worden … geblokkeerd\". Schrijf actief.",
-        "fragment": "Daarbij kan geweld ontstaan en kunnen wegen worden geblokkeerd.",
+        "fragment": "Mochten er toch demonstraties plaatsvinden, dan kan daarbij geweld ontstaan en kunnen wegen worden geblokkeerd.",
         "kop": "Demonstraties"
       },
       {
@@ -20678,14 +20502,31 @@
       },
       {
         "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin telt 36 woorden. Maximaal 15.",
+        "fragment": "Het Ministerie van Binnenlandse Zaken van Nicaragua raadt bezoekers aan om van tevoren het verblijf te registreren op de website van de Nicaraguaanse overheid (informatie in het Spaans) Dit kan wellicht zorgen voor een soepelere grenscontrole.",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "zin-twijfeltaal",
+        "ernst": "twijfel",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Twijfeltaal: \"wellicht\".",
+        "fragment": "Het Ministerie van Binnenlandse Zaken van Nicaragua raadt bezoekers aan om van tevoren het verblijf te registreren op de website van de Nicaraguaanse overheid (informatie in het Spaans) Dit kan wellicht zorgen voor een soepelere grenscontrole.",
+        "kop": "Paspoort, visum, rijbewijs",
+        "herkomst": "aanvulling"
+      },
+      {
+        "regel": "zin-max-woorden",
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 25 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "Registreer uw verblijf uiterlijk 7 dagen voor aankomst in Nicaragua op de website van het ministerie van Binnenlandse Zaken van Nicaragua (informatie in het Spaans).",
-        "kop": "Paspoort, visum, rijbewijs"
+        "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
+        "fragment": "Check wat u mee mag nemen op de website van de douane van Nicaragua (informatie in het Engels).",
+        "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NIU.xml",
@@ -20748,7 +20589,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NOR.xml",
@@ -20810,7 +20651,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NPL.xml",
@@ -20913,7 +20754,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NRU.xml",
@@ -21064,7 +20905,7 @@
         "fragment": "neem contact op met het consulaat-generaal van Naoero in Brisbane, Australië"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "NZL.xml",
@@ -21244,7 +21085,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "OMN.xml",
@@ -21412,7 +21253,7 @@
         "fragment": "Deze ‘flash floods’ sleuren alles mee en zijn vaak dodelijk."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PAK.xml",
@@ -21637,7 +21478,7 @@
         "fragment": "U heeft mogelijk een ‘Non-Objection Certificate’ (NOC) nodig."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PAN.xml",
@@ -21790,7 +21631,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PCN.xml",
@@ -21887,13 +21728,13 @@
         "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PER.xml",
     "iso": "PER",
     "land": "Peru",
-    "woorden": 2460,
+    "woorden": 2461,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
@@ -21902,13 +21743,13 @@
     ],
     "zinnen": 137,
     "fout": 2,
-    "letop": 25,
+    "letop": 24,
     "linkzin": 5,
     "twijfel": 3,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 25,
+      "let-op": 24,
       "link-zin": 5,
       "info": 3,
       "twijfel": 3
@@ -21922,7 +21763,7 @@
       "medicijnen-voldoende": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
-      "woord-onbekend": 7,
+      "woord-onbekend": 6,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 1,
@@ -21933,7 +21774,7 @@
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 2460 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
+        "boodschap": "Het advies telt 2461 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
           "Visum (187 woorden)",
           "Reisverzekering (185 woorden)",
@@ -22002,16 +21843,6 @@
         "boodschap": "\"veiligheidspatrouilles\" staat niet in de woordenlijst.",
         "fragment": "Houd rekening met meer veiligheidspatrouilles.",
         "kop": "Actueel",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"zoalsCruz\" staat niet in de woordenlijst.",
-        "fragment": "Kies een betrouwbare busmaatschappij, zoalsCruz del Sur, Ormeño of Oltursa.",
-        "kop": "Verkeersongevallen",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       },
@@ -22250,7 +22081,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PHL.xml",
@@ -22620,7 +22451,7 @@
         "fragment": "Wel wordt lichamelijk contact in het openbaar soms gezien als een ‘ernstig schandaal’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PLW.xml",
@@ -22832,7 +22663,7 @@
         "fragment": "Neem alleen ‘koraal-veilige’ zonnebrandmiddelen mee of koop deze in winkels in Palau."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PNG.xml",
@@ -23140,13 +22971,13 @@
         "fragment": "Houd rekening met ‘flash flooding’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "POL.xml",
     "iso": "POL",
     "land": "Polen",
-    "woorden": 993,
+    "woorden": 1068,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "groen"
@@ -23211,47 +23042,36 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PRI.xml",
     "iso": "PRI",
     "land": "Puerto Rico",
-    "woorden": 1437,
+    "woorden": 1438,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "geel"
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 3,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 3,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
-      "woord-onbekend": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 6,
       "zin-twijfeltaal": 1
     },
     "bevindingen": [
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"visumnodig\" staat niet in de woordenlijst.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visumnodig voor een reis naar Puerto Rico.",
-        "kop": "Paspoort, visum/ESTA, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
-      },
       {
         "regel": "zin-frequentiewoord",
         "ernst": "twijfel",
@@ -23304,8 +23124,8 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visumnodig voor een reis naar Puerto Rico.",
+        "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
+        "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visum nodig voor een reis naar Puerto Rico.",
         "kop": "Paspoort, visum/ESTA, rijbewijs"
       },
       {
@@ -23313,12 +23133,12 @@
         "ernst": "twijfel",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visumnodig voor een reis naar Puerto Rico.",
+        "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visum nodig voor een reis naar Puerto Rico.",
         "kop": "Paspoort, visum/ESTA, rijbewijs",
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PRK.xml",
@@ -23412,7 +23232,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PRT.xml",
@@ -23493,7 +23313,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PRY.xml",
@@ -23609,7 +23429,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PSE.xml",
@@ -23839,7 +23659,7 @@
         "fragment": "contactgegevens van de Nederlandse vertegenwoordiging in de Palestijnse Gebieden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "PYF.xml",
@@ -23941,7 +23761,7 @@
         "fragment": "Houd bij hevige regenval op bergachtige eilanden, zoals Tahiti en Moorea, ook rekening met ‘flash floods’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "QAT.xml",
@@ -24083,7 +23903,7 @@
         "fragment": "In Qatar is het verboden en strafbaar om een relatie te hebben met iemand anders dan uw wettige echtgenoot of echtgenote."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "REU.xml",
@@ -24156,27 +23976,27 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-01-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-01-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ROU.xml",
     "iso": "ROU",
     "land": "Roemenië",
-    "woorden": 1313,
+    "woorden": 1389,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "geel",
       "groen"
     ],
-    "zinnen": 78,
+    "zinnen": 87,
     "fout": 3,
-    "letop": 4,
+    "letop": 5,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 4,
+      "let-op": 5,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
@@ -24186,6 +24006,7 @@
       "h4-niet-melden": 2,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
+      "rubrieken-max": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1
     },
@@ -24230,6 +24051,13 @@
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
+        "regel": "rubrieken-max",
+        "ernst": "let-op",
+        "bron": "SJ, richtlijn boven de rubrieken",
+        "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+      },
+      {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -24270,54 +24098,40 @@
         "kop": "Verkeersongevallen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-03-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "RS-KM.xml",
     "iso": "XKX",
     "land": "Kosovo",
-    "woorden": 1522,
+    "woorden": 1417,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 86,
-    "fout": 2,
-    "letop": 8,
+    "zinnen": 84,
+    "fout": 1,
+    "letop": 5,
     "linkzin": 3,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 2,
-      "let-op": 8,
+      "fout": 1,
+      "let-op": 5,
       "link-zin": 3,
       "info": 1,
       "twijfel": 4
     },
     "perRegel": {
-      "doc-woordenaantal": 1,
       "h4-niet-melden": 1,
-      "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 5,
-      "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 2,
+      "zin-lijdende-vorm": 3,
+      "zin-max-woorden": 4,
       "zin-frequentiewoord": 2,
       "opmaak-vet-onderstreept": 1
     },
     "bevindingen": [
-      {
-        "regel": "doc-woordenaantal",
-        "ernst": "fout",
-        "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 1522 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
-        "detail": [
-          "Registratieplicht (126 woorden)",
-          "Lawines (103 woorden)",
-          "Reisverzekering (100 woorden)"
-        ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
-      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -24327,35 +24141,12 @@
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
       },
       {
-        "regel": "rubrieken-max",
-        "ernst": "let-op",
-        "bron": "SJ, richtlijn boven de rubrieken",
-        "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Terrorisme, Criminaliteit, Wetten en gebruiken, Landmijnen, Natuurgeweld, Demonstraties"
-      },
-      {
         "regel": "rubrieken-volgorde",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Landmijnen\".",
         "fragment": "Natuurgeweld",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Ook op woensdag 16 september 2026 zijn vanaf 10.00 uur grote demonstraties aangekondigd in verschillende steden.",
-        "kop": "Actueel"
-      },
-      {
-        "regel": "zin-lijdende-vorm",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Lijdende vorm: \"worden … gehinderd\". Schrijf actief.",
-        "fragment": "Tijdens de demonstraties kan het verkeer worden gehinderd.",
-        "kop": "Actueel"
       },
       {
         "regel": "zin-twijfeltaal",
@@ -24453,7 +24244,7 @@
         "fragment": "Wat kunt u doen bij natuurgeweld?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "RUS.xml",
@@ -24721,28 +24512,28 @@
         "fragment": "Bij aankomst in Rusland ontvangt u van de grenspolitie een ‘migration card’ (een klein wit kaartje)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "RWA.xml",
     "iso": "RWA",
     "land": "Rwanda",
-    "woorden": 1836,
+    "woorden": 1858,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "oranje",
       "geel"
     ],
-    "zinnen": 113,
+    "zinnen": 115,
     "fout": 3,
-    "letop": 16,
-    "linkzin": 3,
+    "letop": 17,
+    "linkzin": 4,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 16,
-      "link-zin": 3,
+      "let-op": 17,
+      "link-zin": 4,
       "info": 1,
       "twijfel": 3
     },
@@ -24751,9 +24542,9 @@
       "actueel-max-woorden": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 3,
+      "woord-onbekend": 4,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 12,
+      "zin-max-woorden": 13,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 2,
       "link-verboden-partij": 1,
@@ -24816,6 +24607,16 @@
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"gemeenschapsevenement\" staat niet in de woordenlijst.",
         "fragment": "Umuganda is een landelijk gemeenschapsevenement in Rwanda.",
+        "kop": "Wetten en gebruiken",
+        "herkomst": "aanvulling",
+        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"uitreist\" staat niet in de woordenlijst.",
+        "fragment": "U heeft geen reisvergunning nodig als u tijdens Umuganda Rwanda in- of uitreist.",
         "kop": "Wetten en gebruiken",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
@@ -24950,6 +24751,14 @@
         "kop": "Reisvaccinaties"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "link-zin",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
+        "fragment": "Lees wat u mag meenemen naar Rwanda op de website van de Rwandese douane (informatie in het Engels).",
+        "kop": "Bagageregels"
+      },
+      {
         "regel": "link-verboden-partij",
         "ernst": "fout",
         "bron": "SW, Relevantie > Naar wie linken we niet?",
@@ -24972,13 +24781,13 @@
         "fragment": "Dit vindt elke laatste zaterdag van de maand plaats tussen 07."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SAU.xml",
     "iso": "SAU",
     "land": "Saoedi-Arabië",
-    "woorden": 1829,
+    "woorden": 1828,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
@@ -25080,8 +24889,8 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Er is sprake van een verhoogd risico op aanvallen door Iran en groepen die met Iran samenwerken.",
+        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
+        "fragment": "Er is sprake van een verhoogd risico op aanvallen door de Houthi’s vanuit Jemen op Saoedi-Arabië.",
         "kop": "Actueel"
       },
       {
@@ -25141,7 +24950,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SDN.xml",
@@ -25255,7 +25064,7 @@
         "fragment": "Diefstal en ‘carjacking’"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SEN.xml",
@@ -25391,7 +25200,7 @@
         "fragment": "Na registratie ontvangt u een ‘carte d’identité d’étranger’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SGP.xml",
@@ -25555,7 +25364,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SJM.xml",
@@ -25641,7 +25450,7 @@
         "fragment": "Gouverneur (Police officer on Duty): 0047 79 02 12 22"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SLB.xml",
@@ -25816,7 +25625,7 @@
         "fragment": "Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen op de Salomonseilanden."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 06-11-2025 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 06-11-2025 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SLE.xml",
@@ -25964,7 +25773,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SLV.xml",
@@ -26067,7 +25876,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SMR.xml",
@@ -26130,7 +25939,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SOM.xml",
@@ -26278,7 +26087,7 @@
         "fragment": "Of vermoedt u dat u tijdens uw aankomende bezoek aan Somalië moet trouwen of niet mag terugkeren naar Nederland?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SRB.xml",
@@ -26383,7 +26192,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SSD.xml",
@@ -26529,7 +26338,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "STP.xml",
@@ -26608,7 +26417,7 @@
         "fragment": "Neem contact op met de ambassade van Sao Tomé en Principe in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SUR.xml",
@@ -26790,7 +26599,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SVK.xml",
@@ -26889,7 +26698,7 @@
         "fragment": "Registreer u bij het kantoor voor registratie van buitenlandse inwoners (“foreign police”) in de regio waar u verblijft."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SVN.xml",
@@ -26951,7 +26760,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SWE.xml",
@@ -27058,7 +26867,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SWZ.xml",
@@ -27170,7 +26979,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SXM.xml",
@@ -27249,7 +27058,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SYC.xml",
@@ -27311,7 +27120,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "SYR.xml",
@@ -27441,7 +27250,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TCA.xml",
@@ -27537,7 +27346,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TCD.xml",
@@ -27692,7 +27501,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TGO.xml",
@@ -27805,13 +27614,13 @@
         "fragment": "Kleurcode rood geldt voor het noordelijke grensgebied tussen Togo en Burkina Faso (30 km tot aan de grens) in de regio Savanes."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "THA.xml",
     "iso": "THA",
     "land": "Thailand",
-    "woorden": 3330,
+    "woorden": 3327,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
@@ -27854,10 +27663,10 @@
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 3330 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
+        "boodschap": "Het advies telt 3327 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
           "Oranje: alleen noodzakelijke reizen (610 woorden)",
-          "Visum (264 woorden)",
+          "Visum (261 woorden)",
           "Oplichting rondom scooterverhuur (155 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
@@ -28253,7 +28062,7 @@
         "fragment": "Een visa-run is maximaal twee keer per jaar toegestaan."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TJK.xml",
@@ -28266,33 +28075,22 @@
     ],
     "zinnen": 73,
     "fout": 0,
-    "letop": 6,
+    "letop": 5,
     "linkzin": 2,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
+      "let-op": 5,
       "link-zin": 2,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"aardbevingcentrum\" staat niet in de woordenlijst.",
-        "fragment": "Lees informatie over aardbevingen op de website van het Europees aardbevingcentrum EMSC (informatie in het Engels).",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -28322,7 +28120,7 @@
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "Lees informatie over aardbevingen op de website van het Europees aardbevingcentrum EMSC (informatie in het Engels).",
+        "fragment": "Lees informatie over aardbevingen op de website van het Europees aardbevingscentrum EMSC (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -28358,7 +28156,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TKL.xml",
@@ -28420,7 +28218,7 @@
         "kop": "Paspoort, visum"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TKM.xml",
@@ -28531,7 +28329,7 @@
         "fragment": "Neem vooraf contact op met de ambassade van Turkmenistan in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TLS.xml",
@@ -28661,7 +28459,7 @@
         "fragment": "Houd rekening met ‘flash floods’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TON.xml",
@@ -28765,7 +28563,7 @@
         "fragment": "Neem contact op met de ambassade van Tonga in Londen, Verenigd Koninkrijk"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TTO.xml",
@@ -28891,39 +28689,55 @@
         "fragment": "Neem contact op met de ambassade van Trinidad en Tobago in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TUN.xml",
     "iso": "TUN",
     "land": "Tunesië",
-    "woorden": 1997,
+    "woorden": 2039,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
       "oranje",
       "geel"
     ],
-    "zinnen": 104,
-    "fout": 1,
-    "letop": 4,
+    "zinnen": 109,
+    "fout": 2,
+    "letop": 5,
     "linkzin": 1,
     "twijfel": 2,
-    "info": 0,
+    "info": 1,
     "perErnst": {
-      "fout": 1,
-      "let-op": 4,
+      "fout": 2,
+      "let-op": 5,
       "link-zin": 1,
-      "info": 0,
+      "info": 1,
       "twijfel": 2
     },
     "perRegel": {
+      "doc-woordenaantal": 1,
       "h4-niet-melden": 1,
+      "h3-alleen-bij-uitzondering": 1,
+      "rubrieken-max": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 4,
-      "zin-frequentiewoord": 2
+      "zin-max-woorden": 3,
+      "zin-frequentiewoord": 2,
+      "zin-lijdende-vorm": 1
     },
     "bevindingen": [
+      {
+        "regel": "doc-woordenaantal",
+        "ernst": "fout",
+        "bron": "MX, tab Richtlijn woordenaantal",
+        "boodschap": "Het advies telt 2039 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
+        "detail": [
+          "Rood: niet reizen (168 woorden)",
+          "Reisverzekering (140 woorden)",
+          "Visum (116 woorden)"
+        ],
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -28931,6 +28745,21 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
+      },
+      {
+        "regel": "h3-alleen-bij-uitzondering",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, kolom Toelichting",
+        "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
+        "fragment": "Verkeersongevallen",
+        "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
+      },
+      {
+        "regel": "rubrieken-max",
+        "ernst": "let-op",
+        "bron": "SJ, richtlijn boven de rubrieken",
+        "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
       },
       {
         "regel": "woord-onbekend",
@@ -28968,14 +28797,6 @@
       },
       {
         "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Deze natuurbranden kunnen leiden tot wegafsluitingen, slechte luchtkwaliteit en verstoringen van het verkeer en andere voorzieningen.",
-        "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
@@ -28989,9 +28810,17 @@
         "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "In Tunesische steden zijn regelmatig demonstraties.",
         "kop": "Demonstraties"
+      },
+      {
+        "regel": "zin-lijdende-vorm",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Lijdende vorm: \"worden … nageleefd\". Schrijf actief.",
+        "fragment": "Verkeersregels worden niet altijd nageleefd en het rijgedrag kan onvoorspelbaar zijn.",
+        "kop": "Verkeersongevallen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TUR.xml",
@@ -29395,7 +29224,7 @@
         "fragment": "De Turkse wet tegen desinformatie bepaalt dat het delen van ‘opzettelijk misleidende informatie die de veiligheid, openbare orde en volksgezondheid in gevaar brengt’ strafbaar is."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TUV.xml",
@@ -29458,7 +29287,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TWN.xml",
@@ -29519,7 +29348,7 @@
         "fragment": "Vraag na aankomst een verblijfsvergunning (Alien Resident Certificate/ARC) aan"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "TZA.xml",
@@ -29770,7 +29599,7 @@
         "fragment": "Neem geen waardevolle spullen mee tijdens vervoer in een ‘bajaj’ (tuktuk/klein driewielig vervoersmiddel)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "UGA.xml",
@@ -29965,7 +29794,7 @@
         "fragment": "U heeft ook een ‘approval letter’ nodig."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "UKR.xml",
@@ -30036,7 +29865,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-08-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-08-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "URY.xml",
@@ -30099,7 +29928,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "USA.xml",
@@ -30321,7 +30150,7 @@
         "fragment": "contactgegevens van de Nederlandse ambassade en consulaten-generaal in de VS"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "UZB.xml",
@@ -30400,7 +30229,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "VCT.xml",
@@ -30510,7 +30339,7 @@
         "fragment": "Check welke vaccinaties u nodig heeft voor Saint Vincent en de Grenadines"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-10-2025 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-10-2025 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "VEN.xml",
@@ -30777,7 +30606,7 @@
         "fragment": "Het noordelijk deel van de deelstaat Bolívar (het gebied Arco Minero is een ‘zone van beperkte toegang’)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "VGB.xml",
@@ -30863,7 +30692,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "VIR.xml",
@@ -31015,7 +30844,7 @@
         "fragment": "Check welke vaccinaties u nodig heeft voor de Amerikaanse Maagdeneilanden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "VNM.xml",
@@ -31273,7 +31102,7 @@
         "fragment": "Vul de digitale aankomstkaart in op de website van de Vietnamese overheid"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "VUT.xml",
@@ -31480,7 +31309,7 @@
         "fragment": "Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen in Vanuatu."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-01-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-01-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "WLF.xml",
@@ -31525,7 +31354,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "WSM.xml",
@@ -31596,29 +31425,29 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "YEM.xml",
     "iso": "YEM",
     "land": "Jemen",
-    "woorden": 1513,
+    "woorden": 1538,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 84,
+    "zinnen": 86,
     "fout": 2,
     "letop": 13,
     "linkzin": 3,
-    "twijfel": 4,
+    "twijfel": 5,
     "info": 2,
     "perErnst": {
       "fout": 2,
       "let-op": 13,
       "link-zin": 3,
       "info": 2,
-      "twijfel": 4
+      "twijfel": 5
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -31627,9 +31456,9 @@
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
       "woord-onbekend": 1,
-      "zin-lijdende-vorm": 8,
-      "zin-max-woorden": 6,
-      "zin-twijfeltaal": 2,
+      "zin-max-woorden": 7,
+      "zin-twijfeltaal": 3,
+      "zin-lijdende-vorm": 7,
       "zin-frequentiewoord": 2
     },
     "bevindingen": [
@@ -31637,11 +31466,11 @@
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 1513 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
+        "boodschap": "Het advies telt 1538 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
           "Reisverzekering (123 woorden)",
           "Visum (95 woorden)",
-          "In het kort (92 woorden)"
+          "In het kort (91 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -31686,19 +31515,19 @@
         "notitie": "Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer."
       },
       {
-        "regel": "zin-lijdende-vorm",
+        "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Lijdende vorm: \"wordt … geschonden\". Schrijf actief.",
-        "fragment": "Sinds maart 2022 is er een wapenstilstand, maar deze wordt geschonden.",
+        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
+        "fragment": "Er vinden confrontaties plaats en het risico op terroristische aanslagen, ontvoeringen en (willekeurige) arrestaties is groot.",
         "kop": "Actueel"
       },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 24 woorden. Maximaal 15.",
-        "fragment": "Ook na het staakt-het-vuren van 8 april 2026 tussen de VS, Israël en Iran, kan dit nog gevolgen hebben voor de veiligheidssituatie in Jemen.",
+        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
+        "fragment": "Er is sprake van een verhoogd risico op aanvallen door Iran en groepen die met Iran samenwerken.",
         "kop": "Actueel"
       },
       {
@@ -31790,6 +31619,14 @@
         "kop": "Landmijnen"
       },
       {
+        "regel": "zin-twijfeltaal",
+        "ernst": "twijfel",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Twijfeltaal: \"bijna\".",
+        "fragment": "Het staat bijna nergens aangegeven waar landmijnen liggen.",
+        "kop": "Landmijnen"
+      },
+      {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -31830,7 +31667,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ZAF.xml",
@@ -32052,7 +31889,7 @@
         "fragment": "U kunt wel reizen met de ‘Gautrain’ (hogesnelheidstrein tussen Johannesburg en Pretoria) en de Gautrain-busdienst (buslijn tussen Johannesburg en Pretoria)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ZMB.xml",
@@ -32192,7 +32029,7 @@
         "fragment": "Wees ook alert op ‘car jacking’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
     "bestand": "ZWE.xml",
@@ -32326,6 +32163,6 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 14-09-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 18-09-2026"
   }
 ]

@@ -349,7 +349,6 @@ Op verzoek van de opdrachtgever is ook de spellingtoets uit SpellingSpeurneus ov
 | regel-id | vindplaats | ernst |
 |---|---|---|
 | `woord-onbekend` | **Geen brondocument.** OpenTaal-woordenlijst + `regels/uitzonderingen.txt` | let op |
-| `woord-naam` | **Geen brondocument.** Dezelfde toets, andere indeling | ter overweging |
 
 **Waar de woordenlijst staat.** `docs/woordenlijst.txt.gz`: 409.487 woorden van OpenTaal, kleine
 letters, ontdubbeld, 1,3 MB ingepakt. `scripts/haal-woordenlijst.mjs` haalt hem op en vergelijkt de
@@ -363,18 +362,22 @@ niet — geen internet, of de pagina staat los op schijf — dan zegt de knop da
 gewoon door. De eigen uitzonderingen zitten wél in de pagina: dat zijn een paar honderd woorden en
 ze horen bij elke herbouw mee te komen.
 
-**Namen apart.** De woordenlijst kent geen plaats- en organisatienamen, en in reisadviezen staan
-die overal: *National Hurricane Center*, *EMSC*, *Boko Haram*. Zonder scheiding verdrinken de echte
-fouten daarin. De regel van SpellingSpeurneus: een hoofdletter middenin een zin is een naam, aan het
-zinsbegin zegt een hoofdletter niets. Hier is er één ding bij gekomen: **namen komen in reeksen**.
-Zonder dat werd *National* in "National Hurricane Center" als spelfout gemeld, want het staat
-vooraan. Staat er direct naast nóg een woord met een hoofdletter, dan is het ook aan het zinsbegin
-een naam. Dat scheelde 51 onterechte spelfouten.
+**Namen worden herkend en overgeslagen.** De woordenlijst kent geen plaats- en organisatienamen, en
+in reisadviezen staan die overal: *National Hurricane Center*, *EMSC*, *Boko Haram*. De regel van
+SpellingSpeurneus: een hoofdletter middenin een zin is een naam, aan het zinsbegin zegt een
+hoofdletter niets. Hier is er één ding bij gekomen: **namen komen in reeksen**. Zonder dat werd
+*European* in "European Avalanche Warning Service" als spelfout gemeld, want het staat vooraan.
+Staat er direct naast nóg een woord met een hoofdletter, dan is het ook aan het zinsbegin een naam.
+Dat scheelde 51 onterechte spelfouten.
 
-**Gemeten op 18 september 2026 over 226 adviezen.** 146 mogelijke spelfouten (0,6 per advies) en
-1974 namen (8,7 per advies). Die namen zijn veel, en daarom staan ze in een eigen filter — meestal
-het eerste vinkje dat je uitzet. Ze worden niet weggegooid: een verkeerd gespelde plaatsnaam blijft
-zo op te zoeken.
+**Ze worden niet gemeld.** Eerst stonden ze in een eigen filter, naar het voorbeeld van het tweede
+tabblad in SpellingSpeurneus. Instructie van de opdrachtgever, 18 september 2026: eruit. In 226
+reisadviezen staan zoveel plaatsnamen, buitenlandse namen en instituten dat er geen woordenlijst
+voor is aan te leggen, en ze staan vrijwel altijd goed. Het waren 1974 meldingen tegen 146 mogelijke
+spelfouten; die zouden de echte fouten wegdrukken. De herkenning blijft wél staan — zonder dat komt
+elke naam als spelfout binnen.
+
+**Gemeten op 18 september 2026 over 226 adviezen.** 146 mogelijke spelfouten, 0,6 per advies.
 
 Drie dingen die de meting nodig had voordat de toets bruikbaar was:
 
@@ -390,8 +393,36 @@ Wat de tekstfouten hierboven al melden, meldt de spellingtoets niet nog een keer
 een CMS-rest en *demonstraties.Volg* een vergeten spatie, en dat is telkens de nuttiger boodschap.
 
 **Wat de toets níét kan.** Beoordelen of een naam goed gespeld is. *Cochabamba* en een verkeerd
-gespelde variant krijgen dezelfde melding, want geen van beide staat in de woordenlijst. Dat
-nakijken blijft mensenwerk — dat is in SpellingSpeurneus ook zo.
+gespelde variant staan geen van beide in de woordenlijst, dus de tool ziet geen verschil. Dat
+nakijken blijft mensenwerk — met één uitzondering, hieronder: de naam van het land zelf.
+
+## De naam van het land (18 september 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `landnaam-schrijfwijze` | `regels/landen.json`, veld `naam` — uit de landenlijst van de open data | fout |
+
+Namen worden verder niet beoordeeld, maar van één groep weet de tool wél hoe het hoort: de landen
+zelf. Hun schrijfwijze staat in het `location`-veld van de open data. Staat er *Tsjechie* waar
+*Tsjechië* hoort, dan is dat een fout, en zonder deze regel zou niemand hem vinden.
+
+De toets vergelijkt alleen op **trema's en accenten**. Wijkt er meer af, dan is het een ander woord
+en niet aan de tool om daar iets van te vinden. Van de 227 landen hebben er 40 een trema of accent;
+bij de rest valt niets te vergelijken.
+
+**Niet in een reeks hoofdletters.** *"the Israel Population & Immigration Authority"* is de juiste
+Engelse naam van een instituut, geen verkeerd gespeld *Israël*. Staat er direct naast een ander
+woord met een hoofdletter, dan slaat de regel over — dezelfde afspraak als bij de spellingtoets.
+
+**Gemeten over 226 adviezen: één treffer, en die klopt.** Op het Tsjechië-advies staat *"Bent u in
+Tsjechie en bent u in nood?"*. De regel is uitgebreid van alleen het land van het advies naar de
+hele landenlijst; dat leverde geen extra treffers op, maar vangt voortaan ook een verkeerd gespeld
+buurland.
+
+**Wat hier nog bij kan.** De open data bevat ook de namen van ambassades, consulaten-generaal en de
+plaatsen waar die zitten. Die staan op de site goed, dus daarmee zou dezelfde toets ook een
+verkeerd gespelde postnaam vangen. Nog niet gebouwd: dat vraagt een ophaalronde langs een ander
+deel van de open data.
 
 **Vals alarm.** Klopt een woord wel? Dan hoort het in `regels/uitzonderingen.txt`. Die lijst hoort
 bij de webredactie, niet bij de techniek, en groeit met het gebruik. De basis komt uit

@@ -7,7 +7,7 @@ Gedraaid op 2026-09-18 over 226 reisadviezen.
 - **71** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **2171** van de 5010 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **198** van de 3037 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,10 +25,10 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 285 | 155 |
+| rood — fout | 286 | 155 |
 | geel/oranje — let op | 1601 | 221 |
 | lichtblauw — lange zin met link | 542 | 202 |
-| grijs — ter overweging | 2109 | 213 |
+| grijs — ter overweging | 135 | 101 |
 | roze — twijfeltaal | 473 | 164 |
 
 ## Per regel
@@ -36,7 +36,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | regel | adviezen | bevindingen |
 |---|---:|---:|
 | `zin-max-woorden` | 220 | 1303 |
-| `woord-naam` | 207 | 1974 |
 | `zin-frequentiewoord` | 148 | 389 |
 | `zin-lijdende-vorm` | 123 | 272 |
 | `woord-onbekend` | 76 | 146 |
@@ -96,6 +95,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `informatieservice-vaste-tekst` | 1 | 1 |
 | `vaccinaties-ggd` | 1 | 1 |
 | `vaccinaties-lcr` | 1 | 1 |
+| `landnaam-schrijfwijze` | 1 | 1 |
 | `percentage-notatie` | 1 | 1 |
 | `valuta-notatie` | 1 | 1 |
 | `rood-herhaling-voorbereiding` | 1 | 1 |

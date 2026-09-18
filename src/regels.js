@@ -156,6 +156,21 @@ export function maakToetser(data) {
     return kaal.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}']+$/gu, '').replace(/'$/, '');
   };
 
+  /** Zonder accenten en trema's, voor het vergelijken van een landnaam met hoe hij er staat. */
+  const zonderTekens = (x) => x.normalize('NFD').replace(/\p{Mn}/gu, '').toLowerCase();
+
+  /**
+   * De landnamen waarvan de tool de schrijfwijze kent, op hun vorm zonder trema's en accenten.
+   * Alleen namen die een trema of accent hébben: bij de rest valt niets te vergelijken. Dit is het
+   * enige stuk namen waarvan de tool weet hoe het hoort, want het staat in de landenlijst van de
+   * open data. Alle andere namen — plaatsen, instituten, buitenlandse bronnen — worden niet
+   * beoordeeld; zie HERKOMST.md.
+   */
+  const landOpKale = new Map();
+  for (const l of ((data.landen && data.landen.landen) || [])) {
+    if (l.naam && zonderTekens(l.naam) !== l.naam.toLowerCase()) landOpKale.set(zonderTekens(l.naam), l.naam);
+  }
+
   /** Bekend als het woord in de lijst staat, of als alle delen dat doen. Dat tweede vangt
    *  samenstellingen met een koppelteken of apostrof ('consulaat-generaal', "euro's") die niet
    *  altijd los in de lijst staan. */
@@ -982,6 +997,33 @@ export function maakToetser(data) {
         }
       }
 
+      // De naam van het land zelf is het één woord waarvan de tool wél weet hoe het hoort: die
+      // staat in het cms-veld. Staat er "Tsjechie" waar "Tsjechië" hoort, dan is dat een fout, en
+      // zonder deze regel zou niemand hem vinden — namen worden verder niet gemeld.
+      //
+      // Alleen als het trema of accent het enige verschil is. En niet in een reeks hoofdletters:
+      // "the Israel Population & Immigration Authority" is de juiste Engelse naam van een
+      // instituut, geen verkeerd gespeld Israël.
+      if (landOpKale.size) {
+        const gezienLand = new Set();
+        for (const z of teLezen) {
+          const stukken = z.tekst.split(/[\s/()[\]]+/).map(schoonWoord);
+          for (let i = 0; i < stukken.length; i += 1) {
+            const w = stukken[i];
+            if (!w) continue;
+            const hoort = landOpKale.get(zonderTekens(w));
+            if (!hoort || hoort === w) continue;
+            if ([stukken[i - 1], stukken[i + 1]].some((x) => x && /^\p{Lu}/u.test(x))) continue;
+            if (gezienLand.has(w)) continue;
+            gezienLand.add(w);
+            b.push(bevinding('landnaam-schrijfwijze', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+              `"${w}" hoort "${hoort}" te zijn.`,
+              { fragment: z.tekst, kop: z.kop, verwacht: hoort, herkomst: 'aanvulling',
+                notitie: 'Deze schrijfwijze komt uit de landenlijst van de open data.' }));
+          }
+        }
+      }
+
       // Tekens zonder breedte. Niet te zien in de tekst, maar ze breken het zoeken, het kopieren
       // en de schermlezer. Hier kan een redacteur niet zelf overheen lezen.
       const gezienTeken = new Set();
@@ -1023,27 +1065,27 @@ export function maakToetser(data) {
           if (alGemeldWoord.has(w.toLowerCase()) || gezienWoord.has(w)) continue;
           gezienWoord.add(w);
 
-          // Een hoofdletter middenin een zin is vrijwel altijd een naam. Aan het zinsbegin zegt
-          // een hoofdletter niets — zo blijft "Registeer" een spelfout. Maar namen komen in
-          // reeksen ("National Hurricane Center"), dus staat er direct naast nog een woord met
-          // een hoofdletter, dan is het ook aan het zinsbegin een naam.
+          // Namen worden herkend en daarna overgeslagen. Een hoofdletter middenin een zin is
+          // vrijwel altijd een naam; aan het zinsbegin zegt een hoofdletter niets — zo blijft
+          // "Registeer" een spelfout. Namen komen bovendien in reeksen ("National Hurricane
+          // Center"), dus staat er direct naast nog een woord met een hoofdletter, dan is het
+          // ook aan het zinsbegin een naam.
+          //
+          // Ze worden niet gemeld. Instructie van de opdrachtgever, 18 september 2026: in 226
+          // reisadviezen staan zoveel plaatsnamen, buitenlandse namen en instituten dat er geen
+          // woordenlijst voor is aan te leggen, en ze staan vrijwel altijd goed. Over het corpus
+          // waren het 1974 meldingen tegen 146 mogelijke spelfouten; die zouden de echte fouten
+          // wegdrukken. De herkenning blijft wél staan: zonder dat zou "European" in "European
+          // Avalanche Warning Service" als spelfout worden gemeld.
           const metHoofd = /^\p{Lu}/u.test(w);
           const buurHoofd = [stukken[i - 1], stukken[i + 1]].some((x) => x && /^\p{Lu}/u.test(x));
-          const isNaam = metHoofd && (w !== beginWoord || buurHoofd);
+          if (metHoofd && (w !== beginWoord || buurHoofd)) continue;
 
-          if (isNaam) {
-            b.push(bevinding('woord-naam', ERNST.info, 'Tekstcontrole (SpellingSpeurneus)',
-              `"${w}" lijkt een naam. Staat die goed gespeld?`,
-              { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
-                notitie: 'De woordenlijst kent geen plaats- en organisatienamen, dus de tool kan '
-                  + 'niet zien of deze goed staat. Dat blijft mensenwerk.' }));
-          } else {
-            b.push(bevinding('woord-onbekend', ERNST.letop, 'Tekstcontrole (SpellingSpeurneus)',
-              `"${w}" staat niet in de woordenlijst.`,
-              { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
-                notitie: 'Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, '
-                  + 'dan meldt de tool het niet meer.' }));
-          }
+          b.push(bevinding('woord-onbekend', ERNST.letop, 'Tekstcontrole (SpellingSpeurneus)',
+            `"${w}" staat niet in de woordenlijst.`,
+            { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+              notitie: 'Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, '
+                + 'dan meldt de tool het niet meer.' }));
         }
       }
     }

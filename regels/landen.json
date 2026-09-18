@@ -5,343 +5,428 @@
   "landen": [
     {
       "iso": "AFG",
-      "locationKey": "afghanistan"
+      "locationKey": "afghanistan",
+      "naam": "Afghanistan"
     },
     {
       "iso": "ALB",
-      "locationKey": "albanie"
+      "locationKey": "albanie",
+      "naam": "Albanië"
     },
     {
       "iso": "DZA",
-      "locationKey": "algerije"
+      "locationKey": "algerije",
+      "naam": "Algerije"
     },
     {
       "iso": "ASM",
-      "locationKey": "amerikaans-samoa"
+      "locationKey": "amerikaans-samoa",
+      "naam": "Amerikaans-Samoa"
     },
     {
       "iso": "AND",
-      "locationKey": "andorra"
+      "locationKey": "andorra",
+      "naam": "Andorra"
     },
     {
       "iso": "AGO",
-      "locationKey": "angola"
+      "locationKey": "angola",
+      "naam": "Angola"
     },
     {
       "iso": "AIA",
-      "locationKey": "anguilla"
+      "locationKey": "anguilla",
+      "naam": "Anguilla"
     },
     {
       "iso": "ATA",
-      "locationKey": "antarctica"
+      "locationKey": "antarctica",
+      "naam": "Antarctica"
     },
     {
       "iso": "ATG",
-      "locationKey": "antigua-en-barbuda"
+      "locationKey": "antigua-en-barbuda",
+      "naam": "Antigua en Barbuda"
     },
     {
       "iso": "ARG",
-      "locationKey": "argentinie"
+      "locationKey": "argentinie",
+      "naam": "Argentinië"
     },
     {
       "iso": "ARM",
-      "locationKey": "armenie"
+      "locationKey": "armenie",
+      "naam": "Armenië"
     },
     {
       "iso": "ABW",
-      "locationKey": "aruba"
+      "locationKey": "aruba",
+      "naam": "Aruba"
     },
     {
       "iso": "AUS",
-      "locationKey": "australie"
+      "locationKey": "australie",
+      "naam": "Australië"
     },
     {
       "iso": "AUT",
-      "locationKey": "oostenrijk"
+      "locationKey": "oostenrijk",
+      "naam": "Oostenrijk"
     },
     {
       "iso": "AZE",
-      "locationKey": "azerbeidzjan"
+      "locationKey": "azerbeidzjan",
+      "naam": "Azerbeidzjan"
     },
     {
       "iso": "BHS",
-      "locationKey": "bahamas"
+      "locationKey": "bahamas",
+      "naam": "Bahama's"
     },
     {
       "iso": "BHR",
-      "locationKey": "bahrein"
+      "locationKey": "bahrein",
+      "naam": "Bahrein"
     },
     {
       "iso": "BGD",
-      "locationKey": "bangladesh"
+      "locationKey": "bangladesh",
+      "naam": "Bangladesh"
     },
     {
       "iso": "BRB",
-      "locationKey": "barbados"
+      "locationKey": "barbados",
+      "naam": "Barbados"
     },
     {
       "iso": "BLR",
-      "locationKey": "belarus-wit-rusland"
+      "locationKey": "belarus-wit-rusland",
+      "naam": "Belarus (Wit-Rusland)"
     },
     {
       "iso": "BEL",
-      "locationKey": "belgie"
+      "locationKey": "belgie",
+      "naam": "België"
     },
     {
       "iso": "BLZ",
-      "locationKey": "belize"
+      "locationKey": "belize",
+      "naam": "Belize"
     },
     {
       "iso": "BEN",
-      "locationKey": "benin"
+      "locationKey": "benin",
+      "naam": "Benin"
     },
     {
       "iso": "BTN",
-      "locationKey": "bhutan"
+      "locationKey": "bhutan",
+      "naam": "Bhutan"
     },
     {
       "iso": "BOL",
-      "locationKey": "bolivia"
+      "locationKey": "bolivia",
+      "naam": "Bolivia"
     },
     {
       "iso": "BIH",
-      "locationKey": "bosnie-en-herzegovina"
+      "locationKey": "bosnie-en-herzegovina",
+      "naam": "Bosnië en Herzegovina"
     },
     {
       "iso": "BWA",
-      "locationKey": "botswana"
+      "locationKey": "botswana",
+      "naam": "Botswana"
     },
     {
       "iso": "BRA",
-      "locationKey": "brazilie"
+      "locationKey": "brazilie",
+      "naam": "Brazilië"
     },
     {
       "iso": "BRN",
-      "locationKey": "brunei-darussalam"
+      "locationKey": "brunei-darussalam",
+      "naam": "Brunei Darussalam"
     },
     {
       "iso": "BGR",
-      "locationKey": "bulgarije"
+      "locationKey": "bulgarije",
+      "naam": "Bulgarije"
     },
     {
       "iso": "BFA",
-      "locationKey": "burkina-faso"
+      "locationKey": "burkina-faso",
+      "naam": "Burkina Faso"
     },
     {
       "iso": "BDI",
-      "locationKey": "burundi"
+      "locationKey": "burundi",
+      "naam": "Burundi"
     },
     {
       "iso": "CPV",
-      "locationKey": "kaapverdie"
+      "locationKey": "kaapverdie",
+      "naam": "Kaapverdië"
     },
     {
       "iso": "KHM",
-      "locationKey": "cambodja"
+      "locationKey": "cambodja",
+      "naam": "Cambodja"
     },
     {
       "iso": "CMR",
-      "locationKey": "kameroen"
+      "locationKey": "kameroen",
+      "naam": "Kameroen"
     },
     {
       "iso": "CAN",
-      "locationKey": "canada"
+      "locationKey": "canada",
+      "naam": "Canada"
     },
     {
       "iso": "CYM",
-      "locationKey": "kaaimaneilanden"
+      "locationKey": "kaaimaneilanden",
+      "naam": "Kaaimaneilanden"
     },
     {
       "iso": "CAF",
-      "locationKey": "centraal-afrikaanse-republiek"
+      "locationKey": "centraal-afrikaanse-republiek",
+      "naam": "Centraal-Afrikaanse Republiek"
     },
     {
       "iso": "TCD",
-      "locationKey": "tsjaad"
+      "locationKey": "tsjaad",
+      "naam": "Tsjaad"
     },
     {
       "iso": "CHL",
-      "locationKey": "chili"
+      "locationKey": "chili",
+      "naam": "Chili"
     },
     {
       "iso": "CHN",
-      "locationKey": "china"
+      "locationKey": "china",
+      "naam": "China"
     },
     {
       "iso": "COL",
-      "locationKey": "colombia"
+      "locationKey": "colombia",
+      "naam": "Colombia"
     },
     {
       "iso": "COM",
-      "locationKey": "comoren"
+      "locationKey": "comoren",
+      "naam": "Comoren"
     },
     {
       "iso": "COG",
-      "locationKey": "congo-de-republiek"
+      "locationKey": "congo-de-republiek",
+      "naam": "Congo, de Republiek"
     },
     {
       "iso": "COD",
-      "locationKey": "congo-democratische-republiek"
+      "locationKey": "congo-democratische-republiek",
+      "naam": "Congo, Democratische Republiek"
     },
     {
       "iso": "COK",
-      "locationKey": "cookeilanden"
+      "locationKey": "cookeilanden",
+      "naam": "Cookeilanden"
     },
     {
       "iso": "CRI",
-      "locationKey": "costa-rica"
+      "locationKey": "costa-rica",
+      "naam": "Costa Rica"
     },
     {
       "iso": "CIV",
-      "locationKey": "ivoorkust"
+      "locationKey": "ivoorkust",
+      "naam": "Ivoorkust"
     },
     {
       "iso": "HRV",
-      "locationKey": "kroatie"
+      "locationKey": "kroatie",
+      "naam": "Kroatië"
     },
     {
       "iso": "CUB",
-      "locationKey": "cuba"
+      "locationKey": "cuba",
+      "naam": "Cuba"
     },
     {
       "iso": "CUW",
-      "locationKey": "curacao"
+      "locationKey": "curacao",
+      "naam": "Curaçao"
     },
     {
       "iso": "CYP",
-      "locationKey": "cyprus"
+      "locationKey": "cyprus",
+      "naam": "Cyprus"
     },
     {
       "iso": "CZE",
-      "locationKey": "tsjechie"
+      "locationKey": "tsjechie",
+      "naam": "Tsjechië"
     },
     {
       "iso": "DNK",
-      "locationKey": "denemarken"
+      "locationKey": "denemarken",
+      "naam": "Denemarken"
     },
     {
       "iso": "DJI",
-      "locationKey": "djibouti"
+      "locationKey": "djibouti",
+      "naam": "Djibouti"
     },
     {
       "iso": "DMA",
-      "locationKey": "dominica"
+      "locationKey": "dominica",
+      "naam": "Dominica"
     },
     {
       "iso": "DOM",
-      "locationKey": "dominicaanse-republiek"
+      "locationKey": "dominicaanse-republiek",
+      "naam": "Dominicaanse Republiek"
     },
     {
       "iso": "ECU",
-      "locationKey": "ecuador"
+      "locationKey": "ecuador",
+      "naam": "Ecuador"
     },
     {
       "iso": "EGY",
-      "locationKey": "egypte"
+      "locationKey": "egypte",
+      "naam": "Egypte"
     },
     {
       "iso": "SLV",
-      "locationKey": "el-salvador"
+      "locationKey": "el-salvador",
+      "naam": "El Salvador"
     },
     {
       "iso": "GNQ",
-      "locationKey": "equatoriaal-guinea"
+      "locationKey": "equatoriaal-guinea",
+      "naam": "Equatoriaal-Guinea"
     },
     {
       "iso": "ERI",
-      "locationKey": "eritrea"
+      "locationKey": "eritrea",
+      "naam": "Eritrea"
     },
     {
       "iso": "EST",
-      "locationKey": "estland"
+      "locationKey": "estland",
+      "naam": "Estland"
     },
     {
       "iso": "SWZ",
-      "locationKey": "eswatini"
+      "locationKey": "eswatini",
+      "naam": "Eswatini (Swaziland)"
     },
     {
       "iso": "ETH",
-      "locationKey": "ethiopie"
+      "locationKey": "ethiopie",
+      "naam": "Ethiopië"
     },
     {
       "iso": "FRO",
-      "locationKey": "faeroer"
+      "locationKey": "faeroer",
+      "naam": "Faeröer"
     },
     {
       "iso": "FJI",
-      "locationKey": "fiji"
+      "locationKey": "fiji",
+      "naam": "Fiji"
     },
     {
       "iso": "FIN",
-      "locationKey": "finland"
+      "locationKey": "finland",
+      "naam": "Finland"
     },
     {
       "iso": "FRA",
-      "locationKey": "frankrijk"
+      "locationKey": "frankrijk",
+      "naam": "Frankrijk"
     },
     {
       "iso": "GUF",
-      "locationKey": "frans-guyana"
+      "locationKey": "frans-guyana",
+      "naam": "Frans-Guyana"
     },
     {
       "iso": "PYF",
-      "locationKey": "frans-polynesie"
+      "locationKey": "frans-polynesie",
+      "naam": "Frans-Polynesië"
     },
     {
       "iso": "GAB",
-      "locationKey": "gabon"
+      "locationKey": "gabon",
+      "naam": "Gabon"
     },
     {
       "iso": "GMB",
-      "locationKey": "gambia"
+      "locationKey": "gambia",
+      "naam": "Gambia"
     },
     {
       "iso": "GEO",
-      "locationKey": "georgie"
+      "locationKey": "georgie",
+      "naam": "Georgië"
     },
     {
       "iso": "DEU",
-      "locationKey": "duitsland"
+      "locationKey": "duitsland",
+      "naam": "Duitsland"
     },
     {
       "iso": "GHA",
-      "locationKey": "ghana"
+      "locationKey": "ghana",
+      "naam": "Ghana"
     },
     {
       "iso": "GRC",
-      "locationKey": "griekenland"
+      "locationKey": "griekenland",
+      "naam": "Griekenland"
     },
     {
       "iso": "GRL",
-      "locationKey": "groenland"
+      "locationKey": "groenland",
+      "naam": "Groenland"
     },
     {
       "iso": "GRD",
-      "locationKey": "grenada"
+      "locationKey": "grenada",
+      "naam": "Grenada"
     },
     {
       "iso": "GLP",
-      "locationKey": "guadeloupe"
+      "locationKey": "guadeloupe",
+      "naam": "Guadeloupe"
     },
     {
       "iso": "GTM",
-      "locationKey": "guatemala"
+      "locationKey": "guatemala",
+      "naam": "Guatemala"
     },
     {
       "iso": "GIN",
-      "locationKey": "guinee"
+      "locationKey": "guinee",
+      "naam": "Guinee"
     },
     {
       "iso": "GNB",
-      "locationKey": "guinee-bissau"
+      "locationKey": "guinee-bissau",
+      "naam": "Guinee-Bissau"
     },
     {
       "iso": "GUY",
-      "locationKey": "guyana"
+      "locationKey": "guyana",
+      "naam": "Guyana"
     },
     {
       "iso": "HTI",
-      "locationKey": "haiti"
+      "locationKey": "haiti",
+      "naam": "Haïti"
     },
     {
       "iso": "VAT",
@@ -349,567 +434,708 @@
     },
     {
       "iso": "HND",
-      "locationKey": "honduras"
+      "locationKey": "honduras",
+      "naam": "Honduras"
     },
     {
       "iso": "HKG",
-      "locationKey": "hongkong"
+      "locationKey": "hongkong",
+      "naam": "Hongkong SAR"
     },
     {
       "iso": "HUN",
-      "locationKey": "hongarije"
+      "locationKey": "hongarije",
+      "naam": "Hongarije"
     },
     {
       "iso": "ISL",
-      "locationKey": "ijsland"
+      "locationKey": "ijsland",
+      "naam": "IJsland"
     },
     {
       "iso": "IND",
-      "locationKey": "india"
+      "locationKey": "india",
+      "naam": "India"
     },
     {
       "iso": "IDN",
-      "locationKey": "indonesie"
+      "locationKey": "indonesie",
+      "naam": "Indonesië"
     },
     {
       "iso": "IRN",
-      "locationKey": "iran"
+      "locationKey": "iran",
+      "naam": "Iran"
     },
     {
       "iso": "IRQ",
-      "locationKey": "irak"
+      "locationKey": "irak",
+      "naam": "Irak"
     },
     {
       "iso": "IRL",
-      "locationKey": "ierland"
+      "locationKey": "ierland",
+      "naam": "Ierland"
     },
     {
       "iso": "ISR",
-      "locationKey": "israel"
+      "locationKey": "israel",
+      "naam": "Israël"
     },
     {
       "iso": "ITA",
-      "locationKey": "italie"
+      "locationKey": "italie",
+      "naam": "Italië"
     },
     {
       "iso": "JAM",
-      "locationKey": "jamaica"
+      "locationKey": "jamaica",
+      "naam": "Jamaica"
     },
     {
       "iso": "JPN",
-      "locationKey": "japan"
+      "locationKey": "japan",
+      "naam": "Japan"
     },
     {
       "iso": "JOR",
-      "locationKey": "jordanie"
+      "locationKey": "jordanie",
+      "naam": "Jordanië"
     },
     {
       "iso": "KAZ",
-      "locationKey": "kazachstan"
+      "locationKey": "kazachstan",
+      "naam": "Kazachstan"
     },
     {
       "iso": "KEN",
-      "locationKey": "kenia"
+      "locationKey": "kenia",
+      "naam": "Kenia"
     },
     {
       "iso": "KIR",
-      "locationKey": "kiribati"
+      "locationKey": "kiribati",
+      "naam": "Kiribati"
     },
     {
       "iso": "PRK",
-      "locationKey": "noord-korea"
+      "locationKey": "noord-korea",
+      "naam": "Noord-Korea"
     },
     {
       "iso": "KOR",
-      "locationKey": "zuid-korea"
+      "locationKey": "zuid-korea",
+      "naam": "Zuid-Korea"
     },
     {
       "iso": "KWT",
-      "locationKey": "koeweit"
+      "locationKey": "koeweit",
+      "naam": "Koeweit"
     },
     {
       "iso": "KGZ",
-      "locationKey": "kirgizie"
+      "locationKey": "kirgizie",
+      "naam": "Kirgizië"
     },
     {
       "iso": "LAO",
-      "locationKey": "laos"
+      "locationKey": "laos",
+      "naam": "Laos"
     },
     {
       "iso": "LVA",
-      "locationKey": "letland"
+      "locationKey": "letland",
+      "naam": "Letland"
     },
     {
       "iso": "LBN",
-      "locationKey": "libanon"
+      "locationKey": "libanon",
+      "naam": "Libanon"
     },
     {
       "iso": "LSO",
-      "locationKey": "lesotho"
+      "locationKey": "lesotho",
+      "naam": "Lesotho"
     },
     {
       "iso": "LBR",
-      "locationKey": "liberia"
+      "locationKey": "liberia",
+      "naam": "Liberia"
     },
     {
       "iso": "LBY",
-      "locationKey": "libie"
+      "locationKey": "libie",
+      "naam": "Libië"
     },
     {
       "iso": "LIE",
-      "locationKey": "liechtenstein"
+      "locationKey": "liechtenstein",
+      "naam": "Liechtenstein"
     },
     {
       "iso": "LTU",
-      "locationKey": "litouwen"
+      "locationKey": "litouwen",
+      "naam": "Litouwen"
     },
     {
       "iso": "LUX",
-      "locationKey": "luxemburg"
+      "locationKey": "luxemburg",
+      "naam": "Luxemburg"
     },
     {
       "iso": "MAC",
-      "locationKey": "macau-sar"
+      "locationKey": "macau-sar",
+      "naam": "Macau SAR"
     },
     {
       "iso": "MDG",
-      "locationKey": "madagaskar"
+      "locationKey": "madagaskar",
+      "naam": "Madagaskar"
     },
     {
       "iso": "MWI",
-      "locationKey": "malawi"
+      "locationKey": "malawi",
+      "naam": "Malawi"
     },
     {
       "iso": "MYS",
-      "locationKey": "maleisie"
+      "locationKey": "maleisie",
+      "naam": "Maleisië"
     },
     {
       "iso": "MDV",
-      "locationKey": "maldiven"
+      "locationKey": "maldiven",
+      "naam": "Maldiven"
     },
     {
       "iso": "MLI",
-      "locationKey": "mali"
+      "locationKey": "mali",
+      "naam": "Mali"
     },
     {
       "iso": "MLT",
-      "locationKey": "malta"
+      "locationKey": "malta",
+      "naam": "Malta"
     },
     {
       "iso": "MHL",
-      "locationKey": "marshalleilanden"
+      "locationKey": "marshalleilanden",
+      "naam": "Marshalleilanden"
     },
     {
       "iso": "MTQ",
-      "locationKey": "martinique"
+      "locationKey": "martinique",
+      "naam": "Martinique"
     },
     {
       "iso": "MRT",
-      "locationKey": "mauritanie"
+      "locationKey": "mauritanie",
+      "naam": "Mauritanië"
     },
     {
       "iso": "MUS",
-      "locationKey": "mauritius"
+      "locationKey": "mauritius",
+      "naam": "Mauritius"
     },
     {
       "iso": "MEX",
-      "locationKey": "mexico"
+      "locationKey": "mexico",
+      "naam": "Mexico"
     },
     {
       "iso": "FSM",
-      "locationKey": "micronesie"
+      "locationKey": "micronesie",
+      "naam": "Micronesië"
     },
     {
       "iso": "MDA",
-      "locationKey": "moldavie"
+      "locationKey": "moldavie",
+      "naam": "Moldavië"
     },
     {
       "iso": "MCO",
-      "locationKey": "monaco"
+      "locationKey": "monaco",
+      "naam": "Monaco"
     },
     {
       "iso": "MNG",
-      "locationKey": "mongolie"
+      "locationKey": "mongolie",
+      "naam": "Mongolië"
     },
     {
       "iso": "MNE",
-      "locationKey": "montenegro"
+      "locationKey": "montenegro",
+      "naam": "Montenegro"
     },
     {
       "iso": "MSR",
-      "locationKey": "montserrat"
+      "locationKey": "montserrat",
+      "naam": "Montserrat"
     },
     {
       "iso": "MAR",
-      "locationKey": "marokko"
+      "locationKey": "marokko",
+      "naam": "Marokko"
     },
     {
       "iso": "MOZ",
-      "locationKey": "mozambique"
+      "locationKey": "mozambique",
+      "naam": "Mozambique"
     },
     {
       "iso": "MMR",
-      "locationKey": "myanmar"
+      "locationKey": "myanmar",
+      "naam": "Myanmar"
     },
     {
       "iso": "NAM",
-      "locationKey": "namibie"
+      "locationKey": "namibie",
+      "naam": "Namibië"
     },
     {
       "iso": "NRU",
-      "locationKey": "nauru"
+      "locationKey": "nauru",
+      "naam": "Nauru"
     },
     {
       "iso": "NPL",
-      "locationKey": "nepal"
+      "locationKey": "nepal",
+      "naam": "Nepal"
     },
     {
       "iso": "NCL",
-      "locationKey": "nieuw-caledonie"
+      "locationKey": "nieuw-caledonie",
+      "naam": "Nieuw-Caledonië"
     },
     {
       "iso": "NZL",
-      "locationKey": "nieuw-zeeland"
+      "locationKey": "nieuw-zeeland",
+      "naam": "Nieuw-Zeeland"
     },
     {
       "iso": "NIC",
-      "locationKey": "nicaragua"
+      "locationKey": "nicaragua",
+      "naam": "Nicaragua"
     },
     {
       "iso": "NER",
-      "locationKey": "niger"
+      "locationKey": "niger",
+      "naam": "Niger"
     },
     {
       "iso": "NGA",
-      "locationKey": "nigeria"
+      "locationKey": "nigeria",
+      "naam": "Nigeria"
     },
     {
       "iso": "NIU",
-      "locationKey": "niue"
+      "locationKey": "niue",
+      "naam": "Niue"
     },
     {
       "iso": "MKD",
-      "locationKey": "noord-macedonie"
+      "locationKey": "noord-macedonie",
+      "naam": "Noord-Macedonië"
     },
     {
       "iso": "NOR",
-      "locationKey": "noorwegen"
+      "locationKey": "noorwegen",
+      "naam": "Noorwegen"
     },
     {
       "iso": "OMN",
-      "locationKey": "oman"
+      "locationKey": "oman",
+      "naam": "Oman"
     },
     {
       "iso": "PAK",
-      "locationKey": "pakistan"
+      "locationKey": "pakistan",
+      "naam": "Pakistan"
     },
     {
       "iso": "PLW",
-      "locationKey": "palau"
+      "locationKey": "palau",
+      "naam": "Palau"
     },
     {
       "iso": "PSE",
-      "locationKey": "palestijnse-gebieden"
+      "locationKey": "palestijnse-gebieden",
+      "naam": "Palestijnse Gebieden"
     },
     {
       "iso": "PAN",
-      "locationKey": "panama"
+      "locationKey": "panama",
+      "naam": "Panama"
     },
     {
       "iso": "PNG",
-      "locationKey": "papoea-nieuw-guinea"
+      "locationKey": "papoea-nieuw-guinea",
+      "naam": "Papoea-Nieuw-Guinea"
     },
     {
       "iso": "PRY",
-      "locationKey": "paraguay"
+      "locationKey": "paraguay",
+      "naam": "Paraguay"
     },
     {
       "iso": "PER",
-      "locationKey": "peru"
+      "locationKey": "peru",
+      "naam": "Peru"
     },
     {
       "iso": "PHL",
-      "locationKey": "filipijnen"
+      "locationKey": "filipijnen",
+      "naam": "Filipijnen"
     },
     {
       "iso": "PCN",
-      "locationKey": "pitcairneilanden"
+      "locationKey": "pitcairneilanden",
+      "naam": "Pitcairneilanden"
     },
     {
       "iso": "POL",
-      "locationKey": "polen"
+      "locationKey": "polen",
+      "naam": "Polen"
     },
     {
       "iso": "PRT",
-      "locationKey": "portugal"
+      "locationKey": "portugal",
+      "naam": "Portugal"
     },
     {
       "iso": "PRI",
-      "locationKey": "puerto-rico"
+      "locationKey": "puerto-rico",
+      "naam": "Puerto Rico"
     },
     {
       "iso": "QAT",
-      "locationKey": "qatar"
+      "locationKey": "qatar",
+      "naam": "Qatar"
     },
     {
       "iso": "REU",
-      "locationKey": "reunion"
+      "locationKey": "reunion",
+      "naam": "Réunion"
     },
     {
       "iso": "ROU",
-      "locationKey": "roemenie"
+      "locationKey": "roemenie",
+      "naam": "Roemenië"
     },
     {
       "iso": "RUS",
-      "locationKey": "rusland"
+      "locationKey": "rusland",
+      "naam": "Rusland"
     },
     {
       "iso": "RWA",
-      "locationKey": "rwanda"
+      "locationKey": "rwanda",
+      "naam": "Rwanda"
     },
     {
       "iso": "KNA",
-      "locationKey": "saint-kitts-en-nevis"
+      "locationKey": "saint-kitts-en-nevis",
+      "naam": "Saint Kitts en Nevis"
     },
     {
       "iso": "LCA",
-      "locationKey": "saint-lucia"
+      "locationKey": "saint-lucia",
+      "naam": "Saint Lucia"
     },
     {
       "iso": "VCT",
-      "locationKey": "saint-vincent-en-de-grenadines"
+      "locationKey": "saint-vincent-en-de-grenadines",
+      "naam": "Saint Vincent en de Grenadines"
     },
     {
       "iso": "WSM",
-      "locationKey": "samoa"
+      "locationKey": "samoa",
+      "naam": "Samoa"
     },
     {
       "iso": "SMR",
-      "locationKey": "san-marino"
+      "locationKey": "san-marino",
+      "naam": "San Marino"
     },
     {
       "iso": "STP",
-      "locationKey": "sao-tome-en-principe"
+      "locationKey": "sao-tome-en-principe",
+      "naam": "Sao Tomé en Principe"
     },
     {
       "iso": "SAU",
-      "locationKey": "saoedi-arabie"
+      "locationKey": "saoedi-arabie",
+      "naam": "Saoedi-Arabië"
     },
     {
       "iso": "SEN",
-      "locationKey": "senegal"
+      "locationKey": "senegal",
+      "naam": "Senegal"
     },
     {
       "iso": "SRB",
-      "locationKey": "servie"
+      "locationKey": "servie",
+      "naam": "Servië"
     },
     {
       "iso": "SYC",
-      "locationKey": "seychellen"
+      "locationKey": "seychellen",
+      "naam": "Seychellen"
     },
     {
       "iso": "SLE",
-      "locationKey": "sierra-leone"
+      "locationKey": "sierra-leone",
+      "naam": "Sierra Leone"
     },
     {
       "iso": "SGP",
-      "locationKey": "singapore"
+      "locationKey": "singapore",
+      "naam": "Singapore"
     },
     {
       "iso": "SXM",
-      "locationKey": "sint-maarten"
+      "locationKey": "sint-maarten",
+      "naam": "Sint Maarten"
     },
     {
       "iso": "SVK",
-      "locationKey": "slowakije"
+      "locationKey": "slowakije",
+      "naam": "Slowakije"
     },
     {
       "iso": "SVN",
-      "locationKey": "slovenie"
+      "locationKey": "slovenie",
+      "naam": "Slovenië"
     },
     {
       "iso": "SLB",
-      "locationKey": "salomonseilanden"
+      "locationKey": "salomonseilanden",
+      "naam": "Salomonseilanden"
     },
     {
       "iso": "SOM",
-      "locationKey": "somalie"
+      "locationKey": "somalie",
+      "naam": "Somalië"
     },
     {
       "iso": "ZAF",
-      "locationKey": "zuid-afrika"
+      "locationKey": "zuid-afrika",
+      "naam": "Zuid-Afrika"
     },
     {
       "iso": "SSD",
-      "locationKey": "zuid-sudan"
+      "locationKey": "zuid-sudan",
+      "naam": "Zuid-Sudan"
     },
     {
       "iso": "ESP",
-      "locationKey": "spanje"
+      "locationKey": "spanje",
+      "naam": "Spanje"
     },
     {
       "iso": "LKA",
-      "locationKey": "sri-lanka"
+      "locationKey": "sri-lanka",
+      "naam": "Sri Lanka"
     },
     {
       "iso": "SDN",
-      "locationKey": "sudan"
+      "locationKey": "sudan",
+      "naam": "Sudan"
     },
     {
       "iso": "SUR",
-      "locationKey": "suriname"
+      "locationKey": "suriname",
+      "naam": "Suriname"
     },
     {
       "iso": "SJM",
-      "locationKey": "spitsbergen"
+      "locationKey": "spitsbergen",
+      "naam": "Spitsbergen (Svalbard)"
     },
     {
       "iso": "SWE",
-      "locationKey": "zweden"
+      "locationKey": "zweden",
+      "naam": "Zweden"
     },
     {
       "iso": "CHE",
-      "locationKey": "zwitserland"
+      "locationKey": "zwitserland",
+      "naam": "Zwitserland"
     },
     {
       "iso": "SYR",
-      "locationKey": "syrie"
+      "locationKey": "syrie",
+      "naam": "Syrië"
     },
     {
       "iso": "TWN",
-      "locationKey": "taiwan"
+      "locationKey": "taiwan",
+      "naam": "Taiwan"
     },
     {
       "iso": "TJK",
-      "locationKey": "tadzjikistan"
+      "locationKey": "tadzjikistan",
+      "naam": "Tadzjikistan"
     },
     {
       "iso": "TZA",
-      "locationKey": "tanzania"
+      "locationKey": "tanzania",
+      "naam": "Tanzania"
     },
     {
       "iso": "THA",
-      "locationKey": "thailand"
+      "locationKey": "thailand",
+      "naam": "Thailand"
     },
     {
       "iso": "TLS",
-      "locationKey": "oost-timor"
+      "locationKey": "oost-timor",
+      "naam": "Oost-Timor"
     },
     {
       "iso": "TGO",
-      "locationKey": "togo"
+      "locationKey": "togo",
+      "naam": "Togo"
     },
     {
       "iso": "TKL",
-      "locationKey": "tokelau-eilanden"
+      "locationKey": "tokelau-eilanden",
+      "naam": "Tokelau-eilanden"
     },
     {
       "iso": "TON",
-      "locationKey": "tonga"
+      "locationKey": "tonga",
+      "naam": "Tonga"
     },
     {
       "iso": "TTO",
-      "locationKey": "trinidad-en-tobago"
+      "locationKey": "trinidad-en-tobago",
+      "naam": "Trinidad en Tobago"
     },
     {
       "iso": "TUN",
-      "locationKey": "tunesie"
+      "locationKey": "tunesie",
+      "naam": "Tunesië"
     },
     {
       "iso": "TUR",
-      "locationKey": "turkije"
+      "locationKey": "turkije",
+      "naam": "Turkije"
     },
     {
       "iso": "TKM",
-      "locationKey": "turkmenistan"
+      "locationKey": "turkmenistan",
+      "naam": "Turkmenistan"
     },
     {
       "iso": "TCA",
-      "locationKey": "turks-en-caicoseilanden"
+      "locationKey": "turks-en-caicoseilanden",
+      "naam": "Turks- en Caicoseilanden"
     },
     {
       "iso": "TUV",
-      "locationKey": "tuvalu"
+      "locationKey": "tuvalu",
+      "naam": "Tuvalu"
     },
     {
       "iso": "UGA",
-      "locationKey": "uganda"
+      "locationKey": "uganda",
+      "naam": "Uganda"
     },
     {
       "iso": "UKR",
-      "locationKey": "oekraine"
+      "locationKey": "oekraine",
+      "naam": "Oekraïne"
     },
     {
       "iso": "ARE",
-      "locationKey": "verenigde-arabische-emiraten"
+      "locationKey": "verenigde-arabische-emiraten",
+      "naam": "Verenigde Arabische Emiraten"
     },
     {
       "iso": "GBR",
-      "locationKey": "verenigd-koninkrijk"
+      "locationKey": "verenigd-koninkrijk",
+      "naam": "Verenigd Koninkrijk"
     },
     {
       "iso": "USA",
-      "locationKey": "verenigde-staten-van-amerika"
+      "locationKey": "verenigde-staten-van-amerika",
+      "naam": "Verenigde Staten van Amerika"
     },
     {
       "iso": "URY",
-      "locationKey": "uruguay"
+      "locationKey": "uruguay",
+      "naam": "Uruguay"
     },
     {
       "iso": "UZB",
-      "locationKey": "oezbekistan"
+      "locationKey": "oezbekistan",
+      "naam": "Oezbekistan"
     },
     {
       "iso": "VUT",
-      "locationKey": "vanuatu"
+      "locationKey": "vanuatu",
+      "naam": "Vanuatu"
     },
     {
       "iso": "VEN",
-      "locationKey": "venezuela"
+      "locationKey": "venezuela",
+      "naam": "Venezuela"
     },
     {
       "iso": "VNM",
-      "locationKey": "vietnam"
+      "locationKey": "vietnam",
+      "naam": "Vietnam"
     },
     {
       "iso": "VGB",
-      "locationKey": "britse-maagdeneilanden"
+      "locationKey": "britse-maagdeneilanden",
+      "naam": "Britse Maagdeneilanden"
     },
     {
       "iso": "VIR",
-      "locationKey": "amerikaanse-maagdeneilanden"
+      "locationKey": "amerikaanse-maagdeneilanden",
+      "naam": "Amerikaanse Maagdeneilanden"
     },
     {
       "iso": "WLF",
-      "locationKey": "wallis-en-futuna"
+      "locationKey": "wallis-en-futuna",
+      "naam": "Wallis en Futuna"
     },
     {
       "iso": "YEM",
-      "locationKey": "jemen"
+      "locationKey": "jemen",
+      "naam": "Jemen"
     },
     {
       "iso": "ZMB",
-      "locationKey": "zambia"
+      "locationKey": "zambia",
+      "naam": "Zambia"
     },
     {
       "iso": "ZWE",
-      "locationKey": "zimbabwe"
+      "locationKey": "zimbabwe",
+      "naam": "Zimbabwe"
     },
     {
       "iso": "BQ-BO",
-      "locationKey": "bonaire"
+      "locationKey": "bonaire",
+      "naam": "Bonaire"
     },
     {
       "iso": "BQ-SA",
-      "locationKey": "saba"
+      "locationKey": "saba",
+      "naam": "Saba"
     },
     {
       "iso": "BQ-SE",
-      "locationKey": "sint-eustatius"
+      "locationKey": "sint-eustatius",
+      "naam": "Sint Eustatius"
     },
     {
       "iso": "RS-KM",
       "locationKey": "kosovo"
     }
-  ]
+  ],
+  "_naam_toelichting": "naam is de schrijfwijze zoals het cms hem voert (veld location), overgenomen uit het opgehaalde corpus. Daarmee kan de tool zien of een landnaam in de tekst goed gespeld staat: 'Tsjechie' hoort 'Tsjechië' te zijn. Landen zonder naam zijn nog niet opgehaald; scripts/fetch-corpus.mjs vult ze aan."
 }

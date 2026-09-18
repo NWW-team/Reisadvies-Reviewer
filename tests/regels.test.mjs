@@ -456,23 +456,45 @@ test('zonder woordenlijst zegt de tool niets over spelling', () => {
     'zonder lijst hoort de spellingtoets te zwijgen');
 });
 
-test('een hoofdletter middenin een zin is een naam, aan het begin niet', () => {
-  const naam = bevindingenMetSpelling(advies('<p>Kijk op de site van Kanlaon voor meer.</p>'),
+test('de naam van het land wordt wel getoetst', () => {
+  // Namen worden niet beoordeeld, met \u00e9\u00e9n uitzondering: van de landen kent de tool de
+  // schrijfwijze, want die staat in de landenlijst van de open data.
+  const ids = idsVan(advies('<p>Bent u in Tsjechie en bent u in nood?</p>'), { land: 'Tsjechi\u00eb' });
+  assert.ok(ids.includes('landnaam-schrijfwijze'), 'Tsjechie zonder trema hoort gemeld te worden');
+
+  assert.ok(!idsVan(advies('<p>Bent u in Tsjechi\u00eb en bent u in nood?</p>'), { land: 'Tsjechi\u00eb' })
+    .includes('landnaam-schrijfwijze'), 'goed gespeld hoort niets te geven');
+
+  // Niet in een reeks hoofdletters: "the Israel Population & Immigration Authority" is de juiste
+  // Engelse naam van een instituut, geen verkeerd gespeld Isra\u00ebl.
+  assert.ok(!idsVan(advies('<p>Kijk op de site van de Israel Population Authority.</p>'),
+    { land: 'Isra\u00ebl' }).includes('landnaam-schrijfwijze'),
+    'een naam van een instituut is geen verkeerd gespeld land');
+
+  // Ook een ander land uit de lijst dan dat van het advies zelf.
+  assert.ok(idsVan(advies('<p>Reist u door naar Kroatie? Kijk dan ook daar.</p>'), { land: 'Tsjechi\u00eb' })
+    .includes('landnaam-schrijfwijze'), 'ook een buurland telt mee');
+});
+
+test('een naam wordt herkend en niet gemeld', () => {
+  // Namen worden overgeslagen: in 226 reisadviezen staan zoveel plaatsnamen, instituten en
+  // buitenlandse bronnen dat er geen woordenlijst voor is aan te leggen. De herkenning blijft
+  // staan, anders zou elke naam als spelfout binnenkomen.
+  const midden = idsVanMetSpelling(advies('<p>Kijk op de site van Kanlaon voor meer.</p>'),
     { land: 'Tsjechi\u00eb' });
-  if (naam === null) return;
-  assert.ok(naam.some((b) => b.regel === 'woord-naam' && b.boodschap.includes('Kanlaon')),
-    'middenin de zin hoort dit als naam te tellen');
+  if (midden === null) return;                    // geen woordenlijst opgehaald
+  assert.ok(!midden.includes('woord-onbekend'),
+    'een hoofdletterwoord middenin een zin is een naam en hoort niet gemeld te worden');
 
   // Aan het zinsbegin zegt een hoofdletter niets, dus daar blijft het een spelfout.
   assert.ok(idsVanMetSpelling(advies('<p>Registeer u vandaag.</p>'), { land: 'Tsjechi\u00eb' })
     .includes('woord-onbekend'), 'aan het zinsbegin telt de hoofdletter niet mee');
 
-  // Maar namen komen in reeksen: dan is het ook aan het zinsbegin een naam.
-  const reeks = bevindingenMetSpelling(advies('<p>National Hurricane Center</p>'), { land: 'Tsjechi\u00eb' });
-  assert.ok(reeks.some((b) => b.regel === 'woord-naam' && b.boodschap.includes('National')),
+  // Maar namen komen in reeksen: dan is het ook aan het zinsbegin een naam. Zonder deze
+  // uitzondering werd "European" in "European Avalanche Warning Service" een spelfout.
+  assert.ok(!idsVanMetSpelling(advies('<p>European Avalanche Warning Service</p>'),
+    { land: 'Tsjechi\u00eb' }).includes('woord-onbekend'),
     'een hoofdletterwoord naast een ander hoofdletterwoord is een naam');
-  assert.ok(!reeks.some((b) => b.regel === 'woord-onbekend'),
-    'dan hoort er geen spelfout bij te staan');
 });
 
 test('de spellingtoets struikelt niet over samenstellingen en citaten', () => {

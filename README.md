@@ -72,9 +72,10 @@ Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
-*Te lange zinnen*, *Te lange zinnen incl. link*, *Tekstfouten*, *Mogelijke spelfouten*, *Namen*,
+*Te lange zinnen*, *Te lange zinnen incl. link*, *Tekstfouten*, *Mogelijke spelfouten*,
 *Linkteksten*, *Lijdende vorm*, *Twijfeltaal*, *Hoe vaak iets gebeurt*, *Volgorde van de rubrieken*
-en *Notatie en stijl*. De indeling staat in
+en *Notatie en stijl*. Alles staat aan; een klik zet een soort weg. Een aangevinkte knop is gevuld
+met een vinkje, een uitgezette is doorgestreept met een kruisje, zodat je ziet wat een klik doet. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
 
 Te lange zinnen staan in twee filters, want het zijn twee klussen: zit de lengte in de linktekst,
@@ -264,7 +265,12 @@ veranderde:
   geeft hij 146 mogelijke spelfouten — met daarin achttien echte tikfouten die nu live staan,
   zoals *Registeer*, *doodstaf*, *riscio*, *prvincie* en *veiligsheidsrisico's* — en 1974 namen,
   die in een eigen filter staan omdat de woordenlijst geen plaatsnamen kent. Het totaal met de
-  toets aan is **5010**; zonder blijft het 2890.
+  toets aan is **3037**; zonder blijft het 2891.
+- Namen worden wél herkend maar niet gemeld. Dat waren 1974 meldingen tegen 146 mogelijke
+  spelfouten: in 226 adviezen staan zoveel plaatsnamen, instituten en buitenlandse bronnen dat er
+  geen woordenlijst voor is aan te leggen, en ze staan vrijwel altijd goed. Eén groep namen kent de
+  tool wél: de landen zelf, uit de landenlijst van de open data. `landnaam-schrijfwijze` vond zo dat
+  op het Tsjechië-advies *"Bent u in Tsjechie en bent u in nood?"* staat, zonder trema.
 
 ## Over de regels
 

@@ -752,11 +752,16 @@ export function maakToetser(data) {
     // 15 woorden en de schrijfregels erover zijn al afgewogen toen de tekst werd vastgesteld
     // ("Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent"). We knippen elke
     // vaste tekst op de plaatshouders, zodat het herkenbare deel overblijft.
+    // Naast de verplichte vaste teksten staan er in het sjabloon formuleringen die je alléén
+    // gebruikt als ze van toepassing zijn — welk visumverhaal geldt, hangt van het land af. Die
+    // zijn niet verplicht (dus geen "ontbreekt"-melding), maar ze zijn wél vastgesteld, en dus
+    // net zomin onze schrijfregel als de rest.
     const sjabloonZinnen = [];
-    for (const bronTekst of [...sj.vaste_teksten.map((x) => x.zin), sj.intro.standaard,
+    const vrijgesteld = (sj.vrijgestelde_formuleringen && sj.vrijgestelde_formuleringen.zinnen) || [];
+    for (const bronTekst of [...sj.vaste_teksten.map((x) => x.zin), ...vrijgesteld, sj.intro.standaard,
       sj.intro.alleen_rood, sj.contactcenter.zin, sj.regionaal.afsluiter, sj.regionaal.gebiedenzin]) {
       for (const vasteZin of norm(bronTekst).split(/(?<=[.?!])\s+/)) {
-        for (const deel of vasteZin.split(/\{land\}|\{gebieden\}|\{kleur\}/)) {
+        for (const deel of vasteZin.split(/\{land\}|\{gebieden\}|\{kleur\}|\{vrij\}/)) {
           const kern = deel.replace(/\s+/g, ' ').trim();
           if (kern.length > 25) sjabloonZinnen.push(kern);
         }
@@ -769,6 +774,17 @@ export function maakToetser(data) {
         if (kern.length > 12 && n.includes(kern)) return true;
       }
       return sjabloonZinnen.some((kern) => n.includes(kern));
+    };
+
+    /**
+     * Andersom dan isVasteZin: een linktekst is een stúk van een vaste tekst, niet omgekeerd.
+     * "Check welke documenten u nodig heeft om te reizen met een minderjarig kind" is 74 tekens en
+     * dus te lang volgens de schrijfwijzer, maar staat zo in het sjabloon. Daar valt niets aan in
+     * te korten zonder van het format af te wijken, dus meldt de tool het niet.
+     */
+    const isVasteLinktekst = (t) => {
+      const n = norm(t).replace(/[?.!]\s*$/, '');
+      return n.length > 20 && sjabloonZinnen.some((kern) => kern.includes(n));
     };
 
     for (const z of doc.zinnen) {
@@ -821,7 +837,7 @@ export function maakToetser(data) {
 
     // ---------- links ----------
     for (const l of doc.links) {
-      if (l.tekst.length > lim.link.max_tekens_linktekst) {
+      if (l.tekst.length > lim.link.max_tekens_linktekst && !isVasteLinktekst(l.tekst)) {
         b.push(bevinding('link-tekstlengte', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Lengte linkteksten',
           `Linktekst is ${l.tekst.length} tekens. Maximaal ${lim.link.max_tekens_linktekst}.`, { fragment: l.tekst }));
       }

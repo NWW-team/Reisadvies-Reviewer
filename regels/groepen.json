@@ -1,6 +1,6 @@
 {
   "_bron": "Geen brondocument: dit is een indeling voor de bediening van de tool, niet voor de toets zelf.",
-  "_toelichting": "Kleur en groep zijn twee verschillende dingen. De KLEUR van een bevinding zegt hoe ernstig hij is en bepaalt de volgorde in het paneel; die staat in src/regels.js. De GROEP hier zegt wat voor soort bevinding het is en bepaalt alleen wat je met een vinkje opzij kunt zetten. Daarom staat rubrieken-max in de groep \"Fout en format\" terwijl hij geel blijft. Elke regel hoort bij precies een groep; tests/regels.test.mjs faalt als er een regel bij komt die hier ontbreekt.",
+  "_toelichting": "Kleur en groep zijn twee verschillende dingen. De KLEUR van een bevinding zegt hoe ernstig hij is en bepaalt de volgorde in het paneel; die staat in src/regels.js. De GROEP hier zegt wat voor soort bevinding het is en bepaalt alleen wat je met een vinkje opzij kunt zetten. Daarom staat rubrieken-max in de groep \"Fout en format\" terwijl hij geel blijft. Elke regel hoort bij precies een groep; tests/regels.test.mjs faalt als er een regel bij komt die hier ontbreekt. Een groep mag zich met het veld \"ernst\" beperken tot bevindingen van die ernst; zo vallen te lange zinnen met en zonder link in twee aparte filters, terwijl ze uit dezelfde regel komen.",
   "groepen": [
     {
       "id": "format",
@@ -58,14 +58,18 @@
     },
     {
       "id": "zinslengte",
-      "label": "Zinslengte",
-      "toelichting": "Zinnen boven de limiet uit de schrijfwijzer.",
-      "subfilter": {
-        "id": "met-link",
-        "label": "ook zinnen met een link",
-        "ernst": "link-zin",
-        "toelichting": "Zit er een link in de zin, dan zit de lengte vaak in de linktekst. Dat is een ander gesprek dan een te lange lopende zin, dus apart uit te zetten."
-      },
+      "label": "Te lange zinnen",
+      "ernst": "let-op",
+      "toelichting": "Zinnen boven de limiet uit de schrijfwijzer, zonder link erin. Die los je op door de zin te splitsen.",
+      "regels": [
+        "zin-max-woorden"
+      ]
+    },
+    {
+      "id": "zinslengte-link",
+      "label": "Te lange zinnen incl. link",
+      "ernst": "link-zin",
+      "toelichting": "Zinnen boven de limiet met een link erin. Daar zit de lengte vaak in de linktekst, dus dat is een andere klus: eerst de linktekst inkorten.",
       "regels": [
         "zin-max-woorden"
       ]

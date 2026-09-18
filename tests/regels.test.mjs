@@ -290,14 +290,26 @@ function alleRegelIds() {
   return ids;
 }
 
-test('elke regel valt in precies een filtergroep', () => {
+test('elke bevinding valt in precies een filtergroep', () => {
   const ids = alleRegelIds();
-  const plek = new Map();
+  // Een regel mag in meer dan een groep staan, mits die groepen zich op ernst onderscheiden: te
+  // lange zinnen met en zonder link komen uit dezelfde regel maar zijn twee filters. Wat niet mag:
+  // twee groepen die dezelfde bevinding claimen (dan valt hij in twee filters tegelijk), of een
+  // regel die nergens staat (dan verdwijnt hij stilletjes zodra iemand filtert).
+  const plek = new Map();                 // regel-id -> lijst van groepen die hem noemen
   for (const g of regeldata.groepen.groepen) {
     for (const id of g.regels) {
-      assert.ok(!plek.has(id), `${id} staat in zowel ${plek.get(id)} als ${g.id}`);
-      plek.set(id, g.id);
+      if (!plek.has(id)) plek.set(id, []);
+      plek.get(id).push(g);
     }
+  }
+  for (const [id, groepen] of plek) {
+    if (groepen.length === 1) continue;
+    const ernsten = groepen.map((g) => g.ernst);
+    assert.ok(ernsten.every(Boolean),
+      `${id} staat in ${groepen.length} groepen, maar niet elke groep bakent af op ernst`);
+    assert.equal(new Set(ernsten).size, ernsten.length,
+      `${id} staat in twee groepen met dezelfde ernst; een bevinding zou in beide filters vallen`);
   }
   for (const id of ids) {
     assert.ok(plek.has(id), `${id} heeft geen filtergroep in regels/groepen.json`);
@@ -305,6 +317,14 @@ test('elke regel valt in precies een filtergroep', () => {
   for (const id of plek.keys()) {
     assert.ok(ids.has(id), `regels/groepen.json noemt ${id}, maar die regel bestaat niet (meer)`);
   }
+});
+
+test('elke ernst die een regel kan geven valt onder een filter', () => {
+  // Bakent een groep af op ernst, dan moeten alle ernsten die die regel kan opleveren gedekt zijn.
+  // Anders valt een bevinding buiten elk filter en is hij nooit uit te zetten.
+  const zin = regeldata.groepen.groepen.filter((g) => g.regels.includes('zin-max-woorden'));
+  assert.deepEqual(new Set(zin.map((g) => g.ernst)), new Set(['let-op', 'link-zin']),
+    'zin-max-woorden geeft let-op en link-zin; beide horen een eigen filter te hebben');
 });
 
 test('elke filtergroep heeft een label en een toelichting', () => {

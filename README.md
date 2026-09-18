@@ -67,9 +67,13 @@ Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
-*Zinslengte* (met een subvinkje voor zinnen met een link erin), *Linkteksten*, *Lijdende vorm*,
+*Te lange zinnen*, *Te lange zinnen incl. link*, *Linkteksten*, *Lijdende vorm*,
 *Twijfeltaal*, *Volgorde van de rubrieken* en *Notatie en stijl*. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
+
+Te lange zinnen staan in twee filters, want het zijn twee klussen: zit de lengte in de linktekst,
+dan kort je die in; is het een lange lopende zin, dan splits je hem. Ze komen uit dezelfde regel,
+dus een filtergroep mag zich met het veld `ernst` beperken tot bevindingen van die soort.
 
 Kleur en groep zijn met opzet twee verschillende dingen. De **kleur** zegt hoe ernstig een bevinding
 is en bepaalt de volgorde. De **groep** zegt wat voor soort het is en bepaalt alleen wat je opzij

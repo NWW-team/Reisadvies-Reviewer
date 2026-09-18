@@ -302,7 +302,6 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 /* Uit is doelbewust gedempt en doorgestreept, niet onzichtbaar: je moet kunnen zien dat je filtert. */
 .filters button[aria-pressed="false"] { opacity: .5; text-decoration: line-through; }
 .filters button[aria-pressed="false"] .n { text-decoration: none; }
-.filters button.sub { margin-left: -2px; font-size: .74rem; padding: 3px 8px; border-style: dashed; }
 .filters .alles {
   margin-left: auto; border-style: none; background: none; color: var(--gedempt);
   text-decoration: underline; padding: 4px 2px;
@@ -478,29 +477,28 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   // de volledige lijst. Alleen wat je ziet verandert, en er staat altijd bij hoeveel dat scheelt.
   // Startstand is alles aan, zodat er nooit iets buiten je medeweten wegvalt.
   const GROEPEN = (REGELDATA.groepen && REGELDATA.groepen.groepen) || [];
-  const groepVanRegel = new Map();
-  for (const g of GROEPEN) for (const id of g.regels) groepVanRegel.set(id, g.id);
   let filters = {};             // groep-id -> aan/uit
-  let subfilters = {};          // groep-id -> aan/uit voor het subvinkje
 
   function zetFiltersTerug() {
     filters = {};
-    subfilters = {};
-    for (const g of GROEPEN) {
-      filters[g.id] = true;
-      if (g.subfilter) subfilters[g.id] = true;
-    }
+    for (const g of GROEPEN) filters[g.id] = true;
   }
   zetFiltersTerug();
 
+  /**
+   * De groep waar een bevinding bij hoort. Een groep noemt de regels die erin vallen, en mag zich
+   * met `ernst` beperken tot bevindingen van die soort: te lange zinnen mét en zónder link komen
+   * uit dezelfde regel, maar zijn twee verschillende klussen en dus twee filters.
+   */
+  function groepVan(bev) {
+    return GROEPEN.find((g) => g.regels.includes(bev.regel) && (!g.ernst || g.ernst === bev.ernst));
+  }
+
   /** Hoort deze bevinding bij wat je nu wilt zien? */
   function zichtbaar(bev) {
-    const gid = groepVanRegel.get(bev.regel);
-    if (gid === undefined) return true;      // een regel zonder groep verbergen we nooit
-    if (!filters[gid]) return false;
-    const g = GROEPEN.find((x) => x.id === gid);
-    if (g && g.subfilter && !subfilters[gid] && bev.ernst === g.subfilter.ernst) return false;
-    return true;
+    const g = groepVan(bev);
+    if (!g) return true;                     // een regel zonder groep verbergen we nooit
+    return !!filters[g.id];
   }
 
   /** De indexen van de zichtbare bevindingen. Index, niet de bevinding zelf: het paneel en de
@@ -513,13 +511,10 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
 
   function telPerGroep() {
     const t = {};
-    for (const g of GROEPEN) t[g.id] = { totaal: 0, sub: 0 };
+    for (const g of GROEPEN) t[g.id] = 0;
     for (const b of huidig.resultaat.bevindingen) {
-      const gid = groepVanRegel.get(b.regel);
-      if (!t[gid]) continue;
-      t[gid].totaal++;
-      const g = GROEPEN.find((x) => x.id === gid);
-      if (g && g.subfilter && b.ernst === g.subfilter.ernst) t[gid].sub++;
+      const g = groepVan(b);
+      if (g) t[g.id]++;
     }
     return t;
   }
@@ -530,19 +525,10 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     const tel = telPerGroep();
     const zichtbaarAantal = zichtbareIndexen().length;
     const totaal = huidig.resultaat.bevindingen.length;
-    const knoppen = GROEPEN.filter((g) => tel[g.id].totaal > 0).map((g) => {
-      const aan = filters[g.id];
-      let html = '<button type="button" data-filter="' + g.id + '" aria-pressed="' + aan + '"'
+    const knoppen = GROEPEN.filter((g) => tel[g.id] > 0).map((g) =>
+      '<button type="button" data-filter="' + g.id + '" aria-pressed="' + filters[g.id] + '"'
         + ' title="' + esc(g.toelichting) + '">' + esc(g.label)
-        + ' <span class="n">' + tel[g.id].totaal + '</span></button>';
-      // Het subvinkje slaat nergens op zodra de hele groep uit staat.
-      if (g.subfilter && aan && tel[g.id].sub > 0) {
-        html += '<button type="button" class="sub" data-subfilter="' + g.id + '"'
-          + ' aria-pressed="' + subfilters[g.id] + '" title="' + esc(g.subfilter.toelichting) + '">'
-          + esc(g.subfilter.label) + ' <span class="n">' + tel[g.id].sub + '</span></button>';
-      }
-      return html;
-    }).join('');
+        + ' <span class="n">' + tel[g.id] + '</span></button>').join('');
     if (!knoppen) { doel.hidden = true; return; }
     doel.hidden = false;
     doel.innerHTML = '<div class="kop">Tonen</div>' + knoppen
@@ -816,8 +802,6 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
 
     const f = e.target.closest('[data-filter]');
     if (f) { filters[f.dataset.filter] = !filters[f.dataset.filter]; return tekenNaFilter(); }
-    const sf = e.target.closest('[data-subfilter]');
-    if (sf) { subfilters[sf.dataset.subfilter] = !subfilters[sf.dataset.subfilter]; return tekenNaFilter(); }
     if (e.target.closest('[data-filter-alles]')) { zetFiltersTerug(); return tekenNaFilter(); }
   });
 
@@ -1031,9 +1015,6 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     const zichtbaar = zichtbareIndexen().length;
     if (zichtbaar === totaal) return null;
     const uit = GROEPEN.filter((g) => !filters[g.id]).map((g) => g.label);
-    for (const g of GROEPEN) {
-      if (filters[g.id] && g.subfilter && !subfilters[g.id]) uit.push(g.label + ' - ' + g.subfilter.label);
-    }
     return 'Let op: dit rapport toont ' + zichtbaar + ' van de ' + totaal + ' bevindingen. '
       + 'Buiten beeld gelaten: ' + (uit.join(', ') || 'een deel van de bevindingen') + '.';
   }

@@ -136,6 +136,24 @@
     "_bron": "Instructie van de opdrachtgever, 18 september 2026: elke verwijzing vanuit \"In het kort\" heeft de vorm \"Lees meer onder X\" - Actueel, Regionale risico's, of bij uitzondering een andere rubriek zoals Natuurgeweld of Paspoort. De matrix schrijft bij \"In het kort\" wel voor dat er verwezen wordt (\"max. 3 noemen en verwijzen\"), maar legt de bewoording niet vast. Gemeten op 18 september 2026: alle 149 verwijzingen in het corpus gebruiken deze vorm al, en alle 71 adviezen met meerdere kleurcodes verwijzen naar Regionale risico's.",
     "_afwijkende_vormen_noot": "Deze lijst dient om een verkeerde verwijzing te herkennen. Hij komt in het corpus niet voor; het zijn de formuleringen die er redelijkerwijs in kunnen sluipen."
   },
+  "vrijgestelde_formuleringen": {
+    "_toelichting": "Vaste formuleringen uit het sjabloon die NIET verplicht zijn: welke variant geldt hangt van het land af. Ze staan hier alleen om ze vrij te stellen van de schrijfregels (zinslengte, lengte van de linktekst, notatie). De tool meldt dus niet dat ze ontbreken - daarvoor is vaste_teksten - maar valt er ook niet over zodra ze er staan. Dat is de bedoeling: de tekst volgt keurig het format, dus de tool hoort te zwijgen. Willen we deze teksten korter, dan is dat een herziening van het sjabloon en geen bevinding per advies.",
+    "_bron": "Sjabloon Reisadviezen - nieuwe format.docx, blokken Paspoort/Visum/Rijbewijs, Reizen met kinderen, Bagageregels, In geval van nood en Wetten en gebruiken. Elke zin hieronder is op 18 september 2026 woordelijk teruggevonden in dat document.",
+    "_placeholder_vrij": "{vrij} staat voor een plek die het sjabloon openlaat (een instantie, een taal, een stad).",
+    "zinnen": [
+      "Deel een kopie van uw paspoort met familie in Nederland. Als u iets overkomt, is het belangrijk dat anderen uw paspoortgegevens hebben. Lees hoe u een veilige kopie maakt van uw paspoort op de website van de Rijksoverheid.",
+      "Deel een kopie van uw paspoort of ID-kaart met familie in Nederland. Als u iets overkomt, is het belangrijk dat anderen uw gegevens hebben. Lees hoe u een veilige kopie maakt van uw paspoort of ID-kaart op de website van de Rijksoverheid.",
+      "U heeft geen visum nodig voor {land} als u met een Nederlands paspoort reist.",
+      "U heeft geen visum nodig voor {land} als u met een Nederlands paspoort of Nederlandse ID-kaart reist.",
+      "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar {land}. Reist u alleen met 1 of meer kinderen jonger dan 18 jaar? Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee.",
+      "Uw Nederlandse rijbewijs is geldig in {land}. Lees meer over rijden in {land} op de website van de ANWB.",
+      "In {land} is uw Nederlandse rijbewijs alleen geldig als u ook een geldig internationaal rijbewijs heeft. Lees meer over rijden in {land} op de website van de ANWB.",
+      "Check wat u mag meenemen naar {land} op de website van {vrij} (informatie in het {vrij}).",
+      "In een noodgeval kunt u ook terecht bij de honorair consul van Nederland in {vrij}.",
+      "In een noodgeval kunt u ook terecht bij de ambassade van een ander land dat lid is van de Europese Unie.",
+      "Bent u een lhbtiq+ persoon? En wilt u naar {land} reizen? De wetten en de gebruiken in dit land tegenover lhbtiq+ personen zijn vergelijkbaar met die van Nederland."
+    ]
+  },
   "vaste_teksten": [
     {
       "id": "informatieservice-vaste-tekst",

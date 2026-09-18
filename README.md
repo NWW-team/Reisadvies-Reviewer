@@ -25,6 +25,11 @@ Elke bevinding draagt zijn bron mee: **SW** = schrijfwijzer, **MX** = format-mat
 **SJ** = sjabloon. `regels/HERKOMST.md` legt per regel-id de vindplaats vast — een bevinding
 zonder bron hoort de tool niet te geven, en een test bewaakt dat.
 
+Vaste formuleringen uit het sjabloon zijn vrijgesteld van de schrijfregels: een zin die te lang is
+omdat het sjabloon hem zo voorschrijft, is geen fout van de redacteur. Dat de vaste teksten zelf
+soms boven de norm liggen is een gesprek over het sjabloon; `data/vaste-teksten-boven-de-norm.md`
+zet die zinnen op een rij.
+
 Steunt een bevinding op een woord dat de tool zelf heeft toegevoegd in plaats van op een geciteerde
 regel, dan staat dat erbij als **aanvulling**. Zo is bij de review te zien welk deel van het oordeel
 uit de bron komt en welk deel een keuze van de bouwer is.
@@ -199,6 +204,7 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 | `dist/app.html` | de gebouwde tool als één bestand — gegenereerd, niet met de hand bijwerken |
 | `scripts/fetch-corpus.mjs` | ophalen van de reisadviezen |
 | `scripts/bulk.mjs` | alle adviezen toetsen en een rapport schrijven |
+| `scripts/vaste-teksten-boven-de-norm.mjs` | welke voorgeschreven zinnen zelf niet binnen de schrijfwijzer passen |
 | `scripts/bouw-adviezen.mjs` | het corpus klaarzetten als `docs/adviezen/`, zodat alle landen in de lijst staan |
 | `data/corpus/` | 226 opgehaalde reisadviezen als XML |
 | `tests/` | per regel een fixture die faalt en een die slaagt |
@@ -231,6 +237,10 @@ veranderde:
   parser h4-koppen kennen. Het aantal adviezen zonder harde fout daalde van 119 naar 99; niet omdat
   er iets verslechterde, maar omdat de tool nu ziet of de juiste variant van de vaste kleurtekst is
   gebruikt.
+- Ten slotte werden de vaste formuleringen uit het sjabloon vrijgesteld van de schrijfregels, zoals
+  ze dat als vaste tekst al waren. Dat scheelde 1085 meldingen (3845 → 2760): zinnen en linkteksten
+  die te lang zijn omdat het sjabloon ze zo voorschrijft. Twee linkteksten alleen al waren goed voor
+  429 meldingen.
 
 ## Over de regels
 

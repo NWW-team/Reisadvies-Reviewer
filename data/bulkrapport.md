@@ -7,19 +7,7 @@ Gedraaid op 2026-09-18 over 226 reisadviezen.
 - **99** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 0.9 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **88** van de 3845 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
-
-## Zit in de standaardtekst
-
-Deze bevindingen staan woordelijk gelijk in 45 adviezen of meer. Eén keer aanpassen in
-de standaardtekst lost ze allemaal tegelijk op.
-
-| regel | in hoeveel adviezen | wat |
-|---|---:|---|
-| `link-tekstlengte` | 221 | Linktekst is 74 tekens. Maximaal 70. |
-| `link-tekstlengte` | 208 | Linktekst is 75 tekens. Maximaal 70. |
-| `zin-max-woorden` | 179 | Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in. |
-| `zin-max-woorden` | 47 | Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in. |
+- **34** van de 2760 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Per soort bevinding
 
@@ -29,23 +17,23 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 210 | 127 |
-| geel/oranje — let op | 2028 | 226 |
-| lichtblauw — lange zin met link | 945 | 226 |
+| geel/oranje — let op | 1400 | 217 |
+| lichtblauw — lange zin met link | 542 | 202 |
 | grijs — ter overweging | 135 | 101 |
-| roze — twijfeltaal | 527 | 183 |
+| roze — twijfeltaal | 473 | 164 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 226 | 1900 |
-| `link-tekstlengte` | 226 | 486 |
-| `zin-twijfeltaal` | 183 | 527 |
+| `zin-max-woorden` | 220 | 1303 |
+| `zin-twijfeltaal` | 164 | 473 |
 | `zin-lijdende-vorm` | 123 | 272 |
 | `aanhalingstekens` | 53 | 86 |
 | `rubrieken-volgorde` | 53 | 53 |
 | `kleur-variant` | 47 | 53 |
 | `doc-woordenaantal` | 46 | 46 |
+| `link-tekstlengte` | 44 | 52 |
 | `h3-alleen-bij-uitzondering` | 40 | 40 |
 | `rubrieken-max` | 36 | 36 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |

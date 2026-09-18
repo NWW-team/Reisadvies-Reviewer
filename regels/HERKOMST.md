@@ -127,6 +127,35 @@ Daarnaast toetst de tool op vorm die het sjabloon voorschrijft:
 | `nood-contactnummer` | SJ, blok *In geval van nood* | alleen de vaste nummers van het contactcenter |
 | `h3-vaste-kop` | SJ, blok *Risico dat van toepassing is*; MX, tab *Koppen* | de tussenkoppen liggen letterlijk vast: "Terrorisme", niet "Terroristische aanslagen" |
 
+## Vaste formuleringen zijn vrijgesteld van de schrijfregels (18 september 2026)
+
+Het sjabloon legt formuleringen vast die zelf niet binnen de schrijfwijzer passen. *"Check welke
+documenten u nodig heeft om te reizen met een minderjarig kind"* is 74 tekens waar 70 de norm is;
+*"U heeft geen visum nodig voor X als u met een Nederlands paspoort of Nederlandse ID-kaart reist"*
+telt 18 woorden waar 15 de norm is. Daar valt niets aan in te korten zonder van het format af te
+wijken — de *of ID-kaart* moet er staan voor de feitelijke juistheid.
+
+Een redacteur die het format keurig volgt hoort daar geen fout voor te krijgen. Daarom zijn ze
+vrijgesteld, net als de al bestaande vaste teksten.
+
+`regels/sjabloon.json` heeft daarvoor een aparte ingang: **`vrijgestelde_formuleringen`**. Het
+verschil met `vaste_teksten` is dat deze niet verplicht zijn — welke visumvariant geldt, hangt van
+het land af. Ze leveren dus geen *"ontbreekt"*-bevinding op; ze staan er alleen om ze vrij te
+stellen. Elke zin is op 18 september 2026 woordelijk teruggevonden in het sjabloon.
+
+Wat dit opleverde over het corpus: 597 meldingen over zinslengte, 434 over de lengte van een
+linktekst en 54 over twijfeltaal vervielen — samen 1085 van de 3845. Twee linkteksten alleen al
+waren goed voor 429 meldingen.
+
+**Eén kandidaat is bewust níét vrijgesteld.** *"Lees informatie over aardbevingen op de website van
+…"* staat in 31 adviezen woordelijk hetzelfde, maar komt niet in het sjabloon voor. Dat is een
+gewoonte, geen voorgeschreven tekst, en blijft dus een bevinding. Vaak voorkomen is niet hetzelfde
+als vastgesteld zijn.
+
+Dat de vaste teksten zelf boven de norm liggen is een gesprek over het sjabloon, niet over een
+advies. `data/vaste-teksten-boven-de-norm.md` zet die dertien zinnen op een rij, met hoe vaak ze
+voorkomen; `node scripts/vaste-teksten-boven-de-norm.mjs` maakt dat overzicht opnieuw.
+
 ## Eén versus meerdere kleurcodes (18 september 2026)
 
 De matrix schrijft twee manieren voor om de kleurcode in *In het kort* te zetten. Bij **één**

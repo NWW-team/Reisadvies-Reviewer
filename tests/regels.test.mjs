@@ -290,6 +290,38 @@ function alleRegelIds() {
   return ids;
 }
 
+/**
+ * Het sjabloon legt formuleringen vast die langer zijn dan de schrijfwijzer toestaat. Daar valt
+ * niets aan in te korten zonder van het format af te wijken, dus de tool hoort te zwijgen. Zonder
+ * deze twee tests kan die vrijstelling stilletjes sneuvelen bij een volgende wijziging.
+ */
+test('een vaste formulering uit het sjabloon telt niet als te lange zin', () => {
+  const zin = 'U heeft geen visum nodig voor Sloveni\u00eb als u met een Nederlands paspoort '
+    + 'of Nederlandse ID-kaart reist.';
+  const ids = idsVan(advies('<p>' + zin + '</p>'), { land: 'Tsjechi\u00eb' });
+  assert.ok(!ids.includes('zin-max-woorden'),
+    'de visumzin staat letterlijk in het sjabloon en mag niet als te lang gelden');
+
+  // Tegenproef: dezelfde lengte, maar eigen tekst. Dan gaat de regel wel af.
+  const eigen = 'U heeft voor dit land geen enkel document nodig als u met de trein of met de '
+    + 'boot naar het noorden reist.';
+  assert.ok(idsVan(advies('<p>' + eigen + '</p>'), { land: 'Tsjechi\u00eb' }).includes('zin-max-woorden'),
+    'een even lange zin in eigen woorden hoort wel gemeld te worden');
+});
+
+test('een vaste linktekst uit het sjabloon telt niet als te lang', () => {
+  const vast = '<p>Reist u alleen met 1 of meer kinderen jonger dan 18 jaar? '
+    + '<a href="https://www.rijksoverheid.nl/x">Check welke documenten u nodig heeft om te reizen '
+    + 'met een minderjarig kind</a> en neem die mee.</p>';
+  assert.ok(!idsVan(advies(vast), { land: 'Tsjechi\u00eb' }).includes('link-tekstlengte'),
+    'deze linktekst staat zo in het sjabloon en is dus niet in te korten');
+
+  const eigen = '<p>Meer weten? <a href="https://example.org/x">Bekijk de uitgebreide toelichting '
+    + 'over de regels die op dit moment in dit gebied gelden</a>.</p>';
+  assert.ok(idsVan(advies(eigen), { land: 'Tsjechi\u00eb' }).includes('link-tekstlengte'),
+    'een te lange linktekst in eigen woorden hoort wel gemeld te worden');
+});
+
 test('elke bevinding valt in precies een filtergroep', () => {
   const ids = alleRegelIds();
   // Een regel mag in meer dan een groep staan, mits die groepen zich op ernst onderscheiden: te

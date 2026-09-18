@@ -1,0 +1,139 @@
+{
+  "_bron": "Geen brondocument: dit is een indeling voor de bediening van de tool, niet voor de toets zelf.",
+  "_toelichting": "Kleur en groep zijn twee verschillende dingen. De KLEUR van een bevinding zegt hoe ernstig hij is en bepaalt de volgorde in het paneel; die staat in src/regels.js. De GROEP hier zegt wat voor soort bevinding het is en bepaalt alleen wat je met een vinkje opzij kunt zetten. Daarom staat rubrieken-max in de groep \"Fout en format\" terwijl hij geel blijft. Elke regel hoort bij precies een groep; tests/regels.test.mjs faalt als er een regel bij komt die hier ontbreekt.",
+  "groepen": [
+    {
+      "id": "format",
+      "label": "Fout en format",
+      "toelichting": "Woordenaantal, onderwerpen die er niet in horen, de vaste formuleringen uit matrix en sjabloon, koppen en rubrieken.",
+      "regels": [
+        "actueel-max-woorden",
+        "bagage-heen",
+        "bagage-terug",
+        "criminaliteit-themapagina",
+        "doc-woordenaantal",
+        "gebieden-max-drie",
+        "h2-vast",
+        "h3-alleen-bij-uitzondering",
+        "h3-niet-melden",
+        "h3-regionaal-alleen-bij-meerdere",
+        "h3-vaste-kop",
+        "informatieservice-vaste-tekst",
+        "intro-vaste-tekst",
+        "kinderen-documenten",
+        "kleur-aanduiding",
+        "kleur-eerste-bullet-voluit",
+        "kleur-formulering-verboden",
+        "kleur-vaste-tekst",
+        "kleur-vervolg-bullet-kort",
+        "kleur-volgorde",
+        "kort-informatieservice-onderaan",
+        "kort-max-bullets",
+        "lhbtiq-verwijzing",
+        "link-verboden-partij",
+        "medicijnen-verklaring",
+        "medicijnen-verpakking",
+        "medicijnen-voldoende",
+        "nood-contactcenter",
+        "nood-contactnummer",
+        "nood-lokale-hulpdiensten",
+        "nood-verwijzing-crisis",
+        "nood-verwijzing-nood",
+        "paspoort-kopie",
+        "regionaal-gebiedenzin",
+        "reisverzekering-familie",
+        "reisverzekering-oranje-rood",
+        "reisverzekering-vaste-tekst",
+        "rijbewijs-anwb",
+        "rood-herhaling-voorbereiding",
+        "rubrieken-max",
+        "vaccinaties-ggd",
+        "vaccinaties-lcr"
+      ]
+    },
+    {
+      "id": "zinslengte",
+      "label": "Zinslengte",
+      "toelichting": "Zinnen boven de limiet uit de schrijfwijzer.",
+      "subfilter": {
+        "id": "met-link",
+        "label": "ook zinnen met een link",
+        "ernst": "link-zin",
+        "toelichting": "Zit er een link in de zin, dan zit de lengte vaak in de linktekst. Dat is een ander gesprek dan een te lange lopende zin, dus apart uit te zetten."
+      },
+      "regels": [
+        "zin-max-woorden"
+      ]
+    },
+    {
+      "id": "linktekst",
+      "label": "Linkteksten",
+      "toelichting": "Te lange linkteksten en urls.",
+      "regels": [
+        "link-ook-nuttig-max",
+        "link-tekstlengte",
+        "url-lengte"
+      ]
+    },
+    {
+      "id": "lijdende-vorm",
+      "label": "Lijdende vorm",
+      "toelichting": "Schrijf actief.",
+      "regels": [
+        "zin-lijdende-vorm"
+      ]
+    },
+    {
+      "id": "twijfeltaal",
+      "label": "Twijfeltaal",
+      "toelichting": "Misschien, vaak, mogelijk, bijna. Let op: soms is een woord als \"regelmatig\" feitelijke nuance en geen slap taalgebruik.",
+      "regels": [
+        "zin-twijfeltaal"
+      ]
+    },
+    {
+      "id": "rubriekvolgorde",
+      "label": "Volgorde van de rubrieken",
+      "toelichting": "Afwijken van de standaardvolgorde kan goed zijn; dit is een aandachtspunt, geen fout.",
+      "regels": [
+        "rubrieken-volgorde"
+      ]
+    },
+    {
+      "id": "notatie",
+      "label": "Notatie en stijl",
+      "toelichting": "Aanhalingstekens, getallen, eenheden, afkortingen, notatie van telefoon, valuta en tijd, opmaak, titel, tussenkoppen en alinealengte.",
+      "regels": [
+        "aanhalingstekens",
+        "afkortingen-uitschrijven",
+        "alinea-max-woorden",
+        "datum-notatie",
+        "eenheden-voluit",
+        "genderneutraal",
+        "getallen-cijfers",
+        "intro-geen-vraag-na-vraagtitel",
+        "intro-max-woorden",
+        "lhbtiq-schrijfwijze",
+        "metadescription-lengte",
+        "opmaak-cursief",
+        "opmaak-vet-onderstreept",
+        "opsomming-puntkomma",
+        "percentage-notatie",
+        "rangtelwoord-notatie",
+        "schrijfwijze-vast",
+        "schuine-streep",
+        "tekst-negatieve-lading",
+        "telefoon-notatie",
+        "tijd-notatie",
+        "titel-leestekens",
+        "titel-max-tekens",
+        "tussenkop-leestekens",
+        "tussenkop-lidwoord",
+        "tussenkop-max-woorden",
+        "tussenkop-vraagvorm",
+        "valuta-notatie",
+        "vragen-opeenvolgend"
+      ]
+    }
+  ]
+}

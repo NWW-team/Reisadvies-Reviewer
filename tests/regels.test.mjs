@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { advies, idsVan, bevindingenVan, regeldata } from './helpers.mjs';
 import { ERNST_VOLGORDE } from '../src/regels.js';
 
@@ -208,6 +209,43 @@ test('elke regel-id uit de tests staat ook in HERKOMST.md', async () => {
   const herkomst = readFileSync(new URL('../regels/HERKOMST.md', import.meta.url), 'utf8');
   for (const g of gevallen) {
     assert.ok(herkomst.includes('`' + g.regel + '`'), `${g.regel} ontbreekt in HERKOMST.md`);
+  }
+});
+
+/**
+ * De filterindeling is bediening, geen toets: hij bepaalt alleen wat je met een vinkje opzij kunt
+ * zetten. Maar hij moet wel volledig zijn, anders verdwijnt een nieuwe regel stilletjes uit beeld
+ * zodra iemand filtert. Daarom leest deze test de regel-id's uit de code zelf.
+ */
+function alleRegelIds() {
+  const bron = readFileSync(new URL('../src/regels.js', import.meta.url), 'utf8');
+  const ids = new Set([...bron.matchAll(/bevinding\('([a-z0-9-]+)'/g)].map((m) => m[1]));
+  for (const m of bron.matchAll(/\[\s*'([a-z0-9-]+)',\s*ERNST\./g)) ids.add(m[1]);
+  for (const v of regeldata.sjabloon.vaste_teksten) ids.add(v.id);
+  return ids;
+}
+
+test('elke regel valt in precies een filtergroep', () => {
+  const ids = alleRegelIds();
+  const plek = new Map();
+  for (const g of regeldata.groepen.groepen) {
+    for (const id of g.regels) {
+      assert.ok(!plek.has(id), `${id} staat in zowel ${plek.get(id)} als ${g.id}`);
+      plek.set(id, g.id);
+    }
+  }
+  for (const id of ids) {
+    assert.ok(plek.has(id), `${id} heeft geen filtergroep in regels/groepen.json`);
+  }
+  for (const id of plek.keys()) {
+    assert.ok(ids.has(id), `regels/groepen.json noemt ${id}, maar die regel bestaat niet (meer)`);
+  }
+});
+
+test('elke filtergroep heeft een label en een toelichting', () => {
+  for (const g of regeldata.groepen.groepen) {
+    assert.ok(g.id && g.label && g.toelichting, `groep ${g.id || '(zonder id)'} is niet compleet`);
+    assert.ok(g.regels.length > 0, `groep ${g.id} heeft geen regels`);
   }
 });
 

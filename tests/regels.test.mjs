@@ -25,6 +25,70 @@ const gevallen = [
     slaagt: "<h2>Veiligheidsrisico’s</h2><h3>Criminaliteit</h3><p>Er zijn zakkenrollers.</p>",
   },
   {
+    // Bij een kleurcode geldt de kleur voor het hele land: dan hoort de volledige uitleg in
+    // "In het kort". De verkorte variant is voor een advies met meer dan een kleurcode.
+    regel: 'kleur-variant',
+    faalt: '<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Tsjechi\u00eb is groen. '
+      + 'U kunt hierheen reizen. Lees welke veiligheidsrisico&#39;s er zijn.</li></ul>',
+    slaagt: null, // gedekt door schoon.test.mjs
+  },
+  {
+    // Bij meerdere kleurcodes staat de volledige uitleg onder Regionale risico&#39;s, onder een vast
+    // kopje per kleur.
+    regel: 'regionaal-kleur-kop',
+    faalt: '<h2>In het kort</h2><ul>'
+      + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
+      + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+      + '<li>Voor de rest van Tsjechi\u00eb geldt kleurcode groen. U kunt hierheen reizen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</li>'
+      + '<li>Lees meer onder Regionale risico&#39;s.</li></ul>'
+      + "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2><h3>Regionale risico&#39;s</h3>"
+      + '<h4>Oranje: hier niet heen</h4><p>Reis alleen naar gebieden met kleurcode oranje als dit '
+      + 'noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen '
+      + 'moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u '
+      + 'minder goed helpen als u in de problemen komt.</p>'
+      + '<h4>Groen: u kunt erheen reizen</h4><p>U kunt reizen naar gebieden met kleurcode groen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</p>',
+    slaagt: null,
+    meta: { kleurcodes: ['oranje', 'groen'] },
+  },
+  {
+    // En onder dat kopje hoort de volledige uitleg voor die kleur.
+    regel: 'regionaal-kleur-tekst',
+    faalt: '<h2>In het kort</h2><ul>'
+      + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
+      + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+      + '<li>Voor de rest van Tsjechi\u00eb geldt kleurcode groen. U kunt hierheen reizen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</li>'
+      + '<li>Lees meer onder Regionale risico&#39;s.</li></ul>'
+      + "<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2><h3>Regionale risico&#39;s</h3>"
+      + '<h4>Oranje: alleen noodzakelijke reizen</h4><p>Ga hier liever niet heen.</p>'
+      + '<h4>Groen: u kunt erheen reizen</h4><p>U kunt reizen naar gebieden met kleurcode groen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</p>',
+    slaagt: null,
+    meta: { kleurcodes: ['oranje', 'groen'] },
+  },
+  {
+    // Elke verwijzing vanuit "In het kort" heeft de vorm "Lees meer onder X".
+    regel: 'kort-verwijzing-vorm',
+    faalt: '<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Tsjechi\u00eb is groen. '
+      + 'U kunt erheen reizen. Lees welke veiligheidsrisico&#39;s er zijn.</li>'
+      + '<li>Zie onder Actueel wat er speelt.</li></ul>',
+    slaagt: null,
+  },
+  {
+    // Bij meerdere kleurcodes moet "In het kort" naar Regionale risico&#39;s verwijzen, want daar
+    // staat de volledige uitleg.
+    regel: 'kort-verwijst-regionaal',
+    faalt: '<h2>In het kort</h2><ul>'
+      + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
+      + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+      + '<li>Voor de rest van Tsjechi\u00eb geldt kleurcode groen. U kunt hierheen reizen. '
+      + 'Lees welke veiligheidsrisico&#39;s er zijn.</li></ul>',
+    slaagt: null,
+    meta: { kleurcodes: ['oranje', 'groen'] },
+  },
+  {
     // Het sjabloon schrijft de tussenkoppen letterlijk voor.
     regel: 'h3-vaste-kop',
     faalt: "<h2>Veiligheidsrisico’s</h2><h3>Terroristische aanslagen</h3><p>Er is dreiging.</p>",
@@ -183,7 +247,8 @@ const gevallen = [
 
 for (const g of gevallen) {
   test(`${g.regel} — gaat af bij een overtreding`, () => {
-    const ids = idsVan(g.faalt.startsWith('<h2>In het kort</h2>') ? g.faalt : advies(g.faalt), { land: 'Tsjechië' });
+    const ids = idsVan(g.faalt.startsWith('<h2>In het kort</h2>') ? g.faalt : advies(g.faalt),
+      { land: 'Tsjechië', ...(g.meta || {}) });
     assert.ok(ids.includes(g.regel), `verwachtte ${g.regel}, kreeg: ${[...new Set(ids)].join(', ')}`);
   });
 

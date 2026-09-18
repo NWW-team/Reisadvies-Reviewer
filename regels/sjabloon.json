@@ -118,6 +118,24 @@
     ],
     "_uitzondering": "'een oranje of rood reisadvies' blijft toegestaan: dat staat zo in de vaste tekst over de reisverzekering. Daarom staat 'reisadvies' niet in de lijst."
   },
+  "verwijzing": {
+    "vorm": "Lees meer onder {rubriek}",
+    "patroon": "lees meer onder ",
+    "afwijkende_vormen": [
+      "lees meer over",
+      "lees verder onder",
+      "lees verder bij",
+      "zie onder",
+      "zie bij",
+      "bekijk onder",
+      "meer informatie onder",
+      "meer hierover onder",
+      "meer hierover bij"
+    ],
+    "verplicht_bij_meerdere_kleurcodes": "Regionale risico's",
+    "_bron": "Instructie van de opdrachtgever, 18 september 2026: elke verwijzing vanuit \"In het kort\" heeft de vorm \"Lees meer onder X\" - Actueel, Regionale risico's, of bij uitzondering een andere rubriek zoals Natuurgeweld of Paspoort. De matrix schrijft bij \"In het kort\" wel voor dat er verwezen wordt (\"max. 3 noemen en verwijzen\"), maar legt de bewoording niet vast. Gemeten op 18 september 2026: alle 149 verwijzingen in het corpus gebruiken deze vorm al, en alle 71 adviezen met meerdere kleurcodes verwijzen naar Regionale risico's.",
+    "_afwijkende_vormen_noot": "Deze lijst dient om een verkeerde verwijzing te herkennen. Hij komt in het corpus niet voor; het zijn de formuleringen die er redelijkerwijs in kunnen sluipen."
+  },
   "vaste_teksten": [
     {
       "id": "informatieservice-vaste-tekst",

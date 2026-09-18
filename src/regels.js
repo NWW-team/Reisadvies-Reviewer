@@ -106,6 +106,15 @@ function rubriekEenheden(doc, patroon) {
   ]);
 }
 
+/**
+ * De handelingsinstructie van een vaste kleurtekst: alles ná de openingszin. De openingszin noemt
+ * het land of het gebied en wisselt dus per advies; de instructie erachter ligt vast.
+ */
+function instructieVan(vasteTekst) {
+  const zinnen = norm(vasteTekst || '').split(/(?<=\.)\s+/);
+  return zinnen.slice(1).join(' ').replace(/\{land\}|\{gebieden\}/g, '').trim();
+}
+
 function bevinding(regel, ernst, bron, boodschap, extra = {}) {
   return { regel, ernst, bron, boodschap, ...extra };
 }
@@ -253,6 +262,13 @@ export function maakToetser(data) {
     // [^.] houdt de match binnen één zin, zodat twee kleuren niet in elkaar overlopen.
     const kleurenInTekst = kleurcodes.volgorde.filter((k) =>
       new RegExp('kleurcode[^.]{0,80}\\b' + k + '\\b').test(genorm));
+    // De kleuren uit de lopende tekst zijn niet betrouwbaar genoeg om een regel op te bouwen: een
+    // advies kan een ánder land noemen ("de kleurcode van het reisadvies voor Jemen is rood") en
+    // dan telt die kleur ten onrechte mee. Het cms-veld is hier de bron; alleen als dat ontbreekt
+    // (geplakte tekst) vallen we terug op wat er in de tekst staat.
+    const kleurenVanAdvies = (doc.kleurcodes && doc.kleurcodes.length)
+      ? kleurcodes.volgorde.filter((k) => doc.kleurcodes.includes(k))
+      : kleurenInTekst;
     const aantalKleuren = doc.kleurcodes ? doc.kleurcodes.length : kleurenInTekst.length;
     const meerdereKleuren = aantalKleuren > 1;
 
@@ -294,6 +310,69 @@ export function maakToetser(data) {
         b.push(bevinding('kleur-vaste-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
           `Bij kleurcode ${kleur} ontbreekt de vaste handelingsinstructie.`,
           { verwacht: k.in_het_kort_volledig.replace('{land}', doc.land || 'land X') }));
+        continue;                            // dan is de variant toetsen dubbelop
+      }
+
+      // Welke variant hoort hier? Eén kleurcode betekent: het hele land, dus de volledige uitleg.
+      // Meerdere kleurcodes betekent: per gebied de verkorte variant, en de volledige uitleg volgt
+      // onder Regionale risico's. Zo blijft "In het kort" kort en staat hetzelfde niet twee keer.
+      //
+      // We vergelijken de handelingsinstructie: alles ná de openingszin. De openingszin zelf is al
+      // gedekt door kleur-eerste-bullet-voluit en kleur-vervolg-bullet-kort. Let op dat het
+      // verschil niet één woord is: groen en geel zetten "erheen" tegenover "hierheen", rood zet
+      // "er niet heen" tegenover "niet hierheen", en bij oranje is de instructie in beide
+      // varianten gelijk. Daarom toetsen we de hele instructie en niet dat ene woord.
+      if (!kleurenVanAdvies.includes(kleur)) continue;   // kleur van een ánder land
+      const hoortVolledig = kleurenVanAdvies.length === 1;
+      const verwachteTekst = hoortVolledig ? k.in_het_kort_volledig : k.in_het_kort_deels;
+      const andereTekst = hoortVolledig ? k.in_het_kort_deels : k.in_het_kort_volledig;
+      if (instructieVan(verwachteTekst) && !genorm.includes(instructieVan(verwachteTekst))) {
+        const staatDeAndere = instructieVan(andereTekst) && genorm.includes(instructieVan(andereTekst));
+        b.push(bevinding('kleur-variant', ERNST.fout, 'MX, tab Kleurcode-teksten',
+          staatDeAndere
+            ? (hoortVolledig
+                ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.`
+                : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.`)
+            : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
+          { verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
+              .replace(/\{gebieden\}/g, 'de gebieden X en Y'),
+            notitie: hoortVolledig
+              ? 'Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in "In het kort".'
+              : 'Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));
+      }
+    }
+
+    // ---------- Regionale risico's: de volledige uitleg per kleur ----------
+    // Bij meerdere kleurcodes houdt "In het kort" het kort en volgt de volledige uitleg hier, onder
+    // een vast kopje per kleur ("Oranje: alleen noodzakelijke reizen"). De kop en de tekst staan in
+    // regels/kleurcodes.json. Staat de rubriek er niet, dan toetsen we niet: dat is de zaak van
+    // h3-regionaal-alleen-bij-meerdere.
+    const regioPatroon = sj.rubriek_patronen && sj.rubriek_patronen.regionaal;
+    const regioTekst = regioPatroon ? rubriekTekst(doc, regioPatroon) : null;
+    if (regioTekst && kleurenVanAdvies.length > 1) {
+      const regioRe = new RegExp(regioPatroon, 'i');
+      const regioKoppen = doc.koppen
+        .filter((k) => k.niveau === 4 && regioRe.test(k.h3 || ''))
+        .map((k) => norm(k.tekst));
+      const regioGenorm = norm(regioTekst);
+
+      for (const kleur of kleurenVanAdvies) {
+        const k = kleurcodes.kleuren[kleur];
+        if (!k) continue;
+
+        if (k.regionaal_kop && !regioKoppen.some((x) => x === norm(k.regionaal_kop))) {
+          b.push(bevinding('regionaal-kleur-kop', ERNST.letop, 'MX, tab Kleurcode-teksten',
+            `Onder "Regionale risico's" ontbreekt het vaste kopje voor kleurcode ${kleur}.`,
+            { verwacht: k.regionaal_kop }));
+        }
+        const instructie = instructieVan(k.regionaal_tekst);
+        if (instructie && !regioGenorm.includes(instructie)) {
+          b.push(bevinding('regionaal-kleur-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
+            `Onder "Regionale risico's" ontbreekt de vaste uitleg bij kleurcode ${kleur}.`,
+            { verwacht: k.regionaal_tekst,
+              notitie: 'Dit is de plek waar de volledige uitleg hoort te staan, omdat "In het kort" '
+                + 'bij meerdere kleurcodes alleen de verkorte variant geeft.' }));
+        }
       }
     }
 
@@ -376,6 +455,34 @@ export function maakToetser(data) {
             : 'Deze vervolgbullet over de kleurcode heeft niet de verkorte vaste vorm.',
           { fragment: vervolg, verwacht: 'Voor … geldt kleurcode … (of: Kleurcode … geldt voor …)' }));
       }
+      // ---------- verwijzingen vanuit "In het kort" ----------
+      // Elke verwijzing heeft dezelfde vorm: "Lees meer onder X". Bij meerdere kleurcodes hoort
+      // daar in elk geval "Lees meer onder Regionale risico's" bij, want daar staat de volledige
+      // uitleg die "In het kort" juist weglaat.
+      const vw = sj.verwijzing;
+      if (vw) {
+        const kortGenorm = norm([...kortBlok.alineas.map((a) => a.tekst),
+          ...kortBlok.opsommingen.flatMap((o) => o.items)].join(' '));
+        for (const fout of vw.afwijkende_vormen || []) {
+          const plek = kortGenorm.indexOf(norm(fout) + ' ');
+          if (plek < 0) continue;
+          b.push(bevinding('kort-verwijzing-vorm', ERNST.letop, 'SJ, vaste vorm van de verwijzing',
+            `Een verwijzing in "In het kort" begint met "${fout}".`,
+            { fragment: contextVan(kortGenorm, plek),
+              verwacht: vw.vorm.replace('{rubriek}', 'de rubriek') }));
+          break;                                     // één melding per advies is genoeg
+        }
+        const doelRubriek = vw.verplicht_bij_meerdere_kleurcodes;
+        if (kleurenVanAdvies.length > 1 && doelRubriek
+            && !kortGenorm.includes(norm(vw.patroon + doelRubriek))) {
+          b.push(bevinding('kort-verwijst-regionaal', ERNST.letop, 'MX, tab Koppen, rij In het kort',
+            `Dit advies heeft meerdere kleurcodes, maar "In het kort" verwijst niet naar ${doelRubriek}.`,
+            { verwacht: vw.vorm.replace('{rubriek}', doelRubriek) + '.',
+              notitie: 'Bij meerdere kleurcodes staat in "In het kort" alleen de verkorte uitleg; '
+                + 'de lezer moet weten waar de volledige uitleg staat.' }));
+        }
+      }
+
       // Deze regel gaat over "In het kort", dus alleen die tekst doorzoeken.
       // Een opsomming van gebieden onder Regionale risico's mag juist wel lang zijn.
       const kortEigen = [...kortBlok.alineas.map((a) => a.tekst),

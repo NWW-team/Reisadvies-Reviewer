@@ -242,7 +242,10 @@ export function parseAdvies(invoer, meta = {}) {
   doc.alineas = blokken.flatMap((b) => b.alineas.map((a) => ({ ...a, h2: b.h2, h3: b.h3, kop: b.kop })));
   doc.zinnen = doc.alineas.flatMap((a) => a.zinnen.map((z) => ({ tekst: z, woorden: telWoorden(z), h2: a.h2, h3: a.h3 })));
   doc.opsommingen = blokken.flatMap((b) => b.opsommingen.map((o) => ({ ...o, h2: b.h2, h3: b.h3 })));
-  doc.koppen = blokken.filter((b) => b.niveau > 0).map((b) => ({ niveau: b.niveau, tekst: b.kop, h2: b.h2 }));
+  // h3 hoort erbij sinds de parser h4 kent: anders is van een h4-kop niet te zien onder welke
+  // rubriek hij valt, en daar hangen de regels over Regionale risico's op.
+  doc.koppen = blokken.filter((b) => b.niveau > 0)
+    .map((b) => ({ niveau: b.niveau, tekst: b.kop, h2: b.h2, h3: b.h3 }));
   doc.woorden = doc.alineas.reduce((n, a) => n + a.woorden, 0)
     + doc.opsommingen.reduce((n, o) => n + o.items.reduce((m, i) => m + telWoorden(i), 0), 0)
     + doc.koppen.reduce((n, k) => n + telWoorden(k.tekst), 0);

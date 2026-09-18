@@ -15,6 +15,12 @@ gratis, dus bruikbaar over alle 226 adviezen tegelijk.
 dat de matrix als *verwijzen* aanmerkt niet te ver is uitgeschreven. Deze laag draait per advies,
 op verzoek, en doet een herschrijfvoorstel op zinsniveau.
 
+**Eén of meerdere kleurcodes.** Geldt er één kleurcode, dan staat in *In het kort* de volledige
+uitleg. Zijn het er meer, dan staat daar per gebied de verkorte variant en volgt de volledige uitleg
+onder *Regionale risico's*, onder een vast kopje per kleur. De tool toetst welke variant hoort en of
+*In het kort* doorverwijst met "Lees meer onder Regionale risico's". Welke kleuren een advies heeft
+komt uit het cms-veld, niet uit de lopende tekst — een advies kan een ánder land noemen.
+
 Elke bevinding draagt zijn bron mee: **SW** = schrijfwijzer, **MX** = format-matrix,
 **SJ** = sjabloon. `regels/HERKOMST.md` legt per regel-id de vindplaats vast — een bevinding
 zonder bron hoort de tool niet te geven, en een test bewaakt dat.
@@ -203,7 +209,7 @@ code in Node draait (tests, bulkslag) en in de browser (de deelbare prototypepag
 ## Wat de bulkslag oplevert
 
 Over 226 live reisadviezen (`data/bulkrapport.md`, gedraaid met dezelfde regelset als de
-gepubliceerde pagina): 46 zitten boven de woordenlimiet, 119 hebben geen enkele rode fout, en
+gepubliceerde pagina): 46 zitten boven de woordenlimiet, 99 hebben geen enkele rode fout, en
 25 adviezen bevatten een onderwerp dat de matrix als *niet melden* aanmerkt. Een flink deel van de overige bevindingen komt uit de standaardtekst: acht zinnen die in
 ruim 200 adviezen woordelijk hetzelfde staan. Die zijn met één aanpassing tegelijk opgelost, en
 het rapport zet ze daarom apart.
@@ -217,6 +223,10 @@ veranderde:
   de komma in "Paspoort, rijbewijs") en kwamen er 56 bij uit drie regels die er nog niet waren:
   afwijkende tussenkoppen, rubrieken die alleen bij uitzondering horen, en vervolgbullets over de
   kleurcode. Het totaal ging van 3812 naar 3792, maar de samenstelling is wezenlijk anders.
+- Daarna kwam het onderscheid tussen één en meerdere kleurcodes erbij (60 bevindingen), en leerde de
+  parser h4-koppen kennen. Het aantal adviezen zonder harde fout daalde van 119 naar 99; niet omdat
+  er iets verslechterde, maar omdat de tool nu ziet of de juiste variant van de vaste kleurtekst is
+  gebruikt.
 
 ## Over de regels
 

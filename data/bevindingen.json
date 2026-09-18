@@ -8,7 +8,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 58,
+    "zinnen": 45,
     "fout": 1,
     "letop": 6,
     "linkzin": 4,
@@ -41,7 +41,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?",
+        "fragment": "Bekijk wat u vanuit Aruba mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
         "verwacht": "Bekijk wat u vanuit Aruba mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
       },
       {
@@ -133,14 +133,14 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 117,
-    "fout": 1,
+    "zinnen": 93,
+    "fout": 2,
     "letop": 14,
     "linkzin": 5,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 14,
       "link-zin": 5,
       "info": 0,
@@ -148,6 +148,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "nood-lokale-hulpdiensten": 1,
       "zin-max-woorden": 12,
       "zin-twijfeltaal": 3,
@@ -162,18 +163,26 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1570 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (404 woorden)",
-          "Wetten en gebruiken (276 woorden)",
-          "In geval van nood (166 woorden)"
+          "Paspoort (139 woorden)",
+          "Reisverzekering (106 woorden)",
+          "Criminaliteit (84 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "De kleurcode van het reisadvies voor Afghanistan is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "nood-lokale-hulpdiensten",
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De aanhef boven de alarmnummers wijkt af van de vaste tekst.",
-        "fragment": "Lokale hulpdiensten",
+        "fragment": "Houd er rekening mee dat er geen hulpdiensten in Afghanistan zijn.",
         "verwacht": "Heeft u direct hulp nodig in Afghanistan? Neem contact op met de lokale hulpdiensten:"
       },
       {
@@ -354,20 +363,21 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 111,
-    "fout": 1,
+    "zinnen": 88,
+    "fout": 2,
     "letop": 13,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 13,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "regionaal-kleur-tekst": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
       "zin-max-woorden": 12,
@@ -375,6 +385,14 @@
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "regionaal-kleur-tekst",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode geel.",
+        "verwacht": "U kunt reizen naar gebieden met kleurcode geel. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
+      },
       {
         "regel": "h3-niet-melden",
         "ernst": "fout",
@@ -520,7 +538,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 63,
+    "zinnen": 51,
     "fout": 0,
     "letop": 5,
     "linkzin": 3,
@@ -612,7 +630,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 105,
+    "zinnen": 85,
     "fout": 0,
     "letop": 8,
     "linkzin": 5,
@@ -790,7 +808,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 54,
+    "zinnen": 40,
     "fout": 0,
     "letop": 4,
     "linkzin": 2,
@@ -868,14 +886,14 @@
       "rood",
       "geel"
     ],
-    "zinnen": 118,
-    "fout": 1,
+    "zinnen": 94,
+    "fout": 2,
     "letop": 14,
     "linkzin": 3,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 14,
       "link-zin": 3,
       "info": 1,
@@ -883,6 +901,7 @@
     },
     "perRegel": {
       "kleur-aanduiding": 1,
+      "kleur-variant": 1,
       "kleur-vervolg-bullet-kort": 1,
       "intro-vaste-tekst": 1,
       "bagage-heen": 1,
@@ -901,6 +920,14 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Verenigde Arabische Emiraten is geel."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "kleur-vervolg-bullet-kort",
@@ -1065,7 +1092,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 112,
+    "zinnen": 91,
     "fout": 0,
     "letop": 5,
     "linkzin": 3,
@@ -1207,7 +1234,7 @@
       "rood",
       "geel"
     ],
-    "zinnen": 92,
+    "zinnen": 74,
     "fout": 0,
     "letop": 5,
     "linkzin": 3,
@@ -1326,7 +1353,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 80,
+    "zinnen": 64,
     "fout": 0,
     "letop": 9,
     "linkzin": 3,
@@ -1467,7 +1494,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 46,
+    "zinnen": 36,
     "fout": 1,
     "letop": 13,
     "linkzin": 1,
@@ -1515,7 +1542,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De aanhef boven de alarmnummers wijkt af van de vaste tekst.",
-        "fragment": "Lokale hulpdiensten",
+        "fragment": "Er zijn geen hulpdiensten op Antarctica.",
         "verwacht": "Heeft u direct hulp nodig in Antarctica? Neem contact op met de lokale hulpdiensten:"
       },
       {
@@ -1565,7 +1592,6 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?",
         "verwacht": "Bekijk wat u vanuit Antarctica mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
       },
       {
@@ -1658,7 +1684,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 72,
+    "zinnen": 57,
     "fout": 0,
     "letop": 5,
     "linkzin": 4,
@@ -1768,7 +1794,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 86,
+    "zinnen": 69,
     "fout": 1,
     "letop": 7,
     "linkzin": 7,
@@ -1796,9 +1822,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1679 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Natuurgeweld (479 woorden)",
-          "Paspoort, visum, rijbewijs (280 woorden)",
-          "In geval van nood (271 woorden)"
+          "Bosbranden (213 woorden)",
+          "Tropische stormen, cyclonen en overstromingen (152 woorden)",
+          "Nood- of crisissituatie (136 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -1948,7 +1974,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 79,
+    "zinnen": 62,
     "fout": 0,
     "letop": 7,
     "linkzin": 2,
@@ -2043,7 +2069,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘hoog’. Gebruik geen aanhalingstekens.",
-        "fragment": "Terrorisme Sinds oktober 2023 is het dreigingsniveau in Oostenrijk aangepast naar het niveau ‘hoog’, als gevolg van de situatie in het Midden-Oosten."
+        "fragment": "Sinds oktober 2023 is het dreigingsniveau in Oostenrijk aangepast naar het niveau ‘hoog’, als gevolg van de situatie in het Midden-Oosten."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 29-07-2026 | Nog steeds geldig op: 14-09-2026"
@@ -2058,7 +2084,7 @@
       "rood",
       "geel"
     ],
-    "zinnen": 94,
+    "zinnen": 74,
     "fout": 0,
     "letop": 5,
     "linkzin": 4,
@@ -2169,20 +2195,21 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 122,
-    "fout": 1,
+    "zinnen": 98,
+    "fout": 2,
     "letop": 9,
     "linkzin": 4,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 9,
       "link-zin": 4,
       "info": 1,
       "twijfel": 4
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-niet-melden": 1,
       "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 4,
@@ -2192,6 +2219,14 @@
       "aanhalingstekens": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode oranje wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "h3-niet-melden",
         "ernst": "fout",
@@ -2353,7 +2388,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 57,
+    "zinnen": 46,
     "fout": 0,
     "letop": 5,
     "linkzin": 2,
@@ -2482,7 +2517,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 115,
+    "zinnen": 93,
     "fout": 0,
     "letop": 8,
     "linkzin": 3,
@@ -2625,20 +2660,21 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 107,
-    "fout": 0,
+    "zinnen": 87,
+    "fout": 1,
     "letop": 13,
     "linkzin": 2,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 13,
       "link-zin": 2,
       "info": 0,
       "twijfel": 3
     },
     "perRegel": {
+      "kleur-variant": 1,
       "kleur-eerste-bullet-voluit": 1,
       "rubrieken-max": 1,
       "zin-twijfeltaal": 3,
@@ -2647,6 +2683,14 @@
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "kleur-eerste-bullet-voluit",
         "ernst": "let-op",
@@ -2801,7 +2845,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 139,
+    "zinnen": 117,
     "fout": 0,
     "letop": 12,
     "linkzin": 6,
@@ -3024,7 +3068,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 85,
+    "zinnen": 69,
     "fout": 0,
     "letop": 3,
     "linkzin": 3,
@@ -3126,7 +3170,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 91,
+    "zinnen": 74,
     "fout": 1,
     "letop": 5,
     "linkzin": 4,
@@ -3261,7 +3305,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 79,
+    "zinnen": 63,
     "fout": 1,
     "letop": 7,
     "linkzin": 4,
@@ -3395,7 +3439,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 86,
+    "zinnen": 66,
     "fout": 0,
     "letop": 5,
     "linkzin": 1,
@@ -3482,20 +3526,21 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 110,
-    "fout": 1,
-    "letop": 9,
+    "zinnen": 90,
+    "fout": 2,
+    "letop": 10,
     "linkzin": 3,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 1,
-      "let-op": 9,
+      "fout": 2,
+      "let-op": 10,
       "link-zin": 3,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
@@ -3504,9 +3549,18 @@
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 6,
       "zin-twijfeltaal": 1,
+      "vragen-opeenvolgend": 1,
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "h3-niet-melden",
         "ernst": "fout",
@@ -3611,6 +3665,13 @@
         "kop": "Bagageregels"
       },
       {
+        "regel": "vragen-opeenvolgend",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > Vraagvorm",
+        "boodschap": "Meer dan 2 vragen achter elkaar.",
+        "fragment": "Heeft u naast de Nederlandse ook de Belarussische nationaliteit?"
+      },
+      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -3636,7 +3697,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 70,
+    "zinnen": 54,
     "fout": 0,
     "letop": 5,
     "linkzin": 6,
@@ -3763,7 +3824,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 128,
+    "zinnen": 106,
     "fout": 1,
     "letop": 23,
     "linkzin": 6,
@@ -3794,9 +3855,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2281 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Paspoort, visum, rijbewijs (477 woorden)",
-          "Actueel (234 woorden)",
-          "In geval van nood (216 woorden)"
+          "Noodtoestand (209 woorden)",
+          "Paspoort (190 woorden)",
+          "Reisverzekering (181 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -4110,7 +4171,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 74,
+    "zinnen": 59,
     "fout": 1,
     "letop": 10,
     "linkzin": 3,
@@ -4159,7 +4220,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?",
+        "fragment": "De regels voor wat u mee terug mag nemen vanuit Bonaire zijn anders dan voor EU-landen.",
         "verwacht": "Bekijk wat u vanuit Bonaire mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
       },
       {
@@ -4259,7 +4320,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 53,
+    "zinnen": 41,
     "fout": 1,
     "letop": 4,
     "linkzin": 3,
@@ -4352,7 +4413,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 57,
+    "zinnen": 45,
     "fout": 1,
     "letop": 8,
     "linkzin": 4,
@@ -4401,7 +4462,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?",
+        "fragment": "Bekijk wat u vanaf Sint Eustatius mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
         "verwacht": "Bekijk wat u vanuit Sint Eustatius mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
       },
       {
@@ -4484,7 +4545,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 135,
+    "zinnen": 112,
     "fout": 1,
     "letop": 9,
     "linkzin": 4,
@@ -4512,9 +4573,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1637 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Criminaliteit (303 woorden)",
-          "Paspoort, visum, rijbewijs (299 woorden)",
-          "In geval van nood (249 woorden)"
+          "Diefstal en overvallen (153 woorden)",
+          "Reizen met kinderen (114 woorden)",
+          "Reisverzekering (100 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -4730,7 +4791,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 77,
+    "zinnen": 61,
     "fout": 0,
     "letop": 4,
     "linkzin": 3,
@@ -4832,7 +4893,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 82,
+    "zinnen": 64,
     "fout": 0,
     "letop": 4,
     "linkzin": 3,
@@ -4935,7 +4996,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 77,
+    "zinnen": 61,
     "fout": 0,
     "letop": 6,
     "linkzin": 5,
@@ -5078,25 +5139,34 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 83,
-    "fout": 0,
+    "zinnen": 65,
+    "fout": 1,
     "letop": 2,
     "linkzin": 3,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 2,
       "link-zin": 3,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "zin-twijfeltaal": 2,
       "zin-max-woorden": 3,
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "verwacht": "De kleurcode van het reisadvies voor Botswana is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "zin-twijfeltaal",
         "ernst": "twijfel",
@@ -5163,7 +5233,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 78,
+    "zinnen": 60,
     "fout": 1,
     "letop": 9,
     "linkzin": 4,
@@ -5326,15 +5396,15 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 80,
+    "zinnen": 64,
     "fout": 0,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 6,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 6,
       "info": 1,
       "twijfel": 0
@@ -5344,7 +5414,6 @@
       "bagage-heen": 1,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 1,
-      "vragen-opeenvolgend": 1,
       "link-tekstlengte": 4
     },
     "bevindingen": [
@@ -5452,13 +5521,6 @@
         "kop": "Bagageregels"
       },
       {
-        "regel": "vragen-opeenvolgend",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > Vraagvorm",
-        "boodschap": "Meer dan 2 vragen achter elkaar.",
-        "fragment": "Weet u niet zeker of u een bepaald product mag meenemen?"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -5498,7 +5560,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 63,
+    "zinnen": 48,
     "fout": 0,
     "letop": 5,
     "linkzin": 2,
@@ -5581,7 +5643,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 120,
+    "zinnen": 96,
     "fout": 1,
     "letop": 15,
     "linkzin": 10,
@@ -5609,9 +5671,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1986 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (420 woorden)",
-          "Criminaliteit (331 woorden)",
-          "In geval van nood (235 woorden)"
+          "Diefstal op straat (129 woorden)",
+          "Paspoort (127 woorden)",
+          "Reizen met kinderen (118 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -5864,7 +5926,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 155,
+    "zinnen": 126,
     "fout": 3,
     "letop": 31,
     "linkzin": 6,
@@ -5895,9 +5957,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2504 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (766 woorden)",
-          "Wetten en gebruiken (499 woorden)",
-          "In geval van nood (210 woorden)"
+          "Overstroming (203 woorden)",
+          "Visum (170 woorden)",
+          "Paspoort (129 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -6254,7 +6316,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘gids’. Gebruik geen aanhalingstekens.",
-        "fragment": "Oplichting Wees alert op Chinese jongeren die goed Engels spreken en zich als ‘gids’ aanbieden."
+        "fragment": "Wees alert op Chinese jongeren die goed Engels spreken en zich als ‘gids’ aanbieden."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 14-09-2026"
@@ -6270,14 +6332,14 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 93,
-    "fout": 0,
+    "zinnen": 74,
+    "fout": 1,
     "letop": 6,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 6,
       "link-zin": 1,
       "info": 0,
@@ -6285,6 +6347,7 @@
     },
     "perRegel": {
       "kleur-aanduiding": 1,
+      "kleur-variant": 1,
       "zin-max-woorden": 3,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
@@ -6297,6 +6360,14 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Ivoorkust is oranje."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "zin-max-woorden",
@@ -6366,20 +6437,21 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 121,
-    "fout": 1,
+    "zinnen": 97,
+    "fout": 2,
     "letop": 8,
     "linkzin": 6,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 8,
       "link-zin": 6,
       "info": 1,
       "twijfel": 5
     },
     "perRegel": {
+      "kleur-variant": 1,
       "nood-contactcenter": 1,
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 5,
@@ -6387,6 +6459,14 @@
       "eenheden-voluit": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "nood-contactcenter",
         "ernst": "fout",
@@ -6564,14 +6644,14 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 139,
-    "fout": 2,
+    "zinnen": 112,
+    "fout": 3,
     "letop": 17,
     "linkzin": 5,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 17,
       "link-zin": 5,
       "info": 1,
@@ -6579,6 +6659,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "intro-vaste-tekst": 1,
       "rubrieken-volgorde": 1,
       "titel-leestekens": 1,
@@ -6595,11 +6676,19 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2042 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico's (249 woorden)",
-          "Wetten en gebruiken (238 woorden)",
-          "In geval van nood (206 woorden)"
+          "Ebola-uitbraak (202 woorden)",
+          "Rood: niet reizen (165 woorden)",
+          "Reisverzekering (132 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "intro-vaste-tekst",
@@ -6865,7 +6954,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 104,
+    "zinnen": 83,
     "fout": 1,
     "letop": 10,
     "linkzin": 3,
@@ -7049,7 +7138,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 67,
+    "zinnen": 52,
     "fout": 1,
     "letop": 4,
     "linkzin": 3,
@@ -7154,14 +7243,14 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 162,
-    "fout": 1,
+    "zinnen": 135,
+    "fout": 2,
     "letop": 16,
     "linkzin": 3,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 16,
       "link-zin": 3,
       "info": 1,
@@ -7169,6 +7258,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 9,
@@ -7183,11 +7273,19 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2556 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico's (527 woorden)",
-          "Criminaliteit (339 woorden)",
-          "Natuurgeweld (280 woorden)"
+          "Oranje: alleen noodzakelijke reizen (238 woorden)",
+          "Rood: niet reizen (236 woorden)",
+          "Criminaliteit in de steden (180 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode oranje wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "rubrieken-max",
@@ -7431,14 +7529,14 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 85,
-    "fout": 1,
+    "zinnen": 67,
+    "fout": 2,
     "letop": 6,
     "linkzin": 4,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 6,
       "link-zin": 4,
       "info": 0,
@@ -7446,6 +7544,7 @@
     },
     "perRegel": {
       "kleur-aanduiding": 1,
+      "kleur-variant": 1,
       "intro-vaste-tekst": 1,
       "zin-max-woorden": 6,
       "link-tekstlengte": 3
@@ -7457,6 +7556,14 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Comoren is geel."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "verwacht": "De kleurcode van het reisadvies voor Comoren is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "intro-vaste-tekst",
@@ -7547,7 +7654,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 82,
+    "zinnen": 64,
     "fout": 0,
     "letop": 5,
     "linkzin": 4,
@@ -7665,7 +7772,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 143,
+    "zinnen": 119,
     "fout": 2,
     "letop": 12,
     "linkzin": 8,
@@ -7694,9 +7801,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1863 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (450 woorden)",
-          "Criminaliteit (302 woorden)",
-          "Natuurgeweld (264 woorden)"
+          "Berovingen en overvallen (154 woorden)",
+          "Visum (127 woorden)",
+          "Reizen met kinderen (119 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -7911,7 +8018,7 @@
     "kleurcodes": [
       "oranje"
     ],
-    "zinnen": 112,
+    "zinnen": 93,
     "fout": 3,
     "letop": 15,
     "linkzin": 6,
@@ -7942,9 +8049,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1887 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (401 woorden)",
           "Actueel (245 woorden)",
-          "In geval van nood (197 woorden)"
+          "Reizen tussen Cuba en de Verenigde Staten (161 woorden)",
+          "Geldzaken (159 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -8133,7 +8240,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘D’. Gebruik geen aanhalingstekens.",
-        "fragment": "Online registratie voor vertrek Maximaal 48 uur voor vertrek naar Cuba moet u het online immigratieformulier ‘D’Viajeros’ invullen (informatie in het Spaans)."
+        "fragment": "Maximaal 48 uur voor vertrek naar Cuba moet u het online immigratieformulier ‘D’Viajeros’ invullen (informatie in het Spaans)."
       },
       {
         "regel": "afkortingen-uitschrijven",
@@ -8153,7 +8260,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 57,
+    "zinnen": 43,
     "fout": 1,
     "letop": 10,
     "linkzin": 2,
@@ -8196,7 +8303,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?",
+        "fragment": "Bekijk wat u vanuit Curaçao mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
         "verwacht": "Bekijk wat u vanuit Curaçao mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
       },
       {
@@ -8287,7 +8394,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 72,
+    "zinnen": 57,
     "fout": 2,
     "letop": 5,
     "linkzin": 4,
@@ -8415,7 +8522,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 108,
+    "zinnen": 88,
     "fout": 0,
     "letop": 12,
     "linkzin": 6,
@@ -8597,7 +8704,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 79,
+    "zinnen": 61,
     "fout": 1,
     "letop": 6,
     "linkzin": 5,
@@ -8733,7 +8840,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 85,
+    "zinnen": 68,
     "fout": 0,
     "letop": 8,
     "linkzin": 7,
@@ -8883,20 +8990,22 @@
       "rood",
       "geel"
     ],
-    "zinnen": 87,
-    "fout": 1,
+    "zinnen": 70,
+    "fout": 3,
     "letop": 4,
     "linkzin": 5,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
-      "fout": 1,
+      "fout": 3,
       "let-op": 4,
       "link-zin": 5,
       "info": 2,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
+      "regionaal-kleur-tekst": 1,
       "reisverzekering-oranje-rood": 1,
       "rubrieken-max": 1,
       "zin-twijfeltaal": 1,
@@ -8907,6 +9016,22 @@
       "eenheden-voluit": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "regionaal-kleur-tekst",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode rood.",
+        "verwacht": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
+      },
       {
         "regel": "reisverzekering-oranje-rood",
         "ernst": "fout",
@@ -9017,7 +9142,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 76,
+    "zinnen": 60,
     "fout": 0,
     "letop": 5,
     "linkzin": 6,
@@ -9151,7 +9276,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 49,
+    "zinnen": 38,
     "fout": 0,
     "letop": 3,
     "linkzin": 4,
@@ -9235,7 +9360,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 84,
+    "zinnen": 64,
     "fout": 1,
     "letop": 7,
     "linkzin": 5,
@@ -9404,7 +9529,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 155,
+    "zinnen": 127,
     "fout": 2,
     "letop": 11,
     "linkzin": 3,
@@ -9436,9 +9561,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2208 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico's (358 woorden)",
-          "Natuurgeweld (292 woorden)",
-          "Paspoort, visum, rijbewijs (205 woorden)"
+          "In het kort (159 woorden)",
+          "Reisverzekering (148 woorden)",
+          "Rood: niet reizen (128 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -9628,14 +9753,14 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 181,
-    "fout": 2,
+    "zinnen": 148,
+    "fout": 4,
     "letop": 15,
     "linkzin": 8,
     "twijfel": 7,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 4,
       "let-op": 15,
       "link-zin": 8,
       "info": 1,
@@ -9643,6 +9768,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 2,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
       "zin-max-woorden": 14,
@@ -9658,11 +9784,27 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2754 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Paspoort, visum, rijbewijs (573 woorden)",
-          "Criminaliteit (439 woorden)",
-          "Regionale risico's (368 woorden)"
+          "Visum (193 woorden)",
+          "Noodtoestand (153 woorden)",
+          "Geel: let op, er zijn risico's (135 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "nood-contactcenter",
@@ -9906,7 +10048,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘rip currents’. Gebruik geen aanhalingstekens.",
-        "fragment": "Gevaarlijke stromingen in zee Aan de kust van Ecuador komen gevaarlijke stromingen voor (muistromingen of ‘rip currents’)."
+        "fragment": "Aan de kust van Ecuador komen gevaarlijke stromingen voor (muistromingen of ‘rip currents’)."
       },
       {
         "regel": "aanhalingstekens",
@@ -9929,7 +10071,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 175,
+    "zinnen": 149,
     "fout": 1,
     "letop": 16,
     "linkzin": 4,
@@ -9960,9 +10102,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2326 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico's (402 woorden)",
-          "Wetten en gebruiken (364 woorden)",
-          "Paspoort, visum, rijbewijs (326 woorden)"
+          "Oranje: alleen noodzakelijke reizen (175 woorden)",
+          "Rood: niet reizen (159 woorden)",
+          "Visum (149 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -9987,7 +10129,7 @@
         "bron": "SW, Gebruiksvriendelijkheid > Alinea's",
         "boodschap": "Deze alinea telt 86 woorden. Maximaal 80.",
         "fragment": "Bent u een lhbtiq+ persoon? En wilt u naar Egypte reizen? U kunt daar te maken krijgen met discriminatie en agressie. Oo…",
-        "kop": "Wetten en gebruiken"
+        "kop": "Lhbtiq+"
       },
       {
         "regel": "alinea-max-woorden",
@@ -9995,7 +10137,7 @@
         "bron": "SW, Gebruiksvriendelijkheid > Alinea's",
         "boodschap": "Deze alinea telt 81 woorden. Maximaal 80.",
         "fragment": "Reist u naar de Sinaï (inclusief Sharm-El-Sheikh, Dahab, Nuweiba en Taba)? En komt u het land binnen via het vliegveld v…",
-        "kop": "Paspoort, visum, rijbewijs"
+        "kop": "Visum"
       },
       {
         "regel": "zin-max-woorden",
@@ -10151,7 +10293,7 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 71,
+    "zinnen": 56,
     "fout": 0,
     "letop": 5,
     "linkzin": 2,
@@ -10236,7 +10378,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 101,
+    "zinnen": 79,
     "fout": 0,
     "letop": 12,
     "linkzin": 6,
@@ -10419,7 +10561,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 81,
+    "zinnen": 63,
     "fout": 0,
     "letop": 8,
     "linkzin": 7,
@@ -10577,27 +10719,27 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 133,
-    "fout": 2,
-    "letop": 12,
+    "zinnen": 108,
+    "fout": 3,
+    "letop": 11,
     "linkzin": 5,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
-      "fout": 2,
-      "let-op": 12,
+      "fout": 3,
+      "let-op": 11,
       "link-zin": 5,
       "info": 1,
       "twijfel": 3
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
       "zin-max-woorden": 10,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 1,
-      "vragen-opeenvolgend": 1,
       "link-tekstlengte": 2,
       "aanhalingstekens": 2,
       "afkortingen-uitschrijven": 1
@@ -10609,11 +10751,19 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2156 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico’s (510 woorden)",
-          "Paspoort, visum, rijbewijs (273 woorden)",
-          "In geval van nood (210 woorden)"
+          "Geel: let op, er zijn risico’s (201 woorden)",
+          "Oranje: alleen noodzakelijke reizen (189 woorden)",
+          "In het kort (145 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "nood-contactcenter",
@@ -10744,13 +10894,6 @@
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
-        "regel": "vragen-opeenvolgend",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > Vraagvorm",
-        "boodschap": "Meer dan 2 vragen achter elkaar.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -10776,7 +10919,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘nep-nieuws’. Gebruik geen aanhalingstekens.",
-        "fragment": "Sociale media De Ethiopische overheid houdt sociale media in de gaten om verspreiding van ‘nep-nieuws’ te voorkomen."
+        "fragment": "De Ethiopische overheid houdt sociale media in de gaten om verspreiding van ‘nep-nieuws’ te voorkomen."
       },
       {
         "regel": "afkortingen-uitschrijven",
@@ -10796,7 +10939,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 67,
+    "zinnen": 51,
     "fout": 0,
     "letop": 5,
     "linkzin": 5,
@@ -10915,7 +11058,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 116,
+    "zinnen": 95,
     "fout": 1,
     "letop": 11,
     "linkzin": 6,
@@ -10944,9 +11087,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1605 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Natuurgeweld (282 woorden)",
-          "In geval van nood (267 woorden)",
-          "Paspoort, visum, rijbewijs (267 woorden)"
+          "Reisverzekering (122 woorden)",
+          "Visum (112 woorden)",
+          "Nood- of crisissituatie (95 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -11136,7 +11279,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 87,
+    "zinnen": 70,
     "fout": 0,
     "letop": 10,
     "linkzin": 6,
@@ -11321,7 +11464,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 43,
+    "zinnen": 32,
     "fout": 1,
     "letop": 4,
     "linkzin": 2,
@@ -11407,7 +11550,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 84,
+    "zinnen": 67,
     "fout": 1,
     "letop": 8,
     "linkzin": 4,
@@ -11567,7 +11710,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 83,
+    "zinnen": 66,
     "fout": 0,
     "letop": 4,
     "linkzin": 4,
@@ -11663,7 +11806,7 @@
         "ernst": "info",
         "bron": "SW, Schrijfregels > Schuine streep",
         "boodschap": "Gebruik voor en na een schuine streep geen spatie.",
-        "fragment": "Algemeen alarmnummer (politie): 177 Ambulance: 1300 / 01 73 30 99"
+        "fragment": "Ambulance: 1300 / 01 73 30 99"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 14-09-2026"
@@ -11677,7 +11820,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 74,
+    "zinnen": 59,
     "fout": 1,
     "letop": 12,
     "linkzin": 5,
@@ -11840,7 +11983,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘severe’. Gebruik geen aanhalingstekens.",
-        "fragment": "Terrorisme Het dreigingsniveau voor terrorisme is in het Vereningd Koninkrijk niveau 4 (‘severe’), op een schaal van 1 tot en met 5."
+        "fragment": "Het dreigingsniveau voor terrorisme is in het Vereningd Koninkrijk niveau 4 (‘severe’), op een schaal van 1 tot en met 5."
       },
       {
         "regel": "aanhalingstekens",
@@ -11869,20 +12012,21 @@
       "rood",
       "geel"
     ],
-    "zinnen": 119,
-    "fout": 0,
+    "zinnen": 99,
+    "fout": 2,
     "letop": 13,
     "linkzin": 4,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
-      "fout": 0,
+      "fout": 2,
       "let-op": 13,
       "link-zin": 4,
       "info": 1,
       "twijfel": 5
     },
     "perRegel": {
+      "kleur-variant": 2,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
       "zin-twijfeltaal": 5,
@@ -11892,6 +12036,22 @@
       "aanhalingstekens": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "h3-alleen-bij-uitzondering",
         "ernst": "info",
@@ -12069,7 +12229,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘administrative boundary lines’. Gebruik geen aanhalingstekens.",
-        "fragment": "de regio’s Abchazië en Zuid-Ossetië het grensgebied tussen de regio’s Abchazië en Zuid-Ossetië en de rest van Georgië (‘administrative boundary lines’)"
+        "fragment": "het grensgebied tussen de regio’s Abchazië en Zuid-Ossetië en de rest van Georgië (‘administrative boundary lines’)"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-06-2026 | Nog steeds geldig op: 14-09-2026"
@@ -12084,7 +12244,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 134,
+    "zinnen": 107,
     "fout": 0,
     "letop": 12,
     "linkzin": 5,
@@ -12260,7 +12420,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘love scams’. Gebruik geen aanhalingstekens.",
-        "fragment": "Love scams en afpersing Pas op voor ‘love scams’."
+        "fragment": "Pas op voor ‘love scams’."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 14-09-2026"
@@ -12275,20 +12435,21 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 102,
-    "fout": 0,
+    "zinnen": 84,
+    "fout": 1,
     "letop": 5,
     "linkzin": 2,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 5,
       "link-zin": 2,
       "info": 0,
       "twijfel": 3
     },
     "perRegel": {
+      "kleur-variant": 1,
       "rubrieken-max": 1,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 1,
@@ -12296,6 +12457,14 @@
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode oranje wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "rubrieken-max",
         "ernst": "let-op",
@@ -12385,7 +12554,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 68,
+    "zinnen": 53,
     "fout": 0,
     "letop": 5,
     "linkzin": 6,
@@ -12501,7 +12670,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 120,
+    "zinnen": 94,
     "fout": 0,
     "letop": 12,
     "linkzin": 5,
@@ -12702,7 +12871,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 83,
+    "zinnen": 66,
     "fout": 0,
     "letop": 4,
     "linkzin": 2,
@@ -12778,7 +12947,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 61,
+    "zinnen": 49,
     "fout": 0,
     "letop": 3,
     "linkzin": 2,
@@ -12846,7 +13015,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 88,
+    "zinnen": 67,
     "fout": 0,
     "letop": 6,
     "linkzin": 8,
@@ -13038,7 +13207,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 73,
+    "zinnen": 56,
     "fout": 0,
     "letop": 6,
     "linkzin": 4,
@@ -13157,25 +13326,34 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 52,
-    "fout": 0,
+    "zinnen": 40,
+    "fout": 1,
     "letop": 3,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 3,
       "link-zin": 3,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "zin-twijfeltaal": 1,
       "zin-max-woorden": 5,
       "link-tekstlengte": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode groen wijkt af van de vaste tekst.",
+        "verwacht": "De kleurcode van het reisadvies voor Groenland is groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "zin-twijfeltaal",
         "ernst": "twijfel",
@@ -13243,7 +13421,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 117,
+    "zinnen": 94,
     "fout": 3,
     "letop": 8,
     "linkzin": 9,
@@ -13271,9 +13449,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1821 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Criminaliteit (479 woorden)",
-          "Paspoort, visum, rijbewijs (351 woorden)",
-          "Natuurgeweld (225 woorden)"
+          "Diefstal en overvallen (360 woorden)",
+          "Visum (108 woorden)",
+          "Regels bij aankomst en vertrek (96 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -13487,7 +13665,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 70,
+    "zinnen": 54,
     "fout": 0,
     "letop": 6,
     "linkzin": 3,
@@ -13605,7 +13783,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 77,
+    "zinnen": 62,
     "fout": 1,
     "letop": 8,
     "linkzin": 3,
@@ -13641,7 +13819,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De aanhef boven de alarmnummers wijkt af van de vaste tekst.",
-        "fragment": "Lokale hulpdiensten",
+        "fragment": "Neem dan contact op met de lokale hulpdiensten:",
         "verwacht": "Heeft u direct hulp nodig in Guyana? Neem contact op met de lokale hulpdiensten:"
       },
       {
@@ -13742,7 +13920,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 66,
+    "zinnen": 51,
     "fout": 1,
     "letop": 6,
     "linkzin": 4,
@@ -13889,7 +14067,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 110,
+    "zinnen": 90,
     "fout": 0,
     "letop": 12,
     "linkzin": 6,
@@ -14080,7 +14258,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 71,
+    "zinnen": 55,
     "fout": 0,
     "letop": 5,
     "linkzin": 4,
@@ -14198,7 +14376,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 93,
+    "zinnen": 71,
     "fout": 0,
     "letop": 8,
     "linkzin": 5,
@@ -14360,7 +14538,7 @@
         "ernst": "info",
         "bron": "SW, Schrijfregels > Schuine streep",
         "boodschap": "Gebruik voor en na een schuine streep geen spatie.",
-        "fragment": "Algemeen alarmnummer: 38 38 11 11 Brandweer: 29 45 11 11 Politie: 114 / 122 (netwerk short codes)"
+        "fragment": "Politie: 114 / 122 (netwerk short codes)"
       },
       {
         "regel": "getallen-cijfers",
@@ -14381,7 +14559,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 68,
+    "zinnen": 54,
     "fout": 0,
     "letop": 3,
     "linkzin": 2,
@@ -14459,7 +14637,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 199,
+    "zinnen": 163,
     "fout": 2,
     "letop": 18,
     "linkzin": 9,
@@ -14490,9 +14668,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2594 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Paspoort, visum, rijbewijs (467 woorden)",
-          "Wetten en gebruiken (462 woorden)",
-          "Natuurgeweld (444 woorden)"
+          "Reisverzekering (141 woorden)",
+          "Actieve vulkanen (130 woorden)",
+          "Visum (110 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -14810,14 +14988,14 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 231,
-    "fout": 1,
+    "zinnen": 197,
+    "fout": 2,
     "letop": 35,
     "linkzin": 6,
     "twijfel": 10,
     "info": 3,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 35,
       "link-zin": 6,
       "info": 3,
@@ -14826,6 +15004,7 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-aanduiding": 2,
+      "kleur-variant": 1,
       "kleur-eerste-bullet-voluit": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
@@ -14845,9 +15024,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 3100 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico’s (578 woorden)",
-          "Wetten en gebruiken (389 woorden)",
-          "Paspoort, visum, rijbewijs (350 woorden)"
+          "Oranje: alleen noodzakelijke reizen (315 woorden)",
+          "Rood: niet reizen (210 woorden)",
+          "Reisverzekering (190 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -14857,6 +15036,14 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor India is rood."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "kleur-aanduiding",
@@ -15283,7 +15470,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 67,
+    "zinnen": 54,
     "fout": 1,
     "letop": 6,
     "linkzin": 3,
@@ -15426,7 +15613,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 151,
+    "zinnen": 124,
     "fout": 2,
     "letop": 25,
     "linkzin": 4,
@@ -15457,9 +15644,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2130 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Wetten en gebruiken (396 woorden)",
-          "Actueel (394 woorden)",
-          "Paspoort, visum, rijbewijs (234 woorden)"
+          "Willekeurige arrestaties (261 woorden)",
+          "In het kort (131 woorden)",
+          "Reisverzekering (128 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -15777,7 +15964,7 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 120,
+    "zinnen": 99,
     "fout": 2,
     "letop": 18,
     "linkzin": 4,
@@ -15810,9 +15997,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2283 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico's (518 woorden)",
-          "Paspoort, visum, rijbewijs (256 woorden)",
-          "In geval van nood (225 woorden)"
+          "Oranje: alleen noodzakelijke reizen (274 woorden)",
+          "Rood: niet reizen (237 woorden)",
+          "Spanningen in het Midden-Oosten (163 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -16021,7 +16208,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Telefoonnummers",
         "boodschap": "\"(0) 7\" moet met plusteken en landcode: +31 …",
-        "fragment": "Politie: 104 (alleen in de provincie Bagdad) Ambulance: 122 (alleen in de provincie Bagdad) Brandweer: 155 (alleen in de provincie Bagdad) Algemeen alarmnummer: +964 (0) 751 501 9756 (alleen in de provincie Erbil)"
+        "fragment": "Algemeen alarmnummer: +964 (0) 751 501 9756 (alleen in de provincie Erbil)"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 25-06-2026 | Nog steeds geldig op: 14-09-2026"
@@ -16036,26 +16223,43 @@
       "geel",
       "groen"
     ],
-    "zinnen": 78,
-    "fout": 0,
+    "zinnen": 61,
+    "fout": 2,
     "letop": 5,
     "linkzin": 5,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 2,
       "let-op": 5,
       "link-zin": 5,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "kleur-variant": 2,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 7,
       "link-tekstlengte": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "reisverzekering-vaste-tekst",
         "ernst": "let-op",
@@ -16147,20 +16351,21 @@
       "rood",
       "geel"
     ],
-    "zinnen": 128,
-    "fout": 0,
+    "zinnen": 105,
+    "fout": 1,
     "letop": 15,
     "linkzin": 7,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 15,
       "link-zin": 7,
       "info": 0,
       "twijfel": 3
     },
     "perRegel": {
+      "kleur-variant": 1,
       "rubrieken-max": 1,
       "zin-max-woorden": 16,
       "zin-twijfeltaal": 3,
@@ -16168,6 +16373,14 @@
       "link-tekstlengte": 3
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "rubrieken-max",
         "ernst": "let-op",
@@ -16376,7 +16589,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 101,
+    "zinnen": 79,
     "fout": 0,
     "letop": 8,
     "linkzin": 6,
@@ -16535,7 +16748,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 75,
+    "zinnen": 61,
     "fout": 0,
     "letop": 5,
     "linkzin": 4,
@@ -16653,7 +16866,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 122,
+    "zinnen": 98,
     "fout": 0,
     "letop": 16,
     "linkzin": 4,
@@ -16853,14 +17066,14 @@
       "rood",
       "groen"
     ],
-    "zinnen": 88,
-    "fout": 2,
+    "zinnen": 71,
+    "fout": 3,
     "letop": 12,
     "linkzin": 3,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 12,
       "link-zin": 3,
       "info": 1,
@@ -16868,6 +17081,7 @@
     },
     "perRegel": {
       "kleur-aanduiding": 1,
+      "kleur-variant": 1,
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
@@ -16885,6 +17099,14 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Japan is rood."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "h3-niet-melden",
@@ -17038,7 +17260,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 98,
+    "zinnen": 79,
     "fout": 0,
     "letop": 7,
     "linkzin": 3,
@@ -17149,20 +17371,21 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 148,
-    "fout": 1,
+    "zinnen": 122,
+    "fout": 2,
     "letop": 17,
     "linkzin": 6,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 17,
       "link-zin": 6,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-vaste-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
       "criminaliteit-themapagina": 1,
@@ -17175,6 +17398,14 @@
       "afkortingen-uitschrijven": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "h3-vaste-kop",
         "ernst": "fout",
@@ -17394,7 +17625,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 91,
+    "zinnen": 73,
     "fout": 0,
     "letop": 3,
     "linkzin": 5,
@@ -17514,20 +17745,21 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 136,
-    "fout": 0,
+    "zinnen": 113,
+    "fout": 2,
     "letop": 23,
     "linkzin": 2,
     "twijfel": 8,
     "info": 2,
     "perErnst": {
-      "fout": 0,
+      "fout": 2,
       "let-op": 23,
       "link-zin": 2,
       "info": 2,
       "twijfel": 8
     },
     "perRegel": {
+      "kleur-variant": 2,
       "kleur-aanduiding": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
@@ -17541,11 +17773,27 @@
     },
     "bevindingen": [
       {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
         "regel": "kleur-aanduiding",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Cambodja is oranje."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -17825,7 +18073,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 83,
+    "zinnen": 68,
     "fout": 0,
     "letop": 8,
     "linkzin": 4,
@@ -17985,7 +18233,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 67,
+    "zinnen": 52,
     "fout": 0,
     "letop": 5,
     "linkzin": 5,
@@ -18094,14 +18342,14 @@
       "geel",
       "groen"
     ],
-    "zinnen": 105,
-    "fout": 0,
+    "zinnen": 84,
+    "fout": 1,
     "letop": 15,
     "linkzin": 5,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 15,
       "link-zin": 5,
       "info": 0,
@@ -18109,6 +18357,7 @@
     },
     "perRegel": {
       "kleur-aanduiding": 1,
+      "kleur-variant": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 3,
@@ -18123,6 +18372,14 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Zuid-Korea is geel."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode geel wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "reisverzekering-vaste-tekst",
@@ -18302,20 +18559,21 @@
     "kleurcodes": [
       "oranje"
     ],
-    "zinnen": 85,
-    "fout": 0,
+    "zinnen": 69,
+    "fout": 1,
     "letop": 9,
     "linkzin": 3,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 9,
       "link-zin": 3,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 1,
@@ -18324,6 +18582,14 @@
       "aanhalingstekens": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft één kleurcode, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "verwacht": "De kleurcode van het reisadvies voor Koeweit is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "rubrieken-volgorde",
         "ernst": "info",
@@ -18453,7 +18719,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 148,
+    "zinnen": 119,
     "fout": 0,
     "letop": 20,
     "linkzin": 5,
@@ -18730,7 +18996,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 113,
+    "zinnen": 92,
     "fout": 1,
     "letop": 14,
     "linkzin": 3,
@@ -18760,9 +19026,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1765 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Actueel (314 woorden)",
-          "Paspoort, visum, rijbewijs (246 woorden)",
-          "Wetten en gebruiken (235 woorden)"
+          "Militaire acties in het Midden-Oosten (280 woorden)",
+          "Reisverzekering (123 woorden)",
+          "Criminaliteit (108 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -18951,7 +19217,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 92,
+    "zinnen": 76,
     "fout": 1,
     "letop": 7,
     "linkzin": 1,
@@ -19069,20 +19335,21 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 95,
-    "fout": 2,
+    "zinnen": 77,
+    "fout": 3,
     "letop": 6,
     "linkzin": 4,
     "twijfel": 7,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 6,
       "link-zin": 4,
       "info": 1,
       "twijfel": 7
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-niet-melden": 1,
       "nood-contactcenter": 1,
       "nood-lokale-hulpdiensten": 1,
@@ -19093,6 +19360,14 @@
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft één kleurcode, dus bij rood hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "verwacht": "De kleurcode van het reisadvies voor Libië is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h3-niet-melden",
         "ernst": "fout",
@@ -19114,7 +19389,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De aanhef boven de alarmnummers wijkt af van de vaste tekst.",
-        "fragment": "Lokale hulpdiensten",
+        "fragment": "Er zijn geen betrouwbare telefoonnummers waarop Libische hulpdiensten bereikbaar zijn.",
         "verwacht": "Heeft u direct hulp nodig in Libië? Neem contact op met de lokale hulpdiensten:"
       },
       {
@@ -19263,7 +19538,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 65,
+    "zinnen": 51,
     "fout": 0,
     "letop": 3,
     "linkzin": 5,
@@ -19355,7 +19630,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 59,
+    "zinnen": 45,
     "fout": 0,
     "letop": 6,
     "linkzin": 3,
@@ -19451,7 +19726,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Gender(neutraal) / lhbtiq+",
         "boodschap": "\"lhbtiq+\" direct tegen het volgende woord; bijvoeglijk hoort er een spatie tussen (lhbtiq+ personen), definiërend een koppelteken (lhbtiq+-rechten).",
-        "fragment": "Lhbtiq+ Bent u een lhbtiq+persoon?"
+        "fragment": "Bent u een lhbtiq+persoon?"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 27-05-2026 | Nog steeds geldig op: 14-09-2026"
@@ -19465,7 +19740,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 131,
+    "zinnen": 107,
     "fout": 1,
     "letop": 14,
     "linkzin": 6,
@@ -19496,9 +19771,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1742 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (326 woorden)",
-          "In geval van nood (241 woorden)",
-          "Wetten en gebruiken (181 woorden)"
+          "Visum (148 woorden)",
+          "Reisverzekering (120 woorden)",
+          "Nood- of crisissituatie (95 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -19726,7 +20001,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 68,
+    "zinnen": 54,
     "fout": 0,
     "letop": 4,
     "linkzin": 4,
@@ -19836,7 +20111,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 66,
+    "zinnen": 51,
     "fout": 0,
     "letop": 5,
     "linkzin": 2,
@@ -19938,7 +20213,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 44,
+    "zinnen": 32,
     "fout": 0,
     "letop": 4,
     "linkzin": 2,
@@ -20018,7 +20293,7 @@
       "oranje",
       "groen"
     ],
-    "zinnen": 91,
+    "zinnen": 71,
     "fout": 1,
     "letop": 5,
     "linkzin": 3,
@@ -20127,7 +20402,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 67,
+    "zinnen": 52,
     "fout": 1,
     "letop": 7,
     "linkzin": 3,
@@ -20266,20 +20541,21 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 134,
-    "fout": 0,
+    "zinnen": 108,
+    "fout": 1,
     "letop": 13,
     "linkzin": 6,
     "twijfel": 3,
     "info": 2,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 13,
       "link-zin": 6,
       "info": 2,
       "twijfel": 3
     },
     "perRegel": {
+      "kleur-variant": 1,
       "kleur-vervolg-bullet-kort": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
@@ -20292,6 +20568,14 @@
       "genderneutraal": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
@@ -20491,7 +20775,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 52,
+    "zinnen": 39,
     "fout": 0,
     "letop": 4,
     "linkzin": 3,
@@ -20584,26 +20868,35 @@
       "rood",
       "geel"
     ],
-    "zinnen": 91,
-    "fout": 0,
+    "zinnen": 74,
+    "fout": 1,
     "letop": 5,
     "linkzin": 2,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 5,
       "link-zin": 2,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 4,
       "zin-twijfeltaal": 2,
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
@@ -20686,7 +20979,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 94,
+    "zinnen": 77,
     "fout": 0,
     "letop": 8,
     "linkzin": 7,
@@ -20868,7 +21161,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 113,
+    "zinnen": 91,
     "fout": 2,
     "letop": 8,
     "linkzin": 7,
@@ -20896,9 +21189,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1564 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Wetten en gebruiken (266 woorden)",
-          "Paspoort, visum, rijbewijs (247 woorden)",
-          "Natuurgeweld (227 woorden)"
+          "Reisverzekering (129 woorden)",
+          "Aardbevingen en tsunami’s (100 woorden)",
+          "Nood- of crisissituatie? (96 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -21041,14 +21334,14 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 185,
-    "fout": 3,
+    "zinnen": 156,
+    "fout": 4,
     "letop": 23,
     "linkzin": 5,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 23,
       "link-zin": 5,
       "info": 1,
@@ -21056,6 +21349,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "kleur-formulering-verboden": 1,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
@@ -21072,11 +21366,19 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2497 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico's (569 woorden)",
-          "Paspoort, visum, rijbewijs (391 woorden)",
-          "Criminaliteit (302 woorden)"
+          "Oranje: alleen noodzakelijke reizen (290 woorden)",
+          "Geel: let op, er zijn risico’s (203 woorden)",
+          "Visum (176 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "kleur-formulering-verboden",
@@ -21329,14 +21631,14 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘Zocalo’. Gebruik geen aanhalingstekens.",
-        "fragment": "Houd rekening met deze bijzondere veiligheidsrisico’s, vooral in de volgende gebieden: Let op: vermijd de wijken ten noorden van het historisch centrum ‘Zocalo’ (‘colonias’ zoals Tepito, Lagunilla en Morelos)."
+        "fragment": "Let op: vermijd de wijken ten noorden van het historisch centrum ‘Zocalo’ (‘colonias’ zoals Tepito, Lagunilla en Morelos)."
       },
       {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘colonias’. Gebruik geen aanhalingstekens.",
-        "fragment": "Houd rekening met deze bijzondere veiligheidsrisico’s, vooral in de volgende gebieden: Let op: vermijd de wijken ten noorden van het historisch centrum ‘Zocalo’ (‘colonias’ zoals Tepito, Lagunilla en Morelos)."
+        "fragment": "Let op: vermijd de wijken ten noorden van het historisch centrum ‘Zocalo’ (‘colonias’ zoals Tepito, Lagunilla en Morelos)."
       },
       {
         "regel": "aanhalingstekens",
@@ -21350,7 +21652,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘express’. Gebruik geen aanhalingstekens.",
-        "fragment": "Ontvoeringen In de steden van Mexico is er risico op ‘express’-ontvoeringen."
+        "fragment": "In de steden van Mexico is er risico op ‘express’-ontvoeringen."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 30-04-2026 | Nog steeds geldig op: 14-09-2026"
@@ -21364,7 +21666,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 74,
+    "zinnen": 58,
     "fout": 2,
     "letop": 8,
     "linkzin": 4,
@@ -21424,7 +21726,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?",
+        "fragment": "Bekijk wat u vanuit de Marshalleilanden mee terug nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?",
         "verwacht": "Bekijk wat u vanuit Marshalleilanden mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
       },
       {
@@ -21533,7 +21835,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 76,
+    "zinnen": 59,
     "fout": 0,
     "letop": 3,
     "linkzin": 1,
@@ -21610,7 +21912,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 98,
+    "zinnen": 79,
     "fout": 2,
     "letop": 4,
     "linkzin": 2,
@@ -21712,7 +22014,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 75,
+    "zinnen": 60,
     "fout": 0,
     "letop": 4,
     "linkzin": 4,
@@ -21848,7 +22150,7 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 121,
+    "zinnen": 98,
     "fout": 3,
     "letop": 10,
     "linkzin": 7,
@@ -21878,9 +22180,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2058 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Wetten en gebruiken (371 woorden)",
-          "Regionale risico’s (326 woorden)",
-          "Paspoort, visum, rijbewijs (240 woorden)"
+          "Militaire staatsgreep (222 woorden)",
+          "Rood: niet reizen (215 woorden)",
+          "Reisverzekering (114 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -22092,7 +22394,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 92,
+    "zinnen": 73,
     "fout": 0,
     "letop": 5,
     "linkzin": 3,
@@ -22210,7 +22512,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 97,
+    "zinnen": 77,
     "fout": 0,
     "letop": 9,
     "linkzin": 4,
@@ -22355,26 +22657,44 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 130,
-    "fout": 0,
+    "zinnen": 106,
+    "fout": 2,
     "letop": 9,
     "linkzin": 3,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 2,
       "let-op": 9,
       "link-zin": 3,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
+      "regionaal-kleur-tekst": 1,
       "zin-max-woorden": 9,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "regionaal-kleur-tekst",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode rood.",
+        "verwacht": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -22500,25 +22820,34 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 110,
-    "fout": 0,
+    "zinnen": 90,
+    "fout": 1,
     "letop": 8,
     "linkzin": 3,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 8,
       "link-zin": 3,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "zin-max-woorden": 9,
       "zin-twijfeltaal": 2,
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -22634,7 +22963,7 @@
       "oranje",
       "groen"
     ],
-    "zinnen": 91,
+    "zinnen": 73,
     "fout": 1,
     "letop": 8,
     "linkzin": 5,
@@ -22786,7 +23115,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 74,
+    "zinnen": 59,
     "fout": 0,
     "letop": 4,
     "linkzin": 5,
@@ -22903,7 +23232,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 79,
+    "zinnen": 60,
     "fout": 0,
     "letop": 6,
     "linkzin": 7,
@@ -23044,7 +23373,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 85,
+    "zinnen": 67,
     "fout": 0,
     "letop": 3,
     "linkzin": 7,
@@ -23179,7 +23508,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 105,
+    "zinnen": 86,
     "fout": 0,
     "letop": 6,
     "linkzin": 3,
@@ -23297,7 +23626,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 76,
+    "zinnen": 59,
     "fout": 0,
     "letop": 4,
     "linkzin": 3,
@@ -23399,7 +23728,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 67,
+    "zinnen": 53,
     "fout": 0,
     "letop": 3,
     "linkzin": 2,
@@ -23467,7 +23796,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 88,
+    "zinnen": 69,
     "fout": 0,
     "letop": 11,
     "linkzin": 1,
@@ -23593,7 +23922,7 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 143,
+    "zinnen": 115,
     "fout": 0,
     "letop": 12,
     "linkzin": 7,
@@ -23839,7 +24168,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 133,
+    "zinnen": 107,
     "fout": 1,
     "letop": 14,
     "linkzin": 4,
@@ -23868,9 +24197,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1890 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (331 woorden)",
-          "Criminaliteit (291 woorden)",
-          "In geval van nood (286 woorden)"
+          "Berovingen en overvallen (152 woorden)",
+          "Reisverzekering (109 woorden)",
+          "Visum (108 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -24076,7 +24405,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 71,
+    "zinnen": 55,
     "fout": 0,
     "letop": 2,
     "linkzin": 2,
@@ -24155,7 +24484,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 67,
+    "zinnen": 53,
     "fout": 0,
     "letop": 4,
     "linkzin": 4,
@@ -24256,7 +24585,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 89,
+    "zinnen": 71,
     "fout": 1,
     "letop": 6,
     "linkzin": 6,
@@ -24406,7 +24735,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 72,
+    "zinnen": 58,
     "fout": 2,
     "letop": 13,
     "linkzin": 4,
@@ -24587,7 +24916,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 105,
+    "zinnen": 87,
     "fout": 0,
     "letop": 10,
     "linkzin": 8,
@@ -24805,14 +25134,14 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 122,
-    "fout": 2,
+    "zinnen": 98,
+    "fout": 3,
     "letop": 11,
     "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 11,
       "link-zin": 3,
       "info": 0,
@@ -24821,6 +25150,7 @@
     "perRegel": {
       "kleur-aanduiding": 1,
       "kleur-vaste-tekst": 1,
+      "kleur-variant": 1,
       "h3-vaste-kop": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
@@ -24843,6 +25173,14 @@
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Bij kleurcode rood ontbreekt de vaste handelingsinstructie.",
         "verwacht": "De kleurcode van het reisadvies voor Oman is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "h3-vaste-kop",
@@ -24991,7 +25329,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 140,
+    "zinnen": 116,
     "fout": 2,
     "letop": 11,
     "linkzin": 3,
@@ -25021,9 +25359,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2116 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico's (416 woorden)",
-          "Wetten en gebruiken (264 woorden)",
-          "Paspoort, visum, rijbewijs (263 woorden)"
+          "Oranje: alleen noodzakelijke reizen (186 woorden)",
+          "In het kort (152 woorden)",
+          "Reisverzekering (141 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -25236,7 +25574,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 113,
+    "zinnen": 89,
     "fout": 1,
     "letop": 8,
     "linkzin": 5,
@@ -25428,15 +25766,15 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 67,
+    "zinnen": 53,
     "fout": 2,
-    "letop": 7,
+    "letop": 6,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 7,
+      "let-op": 6,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
@@ -25451,7 +25789,6 @@
       "rijbewijs-anwb": 1,
       "zin-max-woorden": 2,
       "zin-twijfeltaal": 1,
-      "vragen-opeenvolgend": 1,
       "link-tekstlengte": 1
     },
     "bevindingen": [
@@ -25532,13 +25869,6 @@
         "herkomst": "aanvulling"
       },
       {
-        "regel": "vragen-opeenvolgend",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > Vraagvorm",
-        "boodschap": "Meer dan 2 vragen achter elkaar.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -25559,14 +25889,14 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 167,
-    "fout": 1,
+    "zinnen": 137,
+    "fout": 2,
     "letop": 20,
     "linkzin": 7,
     "twijfel": 3,
     "info": 3,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 20,
       "link-zin": 7,
       "info": 3,
@@ -25574,6 +25904,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "nood-lokale-hulpdiensten": 1,
       "reisverzekering-vaste-tekst": 1,
@@ -25592,11 +25923,19 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2460 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Paspoort, visum, rijbewijs (328 woorden)",
-          "Criminaliteit (272 woorden)",
-          "In geval van nood (266 woorden)"
+          "Visum (187 woorden)",
+          "Reisverzekering (185 woorden)",
+          "In het kort (132 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -25611,7 +25950,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De aanhef boven de alarmnummers wijkt af van de vaste tekst.",
-        "fragment": "Lokale hulpdiensten",
+        "fragment": "Neem dan contact op met de lokale hulpdiensten:",
         "verwacht": "Heeft u direct hulp nodig in Peru? Neem contact op met de lokale hulpdiensten:"
       },
       {
@@ -25871,7 +26210,7 @@
       "rood",
       "geel"
     ],
-    "zinnen": 176,
+    "zinnen": 146,
     "fout": 2,
     "letop": 22,
     "linkzin": 5,
@@ -25902,9 +26241,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2436 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Paspoort, visum, rijbewijs (440 woorden)",
-          "Wetten en gebruiken (368 woorden)",
-          "Natuurgeweld (338 woorden)"
+          "Rood: niet reizen (183 woorden)",
+          "Visum (182 woorden)",
+          "Reisverzekering (157 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -26246,7 +26585,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 100,
+    "zinnen": 79,
     "fout": 3,
     "letop": 15,
     "linkzin": 5,
@@ -26278,9 +26617,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1522 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (407 woorden)",
-          "In geval van nood (205 woorden)",
-          "Natuurgeweld (198 woorden)"
+          "Visum (184 woorden)",
+          "Reisverzekering (103 woorden)",
+          "Nood- of crisissituatie (94 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -26485,14 +26824,14 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 168,
-    "fout": 2,
+    "zinnen": 136,
+    "fout": 3,
     "letop": 11,
     "linkzin": 7,
     "twijfel": 9,
     "info": 2,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 11,
       "link-zin": 7,
       "info": 2,
@@ -26500,6 +26839,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "kleur-vervolg-bullet-kort": 1,
       "h3-alleen-bij-uitzondering": 1,
       "h3-vaste-kop": 1,
@@ -26519,11 +26859,19 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2264 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Criminaliteit (317 woorden)",
-          "Regionale risico's (307 woorden)",
-          "Natuurgeweld (277 woorden)"
+          "Oranje: alleen noodzakelijke reizen (162 woorden)",
+          "Geweld (146 woorden)",
+          "Reisverzekering (127 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "kleur-vervolg-bullet-kort",
@@ -26751,7 +27099,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘public motor vehicles’. Gebruik geen aanhalingstekens.",
-        "fragment": "Criminaliteit in het openbaar vervoer Reis niet met taxi’s of ‘public motor vehicles’ (PMV’s)."
+        "fragment": "Reis niet met taxi’s of ‘public motor vehicles’ (PMV’s)."
       },
       {
         "regel": "aanhalingstekens",
@@ -26772,7 +27120,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 69,
+    "zinnen": 52,
     "fout": 0,
     "letop": 6,
     "linkzin": 3,
@@ -26873,7 +27221,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 74,
+    "zinnen": 60,
     "fout": 0,
     "letop": 6,
     "linkzin": 4,
@@ -26999,20 +27347,21 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 49,
-    "fout": 0,
+    "zinnen": 38,
+    "fout": 1,
     "letop": 8,
     "linkzin": 1,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 8,
       "link-zin": 1,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "kleur-variant": 1,
       "nood-lokale-hulpdiensten": 1,
       "nood-verwijzing-nood": 1,
       "nood-verwijzing-crisis": 1,
@@ -27022,6 +27371,14 @@
       "link-tekstlengte": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "De kleurcode van het reisadvies voor Noord-Korea is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "nood-lokale-hulpdiensten",
         "ernst": "let-op",
@@ -27100,7 +27457,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 56,
+    "zinnen": 41,
     "fout": 1,
     "letop": 4,
     "linkzin": 3,
@@ -27202,7 +27559,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 89,
+    "zinnen": 72,
     "fout": 0,
     "letop": 7,
     "linkzin": 4,
@@ -27347,20 +27704,22 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 114,
-    "fout": 1,
+    "zinnen": 94,
+    "fout": 5,
     "letop": 11,
     "linkzin": 7,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 5,
       "let-op": 11,
       "link-zin": 7,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 2,
+      "regionaal-kleur-tekst": 2,
       "intro-vaste-tekst": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
@@ -27370,6 +27729,38 @@
       "link-tekstlengte": 3
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "regionaal-kleur-tekst",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode rood.",
+        "verwacht": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
+      },
+      {
+        "regel": "regionaal-kleur-tekst",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode oranje.",
+        "verwacht": "Reis alleen naar gebieden met kleurcode oranje als dit noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
+      },
       {
         "regel": "intro-vaste-tekst",
         "ernst": "fout",
@@ -27554,7 +27945,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 91,
+    "zinnen": 73,
     "fout": 0,
     "letop": 8,
     "linkzin": 5,
@@ -27695,7 +28086,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 98,
+    "zinnen": 78,
     "fout": 0,
     "letop": 10,
     "linkzin": 3,
@@ -27836,7 +28227,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 66,
+    "zinnen": 51,
     "fout": 0,
     "letop": 4,
     "linkzin": 5,
@@ -27946,20 +28337,21 @@
       "geel",
       "groen"
     ],
-    "zinnen": 98,
-    "fout": 0,
+    "zinnen": 78,
+    "fout": 1,
     "letop": 7,
     "linkzin": 3,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 7,
       "link-zin": 3,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 7,
@@ -27967,6 +28359,14 @@
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "h3-alleen-bij-uitzondering",
         "ernst": "info",
@@ -28072,7 +28472,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 106,
+    "zinnen": 86,
     "fout": 1,
     "letop": 11,
     "linkzin": 4,
@@ -28102,9 +28502,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1522 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, ID-kaart, rijbewijs (360 woorden)",
-          "Natuurgeweld (221 woorden)",
-          "In geval van nood (194 woorden)"
+          "Registratieplicht (126 woorden)",
+          "Lawines (103 woorden)",
+          "Reisverzekering (100 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -28277,7 +28677,7 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 200,
+    "zinnen": 169,
     "fout": 3,
     "letop": 21,
     "linkzin": 7,
@@ -28308,9 +28708,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2501 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Wetten en gebruiken (606 woorden)",
-          "Paspoort, visum, rijbewijs (502 woorden)",
-          "Regionale risico's (191 woorden)"
+          "Visum (149 woorden)",
+          "Willekeurige arrestaties (141 woorden)",
+          "Registratieplicht (132 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -28559,7 +28959,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘migration card’. Gebruik geen aanhalingstekens.",
-        "fragment": "Registratieplicht Bij aankomst in Rusland ontvangt u van de grenspolitie een ‘migration card’ (een klein wit kaartje)."
+        "fragment": "Bij aankomst in Rusland ontvangt u van de grenspolitie een ‘migration card’ (een klein wit kaartje)."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 22-07-2026 | Nog steeds geldig op: 14-09-2026"
@@ -28574,20 +28974,21 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 137,
-    "fout": 2,
+    "zinnen": 113,
+    "fout": 3,
     "letop": 15,
     "linkzin": 4,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 15,
       "link-zin": 4,
       "info": 1,
       "twijfel": 3
     },
     "perRegel": {
+      "kleur-variant": 1,
       "actueel-max-woorden": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
@@ -28598,6 +28999,14 @@
       "tijd-notatie": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "actueel-max-woorden",
         "ernst": "fout",
@@ -28805,14 +29214,14 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 106,
-    "fout": 0,
+    "zinnen": 86,
+    "fout": 1,
     "letop": 10,
     "linkzin": 2,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 10,
       "link-zin": 2,
       "info": 2,
@@ -28820,13 +29229,14 @@
     },
     "perRegel": {
       "kleur-aanduiding": 1,
+      "kleur-variant": 1,
+      "regionaal-kleur-kop": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
-      "vragen-opeenvolgend": 1,
       "link-tekstlengte": 1
     },
     "bevindingen": [
@@ -28836,6 +29246,21 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Saoedi-Arabië is oranje."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "regionaal-kleur-kop",
+        "ernst": "let-op",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Onder \"Regionale risico's\" ontbreekt het vaste kopje voor kleurcode geel.",
+        "verwacht": "Geel: let op, er zijn risico's"
       },
       {
         "regel": "bagage-heen",
@@ -28932,13 +29357,6 @@
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
-        "regel": "vragen-opeenvolgend",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > Vraagvorm",
-        "boodschap": "Meer dan 2 vragen achter elkaar.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -28957,7 +29375,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 88,
+    "zinnen": 65,
     "fout": 0,
     "letop": 8,
     "linkzin": 2,
@@ -28983,7 +29401,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De aanhef boven de alarmnummers wijkt af van de vaste tekst.",
-        "fragment": "Lokale hulpdiensten",
+        "fragment": "In Sudan kunt u niet vertrouwen op hulp van de lokale hulpdiensten, zoals de politie, ambulance en brandweer.",
         "verwacht": "Heeft u direct hulp nodig in Sudan? Neem contact op met de lokale hulpdiensten:"
       },
       {
@@ -29076,7 +29494,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 94,
+    "zinnen": 76,
     "fout": 2,
     "letop": 5,
     "linkzin": 4,
@@ -29211,7 +29629,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 100,
+    "zinnen": 82,
     "fout": 0,
     "letop": 11,
     "linkzin": 5,
@@ -29394,7 +29812,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 69,
+    "zinnen": 54,
     "fout": 0,
     "letop": 8,
     "linkzin": 3,
@@ -29497,7 +29915,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Telefoonnummers",
         "boodschap": "\"0047 7\" moet met plusteken en landcode: +31 …",
-        "fragment": "Politie: 112 Ambulance: 113 Brandweer: 110 Gouverneur (Police officer on Duty): 0047 79 02 12 22"
+        "fragment": "Gouverneur (Police officer on Duty): 0047 79 02 12 22"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 14-09-2026"
@@ -29511,7 +29929,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 112,
+    "zinnen": 92,
     "fout": 3,
     "letop": 8,
     "linkzin": 6,
@@ -29542,9 +29960,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1651 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Natuurgeweld (332 woorden)",
-          "Paspoort, visum, rijbewijs (312 woorden)",
-          "In geval van nood (257 woorden)"
+          "Visum (148 woorden)",
+          "Reisverzekering (115 woorden)",
+          "Aardbevingen en tsunami’s (98 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -29710,7 +30128,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘flash floods’. Gebruik geen aanhalingstekens.",
-        "fragment": "Overstromingen Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen op de Salomonseilanden."
+        "fragment": "Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen op de Salomonseilanden."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 06-11-2025 | Nog steeds geldig op: 14-09-2026"
@@ -29724,7 +30142,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 97,
+    "zinnen": 79,
     "fout": 2,
     "letop": 8,
     "linkzin": 3,
@@ -29901,27 +30319,35 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 104,
-    "fout": 1,
-    "letop": 7,
+    "zinnen": 82,
+    "fout": 2,
+    "letop": 6,
     "linkzin": 5,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 7,
+      "fout": 2,
+      "let-op": 6,
       "link-zin": 5,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-vaste-kop": 1,
-      "criminaliteit-themapagina": 1,
       "zin-max-woorden": 9,
       "zin-twijfeltaal": 1,
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "verwacht": "De kleurcode van het reisadvies voor El Salvador is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h3-vaste-kop",
         "ernst": "fout",
@@ -29929,13 +30355,6 @@
         "boodschap": "\"Seksueel geweld tegen vrouwen\" is geen vaste tussenkop.",
         "fragment": "Seksueel geweld tegen vrouwen",
         "notitie": "Heet deze rubriek naar zijn eigen onderwerp (een ziekte bijvoorbeeld), dan mag de kop vrij zijn; kies dan \"oneens\". Zo niet: de vaste teksten onder deze rubriek worden niet getoetst zolang de kop afwijkt."
-      },
-      {
-        "regel": "criminaliteit-themapagina",
-        "ernst": "let-op",
-        "bron": "SJ, blok Criminaliteit",
-        "boodschap": "Na het maatwerk hoort de vaste verwijzing naar de themapagina over criminaliteit.",
-        "verwacht": "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht. Lees meer op de pagina Hoe voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?"
       },
       {
         "regel": "zin-max-woorden",
@@ -30044,7 +30463,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 54,
+    "zinnen": 42,
     "fout": 0,
     "letop": 5,
     "linkzin": 2,
@@ -30139,7 +30558,7 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 127,
+    "zinnen": 103,
     "fout": 0,
     "letop": 13,
     "linkzin": 3,
@@ -30305,7 +30724,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 79,
+    "zinnen": 63,
     "fout": 0,
     "letop": 5,
     "linkzin": 3,
@@ -30432,7 +30851,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 112,
+    "zinnen": 89,
     "fout": 1,
     "letop": 9,
     "linkzin": 3,
@@ -30462,9 +30881,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1527 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (276 woorden)",
-          "In geval van nood (199 woorden)",
-          "Wetten en gebruiken (178 woorden)"
+          "Reisverzekering (124 woorden)",
+          "In het kort (96 woorden)",
+          "Nood- of crisissituatie (84 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -30589,7 +31008,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 64,
+    "zinnen": 51,
     "fout": 0,
     "letop": 8,
     "linkzin": 3,
@@ -30715,7 +31134,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 97,
+    "zinnen": 81,
     "fout": 1,
     "letop": 10,
     "linkzin": 4,
@@ -30916,7 +31335,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 82,
+    "zinnen": 61,
     "fout": 0,
     "letop": 6,
     "linkzin": 4,
@@ -31025,7 +31444,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 83,
+    "zinnen": 66,
     "fout": 0,
     "letop": 4,
     "linkzin": 4,
@@ -31118,7 +31537,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 72,
+    "zinnen": 56,
     "fout": 0,
     "letop": 7,
     "linkzin": 5,
@@ -31253,7 +31672,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 78,
+    "zinnen": 61,
     "fout": 1,
     "letop": 8,
     "linkzin": 6,
@@ -31420,7 +31839,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 62,
+    "zinnen": 49,
     "fout": 1,
     "letop": 6,
     "linkzin": 3,
@@ -31461,7 +31880,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
-        "fragment": "Wat mag ik mee terugnemen naar Nederland?",
+        "fragment": "Bekijk wat u vanuit Sint Maarten mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
         "verwacht": "Bekijk wat u vanuit Sint Maarten mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
       },
       {
@@ -31530,7 +31949,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 67,
+    "zinnen": 48,
     "fout": 1,
     "letop": 4,
     "linkzin": 3,
@@ -31623,20 +32042,21 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 83,
-    "fout": 0,
+    "zinnen": 63,
+    "fout": 1,
     "letop": 10,
     "linkzin": 3,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 10,
       "link-zin": 3,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "rubrieken-volgorde": 1,
       "zin-max-woorden": 8,
       "zin-twijfeltaal": 2,
@@ -31644,6 +32064,14 @@
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "De kleurcode van het reisadvies voor Syrië is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "rubrieken-volgorde",
         "ernst": "info",
@@ -31783,26 +32211,43 @@
       "geel",
       "groen"
     ],
-    "zinnen": 72,
-    "fout": 1,
+    "zinnen": 56,
+    "fout": 3,
     "letop": 5,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 3,
       "let-op": 5,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "kleur-variant": 2,
       "intro-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 5,
       "link-tekstlengte": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "verwacht": "Voor de gebieden X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "intro-vaste-tekst",
         "ernst": "fout",
@@ -31885,7 +32330,7 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 113,
+    "zinnen": 93,
     "fout": 1,
     "letop": 7,
     "linkzin": 1,
@@ -32015,20 +32460,21 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 102,
-    "fout": 0,
+    "zinnen": 82,
+    "fout": 1,
     "letop": 6,
     "linkzin": 4,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 6,
       "link-zin": 4,
       "info": 2,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "kleur-aanduiding": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
@@ -32038,6 +32484,14 @@
       "eenheden-voluit": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
       {
         "regel": "kleur-aanduiding",
         "ernst": "let-op",
@@ -32150,21 +32604,23 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 219,
-    "fout": 1,
-    "letop": 32,
+    "zinnen": 187,
+    "fout": 2,
+    "letop": 33,
     "linkzin": 4,
     "twijfel": 9,
     "info": 4,
     "perErnst": {
-      "fout": 1,
-      "let-op": 32,
+      "fout": 2,
+      "let-op": 33,
       "link-zin": 4,
       "info": 4,
       "twijfel": 9
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
+      "regionaal-kleur-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
       "rubrieken-max": 1,
@@ -32184,11 +32640,26 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 3330 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Regionale risico's (709 woorden)",
-          "Paspoort, visum, rijbewijs (547 woorden)",
-          "Wetten en gebruiken (449 woorden)"
+          "Oranje: alleen noodzakelijke reizen (610 woorden)",
+          "Visum (264 woorden)",
+          "Oplichting rondom scooterverhuur (155 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "regionaal-kleur-kop",
+        "ernst": "let-op",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Onder \"Regionale risico's\" ontbreekt het vaste kopje voor kleurcode geel.",
+        "verwacht": "Geel: let op, er zijn risico's"
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -32538,7 +33009,7 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > Vraagvorm",
         "boodschap": "Meer dan 2 vragen achter elkaar.",
-        "fragment": "Bekijk wat u vanuit Thailand mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
+        "fragment": "Bijvoorbeeld bij een lokale apotheek?"
       },
       {
         "regel": "link-tekstlengte",
@@ -32587,7 +33058,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 91,
+    "zinnen": 73,
     "fout": 0,
     "letop": 9,
     "linkzin": 4,
@@ -32737,7 +33208,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 53,
+    "zinnen": 41,
     "fout": 1,
     "letop": 5,
     "linkzin": 2,
@@ -32830,7 +33301,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 93,
+    "zinnen": 76,
     "fout": 0,
     "letop": 5,
     "linkzin": 8,
@@ -32962,7 +33433,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 109,
+    "zinnen": 91,
     "fout": 1,
     "letop": 8,
     "linkzin": 3,
@@ -33148,7 +33619,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 75,
+    "zinnen": 59,
     "fout": 1,
     "letop": 5,
     "linkzin": 7,
@@ -33290,7 +33761,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 101,
+    "zinnen": 79,
     "fout": 1,
     "letop": 7,
     "linkzin": 5,
@@ -33316,9 +33787,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1558 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (285 woorden)",
-          "In geval van nood (207 woorden)",
-          "Actueel (191 woorden)"
+          "Vermijd delen van Port of Spain (113 woorden)",
+          "Reisverzekering (102 woorden)",
+          "Nood- of crisissituatie (96 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -33446,7 +33917,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 130,
+    "zinnen": 104,
     "fout": 0,
     "letop": 6,
     "linkzin": 3,
@@ -33574,21 +34045,22 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 176,
-    "fout": 1,
-    "letop": 29,
+    "zinnen": 142,
+    "fout": 2,
+    "letop": 28,
     "linkzin": 3,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
-      "fout": 1,
-      "let-op": 29,
+      "fout": 2,
+      "let-op": 28,
       "link-zin": 3,
       "info": 1,
       "twijfel": 9
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
       "alinea-max-woorden": 2,
@@ -33596,7 +34068,7 @@
       "zin-max-woorden": 19,
       "zin-lijdende-vorm": 4,
       "link-tekstlengte": 3,
-      "aanhalingstekens": 3
+      "aanhalingstekens": 2
     },
     "bevindingen": [
       {
@@ -33605,11 +34077,19 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2539 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Wetten en gebruiken (591 woorden)",
-          "Paspoort, visum, rijbewijs (269 woorden)",
-          "Natuurgeweld (237 woorden)"
+          "Reisverzekering (167 woorden)",
+          "Nederlanders die ook de Turkse nationaliteit hebben (149 woorden)",
+          "Natuurbranden (126 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -33632,7 +34112,7 @@
         "bron": "SW, Gebruiksvriendelijkheid > Alinea's",
         "boodschap": "Deze alinea telt 82 woorden. Maximaal 80.",
         "fragment": "In Turkije kunt u een gevangenisstraf krijgen (tot maximaal 3 jaar) voor het verspreiden of delen van berichten die de T…",
-        "kop": "Wetten en gebruiken"
+        "kop": "Anti-desinformatie-wet"
       },
       {
         "regel": "alinea-max-woorden",
@@ -33640,7 +34120,7 @@
         "bron": "SW, Gebruiksvriendelijkheid > Alinea's",
         "boodschap": "Deze alinea telt 89 woorden. Maximaal 80.",
         "fragment": "Bent u Nederlander en heeft u ook de Turkse nationaliteit? Dan kunnen de Turkse autoriteiten u bij aankomst en tijdens u…",
-        "kop": "Wetten en gebruiken"
+        "kop": "Nederlanders die ook de Turkse nationaliteit hebben"
       },
       {
         "regel": "zin-twijfeltaal",
@@ -33925,13 +34405,6 @@
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘s nachts in afgelegen gebieden op het p…. Gebruik geen aanhalingstekens.",
-        "fragment": "Dit gebeurt vooral ‘s nachts in afgelegen gebieden op het platteland."
-      },
-      {
-        "regel": "aanhalingstekens",
-        "ernst": "let-op",
-        "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘In geval van nood’. Gebruik geen aanhalingstekens.",
         "fragment": "Check de telefoonnummers van de lokale hulpdiensten onder ‘In geval van nood’."
       },
@@ -33954,7 +34427,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 67,
+    "zinnen": 52,
     "fout": 1,
     "letop": 4,
     "linkzin": 4,
@@ -34066,7 +34539,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 75,
+    "zinnen": 59,
     "fout": 0,
     "letop": 6,
     "linkzin": 4,
@@ -34184,15 +34657,15 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 167,
+    "zinnen": 131,
     "fout": 1,
-    "letop": 19,
+    "letop": 18,
     "linkzin": 3,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 19,
+      "let-op": 18,
       "link-zin": 3,
       "info": 1,
       "twijfel": 4
@@ -34205,7 +34678,6 @@
       "zin-max-woorden": 11,
       "zin-twijfeltaal": 4,
       "zin-lijdende-vorm": 4,
-      "vragen-opeenvolgend": 1,
       "link-tekstlengte": 2,
       "aanhalingstekens": 2
     },
@@ -34216,9 +34688,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2438 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Reisverzekering (300 woorden)",
-          "Criminaliteit (257 woorden)",
-          "Wetten en gebruiken (249 woorden)"
+          "Verplichte reisverzekering Zanzibar (177 woorden)",
+          "Ontvoeringen (141 woorden)",
+          "Reisverzekering (119 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -34397,13 +34869,6 @@
         "kop": "Bagageregels"
       },
       {
-        "regel": "vragen-opeenvolgend",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > Vraagvorm",
-        "boodschap": "Meer dan 2 vragen achter elkaar.",
-        "fragment": "Wat mag ik meenemen naar Tanzania?"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -34443,7 +34908,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 121,
+    "zinnen": 92,
     "fout": 2,
     "letop": 11,
     "linkzin": 4,
@@ -34471,9 +34936,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1642 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (219 woorden)",
-          "Wetten en gebruiken (196 woorden)",
-          "In geval van nood (188 woorden)"
+          "Reisverzekering (105 woorden)",
+          "Nood- of crisissituatie (89 woorden)",
+          "Grens met de Democratische Republiek Congo (87 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -34648,7 +35113,7 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 78,
+    "zinnen": 62,
     "fout": 1,
     "letop": 5,
     "linkzin": 1,
@@ -34759,7 +35224,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 68,
+    "zinnen": 52,
     "fout": 0,
     "letop": 5,
     "linkzin": 5,
@@ -34869,7 +35334,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 90,
+    "zinnen": 75,
     "fout": 2,
     "letop": 12,
     "linkzin": 6,
@@ -34899,9 +35364,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1875 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum/ESTA, rijbewijs (613 woorden)",
-          "Wetten en gebruiken (252 woorden)",
-          "Natuurgeweld (251 woorden)"
+          "Visum en ESTA (461 woorden)",
+          "Wat kunt u doen bij natuurgeweld? (150 woorden)",
+          "Lhbtiq+ (102 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -35091,7 +35556,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 99,
+    "zinnen": 81,
     "fout": 0,
     "letop": 7,
     "linkzin": 6,
@@ -35234,7 +35699,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 74,
+    "zinnen": 58,
     "fout": 0,
     "letop": 8,
     "linkzin": 4,
@@ -35392,14 +35857,14 @@
       "rood",
       "oranje"
     ],
-    "zinnen": 132,
-    "fout": 3,
+    "zinnen": 103,
+    "fout": 4,
     "letop": 15,
     "linkzin": 6,
     "twijfel": 6,
     "info": 2,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 15,
       "link-zin": 6,
       "info": 2,
@@ -35407,6 +35872,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h3-niet-melden": 1,
       "nood-contactcenter": 1,
       "kinderen-documenten": 1,
@@ -35424,11 +35890,19 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2332 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Criminaliteit (326 woorden)",
-          "Regionale risico's (306 woorden)",
-          "Paspoort, visum, rijbewijs (291 woorden)"
+          "Voorkom dat u slachtoffer wordt van criminaliteit (170 woorden)",
+          "Reisverzekering (158 woorden)",
+          "Oranje: alleen noodzakelijke reizen (153 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "Voor de gebieden de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "h3-niet-melden",
@@ -35687,7 +36161,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 70,
+    "zinnen": 54,
     "fout": 1,
     "letop": 9,
     "linkzin": 3,
@@ -35830,7 +36304,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 68,
+    "zinnen": 53,
     "fout": 1,
     "letop": 12,
     "linkzin": 6,
@@ -36020,7 +36494,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 115,
+    "zinnen": 96,
     "fout": 1,
     "letop": 17,
     "linkzin": 4,
@@ -36049,9 +36523,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1712 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (497 woorden)",
-          "In geval van nood (207 woorden)",
-          "Wetten en gebruiken (182 woorden)"
+          "Visum (230 woorden)",
+          "Landmijnen (107 woorden)",
+          "Verkeersongevallen (105 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -36304,7 +36778,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 111,
+    "zinnen": 92,
     "fout": 2,
     "letop": 11,
     "linkzin": 7,
@@ -36335,9 +36809,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1511 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Natuurgeweld (402 woorden)",
-          "Paspoort, visum, rijbewijs (300 woorden)",
-          "In geval van nood (187 woorden)"
+          "Visum (146 woorden)",
+          "Reisverzekering (103 woorden)",
+          "Nood- of crisissituatie (95 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -36527,7 +37001,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘flash floods’. Gebruik geen aanhalingstekens.",
-        "fragment": "Overstromingen Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen in Vanuatu."
+        "fragment": "Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen in Vanuatu."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 23-01-2026 | Nog steeds geldig op: 14-09-2026"
@@ -36541,7 +37015,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 56,
+    "zinnen": 43,
     "fout": 0,
     "letop": 4,
     "linkzin": 3,
@@ -36625,7 +37099,7 @@
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 73,
+    "zinnen": 58,
     "fout": 0,
     "letop": 3,
     "linkzin": 5,
@@ -36727,14 +37201,14 @@
     "kleurcodes": [
       "rood"
     ],
-    "zinnen": 105,
-    "fout": 1,
+    "zinnen": 84,
+    "fout": 2,
     "letop": 15,
     "linkzin": 4,
     "twijfel": 4,
     "info": 2,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 15,
       "link-zin": 4,
       "info": 2,
@@ -36742,6 +37216,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "medicijnen-voldoende": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
@@ -36757,11 +37232,19 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1513 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort, visum, rijbewijs (283 woorden)",
-          "In geval van nood (227 woorden)",
-          "Wetten en gebruiken (147 woorden)"
+          "Reisverzekering (123 woorden)",
+          "Visum (95 woorden)",
+          "In het kort (92 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "verwacht": "De kleurcode van het reisadvies voor Jemen is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "medicijnen-voldoende",
@@ -36971,15 +37454,15 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 95,
+    "zinnen": 74,
     "fout": 2,
-    "letop": 17,
+    "letop": 16,
     "linkzin": 8,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 17,
+      "let-op": 16,
       "link-zin": 8,
       "info": 1,
       "twijfel": 1
@@ -36993,7 +37476,6 @@
       "zin-max-woorden": 13,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
-      "vragen-opeenvolgend": 1,
       "link-tekstlengte": 4,
       "aanhalingstekens": 4
     },
@@ -37004,9 +37486,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1515 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Criminaliteit (379 woorden)",
-          "Paspoort, visum, rijbewijs (299 woorden)",
-          "In geval van nood (218 woorden)"
+          "Risico’s in het verkeer (141 woorden)",
+          "Voorkom dat u slachtoffer wordt van criminaliteit (112 woorden)",
+          "Nood- of crisissituatie (99 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -37163,13 +37645,6 @@
         "kop": "Bagageregels"
       },
       {
-        "regel": "vragen-opeenvolgend",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > Vraagvorm",
-        "boodschap": "Meer dan 2 vragen achter elkaar.",
-        "fragment": "Wilt u een jachttrofee meenemen of laten invoeren?"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -37238,7 +37713,7 @@
       "oranje",
       "geel"
     ],
-    "zinnen": 97,
+    "zinnen": 76,
     "fout": 0,
     "letop": 11,
     "linkzin": 3,
@@ -37413,7 +37888,7 @@
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 88,
+    "zinnen": 68,
     "fout": 1,
     "letop": 4,
     "linkzin": 6,

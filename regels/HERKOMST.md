@@ -127,6 +127,32 @@ Daarnaast toetst de tool op vorm die het sjabloon voorschrijft:
 | `nood-contactnummer` | SJ, blok *In geval van nood* | alleen de vaste nummers van het contactcenter |
 | `h3-vaste-kop` | SJ, blok *Risico dat van toepassing is*; MX, tab *Koppen* | de tussenkoppen liggen letterlijk vast: "Terrorisme", niet "Terroristische aanslagen" |
 
+## Eén versus meerdere kleurcodes (18 september 2026)
+
+De matrix schrijft twee manieren voor om de kleurcode in *In het kort* te zetten. Bij **één**
+kleurcode geldt de kleur voor het hele land en staat daar de volledige uitleg. Bij **meerdere**
+kleurcodes staat per gebied de verkorte variant, en volgt de volledige uitleg onder *Regionale
+risico's* — zo blijft *In het kort* kort en staat hetzelfde niet twee keer.
+
+| regel-id | vindplaats |
+|---|---|
+| `kleur-variant` | Matrix, tabblad *Kleurcode-teksten*: de kolommen voor de volledige en de verkorte formulering per kleur. In de regeldata `in_het_kort_volledig` en `in_het_kort_deels`. |
+| `regionaal-kleur-kop` | Matrix, tabblad *Kleurcode-teksten*, het vaste kopje per kleur onder *Regionale risico's*. In de regeldata `regionaal_kop`. |
+| `regionaal-kleur-tekst` | Idem, de vaste uitleg onder dat kopje. In de regeldata `regionaal_tekst`. |
+| `kort-verwijst-regionaal` | Matrix, tabblad *Koppen*, rij *In het kort*: "Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen." |
+| `kort-verwijzing-vorm` | **Geen letterlijke vindplaats.** Instructie van de opdrachtgever, 18 september 2026: elke verwijzing vanuit *In het kort* heeft de vorm "Lees meer onder X". De matrix schrijft wel voor *dát* er verwezen wordt, niet hoe. Gemeten: alle 149 verwijzingen in het corpus gebruiken deze vorm al. |
+
+Twee dingen om te weten bij deze regels:
+
+- **Het verschil tussen de varianten is niet één woord.** Groen en geel zetten "erheen" tegenover
+  "hierheen", rood zet "reis er niet heen" tegenover "reis niet hierheen", en bij oranje is de
+  handelingsinstructie in beide varianten gelijk. Daarom toetst `kleur-variant` de hele instructie
+  en niet dat ene woord.
+- **Welke kleuren een advies heeft, komt uit het cms-veld**, niet uit de lopende tekst. Een advies
+  kan een ánder land noemen ("de kleurcode van het reisadvies voor Jemen is rood") en dan zou die
+  kleur ten onrechte meetellen. Alleen bij geplakte tekst, waar het veld ontbreekt, valt de tool
+  terug op wat er in de tekst staat.
+
 ## Aangevuld na de review van 18 september 2026
 
 | regel-id | vindplaats |

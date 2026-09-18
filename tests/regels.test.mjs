@@ -457,6 +457,38 @@ test('zonder woordenlijst zegt de tool niets over spelling', () => {
     'zonder lijst hoort de spellingtoets te zwijgen');
 });
 
+test('Nederlands of Nederlandse: de verbuiging hangt aan lidwoord en geslacht', () => {
+  const ids = (t) => idsVan(advies('<p>' + t + '</p>'), { land: 'Tsjechi\u00eb' });
+  const regel = 'nederlands-verbuiging';
+
+  // Een het-woord zonder lidwoord: geen -e.
+  assert.ok(ids('Bel het nummer van Nederlandse consulaat-generaal.').includes(regel));
+  assert.ok(!ids('Bel het nummer van Nederlands consulaat-generaal.').includes(regel));
+
+  // Hetzelfde het-woord m\u00e9t bepaald lidwoord: w\u00e9l -e.
+  assert.ok(ids('Bel het Nederlands consulaat-generaal in Dubai.').includes(regel));
+  assert.ok(!ids('Bel het Nederlandse consulaat-generaal in Dubai.').includes(regel));
+
+  // Na "een" blijft het een het-woord zonder -e.
+  assert.ok(!ids('In dit land is een Nederlands consulaat-generaal.').includes(regel));
+  assert.ok(ids('In dit land is een Nederlandse consulaat-generaal.').includes(regel));
+
+  // Een de-woord krijgt altijd -e, met of zonder lidwoord.
+  assert.ok(!ids('Neem contact op met de Nederlandse ambassade.').includes(regel));
+  assert.ok(!ids('Neem contact op met Nederlandse ambassade.').includes(regel));
+  assert.ok(ids('Neem contact op met de Nederlands ambassade.').includes(regel));
+
+  // Meervoud is altijd -e.
+  assert.ok(!ids('De Nederlandse consulaten-generaal zijn gesloten.').includes(regel));
+  assert.ok(ids('De Nederlands consulaten-generaal zijn gesloten.').includes(regel));
+
+  // En buiten deze woorden zwijgt de regel: dit is geen grammaticacontrole.
+  assert.ok(!ids('De informatie staat in het Nederlands op de website.').includes(regel),
+    '"Nederlands" als taalnaam hoort de regel niet te raken');
+  assert.ok(!ids('Het Nederlands elftal speelt daar.').includes(regel),
+    'een woord buiten de gesloten lijst hoort de regel niet te raken');
+});
+
 test('de naam van het land wordt wel getoetst', () => {
   // Namen worden niet beoordeeld, met \u00e9\u00e9n uitzondering: van de landen kent de tool de
   // schrijfwijze, want die staat in de landenlijst van de open data.

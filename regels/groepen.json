@@ -85,6 +85,7 @@
       "regels": [
         "tekst-cms-rest",
         "landnaam-schrijfwijze",
+        "nederlands-verbuiging",
         "tekst-onzichtbaar-teken",
         "tekst-plakfout"
       ]

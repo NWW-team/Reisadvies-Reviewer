@@ -4,10 +4,10 @@ Gedraaid op 2026-09-18 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **74** van de 226 adviezen hebben geen enkele harde fout.
+- **72** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
-- Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **187** van de 3012 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
+- **193** van de 3018 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,7 +25,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 281 | 152 |
+| rood — fout | 287 | 154 |
 | geel/oranje — let op | 1580 | 220 |
 | lichtblauw — lange zin met link | 542 | 201 |
 | grijs — ter overweging | 137 | 102 |
@@ -67,6 +67,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `nood-verwijzing-nood` | 7 | 7 |
 | `nood-verwijzing-crisis` | 7 | 7 |
 | `medicijnen-voldoende` | 7 | 7 |
+| `nederlands-verbuiging` | 6 | 6 |
 | `link-verboden-partij` | 6 | 7 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `kleur-vervolg-bullet-kort` | 5 | 5 |

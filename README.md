@@ -256,6 +256,10 @@ veranderde:
   woordgrenzen (*beren* zit in *proberen*), de rubriek die de matrix zelf aanwijst (*Foto's maken*
   mag bij lokale wetten, 65 meldingen minder) en samenstellingen (*zandstormen* benoemt wel een
   risico).
+- `nederlands-verbuiging` kijkt of *Nederlands* of *Nederlandse* goed staat voor de vaste termen
+  voor een post. Geen grammaticacontrole, maar een gesloten verzameling van vijf woorden waarvan het
+  geslacht vaststaat — daarvoor klopt de regel altijd, en daarbuiten zwijgt hij. Over 226 adviezen:
+  1478 keer komt die combinatie voor, 6 keer staat het fout.
 - Uit [SpellingSpeurneus](https://github.com/NWW-team/SpellingSpeurneus), het spellingtooltje van
   de redactie, zijn de drie controles overgenomen die geen woordenlijst nodig hebben: resten van
   het CMS, een vergeten spatie na een punt, en tekens zonder breedte. Samen 17 meldingen over 226

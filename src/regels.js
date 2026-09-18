@@ -137,6 +137,20 @@ export function maakToetser(data) {
   const wlijst = data.woordenlijst;
   const spelling = wlijst && typeof wlijst.has === 'function' && wlijst.size ? wlijst : null;
 
+  /**
+   * "Nederlands(e)" gevolgd door een van de vaste termen voor een post. Het woord ervoor wordt
+   * meegevangen, want daar hangt de verbuiging aan. Langste zelfstandige naamwoorden eerst, anders
+   * wint "consulaat" van "consulaat-generaal".
+   */
+  const nvRegex = (() => {
+    const nv = tc && tc.nederlands_verbuiging;
+    if (!nv) return null;
+    const namen = [...nv.de_woorden, ...nv.het_woorden, ...nv.meervouden]
+      .sort((a, b) => b.length - a.length).map(esc);
+    return new RegExp('(\\b[\\p{L}]+\\s+)?\\b(' + esc(nv.bijvoeglijk.zonder_e) + '|'
+      + esc(nv.bijvoeglijk.met_e) + ')\\s+(' + namen.join('|') + ')\\b', 'giu');
+  })();
+
   // De tekens zonder breedte uit tekstcontrole.json, als regex. Ze moeten uit een woord voordat
   // het tegen de woordenlijst gaat: onzichtbaar of niet, ze maken er een onbekend woord van.
   const onzichtbaarRe = new RegExp('[' + Object.keys((tc && tc.onzichtbare_tekens.tekens) || {})
@@ -1030,6 +1044,42 @@ export function maakToetser(data) {
               ...(beideWoorden ? { verwacht: w.replace(/\.(?=\S)/g, '. ') } : {}),
               ...(beideWoorden ? {} : { notitie: 'Let op: hier staat een los teken tegen het '
                 + 'woord aan. Kijk of dat weg moet in plaats van dat er een spatie bij komt.' }) }));
+        }
+      }
+
+      // Nederlands of Nederlandse? Een de-woord krijgt altijd -e; een het-woord alleen na een
+      // bepaald lidwoord. Dit is met opzet geen grammaticacontrole maar een gesloten verzameling:
+      // vijf zelfstandige naamwoorden waarvan het geslacht vaststaat. Daarvoor klopt de regel
+      // altijd, en daarbuiten zwijgt hij.
+      if (nvRegex) {
+        const nv = tc.nederlands_verbuiging;
+        const bepaald = new Set(nv.bepaalde_bepalers.map((w) => w.toLowerCase()));
+        const meervoud = new Set(nv.meervouden.map((w) => w.toLowerCase()));
+        const deWoord = new Set(nv.de_woorden.map((w) => w.toLowerCase()));
+        const gezienNv = new Set();
+        for (const z of teLezen) {
+          for (const m of z.tekst.matchAll(nvRegex)) {
+            const ervoor = (m[1] || '').trim().toLowerCase();
+            const vorm = m[2];
+            const nw = m[3].toLowerCase();
+            // Meervoud en de-woorden krijgen altijd -e. Bij een het-woord hangt het af van wat
+            // ervoor staat: na "het" of "dit" wél, na "een" of niets niet.
+            const zonderLidwoord = !bepaald.has(ervoor);
+            const hoort = (meervoud.has(nw) || deWoord.has(nw) || !zonderLidwoord)
+              ? nv.bijvoeglijk.met_e : nv.bijvoeglijk.zonder_e;
+            if (vorm.toLowerCase() === hoort.toLowerCase()) continue;
+            const gevonden = `${vorm} ${m[3]}`;
+            if (gezienNv.has(gevonden)) continue;
+            gezienNv.add(gevonden);
+            b.push(bevinding('nederlands-verbuiging', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+              `"${gevonden}" hoort "${hoort} ${m[3]}" te zijn.`,
+              { fragment: z.tekst, kop: z.kop, verwacht: `${hoort} ${m[3]}`, herkomst: 'aanvulling',
+                notitie: hoort === nv.bijvoeglijk.zonder_e
+                  ? `"${m[3]}" is een het-woord. Zonder lidwoord krijgt het bijvoeglijk naamwoord `
+                    + 'geen -e. Staat er een lidwoord te weinig, dan is "het ' + vorm.toLowerCase()
+                    + ' ' + m[3] + '" ook goed.'
+                  : `Na "${ervoor}" krijgt het bijvoeglijk naamwoord een -e.` }));
+          }
         }
       }
 

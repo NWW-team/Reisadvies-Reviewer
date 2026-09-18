@@ -744,13 +744,13 @@
       "geel"
     ],
     "zinnen": 94,
-    "fout": 3,
+    "fout": 4,
     "letop": 14,
     "linkzin": 2,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 14,
       "link-zin": 2,
       "info": 1,
@@ -766,6 +766,7 @@
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
+      "nederlands-verbuiging": 1,
       "tekst-onzichtbaar-teken": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 2,
@@ -842,6 +843,17 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico’s, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+      },
+      {
+        "regel": "nederlands-verbuiging",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Nederlands consulaat-generaal\" hoort \"Nederlandse consulaat-generaal\" te zijn.",
+        "fragment": "Bekijk de contactgegevens van het Nederlands consulaat-generaal in Dubai.",
+        "kop": "In geval van nood",
+        "verwacht": "Nederlandse consulaat-generaal",
+        "herkomst": "aanvulling",
+        "notitie": "Na \"het\" krijgt het bijvoeglijk naamwoord een -e."
       },
       {
         "regel": "tekst-onzichtbaar-teken",
@@ -1481,13 +1493,13 @@
       "groen"
     ],
     "zinnen": 69,
-    "fout": 1,
+    "fout": 2,
     "letop": 4,
     "linkzin": 5,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 4,
       "link-zin": 5,
       "info": 2,
@@ -1497,6 +1509,7 @@
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-volgorde": 1,
+      "nederlands-verbuiging": 1,
       "tekst-niet-melden": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 8
@@ -1529,6 +1542,17 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "nederlands-verbuiging",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Nederlandse consulaat-generaal\" hoort \"Nederlands consulaat-generaal\" te zijn.",
+        "fragment": "Nederlandse consulaat-generaal in Australië",
+        "kop": "In geval van nood",
+        "verwacht": "Nederlands consulaat-generaal",
+        "herkomst": "aanvulling",
+        "notitie": "\"consulaat-generaal\" is een het-woord. Zonder lidwoord krijgt het bijvoeglijk naamwoord geen -e. Staat er een lidwoord te weinig, dan is \"het nederlandse consulaat-generaal\" ook goed."
       },
       {
         "regel": "tekst-niet-melden",
@@ -13878,13 +13902,13 @@
       "groen"
     ],
     "zinnen": 79,
-    "fout": 0,
+    "fout": 1,
     "letop": 6,
     "linkzin": 4,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 6,
       "link-zin": 4,
       "info": 0,
@@ -13892,6 +13916,7 @@
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
+      "nederlands-verbuiging": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1,
@@ -13905,6 +13930,17 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
+      },
+      {
+        "regel": "nederlands-verbuiging",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Nederlands consulaat-generaal\" hoort \"Nederlandse consulaat-generaal\" te zijn.",
+        "fragment": "Bekijk de contactgegevens van het Nederlands consulaat-generaal in Milaan.",
+        "kop": "In geval van nood",
+        "verwacht": "Nederlandse consulaat-generaal",
+        "herkomst": "aanvulling",
+        "notitie": "Na \"het\" krijgt het bijvoeglijk naamwoord een -e."
       },
       {
         "regel": "woord-onbekend",
@@ -19393,23 +19429,35 @@
       "geel"
     ],
     "zinnen": 59,
-    "fout": 0,
+    "fout": 1,
     "letop": 1,
     "linkzin": 3,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 1,
       "link-zin": 3,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
+      "nederlands-verbuiging": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 2
     },
     "bevindingen": [
+      {
+        "regel": "nederlands-verbuiging",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Nederlandse consulaat-generaal\" hoort \"Nederlands consulaat-generaal\" te zijn.",
+        "fragment": "Heeft u hulp nodig? Neem contact op met uw reisverzekeraar of met de Nederlandse ambassade of Nederlandse consulaat-generaal.",
+        "kop": "In geval van nood",
+        "verwacht": "Nederlands consulaat-generaal",
+        "herkomst": "aanvulling",
+        "notitie": "\"consulaat-generaal\" is een het-woord. Zonder lidwoord krijgt het bijvoeglijk naamwoord geen -e. Staat er een lidwoord te weinig, dan is \"het nederlandse consulaat-generaal\" ook goed."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -27312,13 +27360,13 @@
       "oranje"
     ],
     "zinnen": 93,
-    "fout": 2,
+    "fout": 3,
     "letop": 8,
     "linkzin": 0,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 8,
       "link-zin": 0,
       "info": 1,
@@ -27328,6 +27376,7 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-volgorde": 1,
+      "nederlands-verbuiging": 1,
       "woord-onbekend": 2,
       "tekst-niet-melden": 1,
       "zin-frequentiewoord": 2,
@@ -27358,6 +27407,17 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
         "fragment": "Terrorisme",
         "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+      },
+      {
+        "regel": "nederlands-verbuiging",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Nederlandse ambassadekantoor\" hoort \"Nederlands ambassadekantoor\" te zijn.",
+        "fragment": "Nederlandse ambassadekantoor in Tsjaad",
+        "kop": "In geval van nood",
+        "verwacht": "Nederlands ambassadekantoor",
+        "herkomst": "aanvulling",
+        "notitie": "\"ambassadekantoor\" is een het-woord. Zonder lidwoord krijgt het bijvoeglijk naamwoord geen -e. Staat er een lidwoord te weinig, dan is \"het nederlandse ambassadekantoor\" ook goed."
       },
       {
         "regel": "woord-onbekend",
@@ -28769,13 +28829,13 @@
       "geel"
     ],
     "zinnen": 142,
-    "fout": 3,
+    "fout": 4,
     "letop": 29,
     "linkzin": 1,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 29,
       "link-zin": 1,
       "info": 1,
@@ -28788,6 +28848,7 @@
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
       "alinea-max-woorden": 2,
+      "nederlands-verbuiging": 1,
       "woord-onbekend": 3,
       "zin-frequentiewoord": 7,
       "zin-max-woorden": 17,
@@ -28855,6 +28916,17 @@
         "boodschap": "Deze alinea telt 89 woorden. Maximaal 80.",
         "fragment": "Bent u Nederlander en heeft u ook de Turkse nationaliteit? Dan kunnen de Turkse autoriteiten u bij aankomst en tijdens u…",
         "kop": "Nederlanders die ook de Turkse nationaliteit hebben"
+      },
+      {
+        "regel": "nederlands-verbuiging",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Nederlandse consulaat-generaal\" hoort \"Nederlands consulaat-generaal\" te zijn.",
+        "fragment": "Nederlandse consulaat-generaal in Turkije",
+        "kop": "In geval van nood",
+        "verwacht": "Nederlands consulaat-generaal",
+        "herkomst": "aanvulling",
+        "notitie": "\"consulaat-generaal\" is een het-woord. Zonder lidwoord krijgt het bijvoeglijk naamwoord geen -e. Staat er een lidwoord te weinig, dan is \"het nederlandse consulaat-generaal\" ook goed."
       },
       {
         "regel": "woord-onbekend",

@@ -470,6 +470,50 @@ plaatsen waar die zitten. Die staan op de site goed, dus daarmee zou dezelfde to
 verkeerd gespelde postnaam vangen. Nog niet gebouwd: dat vraagt een ophaalronde langs een ander
 deel van de open data.
 
+## Nederlands of Nederlandse (18 september 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `nederlands-verbuiging` | **Geen brondocument.** Nederlandse spellingregel; de woorden staan in `regels/tekstcontrole.json` | fout |
+
+Een bijvoeglijk naamwoord voor een zelfstandig naamwoord krijgt wel of geen **-e**, en dat hangt van
+twee dingen af:
+
+| | de-woord | het-woord |
+|---|---|---|
+| **met** bepaald lidwoord | de Nederlands**e** ambassade | het Nederlands**e** consulaat-generaal |
+| **een**, **geen** of geen lidwoord | een Nederlands**e** ambassade | een Nederlands consulaat-generaal |
+| **meervoud** | de Nederlands**e** ambassades | de Nederlands**e** consulaten-generaal |
+
+**Met opzet geen grammaticacontrole.** Het Nederlands volledig toetsen vraagt woordsoortherkenning
+en zinsontleding — een ander soort programma, met een server erachter, en zelfs dan niet waterdicht.
+Erger nog: een halfwerkende grammaticacontrole gaat op bijna elk advies af, en dan geldt de norm uit
+de README — dan is de regel het probleem, niet de tekst.
+
+Wat hier staat is daarom een **gesloten verzameling**: vijf zelfstandige naamwoorden waarvan het
+geslacht vaststaat. *ambassade*, *vertegenwoordiging* en *post* zijn de-woorden; *consulaat*,
+*consulaat-generaal* en *ambassadekantoor* zijn het-woorden. Daarvoor is de regel bewijsbaar
+compleet, en daarbuiten zwijgt hij — ook bij *Nederlands* als taalnaam ("informatie in het
+Nederlands") en bij woorden die niet in de lijst staan.
+
+**Gemeten over 226 adviezen: 1478 keer staat "Nederlands(e)" voor een van deze woorden, en zes keer
+staat het fout.** Drie in een kop: *Nederlandse consulaat-generaal in Australië*, *idem in Turkije*
+en *Nederlandse ambassadekantoor in Tsjaad* — zonder lidwoord hoort daar *Nederlands*. Twee in de
+lopende tekst, andersom: *van het Nederlands consulaat-generaal in Dubai* en *in Milaan* — daar
+hoort na *het* juist wél een -e.
+
+De zesde is Martinique: *"met de Nederlandse ambassade of Nederlandse consulaat-generaal"*. Daar
+mist eigenlijk een lidwoord. De melding zegt dat er ook: staat er een lidwoord te weinig, dan is
+*het Nederlandse consulaat-generaal* net zo goed.
+
+Dat het in hetzelfde corpus ook goed staat — *Nederlands consulaat-generaal in Dubai*, als kop —
+laat zien dat dit geen huisafspraak is maar slordigheid.
+
+**Deze regel verving een toevalstreffer.** De drie koppen vielen eerder op omdat ze niet op de lijst
+met vaste tussenkoppen stonden, niet omdat de tool de taalfout zag. Toen `h4-vaste-kop` werd
+omgebouwd tot `h4-kop-variant` vielen ze weg. Nu worden ze gemeld om de juiste reden, en de twee in
+de lopende tekst erbij — die zag de oude regel helemaal niet.
+
 **Vals alarm.** Klopt een woord wel? Dan hoort het in `regels/uitzonderingen.txt`. Die lijst hoort
 bij de webredactie, niet bij de techniek, en groeit met het gebruik. De basis komt uit
 SpellingSpeurneus; wat daarna is gemeten over de reisadviezen staat er onderaan bij.

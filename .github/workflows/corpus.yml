@@ -37,6 +37,15 @@ jobs:
         with:
           node-version: '22'
 
+      # Alleen lezen: zoekt uit welke infotypes de open data aanbiedt. Draait vóór het ophalen, zodat
+      # de uitkomst ook in de samenvatting staat als het ophalen zelf misgaat. Faalt nooit de run.
+      - name: Open data verkennen
+        run: |
+          echo '### Verkenning open data' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          node scripts/verken-opendata.mjs 2>&1 | tee -a "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
       - name: Reisadviezen ophalen
         run: node scripts/fetch-corpus.mjs ${{ github.event.inputs.landen }}
 

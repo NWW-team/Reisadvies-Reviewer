@@ -73,8 +73,8 @@ dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
 *Te lange zinnen*, *Te lange zinnen incl. link*, *Tekstfouten*, *Mogelijke spelfouten*,
-*Linkteksten*, *Lijdende vorm*, *Twijfeltaal*, *Hoe vaak iets gebeurt*, *Volgorde van de rubrieken*
-en *Notatie en stijl*. Alles staat aan; een klik zet een soort weg. Een aangevinkte knop is gevuld
+*Linkteksten*, *Lijdende vorm*, *Twijfeltaal: misschien, mogelijk*, *Twijfeltaal: vaak, soms*,
+*Volgorde van de rubrieken* en *Notatie en stijl*. Alles staat aan; een klik zet een soort weg. Een aangevinkte knop is gevuld
 met een vinkje, een uitgezette is doorgestreept met een kruisje, zodat je ziet wat een klik doet. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
 
@@ -271,6 +271,20 @@ veranderde:
   geen woordenlijst voor is aan te leggen, en ze staan vrijwel altijd goed. Eén groep namen kent de
   tool wél: de landen zelf, uit de landenlijst van de open data. `landnaam-schrijfwijze` vond zo dat
   op het Tsjechië-advies *"Bent u in Tsjechie en bent u in nood?"* staat, zonder trema.
+
+## Vals alarm in de spellingtoets wegwerken
+
+Meldt de tool een woord dat gewoon goed is? Dat hoort in
+[`regels/uitzonderingen.txt`](regels/uitzonderingen.txt). Die lijst hoort bij de webredactie, niet
+bij de techniek: hij groeit met het gebruik.
+
+De weg ernaartoe: zet de spellingtoets aan, en klik op **Kopieer deze N woorden als uitzondering**.
+Die knop staat naast de spellingknop zodra er onbekende woorden zijn, en zet ze als lijst op het
+klembord. Plak ze onderaan in `uitzonderingen.txt`, één woord per regel. Hoofdletters doen er niet
+toe — de toets vergelijkt op kleine letters.
+
+Dit staat los van de knoppen *Eens / Oneens / Onterecht* onder een bevinding. Die leggen een oordeel
+vast over dít advies; de uitzonderingenlijst verandert de regel voor alle adviezen tegelijk.
 
 ## Over de regels
 

@@ -117,7 +117,7 @@
     },
     {
       "id": "twijfeltaal",
-      "label": "Twijfeltaal",
+      "label": "Twijfeltaal: misschien, mogelijk",
       "toelichting": "Misschien, mogelijk, waarschijnlijk: woorden die de bewering zelf verzwakken. Daar is bijna altijd een stelliger formulering voor.",
       "regels": [
         "zin-twijfeltaal"
@@ -125,7 +125,7 @@
     },
     {
       "id": "frequentiewoorden",
-      "label": "Hoe vaak iets gebeurt",
+      "label": "Twijfeltaal: vaak, soms",
       "toelichting": "Vaak, soms, regelmatig. Ook twijfeltaal volgens de schrijfwijzer, maar soms feitelijke nuance: over terroristische groepen kun je niet schrijven dat ze aanslagen plegen.",
       "regels": [
         "zin-frequentiewoord"

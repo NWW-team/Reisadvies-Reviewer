@@ -1094,3 +1094,42 @@ test('kinderen-paspoort: een heel ander document blijft wel gemeld', () => {
     + 'en een ESTA nodig voor een reis naar Tsjechië.</p>'), { land: 'Tsjechië' });
   assert.ok(ids.includes('kinderen-paspoort'), 'een ESTA is geen visum, dus dit is echt andere inhoud');
 });
+
+/**
+ * De vijf vaste H2's uit de matrix moeten er allemaal zijn, niet alleen kloppen als ze er zijn.
+ * Wordt een advies als platte tekst geplakt zonder opmaak, dan ziet de parser geen koppen -- en
+ * bleef de tool tot 19 september 2026 stil, terwijl de matrix deze vijf koppen net zo vast
+ * voorschrijft als hun inhoud.
+ */
+test('h2-ontbreekt: platte tekst zonder koppen mist alle vijf', () => {
+  const html = '<p>Reist u naar Testland? Lees welke veiligheidsrisico\'s er zijn.</p>'
+    + '<p>In het kort De kleurcode van het reisadvies voor Testland is groen. U kunt erheen '
+    + 'reizen. Lees welke veiligheidsrisico\'s er zijn.</p>';
+  const ids = idsVan(html, { land: 'Testland' });
+  const missend = ids.filter((r) => r === 'h2-ontbreekt').length;
+  assert.equal(missend, 5, 'alle vijf vaste H2\'s ontbreken in platte tekst zonder koppen');
+});
+
+test('h2-ontbreekt: een goed opgemaakt advies met alle vijf koppen geeft geen melding', () => {
+  const html = '<h2>In het kort</h2><p>' + 'kort '.repeat(10) + '</p>'
+    + '<h2>Welke veiligheidsrisico\'s zijn er in Testland?</h2><p>tekst</p>'
+    + '<h2>Wat kan ik doen in een noodsituatie?</h2><p>tekst</p>'
+    + '<h2>Hoe bereid ik mijn reis naar Testland voor?</h2><p>tekst</p>'
+    + '<h2>Ook nuttig</h2><p>tekst</p>';
+  const ids = idsVan(html, { land: 'Testland' });
+  assert.ok(!ids.includes('h2-ontbreekt'));
+});
+
+test('h2-ontbreekt blijft stil als alle vijf er staan maar één verkeerd is geformuleerd', () => {
+  // Dat is het terrein van h2-vast: die geeft de precieze foutieve tekst als fragment. Zonder
+  // deze grens meldden beide regels hetzelfde probleem (gemeten bij Amerikaans-Samoa en
+  // Mauritius, die allebei zo'n H2 net anders formuleren).
+  const html = '<h2>In het kort</h2><p>' + 'kort '.repeat(10) + '</p>'
+    + '<h2>Welke veiligheidsrisico\'s zijn er in Testland?</h2><p>tekst</p>'
+    + '<h2>Wat kunt u doen in een noodsituatie?</h2><p>tekst</p>'
+    + '<h2>Hoe bereid ik mijn reis naar Testland voor?</h2><p>tekst</p>'
+    + '<h2>Ook nuttig</h2><p>tekst</p>';
+  const ids = idsVan(html, { land: 'Testland' });
+  assert.ok(!ids.includes('h2-ontbreekt'), 'vijf koppen aanwezig, dus geen "ontbreekt"-melding');
+  assert.ok(ids.includes('h2-vast'), 'de verkeerde formulering hoort wel gemeld te worden, door h2-vast');
+});

@@ -755,13 +755,13 @@
     ],
     "zinnen": 94,
     "fout": 4,
-    "letop": 13,
+    "letop": 14,
     "linkzin": 2,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 13,
+      "let-op": 14,
       "link-zin": 2,
       "info": 1,
       "twijfel": 2
@@ -781,6 +781,7 @@
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
+      "link-tekstlengte": 1,
       "aanhalingstekens": 3
     },
     "bevindingen": [
@@ -937,6 +938,13 @@
         "boodschap": "Deze zin telt 22 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Check wat u mee mag nemen naar de VAE op de website van de overheid van de VAE (informatie in het Engels).",
         "kop": "Bagageregels"
+      },
+      {
+        "regel": "link-tekstlengte",
+        "ernst": "let-op",
+        "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
+        "boodschap": "Linktekst is 80 tekens. Maximaal 70.",
+        "fragment": "Check welke vaccinaties u nodig heeft voor de Verenigde Arabische Emiraten (VAE)"
       },
       {
         "regel": "aanhalingstekens",
@@ -5488,13 +5496,13 @@
     ],
     "zinnen": 111,
     "fout": 5,
-    "letop": 18,
+    "letop": 19,
     "linkzin": 3,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
       "fout": 5,
-      "let-op": 18,
+      "let-op": 19,
       "link-zin": 3,
       "info": 1,
       "twijfel": 8
@@ -5511,6 +5519,7 @@
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
+      "link-tekstlengte": 1,
       "aanhalingstekens": 1
     },
     "bevindingen": [
@@ -5800,6 +5809,13 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR).",
         "kop": "Reisvaccinaties"
+      },
+      {
+        "regel": "link-tekstlengte",
+        "ernst": "let-op",
+        "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
+        "boodschap": "Linktekst is 80 tekens. Maximaal 70.",
+        "fragment": "Check welke vaccinaties u nodig heeft voor de Democratische Republiek Congo (DRC"
       },
       {
         "regel": "aanhalingstekens",
@@ -30598,13 +30614,13 @@
     ],
     "zinnen": 103,
     "fout": 5,
-    "letop": 11,
+    "letop": 12,
     "linkzin": 4,
     "twijfel": 5,
     "info": 2,
     "perErnst": {
       "fout": 5,
-      "let-op": 11,
+      "let-op": 12,
       "link-zin": 4,
       "info": 2,
       "twijfel": 5
@@ -30621,6 +30637,7 @@
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 1,
+      "link-tekstlengte": 1,
       "aanhalingstekens": 1
     },
     "bevindingen": [
@@ -30834,6 +30851,13 @@
         "boodschap": "Lijdende vorm: \"wordt … geaccepteerd\". Schrijf actief.",
         "fragment": "Mogelijk wordt uw bankpas of creditcard ook niet geaccepteerd in winkels, restaurants en hotels.",
         "kop": "Geldzaken"
+      },
+      {
+        "regel": "link-tekstlengte",
+        "ernst": "let-op",
+        "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
+        "boodschap": "Linktekst is 83 tekens. Maximaal 70.",
+        "fragment": "Check welke documenten u nog meer nodig heeft om te reizen met een minderjarig kind"
       },
       {
         "regel": "aanhalingstekens",

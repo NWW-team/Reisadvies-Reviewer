@@ -263,8 +263,9 @@ veranderde:
 - `link-plakt-aan-woord` vindt links die aan het woord ervoor vastplakken. Aruba heeft
   `K<a>ijk op de website…</a>`: op de pagina lees je "Kijk", maar alleen "ijk" is klikbaar. 5
   meldingen, alle vijf terecht. Tegelijk werd de vrijstelling voor vaste linkteksten verbreed: die
-  gold niet voor de vaste zin met een lange landnaam erin, en niet voor een vaste zin met een
-  landspecifieke invoeging. Dat scheelde 6 onterechte meldingen.
+  gold niet voor de vaste zin met een lange landnaam erin. Nu mag `{land}` zijn ingevuld met de
+  landnaam, met of zonder lidwoord — maar ook niet meer dan dat: voegt een redacteur iets toe, dan
+  hoort dat gemeld te worden, want een woord te veel is soms jüist de fout.
 - Vier controles erbij die op hetzelfde criterium zijn gekozen — het antwoord staat vast, dus de
   tool kan niet gokken: een dubbel woord (*Het het departement*), een spatie voor een leesteken
   (*Algemeen alarmnummer : 101*), de standplaats van een post (*Bogota* → *Bogotá*) en een vaste

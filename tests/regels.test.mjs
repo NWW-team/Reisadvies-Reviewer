@@ -586,10 +586,10 @@ test('een vaste linktekst blijft vrijgesteld, ook met de landnaam of een invoegi
   assert.ok(!link('Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek'),
     'de vaste zin met de landnaam erin hoort vrijgesteld te blijven');
 
-  // En de vaste zin met een kleine aanpassing: Venezuela schrijft "nog meer", omdat de zin
-  // ervoor al een document noemt. De vaste tekst zelf is al 74 tekens.
-  assert.ok(!link('Check welke documenten u nog meer nodig heeft om te reizen met een minderjarig kind'),
-    'een vaste zin met een invoeging hoort ook vrijgesteld te zijn');
+  // Maar alleen de landnaam met zijn lidwoord. Voegt een redacteur iets toe, dan is dat een
+  // keuze en hoort de linktekst gewoon gemeld te worden — anders mis je een woord te veel.
+  assert.ok(link('Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek (CAR)'),
+    'een toevoeging van de redacteur hoort wel gemeld te worden');
 
   // Tegenproef: een te lange linktekst in eigen woorden hoort w\u00e9l gemeld te worden.
   assert.ok(link('Bekijk hier de uitgebreide toelichting op alle regels die op dit moment gelden'),

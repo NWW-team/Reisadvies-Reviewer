@@ -478,14 +478,24 @@ letterlijk in een vaste zin zát. Twee soorten vielen daardoor buiten de boot:
 1. **De vaste zin met de landnaam erin.** *"Check welke vaccinaties u nodig heeft voor de
    Centraal-Afrikaanse Republiek"* is 75 tekens. De vaste zinnen werden rond `{land}` opgeknipt, dus
    de hele zin stond nergens in de lijst. Nu staat hij er ook heel in, met de landnaam ingevuld.
-2. **De vaste zin met een kleine aanpassing.** Venezuela schrijft *"Check welke documenten u **nog
-   meer** nodig heeft om te reizen met een minderjarig kind"*, omdat de zin ervoor al één document
-   noemt (een notariële akte). Dat is de vaste tekst met een landspecifieke aanpassing, geen eigen
-   linktekst — en de vaste tekst zélf is al 74 tekens, dus over de limiet komt hij hoe dan ook.
-   Daarom telt een linktekst die voor minstens 85% uit een vaste zin bestaat nu ook als vast.
+2. **Het lidwoord bij de landnaam.** *"voor de Centraal-Afrikaanse Republiek"* tegenover *"voor
+   Saint Vincent en de Grenadines"*: dat lidwoord is grammatica, geen keuze. `{land}` mag daarom
+   worden ingevuld met de landnaam, met of zonder *de* of *het*.
 
-Gemeten over 226 adviezen: van de 52 meldingen vallen er 6 weg, en alle zes zijn een vaste zin met
-de landnaam of een invoeging erin. De overige 46 blijven staan; dat zijn eigen linkteksten.
+**Verder niets — en dat is een bewuste grens.** Eerst stond hier een soepeler regel: een linktekst
+die voor minstens 85% uit een vaste zin bestond, telde als vast. Dat ving ook Venezuela's *"Check
+welke documenten u **nog meer** nodig heeft…"*, waar die twee woorden nodig zijn omdat de zin ervoor
+al een document noemt.
+
+De opdrachtgever wees die regel af, met een argument dat sterker is: *"kleine aanpassing"* is niet te
+definiëren, en een woord te veel is soms jüist de fout. Bij Venezuela is het nodig, bij een ander
+advies misschien niet — en met een soepele regel zie je dat verschil nooit. Beter laten oppoppen en
+per geval oordelen, met de knop *Onterecht*, dan stilletjes slikken en de echte gevallen missen.
+
+Gemeten over 226 adviezen: van de 52 meldingen vallen er 3 weg (Saint Vincent, de Centraal-Afrikaanse
+Republiek en de Amerikaanse Maagdeneilanden — de kale landnaam, met of zonder lidwoord). Blijven
+staan: 49, waaronder *"de Verenigde Arabische Emiraten (VAE)"* en *"de Democratische Republiek Congo
+(DRC)"*, want die afkorting is een toevoeging van de redacteur.
 
 **Nieuw: `link-plakt-aan-woord`.** Bij het meten hierboven viel een linktekst op die met een kleine
 letter begon: *"ijk op de website van de Arubaanse overheid"*. In de bron staat:

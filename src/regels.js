@@ -1034,13 +1034,20 @@ export function maakToetser(data) {
      * "Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek" is de vaste
      * zin met een lange landnaam erin, en die staat niet in de opgeknipte stukken hierboven.
      */
+    // {land} mag met of zonder lidwoord zijn ingevuld: "voor de Centraal-Afrikaanse Republiek"
+    // naast "voor Saint Vincent en de Grenadines". Dat lidwoord is grammatica, geen keuze van de
+    // redacteur. Verder niets: schrijft iemand "de Verenigde Arabische Emiraten (VAE)", dan is die
+    // afkorting wél een keuze, en dan hoort de linktekst gewoon gemeld te worden.
     const sjabloonHeel = [];
     for (const bronTekst of [...sj.vaste_teksten.map((x) => x.zin), ...vrijgesteld, sj.intro.standaard,
       sj.intro.alleen_rood, sj.contactcenter.zin]) {
       for (const zin of norm(bronTekst).split(/(?<=[.?!])\s+/)) {
-        const heel = norm(zin.replace(/\{land\}/g, norm(doc.land || ''))
-          .replace(/\{gebieden\}|\{kleur\}|\{vrij\}/g, ' '));
-        if (heel.length > 25) sjabloonHeel.push({ tekst: heel, woorden: new Set(kopWoorden(heel)) });
+        for (const lidwoord of ['', 'de ', 'het ']) {
+          const heel = norm(zin.replace(/\{land\}/g, lidwoord + norm(doc.land || ''))
+            .replace(/\{gebieden\}|\{kleur\}|\{vrij\}/g, ' '));
+          if (heel.length > 25) sjabloonHeel.push(heel);
+          if (!zin.includes('{land}')) break;            // zonder {land} is er niets te variëren
+        }
       }
     }
 
@@ -1054,16 +1061,7 @@ export function maakToetser(data) {
       const n = norm(t).replace(/[?.!]\s*$/, '');
       if (n.length <= 20) return false;
       if (sjabloonZinnen.some((kern) => kern.includes(n))) return true;
-      if (sjabloonHeel.some((z) => z.tekst.includes(n))) return true;
-      // Een redacteur voegt soms een woord toe waar het land om vraagt: Venezuela schrijft
-      // "Check welke documenten u nog meer nodig heeft", omdat de zin ervoor al één document
-      // noemt. Dat is de vaste tekst met een aanpassing, geen eigen linktekst — en de vaste
-      // tekst zélf is al 74 tekens, dus over de limiet komt hij hoe dan ook. Daarom telt een
-      // linktekst die voor het grootste deel uit een vaste zin bestaat ook als vast.
-      const w = kopWoorden(n);
-      if (w.size < 5) return false;
-      return sjabloonHeel.some((z) =>
-        [...w].filter((x) => z.woorden.has(x)).length / w.size >= 0.85);
+      return sjabloonHeel.some((z) => z.includes(n));
     };
 
     // ---------- tekstfouten ----------

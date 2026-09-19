@@ -33,6 +33,11 @@ const parse = alsNamespace(lees('src', 'parse.js'), 'Parse', ['parseAdvies', 'sp
 const regels = alsNamespace(lees('src', 'regels.js'), 'Regels', ['maakToetser', 'norm', 'ERNST', 'ERNST_VOLGORDE'],
   [[/^import \{ telWoorden, splitsZinnen \} from '\.\/parse\.js';$/m,
     'const telWoorden = Parse.telWoorden;\nconst splitsZinnen = Parse.splitsZinnen;']]);
+// Adapter is puur regex op een string, geen Node-specifieke API's; hij kan zo de browser in.
+// Nodig voor de ververs-knop: die haalt de ruwe XML van één land rechtstreeks op en zet hem om
+// met dezelfde functie die de wekelijkse ophaalronde gebruikt, zodat het altijd hetzelfde
+// document oplevert, vers of uit de momentopname.
+const adapter = alsNamespace(lees('src', 'adapter.js'), 'Adapter', ['uitApiRespons']);
 
 const regeldata = {
   matrix: JSON.parse(lees('regels', 'matrix.json')),
@@ -75,6 +80,7 @@ if (!voorbeelden.length) {
 const pagina = lees('src', 'app.html')
   .replace('/*__PARSE__*/', () => parse)
   .replace('/*__REGELS__*/', () => regels)
+  .replace('/*__ADAPTER__*/', () => adapter)
   .replace('/*__REGELDATA__*/', () => JSON.stringify(regeldata))
   .replace('/*__VOORBEELDEN__*/', () => JSON.stringify(voorbeelden));
 

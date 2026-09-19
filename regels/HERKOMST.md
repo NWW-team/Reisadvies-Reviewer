@@ -1182,3 +1182,94 @@ staat daarom alleen voor déze ene zin apart in `vrijgestelde_formuleringen.zinn
 generieke regel.
 
 **Stand:** 3033 → 3030 bevindingen over 226 adviezen, 169 tests groen.
+
+## "Eventueel" definitief goedgekeurd, en het aantal geladen woorden eruit (19 september 2026)
+
+Bij Taiwan zag Martijn dezelfde melding terug die eerder al ter discussie stond, en besliste: *"hoeft
+niet op te poppen, keur maar goed."* Dat is de definitieve lijn — na twee eerdere wendingen op
+dezelfde vraag (eerst goedkeuren, toen "sjabloon is de waarheid, wat afwijkt mag oppoppen") ligt hij
+nu vast: het woord *eventueel* zelf hoeft nooit meer gemeld te worden, in elke vorm.
+
+De regel `kinderen-paspoort` herkent nu ook: *"en eventueel een visum"*, de komma-vorm *", en
+eventueel een visum,"*, de combinatie met ID-kaart, en de haakjesvorm *"en (eventueel) een visum"*.
+Wat **wel** gemeld blijft: een heel ander document in plaats van of naast het visum — een ESTA, een
+ETA, een immigratiekaart, een inreisvergunning, een Digital Arrival Card. Dat is geen kwestie van
+"eventueel" maar van andere inhoud, en dat hoort de redactie nog steeds te zien.
+
+**Gemeten: 91 → 28 meldingen op deze regel.** De 63 die wegvielen waren stuk voor stuk alleen het
+woord *eventueel*, in een van de vier vormen. De 28 die overblijven noemen allemaal een ander
+document of een andere eis dan het visum uit het sjabloon.
+
+**De tests die dit vastlegden bleken zelf niet te testen wat ze beweerden.** `kinderen-paspoort`
+toetst alleen binnen de rubriek *Paspoort, visum, rijbewijs* (`rubriekTekst` zoekt op het woord
+"paspoort" in de H3-kop). De eerste versie van de nieuwe tests gebruikte per ongeluk
+`<h3>Reizen met kinderen</h3>` als kop — dat bevat het woord "paspoort" niet, dus de hele toets sloeg
+nooit aan en de tests waren zinledig: ze slaagden ook zonder de eigenlijke fix. Gecorrigeerd naar
+`<h3>Paspoort, visum, rijbewijs</h3>`, zoals elk echt advies dit ook noemt (bevestigd via de
+parser: Taiwan's "Reizen met kinderen" valt onder H3 "Paspoort, visum, rijbewijs").
+
+## Het aantal geladen woorden zegt niets (19 september 2026)
+
+Martijn: *"dat aantal geladen woorden mag wel weg, zegt niks."* De statusregel bij de spellingtoets
+meldde *"409.761 woorden geladen"* voordat hij verderging met wat er te zien is. Dat getal betekent
+niets voor een redacteur — het is intern boekhouden, geen bruikbare informatie. Eruit; de tekst begint
+nu meteen met wat er nu wél te zien is: *"Onbekende woorden staan nu onder 'Mogelijke spelfouten'.
+Namen worden overgeslagen: die staan niet in de woordenlijst en zijn dus niet te beoordelen."*
+
+## Spelling standaard aan (19 september 2026)
+
+Martijn twijfelde over de "Spelling ook nakijken"-knop: *"Is het idee spelling ook al in filter aan
+te geven standaard of moet dat per se ophalen?"* Na uitleg dat het enige nadeel van standaard
+ophalen een paar seconden wachten is — geen kwaliteitsverlies, de toets werkt daarna gewoon goed —
+was zijn antwoord kort: *"weet niet wat nadeel is van de 1,3 mb, maakt mij niet uit"* en, in
+dezelfde lijn als zijn eerdere opmerking over losse filters, *"ik denk dat het onderdeel is/kan zijn
+van een reisadvies checken."*
+
+De knop is weg. De woordenlijst wordt nu opgehaald zodra de pagina laadt — niet wachtend op een
+klik, niet wachtend tot er een land is gekozen. Is een advies al getoetst voordat de lijst binnen is
+(dat duurt een paar seconden), dan toetst de pagina het vanzelf opnieuw zodra de lijst er is, en
+verschijnt "Mogelijke spelfouten" alsnog in de filterbalk. Mislukt het ophalen (geen internet), dan
+blijft de rest van de tool gewoon werken; een verse laadbeurt van de pagina probeert het opnieuw.
+
+In Chromium gecontroleerd: de knop bestaat niet meer, de statusregel meldt *"Onbekende woorden staan
+nu onder 'Mogelijke spelfouten'"* zonder tussenstap, en het filter staat er meteen bij het openen
+van de pagina.
+
+## Een advies verversen: een live knop en een dagelijkse ronde (19 september 2026)
+
+Martijn: *"hoe vaak/wanneer wordt ververst het reisadvies, want dan kun je check doen ook van iets
+wat eerder de dag is geupdate? of kun je iets van een verversknop doen?"* Antwoord op het eerste
+deel: de 226 adviezen in de tool waren een momentopname, ververst door `.github/workflows/corpus.yml`
+— tot nu toe elke **maandag** 05:00 uur. Iets dat dinsdagmiddag wijzigt, kwam dus pas de maandag
+erna in de tool.
+
+**Twee dingen zijn gebouwd, allebei goedgekeurd** (*"graag optie 2, elke ochtend om 8 uur bijv. een
+verversing zou ook kunnen of beide"*):
+
+**1. Een knop, "Dit advies verversen", die één land rechtstreeks ophaalt** bij de open data van
+Nederlandwereldwijd.nl — dezelfde URL die de wekelijkse ronde gebruikt — en meteen opnieuw toetst,
+zonder op de volgende ophaalronde te wachten. Die aanroep gaat via `Adapter.uitApiRespons`, dezelfde
+functie die `scripts/fetch-corpus.mjs` ook gebruikt; die functie is pure regex op een string, geen
+Node-specifieke API's, en kan dus zo de browser in. Nieuw folded-in namespace `Adapter` in
+`scripts/bouw-pagina.mjs`, naast `Parse` en `Regels`.
+
+**Of dit werkt is van buitenaf niet te zien.** Of de open-data-dienst een rechtstreeks verzoek uit
+de browser toestaat (CORS), bepaalt de dienst zelf via een responsheader — en die header is pas te
+zien vanuit een échte browser op het échte domein waar de pagina straks op staat (github.io). Deze
+ontwikkelomgeving zit achter een eigen netwerk-allowlist die dat domein blokkeert (bevestigd: een
+rechtstreekse aanroep geeft hier een `403` van de eigen proxy, niet van de open-data-dienst), dus
+hier is niet vast te stellen of het lukt. Martijn accepteerde dat vooraf: *"alleen als het goed werkt
+... bij falen evt. uitwijk, werkt momenteel niet, plak je tekst."* Dat is precies hoe de knop zich
+gedraagt: lukt de aanroep niet — CORS, geen netwerk, een andere fout — dan blijft de rest van de tool
+gewoon werken en wijst de melding naar "Eigen tekst plakken". In Chromium is dat faalpad hier
+daadwerkelijk doorlopen (de sandbox blokkeert het verzoek immers zelf): knop uit tijdens het ophalen,
+foutmelding met de juiste tekst, knop weer aan. Wat *niet* getest kon worden is het geslaagde pad; dat
+blijkt pas op de live Pages-versie.
+
+De knop staat alleen aan bij een advies met een bekende iso-code (dus niet bij geplakte tekst, waar
+geen land bij hoort om een open-data-adres voor op te zoeken).
+
+**2. De wekelijkse ronde is een dagelijkse ronde geworden.** `cron: '0 6 * * *'` in plaats van
+`'0 5 * * 1'` — elke ochtend 06:00 UTC, wat door de zomer-/wintertijd vanzelf tussen 07:00 en 08:00
+Nederlandse tijd uitkomt (cron kent geen tijdzones). Zo staat de lijst in de tool nooit meer dan een
+dag achter, ook zonder dat iemand op de ververs-knop klikt.

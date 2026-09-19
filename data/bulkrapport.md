@@ -7,7 +7,7 @@ Gedraaid op 2026-09-19 over 226 reisadviezen.
 - **74** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **200** van de 3030 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **200** van de 2967 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -28,7 +28,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | rood — fout | 290 | 152 |
 | geel/oranje — let op | 1522 | 216 |
 | lichtblauw — lange zin met link | 542 | 201 |
-| grijs — ter overweging | 220 | 144 |
+| grijs — ter overweging | 157 | 109 |
 | roze — twijfeltaal | 456 | 158 |
 
 ## Per regel
@@ -38,7 +38,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `zin-max-woorden` | 219 | 1273 |
 | `zin-frequentiewoord` | 147 | 387 |
 | `zin-lijdende-vorm` | 124 | 271 |
-| `kinderen-paspoort` | 91 | 91 |
 | `woord-onbekend` | 67 | 138 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
@@ -50,6 +49,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `rubrieken-max` | 37 | 37 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
+| `kinderen-paspoort` | 28 | 28 |
 | `h3-niet-melden` | 25 | 25 |
 | `rubriek-vrij-te-hoog` | 23 | 23 |
 | `rubrieken-volgorde` | 22 | 22 |

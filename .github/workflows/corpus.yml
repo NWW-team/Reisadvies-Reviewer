@@ -3,7 +3,8 @@ name: Corpus ophalen
 # De Claude Code-omgeving waarin dit project wordt ontwikkeld zit achter een netwerk-allowlist
 # die alleen GitHub en de package-registries doorlaat. Een Actions-runner heeft wel gewone
 # internettoegang, dus het ophalen van de open data gebeurt hier, en het resultaat wordt naar
-# de repo gecommit. Daarmee is het corpus voor iedereen (en voor de bulkslag) beschikbaar.
+# de repo gecommit. Daarmee is het corpus voor iedereen (en voor de bulkslag) beschikbaar, en
+# staat de lijst in de tool nooit meer dan een dag achter op de website zelf.
 
 on:
   workflow_dispatch:
@@ -13,7 +14,12 @@ on:
         required: false
         default: ''
   schedule:
-    - cron: '0 5 * * 1'   # elke maandag 05.00 UTC
+    # Elke ochtend, niet meer alleen op maandag: een advies dat vandaag wijzigt, staat dan
+    # morgenochtend in de tool in plaats van pas volgende week. 06.00 UTC is 08.00 uur Nederlandse
+    # zomertijd en 07.00 uur wintertijd -- cron kent geen tijdzones, dus dat verschuift zelf mee
+    # met de klok. Naast deze dagelijkse ronde kan een redacteur in de tool ook één land rechtstreeks
+    # verversen met de knop "Dit advies verversen"; deze ronde ververst alle 227 in één keer.
+    - cron: '0 6 * * *'
   push:
     # workflow_dispatch telt pas mee zodra deze workflow op de default branch staat. Tot die
     # tijd is een marker in de commitboodschap de manier om hem bewust te starten.

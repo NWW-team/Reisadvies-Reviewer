@@ -967,3 +967,104 @@ test('doc-woordenaantal: de langste blokken tellen per rubriek, met H4-kinderen 
   assert.match(b.notitie, /vrije tekst.*welke gebieden/,
     'staat Regionale risico\'s in de lijst, dan hoort de tool te zeggen dat daar ook vrije tekst in zit');
 });
+
+/**
+ * "Regionale risico's" heeft twee toetsen: het vaste kopje per kleur, en de vaste uitleg
+ * eronder. Allebei zeiden altijd "ontbreekt" en gaven nooit een fragment, dus klikken sprong
+ * nergens heen -- ook niet als er wel degelijk iets stond, alleen onvolledig.
+ *
+ * Elk advies hieronder is compleet met een eigen "In het kort" en informatieservice-oproep, zodat
+ * alleen de rubriek Regionale risico's ter discussie staat en niet toevallig andere regels meedoen.
+ */
+function kortBlok(bullets) {
+  return '<h2>In het kort</h2><ul>' + bullets.map((b) => '<li>' + b + '</li>').join('')
+    + '</ul><p>Let op: meld u aan voor de informatieservice.</p>';
+}
+
+test('regionaal-kleur-tekst: een onvolledige zin heet "wijkt af" en wijst de zin aan', () => {
+  const html = kortBlok([
+    'De kleurcode van het reisadvies is rood voor het noorden. Wat uw situatie ook is: reis niet '
+      + 'hierheen. Het is er te gevaarlijk.',
+    'Voor de rest van Tsjechië geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk '
+      + 'is. Het is niet veilig er op vakantie te gaan.',
+  ]) + '<h3>Regionale risico&#39;s</h3>'
+    + '<h4>Rood: niet reizen</h4><p>Wat uw situatie ook is: reis niet naar gebieden met kleurcode '
+    + 'rood. Het is er te gevaarlijk.</p>'
+    + '<h4>Oranje: alleen noodzakelijke reizen</h4><p>Reis alleen naar gebieden met kleurcode '
+    + 'oranje als dit noodzakelijk is. Het is niet veilig er op vakantie te gaan. De Nederlandse '
+    + 'ambassade kan u minder goed helpen als u in de problemen komt.</p>';
+  const b = bevindingenVan(html, { land: 'Tsjechië', kleurcodes: ['rood', 'oranje'] })
+    .filter((x) => x.regel === 'regionaal-kleur-tekst' && x.boodschap.includes('rood'));
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /wijkt.*af van de vaste tekst/);
+  assert.match(b[0].fragment, /Wat uw situatie ook is/);
+});
+
+test('regionaal-kleur-tekst: ontbreekt het hele kleurblok, dan blijft het "ontbreekt"', () => {
+  const html = kortBlok([
+    'De kleurcode van het reisadvies is rood voor het noorden. Wat uw situatie ook is: reis niet '
+      + 'hierheen. Het is er te gevaarlijk.',
+    'Voor de rest van Tsjechië geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk '
+      + 'is. Het is niet veilig er op vakantie te gaan.',
+  ]) + '<h3>Regionale risico&#39;s</h3>'
+    + '<h4>Oranje: alleen noodzakelijke reizen</h4><p>Reis alleen naar gebieden met kleurcode '
+    + 'oranje als dit noodzakelijk is. Het is niet veilig er op vakantie te gaan. De Nederlandse '
+    + 'ambassade kan u minder goed helpen als u in de problemen komt.</p>';
+  const b = bevindingenVan(html, { land: 'Tsjechië', kleurcodes: ['rood', 'oranje'] })
+    .filter((x) => x.regel === 'regionaal-kleur-tekst' && x.boodschap.includes('rood'));
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /ontbreekt/);
+  // Er is niets specifieks onder deze kleur om aan te wijzen, dus valt de melding terug op de
+  // sectiekop: beter naar "Regionale risico's" springen dan nergens heen.
+  assert.equal(b[0].fragment, "Regionale risico's");
+});
+
+test('regionaal-kleur-kop: het echt ontbrekende kopje springt naar "Regionale risico\'s"', () => {
+  const html = kortBlok([
+    'De kleurcode van het reisadvies is rood voor het noorden. Wat uw situatie ook is: reis niet '
+      + 'hierheen. Het is er te gevaarlijk.',
+    'Voor de rest van Tsjechië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn '
+      + 'bijzondere veiligheidsrisico&#39;s.',
+  ]) + '<h3>Regionale risico&#39;s</h3>'
+    + '<h4>Rood: niet reizen</h4><p>Wat uw situatie ook is: reis niet naar gebieden met kleurcode '
+    + 'rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de '
+    + 'problemen komt.</p>';
+  const b = bevindingenVan(html, { land: 'Tsjechië', kleurcodes: ['rood', 'geel'] })
+    .filter((x) => x.regel === 'regionaal-kleur-kop');
+  assert.equal(b.length, 1, 'het kopje voor geel ontbreekt echt');
+  assert.equal(b[0].fragment, "Regionale risico's",
+    'niets specifieks om aan te wijzen, dus springt de tool naar de sectiekop zelf');
+});
+
+/**
+ * "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht" staat
+ * letterlijk in het sjabloon, blok Criminaliteit. De lijdende vorm zit in de constructie zelf --
+ * bestolen worden overkomt je, het is geen keuze -- dus deze zin is vrijgesteld van de
+ * schrijfregels, in twee vormen: met het punt uit het sjabloon, en met een dubbele punt als er
+ * een opsomming op volgt (zoals Niger doet).
+ */
+test('de criminaliteit-themazin is vrijgesteld van de lijdende vorm, punt of dubbele punt', () => {
+  for (const slot of ['.', ':']) {
+    const ids = idsVan(advies('<h3>Criminaliteit</h3><p>Door een goede voorbereiding verkleint u '
+      + 'de kans dat u wordt beroofd of opgelicht' + slot + ' Lees meer op de pagina Hoe voorkom ik '
+      + 'dat ik slachtoffer word van criminaliteit in het buitenland?</p>'), { land: 'Tsjechië' });
+    assert.ok(!ids.includes('zin-lijdende-vorm'), `moet vrijgesteld zijn met slotteken "${slot}"`);
+  }
+});
+
+test('een herschreven variant van de criminaliteitzin blijft wel gemeld', () => {
+  // Alleen de letterlijke sjabloonzin is vrijgesteld; een eigen formulering niet.
+  const ids = idsVan(advies('<h3>Criminaliteit</h3><p>Hiermee verkleint u de kans dat u wordt '
+    + 'beroofd of opgelicht.</p>'), { land: 'Tsjechië' });
+  assert.ok(ids.includes('zin-lijdende-vorm'));
+});
+
+test('de dubbele-puntvorm blijft beperkt tot deze ene zin', () => {
+  // Een andere vaste zin die toevallig ook met een punt eindigt, mag niet zomaar ook met een
+  // dubbele punt goedgekeurd worden -- dat zou een zin met eigen tekst erachter (een citaat, een
+  // verwijzing) in zijn geheel vrijstellen. Getest op de ANWB-rijbewijszin plus een toevoeging.
+  const ids = idsVan(advies('<h3>Rijbewijs</h3><p>Uw Nederlandse rijbewijs is geldig in Tsjechië. '
+    + 'Lees meer over rijden in Tsjechië op de website van de ANWB onder \u2018Praag\u2019.</p>'),
+  { land: 'Tsjechië' });
+  assert.ok(ids.includes('aanhalingstekens'), 'de toegevoegde verwijzing met aanhalingstekens hoort gemeld te worden');
+});

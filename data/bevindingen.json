@@ -361,20 +361,19 @@
       "geel"
     ],
     "zinnen": 88,
-    "fout": 3,
+    "fout": 2,
     "letop": 10,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 2,
       "let-op": 10,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "regionaal-kleur-tekst": 1,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
@@ -382,14 +381,6 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
-      {
-        "regel": "regionaal-kleur-tekst",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode geel.",
-        "verwacht": "U kunt reizen naar gebieden met kleurcode geel. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
-      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -7578,7 +7569,8 @@
         "regel": "regionaal-kleur-tekst",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode rood.",
+        "boodschap": "Onder \"Regionale risico's\" wijkt de uitleg bij kleurcode rood af van de vaste tekst.",
+        "fragment": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood.",
         "verwacht": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
         "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
       },
@@ -19229,13 +19221,13 @@
       "geel"
     ],
     "zinnen": 106,
-    "fout": 4,
+    "fout": 3,
     "letop": 14,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 4,
+      "fout": 3,
       "let-op": 14,
       "link-zin": 1,
       "info": 1,
@@ -19243,7 +19235,6 @@
     },
     "perRegel": {
       "kleur-variant": 1,
-      "regionaal-kleur-tekst": 1,
       "h4-niet-melden": 1,
       "kinderen-paspoort": 1,
       "woord-onbekend": 9,
@@ -19261,14 +19252,6 @@
         "fragment": "De kleurcode van het reisadvies is rood voor het noordoosten van de provincie Cabo Delgado. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "regionaal-kleur-tekst",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode rood.",
-        "verwacht": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
-        "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
       },
       {
         "regel": "h4-niet-melden",
@@ -20262,19 +20245,19 @@
     ],
     "zinnen": 69,
     "fout": 0,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 0,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 0,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "zin-lijdende-vorm": 3,
+      "zin-lijdende-vorm": 2,
       "zin-max-woorden": 6
     },
     "bevindingen": [
@@ -20324,14 +20307,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
         "fragment": "Reis bij voorkeur met een chauffeur, gids en gewapende escorte (in sommige delen van het land is dit verplicht).",
-        "kop": "Criminaliteit"
-      },
-      {
-        "regel": "zin-lijdende-vorm",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Lijdende vorm: \"wordt … beroofd\". Schrijf actief.",
-        "fragment": "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht:",
         "kop": "Criminaliteit"
       },
       {
@@ -23770,7 +23745,8 @@
         "regel": "regionaal-kleur-tekst",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode rood.",
+        "boodschap": "Onder \"Regionale risico's\" wijkt de uitleg bij kleurcode rood af van de vaste tekst.",
+        "fragment": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood.",
         "verwacht": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
         "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
       },
@@ -23778,7 +23754,8 @@
         "regel": "regionaal-kleur-tekst",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Onder \"Regionale risico's\" ontbreekt de vaste uitleg bij kleurcode oranje.",
+        "boodschap": "Onder \"Regionale risico's\" wijkt de uitleg bij kleurcode oranje af van de vaste tekst.",
+        "fragment": "Reis alleen naar gebieden met kleurcode oranje als dit noodzakelijk is.",
         "verwacht": "Reis alleen naar gebieden met kleurcode oranje als dit noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
         "notitie": "Dit is de plek waar de volledige uitleg hoort te staan, omdat \"In het kort\" bij meerdere kleurcodes alleen de verkorte variant geeft."
       },
@@ -25131,6 +25108,7 @@
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Onder \"Regionale risico's\" ontbreekt het vaste kopje voor kleurcode geel.",
+        "fragment": "Regionale risico's",
         "verwacht": "Geel: let op, er zijn risico's"
       },
       {
@@ -27944,6 +27922,7 @@
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Onder \"Regionale risico's\" ontbreekt het vaste kopje voor kleurcode geel.",
+        "fragment": "Regionale risico's",
         "verwacht": "Geel: let op, er zijn risico's"
       },
       {

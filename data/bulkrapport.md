@@ -7,7 +7,7 @@ Gedraaid op 2026-09-19 over 226 reisadviezen.
 - **74** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **200** van de 3033 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **200** van de 3030 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,8 +25,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 292 | 152 |
-| geel/oranje — let op | 1523 | 216 |
+| rood — fout | 290 | 152 |
+| geel/oranje — let op | 1522 | 216 |
 | lichtblauw — lange zin met link | 542 | 201 |
 | grijs — ter overweging | 220 | 144 |
 | roze — twijfeltaal | 456 | 158 |
@@ -37,7 +37,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 |---|---:|---:|
 | `zin-max-woorden` | 219 | 1273 |
 | `zin-frequentiewoord` | 147 | 387 |
-| `zin-lijdende-vorm` | 124 | 272 |
+| `zin-lijdende-vorm` | 124 | 271 |
 | `kinderen-paspoort` | 91 | 91 |
 | `woord-onbekend` | 67 | 138 |
 | `h4-niet-melden` | 64 | 65 |
@@ -78,7 +78,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `eenheden-voluit` | 5 | 5 |
 | `titel-leestekens` | 5 | 5 |
 | `vragen-opeenvolgend` | 5 | 6 |
-| `regionaal-kleur-tekst` | 4 | 5 |
 | `tekst-plakfout` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `tekst-dubbel-woord` | 4 | 4 |
@@ -91,6 +90,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `tekst-cms-rest` | 2 | 2 |
 | `kleur-formulering-verboden` | 2 | 2 |
 | `kleur-vaste-tekst` | 2 | 2 |
+| `regionaal-kleur-tekst` | 2 | 3 |
 | `vaste-tekst-land-leeg` | 2 | 2 |
 | `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |

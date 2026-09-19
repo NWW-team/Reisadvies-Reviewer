@@ -250,10 +250,16 @@ function rubriekEenheden(doc, patroon) {
 /**
  * De handelingsinstructie van een vaste kleurtekst: alles ná de openingszin. De openingszin noemt
  * het land of het gebied en wisselt dus per advies; de instructie erachter ligt vast.
+ *
+ * Het slotpunt van de laatste zin telt niet mee. rubriekTekst plakt blokken aan elkaar met een
+ * enkele spatie, punt of geen punt maakt dan geen verschil voor de vergelijking -- en mist het
+ * origineel dat laatste punt (Mozambique, Angola: "... in de problemen komt" zonder punt), dan
+ * moet dat als "los te winnen puntje" gemeld worden, niet als "wijkt af van de vaste tekst". Dat
+ * laatste doet de tool niet; dat is aan de redactie om alsnog te herstellen.
  */
 function instructieVan(vasteTekst) {
   const zinnen = norm(vasteTekst || '').split(/(?<=\.)\s+/);
-  return zinnen.slice(1).join(' ').replace(/\{land\}|\{gebieden\}/g, '').trim();
+  return zinnen.slice(1).join(' ').replace(/\{land\}|\{gebieden\}/g, '').trim().replace(/\.$/, '');
 }
 
 /**
@@ -768,21 +774,42 @@ export function maakToetser(data) {
         .filter((k) => k.niveau === 4 && regioRe.test(k.h3 || ''))
         .map((k) => norm(k.tekst));
       const regioGenorm = norm(regioTekst);
+      // De H3-kop "Regionale risico's" zelf, letterlijk zoals dit advies hem schrijft (rechte of
+      // gekrulde apostrof) -- de enige plek die met zekerheid bestaat, ook als een kleurkopje
+      // eronder ontbreekt. Wijst een melding niets specifiekers aan, dan wijst hij dit aan: beter
+      // naar de juiste rubriek springen dan nergens heen.
+      const regioSectieKop = doc.koppen.find((k) => k.niveau === 3 && regioRe.test(k.tekst || ''));
 
       for (const kleur of kleurenVanAdvies) {
         const k = kleurcodes.kleuren[kleur];
         if (!k) continue;
 
-        if (k.regionaal_kop && !regioKoppen.some((x) => x === norm(k.regionaal_kop))) {
+        const heeftKop = k.regionaal_kop && regioKoppen.some((x) => x === norm(k.regionaal_kop));
+        if (k.regionaal_kop && !heeftKop) {
           b.push(bevinding('regionaal-kleur-kop', ERNST.letop, 'MX, tab Kleurcode-teksten',
             `Onder "Regionale risico's" ontbreekt het vaste kopje voor kleurcode ${kleur}.`,
-            { verwacht: k.regionaal_kop }));
+            { ...(regioSectieKop ? { fragment: regioSectieKop.tekst } : {}), verwacht: k.regionaal_kop }));
         }
+
         const instructie = instructieVan(k.regionaal_tekst);
         if (instructie && !regioGenorm.includes(instructie)) {
+          // Staat het kleurkopje er wel, dan staat er ook een blok met eigen tekst -- alleen niet
+          // de juiste. Dat is een andere melding dan "ontbreekt", en de tool kan de zin aanwijzen
+          // die er wél staat. Ontbreekt het kopje ook (heeftKop is dan false), dan is er niets
+          // onder deze kleur om aan te wijzen; regionaal-kleur-kop meldt dat al apart.
+          const kleurBlok = heeftKop
+            ? doc.blokken.find((x) => x.niveau === 4 && regioRe.test(x.h3 || '')
+                && norm(x.kop || '') === norm(k.regionaal_kop))
+            : null;
+          const fragment = kleurBlok
+            ? [...kleurBlok.alineas.flatMap((a) => a.zinnen), ...kleurBlok.opsommingen.flatMap((o) => o.items)][0]
+            : null;
           b.push(bevinding('regionaal-kleur-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
-            `Onder "Regionale risico's" ontbreekt de vaste uitleg bij kleurcode ${kleur}.`,
-            { verwacht: k.regionaal_tekst,
+            heeftKop
+              ? `Onder "Regionale risico's" wijkt de uitleg bij kleurcode ${kleur} af van de vaste tekst.`
+              : `Onder "Regionale risico's" ontbreekt de vaste uitleg bij kleurcode ${kleur}.`,
+            { ...(fragment ? { fragment } : (regioSectieKop ? { fragment: regioSectieKop.tekst } : {})),
+              verwacht: k.regionaal_tekst,
               notitie: 'Dit is de plek waar de volledige uitleg hoort te staan, omdat "In het kort" '
                 + 'bij meerdere kleurcodes alleen de verkorte variant geeft.' }));
         }

@@ -1138,3 +1138,47 @@ in plaats daarvan krijgt de melding er een zin bij zodra Regionale risico's in h
 **Gemeten: van de 46 adviezen boven de woordenlimiet staat Regionale risico's bij 16 in de top 3**,
 bij Thailand zelfs op de eerste plek met 702 woorden. Het aantal bevindingen verandert niet — nog
 steeds 3033 — dit is puur de aanwijzing die bij `doc-woordenaantal` wordt meegegeven.
+
+## Vier vervolgpunten uit de tweede testronde (19 september 2026)
+
+**1. Koppen die niets missen, maar wél niets hebben om aan te wijzen.** `regionaal-kleur-kop`
+meldt een écht ontbrekend H4-kopje onder Regionale risico's (Martijn: *"ok kan nog niet klikken op
+bevindingen die geen kopje zijn"*). Er is dan niets specifieks aan te wijzen — het kopje bestaat
+niet — maar de sectie *Regionale risico's* zelf altijd wel. De melding springt nu daar naartoe in
+plaats van nergens heen. Raakt Saoedi-Arabië en Thailand (allebei missen het gele kopje).
+
+**2. `regionaal-kleur-tekst` zei "ontbreekt" terwijl er wél iets stond.** Martijn: *"en kan hier
+niet springen naar regionale risico's"* — en bij het uitzoeken bleek Mozambique's tekst wél
+grotendeels te kloppen, alleen zonder het derde zinnetje over de ambassade. Dezelfde
+afwijkt/ontbreekt-splitsing als eerder bij `bagage-heen`: bestaat het kopje wél, dan wijst de
+melding nu de zin aan die er staat en zegt hij "wijkt af"; ontbreekt het kopje ook, dan blijft het
+"ontbreekt" en springt de melding naar de sectiekop.
+
+**3. Eén advies bleek daarbij zelf gelijk te hebben: het punt ontbrak.** Mozambique en Angola
+hebben de vaste tekst *woord voor woord* staan, maar de brontekst mist het allerlaatste leesteken
+("... in de problemen komt" zonder punt — te zien in de ruwe XML, waar de alinea direct overgaat in
+het volgende blok). Martijn: *"Wow scherp, inderdaad terecht, punt ontbreekt!"* Zo'n ontbrekend
+slotpunt hoort niet tot "wijkt af van de vaste tekst" — dat suggereert een inhoudelijk verschil
+terwijl er alleen interpunctie mist. De vergelijking (`instructieVan`) laat het slotpunt nu buiten
+beschouwing. Djibouti (extra woord "daar": *"als u **daar** in de problemen komt"*) en de
+Palestijnse Gebieden (*"vertegenwoordiging"* in plaats van *"ambassade"*, terecht want Nederland
+heeft daar geen ambassade) blijven wel gemeld — dat is echt andere inhoud.
+
+**4. De criminaliteitzin staat letterlijk in het sjabloon, lijdende vorm en al.** *"Door een goede
+voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht"* viel over `zin-lijdende-vorm`.
+Martijn: *"is dit geen zin uit sjabloon?"* Klopt — blok Criminaliteit, de aanbevolen verwijzing naar
+de themapagina, tussenkop en al. De lijdende vorm zit in de constructie zelf: bestolen worden
+overkomt je, het is geen keuze. Deze zin is nu vrijgesteld, in twee vormen: met het punt uit het
+sjabloon, en met een dubbele punt (Niger zet die neer omdat er een opsomming op volgt).
+
+**Die tweede vorm is met opzet niet als algemene regel gebouwd.** Een eerste poging liet bij élke
+vaste zin een puntvariant én een dubbele-puntvariant toe. Dat werkte averechts: 110 bevindingen
+verdwenen in één klap, waaronder Congo's *"Lees meer over rijden in de DRC op de website van de
+ANWB onder 'Congo-Kinshasa'"* — daar hoorde de melding over aanhalingstekens gewoon te blijven
+staan, want na de vaste ANWB-zin voegt de redacteur zelf nog een verwijzing toe met aanhalingstekens
+erin. Het slotteken is de plek waar de vaste zin ophoudt; laat je dat los voor alle zinnen, dan
+wordt ook wat een redacteur er zelf aan toevoegt in zijn geheel vrijgesteld. De dubbele-puntvorm
+staat daarom alleen voor déze ene zin apart in `vrijgestelde_formuleringen.zinnen`, niet als
+generieke regel.
+
+**Stand:** 3033 → 3030 bevindingen over 226 adviezen, 169 tests groen.

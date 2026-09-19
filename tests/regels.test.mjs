@@ -841,3 +841,53 @@ test('een lange gebiedenopsomming valt nog binnen het patroon', () => {
   { land: 'Tsjechië', kleurcodes: ['oranje', 'groen'] });
   assert.ok(!ids.includes('kleur-aanduiding'));
 });
+
+test('meer dan vijf gebieden bij een kleurcode wordt gemeld', () => {
+  const b = bevindingenVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is rood voor de provincie Noord, de provincie Zuid, de '
+    + 'stad Brno, het eiland Rab, de regio Zlín en het district Cheb. Wat uw situatie ook is: reis '
+    + 'niet hierheen. Het is er te gevaarlijk.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. Lees welke '
+    + 'veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] }).filter((x) => x.regel === 'kleur-gebieden-max');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /6 gebieden/);
+});
+
+test('buurlanden als oriëntatiepunt zijn geen losse gebieden', () => {
+  // Benin: "de noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en Nigeria"
+  // is één gebied met vier buurlanden erbij, geen vijf gebieden.
+  const ids = idsVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is rood voor de noordelijke regio&#39;s van Tsjechië die '
+    + 'grenzen aan Polen, Duitsland, Oostenrijk en Slowakije. Wat uw situatie ook is: reis niet '
+    + 'hierheen. Het is er te gevaarlijk.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. Lees welke '
+    + 'veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] });
+  assert.ok(!ids.includes('kleur-gebieden-max'));
+});
+
+test('een windrichting telt niet als los gebied: dat is juist de aanbevolen vorm', () => {
+  const ids = idsVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is rood voor het noorden, het oosten, het zuiden en het '
+    + 'westen van Tsjechië. Wat uw situatie ook is: reis niet hierheen. Het is er te '
+    + 'gevaarlijk.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. Lees welke '
+    + 'veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] });
+  assert.ok(!ids.includes('kleur-gebieden-max'));
+});
+
+test('de gebiedsvorm van de landzin mag, een andere landnaam niet', () => {
+  // Japan: "voor het zuidoosten van Fukushima is rood" is goed; Nauru's "voor Naoero" niet.
+  const japan = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor het '
+    + 'zuidoosten van Fukushima is rood. Wat uw situatie ook is: reis niet hierheen. Het is er te '
+    + 'gevaarlijk.</li><li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. '
+    + 'Lees welke veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] });
+  assert.ok(!japan.includes('kleur-aanduiding'));
+});

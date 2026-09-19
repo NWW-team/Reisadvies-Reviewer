@@ -97,6 +97,77 @@ const gebiedenPatroon = (body) => ':? ' + body;
 const GEBIEDEN_MAX = 220;
 
 /**
+ * Woorden waaraan je ziet dat een stuk tekst een gebied aanduidt en geen land: een windrichting,
+ * of een zelfstandig naamwoord dat een gebied benoemt.
+ *
+ * Japan schrijft "De kleurcode van het reisadvies voor het zuidoosten van Fukushima is rood". Dat
+ * is de landvorm van de zin met een gebied erin, en Martijn rekent dat goed. Nauru schrijft
+ * "voor Naoero" -- een kale naam die niet die van het land is -- en dat blijft wel een melding.
+ * Dit is het verschil tussen die twee.
+ */
+const GEBIEDWOORD_BRON = '\\b(?:noord|zuid|oost|west)(?:en|elijk\\w*)?\\b'
+  + '|\\b(?:noord|zuid)(?:oost|west)(?:en|elijk\\w*)?\\b'
+  + "|\\b(?:gebied|gebieden|grensgebied|grensgebieden|grensstrook|strook|regio|regio'?s|provincie"
+  + '|provincies|deelstaat|deelstaten|staat|staten|stad|steden|eiland|eilanden|district|districten'
+  + '|departement|departementen|gouvernement|gouvernementen|kust|vallei|delta|meer|schiereiland'
+  + '|hooglanden|driehoek|wijk|wijken|vulkaan|rest|deel|delen|omgeving)\\b';
+const GEBIEDWOORD = new RegExp(GEBIEDWOORD_BRON, 'i');
+
+/**
+ * Het patroon voor {gebied}: vrije tekst die ergens een gebiedwoord moet bevatten. Daarmee is
+ * "het zuidoosten van Fukushima" een gebied en "Naoero" niet, en kan de landvorm van de zin met
+ * een gebied erin worden toegestaan zonder dat een verkeerde landnaam meelift.
+ */
+const gebiedPatroon = () => "[^.?!]{0,60}?(?:" + GEBIEDWOORD_BRON + ")[^.?!]{0,120}?";
+
+/**
+ * De vormen waarin een kleurbullet zijn gebieden noemt. Alleen deze vier; de rest van de zin doet
+ * er voor het tellen niet toe.
+ */
+const GEBIEDSVORMEN = [
+  /kleurcode van het reisadvies is (?:rood|oranje|geel|groen) voor (.+)/i,
+  /kleurcode van het reisadvies voor (?:de gebieden )?(.+) is (?:rood|oranje|geel|groen)/i,
+  /^voor (.+?) geldt (?:grotendeels )?kleurcode (?:rood|oranje|geel|groen)/i,
+  /^kleurcode (?:rood|oranje|geel|groen) geldt voor (.+)/i,
+];
+
+/**
+ * Hoeveel gebieden noemt deze opsomming?
+ *
+ * Niet door op komma's en "en" te splitsen: dat telt namen en geen gebieden. Benin schrijft "de
+ * noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en Nigeria" -- dat is
+ * een gebied met vier buurlanden als oriëntatiepunt, niet vier gebieden.
+ *
+ * Daarom telt een deel alleen mee als het zelf een gebied benoemt ("de provincie Mafraq", "het
+ * grensgebied met India"), of als het achter een deel hangt dat een meervoud aankondigde ("de
+ * regio's Kanem, Ouaddai, Tibesti"). Hangt het achter een oriëntatiewoord (met, tussen, grenzen
+ * aan), dan telt het niet.
+ *
+ * Windrichtingen tellen met opzet niet als apart gebied: "het noorden en oosten" is juist de vorm
+ * die de matrix aanraadt boven een opsomming, dus die mag hier niet tegen een advies werken.
+ *
+ * De telling is met opzet voorzichtig: bij twijfel telt hij laag. Liever een opsomming van zes
+ * missen dan er een van vier melden.
+ */
+const ORIENTATIEWOORD = /\b(?:met|tussen|grenzen aan|grenst aan|richting|vanaf|langs|nabij|rond|vlakbij)\b/i;
+const MEERVOUDWOORD = /\b(?:regio'?s|provincies|deelstaten|staten|steden|eilanden|districten|departementen|gebieden|gouvernementen|wijken)\b/i;
+const EIGEN_GEBIED = new RegExp("\\b(?:gebied|gebieden|grensgebied|grensgebieden|grensstrook|strook|regio|regio'?s"
+  + '|provincie|provincies|deelstaat|deelstaten|stad|steden|eiland|eilanden|district|districten'
+  + '|departement|departementen|gouvernement|gouvernementen|kust|vallei|delta|schiereiland'
+  + '|hooglanden|driehoek|wijk|wijken|deel|delen)\\b', 'i');
+
+function telGebieden(ruw) {
+  const delen = ruw.replace(/\u2019/g, "'").split(/,\s*|\s+en\s+/).map((x) => x.trim()).filter(Boolean);
+  let n = 0;
+  let vorige = null;
+  for (const deel of delen) {
+    if (EIGEN_GEBIED.test(deel)) { n++; vorige = deel; continue; }
+    if (vorige && MEERVOUDWOORD.test(vorige) && !ORIENTATIEWOORD.test(vorige)) n++;
+  }
+  return Math.max(n, 1);
+}
+
+/**
  * Zoekt de landnaam zoals een advies hem zelf schrijft: hetzelfde sjabloon, maar met een vangnet
  * op de plek van {land}. Slaat dit wel aan waar sjabloonRegex faalde, dan staat de vaste zin er
  * gewoon en zit het verschil alleen in de naam. Dat is een andere melding dan een zin die niet
@@ -106,7 +177,7 @@ const GEBIEDEN_MAX = 220;
  */
 function landnaamAfwijking(sjablonen, tekst) {
   for (const sj of sjablonen) {
-    if (!sj.includes('{land}') || sj.includes('{gebieden}')) continue;
+    if (!sj.includes('{land}') || sj.includes('{gebieden}') || sj.includes('{gebied}')) continue;
     let p = esc(norm(sj));
     p = p.replace(/\\\{land\\\}/g, "((?:de |het )?[a-z\\u00c0-\\u017f'. -]{2,40}?)");
     const m = tekst.match(new RegExp(p));
@@ -119,6 +190,7 @@ function landnaamAfwijking(sjablonen, tekst) {
 function sjabloonRegex(sjabloon, land, kort) {
   let p = esc(norm(sjabloon));
   p = p.replace(/\\\{land\\\}/g, land ? landPatroon(land, kort) : "[a-z\\u00c0-\\u017f' -]{2,40}");
+  p = p.replace(/\\\{gebied\\\}/g, gebiedPatroon());
   p = p.replace(/ \\\{gebieden\\\}/g, gebiedenPatroon('[^.]{2,' + GEBIEDEN_MAX + '}'));
   p = p.replace(/\\\{gebieden\\\}/g, "[^.]{2," + GEBIEDEN_MAX + "}");
   return new RegExp(p);
@@ -132,6 +204,7 @@ function vasteTekstRegex(sjabloon, land, kort) {
   let p = esc(norm(sjabloon));
   p = p.replace(/\\\{land\\\}/g, land ? landPatroon(land, kort) : "[^.?!]{2,45}");
   p = p.replace(/\\\{kleur\\\}/g, '(?:rood|oranje|geel|groen)');
+  p = p.replace(/\\\{gebied\\\}/g, gebiedPatroon());
   p = p.replace(/ \\\{gebieden\\\}/g, gebiedenPatroon('[^.?!]{2,' + GEBIEDEN_MAX + '}'));
   p = p.replace(/\\\{gebieden\\\}/g, '[^.?!]{2,' + GEBIEDEN_MAX + '}');
   return new RegExp(p);
@@ -565,7 +638,10 @@ export function maakToetser(data) {
       if (!aangeduid) {
         // Staat de vaste zin er wel, maar heet het land er anders? Dan is dát de melding.
         // genorm is kleine letters; voor de melding halen we de naam op zoals hij er echt staat.
-        const kaleNaam = doc.land ? landnaamAfwijking(metKleur, kortGenorm) : null;
+        // Staat er een gebied in de landplek ("het zuidoosten van Fukushima"), dan is dat de
+        // gebiedsvorm van de zin en geen andere landnaam. Alleen een kale naam telt.
+        const gevonden = doc.land ? landnaamAfwijking(metKleur, kortGenorm) : null;
+        const kaleNaam = gevonden && !GEBIEDWOORD.test(gevonden) ? gevonden : null;
         const anders = kaleNaam
           && (tekst.match(new RegExp(esc(kaleNaam).replace(/ /g, '\\s+'), 'i')) || [kaleNaam])[0];
         b.push(anders
@@ -622,6 +698,35 @@ export function maakToetser(data) {
             notitie: hoortVolledig
               ? 'Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in "In het kort".'
               : 'Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));
+      }
+    }
+
+    // ---------- hoeveel gebieden noemt een kleurbullet? ----------
+    // De matrix: "Maximaal 5 gebieden per kleur noemen, anders een windrichting noemen. Dus niet
+    // gebied 1, 2, 3, 4, 5, 6, maar liever gebieden in het noorden en oosten."
+    //
+    // Alleen in "In het kort". Onder Regionale risico's mag de opsomming juist wel lang zijn:
+    // daar staat de uitwerking.
+    // Per bullet, niet over de samengevoegde tekst: dan blijft het fragment de bullet zelf.
+    for (const bullet of kortBlokStukken(doc)) {
+      const stuk = bullet.split(/(?<=\.)\s+/)[0];
+      for (const vorm of GEBIEDSVORMEN) {
+        const m = stuk.match(vorm);
+        if (!m) continue;
+        const lijst = m[1].replace(/\.$/, '').trim();
+        // "de rest van X" en "het hele land" zijn geen opsomming.
+        if (!/^(?:de rest van|het hele)\b/i.test(lijst)) {
+          const aantal = telGebieden(lijst);
+          if (aantal > lim.gebieden.max_per_kleur) {
+            b.push(bevinding('kleur-gebieden-max', ERNST.letop, 'MX, tab Kleurcode-teksten',
+              `Deze kleurcode noemt ${aantal} gebieden. De richtlijn is maximaal `
+              + `${lim.gebieden.max_per_kleur}; noem er anders een windrichting bij.`,
+              { fragment: stuk.trim(),
+                notitie: 'Niet gebied 1, 2, 3, 4, 5, 6, maar liever gebieden in het noorden en '
+                  + 'oosten. De uitwerking per gebied hoort onder Regionale risico\'s.' }));
+          }
+        }
+        break;
       }
     }
 
@@ -1790,10 +1895,15 @@ export function maakToetser(data) {
 }
 
 /** De tekst onder "In het kort": daar geldt de volgorde-regel voor de kleurcodes. */
-function kortBlokTekst(doc) {
+function kortBlokStukken(doc) {
   const blok = doc.blokken.find((x) => (x.kop || '').trim().toLowerCase() === 'in het kort');
-  if (!blok) return null;
-  return [...blok.alineas.map((a) => a.tekst), ...blok.opsommingen.flatMap((o) => o.items)].join(' ');
+  if (!blok) return [];
+  return [...blok.alineas.map((a) => a.tekst), ...blok.opsommingen.flatMap((o) => o.items)];
+}
+
+function kortBlokTekst(doc) {
+  const stukken = kortBlokStukken(doc);
+  return stukken.length ? stukken.join(' ') : null;
 }
 
 /** De zin waarin de treffer staat. Een hele zin is bruikbaarder voor de redacteur dan een

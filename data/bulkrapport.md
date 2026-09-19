@@ -68,8 +68,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `nood-verwijzing-nood` | 7 | 7 |
 | `nood-verwijzing-crisis` | 7 | 7 |
 | `medicijnen-voldoende` | 7 | 7 |
-| `kleur-aanduiding` | 7 | 7 |
 | `nederlands-verbuiging` | 6 | 6 |
+| `kleur-aanduiding` | 6 | 6 |
 | `link-verboden-partij` | 6 | 7 |
 | `link-plakt-aan-woord` | 5 | 5 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
@@ -105,6 +105,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `valuta-notatie` | 1 | 1 |
 | `rood-herhaling-voorbereiding` | 1 | 1 |
 | `tijd-notatie` | 1 | 1 |
+| `kleur-gebieden-max` | 1 | 1 |
 
 ## Langste adviezen
 

@@ -893,3 +893,76 @@ binnen één zin.
 
 **Stand:** 2982 → 2987 bevindingen over 226 adviezen, 153 tests groen. Vijf meldingen erbij die
 allemaal een echte fout aanwijzen, en één betere diagnose.
+
+## Maximaal vijf gebieden per kleur (19 september 2026)
+
+Martijn heeft aan de matrix toegevoegd:
+
+> Maximaal 5 gebieden per kleur noemen, anders een windrichting noemen. Dus niet gebied 1, 2, 3, 4,
+> 5, 6, maar liever gebieden in het noorden en oosten.
+
+**Het tellen was het moeilijke deel, niet de regel.** De voor de hand liggende manier — splitsen op
+komma's en "en" — telt namen en geen gebieden, en dat levert precies de ruis op waar Martijn voor
+waarschuwde:
+
+| land | wat er staat | naïef geteld | werkelijk |
+|---|---|---:|---:|
+| Benin | *de noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en Nigeria* | 4 | **1** |
+| Algerije | *de grensgebieden met Mauritanië, Mali, Niger en Libië en voor delen van de grensstrook met Marokko* | 5 | **2** |
+| Senegal | *de grensgebieden tussen Senegal en Gambia, Guinee-Bissau, Mali en een deel van de grens met Mauritanië* | 5 | **2** |
+
+Die landnamen zijn oriëntatiepunten, geen gebieden. Daarom telt een deel alleen mee als het zélf
+een gebied benoemt (*de provincie Mafraq*, *het grensgebied met India*), of als het achter een deel
+hangt dat een meervoud aankondigde (*de regio's Kanem, Ouaddai, Tibesti*). Hangt het achter een
+oriëntatiewoord — *met*, *tussen*, *grenzen aan* — dan telt het niet.
+
+**Windrichtingen tellen met opzet niet mee.** *"Het noorden en oosten"* is juist de vorm die de
+matrix aanraadt boven een opsomming; die mag hier niet tegen een advies gaan werken. Zonder die
+uitzondering telde Kameroen *"het oosten en zuiden van de regio Sud-Ouest"* als twee losse gebieden.
+
+De telling is verder met opzet voorzichtig: bij twijfel telt hij laag. Liever een opsomming van zes
+missen dan er een van vier melden.
+
+**Gemeten over 226 adviezen: 252 kleuraanduidingen, waarvan één boven de vijf.**
+
+| aantal gebieden | 1 | 2 | 3 | 4 | 5 | 7 |
+|---|---:|---:|---:|---:|---:|---:|
+| hoe vaak | 219 | 20 | 7 | 2 | 3 | 1 |
+
+Die ene is Tsjaad: *"De kleurcode van het reisadvies is rood voor alle grensgebieden van Tsjaad, het
+gebied rond het Tsjaadmeer, en de regio's Kanem, Ouaddai, Tibesti, Borkou en Ennedi of delen
+daarvan."* Vijf regio's bij naam plus twee andere gebieden — het geval uit Martijns eigen
+formulering. Jordanië en Papoea-Nieuw-Guinea zitten op precies vijf en blijven dus stil.
+
+Een regel die één keer afgaat over 226 adviezen is hier het doel, niet een tekortkoming: hij bewaakt
+wat er morgen geschreven wordt.
+
+**Let op: dit staat naast de bestaande regel `gebieden-max-drie`.** Die komt uit tabblad *Koppen*
+(*"Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen"*) en geeft nul
+treffers, omdat hij alleen zoekt naar het letterlijke woord *gebieden* gevolgd door namen met
+hoofdletters. Drie en vijf zijn verschillende getallen; welke van de twee leidend is, is een vraag
+voor de redactie. Zolang die niet beantwoord is, blijven ze allebei staan en meldt alleen de nieuwe
+iets.
+
+## Fukushima mag wel (19 september 2026)
+
+Japan schrijft *"De kleurcode van het reisadvies voor het zuidoosten van Fukushima is rood"* — de
+landvorm van de zin met een gebied in de landplek. Martijn: *"alleen Fukushima hoeft niet op te
+poppen."*
+
+Eerder was die vorm bewust níét toegestaan, omdat `{gebieden}` een jokerteken is en dan ook
+*"Naoero"* of een verkeerde landnaam erdoor zou glippen. Dat bezwaar blijft staan, dus de oplossing
+is een aparte plaatshouder: **`{gebied}`** eist dat er werkelijk een gebied staat — een windrichting,
+of een woord als *regio*, *provincie*, *eiland*, *grensgebied*, *kust*, *delta*.
+
+Daarmee is *"het zuidoosten van Fukushima"* een gebied en *"Naoero"* niet:
+
+| advies | in de landplek | uitkomst |
+|---|---|---|
+| Japan | *het zuidoosten van Fukushima* | gebied → geen melding |
+| Nauru | *Naoero* | kale naam → blijft gemeld |
+| Burkina Faso | *Burkina Faso is voor het grootste deel* | past niet op de zin → blijft gemeld |
+
+De vorm staat nu als `"De kleurcode van het reisadvies voor {gebied} is {kleur}"` in
+`aanduiding_sjablonen`, met `herkomst: aanvulling`: hij staat niet letterlijk in de NB-kolom, maar
+is op 19 september goedgekeurd.

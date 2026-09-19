@@ -14308,19 +14308,18 @@
     ],
     "zinnen": 71,
     "fout": 3,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-variant": 1,
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
@@ -14333,14 +14332,6 @@
       "eenheden-voluit": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "De vaste zin bij kleurcode rood staat er, maar noemt het land \"het zuidoosten van Fukushima\". In het cms heet dit advies \"Japan\".",
-        "verwacht": "De kleurcode van het reisadvies voor Japan is rood.",
-        "notitie": "Of de tekst of de landenlijst loopt achter. De tool weet niet welke van de twee; hij meldt alleen dat ze niet hetzelfde zeggen."
-      },
       {
         "regel": "kleur-variant",
         "ernst": "fout",
@@ -27216,18 +27207,19 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 8,
+    "letop": 9,
     "linkzin": 0,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 8,
+      "let-op": 9,
       "link-zin": 0,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-gebieden-max": 1,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -27239,6 +27231,14 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-gebieden-max",
+        "ernst": "let-op",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze kleurcode noemt 7 gebieden. De richtlijn is maximaal 5; noem er anders een windrichting bij.",
+        "fragment": "De kleurcode van het reisadvies is rood voor alle grensgebieden van Tsjaad, het gebied rond het Tsjaadmeer, en de regio’s Kanem, Ouaddai, Tibesti, Borkou en Ennedi of delen daarvan.",
+        "notitie": "Niet gebied 1, 2, 3, 4, 5, 6, maar liever gebieden in het noorden en oosten. De uitwerking per gebied hoort onder Regionale risico's."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",

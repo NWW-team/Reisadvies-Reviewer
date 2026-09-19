@@ -7,7 +7,9 @@
   },
   "titel": {
     "max_tekens": 70,
-    "leestekens_toegestaan": ["?"],
+    "leestekens_toegestaan": [
+      "?"
+    ],
     "_bron": "Gebruiksvriendelijkheid > Titel; Vindbaarheid > Titel"
   },
   "intro": {
@@ -18,7 +20,9 @@
   "tussenkop": {
     "max_woorden": 5,
     "geen_lidwoord_vooraan": true,
-    "leestekens_toegestaan": ["?"],
+    "leestekens_toegestaan": [
+      "?"
+    ],
     "niet_in_vraagvorm_als_titel_vraag_is": true,
     "_bron": "Gebruiksvriendelijkheid > (Tussen)koppen; Vindbaarheid > (Tussen)koppen"
   },
@@ -58,7 +62,9 @@
   },
   "gebieden": {
     "max_noemen": 3,
-    "_bron": "Matrix, tabblad 'Koppen': 'Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen.'"
+    "_bron": "Matrix, tabblad 'Koppen': 'Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen.'",
+    "max_per_kleur": 5,
+    "_bron_per_kleur": "Matrix, tabblad 'Kleurcode-teksten', toegevoegd op 19 september 2026: 'Maximaal 5 gebieden per kleur noemen, anders een windrichting noemen. Dus niet gebied 1, 2, 3, 4, 5, 6, maar liever gebieden in het noorden en oosten.'"
   },
   "uitzonderingszin_rood": {
     "max_woorden": 25,

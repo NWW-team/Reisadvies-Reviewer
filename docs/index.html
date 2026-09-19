@@ -430,8 +430,6 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
       <select id="kies-advies"></select>
     </label>
     <button type="button" id="knop-plakken">Eigen tekst plakken</button>
-    <button type="button" id="knop-ververs" disabled title="Haalt dit ene advies rechtstreeks op
-      bij Nederlandwereldwijd.nl, in plaats van de wekelijkse momentopname.">Dit advies verversen</button>
     <span style="flex:1"></span>
     <button type="button" id="knop-print" disabled>Printen / pdf</button>
     <button type="button" id="knop-kopieer" disabled>Kopi&euml;ren voor Word</button>
@@ -3079,52 +3077,14 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     $('melding').textContent = '';
     $('knop-print').disabled = false;
     $('knop-kopieer').disabled = false;
-    // Alleen aan te zetten bij een echt, herkend land: geplakte tekst heeft geen iso om een
-    // open-data-adres bij op te zoeken.
-    $('knop-ververs').disabled = !huidig.iso;
   }
 
-  /**
-   * Haalt dit ene advies rechtstreeks op bij de open data van Nederlandwereldwijd.nl, in plaats
-   * van de wekelijkse momentopname in adviezen/<ISO>.json (zie .github/workflows/corpus.yml).
-   * Dat gaat via Adapter.uitApiRespons, dezelfde functie die de wekelijkse ophaalronde gebruikt --
-   * zo levert dit altijd hetzelfde document op, vers of uit de momentopname.
-   *
-   * Of dit werkt hangt af van of de open-data-dienst een rechtstreeks verzoek uit de browser
-   * toestaat (CORS). Dat is van buitenaf niet te zien zonder het te proberen; lukt het niet, dan
-   * blijft "Eigen tekst plakken" de weg om de actuele tekst te toetsen.
-   */
-  async function ververs() {
-    if (!huidig || !huidig.iso) return;
-    const land = (REGELDATA.landen.landen || []).find((l) => l.iso === huidig.iso);
-    if (!land || !land.locationKey) {
-      $('melding').textContent = 'Van dit land is geen open-data-adres bekend. Plak de tekst zelf.';
-      return;
-    }
-    const knop = $('knop-ververs');
-    knop.disabled = true;
-    $('melding').textContent = 'Bezig met verversen…';
-    try {
-      const url = 'https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/'
-        + 'infotypes/countries/' + land.locationKey + '/traveladvice';
-      const res = await fetch(url, { cache: 'no-cache' });
-      if (!res.ok) throw new Error('status ' + res.status);
-      const xml = await res.text();
-      const v = Adapter.uitApiRespons(xml);
-      if (!v.html) throw new Error('geen bruikbare inhoud in de respons');
-      toetsInvoer(v.html, v.land || land.naam, { titel: v.titel, url: v.url, iso: land.iso });
-      $('melding').textContent = 'Ververst rechtstreeks van Nederlandwereldwijd.nl'
-        + (v.laatstGewijzigd ? ' — nog geldig op ' + v.laatstGewijzigd : '') + '.';
-    } catch (e) {
-      // fetch() geeft bij een CORS-blokkade dezelfde vage foutmelding als bij een netwerkstoring
-      // (browsers laten dat verschil met opzet niet zien aan JavaScript), dus dit is een gok naar
-      // de reden, geen diagnose.
-      $('melding').textContent = 'Verversen lukt nu niet (' + e.message + '). Mogelijk staat de '
-        + 'open-data-dienst geen rechtstreeks verzoek vanuit de browser toe. Plak de tekst zelf '
-        + 'via "Eigen tekst plakken" om toch de actuele versie te toetsen.';
-      knop.disabled = false;
-    }
-  }
+  // Een live "ververs dit advies"-knop is op 19 september 2026 geprobeerd en weer weggehaald:
+  // de open-data-dienst staat geen rechtstreeks verzoek uit de browser toe (CORS), dus de knop
+  // gaf op de gepubliceerde site altijd "Failed to fetch". Voor de actuele tekst van een advies
+  // dat net gewijzigd is, blijft "Eigen tekst plakken" hieronder de weg: kopieer de tekst van de
+  // site zelf en plak hem daar. Zie regels/HERKOMST.md voor de afweging en een mogelijke
+  // vervolgstap (een eigen tussenstation dat wél mag ophalen).
 
   // ---------- spellingtoets ----------
   // Spelling is gewoon onderdeel van het checken van een advies, geen losse stap: de pagina haalt
@@ -3505,7 +3465,6 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     vak.hidden = !vak.hidden;
     if (!vak.hidden) $('invoer').focus();
   });
-  $('knop-ververs').addEventListener('click', ververs);
   $('knop-toets').addEventListener('click', () => {
     const tekst = $('invoer').value.trim();
     if (!tekst) return;

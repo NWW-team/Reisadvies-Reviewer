@@ -555,6 +555,75 @@ test('de naam van het land wordt wel getoetst', () => {
     .includes('landnaam-schrijfwijze'), 'ook een buurland telt mee');
 });
 
+test('een link die aan het woord ervoor plakt wordt gemeld', () => {
+  const ids = (t) => idsVan(advies('<p>' + t + '</p>'), { land: 'Tsjechi\u00eb' });
+  const regel = 'link-plakt-aan-woord';
+
+  // De eerste letter valt buiten de link: op de pagina lees je "Kijk", maar alleen "ijk" is
+  // klikbaar.
+  assert.ok(ids('Dit is verplicht. K<a href="https://example.org/x">ijk op de website</a>.')
+    .includes(regel));
+  assert.ok(!ids('Dit is verplicht. <a href="https://example.org/x">Kijk op de website</a>.')
+    .includes(regel), 'een normale link hoort niets te geven');
+
+  // Geen spatie tussen woord en link.
+  assert.ok(ids('Bel het telefoonnummer<a href="tel:+31247247247">+31 247 247 247</a>.')
+    .includes(regel));
+
+  // En de spatie die binnen de link staat in plaats van ervoor.
+  const b = bevindingenVan(advies('<p>Vraag dit aan via de<a href="https://example.org/x"> '
+    + 'ambassade in Brussel</a>.</p>'), { land: 'Tsjechi\u00eb' });
+  assert.ok(b.some((x) => x.regel === regel && x.boodschap.includes('binnenin')),
+    'een spatie binnen de link hoort een eigen boodschap te geven');
+});
+
+test('een vaste linktekst blijft vrijgesteld, ook met de landnaam of een invoeging erin', () => {
+  const link = (t) => idsVan(advies('<p>Kijk hier. <a href="https://example.org/x">' + t + '</a></p>'),
+    { land: 'Centraal-Afrikaanse Republiek' }).includes('link-tekstlengte');
+
+  // De vaste zin met een lange landnaam erin komt over de 70 tekens, maar daar kan een
+  // redacteur niets aan doen.
+  assert.ok(!link('Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek'),
+    'de vaste zin met de landnaam erin hoort vrijgesteld te blijven');
+
+  // Maar alleen de landnaam met zijn lidwoord. Voegt een redacteur iets toe, dan is dat een
+  // keuze en hoort de linktekst gewoon gemeld te worden — anders mis je een woord te veel.
+  assert.ok(link('Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek (CAR)'),
+    'een toevoeging van de redacteur hoort wel gemeld te worden');
+
+  // Tegenproef: een te lange linktekst in eigen woorden hoort w\u00e9l gemeld te worden.
+  assert.ok(link('Bekijk hier de uitgebreide toelichting op alle regels die op dit moment gelden'),
+    'een eigen te lange linktekst hoort wel gemeld te worden');
+});
+
+test('de rubrieken kennen drie lagen: bovenaan vast, daarna vrijer', () => {
+  const risico = (koppen) => advies("<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2>"
+    + koppen.map((k) => `<h3>${k}</h3><p>Tekst over dit risico.</p>`).join(''));
+  const ids = (koppen) => idsVan(risico(koppen), { land: 'Tsjechi\u00eb' });
+
+  // 1. Actueel en Regionale risico's horen bovenaan, in die volgorde. Dat is een fout.
+  assert.ok(!ids(['Actueel', "Regionale risico's", 'Terrorisme']).includes('rubriek-bovenaan'));
+  assert.ok(ids([ "Regionale risico's", 'Actueel', 'Terrorisme']).includes('rubriek-bovenaan'),
+    'Actueel hoort v\u00f3\u00f3r Regionale risico\'s');
+  assert.ok(ids(['Terrorisme', 'Actueel']).includes('rubriek-bovenaan'),
+    'Actueel hoort bovenaan, niet na een risico');
+  // Zonder Actueel staat Regionale risico's bovenaan, en dat is goed.
+  assert.ok(!ids([ "Regionale risico's", 'Terrorisme', 'Criminaliteit']).includes('rubriek-bovenaan'));
+
+  // 2. Binnen de vaste laag is afwijken een aandachtspunt, geen fout.
+  assert.ok(ids(['Criminaliteit', 'Terrorisme']).includes('rubrieken-volgorde'));
+  assert.ok(!ids(['Terrorisme', 'Criminaliteit']).includes('rubrieken-volgorde'));
+
+  // 3. Een vrije rubriek hoort onder Wetten en gebruiken \u2014 maar b\u00f3ven Natuurgeweld mag.
+  assert.ok(ids(['Demonstraties', 'Wetten en gebruiken']).includes('rubriek-vrij-te-hoog'));
+  assert.ok(!ids(['Wetten en gebruiken', 'Demonstraties', 'Natuurgeweld'])
+    .includes('rubriek-vrij-te-hoog'),
+  'Demonstraties mag boven Natuurgeweld staan: dat staat meer op zichzelf');
+  // En onderling ligt de volgorde van de vrije rubrieken niet vast.
+  assert.ok(!ids(['Wetten en gebruiken', 'Verkeersongevallen', 'Demonstraties'])
+    .includes('rubriek-vrij-te-hoog'));
+});
+
 test('een naam wordt herkend en niet gemeld', () => {
   // Namen worden overgeslagen: in 226 reisadviezen staan zoveel plaatsnamen, instituten en
   // buitenlandse bronnen dat er geen woordenlijst voor is aan te leggen. De herkenning blijft

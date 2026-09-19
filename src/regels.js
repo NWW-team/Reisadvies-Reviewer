@@ -481,7 +481,10 @@ export function maakToetser(data) {
                 : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.`)
             : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
           { verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
-              .replace(/\{gebieden\}/g, 'de gebieden X en Y'),
+              // Alleen de gebieden zelf: het sjabloon heeft "Voor de gebieden {gebieden}", dus
+              // "de gebieden" staat er al. Anders leest de suggestie als "Voor de gebieden de
+              // gebieden X en Y".
+              .replace(/\{gebieden\}/g, 'X en Y'),
             notitie: hoortVolledig
               ? 'Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in "In het kort".'
               : 'Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));
@@ -895,21 +898,70 @@ export function maakToetser(data) {
     // De rubrieken onder veiligheidsrisico's staan in volgorde van relevantie. Koppen die het
     // sjabloon niet noemt (een ziekte bijvoorbeeld, die heet naar het virus) laten we staan waar
     // ze staan; die hebben geen vaste plek.
+    //
+    // Drie lagen, want niet alles ligt even vast:
+    //   bovenaan  Actueel en Regionale risico's, in die volgorde. Dat is een fout als het anders is.
+    //   vast      de voorgeschreven volgorde, maar afwijken mag als een risico zwaarder weegt.
+    //   vrij      geen volgorde onderling; ze horen wel onder de vaste laag.
     const volgordeRe = new RegExp(sj.rubriek_patronen.veiligheidsrisicos, 'i');
-    const gewensteVolgorde = sj.rubriek_volgorde.map(norm);
-    const rubriekenOpVolgorde = doc.koppen
+    const rv = sj.rubriek_volgorde;
+    const bovenaan = rv.bovenaan.map(norm);
+    const vast = rv.vast.map(norm);
+    const vrij = rv.vrij.map(norm);
+    const laagVan = (r) => (bovenaan.includes(r) ? 0 : vast.includes(r) ? 1 : vrij.includes(r) ? 2 : -1);
+
+    const rij = doc.koppen
       .filter((k) => k.niveau === 3 && volgordeRe.test(k.h2 || ''))
-      .map((k) => ({ tekst: k.tekst, plek: gewensteVolgorde.indexOf(norm(k.tekst)) }))
-      .filter((x) => x.plek >= 0);
-    for (let i = 1; i < rubriekenOpVolgorde.length; i++) {
-      if (rubriekenOpVolgorde[i].plek < rubriekenOpVolgorde[i - 1].plek) {
+      .map((k) => ({ tekst: k.tekst, n: norm(k.tekst) }))
+      .filter((x) => laagVan(x.n) >= 0);
+
+    // 1. Actueel en Regionale risico's horen bovenaan, in die volgorde. Geen aandachtspunt maar
+    //    een fout: hier is de lezer naar op zoek, en de volgorde ligt vast.
+    const bovenIn = rij.filter((x) => laagVan(x.n) === 0);
+    if (bovenIn.length) {
+      const hoort = bovenaan.filter((r) => bovenIn.some((x) => x.n === r));
+      const staat = rij.slice(0, bovenIn.length).map((x) => x.n);
+      if (hoort.join('|') !== staat.join('|')) {
+        b.push(bevinding('rubriek-bovenaan', ERNST.fout, 'SJ, blok Risico dat van toepassing is',
+          `${bovenIn.map((x) => `"${x.tekst}"`).join(' en ')} ${bovenIn.length > 1 ? 'horen' : 'hoort'} bovenaan te staan.`,
+          { fragment: bovenIn[0].tekst,
+            verwacht: hoort.map((r) => rv.bovenaan[bovenaan.indexOf(r)]).join(' > '),
+            notitie: 'Staat er een Actueel, dan komt die eerst en Regionale risico\'s daarna. '
+              + 'Is er geen Actueel, dan staat Regionale risico\'s bovenaan.' }));
+      }
+    }
+
+    // 2. Binnen de vaste laag de voorgeschreven volgorde. Afwijken mag als een risico in dit land
+    //    zwaarder weegt — dat is juist wat "in volgorde van relevantie" betekent — dus dit is een
+    //    aandachtspunt.
+    const vastIn = rij.filter((x) => laagVan(x.n) === 1);
+    for (let i = 1; i < vastIn.length; i++) {
+      if (vast.indexOf(vastIn[i].n) < vast.indexOf(vastIn[i - 1].n)) {
         b.push(bevinding('rubrieken-volgorde', ERNST.info, 'SJ, blok Risico dat van toepassing is',
-          `Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? "${rubriekenOpVolgorde[i].tekst}" `
-            + `staat na "${rubriekenOpVolgorde[i - 1].tekst}".`,
-          { fragment: rubriekenOpVolgorde[i].tekst,
-            notitie: 'Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. '
-              + 'De standaardvolgorde van relevantie is: ' + sj.rubriek_volgorde.join(' > ') + '.' }));
+          `Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? "${vastIn[i].tekst}" `
+            + `staat na "${vastIn[i - 1].tekst}".`,
+          { fragment: vastIn[i].tekst,
+            notitie: 'Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat '
+              + 'bovenaan. De standaardvolgorde is: ' + rv.vast.join(' > ') + '.' }));
         break;
+      }
+    }
+
+    // 3. De vrije rubrieken horen onder Wetten en gebruiken en alles wat daarboven staat.
+    //    Onderling ligt hun volgorde niet vast, en boven Natuurgeweld mógen ze staan: dat staat
+    //    meer op zichzelf, en Demonstraties sluit juist aan op Wetten en gebruiken.
+    const grens = vast.indexOf(norm(rv.vrij_onder));
+    const bindend = (x) => laagVan(x.n) === 1 && vast.indexOf(x.n) <= grens;
+    const eersteVrij = rij.findIndex((x) => laagVan(x.n) === 2);
+    if (eersteVrij >= 0) {
+      const onder = rij.slice(eersteVrij + 1).find(bindend);
+      if (onder) {
+        b.push(bevinding('rubriek-vrij-te-hoog', ERNST.info, 'SJ, blok Risico dat van toepassing is',
+          `"${rij[eersteVrij].tekst}" staat boven "${onder.tekst}".`,
+          { fragment: rij[eersteVrij].tekst,
+            notitie: `Deze rubriek hoort onder "${rv.vrij_onder}" te staan, en onder alles wat daarboven `
+              + 'komt: ' + rv.vast.slice(0, grens + 1).join(' > ') + '. Boven Natuurgeweld mag hij wel, '
+              + 'en onderling ligt de volgorde van de vrije rubrieken niet vast.' }));
       }
     }
 
@@ -1027,6 +1079,28 @@ export function maakToetser(data) {
     };
 
     /**
+     * Dezelfde vaste zinnen, maar heel gelaten en met {land} ingevuld. Nodig voor de linkteksten:
+     * "Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek" is de vaste
+     * zin met een lange landnaam erin, en die staat niet in de opgeknipte stukken hierboven.
+     */
+    // {land} mag met of zonder lidwoord zijn ingevuld: "voor de Centraal-Afrikaanse Republiek"
+    // naast "voor Saint Vincent en de Grenadines". Dat lidwoord is grammatica, geen keuze van de
+    // redacteur. Verder niets: schrijft iemand "de Verenigde Arabische Emiraten (VAE)", dan is die
+    // afkorting wél een keuze, en dan hoort de linktekst gewoon gemeld te worden.
+    const sjabloonHeel = [];
+    for (const bronTekst of [...sj.vaste_teksten.map((x) => x.zin), ...vrijgesteld, sj.intro.standaard,
+      sj.intro.alleen_rood, sj.contactcenter.zin]) {
+      for (const zin of norm(bronTekst).split(/(?<=[.?!])\s+/)) {
+        for (const lidwoord of ['', 'de ', 'het ']) {
+          const heel = norm(zin.replace(/\{land\}/g, lidwoord + norm(doc.land || ''))
+            .replace(/\{gebieden\}|\{kleur\}|\{vrij\}/g, ' '));
+          if (heel.length > 25) sjabloonHeel.push(heel);
+          if (!zin.includes('{land}')) break;            // zonder {land} is er niets te variëren
+        }
+      }
+    }
+
+    /**
      * Andersom dan isVasteZin: een linktekst is een stúk van een vaste tekst, niet omgekeerd.
      * "Check welke documenten u nodig heeft om te reizen met een minderjarig kind" is 74 tekens en
      * dus te lang volgens de schrijfwijzer, maar staat zo in het sjabloon. Daar valt niets aan in
@@ -1034,7 +1108,9 @@ export function maakToetser(data) {
      */
     const isVasteLinktekst = (t) => {
       const n = norm(t).replace(/[?.!]\s*$/, '');
-      return n.length > 20 && sjabloonZinnen.some((kern) => kern.includes(n));
+      if (n.length <= 20) return false;
+      if (sjabloonZinnen.some((kern) => kern.includes(n))) return true;
+      return sjabloonHeel.some((z) => z.includes(n));
     };
 
     // ---------- tekstfouten ----------
@@ -1368,6 +1444,21 @@ export function maakToetser(data) {
 
     // ---------- links ----------
     for (const l of doc.links) {
+      // Een link hoort niet tegen het woord ervoor aan te plakken. Dat gaat op drie manieren mis,
+      // en alle drie zijn ze alleen hier te zien — in de gelezen tekst is er niets van te merken.
+      if (l.plakt) {
+        b.push(bevinding('link-plakt-aan-woord', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+          l.spatieBinnen
+            ? `De spatie vóór de link staat er binnenin: "${l.tekst.slice(0, 40)}…".`
+            : `De link plakt aan het woord ervoor: "${l.tekst.slice(0, 40)}…".`,
+          { fragment: l.tekst, herkomst: 'aanvulling',
+            notitie: l.spatieBinnen
+              ? 'De link begint met een spatie. Op de pagina ziet niemand dat, maar het klikvlak '
+                + 'loopt een teken te ver naar links.'
+              : 'Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste '
+                + 'letter van een woord buiten de link ("K" en dan "ijk op de website"), soms '
+                + 'plakken twee woorden aan elkaar.' }));
+      }
       if (l.tekst.length > lim.link.max_tekens_linktekst && !isVasteLinktekst(l.tekst)) {
         b.push(bevinding('link-tekstlengte', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Lengte linkteksten',
           `Linktekst is ${l.tekst.length} tekens. Maximaal ${lim.link.max_tekens_linktekst}.`, { fragment: l.tekst }));

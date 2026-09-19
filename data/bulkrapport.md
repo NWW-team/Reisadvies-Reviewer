@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-09-18 over 226 reisadviezen.
+Gedraaid op 2026-09-19 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **66** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
-- Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **211** van de 3038 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- Gemiddeld 1.2 eigen fouten per advies, los van wat uit de standaardtekst komt.
+- **216** van de 3032 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,10 +25,10 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 307 | 160 |
-| geel/oranje — let op | 1580 | 220 |
+| rood — fout | 312 | 160 |
+| geel/oranje — let op | 1577 | 220 |
 | lichtblauw — lange zin met link | 542 | 201 |
-| grijs — ter overweging | 137 | 102 |
+| grijs — ter overweging | 129 | 93 |
 | roze — twijfeltaal | 472 | 164 |
 
 ## Per regel
@@ -42,10 +42,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `zin-twijfeltaal` | 66 | 85 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
-| `rubrieken-volgorde` | 53 | 53 |
 | `doc-woordenaantal` | 46 | 46 |
 | `kleur-variant` | 46 | 52 |
-| `link-tekstlengte` | 44 | 52 |
+| `link-tekstlengte` | 44 | 49 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 37 | 37 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
@@ -53,6 +52,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `kleur-aanduiding` | 31 | 32 |
 | `intro-vaste-tekst` | 26 | 26 |
 | `h3-niet-melden` | 25 | 25 |
+| `rubriek-vrij-te-hoog` | 23 | 23 |
+| `rubrieken-volgorde` | 22 | 22 |
 | `bagage-heen` | 21 | 21 |
 | `nood-contactcenter` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
@@ -70,6 +71,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `medicijnen-voldoende` | 7 | 7 |
 | `nederlands-verbuiging` | 6 | 6 |
 | `link-verboden-partij` | 6 | 7 |
+| `link-plakt-aan-woord` | 5 | 5 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `kleur-vervolg-bullet-kort` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |

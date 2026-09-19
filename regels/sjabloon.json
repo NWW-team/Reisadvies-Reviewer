@@ -24,20 +24,22 @@
     "veiligheidsrisicos": "welke veiligheidsrisico",
     "natuurgeweld": "natuurgeweld"
   },
-  "rubriek_volgorde": [
-    "Actueel",
-    "Regionale risico’s",
-    "Terrorisme",
-    "Oorlog en conflict",
-    "Criminaliteit",
-    "Wetten en gebruiken",
-    "Natuurgeweld",
-    "Landmijnen",
-    "Demonstraties",
-    "Verkeersongevallen",
-    "Willekeurige arrestaties"
-  ],
-  "_rubriek_volgorde_bron": "blok 'Risico dat van toepassing is, in volgorde van relevantie'",
+  "rubriek_volgorde": {
+    "_toelichting": "Drie lagen, niet één vaste rij. Het sjabloonblok heet 'Risico dat van toepassing is, in volgorde van relevantie', en dat woord relevantie is de kern: de volgorde mág schuiven als een risico in dit land zwaarder weegt. Als terrorisme de reden is voor kleurcode oranje, hoort terrorisme bovenaan. Alleen de bovenste laag ligt echt vast.",
+    "_bron": "blok 'Risico dat van toepassing is, in volgorde van relevantie'; de indeling in lagen is een instructie van de opdrachtgever, 19 september 2026.",
+
+    "_bovenaan_toelichting": "Deze twee horen bovenaan, in deze volgorde. Is er geen Actueel, dan staat Regionale risico's bovenaan. Zijn ze er allebei niet, dan begint het advies met de vaste laag. Gemeten over 226 adviezen: geen enkel advies doet dit fout, dus dit is een vangnet.",
+    "bovenaan": ["Actueel", "Regionale risico’s"],
+
+    "_vast_toelichting": "De voorgeschreven volgorde. Hiervan afwijken mag als een risico in dit land zwaarder weegt, dus dit is een aandachtspunt en geen fout. Natuurgeweld staat onderaan deze laag: dat staat meer op zichzelf dan de risico's erboven.",
+    "vast": ["Terrorisme", "Oorlog en conflict", "Criminaliteit", "Wetten en gebruiken", "Natuurgeweld"],
+
+    "_vrij_toelichting": "Hierbinnen ligt geen volgorde vast. Ze horen onder Wetten en gebruiken: Demonstraties sluit daar logisch op aan. Bóven Natuurgeweld mógen ze staan — Natuurgeweld staat meer op zichzelf. Instructie van de opdrachtgever, 19 september 2026. Landmijnen, Verkeersongevallen en Willekeurige arrestaties komen zelden voor.",
+    "vrij": ["Demonstraties", "Landmijnen", "Verkeersongevallen", "Willekeurige arrestaties"],
+
+    "_vrij_onder_toelichting": "De ondergrens: een vrije rubriek hoort ná deze te staan, en na alles wat daarboven in de vaste laag staat. Wat er in de vaste laag ónder staat — Natuurgeweld — legt niets op. Zonder deze grens gaf de regel 35 meldingen waarvan 22 over Demonstraties boven Natuurgeweld, en die zijn juist goed.",
+    "vrij_onder": "Wetten en gebruiken"
+  },
   "vaste_koppen": [
     "Lokale hulpdiensten",
     "Nood- of crisissituatie",

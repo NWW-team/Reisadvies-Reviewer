@@ -196,8 +196,18 @@ export function parseAdvies(invoer, meta = {}) {
       const { naam, sluit, attrs } = tok;
 
       if (naam === 'a') {
-        if (!sluit) linkOpen = { tekst: '', href: attr(attrs, 'href'), h2: huidigH2, h3: huidigH3 };
+        if (!sluit) {
+          // Staat er een letter direct vóór de link, dan begint de link middenin een woord:
+          // "Dit is verplicht. K<a ...>ijk op de website</a>". Op de pagina lees je "Kijk", maar
+          // alleen "ijk op de website" is klikbaar. Dat is bij het opmaken misgegaan, en alleen
+          // hier te zien — in de gelezen tekst is er niets meer van te merken.
+          const plakt = /[\p{L}\p{N}]$/u.test(buffer);
+          linkOpen = { tekst: '', href: attr(attrs, 'href'), h2: huidigH2, h3: huidigH3, plakt };
+        }
         else if (linkOpen) {
+          // De ruwe tekst vóór schoon(): begon de link met een spatie, dan staat die binnen de
+          // link in plaats van ervoor. Daarna is dat niet meer te zien.
+          linkOpen.spatieBinnen = /^\s/.test(linkOpen.tekst);
           linkOpen.tekst = schoon(linkOpen.tekst);
           if (linkOpen.tekst) doc.links.push(linkOpen);
           linkOpen = null;

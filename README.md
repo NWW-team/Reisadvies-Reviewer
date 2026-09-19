@@ -260,6 +260,12 @@ veranderde:
   woordgrenzen (*beren* zit in *proberen*), de rubriek die de matrix zelf aanwijst (*Foto's maken*
   mag bij lokale wetten, 65 meldingen minder) en samenstellingen (*zandstormen* benoemt wel een
   risico).
+- `link-plakt-aan-woord` vindt links die aan het woord ervoor vastplakken. Aruba heeft
+  `K<a>ijk op de website…</a>`: op de pagina lees je "Kijk", maar alleen "ijk" is klikbaar. 5
+  meldingen, alle vijf terecht. Tegelijk werd de vrijstelling voor vaste linkteksten verbreed: die
+  gold niet voor de vaste zin met een lange landnaam erin. Nu mag `{land}` zijn ingevuld met de
+  landnaam, met of zonder lidwoord — maar ook niet meer dan dat: voegt een redacteur iets toe, dan
+  hoort dat gemeld te worden, want een woord te veel is soms jüist de fout.
 - Vier controles erbij die op hetzelfde criterium zijn gekozen — het antwoord staat vast, dus de
   tool kan niet gokken: een dubbel woord (*Het het departement*), een spatie voor een leesteken
   (*Algemeen alarmnummer : 101*), de standplaats van een post (*Bogota* → *Bogotá*) en een vaste
@@ -300,6 +306,22 @@ toe — de toets vergelijkt op kleine letters.
 
 Dit staat los van de knoppen *Eens / Oneens / Onterecht* onder een bevinding. Die leggen een oordeel
 vast over dít advies; de uitzonderingenlijst verandert de regel voor alle adviezen tegelijk.
+
+## De volgorde van de rubrieken
+
+Het sjabloon zet de rubrieken onder veiligheidsrisico's *"in volgorde van relevantie"*, en dat woord
+doet er toe: de volgorde mág schuiven als een risico in dit land zwaarder weegt. Daarom drie lagen
+in plaats van één vaste rij:
+
+| laag | rubrieken | wat de tool doet |
+|---|---|---|
+| **bovenaan** | Actueel, Regionale risico's | **fout** als het anders is (0 meldingen: dit gaat altijd goed) |
+| **vast** | Terrorisme, Oorlog en conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld | *ter overweging* bij een andere volgorde (22) |
+| **vrij** | Demonstraties, Landmijnen, Verkeersongevallen, Willekeurige arrestaties | onderling niets; wel onder *Wetten en gebruiken* (23) |
+
+Demonstraties mág boven Natuurgeweld staan: die sluit aan op Wetten en gebruiken, terwijl
+Natuurgeweld meer op zichzelf staat. De lagen staan in `regels/sjabloon.json`, dus verschuiven is
+data en geen code.
 
 ## Tussenkoppen: eenduidig, niet uniform
 

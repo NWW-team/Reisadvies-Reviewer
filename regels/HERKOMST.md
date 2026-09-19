@@ -470,6 +470,97 @@ plaatsen waar die zitten. Die staan op de site goed, dus daarmee zou dezelfde to
 verkeerd gespelde postnaam vangen. Nog niet gebouwd: dat vraagt een ophaalronde langs een ander
 deel van de open data.
 
+## De volgorde van de rubrieken, in drie lagen (19 september 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `rubriek-bovenaan` | SJ, blok *Risico dat van toepassing is*; indeling op instructie van de opdrachtgever | fout |
+| `rubrieken-volgorde` | idem | ter overweging |
+| `rubriek-vrij-te-hoog` | idem | ter overweging |
+
+Het sjabloonblok heet *"Risico dat van toepassing is, **in volgorde van relevantie**"*, en dat woord
+relevantie is de kern: de volgorde mág schuiven als een risico in dit land zwaarder weegt. Is
+terrorisme de reden voor kleurcode oranje, dan hoort terrorisme bovenaan. Eén vaste rij van elf
+rubrieken kon dat niet uitdrukken; daarom zijn het er nu drie lagen.
+
+| laag | rubrieken | wat de tool doet |
+|---|---|---|
+| **bovenaan** | Actueel, Regionale risico's | **fout** als het anders is |
+| **vast** | Terrorisme, Oorlog en conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld | *ter overweging* bij een andere volgorde |
+| **vrij** | Demonstraties, Landmijnen, Verkeersongevallen, Willekeurige arrestaties | onderling geen volgorde; wel onder *Wetten en gebruiken* |
+
+**Waarom Natuurgeweld in de vaste laag staat.** De meting zei eerst iets anders: over 226 adviezen
+staat Natuurgeweld gemiddeld op 0,82 (waarbij 1 onderaan is), dus in de praktijk bijna onderaan. Op
+grond daarvan stelde ik voor hem naar de vrije laag te doen. De opdrachtgever koos anders, met een
+reden die de meting niet kent: Natuurgeweld staat in ruim 200 van de 226 adviezen, terwijl
+Landmijnen er 19 heeft. Wat bijna altijd voorkomt hoort een vaste plek te hebben.
+
+**En waarom Demonstraties er dan bóven mag staan.** Natuurgeweld staat onderaan de vaste laag, en de
+ondergrens voor de vrije rubrieken ligt bij *Wetten en gebruiken* — niet bij het einde van de vaste
+laag. Demonstraties sluit logisch aan op Wetten en gebruiken; Natuurgeweld staat meer op zichzelf.
+Zonder die grens gaf de regel 35 meldingen, waarvan 22 over *Demonstraties boven Natuurgeweld*, en
+die zijn juist goed. Met de grens: 23, en die kloppen.
+
+**De bovenste laag is een vangnet.** Gemeten over 226 adviezen: **0 meldingen**. Alle adviezen zetten
+Actueel en Regionale risico's al precies goed. Dat is hoe een harde regel eruit hoort te zien — hij
+bewaakt iets wat niemand mag verschuiven, en gaat daarom nooit af.
+
+| | voor | na |
+|---|---:|---:|
+| `rubrieken-volgorde` | 53 | 22 |
+| `rubriek-vrij-te-hoog` | — | 23 |
+| `rubriek-bovenaan` | — | 0 |
+
+## Linkteksten: twee dingen rechtgezet (19 september 2026)
+
+**De vrijstelling was te smal.** `isVasteLinktekst` stelde een linktekst alleen vrij als hij
+letterlijk in een vaste zin zát. Twee soorten vielen daardoor buiten de boot:
+
+1. **De vaste zin met de landnaam erin.** *"Check welke vaccinaties u nodig heeft voor de
+   Centraal-Afrikaanse Republiek"* is 75 tekens. De vaste zinnen werden rond `{land}` opgeknipt, dus
+   de hele zin stond nergens in de lijst. Nu staat hij er ook heel in, met de landnaam ingevuld.
+2. **Het lidwoord bij de landnaam.** *"voor de Centraal-Afrikaanse Republiek"* tegenover *"voor
+   Saint Vincent en de Grenadines"*: dat lidwoord is grammatica, geen keuze. `{land}` mag daarom
+   worden ingevuld met de landnaam, met of zonder *de* of *het*.
+
+**Verder niets — en dat is een bewuste grens.** Eerst stond hier een soepeler regel: een linktekst
+die voor minstens 85% uit een vaste zin bestond, telde als vast. Dat ving ook Venezuela's *"Check
+welke documenten u **nog meer** nodig heeft…"*, waar die twee woorden nodig zijn omdat de zin ervoor
+al een document noemt.
+
+De opdrachtgever wees die regel af, met een argument dat sterker is: *"kleine aanpassing"* is niet te
+definiëren, en een woord te veel is soms jüist de fout. Bij Venezuela is het nodig, bij een ander
+advies misschien niet — en met een soepele regel zie je dat verschil nooit. Beter laten oppoppen en
+per geval oordelen, met de knop *Onterecht*, dan stilletjes slikken en de echte gevallen missen.
+
+Gemeten over 226 adviezen: van de 52 meldingen vallen er 3 weg (Saint Vincent, de Centraal-Afrikaanse
+Republiek en de Amerikaanse Maagdeneilanden — de kale landnaam, met of zonder lidwoord). Blijven
+staan: 49, waaronder *"de Verenigde Arabische Emiraten (VAE)"* en *"de Democratische Republiek Congo
+(DRC)"*, want die afkorting is een toevoeging van de redacteur.
+
+**Nieuw: `link-plakt-aan-woord`.** Bij het meten hierboven viel een linktekst op die met een kleine
+letter begon: *"ijk op de website van de Arubaanse overheid"*. In de bron staat:
+
+    Dit is verplicht. K<a href="...">ijk op de website van de Arubaanse overheid</a>.
+
+De **K** staat buiten de link. Op de pagina lees je gewoon "Kijk", maar alleen *"ijk op de website"*
+is klikbaar. Dat is bij het opmaken misgegaan en is alleen aan de opmaak te zien — in de gelezen
+tekst is er niets van te merken, dus geen mens vindt dit.
+
+De parser onthoudt nu of er een letter of cijfer direct vóór een link staat. Gemeten: **5 meldingen,
+alle vijf terecht**, in drie vormen:
+
+| vorm | waar | wat er staat |
+|---|---|---|
+| eerste letter buiten de link | Aruba, Turks- en Caicos | `K` + *ijk op de website* |
+| geen spatie tussen woord en link | Burundi, Finland | *telefoonnummer* + `+31 247 247 247` |
+| spatie bínnen de link | Mozambique | *via de* + ` ambassade van Mozambique` |
+
+Die laatste krijgt een eigen boodschap, want de correctie is een andere: daar moet de spatie náár
+buiten, niet erbij.
+
+Een link kan nooit legitiem middenin een woord beginnen, dus deze regel heeft geen bewaking nodig.
+
 ## Gemeten en niet gebouwd: het posttype (18 september 2026)
 
 De open data weet per land welke post er zit: een ambassade, een consulaat-generaal of een

@@ -1234,3 +1234,42 @@ blijft de rest van de tool gewoon werken; een verse laadbeurt van de pagina prob
 In Chromium gecontroleerd: de knop bestaat niet meer, de statusregel meldt *"Onbekende woorden staan
 nu onder 'Mogelijke spelfouten'"* zonder tussenstap, en het filter staat er meteen bij het openen
 van de pagina.
+
+## Een advies verversen: een live knop en een dagelijkse ronde (19 september 2026)
+
+Martijn: *"hoe vaak/wanneer wordt ververst het reisadvies, want dan kun je check doen ook van iets
+wat eerder de dag is geupdate? of kun je iets van een verversknop doen?"* Antwoord op het eerste
+deel: de 226 adviezen in de tool waren een momentopname, ververst door `.github/workflows/corpus.yml`
+— tot nu toe elke **maandag** 05:00 uur. Iets dat dinsdagmiddag wijzigt, kwam dus pas de maandag
+erna in de tool.
+
+**Twee dingen zijn gebouwd, allebei goedgekeurd** (*"graag optie 2, elke ochtend om 8 uur bijv. een
+verversing zou ook kunnen of beide"*):
+
+**1. Een knop, "Dit advies verversen", die één land rechtstreeks ophaalt** bij de open data van
+Nederlandwereldwijd.nl — dezelfde URL die de wekelijkse ronde gebruikt — en meteen opnieuw toetst,
+zonder op de volgende ophaalronde te wachten. Die aanroep gaat via `Adapter.uitApiRespons`, dezelfde
+functie die `scripts/fetch-corpus.mjs` ook gebruikt; die functie is pure regex op een string, geen
+Node-specifieke API's, en kan dus zo de browser in. Nieuw folded-in namespace `Adapter` in
+`scripts/bouw-pagina.mjs`, naast `Parse` en `Regels`.
+
+**Of dit werkt is van buitenaf niet te zien.** Of de open-data-dienst een rechtstreeks verzoek uit
+de browser toestaat (CORS), bepaalt de dienst zelf via een responsheader — en die header is pas te
+zien vanuit een échte browser op het échte domein waar de pagina straks op staat (github.io). Deze
+ontwikkelomgeving zit achter een eigen netwerk-allowlist die dat domein blokkeert (bevestigd: een
+rechtstreekse aanroep geeft hier een `403` van de eigen proxy, niet van de open-data-dienst), dus
+hier is niet vast te stellen of het lukt. Martijn accepteerde dat vooraf: *"alleen als het goed werkt
+... bij falen evt. uitwijk, werkt momenteel niet, plak je tekst."* Dat is precies hoe de knop zich
+gedraagt: lukt de aanroep niet — CORS, geen netwerk, een andere fout — dan blijft de rest van de tool
+gewoon werken en wijst de melding naar "Eigen tekst plakken". In Chromium is dat faalpad hier
+daadwerkelijk doorlopen (de sandbox blokkeert het verzoek immers zelf): knop uit tijdens het ophalen,
+foutmelding met de juiste tekst, knop weer aan. Wat *niet* getest kon worden is het geslaagde pad; dat
+blijkt pas op de live Pages-versie.
+
+De knop staat alleen aan bij een advies met een bekende iso-code (dus niet bij geplakte tekst, waar
+geen land bij hoort om een open-data-adres voor op te zoeken).
+
+**2. De wekelijkse ronde is een dagelijkse ronde geworden.** `cron: '0 6 * * *'` in plaats van
+`'0 5 * * 1'` — elke ochtend 06:00 UTC, wat door de zomer-/wintertijd vanzelf tussen 07:00 en 08:00
+Nederlandse tijd uitkomt (cron kent geen tijdzones). Zo staat de lijst in de tool nooit meer dan een
+dag achter, ook zonder dat iemand op de ververs-knop klikt.

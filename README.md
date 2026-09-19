@@ -52,7 +52,9 @@ kort* als intro te toetsen.
 
 **Markering.** Een bevinding die een plek in de tekst heeft, kleurt die zin in het linkerpaneel;
 klikken op de zin of op het citaat springt naar de andere kant. Een fragment hoeft niet precies
-één zin te zijn: valt een zin binnen het fragment of omgekeerd, dan kleurt hij mee. Bevindingen
+één zin te zijn: valt een zin binnen het fragment of omgekeerd, dan kleurt hij mee. Ook koppen
+kleuren mee — *"Geldzaken" hoort niet in een reisadvies* wijst die kop aan — maar daar telt
+alleen een letterlijke treffer, want een kop is te kort voor de ruime vergelijking. Bevindingen
 over iets dat *ontbreekt* hebben niets om aan te wijzen en blijven ongemarkeerd — die staan
 alleen in de lijst, met de verwachte formulering erbij.
 

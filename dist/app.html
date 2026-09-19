@@ -3026,7 +3026,7 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
         const tag = blok.niveau === 2 ? 'h3 class="blok-h2"' : 'h4 class="blok-h3"';
         const sluit = blok.niveau === 2 ? 'h3' : 'h4';
         const lang = woorden > 250;
-        stukken.push('<' + tag + '><span>' + esc(blok.kop) + '</span>'
+        stukken.push('<' + tag + '>' + markeerKop(blok.kop, perZin)
           + '<span class="telling' + (lang ? ' lang' : '') + '">' + woorden + ' woorden</span></' + sluit + '>');
       }
       // Op documentvolgorde: een alinea ná een opsomming hoort er ook ná te staan. Eerst alle
@@ -3052,6 +3052,25 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
   // halve adviezen kleuren.
   const FRAGMENT_MIN = 24;
   const ZIN_MIN = 12;
+
+  /**
+   * Een kop kan zelf een bevinding dragen: "Geldzaken" hoort niet in een reisadvies, een tussenkop
+   * is te lang, een vast kopje heet net anders. Die koppen werden platgeslagen getekend, dus er
+   * was niets om aan te wijzen en de tool sprong nergens heen als je op de melding klikte.
+   *
+   * Alleen een letterlijke treffer telt hier. De ruime vergelijking die markeer() voor zinnen
+   * gebruikt mag niet: een kop is kort, en dan zou "Geldzaken" meekleuren met elke lange zin
+   * waarin dat woord voorkomt.
+   */
+  function markeerKop(kop, perZin) {
+    const treffers = perZin.get(norm(kop));
+    if (!treffers || !treffers.length) return '<span>' + esc(kop) + '</span>';
+    const ernsten = new Set(treffers.map((i) => huidig.resultaat.bevindingen[i].ernst));
+    const zwaarste = VOLGORDE.find((e) => ernsten.has(e)) || 'info';
+    return '<span class="zin m-' + ernstKlasse[zwaarste] + '" data-bev="' + treffers[0] + '" '
+      + 'title="' + esc(treffers.length + ' bevinding' + (treffers.length > 1 ? 'en' : '')) + '">'
+      + esc(kop) + '</span>';
+  }
 
   function markeer(zin, perZin, ruim) {
     const k = norm(zin);

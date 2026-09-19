@@ -1064,3 +1064,45 @@ variatie is hier het uitgangspunt, niet de afwijking.
 **Gemeten: 2986 → 2940 bevindingen.** 16 meldingen over twijfeltaal en 30 over zinslengte, alle 46
 op dezelfde huiszin. Nagegaan of er iets anders meeviel: van de 30 verdwenen lengtemeldingen gaat
 er geen enkele over een andere zin.
+
+## Vijf punten uit de testronde van 19 september 2026
+
+**1. De kinderzin: het sjabloon is de waarheid.** Eerst was het idee de varianten goed te keuren;
+Martijn draaide dat terug: *"die kinderzin aanhouden wat in sjabloon staat als waarheid, wat afwijkt
+mag oppoppen."* Het sjabloon schrijft:
+
+> Kinderen hebben ook een geldig paspoort **[evt.: of geldige ID-kaart] [evt.: en een visum]** nodig
+> voor een reis naar [NAAM LAND].
+
+Twee optionele haakjes, dus vier geldige vormen. Het woord *eventueel* hoort er niet in: dat is het
+markeringetje `[evt.:]` uit het sjabloon dat in de lopende tekst terecht is gekomen. **54 adviezen
+doen dat.**
+
+Die vier vormen staan nu op de vrijstellingslijst, en de nieuwe vaste tekst `kinderen-paspoort`
+meldt wat daarvan afwijkt: **91 adviezen, 135 volgen het sjabloon.** De kale aanhef staat óók op de
+vrijstellingslijst, maar dan alleen tegen de *schrijfregels*: de zin is in het sjabloon zelf al 16
+woorden, dus die lengte is niet de keuze van de redacteur, en *"Twijfeltaal: eventueel"* zegt niet
+wat er aan de hand is. Zonder die splitsing leverde dit 145 meldingen op met de verkeerde boodschap;
+nu is het één melding per advies die zegt wat er mis is.
+
+**2. Foto's maken.** De toelichting is door Martijn herschreven: *"Foto's maken liever niet opnemen
+in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen
+opnemen als het een aanzienlijk risico is met relatief hoge straffen."* De oude tekst zei *"Kan evt.
+bij lokale wetten als het echt moet"*, wat niet meer klopte sinds die uitzondering eruit ging.
+
+**3. De verwijzing hoort bij de hoogste kleurcode.** Nieuwe regel `kort-verwijzing-hoogste-kleur`.
+Martijn bij Papoea-Nieuw-Guinea: *"bij deze laatste tekst staat ook Lees meer onder Regionale
+risico's bij oranje, terwijl dat alleen bij de hoogste kleur is, in dit geval rood."* Gemeten over
+de 71 adviezen met meerdere kleurcodes: **69 doen het al goed, twee niet** — Papoea-Nieuw-Guinea en
+Saoedi-Arabië, allebei rood/oranje/geel met de verwijzing bij rood én bij oranje.
+
+**4. `kleur-variant` onderstreepte niets.** Alle 51 meldingen van die regel misten een fragment, dus
+er viel niets te markeren en klikken sprong nergens heen. De regel weet welke kleur het betreft, dus
+hij kan ook de bullet aanwijzen die die kleur draagt. **51 van de 51 hebben nu een fragment.**
+
+**5. De spellingtoets was onzichtbaar als hij niets vond.** Een filtergroep zonder bevindingen valt
+weg uit de balk — terecht, anders staat er een rij nullen. Maar de spellingtoets zet een redacteur
+zélf aan, en dan is *"hij heeft gedraaid en niets gevonden"* niet te onderscheiden van *"hij heeft
+niet gedraaid"*. Martijn: *"als er geen spelfouten zijn dan wil ik dat ook zien."* Een groep kan nu
+`toon_ook_leeg` dragen; bij spelling geldt dat zodra de woordenlijst binnen is. In Chromium
+gecontroleerd op Roemenië: na het aanzetten staat er **"Mogelijke spelfouten 0"**, gedimd.

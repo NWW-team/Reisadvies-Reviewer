@@ -221,6 +221,8 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .advies p { margin: 0 0 .65em; }
 .advies ul { margin: 0 0 .8em; padding-left: 1.15em; }
 .advies li { margin-bottom: .25em; }
+.filters button.leeg { opacity: .55; }
+.filters button.leeg .n { font-variant-numeric: tabular-nums; }
 .zin { cursor: pointer; }
 .zin.m-fout { background: var(--fout-vlak); box-shadow: inset 0 -2px 0 var(--fout-rand); }
 .zin.m-letop { background: var(--letop-vlak); box-shadow: inset 0 -2px 0 var(--letop-rand); }
@@ -574,10 +576,16 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     const tel = telPerGroep();
     const zichtbaarAantal = zichtbareIndexen().length;
     const totaal = huidig.resultaat.bevindingen.length;
-    const knoppen = GROEPEN.filter((g) => tel[g.id] > 0).map((g) =>
+    // Een groep zonder bevindingen valt weg uit de balk; anders staat er een rij nullen. De
+    // spellingtoets is de uitzondering (toon_ook_leeg): die zet een redacteur zelf aan, en dan
+    // moet "hij heeft gedraaid en niets gevonden" te onderscheiden zijn van "hij heeft niet
+    // gedraaid". Zolang de woordenlijst er niet is, heeft het filter nog niets te zeggen.
+    const toonLeeg = (g) => g.toon_ook_leeg && (g.id !== 'spelling' || !!woordenlijst);
+    const knoppen = GROEPEN.filter((g) => tel[g.id] > 0 || toonLeeg(g)).map((g) =>
       '<button type="button" data-filter="' + g.id + '" aria-pressed="' + filters[g.id] + '"'
-        + ' title="' + esc(g.toelichting) + '">' + esc(g.label)
-        + ' <span class="n">' + tel[g.id] + '</span></button>').join('');
+        + (tel[g.id] ? '' : ' class="leeg"')
+        + ' title="' + esc(tel[g.id] ? g.toelichting : 'Deze toets heeft gedraaid en niets gevonden.') + '">'
+        + esc(g.label) + ' <span class="n">' + tel[g.id] + '</span></button>').join('');
     if (!knoppen) { doel.hidden = true; return; }
     doel.hidden = false;
     // Twee wegen naar hetzelfde: van alles-aan soorten wegklikken, of alles uitzetten en er een

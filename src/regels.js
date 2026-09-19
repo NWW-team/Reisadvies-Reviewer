@@ -684,13 +684,18 @@ export function maakToetser(data) {
           ? woordverschil(instructieVan(andereTekst), instructieVan(verwachteTekst)) : null;
         const preciezer = verschil
           ? ' ' + verschil.map(([x, y]) => `Er staat "${x}", er hoort "${y}" te staan.`).join(' ') : '';
+        // De bullet waar het om gaat, zodat de pagina hem kan markeren en je erheen kunt springen.
+        // Zonder dit stond er wel een melding maar werd er niets onderstreept.
+        const kleurRe = new RegExp('\\b' + kleur + '\\b');
+        const bullet = kortBlokStukken(doc).find((x) => kleurRe.test(norm(x)));
         b.push(bevinding('kleur-variant', ERNST.fout, 'MX, tab Kleurcode-teksten',
           staatDeAndere
             ? (hoortVolledig
                 ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.${preciezer}`
                 : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.${preciezer}`)
             : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
-          { verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
+          { ...(bullet ? { fragment: bullet } : {}),
+            verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
               // Alleen de gebieden zelf: het sjabloon heeft "Voor de gebieden {gebieden}", dus
               // "de gebieden" staat er al. Anders leest de suggestie als "Voor de gebieden de
               // gebieden X en Y".
@@ -858,6 +863,26 @@ export function maakToetser(data) {
             { fragment: contextVan(kortGenorm, plek),
               verwacht: vw.vorm.replace('{rubriek}', 'de rubriek') }));
           break;                                     // één melding per advies is genoeg
+        }
+        // De verwijzing hoort bij de hoogste kleurcode van het advies, en daar alleen. Staat hij
+        // ook onder een lagere kleur, dan wordt "In het kort" een tweede keer naar hetzelfde blok
+        // gestuurd. Papoea-Nieuw-Guinea zet hem bij rood en bij oranje; dat is een keer te veel.
+        if (vw.alleen_bij_hoogste_kleur && kleurenVanAdvies.length > 1) {
+          const hoogste = kleurenVanAdvies[0];
+          const doel = norm(vw.patroon + (vw.verplicht_bij_meerdere_kleurcodes || ''));
+          for (const bullet of kortBlokStukken(doc)) {
+            const g = norm(bullet);
+            if (!g.includes(doel)) continue;
+            // Welke kleur draagt deze bullet? De eerste die erin voorkomt.
+            const kleur = kleurcodes.volgorde.find((k) => new RegExp('\\b' + k + '\\b').test(g));
+            if (!kleur || kleur === hoogste) continue;
+            b.push(bevinding('kort-verwijzing-hoogste-kleur', ERNST.letop, 'SJ, vaste vorm van de verwijzing',
+              `De verwijzing naar ${vw.verplicht_bij_meerdere_kleurcodes} staat bij kleurcode `
+              + `${kleur}. Hij hoort alleen bij de hoogste kleurcode van dit advies, ${hoogste}.`,
+              { fragment: bullet,
+                notitie: 'Anders wordt de lezer vanuit "In het kort" twee keer naar hetzelfde blok '
+                  + 'gestuurd.' }));
+          }
         }
         const doelRubriek = vw.verplicht_bij_meerdere_kleurcodes;
         if (kleurenVanAdvies.length > 1 && doelRubriek

@@ -154,7 +154,9 @@
     ],
     "verplicht_bij_meerdere_kleurcodes": "Regionale risico's",
     "_bron": "Instructie van de opdrachtgever, 18 september 2026: elke verwijzing vanuit \"In het kort\" heeft de vorm \"Lees meer onder X\" - Actueel, Regionale risico's, of bij uitzondering een andere rubriek zoals Natuurgeweld of Paspoort. De matrix schrijft bij \"In het kort\" wel voor dat er verwezen wordt (\"max. 3 noemen en verwijzen\"), maar legt de bewoording niet vast. Gemeten op 18 september 2026: alle 149 verwijzingen in het corpus gebruiken deze vorm al, en alle 71 adviezen met meerdere kleurcodes verwijzen naar Regionale risico's.",
-    "_afwijkende_vormen_noot": "Deze lijst dient om een verkeerde verwijzing te herkennen. Hij komt in het corpus niet voor; het zijn de formuleringen die er redelijkerwijs in kunnen sluipen."
+    "_afwijkende_vormen_noot": "Deze lijst dient om een verkeerde verwijzing te herkennen. Hij komt in het corpus niet voor; het zijn de formuleringen die er redelijkerwijs in kunnen sluipen.",
+    "alleen_bij_hoogste_kleur": true,
+    "_alleen_bij_hoogste_noot": "Instructie van Martijn, 19 september 2026: de verwijzing naar Regionale risico's hoort bij de hoogste kleurcode van het advies, en niet ook nog eens bij een lagere. Gemeten over de 71 adviezen met meerdere kleurcodes: 69 doen dat al goed, twee niet (Papoea-Nieuw-Guinea en Saoedi-Arabie, beide rood/oranje/geel met de verwijzing bij rood en bij oranje)."
   },
   "h4_toetsen": {
     "_toelichting": "Onder welke rubrieken de tussenkoppen op h4-niveau vastliggen. Elders heten koppen naar hun eigen onderwerp - een ziekte, een gebeurtenis, een plaats - en valt er niets te toetsen. In het corpus komen 996 verschillende h4-koppen voor, waarvan er 839 precies een keer voorkomen; een gesloten lijst kan dat nooit dekken.",
@@ -228,15 +230,20 @@
       "Deel een kopie van uw paspoort of ID-kaart met familie in Nederland. Als u iets overkomt, is het belangrijk dat anderen uw gegevens hebben. Lees hoe u een veilige kopie maakt van uw paspoort of ID-kaart op de website van de Rijksoverheid.",
       "U heeft geen visum nodig voor {land} als u met een Nederlands paspoort reist.",
       "U heeft geen visum nodig voor {land} als u met een Nederlands paspoort of Nederlandse ID-kaart reist.",
-      "Kinderen hebben ook een geldig paspoort{vrij} nodig voor een reis naar {land}. Reist u alleen met 1 of meer kinderen jonger dan 18 jaar? Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee.",
+      "Kinderen hebben ook een geldig paspoort nodig voor een reis naar {land}.",
+      "Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig voor een reis naar {land}.",
+      "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar {land}.",
+      "Kinderen hebben ook een geldig paspoort of geldige ID-kaart en een visum nodig voor een reis naar {land}.",
+      "Reist u alleen met 1 of meer kinderen jonger dan 18 jaar? Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee.",
       "Uw Nederlandse rijbewijs is geldig in {land}. Lees meer over rijden in {land} op de website van de ANWB.",
       "In {land} is uw Nederlandse rijbewijs alleen geldig als u ook een geldig internationaal rijbewijs heeft. Lees meer over rijden in {land} op de website van de ANWB.",
       "Check wat u mag meenemen naar {land} op de website van {vrij} (informatie in het {vrij}).",
       "In een noodgeval kunt u ook terecht bij de honorair consul van Nederland in {vrij}.",
       "In een noodgeval kunt u ook terecht bij de ambassade van een ander land dat lid is van de Europese Unie.",
-      "Bent u een lhbtiq+ persoon? En wilt u naar {land} reizen? De wetten en de gebruiken in dit land tegenover lhbtiq+ personen zijn vergelijkbaar met die van Nederland."
+      "Bent u een lhbtiq+ persoon? En wilt u naar {land} reizen? De wetten en de gebruiken in dit land tegenover lhbtiq+ personen zijn vergelijkbaar met die van Nederland.",
+      "Kinderen hebben ook een geldig paspoort"
     ],
-    "_kinderzin_aanvulling": "Op 19 september 2026 is 'en eventueel een visum' in de kinderzin vervangen door {vrij}. Het middenstuk verschilt per land -- een visum, een ESTA, een ID-kaart, een inreisvergunning, de Thailand Digital Arrival Card -- en stond hier maar in een vorm, waardoor tien varianten in zestien adviezen alsnog op twijfeltaal ('eventueel') werden gemeld. Martijn: het woord eventueel hoort hier te blijven, want of je een visum nodig hebt hangt af van de reden van het bezoek; het anders formuleren maakt de zin alleen langer. De zin staat op deze lijst en is dus niet verplicht: hij wordt alleen vrijgesteld van de schrijfregels."
+    "_kinderzin_aanvulling": "De kinderzin staat in het sjabloon als 'Kinderen hebben ook een geldig paspoort [evt.: of geldige ID-kaart] [evt.: en een visum] nodig voor een reis naar [NAAM LAND].' Twee optionele haakjes, dus vier geldige vormen, en die staan hier alle vier. Martijn op 19 september 2026: het sjabloon is hier de waarheid en wat daarvan afwijkt mag oppoppen. Het woord 'eventueel' hoort dus NIET in deze lijst: dat is het sjabloonmarkeringetje [evt.:] dat in de lopende tekst terecht is gekomen. Een eerdere versie ving alle varianten met een jokerteken {vrij}; dat is op zijn aanwijzing teruggedraaid. Daarnaast staat de kale aanhef 'Kinderen hebben ook een geldig paspoort' op deze lijst. Dat stelt alleen de SCHRIJFREGELS buiten werking -- de zin is in het sjabloon zelf al 16 woorden, dus die lengte is niet de keuze van de redacteur, en 'eventueel' als twijfeltaal melden zegt niet wat er aan de hand is. Of de zin het sjabloon volgt wordt apart getoetst door de vaste tekst kinderen-paspoort, met een melding die dat ook zegt."
   },
   "vaste_teksten": [
     {
@@ -440,6 +447,19 @@
       "herken": "anwb",
       "boodschap_afwijkend": "De verwijzing naar de ANWB wijkt af van de vaste tekst.",
       "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij."
+    },
+    {
+      "id": "kinderen-paspoort",
+      "ernst": "info",
+      "rubriek": "paspoort",
+      "alleen_als": "kinderen hebben ook",
+      "bron": "SJ, blok Reizen met kinderen",
+      "zin": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar {land}.",
+      "kern": "kinderen hebben ook een geldig paspoort (of geldige id-kaart )?(en een visum )?nodig voor een reis naar",
+      "herken": "kinderen hebben ook een geldig paspoort",
+      "boodschap_afwijkend": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
+      "boodschap": "De vaste zin over de documenten voor kinderen ontbreekt.",
+      "notitie": "Het sjabloon schrijft: 'Kinderen hebben ook een geldig paspoort [evt.: of geldige ID-kaart] [evt.: en een visum] nodig voor een reis naar [NAAM LAND].' De twee haakjes zijn optioneel, dus vier vormen zijn goed. Het woord 'eventueel' hoort er niet in: dat is het markeringetje [evt.:] uit het sjabloon."
     },
     {
       "id": "kinderen-documenten",

@@ -49,11 +49,150 @@ const zonderApostrof = (s) => s.replace(/[\u2019']/g, (m, i, str) =>
       (/\w/.test(str[i - 1] || '') && /\w/.test(str[i + 1] || '')) || /^s\b/.test(str.slice(i + 1)) ? '' : m);
 
 
+/**
+ * Het patroon voor {land}: hoe een advies zijn eigen land in een vaste zin mag noemen.
+ *
+ * Het cms-veld draagt de administratieve naam, de tekst gebruikt de leesbare. Drie verschillen zijn
+ * administratie of grammatica en geen keuze van de redacteur, en die staan we toe:
+ *
+ *   het lidwoord   "voor de Bahama's", "voor de Seychellen", "voor het VK"
+ *   de haakjes     "Eswatini (Swaziland)" in het cms, "Eswatini" in de tekst
+ *   de komma       "Congo, de Republiek" in het cms, "de Republiek Congo" in de tekst
+ *
+ * Die komma is een sorteerkunstje van de landenlijst: het land staat onder de C. Draai de twee
+ * delen om en je hebt de naam zoals een mens hem schrijft. Het raakt twee landen, allebei Congo.
+ *
+ * Daarnaast de vier afkortingen die de adviezen echt gebruiken, uit het veld `kort` in
+ * regels/landen.json: VK, VS, VAE en DRC. Dat is een gesloten lijst, geen jokerteken.
+ *
+ * Verder niets. Wijkt de naam zelf af, dan is dat een keuze van iemand en die hoort gemeld te
+ * worden -- al is de melding dan wel een andere; zie landnaamAfwijking hieronder.
+ */
+function landPatroon(land, kort) {
+  const kaal = norm(land).replace(/\s*\([^)]*\)\s*$/, '').trim();
+  const komma = kaal.match(/^([^,]+),\s*(.+)$/);
+  const omgedraaid = komma ? komma[2] + ' ' + komma[1] : '';
+  const afk = (kort || []).map(norm);
+  const vormen = [...new Set([norm(land), kaal, omgedraaid, ...afk].filter(Boolean))].map(esc);
+  return '(?:de |het )?(?:' + vormen.join('|') + ')';
+}
+
+/**
+ * Het gebiedendeel opent vaak een opsomming: "Kleurcode rood geldt voor:" met de gebieden eronder
+ * als bullets. Die dubbele punt is leesteken, geen andere formulering, dus we laten hem toe.
+ */
+const gebiedenPatroon = (body) => ':? ' + body;
+
+/**
+ * Hoeveel tekens mag een gebiedenopsomming zijn? Geteld over 230 opsommingen in het corpus: de
+ * langste is die van Irak met 211 tekens, daarna Armenië met 155 en Jordanië met 151. Op 120
+ * tekens -- de oude grens -- viel Jordanië buiten de boot en kreeg een melding voor een zin die
+ * gewoon klopt. 220 haalt ze allemaal binnen.
+ *
+ * Dit jokerteken is iets anders dan dat voor {land}. Daar zou het een verkeerde landnaam
+ * verbergen, en daarom staat daar een gesloten lijst. Hier zijn de gebieden per definitie vrije
+ * tekst: de matrix schrijft ze als "gebieden X en Y". Het patroon kan toch geen punt passeren,
+ * dus het blijft binnen één zin.
+ */
+const GEBIEDEN_MAX = 220;
+
+/**
+ * Woorden waaraan je ziet dat een stuk tekst een gebied aanduidt en geen land: een windrichting,
+ * of een zelfstandig naamwoord dat een gebied benoemt.
+ *
+ * Japan schrijft "De kleurcode van het reisadvies voor het zuidoosten van Fukushima is rood". Dat
+ * is de landvorm van de zin met een gebied erin, en Martijn rekent dat goed. Nauru schrijft
+ * "voor Naoero" -- een kale naam die niet die van het land is -- en dat blijft wel een melding.
+ * Dit is het verschil tussen die twee.
+ */
+const GEBIEDWOORD_BRON = '\\b(?:noord|zuid|oost|west)(?:en|elijk\\w*)?\\b'
+  + '|\\b(?:noord|zuid)(?:oost|west)(?:en|elijk\\w*)?\\b'
+  + "|\\b(?:gebied|gebieden|grensgebied|grensgebieden|grensstrook|strook|regio|regio'?s|provincie"
+  + '|provincies|deelstaat|deelstaten|staat|staten|stad|steden|eiland|eilanden|district|districten'
+  + '|departement|departementen|gouvernement|gouvernementen|kust|vallei|delta|meer|schiereiland'
+  + '|hooglanden|driehoek|wijk|wijken|vulkaan|rest|deel|delen|omgeving)\\b';
+const GEBIEDWOORD = new RegExp(GEBIEDWOORD_BRON, 'i');
+
+/**
+ * Het patroon voor {gebied}: vrije tekst die ergens een gebiedwoord moet bevatten. Daarmee is
+ * "het zuidoosten van Fukushima" een gebied en "Naoero" niet, en kan de landvorm van de zin met
+ * een gebied erin worden toegestaan zonder dat een verkeerde landnaam meelift.
+ */
+const gebiedPatroon = () => "[^.?!]{0,60}?(?:" + GEBIEDWOORD_BRON + ")[^.?!]{0,120}?";
+
+/**
+ * De vormen waarin een kleurbullet zijn gebieden noemt. Alleen deze vier; de rest van de zin doet
+ * er voor het tellen niet toe.
+ */
+const GEBIEDSVORMEN = [
+  /kleurcode van het reisadvies is (?:rood|oranje|geel|groen) voor (.+)/i,
+  /kleurcode van het reisadvies voor (?:de gebieden )?(.+) is (?:rood|oranje|geel|groen)/i,
+  /^voor (.+?) geldt (?:grotendeels )?kleurcode (?:rood|oranje|geel|groen)/i,
+  /^kleurcode (?:rood|oranje|geel|groen) geldt voor (.+)/i,
+];
+
+/**
+ * Hoeveel gebieden noemt deze opsomming?
+ *
+ * Niet door op komma's en "en" te splitsen: dat telt namen en geen gebieden. Er tellen alleen
+ * delen mee die zélf een gebied benoemen -- "de provincie Mafraq", "het grensgebied met India".
+ * Namen die achter zo'n deel hangen tellen niet apart; die horen bij het gebied dat er al staat.
+ *
+ * Dat vangt twee dingen tegelijk:
+ *
+ *   Benin schrijft "de noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en
+ *   Nigeria". Dat is één gebied met vier buurlanden als oriëntatiepunt, geen vijf gebieden.
+ *
+ *   Tsjaad schrijft "de regio's Kanem, Ouaddai, Tibesti, Borkou en Ennedi". Dat is één opsomming
+ *   achter één kopwoord, en Martijn rekent die op 19 september 2026 acceptabel.
+ *
+ * Wat wél oploopt is "de provincie A, de provincie B, de stad C, het eiland D, de regio E en het
+ * district F": zes keer een eigen kopwoord, zes gebieden. Dat is het geval uit de matrixregel --
+ * niet gebied 1, 2, 3, 4, 5, 6.
+ *
+ * Windrichtingen tellen met opzet niet als apart gebied: "het noorden en oosten" is juist de vorm
+ * die de matrix aanraadt boven een opsomming, dus die mag hier niet tegen een advies werken.
+ *
+ * De telling is met opzet voorzichtig: bij twijfel telt hij laag. Liever een opsomming van zes
+ * missen dan er een van vier melden.
+ */
+const EIGEN_GEBIED = new RegExp("\\b(?:gebied|gebieden|grensgebied|grensgebieden|grensstrook|strook|regio|regio'?s"
+  + '|provincie|provincies|deelstaat|deelstaten|stad|steden|eiland|eilanden|district|districten'
+  + '|departement|departementen|gouvernement|gouvernementen|kust|vallei|delta|schiereiland'
+  + '|hooglanden|driehoek|wijk|wijken|deel|delen)\\b', 'i');
+
+function telGebieden(ruw) {
+  const delen = ruw.replace(/\u2019/g, "'").split(/,\s*|\s+en\s+/).map((x) => x.trim()).filter(Boolean);
+  const n = delen.filter((deel) => EIGEN_GEBIED.test(deel)).length;
+  return Math.max(n, 1);
+}
+
+/**
+ * Zoekt de landnaam zoals een advies hem zelf schrijft: hetzelfde sjabloon, maar met een vangnet
+ * op de plek van {land}. Slaat dit wel aan waar sjabloonRegex faalde, dan staat de vaste zin er
+ * gewoon en zit het verschil alleen in de naam. Dat is een andere melding dan een zin die niet
+ * klopt, en de redacteur heeft er ook iets anders aan.
+ *
+ * Alleen de vormen met {land} doen mee: een sjabloon met {gebieden} noemt geen land.
+ */
+function landnaamAfwijking(sjablonen, tekst) {
+  for (const sj of sjablonen) {
+    if (!sj.includes('{land}') || sj.includes('{gebieden}') || sj.includes('{gebied}')) continue;
+    let p = esc(norm(sj));
+    p = p.replace(/\\\{land\\\}/g, "((?:de |het )?[a-z\\u00c0-\\u017f'. -]{2,40}?)");
+    const m = tekst.match(new RegExp(p));
+    if (m) return m[1].trim();
+  }
+  return null;
+}
+
 /** Maakt van een sjabloon met {land}/{gebieden} een regex die tegen genormaliseerde tekst matcht. */
-function sjabloonRegex(sjabloon, land) {
+function sjabloonRegex(sjabloon, land, kort) {
   let p = esc(norm(sjabloon));
-  p = p.replace(/\\\{land\\\}/g, land ? esc(norm(land)) : "[a-z\\u00c0-\\u017f' -]{2,40}");
-  p = p.replace(/\\\{gebieden\\\}/g, "[^.]{2,120}");
+  p = p.replace(/\\\{land\\\}/g, land ? landPatroon(land, kort) : "[a-z\\u00c0-\\u017f' -]{2,40}");
+  p = p.replace(/\\\{gebied\\\}/g, gebiedPatroon());
+  p = p.replace(/ \\\{gebieden\\\}/g, gebiedenPatroon('[^.]{2,' + GEBIEDEN_MAX + '}'));
+  p = p.replace(/\\\{gebieden\\\}/g, "[^.]{2," + GEBIEDEN_MAX + "}");
   return new RegExp(p);
 }
 
@@ -61,11 +200,13 @@ function sjabloonRegex(sjabloon, land) {
  * Als sjabloonRegex, maar zonder ankers: toetst of een vaste tekst érgens in een stuk tekst
  * voorkomt. Kent naast {land} en {gebieden} ook {kleur}, want het sjabloon gebruikt die.
  */
-function vasteTekstRegex(sjabloon, land) {
+function vasteTekstRegex(sjabloon, land, kort) {
   let p = esc(norm(sjabloon));
-  p = p.replace(/\\\{land\\\}/g, land ? '(?:' + esc(norm(land)) + ')' : "[^.?!]{2,45}");
+  p = p.replace(/\\\{land\\\}/g, land ? landPatroon(land, kort) : "[^.?!]{2,45}");
   p = p.replace(/\\\{kleur\\\}/g, '(?:rood|oranje|geel|groen)');
-  p = p.replace(/\\\{gebieden\\\}/g, '[^.?!]{2,160}');
+  p = p.replace(/\\\{gebied\\\}/g, gebiedPatroon());
+  p = p.replace(/ \\\{gebieden\\\}/g, gebiedenPatroon('[^.?!]{2,' + GEBIEDEN_MAX + '}'));
+  p = p.replace(/\\\{gebieden\\\}/g, '[^.?!]{2,' + GEBIEDEN_MAX + '}');
   return new RegExp(p);
 }
 
@@ -113,6 +254,23 @@ function rubriekEenheden(doc, patroon) {
 function instructieVan(vasteTekst) {
   const zinnen = norm(vasteTekst || '').split(/(?<=\.)\s+/);
   return zinnen.slice(1).join(' ').replace(/\{land\}|\{gebieden\}/g, '').trim();
+}
+
+/**
+ * Het verschil tussen twee vaste instructies, als dat een kwestie van losse woorden is.
+ *
+ * Bij geel en groen scheelt de volledige variant maar een woord van de verkorte -- "erheen" tegen
+ * "hierheen" -- en dan is "de volledige uitleg staat er" een raadsel voor wie het moet herstellen.
+ * Staan er evenveel woorden en verschillen er hoogstens twee, dan noemen we ze. Loopt het verder
+ * uiteen (rood, waar de hele zin anders loopt), dan geeft dit niets terug en blijft de melding
+ * zoals hij was.
+ */
+function woordverschil(er, hoort) {
+  const a = (er || '').split(' ');
+  const c = (hoort || '').split(' ');
+  if (a.length !== c.length) return null;
+  const anders = a.map((w, i) => [w, c[i]]).filter(([x, y]) => x !== y);
+  return anders.length && anders.length <= 2 ? anders : null;
 }
 
 function bevinding(regel, ernst, bron, boodschap, extra = {}) {
@@ -189,6 +347,15 @@ export function maakToetser(data) {
   const landOpKale = new Map();
   for (const l of ((data.landen && data.landen.landen) || [])) {
     if (l.naam && zonderTekens(l.naam) !== l.naam.toLowerCase()) landOpKale.set(zonderTekens(l.naam), l.naam);
+  }
+
+  /**
+   * De afkortingen die een advies voor zijn eigen land mag gebruiken, op de naam uit het cms-veld.
+   * Zie landPatroon: een gesloten lijstje van vier, niet een jokerteken.
+   */
+  const kortOpLand = new Map();
+  for (const l of ((data.landen && data.landen.landen) || [])) {
+    if (l.naam && l.kort && l.kort.length) kortOpLand.set(norm(l.naam), l.kort);
   }
 
   /**
@@ -397,6 +564,8 @@ export function maakToetser(data) {
     const b = [];
     const tekst = doc.volledigeTekst || '';
     const genorm = norm(tekst);
+    // De afkortingen die dit land in een vaste zin mag dragen ("het VK", "de VAE"); meestal geen.
+    const kortLand = kortOpLand.get(norm(doc.land || '')) || [];
 
     // "In het kort" is geen introductie: daar gelden eigen regels voor. Staat de eerste alinea
     // op de plek van het introveld maar begint hij met een vaste kop, dan hebben we het
@@ -436,22 +605,58 @@ export function maakToetser(data) {
           notitie: 'De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze.' }));
     }
 
+    // De matrix heeft voor de kleurcodes twee kolommen die niet door elkaar mogen lopen. Kolom
+    // "In het kort" legt de bullets bovenaan vast; kolom "Regionale risico's" legt de definitie
+    // vast die daar onder een h4-kopje per kleur staat, waarbij het kopje zelf de kleur is
+    // ("Geel: let op, er zijn risico's"). Twee verschillende teksten voor twee verschillende
+    // plekken. De toetsen hieronder gaan over de eerste kolom en kijken daarom alleen in dat
+    // blok; regionaal-kleur-kop en regionaal-kleur-tekst verderop doen de tweede.
+    //
+    // Dat is niet theoretisch. Marokko schrijft "Vor de rest van Marokko geldt kleurcode geel" --
+    // een typefout in de bullet -- maar had verderop wel een goede zin staan, en daar zweeg de
+    // tool op. Zo bleven vijf echte fouten onzichtbaar.
+    //
+    // Heeft een advies geen blok "In het kort" (geplakte tekst), dan valt de toets terug op de
+    // hele tekst; anders zou hij helemaal niets meer zeggen.
+    const kortTekst = kortBlokTekst(doc);
+    const kortGenorm = norm(kortTekst) || genorm;
+
     // ---------- kleurcodes ----------
     // De matrix laat meerdere manieren toe om de kleur aan te duiden (kolom NB), maar de
     // handelingsinstructie erachter ligt vast. Die twee toetsen we daarom apart.
-    for (const kleur of kleurenInTekst) {
+    //
+    // We lopen langs de kleuren van het advies zelf, niet langs de kleuren die ergens in de tekst
+    // staan. Oman verwijst naar het rode reisadvies voor Jemen; dat is de kleur van de buurman, en
+    // Oman hoort daar geen vaste rode tekst bij te zetten. Ontbreekt het cms-veld (geplakte tekst),
+    // dan valt kleurenVanAdvies terug op wat er in de tekst staat en blijft de toets wat hij was.
+    for (const kleur of kleurenVanAdvies) {
       const k = kleurcodes.kleuren[kleur];
       if (!k) continue;
 
-      const aangeduid = (kleurcodes.aanduiding_sjablonen || []).some((sj) =>
-        sjabloonRegex(sj.replace(/\{kleur\}/g, kleur), doc.land).test(genorm));
+      const metKleur = (kleurcodes.aanduiding_sjablonen || []).map((sj) => sj.replace(/\{kleur\}/g, kleur));
+      const aangeduid = metKleur.some((sj) => sjabloonRegex(sj, doc.land, kortLand).test(kortGenorm));
       if (!aangeduid) {
-        b.push(bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
-          `Kleurcode ${kleur} wordt niet op een van de vaste manieren aangeduid.`,
-          { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.` }));
+        // Staat de vaste zin er wel, maar heet het land er anders? Dan is dát de melding.
+        // genorm is kleine letters; voor de melding halen we de naam op zoals hij er echt staat.
+        // Staat er een gebied in de landplek ("het zuidoosten van Fukushima"), dan is dat de
+        // gebiedsvorm van de zin en geen andere landnaam. Alleen een kale naam telt.
+        const gevonden = doc.land ? landnaamAfwijking(metKleur, kortGenorm) : null;
+        const kaleNaam = gevonden && !GEBIEDWOORD.test(gevonden) ? gevonden : null;
+        const anders = kaleNaam
+          && (tekst.match(new RegExp(esc(kaleNaam).replace(/ /g, '\\s+'), 'i')) || [kaleNaam])[0];
+        b.push(anders
+          ? bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+            `De vaste zin bij kleurcode ${kleur} staat er, maar noemt het land "${anders}". `
+            + `In het cms heet dit advies "${doc.land}".`,
+            { verwacht: `De kleurcode van het reisadvies voor ${doc.land} is ${kleur}.`,
+              notitie: 'Of de tekst of de landenlijst loopt achter. De tool weet niet welke van de '
+                + 'twee; hij meldt alleen dat ze niet hetzelfde zeggen.' })
+          : bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+            `Kleurcode ${kleur} wordt niet op een van de vaste manieren aangeduid.`,
+            { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.` }));
       }
 
-      const heeftActie = (k.actiezinnen || []).some((z) => genorm.includes(norm(z)));
+      const heeftActie = (k.actiezinnen || []).some((z) => kortGenorm.includes(norm(z)));
       if (!heeftActie) {
         b.push(bevinding('kleur-vaste-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
           `Bij kleurcode ${kleur} ontbreekt de vaste handelingsinstructie.`,
@@ -472,13 +677,18 @@ export function maakToetser(data) {
       const hoortVolledig = kleurenVanAdvies.length === 1;
       const verwachteTekst = hoortVolledig ? k.in_het_kort_volledig : k.in_het_kort_deels;
       const andereTekst = hoortVolledig ? k.in_het_kort_deels : k.in_het_kort_volledig;
-      if (instructieVan(verwachteTekst) && !genorm.includes(instructieVan(verwachteTekst))) {
-        const staatDeAndere = instructieVan(andereTekst) && genorm.includes(instructieVan(andereTekst));
+      if (instructieVan(verwachteTekst) && !kortGenorm.includes(instructieVan(verwachteTekst))) {
+        const staatDeAndere = instructieVan(andereTekst) && kortGenorm.includes(instructieVan(andereTekst));
+        // Scheelt het maar een woord of twee, noem ze dan: dat is wat er hersteld moet worden.
+        const verschil = staatDeAndere
+          ? woordverschil(instructieVan(andereTekst), instructieVan(verwachteTekst)) : null;
+        const preciezer = verschil
+          ? ' ' + verschil.map(([x, y]) => `Er staat "${x}", er hoort "${y}" te staan.`).join(' ') : '';
         b.push(bevinding('kleur-variant', ERNST.fout, 'MX, tab Kleurcode-teksten',
           staatDeAndere
             ? (hoortVolledig
-                ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.`
-                : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.`)
+                ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.${preciezer}`
+                : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.${preciezer}`)
             : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
           { verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
               // Alleen de gebieden zelf: het sjabloon heeft "Voor de gebieden {gebieden}", dus
@@ -488,6 +698,35 @@ export function maakToetser(data) {
             notitie: hoortVolledig
               ? 'Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in "In het kort".'
               : 'Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));
+      }
+    }
+
+    // ---------- hoeveel gebieden noemt een kleurbullet? ----------
+    // De matrix: "Maximaal 5 gebieden per kleur noemen, anders een windrichting noemen. Dus niet
+    // gebied 1, 2, 3, 4, 5, 6, maar liever gebieden in het noorden en oosten."
+    //
+    // Alleen in "In het kort". Onder Regionale risico's mag de opsomming juist wel lang zijn:
+    // daar staat de uitwerking.
+    // Per bullet, niet over de samengevoegde tekst: dan blijft het fragment de bullet zelf.
+    for (const bullet of kortBlokStukken(doc)) {
+      const stuk = bullet.split(/(?<=\.)\s+/)[0];
+      for (const vorm of GEBIEDSVORMEN) {
+        const m = stuk.match(vorm);
+        if (!m) continue;
+        const lijst = m[1].replace(/\.$/, '').trim();
+        // "de rest van X" en "het hele land" zijn geen opsomming.
+        if (!/^(?:de rest van|het hele)\b/i.test(lijst)) {
+          const aantal = telGebieden(lijst);
+          if (aantal > lim.gebieden.max_per_kleur) {
+            b.push(bevinding('kleur-gebieden-max', ERNST.letop, 'MX, tab Kleurcode-teksten',
+              `Deze kleurcode noemt ${aantal} gebieden. De richtlijn is maximaal `
+              + `${lim.gebieden.max_per_kleur}; noem er anders een windrichting bij.`,
+              { fragment: stuk.trim(),
+                notitie: 'Niet gebied 1, 2, 3, 4, 5, 6, maar liever gebieden in het noorden en '
+                  + 'oosten. De uitwerking per gebied hoort onder Regionale risico\'s.' }));
+          }
+        }
+        break;
       }
     }
 
@@ -527,7 +766,6 @@ export function maakToetser(data) {
 
     // De volgorde rood-naar-groen geldt voor de opsomming in "In het kort", niet voor elke
     // vermelding van een kleur verderop in het advies.
-    const kortTekst = kortBlokTekst(doc);
     if (kortTekst) {
       const posities = kleurcodes.volgorde
         .map((k) => ({ k, i: norm(kortTekst).search(new RegExp('kleurcode[^.]{0,80}\\b' + k + '\\b|\\b' + k + '\\b(?=[^.]{0,40}kleurcode)')) }))
@@ -640,7 +878,7 @@ export function maakToetser(data) {
       if (gebiedenMatch) {
         const n = gebiedenMatch[1].split(/,|\sen\s/).map((s) => s.trim()).filter(Boolean).length;
         if (n > lim.gebieden.max_noemen) {
-          b.push(bevinding('gebieden-max-drie', ERNST.letop, 'MX, tab Koppen, rij In het kort',
+          b.push(bevinding('gebieden-max', ERNST.letop, 'MX, tab Koppen, rij In het kort',
             `Er worden ${n} gebieden genoemd. Noem er maximaal ${lim.gebieden.max_noemen} en verwijs daarna.`,
             { fragment: gebiedenMatch[0] }));
         }
@@ -799,8 +1037,8 @@ export function maakToetser(data) {
 
     if (introIsVeld0 && intro) {
       const introGenorm = norm(intro);
-      const heeftStandaard = vasteTekstRegex(sj.intro.standaard, doc.land).test(introGenorm);
-      const heeftRood = vasteTekstRegex(sj.intro.alleen_rood, doc.land).test(introGenorm);
+      const heeftStandaard = vasteTekstRegex(sj.intro.standaard, doc.land, kortLand).test(introGenorm);
+      const heeftRood = vasteTekstRegex(sj.intro.alleen_rood, doc.land, kortLand).test(introGenorm);
       const verwachteIntro = (alleenRood ? sj.intro.alleen_rood : sj.intro.standaard)
         .replace(/\{land\}/g, doc.land || 'land X');
       if (!heeftStandaard && !heeftRood) {
@@ -863,7 +1101,7 @@ export function maakToetser(data) {
       if (vt.kleur && !vt.kleur.some((k) => kleurenInTekst.includes(k))) continue;
       if (vt.alleen_rood && !alleenRood) continue;
 
-      const kern = vt.kern ? new RegExp(vt.kern, 'i') : vasteTekstRegex(vt.zin, doc.land);
+      const kern = vt.kern ? new RegExp(vt.kern, 'i') : vasteTekstRegex(vt.zin, doc.land, kortLand);
       if (kern.test(bereikGenorm)) continue;
 
       // Wijkt de tekst af, dan staat er dus wél iets — alleen anders. Zoek de zin op waar de
@@ -1657,10 +1895,15 @@ export function maakToetser(data) {
 }
 
 /** De tekst onder "In het kort": daar geldt de volgorde-regel voor de kleurcodes. */
-function kortBlokTekst(doc) {
+function kortBlokStukken(doc) {
   const blok = doc.blokken.find((x) => (x.kop || '').trim().toLowerCase() === 'in het kort');
-  if (!blok) return null;
-  return [...blok.alineas.map((a) => a.tekst), ...blok.opsommingen.flatMap((o) => o.items)].join(' ');
+  if (!blok) return [];
+  return [...blok.alineas.map((a) => a.tekst), ...blok.opsommingen.flatMap((o) => o.items)];
+}
+
+function kortBlokTekst(doc) {
+  const stukken = kortBlokStukken(doc);
+  return stukken.length ? stukken.join(' ') : null;
 }
 
 /** De zin waarin de treffer staat. Een hele zin is bruikbaarder voor de redacteur dan een

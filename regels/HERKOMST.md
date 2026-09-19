@@ -20,7 +20,7 @@ Twee bronnen:
 | `kleur-eerste-bullet-voluit` | MX, tab *Kleurcode-teksten*, kolom NB | eerste bullet voluit, vervolgbullets verkort |
 | `actueel-max-woorden` | MX, tab *Koppen*, rij *In het kort* | de bullet die naar Actueel verwijst: max 25 woorden — niet de rubriek Actueel zelf |
 | `kort-informatieservice-onderaan` | MX, tab *Koppen*, rij *In het kort* | "Daaronder in Let op: Aanmelden Informatieservice": onderaan het blok |
-| `gebieden-max-drie` | MX, tab *Koppen*, rij *In het kort* | max 3 gebieden/plaatsen noemen, daarna verwijzen |
+| `gebieden-max` | MX, tab *Koppen*, rij *In het kort* | max 5 gebieden/plaatsen noemen, daarna verwijzen (was 3; zie 19 september 2026) |
 | `h2-vast` | MX, tab *Uitleg* | H2-koppen zijn vast |
 | `h3-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden* | onderwerp hoort niet in het reisadvies |
 | `h3-regionaal-alleen-bij-meerdere` | MX, tab *Koppen*, rij *Regionale risico's* | alleen bij meer dan 1 kleurcode |
@@ -686,3 +686,303 @@ de lopende tekst erbij — die zag de oude regel helemaal niet.
 **Vals alarm.** Klopt een woord wel? Dan hoort het in `regels/uitzonderingen.txt`. Die lijst hoort
 bij de webredactie, niet bij de techniek, en groeit met het gebruik. De basis komt uit
 SpellingSpeurneus; wat daarna is gemeten over de reisadviezen staat er onderaan bij.
+
+## Hoe een advies zijn eigen land mag noemen (19 september 2026)
+
+Martijn stuurde het Verenigd Koninkrijk als voorbeeld: *"De kleurcode van het reisadvies voor het
+VK is groen"* werd gemeld, terwijl die zin gewoon klopt. Zijn vraag: *"In sommige gevallen heeft
+het land dus een lidwoord. Dus dan mag dat wel ervoor staan. Is daar iets op te bedenken?"*
+
+De oorzaak zat niet in de zin maar in de vergelijking. Het cms-veld `location` draagt de
+administratieve naam — *Verenigd Koninkrijk*, *Bahama's*, *Eswatini (Swaziland)* — en de tool eiste
+die naam letterlijk in de vaste zin. Drie verschillen zijn daarom vrijgegeven, want het zijn
+verschillen van taal en niet van redactie:
+
+| wat | voorbeeld | waarom |
+|---|---|---|
+| het lidwoord | *voor de Seychellen*, *voor het VK* | grammatica; het cms-veld draagt nooit een lidwoord |
+| de haakjes | cms *Eswatini (Swaziland)*, tekst *Eswatini* | de haakjes zijn een administratieve toevoeging |
+| de afkorting | *het VK*, *de VS*, *de VAE*, *de DRC* | vier stuks, uit het nieuwe veld `kort` in `landen.json` |
+
+Die vier afkortingen zijn geteld, niet bedacht: over het hele corpus staat *de VS* 54×, *de DRC*
+47×, *het VK* 34× en *de VAE* 31×. Alle andere afkortingen achter een lidwoord zijn instanties —
+*de ANWB* (225×), *de GGD* (140×), *het USGS* (53×), *het RIVM* (19×) — geen landen. De lijst is
+met opzet gesloten: een land dat er niet in staat, hoort voluit in een vaste zin.
+
+**Verder niets.** Schrijft Nauru *"voor Naoero"* waar het cms *Nauru* zegt, dan is dat een keuze van
+een redacteur en geen taalregel, en die blijft gemeld. Dat is ook waarom hier géén jokerteken is
+gebruikt: de vorm `De kleurcode van het reisadvies voor {gebieden} is {kleur}` bracht het aantal
+meldingen in één klap van 32 naar 2, maar `{gebieden}` matcht álles — dus ook *Naoero* en ook een
+verkeerd land. Dat is precies het bezwaar dat Martijn op 19 september tegen de ruime linktekst-
+vrijstelling maakte, en het geldt hier net zo goed.
+
+**Twee dingen die meeliften.**
+
+*De dubbele punt.* De gebiedenopsomming opent vaak met een dubbele punt: *"Kleurcode rood geldt
+voor:"* met de gebieden eronder als bullets (India). Dat is een leesteken, geen andere formulering,
+dus het patroon laat hem toe waar `{gebieden}` op een spatie volgt.
+
+*De kleur van de buurman.* Oman verwijst naar het rode reisadvies voor Jemen. De tool zag daar
+kleurcode rood in de tekst en eiste vervolgens van Oman de hele rode vaste tekst. De kleurcodeloop
+kijkt nu naar de kleuren van het advies zelf — het cms-veld — en niet naar elke kleur die ergens in
+de lopende tekst valt. Ontbreekt dat veld (geplakte tekst), dan valt hij terug op de tekst en
+verandert er niets. Dezelfde redenering stond al in de code voor `kleurenVanAdvies`; hij gold alleen
+nog niet voor deze loop.
+
+**Gemeten over 226 adviezen:** `kleur-aanduiding` gaat van 32 naar 2 meldingen, `intro-vaste-tekst`
+van 26 naar 8, `kleur-vaste-tekst` van 2 naar 1. Totaal 3032 → 2983.
+
+Wat overblijft is echt:
+
+| land | wat er staat | wat eraan is |
+|---|---|---|
+| Nauru | *De kleurcode van het reisadvies voor Naoero is groen* | andere schrijfwijze dan het cms |
+| Zuid-Afrika | *De kleurcode **voor** het reisadvies voor Zuid-Afrika is geel* | moet *van het reisadvies* zijn |
+| VK / VS / VAE / DRC (intro) | *Reist u naar het Verenigd Koninkrijk (VK)? Bijvoorbeeld naar Engeland, Wales, Schotland of Noord-Ierland?* | een vaste zin met een toevoeging erin |
+| Mali | *veiligheidsrisico&#39;s* | html-code in de tekst |
+| Palau | *in geval van nood en hoe u zich voorbereidt* | komma ontbreekt |
+
+De vier intro-meldingen blijven bewust staan. Het zijn vaste zinnen met een zelfbedachte toevoeging,
+en dat is exact het geval waarvan Martijn zei: *"dan kan je beter maar die zin laten oppoppen. En
+dan vervolgens zeggen, nou hier is het toegestaan."*
+
+### Nagekomen op 19 september, na Martijns antwoord
+
+**De komma is een sorteerkunstje.** Op *Congo, de Republiek* zei Martijn: *"De Republiek Congo is in
+de tekst volgens mij wel de goede naam."* Dat klopt — de komma in de landenlijst zet het land onder
+de C, meer is het niet. Draai de delen om en je hebt de naam zoals een mens hem schrijft. Het raakt
+precies twee landen, allebei Congo, en allebei schrijven ze het in hun advies omgedraaid: *de
+Republiek Congo* en *de Democratische Republiek Congo (DRC)*. Die vorm is nu toegestaan, net als de
+haakjes en het lidwoord.
+
+**Naoero is geen fout maar een achterstand.** Op Nauru zei Martijn: *"dat kan kloppen dat de
+schrijfwijze van het land anders is en niet overal nog goed doorgevoerd, want dit is een recente
+naamswijziging die we nog op bepaalde plekken moeten doorvoeren."* De melding blijft dus staan — er
+ís iets recht te trekken — maar de tekst erbij deugde niet: *"Kleurcode groen wordt niet op een van
+de vaste manieren aangeduid"* terwijl de zin woord voor woord het sjabloon volgt.
+
+De regel kijkt nu twee keer. Faalt de strikte toets, dan gaat hetzelfde sjabloon er nog eens
+overheen met een vangnet op de plek van `{land}`. Slaat dát wel aan, dan staat de vaste zin er en
+zit het verschil alleen in de naam, en zegt de melding dat ook:
+
+> De vaste zin bij kleurcode groen staat er, maar noemt het land "Naoero". In het cms heet dit
+> advies "Nauru".
+> *Of de tekst of de landenlijst loopt achter. De tool weet niet welke van de twee; hij meldt alleen
+> dat ze niet hetzelfde zeggen.*
+
+Zuid-Afrika houdt de oude melding, en dat is het bewijs dat de splitsing werkt: daar staat *de
+kleurcode **voor** het reisadvies*, en dat verschil zit niet in de naam maar in de zin.
+
+Stand na deze twee: `kleur-aanduiding` 32 → 2, totaal 3032 → 2982, 149 tests groen.
+
+## "Erheen" of "hierheen": geen keuze maar een telling (19 september 2026)
+
+Er lag een vraag bij Martijn over de eerste kleurbullet van een advies met meerdere kleurcodes. Die
+vraag was verkeerd gesteld: het is geen kwestie van smaak, en de telling geeft antwoord.
+
+Het sjabloon zet bij geel en groen twee bijna gelijke zinnen tegenover elkaar. Geldt de kleur voor
+het hele land, dan *"U kunt **erheen** reizen"*. Geldt hij voor een deel, dan *"U kunt **hierheen**
+reizen"*. Eén woord verschil.
+
+**Over 226 adviezen, 203 keer geteld:**
+
+| | erheen | hierheen |
+|---|---:|---:|
+| de kleur geldt voor het hele land | **136** | 3 |
+| de kleur geldt voor een deel | 16 | **48** |
+
+184 van de 203 volgen het sjabloon. Het onderscheid is dus echt en wordt breed aangehouden; de 19
+die het anders doen hebben één woord verkeerd. Er valt hier niets te kiezen.
+
+**Wat wél moest veranderen, is de melding.** Die zei *"Dit advies heeft meerdere kleurcodes, dus bij
+geel hoort de verkorte variant. Nu staat de volledige uitleg er."* Feitelijk juist, maar wie het
+moet herstellen ziet twee zinnen die identiek lijken. Scheelt het hoogstens twee woorden, dan noemt
+de melding ze nu:
+
+> Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de
+> volledige uitleg er. **Er staat "erheen", er hoort "hierheen" te staan.**
+
+Bij rood loopt de hele zin anders (*"reis er niet heen"* tegen *"reis niet hierheen"*, en de
+volledige variant heeft er een zin over de ambassade bij). Dan geeft de vergelijking niets terug en
+blijft de melding zoals hij was — een half diagnose-zinnetje is erger dan geen.
+
+Het aantal bevindingen verandert hier niet van: 2982 blijft 2982. Dit is alleen de melding die zegt
+wat er aan de hand is.
+
+**En passant gevonden:** Marokko schrijft *"Vor de rest van Marokko geldt kleurcode geel"*. Die
+typefout stond al in de tool, via `woord-onbekend`.
+
+### Nagekeken in de matrix zelf (19 september 2026)
+
+Martijn wilde het nazoeken; de matrix staat in deze repo, dus dat kon meteen. Tabblad
+*Kleurcode-teksten*, kolom *In het kort*, cel C3 (rij Geel):
+
+> **Volledig geel:**
+> De kleurcode van het reisadvies voor land X is geel. U kunt **erheen** reizen. Maar let op: er
+> zijn bijzondere veiligheidsrisico's.
+>
+> **Deels geel:**
+> Voor de gebieden X en Y/**de rest van land X** geldt kleurcode geel. U kunt **hierheen** reizen.
+> Maar let op: er zijn bijzondere veiligheidsrisico's.
+
+Cel C2 (Groen) is identiek opgebouwd. Dat beslist het, en scherper dan de telling alleen: de matrix
+noemt *"de rest van land X"* met zoveel woorden als onderdeel van de **deels**-variant. Precies die
+zin staat in de afwijkende adviezen — *"Voor de rest van Peru geldt kleurcode geel. U kunt erheen
+reizen."* — en daar hoort dus *hierheen*.
+
+De vier teksten in `regels/kleurcodes.json` zijn tegen de cellen C2 tot en met C5 gelegd en komen
+woord voor woord overeen, inclusief het detail dat het alternatief *"/de rest van land X"* alleen
+bij groen en geel staat en niet bij oranje en rood.
+
+`scripts/erheen-hierheen.mjs` schrijft de opschoonlijst naar `data/erheen-hierheen.md`: **20 zinnen
+in 19 adviezen**, één woord per zin. Het script leunt op hetzelfde cms-veld als de regel — één
+kleurcode betekent het hele land, meer kleurcodes betekent dat elke bullet over een deel gaat — en
+niet op hoe de zin toevallig loopt. Dat scheelt: de Verenigde Arabische Emiraten schrijven *"De
+kleurcode van het reisadvies voor de VAE is geel. U kunt erheen reizen"* terwijl geel daar alleen
+voor de rest van het land geldt. Op de zin alleen afgaand lijkt dat goed; met het cms-veld erbij is
+het de verkeerde variant.
+
+## De twee kolommen van de matrix uit elkaar (19 september 2026)
+
+Martijn waarschuwde hiervoor: het tabblad *Kleurcode-teksten* heeft twee kolommen met kleurteksten
+en die mogen niet door elkaar lopen.
+
+| kolom | wat | waar in het advies |
+|---|---|---|
+| **In het kort** (C) | de bullets bovenaan, volledig of verkort | het blok "In het kort" |
+| **Regionale risico's** (D) | de definitie per kleur, onder een h4-kopje dat zelf de kleur is | de rubriek Regionale risico's |
+
+Die tweede is dus twee dingen: het kopje (*"Geel: let op, er zijn risico's"*) en de tekst eronder
+(*"U kunt reizen naar gebieden met kleurcode geel. Maar let op: …"*). Ze staan als `regionaal_kop`
+en `regionaal_tekst` in `regels/kleurcodes.json` en worden getoetst door `regionaal-kleur-kop` en
+`regionaal-kleur-tekst`.
+
+**Eerst nagekeken of onze data klopt.** De zestien velden — vier kleuren × `in_het_kort_volledig`,
+`in_het_kort_deels`, `regionaal_kop`, `regionaal_tekst` — zijn tegen de cellen C2 tot en met D5
+gelegd. Alle zestien komen letterlijk overeen. Het enige verschil is de apostrof: de matrix heeft de
+gekrulde, onze data de rechte, en `norm()` maakt die gelijk.
+
+**Toen bleek de code ze wél door elkaar te halen.** `kleur-aanduiding`, `kleur-vaste-tekst` en
+`kleur-variant` zochten in de héle tekst van het advies in plaats van in het blok "In het kort". Een
+goede zin verderop dekte daarmee een foute bullet af. Dat is niet theoretisch:
+
+| land | wat er in de bullet staat | wat de tool zei |
+|---|---|---|
+| Marokko | *"**Vor** de rest van Marokko geldt kleurcode geel"* | niets |
+| India | *"De kleurcode van het reisadvies **van** India is rood"* | niets |
+| Burkina Faso | *"De kleurcode van het reisadvies voor Burkina Faso is **voor het grootste deel** rood"* | niets |
+| Irak | *"geldt **grotendeels** kleurcode oranje"* | niets |
+| Japan | *"De kleurcode van het reisadvies voor **het zuidoosten van Fukushima** is rood"* | niets |
+| Cuba | *"**Reis er alleen heen als dit** noodzakelijk is"* | niets |
+| Guinee | de handelingsinstructie bij oranje ontbreekt helemaal | *"wijkt af van de vaste tekst"* |
+
+De drie toetsen kijken nu in `kortGenorm`, het blok "In het kort". Heeft een advies dat blok niet
+(geplakte tekst), dan valt de toets terug op de hele tekst; anders zou hij helemaal niets meer
+zeggen. Guinee verschuift van `kleur-variant` naar `kleur-vaste-tekst`, wat de juistere diagnose is:
+de instructie ontbreekt, hij wijkt niet af.
+
+**Eén vals alarm kwam mee, en dat had een andere oorzaak.** Jordanië somt 151 tekens aan gebieden
+op en het jokerteken voor `{gebieden}` stopte bij 120. Geteld over 230 opsommingen in het corpus is
+de langste die van Irak met 211 tekens, daarna Armenië (155) en Jordanië (151); zes zitten boven de
+120. De grens staat nu op 220, als `GEBIEDEN_MAX`.
+
+Dat is een ander soort jokerteken dan dat voor `{land}`. Daar zou het een verkeerde landnaam
+verbergen, en daarom staat daar een gesloten lijst. De gebieden zijn per definitie vrije tekst — de
+matrix schrijft ze als *"gebieden X en Y"* — en het patroon kan geen punt passeren, dus het blijft
+binnen één zin.
+
+**Stand:** 2982 → 2987 bevindingen over 226 adviezen, 153 tests groen. Vijf meldingen erbij die
+allemaal een echte fout aanwijzen, en één betere diagnose.
+
+## Maximaal vijf gebieden per kleur (19 september 2026)
+
+Martijn heeft aan de matrix toegevoegd:
+
+> Maximaal 5 gebieden per kleur noemen, anders een windrichting noemen. Dus niet gebied 1, 2, 3, 4,
+> 5, 6, maar liever gebieden in het noorden en oosten.
+
+**Het tellen was het moeilijke deel, niet de regel.** De voor de hand liggende manier — splitsen op
+komma's en "en" — telt namen en geen gebieden, en dat levert precies de ruis op waar Martijn voor
+waarschuwde:
+
+| land | wat er staat | naïef geteld | werkelijk |
+|---|---|---:|---:|
+| Benin | *de noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en Nigeria* | 4 | **1** |
+| Algerije | *de grensgebieden met Mauritanië, Mali, Niger en Libië en voor delen van de grensstrook met Marokko* | 5 | **2** |
+| Senegal | *de grensgebieden tussen Senegal en Gambia, Guinee-Bissau, Mali en een deel van de grens met Mauritanië* | 5 | **2** |
+
+Die landnamen zijn oriëntatiepunten, geen gebieden. Daarom telt een deel alleen mee als het zélf
+een gebied benoemt (*de provincie Mafraq*, *het grensgebied met India*), of als het achter een deel
+hangt dat een meervoud aankondigde (*de regio's Kanem, Ouaddai, Tibesti*). Hangt het achter een
+oriëntatiewoord — *met*, *tussen*, *grenzen aan* — dan telt het niet.
+
+**Windrichtingen tellen met opzet niet mee.** *"Het noorden en oosten"* is juist de vorm die de
+matrix aanraadt boven een opsomming; die mag hier niet tegen een advies gaan werken. Zonder die
+uitzondering telde Kameroen *"het oosten en zuiden van de regio Sud-Ouest"* als twee losse gebieden.
+
+De telling is verder met opzet voorzichtig: bij twijfel telt hij laag. Liever een opsomming van zes
+missen dan er een van vier melden.
+
+**Gemeten over 226 adviezen: 252 kleuraanduidingen, waarvan één boven de vijf.**
+
+| aantal gebieden | 1 | 2 | 3 | 4 | 5 | 7 |
+|---|---:|---:|---:|---:|---:|---:|
+| hoe vaak | 219 | 20 | 7 | 2 | 3 | 1 |
+
+Die ene was Tsjaad — en daarover gaf Martijn meteen uitsluitsel: *"Dat voorbeeld van Tsjaad vind ik
+wel acceptabel en mag dus wel 5 zijn."*
+
+### Wat de eerste telling fout deed
+
+*"alle grensgebieden van Tsjaad, het gebied rond het Tsjaadmeer, en de regio's Kanem, Ouaddai,
+Tibesti, Borkou en Ennedi of delen daarvan"* telde als zeven, omdat de vijf regionamen achter *de
+regio's* elk apart meetelden. Maar dat is één opsomming achter één kopwoord, en die rekent Martijn
+goed.
+
+De telling kijkt nu alleen naar delen die zélf een gebied benoemen. Namen die daarachter hangen
+horen bij het gebied dat er al staat:
+
+| zin | telt als | waarom |
+|---|---:|---|
+| *alle grensgebieden van Tsjaad, het gebied rond het Tsjaadmeer, en de regio's Kanem, Ouaddai, Tibesti, Borkou en Ennedi of delen daarvan* | **4** | drie kopwoorden plus *delen daarvan*; de vier losse regionamen horen bij *de regio's* |
+| *de noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en Nigeria* | **1** | één gebied, vier buurlanden als oriëntatiepunt |
+| *het noorden, het oosten, het zuiden en het westen van Tsjechië* | **1** | windrichtingen zijn juist de aanbevolen vorm |
+| *de provincie A, de provincie B, de stad C, het eiland D, de regio E en het district F* | **6** | zes eigen kopwoorden — dit is het geval uit de matrixregel |
+
+Daarmee gaat de regel over de 226 adviezen **geen enkele keer** af. Dat is hier het doel en geen
+tekortkoming: hij bewaakt wat er morgen geschreven wordt, en het laatste geval hierboven laat zien
+dat hij wel degelijk werkt.
+
+### De interne regel van 3 is losgelaten
+
+Martijn: *"betekent dat wij intern een regel moeten versoepelen van de 3."* De oude limiet uit
+tabblad *Koppen* — *"Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen"* —
+staat nu ook op 5, zodat beide matrixregels hetzelfde getal aanhouden. De regel-id heet daarom niet
+langer `gebieden-max-drie` maar `gebieden-max`.
+
+Die oude regel gaf al nul treffers, omdat hij alleen zoekt naar het letterlijke woord *gebieden*
+gevolgd door namen met hoofdletters. Hij blijft staan voor opsommingen buiten een kleurbullet; de
+nieuwe regel dekt de kleurbullets zelf, met de betere telling.
+
+## Fukushima mag wel (19 september 2026)
+
+Japan schrijft *"De kleurcode van het reisadvies voor het zuidoosten van Fukushima is rood"* — de
+landvorm van de zin met een gebied in de landplek. Martijn: *"alleen Fukushima hoeft niet op te
+poppen."*
+
+Eerder was die vorm bewust níét toegestaan, omdat `{gebieden}` een jokerteken is en dan ook
+*"Naoero"* of een verkeerde landnaam erdoor zou glippen. Dat bezwaar blijft staan, dus de oplossing
+is een aparte plaatshouder: **`{gebied}`** eist dat er werkelijk een gebied staat — een windrichting,
+of een woord als *regio*, *provincie*, *eiland*, *grensgebied*, *kust*, *delta*.
+
+Daarmee is *"het zuidoosten van Fukushima"* een gebied en *"Naoero"* niet:
+
+| advies | in de landplek | uitkomst |
+|---|---|---|
+| Japan | *het zuidoosten van Fukushima* | gebied → geen melding |
+| Nauru | *Naoero* | kale naam → blijft gemeld |
+| Burkina Faso | *Burkina Faso is voor het grootste deel* | past niet op de zin → blijft gemeld |
+
+De vorm staat nu als `"De kleurcode van het reisadvies voor {gebied} is {kleur}"` in
+`aanduiding_sjablonen`, met `herkomst: aanvulling`: hij staat niet letterlijk in de NB-kolom, maar
+is op 19 september goedgekeurd.

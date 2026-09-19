@@ -92,8 +92,11 @@
     "Voor {gebieden} geldt kleurcode {kleur}",
     "Voor de rest van {land} geldt kleurcode {kleur}",
     "Voor de volgende gebieden geldt kleurcode {kleur}",
-    "De kleurcode van het reisadvies voor de rest van {land} is {kleur}"
+    "De kleurcode van het reisadvies voor de rest van {land} is {kleur}",
+    "Kleurcode {kleur} geldt voor {gebieden}",
+    "De kleurcode van het reisadvies voor {gebied} is {kleur}"
   ],
+  "_aanduiding_aanvulling": "De twee laatste vormen zijn toegevoegd op 19 september 2026. 'Kleurcode {kleur} geldt voor {gebieden}' is de omgedraaide vorm die op 18 september al als geldige vervolgbullet was goedgekeurd; dat hij hier ontbrak was een inconsistentie in onze eigen data, niet in de adviezen. De derde vorm, 'De kleurcode van het reisadvies voor {gebied} is {kleur}', is op 19 september toegevoegd op verzoek van Martijn: Japan schrijft 'De kleurcode van het reisadvies voor het zuidoosten van Fukushima is rood' en dat rekent hij goed. Let op het verschil tussen {gebied} en {gebieden}: {gebieden} is een jokerteken en zou hier ook een verkeerde landnaam doorlaten, maar {gebied} eist dat er werkelijk een gebied staat -- een windrichting of een woord als regio, provincie, eiland, grensgebied. Daarmee is 'het zuidoosten van Fukushima' een gebied en 'Naoero' niet, en blijft Nauru gemeld.",
   "_aanduiding_bron": "Tabblad Kleurcode-teksten, kolom NB: de eerste bullet voluit, vervolgbullets verkort, en bij een opsomming van meerdere gebieden mag de formulering worden aangepast naar 'De kleurcode van het reisadvies is oranje voor gebieden X, Y en Z.' Het sjabloon voegt daar de regionale aanhef 'Voor de volgende gebieden geldt kleurcode X:' en de afsluiter 'De kleurcode van het reisadvies voor de rest van [LAND] is X.' aan toe.",
   "_actiezinnen_toelichting": "De handelingsinstructie is het inhoudelijke deel van de vaste tekst. De aanduiding van de kleur mag variëren volgens de NB-kolom; de instructie niet."
 }

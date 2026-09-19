@@ -730,3 +730,164 @@ test('lijdende vorm: scheidbaar werkwoord wordt herkend', () => {
   assert.equal(b.length, 1);
   assert.match(b[0].boodschap, /opgestuurd/);
 });
+
+/**
+ * Hoe een advies zijn eigen land mag noemen. Het cms-veld draagt de administratieve naam; de tekst
+ * mag daar op drie manieren van afwijken (lidwoord, haakjes, afkorting) en verder niet.
+ */
+test('kleuraanduiding: een lidwoord voor de landnaam mag', () => {
+  const ids = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor de Seychellen '
+    + 'is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich mee.</li></ul>',
+  { land: 'Seychellen', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});
+
+test('kleuraanduiding: de afkorting uit de landenlijst mag', () => {
+  const ids = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor het VK '
+    + 'is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich mee.</li></ul>',
+  { land: 'Verenigd Koninkrijk', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});
+
+test('kleuraanduiding: een andere schrijfwijze van de landnaam blijft een melding', () => {
+  const b = bevindingenVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Naoero '
+    + 'is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich mee.</li></ul>',
+  { land: 'Nauru', kleurcodes: ['groen'] }).filter((x) => x.regel === 'kleur-aanduiding');
+  assert.equal(b.length, 1, 'Naoero wijkt af van Nauru en hoort gemeld te worden');
+  // En de melding zegt wat er aan de hand is: de zin klopt, de naam niet.
+  assert.match(b[0].boodschap, /Naoero/);
+  assert.match(b[0].boodschap, /Nauru/);
+});
+
+test('kleuraanduiding: de omgedraaide naam uit de landenlijst mag', () => {
+  // Het cms sorteert onder de C; een mens schrijft "de Republiek Congo".
+  const ids = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor de Republiek '
+    + 'Congo is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich '
+    + 'mee.</li></ul>', { land: 'Congo, de Republiek', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});
+
+test('kleuraanduiding: een zin die anders loopt krijgt niet de landnaam-melding', () => {
+  // Zuid-Afrika schrijft "de kleurcode voor het reisadvies"; dat verschil zit niet in de naam.
+  const b = bevindingenVan('<h2>In het kort</h2><ul><li>De kleurcode voor het reisadvies voor '
+    + 'Zuid-Afrika is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met '
+    + 'zich mee.</li></ul>', { land: 'Zuid-Afrika', kleurcodes: ['groen'] })
+    .filter((x) => x.regel === 'kleur-aanduiding');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /niet op een van de vaste manieren/);
+});
+
+test('kleuraanduiding: een dubbele punt voor de opsomming van gebieden mag', () => {
+  const ids = idsVan('<h2>In het kort</h2><ul><li>Kleurcode groen geldt voor: het hele land. '
+    + 'U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich mee.</li></ul>',
+  { land: 'Tsjechië', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});
+
+test('de kleur van een ander land telt niet als kleurcode van dit advies', () => {
+  const ids = idsVan(advies('<p>Het reisadvies voor Jemen is rood: reis hier niet naartoe.</p>',
+    { land: 'Oman' }), { land: 'Oman', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'), 'rood is de kleur van de buurman, niet van dit advies');
+  assert.ok(!ids.includes('kleur-vaste-tekst'));
+});
+
+test('kleurvariant: scheelt het een woord, dan noemt de melding dat woord', () => {
+  // Bij geel is het verschil tussen de volledige en de verkorte uitleg "erheen" / "hierheen".
+  const b = bevindingenVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
+    + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er '
+    + 'zijn bijzondere veiligheidsrisico&#39;s.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['oranje', 'geel'] }).filter((x) => x.regel === 'kleur-variant');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /Er staat "erheen", er hoort "hierheen" te staan\./);
+});
+
+test('kleurvariant: bij rood loopt de zin te ver uiteen voor een woordverschil', () => {
+  // Daar blijft de melding zoals hij was: geen half diagnose-zinnetje erbij.
+  const b = bevindingenVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies voor Tsjechië is rood. Wat uw situatie ook is: reis niet '
+    + 'hierheen. Het is er te gevaarlijk.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood'] }).filter((x) => x.regel === 'kleur-variant');
+  assert.equal(b.length, 1);
+  assert.ok(!/Er staat "/.test(b[0].boodschap));
+});
+
+test('de kleurbullets worden in "In het kort" getoetst, niet elders in het advies', () => {
+  // Marokko-geval: de bullet bovenaan heeft een typefout, maar onder Regionale risico's staat
+  // dezelfde zin wel goed. Dan hoort de tool die bullet nog steeds te melden.
+  const ids = idsVan('<h2>In het kort</h2><ul><li>Vor Tsjechië geldt kleurcode groen. U kunt '
+    + 'hierheen reizen. Lees welke veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>'
+    + '<h3>Regionale risico&#39;s</h3><h4>Groen: u kunt erheen reizen</h4>'
+    + '<p>De kleurcode van het reisadvies voor Tsjechië is groen. U kunt reizen naar gebieden met '
+    + 'kleurcode groen. Lees welke veiligheidsrisico&#39;s er zijn.</p>',
+  { land: 'Tsjechië', kleurcodes: ['groen'] });
+  assert.ok(ids.includes('kleur-aanduiding'), 'de goede zin verderop mag de bullet niet afdekken');
+});
+
+test('een lange gebiedenopsomming valt nog binnen het patroon', () => {
+  // Jordanië somt 151 tekens aan gebieden op; op de oude grens van 120 gaf dat vals alarm.
+  const gebieden = 'het grensgebied van Tsjechië met Polen en Duitsland (met uitzondering van '
+    + 'Cheb), de provincie Zlín, de steden Brno en Ostrava en de omliggende gebieden';
+  assert.ok(gebieden.length > 120 && gebieden.length < 220);
+  const ids = idsVan(`<h2>In het kort</h2><ul><li>Voor ${gebieden} geldt kleurcode oranje. Reis `
+    + 'alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. Lees welke '
+    + 'veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['oranje', 'groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});
+
+test('meer dan vijf gebieden bij een kleurcode wordt gemeld', () => {
+  const b = bevindingenVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is rood voor de provincie Noord, de provincie Zuid, de '
+    + 'stad Brno, het eiland Rab, de regio Zlín en het district Cheb. Wat uw situatie ook is: reis '
+    + 'niet hierheen. Het is er te gevaarlijk.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. Lees welke '
+    + 'veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] }).filter((x) => x.regel === 'kleur-gebieden-max');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /6 gebieden/);
+});
+
+test('buurlanden als oriëntatiepunt zijn geen losse gebieden', () => {
+  // Benin: "de noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en Nigeria"
+  // is één gebied met vier buurlanden erbij, geen vijf gebieden.
+  const ids = idsVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is rood voor de noordelijke regio&#39;s van Tsjechië die '
+    + 'grenzen aan Polen, Duitsland, Oostenrijk en Slowakije. Wat uw situatie ook is: reis niet '
+    + 'hierheen. Het is er te gevaarlijk.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. Lees welke '
+    + 'veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] });
+  assert.ok(!ids.includes('kleur-gebieden-max'));
+});
+
+test('een windrichting telt niet als los gebied: dat is juist de aanbevolen vorm', () => {
+  const ids = idsVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is rood voor het noorden, het oosten, het zuiden en het '
+    + 'westen van Tsjechië. Wat uw situatie ook is: reis niet hierheen. Het is er te '
+    + 'gevaarlijk.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. Lees welke '
+    + 'veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] });
+  assert.ok(!ids.includes('kleur-gebieden-max'));
+});
+
+test('de gebiedsvorm van de landzin mag, een andere landnaam niet', () => {
+  // Japan: "voor het zuidoosten van Fukushima is rood" is goed; Nauru's "voor Naoero" niet.
+  const japan = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor het '
+    + 'zuidoosten van Fukushima is rood. Wat uw situatie ook is: reis niet hierheen. Het is er te '
+    + 'gevaarlijk.</li><li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. '
+    + 'Lees welke veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] });
+  assert.ok(!japan.includes('kleur-aanduiding'));
+});

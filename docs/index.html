@@ -1249,7 +1249,10 @@ function maakToetser(data) {
                 : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.`)
             : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
           { verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
-              .replace(/\{gebieden\}/g, 'de gebieden X en Y'),
+              // Alleen de gebieden zelf: het sjabloon heeft "Voor de gebieden {gebieden}", dus
+              // "de gebieden" staat er al. Anders leest de suggestie als "Voor de gebieden de
+              // gebieden X en Y".
+              .replace(/\{gebieden\}/g, 'X en Y'),
             notitie: hoortVolledig
               ? 'Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in "In het kort".'
               : 'Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));

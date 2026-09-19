@@ -7,7 +7,7 @@ Gedraaid op 2026-09-19 over 226 reisadviezen.
 - **74** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **216** van de 2986 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **200** van de 3033 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,22 +26,23 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 292 | 152 |
-| geel/oranje — let op | 1551 | 219 |
+| geel/oranje — let op | 1523 | 216 |
 | lichtblauw — lange zin met link | 542 | 201 |
-| grijs — ter overweging | 129 | 93 |
-| roze — twijfeltaal | 472 | 164 |
+| grijs — ter overweging | 220 | 144 |
+| roze — twijfeltaal | 456 | 158 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 220 | 1303 |
+| `zin-max-woorden` | 219 | 1273 |
 | `zin-frequentiewoord` | 147 | 387 |
 | `zin-lijdende-vorm` | 124 | 272 |
+| `kinderen-paspoort` | 91 | 91 |
 | `woord-onbekend` | 67 | 138 |
-| `zin-twijfeltaal` | 66 | 85 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
+| `zin-twijfeltaal` | 53 | 69 |
 | `doc-woordenaantal` | 46 | 46 |
 | `kleur-variant` | 45 | 51 |
 | `link-tekstlengte` | 44 | 49 |
@@ -96,6 +97,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `telefoon-notatie` | 2 | 3 |
 | `criminaliteit-themapagina` | 2 | 2 |
 | `genderneutraal` | 2 | 3 |
+| `kort-verwijzing-hoogste-kleur` | 2 | 2 |
 | `regionaal-kleur-kop` | 2 | 2 |
 | `informatieservice-vaste-tekst` | 1 | 1 |
 | `vaccinaties-ggd` | 1 | 1 |

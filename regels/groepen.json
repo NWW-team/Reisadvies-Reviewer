@@ -25,6 +25,7 @@
         "informatieservice-vaste-tekst",
         "intro-vaste-tekst",
         "kinderen-documenten",
+        "kinderen-paspoort",
         "kleur-aanduiding",
         "kleur-eerste-bullet-voluit",
         "kleur-formulering-verboden",
@@ -35,6 +36,7 @@
         "kort-informatieservice-onderaan",
         "kort-max-bullets",
         "kort-verwijst-regionaal",
+        "kort-verwijzing-hoogste-kleur",
         "kort-verwijzing-vorm",
         "lhbtiq-verwijzing",
         "link-verboden-partij",
@@ -101,7 +103,9 @@
       "toelichting": "Woorden die niet in de OpenTaal-woordenlijst staan en er geen naam uitzien. Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer.",
       "regels": [
         "woord-onbekend"
-      ]
+      ],
+      "toon_ook_leeg": true,
+      "_toon_ook_leeg_noot": "De spellingtoets is een schakelaar die de redacteur zelf aanzet. Staat dit filter er niet zodra hij aanstaat, dan is 'de toets heeft gedraaid en niets gevonden' niet te onderscheiden van 'de toets heeft niet gedraaid'. Martijn, 19 september 2026: als er geen spelfouten zijn, wil ik dat ook zien. Daarom blijft dit filter staan met de stand 0 zodra de woordenlijst geladen is."
     },
     {
       "id": "linktekst",
@@ -184,5 +188,6 @@
         "vragen-opeenvolgend"
       ]
     }
-  ]
+  ],
+  "_toon_ook_leeg": "Een groep zonder bevindingen valt normaal weg uit de balk. Met toon_ook_leeg blijft hij staan met de stand 0."
 }

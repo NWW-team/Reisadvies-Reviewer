@@ -50,3 +50,25 @@ test('een ontbrekende vaste tekst heeft niets om aan te wijzen', () => {
     'staat de tekst er niet, dan is er geen zin om te markeren en hoort het fragment weg te blijven');
   assert.ok(bev.verwacht, 'de verwachte formulering hoort er wel bij te staan');
 });
+
+/**
+ * Hetzelfde voor een bevinding over een kop. Die werd platgeslagen getekend, dus er was niets om
+ * aan te wijzen: klikken op de melding sprong nergens heen. De pagina markeert nu ook koppen,
+ * maar dan moet het fragment wél letterlijk de kop zijn.
+ */
+const KOPPEN = (doc) => doc.blokken.filter((b) => b.kop).map((b) => b.kop);
+
+test('een bevinding over een kop wijst die kop aan', () => {
+  const html = `<p>Reist u naar Testland?</p>
+<h2>Welke veiligheidsrisico's zijn er in Testland?</h2>
+<h3>Criminaliteit</h3>
+<p>Houd rekening met zakkenrollers op drukke plekken.</p>
+<h3>Geldzaken</h3>
+<p>Neem voldoende contant geld mee.</p>`;
+  const { doc, bev } = bevindingVoor(html, 'h3-niet-melden');
+  assert.ok(bev, 'Geldzaken hoort gemeld te worden');
+  assert.ok(bev.fragment, 'zonder fragment kan de pagina de kop niet markeren');
+  assert.ok(KOPPEN(doc).includes(bev.fragment),
+    'het fragment moet letterlijk een kop uit het advies zijn, anders vindt de markering hem niet');
+  assert.strictEqual(bev.fragment, 'Geldzaken');
+});

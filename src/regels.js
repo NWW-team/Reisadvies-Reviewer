@@ -590,19 +590,39 @@ export function maakToetser(data) {
     // ---------- document ----------
     const limiet = meerdereKleuren ? lim.document.woorden_meerdere_kleurcodes : lim.document.woorden_1_kleurcode;
     if (doc.woorden >= limiet) {
-      const langste = [...doc.blokken]
-        .filter((x) => x.kop)
-        .map((x) => ({
-          kop: x.kop,
-          woorden: x.alineas.reduce((n, a) => n + a.woorden, 0)
-            + x.opsommingen.reduce((n, o) => n + o.items.reduce((m, i) => m + telWoorden(i), 0), 0),
-        }))
+      // Per rubriek, niet per blok. Een rubriek als "Regionale risico's" bestaat op de pagina uit
+      // een H3-kop zonder eigen tekst en daaronder een H4 per kleur ("Rood: niet reizen", "Oranje:
+      // alleen noodzakelijke reizen"). Telde de tool per blok, dan stond de rubriek zelf met 0
+      // woorden in de lijst en concurreerden de H4's los van elkaar met complete rubrieken als
+      // "Reisverzekering" -- appels tegen peren, en de rubriek die je juist wilt zien (vaak de
+      // grootste) viel eruit.
+      //
+      // "Regionale risico's" hoort in dit rijtje thuis. Het grootste deel is weliswaar de vaste
+      // kleurtekst, maar de rubriek bevat ook vrije tekst: welke gebieden vallen onder een kleur,
+      // en waarom. Dat is precies waar in te korten valt, dus deze rubriek uitsluiten zou verkeerd
+      // zijn -- de tool wijst aan waar de meeste woorden zitten, niet wat daarvan vast staat.
+      const perRubriek = new Map();
+      for (const blok of doc.blokken) {
+        const sleutel = blok.h3 || blok.kop;              // de rubriek, of de H2-sectie zelf
+        if (!sleutel) continue;                            // tekst zonder een eigen kop (zeldzaam)
+        const woorden = blok.alineas.reduce((n, a) => n + a.woorden, 0)
+          + blok.opsommingen.reduce((n, o) => n + o.items.reduce((m, i) => m + telWoorden(i), 0), 0);
+        perRubriek.set(sleutel, (perRubriek.get(sleutel) || 0) + woorden);
+      }
+      const langste = [...perRubriek.entries()]
+        .map(([kop, woorden]) => ({ kop, woorden }))
         .sort((x, y) => y.woorden - x.woorden)
         .slice(0, 3);
+      // Staat Regionale risico's in het rijtje, dan verdient dat een eigen zin: het grootste deel
+      // is de vaste kleurtekst, maar de rubriek bevat ook vrije tekst - welke gebieden vallen
+      // onder een kleur, en waarom - en juist dáár kan een redacteur wat inkorten.
+      const heeftRegionaal = langste.some((x) => new RegExp(sj.rubriek_patronen.regionaal, 'i').test(x.kop));
       b.push(bevinding('doc-woordenaantal', ERNST.fout, 'MX, tab Richtlijn woordenaantal',
         `Het advies telt ${doc.woorden} woorden. De richtlijn is minder dan ${limiet} bij ${meerdereKleuren ? 'meerdere kleurcodes' : '1 kleurcode'}.`,
         { detail: langste.map((x) => `${x.kop} (${x.woorden} woorden)`),
-          notitie: 'De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze.' }));
+          notitie: 'De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze.'
+            + (heeftRegionaal ? ' Bij Regionale risico\'s staat naast de vaste kleurtekst ook vrije '
+              + 'tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte.' : '') }));
     }
 
     // De matrix heeft voor de kleurcodes twee kolommen die niet door elkaar mogen lopen. Kolom
@@ -684,13 +704,18 @@ export function maakToetser(data) {
           ? woordverschil(instructieVan(andereTekst), instructieVan(verwachteTekst)) : null;
         const preciezer = verschil
           ? ' ' + verschil.map(([x, y]) => `Er staat "${x}", er hoort "${y}" te staan.`).join(' ') : '';
+        // De bullet waar het om gaat, zodat de pagina hem kan markeren en je erheen kunt springen.
+        // Zonder dit stond er wel een melding maar werd er niets onderstreept.
+        const kleurRe = new RegExp('\\b' + kleur + '\\b');
+        const bullet = kortBlokStukken(doc).find((x) => kleurRe.test(norm(x)));
         b.push(bevinding('kleur-variant', ERNST.fout, 'MX, tab Kleurcode-teksten',
           staatDeAndere
             ? (hoortVolledig
                 ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.${preciezer}`
                 : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.${preciezer}`)
             : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
-          { verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
+          { ...(bullet ? { fragment: bullet } : {}),
+            verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
               // Alleen de gebieden zelf: het sjabloon heeft "Voor de gebieden {gebieden}", dus
               // "de gebieden" staat er al. Anders leest de suggestie als "Voor de gebieden de
               // gebieden X en Y".
@@ -858,6 +883,26 @@ export function maakToetser(data) {
             { fragment: contextVan(kortGenorm, plek),
               verwacht: vw.vorm.replace('{rubriek}', 'de rubriek') }));
           break;                                     // één melding per advies is genoeg
+        }
+        // De verwijzing hoort bij de hoogste kleurcode van het advies, en daar alleen. Staat hij
+        // ook onder een lagere kleur, dan wordt "In het kort" een tweede keer naar hetzelfde blok
+        // gestuurd. Papoea-Nieuw-Guinea zet hem bij rood en bij oranje; dat is een keer te veel.
+        if (vw.alleen_bij_hoogste_kleur && kleurenVanAdvies.length > 1) {
+          const hoogste = kleurenVanAdvies[0];
+          const doel = norm(vw.patroon + (vw.verplicht_bij_meerdere_kleurcodes || ''));
+          for (const bullet of kortBlokStukken(doc)) {
+            const g = norm(bullet);
+            if (!g.includes(doel)) continue;
+            // Welke kleur draagt deze bullet? De eerste die erin voorkomt.
+            const kleur = kleurcodes.volgorde.find((k) => new RegExp('\\b' + k + '\\b').test(g));
+            if (!kleur || kleur === hoogste) continue;
+            b.push(bevinding('kort-verwijzing-hoogste-kleur', ERNST.letop, 'SJ, vaste vorm van de verwijzing',
+              `De verwijzing naar ${vw.verplicht_bij_meerdere_kleurcodes} staat bij kleurcode `
+              + `${kleur}. Hij hoort alleen bij de hoogste kleurcode van dit advies, ${hoogste}.`,
+              { fragment: bullet,
+                notitie: 'Anders wordt de lezer vanuit "In het kort" twee keer naar hetzelfde blok '
+                  + 'gestuurd.' }));
+          }
         }
         const doelRubriek = vw.verplicht_bij_meerdere_kleurcodes;
         if (kleurenVanAdvies.length > 1 && doelRubriek

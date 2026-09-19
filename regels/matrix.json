@@ -129,7 +129,9 @@
       "h2": "Veiligheidsrisico's",
       "h3": "Smog",
       "richtlijn": "niet-melden",
-      "mag_onder": ["Natuurgeweld"],
+      "mag_onder": [
+        "Natuurgeweld"
+      ],
       "toelichting": "Evt. alleen indien er ernstig gevaar is voor iedereen. Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld.",
       "trefwoorden": [
         "smog",
@@ -143,12 +145,13 @@
       "h2": "Veiligheidsrisico's",
       "h3": "Foto's maken",
       "richtlijn": "niet-melden",
-      "toelichting": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet.",
+      "toelichting": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen.",
       "trefwoorden": [
         "foto's maken",
         "fotograferen",
         "filmen"
-      ]
+      ],
+      "_toelichting_bron": "Herschreven op 19 september 2026 door Martijn; de oude tekst luidde 'Kan evt. bij lokale wetten als het echt moet.'"
     },
     {
       "id": "kledingvoorschriften",
@@ -291,7 +294,9 @@
       "h2": "Reisvoorbereiding",
       "h3": "Thuisblijvers",
       "richtlijn": "niet-melden",
-      "mag_onder": ["In geval van nood"],
+      "mag_onder": [
+        "In geval van nood"
+      ],
       "toelichting": "Evt. deels overhevelen naar In geval van nood.",
       "trefwoorden": [
         "thuisblijvers",
@@ -304,7 +309,9 @@
       "h2": "Reisvoorbereiding",
       "h3": "Gezondheidszorg",
       "richtlijn": "niet-melden",
-      "mag_onder": ["Reisverzekering"],
+      "mag_onder": [
+        "Reisverzekering"
+      ],
       "toelichting": "Evt. tekst opnemen bij Reisverzekering. Let op: slechte gezondheidszorg is nooit een reden om de kleurcode te wijzigen.",
       "trefwoorden": [
         "ziekenhuis",

@@ -891,3 +891,79 @@ test('de gebiedsvorm van de landzin mag, een andere landnaam niet', () => {
   { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] });
   assert.ok(!japan.includes('kleur-aanduiding'));
 });
+
+/**
+ * Staat een vaste tekst er wél maar anders, dan hoort de melding dat te zeggen en de zin aan te
+ * wijzen. "Ontbreekt" stuurt de redacteur het bos in: hij ziet in het advies een zin staan die er
+ * bijna hetzelfde uitziet en weet niet wat hij moet veranderen.
+ */
+test('bagage: een andere formulering heet afwijkend en wijst de zin aan', () => {
+  const b = bevindingenVan(advies('<h3>Bagageregels</h3>'
+    + '<h4>Wat mag ik meenemen naar Tsjechië?</h4>'
+    + '<p>Check wat u mee mag nemen naar Tsjechië op de website van de Tsjechische overheid.</p>'),
+  { land: 'Tsjechië' }).filter((x) => x.regel === 'bagage-heen');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /wijkt af/);
+  assert.match(b[0].fragment, /Check wat u mee mag nemen naar Tsjechië/);
+  assert.match(b[0].verwacht, /Check wat de regels zijn bij de lokale autoriteiten/);
+});
+
+test('bagage: staat er iets heel anders, dan ontbreekt de tekst echt', () => {
+  const b = bevindingenVan(advies('<h3>Bagageregels</h3>'
+    + '<h4>Wat mag ik meenemen naar Tsjechië?</h4>'
+    + '<p>Neem geen resten van planten of dieren mee, ook niet per ongeluk.</p>'),
+  { land: 'Tsjechië' }).filter((x) => x.regel === 'bagage-heen');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /ontbreekt/);
+  assert.strictEqual(b[0].fragment, undefined, 'er is geen zin om aan te wijzen');
+});
+
+/**
+ * De kinderzin staat op de vrijstellingslijst, maar het middenstuk verschilt per land: een visum,
+ * een ESTA, een ID-kaart, een inreisvergunning. Stond hij er maar in één vorm, dan viel elke
+ * andere alsnog over de schrijfregels — over "eventueel" bijvoorbeeld, terwijl dat woord er juist
+ * hoort te staan: of je een visum nodig hebt, hangt af van de reden van het bezoek.
+ */
+test('de kinderzin is vrijgesteld, welke variant er ook staat', () => {
+  const varianten = [
+    'Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visum nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort (en eventueel een inreisvergunning) nodig voor een reis naar Tsjechië.',
+  ];
+  for (const zin of varianten) {
+    const ids = idsVan(advies('<h3>Paspoort, visum, rijbewijs</h3><p>' + zin + '</p>'), { land: 'Tsjechië' });
+    assert.ok(!ids.includes('zin-twijfeltaal'), 'niet over twijfeltaal vallen bij: ' + zin);
+    assert.ok(!ids.includes('zin-max-woorden'), 'niet over de lengte vallen bij: ' + zin);
+  }
+});
+
+test('een eigen zin die toevallig zo begint blijft wel getoetst op wat eromheen staat', () => {
+  // De vrijstelling geldt de zin zelf, niet de alinea: de zin erna wordt gewoon getoetst.
+  const ids = idsVan(advies('<h3>Paspoort, visum, rijbewijs</h3>'
+    + '<p>Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar '
+    + 'Tsjechië. Reizigers moeten er mogelijk rekening mee houden dat de wachttijden aan de grens '
+    + 'bij drukte flink kunnen oplopen in de zomermaanden.</p>'), { land: 'Tsjechië' });
+  assert.ok(ids.includes('zin-twijfeltaal'), 'de tweede zin bevat "mogelijk" en hoort gemeld te worden');
+});
+
+/**
+ * De langste blokken tellen per rubriek (H3), niet per los blok. Anders staat een H3 zonder
+ * eigen tekst met 0 woorden in het rijtje en concurreren zijn H4-kinderen los van elkaar met
+ * complete rubrieken - appels tegen peren, en juist de rubriek die je wilt zien valt eruit.
+ */
+test('doc-woordenaantal: de langste blokken tellen per rubriek, met H4-kinderen opgeteld', () => {
+  const html = '<h2>In het kort</h2><p>' + 'kort '.repeat(20) + '</p>'
+    + '<h2>Welke veiligheidsrisico\'s zijn er in Testland?</h2>'
+    + '<h3>Regionale risico\'s</h3>'
+    + '<h4>Rood: niet reizen</h4><p>' + 'rood '.repeat(900) + '</p>'
+    + '<h4>Oranje: alleen noodzakelijke reizen</h4><p>' + 'oranje '.repeat(900) + '</p>'
+    + '<h3>Reisverzekering</h3><p>' + 'verzekering '.repeat(50) + '</p>';
+  const b = bevindingenVan(html, { land: 'Testland' }).find((x) => x.regel === 'doc-woordenaantal');
+  assert.ok(b, 'dit advies zit ruim boven de limiet');
+  assert.match(b.detail[0], /^Regionale risico's \(1800 woorden\)$/,
+    'de twee H4-kinderen (900 + 900) horen opgeteld onder hun rubriek te staan, niet los');
+  assert.match(b.notitie, /vrije tekst.*welke gebieden/,
+    'staat Regionale risico\'s in de lijst, dan hoort de tool te zeggen dat daar ook vrije tekst in zit');
+});

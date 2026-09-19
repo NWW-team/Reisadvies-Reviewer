@@ -566,16 +566,16 @@
     ],
     "zinnen": 85,
     "fout": 0,
-    "letop": 6,
+    "letop": 5,
     "linkzin": 3,
-    "twijfel": 3,
+    "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
+      "let-op": 5,
       "link-zin": 3,
       "info": 1,
-      "twijfel": 3
+      "twijfel": 2
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -584,9 +584,8 @@
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-max": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 4,
-      "zin-frequentiewoord": 2,
-      "zin-twijfeltaal": 1
+      "zin-max-woorden": 3,
+      "zin-frequentiewoord": 2
     },
     "bevindingen": [
       {
@@ -676,23 +675,6 @@
         "boodschap": "Deze zin telt 20 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met de ambassade van Albanië in Den Haag voor meer informatie over visa (informatie in het Engels).",
         "kop": "Paspoort, ID-kaart, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor een reis naar Albanië.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor een reis naar Albanië.",
-        "kop": "Paspoort, ID-kaart, rijbewijs",
-        "herkomst": "aanvulling"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 14-08-2026 | Nog steeds geldig op: 18-09-2026"
@@ -820,7 +802,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check wat u mee mag nemen naar de VAE op de website van de overheid van de VAE (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Verenigde Arabische Emiraten."
       },
       {
@@ -1077,25 +1060,24 @@
     ],
     "zinnen": 74,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 1,
-    "twijfel": 2,
+    "twijfel": 1,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 1,
       "info": 2,
-      "twijfel": 2
+      "twijfel": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 3,
-      "zin-frequentiewoord": 1,
-      "zin-twijfeltaal": 1
+      "zin-max-woorden": 2,
+      "zin-frequentiewoord": 1
     },
     "bevindingen": [
       {
@@ -1152,23 +1134,6 @@
         "boodschap": "Deze zin telt 19 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met de Armeense ambassade in Den Haag voor meer informatie over visa (informatie in het Engels).",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en (eventueel) een visum nodig voor een reis naar Armenië.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort en (eventueel) een visum nodig voor een reis naar Armenië.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 18-09-2026"
@@ -2217,13 +2182,13 @@
     ],
     "zinnen": 87,
     "fout": 1,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 1,
       "info": 0,
       "twijfel": 3
@@ -2235,7 +2200,7 @@
       "rubrieken-max": 1,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 3,
-      "zin-max-woorden": 6
+      "zin-max-woorden": 5
     },
     "bevindingen": [
       {
@@ -2352,14 +2317,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Burkina Faso.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
         "fragment": "Er zijn strenge regels voor het meenemen van voorwerpen uit Burkina Faso, zoals maskers, traditionele kunst en religieuze materialen.",
         "kop": "Bagageregels"
@@ -2416,7 +2373,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Lees wat u mag meenemen naar Bangladesh op de website van de overheid van Bangladesh (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Bangladesh."
       },
       {
@@ -2831,21 +2789,20 @@
     ],
     "zinnen": 66,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 0,
-    "twijfel": 1,
+    "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 0,
       "info": 0,
-      "twijfel": 1
+      "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "zin-max-woorden": 3,
-      "zin-twijfeltaal": 1
+      "zin-max-woorden": 2
     },
     "bevindingen": [
       {
@@ -2871,23 +2828,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Of u een visum nodig heeft, hangt af van hoelang u in Bosnië en Herzegovina blijft:",
         "kop": "Paspoort, ID-kaart, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 21 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart, en eventueel een visum, nodig voor een reis naar Bosnië en Herzegovina.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart, en eventueel een visum, nodig voor een reis naar Bosnië en Herzegovina.",
-        "kop": "Paspoort, ID-kaart, rijbewijs",
-        "herkomst": "aanvulling"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 18-09-2026"
@@ -3728,16 +3668,16 @@
     ],
     "zinnen": 112,
     "fout": 1,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 2,
-    "twijfel": 11,
+    "twijfel": 10,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 2,
       "info": 1,
-      "twijfel": 11
+      "twijfel": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -3745,8 +3685,8 @@
       "woord-onbekend": 2,
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 4,
-      "zin-max-woorden": 5,
-      "zin-twijfeltaal": 2
+      "zin-max-woorden": 4,
+      "zin-twijfeltaal": 1
     },
     "bevindingen": [
       {
@@ -3925,23 +3865,6 @@
         "boodschap": "Deze zin telt 21 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Bekijk de contactgegevens van de Nederlandse ambassade in Brasília, het consulaat-generaal in Rio de Janeiro of het consulaat-generaal in São Paulo.",
         "kop": "In geval van nood"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Brazilië.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Brazilië.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       },
       {
         "regel": "zin-max-woorden",
@@ -4268,13 +4191,13 @@
     ],
     "zinnen": 60,
     "fout": 1,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 3,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 3,
       "info": 1,
       "twijfel": 2
@@ -4283,7 +4206,7 @@
       "actueel-max-woorden": 1,
       "bagage-heen": 1,
       "rijbewijs-anwb": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-frequentiewoord": 2,
       "link-tekstlengte": 1
     },
@@ -4299,7 +4222,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check wat u mag meenemen op de website van de douane van de Centraal-Afrikaanse Republiek (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Centraal-Afrikaanse Republiek."
       },
       {
@@ -4351,14 +4275,6 @@
       },
       {
         "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar de Centraal-Afrikaanse Republiek.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 19 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
@@ -4386,13 +4302,13 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 5,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 5,
       "info": 1,
       "twijfel": 0
@@ -4402,7 +4318,7 @@
       "bagage-heen": 1,
       "woord-onbekend": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2
     },
@@ -4419,7 +4335,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check dit vooraf bij de lokale autoriteiten, bijvoorbeeld op de officiële website van de Canadese douane.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Canada."
       },
       {
@@ -4488,14 +4405,6 @@
         "boodschap": "Deze zin telt 19 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Lees informatie over natuurrisico’s in Canada op de website van de Canadese overheid (informatie in het Engels en Frans).",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een reisautorisatie (eTA) nodig voor een reis naar Canada.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-max-woorden",
@@ -4894,7 +4803,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Lees wat u mag meenemen naar China op de website van de Chinese overheid (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van China."
       },
       {
@@ -5454,13 +5364,13 @@
     ],
     "zinnen": 111,
     "fout": 5,
-    "letop": 19,
+    "letop": 18,
     "linkzin": 3,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
       "fout": 5,
-      "let-op": 19,
+      "let-op": 18,
       "link-zin": 3,
       "info": 1,
       "twijfel": 8
@@ -5474,7 +5384,7 @@
       "titel-leestekens": 1,
       "tekst-cms-rest": 1,
       "woord-onbekend": 5,
-      "zin-max-woorden": 10,
+      "zin-max-woorden": 9,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
       "link-tekstlengte": 1,
@@ -5754,14 +5664,6 @@
       },
       {
         "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar de DRC.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
@@ -5797,13 +5699,13 @@
     ],
     "zinnen": 83,
     "fout": 0,
-    "letop": 6,
+    "letop": 5,
     "linkzin": 2,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
+      "let-op": 5,
       "link-zin": 2,
       "info": 1,
       "twijfel": 4
@@ -5811,7 +5713,7 @@
     "perRegel": {
       "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 1
     },
@@ -5909,14 +5811,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met de ambassade van de Republiek Congo in Brussel voor meer informatie over visa.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar de Republiek Congo.",
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
@@ -6859,13 +6753,13 @@
     ],
     "zinnen": 43,
     "fout": 1,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 1,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 1,
       "info": 0,
       "twijfel": 0
@@ -6876,7 +6770,7 @@
       "bagage-terug": 1,
       "woord-onbekend": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "link-tekstlengte": 1,
       "aanhalingstekens": 1
     },
@@ -6937,14 +6831,6 @@
         "boodschap": "Deze zin telt 29 woorden. Maximaal 15.",
         "fragment": "De Nederlandse Vertegenwoordiging biedt hulp bij nood aan Nederlanders (met Nederlands paspoort) die in een gemeente in Europees Nederland staan ingeschreven, of op Bonaire, Sint Eustatius of Saba wonen.",
         "kop": "In geval van nood"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een digitale immigratiekaart nodig voor een reis naar Curaçao.",
-        "kop": "Paspoort, rijbewijs"
       },
       {
         "regel": "zin-max-woorden",
@@ -7326,20 +7212,20 @@
     ],
     "zinnen": 68,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 5,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 5,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
-      "zin-max-woorden": 9
+      "zin-max-woorden": 8
     },
     "bevindingen": [
       {
@@ -7397,14 +7283,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Installeer de waarschuwings-app Warn-App NINA op de website van de Duitse overheid (informatie in het Duits).",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort of een geldige ID-kaart nodig voor een reis naar Duitsland.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
       },
       {
         "regel": "zin-max-woorden",
@@ -7558,21 +7436,20 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 3,
-    "twijfel": 2,
+    "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 3,
       "info": 0,
-      "twijfel": 2
+      "twijfel": 1
     },
     "perRegel": {
-      "zin-max-woorden": 6,
-      "zin-frequentiewoord": 1,
-      "zin-twijfeltaal": 1
+      "zin-max-woorden": 5,
+      "zin-frequentiewoord": 1
     },
     "bevindingen": [
       {
@@ -7622,23 +7499,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "U krijgt dan per e-mail een bewijs met een QR-code, dat u laat zien bij aankomst of vertrek.",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort (en eventueel toestemming van de immigratiedienst) nodig voor een reis naar Dominica.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort (en eventueel toestemming van de immigratiedienst) nodig voor een reis naar Dominica.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 18-09-2026"
@@ -9545,30 +9405,19 @@
     ],
     "zinnen": 32,
     "fout": 0,
-    "letop": 1,
+    "letop": 0,
     "linkzin": 0,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
+      "let-op": 0,
       "link-zin": 0,
       "info": 0,
       "twijfel": 0
     },
-    "perRegel": {
-      "zin-max-woorden": 1
-    },
-    "bevindingen": [
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig voor een reis naar de Faeröer.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
-      }
-    ],
+    "perRegel": {},
+    "bevindingen": [],
     "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 18-09-2026"
   },
   {
@@ -9582,25 +9431,24 @@
     ],
     "zinnen": 67,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "linkzin": 3,
-    "twijfel": 2,
+    "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "link-zin": 3,
       "info": 1,
-      "twijfel": 2
+      "twijfel": 1
     },
     "perRegel": {
       "h3-vaste-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
-      "zin-twijfeltaal": 1,
       "link-tekstlengte": 1
     },
     "bevindingen": [
@@ -9682,23 +9530,6 @@
         "boodschap": "Deze zin telt 23 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met de ambassade van Micronesië in Washington D.C., Verenigde Staten voor meer informatie over visa (informatie in het Engels).",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort (en eventueel een inreisvergunning) nodig voor een reis naar Micronesië.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort (en eventueel een inreisvergunning) nodig voor een reis naar Micronesië.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       },
       {
         "regel": "link-tekstlengte",
@@ -11494,7 +11325,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Lees wat u mag meenemen naar Hongkong SAR op de website van de overheid van Hongkong SAR (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Hongkong SAR."
       },
       {
@@ -14565,13 +14397,13 @@
     ],
     "zinnen": 122,
     "fout": 2,
-    "letop": 16,
+    "letop": 15,
     "linkzin": 4,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 16,
+      "let-op": 15,
       "link-zin": 4,
       "info": 1,
       "twijfel": 2
@@ -14583,7 +14415,7 @@
       "criminaliteit-themapagina": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 10,
+      "zin-max-woorden": 9,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2,
@@ -14726,14 +14558,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 26 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Vraag na welke documenten u nodig heeft en aan welke eisen deze moeten voldoen bij de ambassade van Kenia in Den Haag (informatie in het Engels).",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en (vanaf 16 jaar) een eTA nodig voor een reis naar Kenia.",
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
@@ -15997,7 +15821,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check wat u mee mag nemen naar Libanon op de website van de Libanese overheid (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Libanon."
       },
       {
@@ -16509,13 +16334,13 @@
     ],
     "zinnen": 107,
     "fout": 2,
-    "letop": 13,
+    "letop": 12,
     "linkzin": 5,
     "twijfel": 4,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 13,
+      "let-op": 12,
       "link-zin": 5,
       "info": 3,
       "twijfel": 4
@@ -16528,7 +16353,7 @@
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 13,
+      "zin-max-woorden": 12,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 1
@@ -16566,7 +16391,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Lees wat u mag meenemen naar Sri Lanka op de website van de Sri Lankaanse douane (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Sri Lanka."
       },
       {
@@ -16727,14 +16553,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Let op: U mag niet met een toeristenvisum naar Sri Lanka reizen en daarna gaan werken.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Sri Lanka.",
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
@@ -17180,7 +16998,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check wat u mee mag nemen naar Marokko op de website van de Marokkaanse douane (informatie in het Frans).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Marokko."
       },
       {
@@ -17371,7 +17190,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check wat u mag meenenemen naar Monaco op de website van de Franse douane (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Monaco."
       },
       {
@@ -17637,13 +17457,13 @@
     ],
     "zinnen": 91,
     "fout": 2,
-    "letop": 6,
+    "letop": 5,
     "linkzin": 5,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 6,
+      "let-op": 5,
       "link-zin": 5,
       "info": 0,
       "twijfel": 0
@@ -17653,7 +17473,7 @@
       "h4-niet-melden": 1,
       "h4-kop-variant": 1,
       "zin-lijdende-vorm": 3,
-      "zin-max-woorden": 7
+      "zin-max-woorden": 6
     },
     "bevindingen": [
       {
@@ -17747,14 +17567,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 21 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Lees informatie over een toeristenvisum voor de Maldiven op de website van de immigratiedienst van de Maldiven (informatie in het Engels).",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar de Maldiven.",
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
@@ -19268,23 +19080,22 @@
     ],
     "zinnen": 73,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "linkzin": 4,
-    "twijfel": 1,
+    "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "link-zin": 4,
       "info": 0,
-      "twijfel": 1
+      "twijfel": 0
     },
     "perRegel": {
       "rijbewijs-anwb": 1,
       "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 7,
-      "zin-twijfeltaal": 1,
+      "zin-max-woorden": 6,
       "link-verboden-partij": 1
     },
     "bevindingen": [
@@ -19333,23 +19144,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago.",
         "kop": "In geval van nood"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel toestemming voor langer verblijf nodig voor een reis naar Montserrat.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel toestemming voor langer verblijf nodig voor een reis naar Montserrat.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       },
       {
         "regel": "zin-max-woorden",
@@ -20334,7 +20128,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check wat u mee mag nemen op de website van de douane van Nicaragua (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Nicaragua."
       },
       {
@@ -20504,21 +20299,20 @@
     ],
     "zinnen": 55,
     "fout": 0,
-    "letop": 1,
+    "letop": 0,
     "linkzin": 1,
-    "twijfel": 1,
+    "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
+      "let-op": 0,
       "link-zin": 1,
       "info": 1,
-      "twijfel": 1
+      "twijfel": 0
     },
     "perRegel": {
       "kinderen-documenten": 1,
-      "zin-max-woorden": 2,
-      "zin-twijfeltaal": 1
+      "zin-max-woorden": 1
     },
     "bevindingen": [
       {
@@ -20535,23 +20329,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met de ambassade van Nieuw-Zeeland in Den Haag voor meer informatie over visa.",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Niue.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Niue.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"
@@ -21633,7 +21410,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Neem contact op met de overheid van de Pitcairneilanden voor meer informatie over wat u mag meenemen (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Pitcairneilanden."
       },
       {
@@ -22961,21 +22739,20 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 3,
-    "twijfel": 2,
+    "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 3,
       "info": 0,
-      "twijfel": 2
+      "twijfel": 1
     },
     "perRegel": {
       "zin-frequentiewoord": 1,
-      "zin-max-woorden": 6,
-      "zin-twijfeltaal": 1
+      "zin-max-woorden": 5
     },
     "bevindingen": [
       {
@@ -23025,23 +22802,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met het CBP Traveler Communications Center via het contactformulier (informatie in het Engels).",
         "kop": "Paspoort, visum/ESTA, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visum nodig voor een reis naar Puerto Rico.",
-        "kop": "Paspoort, visum/ESTA, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visum nodig voor een reis naar Puerto Rico.",
-        "kop": "Paspoort, visum/ESTA, rijbewijs",
-        "herkomst": "aanvulling"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 18-09-2026"
@@ -24471,7 +24231,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Lees wat u mag meenemen naar Rwanda op de website van de Rwandese douane (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Rwanda."
       },
       {
@@ -24740,7 +24501,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check wat u mee mag nemen naar Saoedi-Arabië op de website van IATA (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Saoedi-Arabië."
       },
       {
@@ -25149,7 +24911,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Lees wat u mag meenemen naar Singapore op de website van de douane van Singapore (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Singapore."
       },
       {
@@ -25525,13 +25288,13 @@
     ],
     "zinnen": 79,
     "fout": 3,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 1,
     "twijfel": 5,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 1,
       "info": 0,
       "twijfel": 5
@@ -25541,7 +25304,7 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "zin-frequentiewoord": 4,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1
     },
@@ -25641,14 +25404,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met de ambassade van Sierra Leone in Brussel voor meer informatie over visa.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Sierra Leone.",
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
@@ -25776,13 +25531,13 @@
     ],
     "zinnen": 42,
     "fout": 1,
-    "letop": 2,
+    "letop": 1,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 2,
+      "let-op": 1,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
@@ -25791,7 +25546,7 @@
       "reisverzekering-vaste-tekst": 1,
       "tekst-spatie-leesteken": 1,
       "zin-frequentiewoord": 1,
-      "zin-max-woorden": 2
+      "zin-max-woorden": 1
     },
     "bevindingen": [
       {
@@ -25826,14 +25581,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Registreer u bij de politie (Ufficio Stranieri) via de website van de Italiaanse overheid (informatie in het Engels).",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig voor een reis naar San Marino.",
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
@@ -26310,16 +26057,16 @@
     ],
     "zinnen": 81,
     "fout": 1,
-    "letop": 8,
+    "letop": 7,
     "linkzin": 3,
-    "twijfel": 4,
+    "twijfel": 3,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 7,
       "link-zin": 3,
       "info": 2,
-      "twijfel": 4
+      "twijfel": 3
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -26327,8 +26074,7 @@
       "bagage-heen": 1,
       "woord-onbekend": 1,
       "zin-frequentiewoord": 3,
-      "zin-max-woorden": 9,
-      "zin-twijfeltaal": 1,
+      "zin-max-woorden": 8,
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
@@ -26352,7 +26098,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check wat u mee mag nemen naar Suriname op de website van de Surinaamse overheid.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Suriname."
       },
       {
@@ -26444,23 +26191,6 @@
         "boodschap": "Deze zin telt 25 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Daarnaast is iedere reiziger van 18 jaar en ouder verplicht voor aankomst in Suriname en voor vertrek uit Suriname een ICF-formulier online in te vullen.",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Suriname.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Suriname.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -27398,7 +27128,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Check wat u mag meenemen op de website van de luchthaven van Lomé (informatie in het Frans).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Togo."
       },
       {
@@ -27471,16 +27202,16 @@
     ],
     "zinnen": 187,
     "fout": 3,
-    "letop": 31,
+    "letop": 30,
     "linkzin": 3,
-    "twijfel": 9,
+    "twijfel": 8,
     "info": 4,
     "perErnst": {
       "fout": 3,
-      "let-op": 31,
+      "let-op": 30,
       "link-zin": 3,
       "info": 4,
-      "twijfel": 9
+      "twijfel": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -27492,9 +27223,9 @@
       "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
       "woord-onbekend": 2,
-      "zin-max-woorden": 19,
+      "zin-max-woorden": 18,
       "zin-frequentiewoord": 6,
-      "zin-twijfeltaal": 3,
+      "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 8,
       "vragen-opeenvolgend": 1,
       "aanhalingstekens": 2,
@@ -27862,23 +27593,6 @@
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 21 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, een Thailand Digital Arrival Card en eventueel een visum, nodig voor een reis naar Thailand.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort, een Thailand Digital Arrival Card en eventueel een visum, nodig voor een reis naar Thailand.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
-      },
-      {
         "regel": "vragen-opeenvolgend",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > Vraagvorm",
@@ -28014,19 +27728,19 @@
     ],
     "zinnen": 41,
     "fout": 0,
-    "letop": 2,
+    "letop": 1,
     "linkzin": 0,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 1,
       "link-zin": 0,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "zin-max-woorden": 2
+      "zin-max-woorden": 1
     },
     "bevindingen": [
       {
@@ -28035,14 +27749,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Of u een vergunning of visum nodig heeft, hang af van hoelang u op de Tokelau-eilanden blijft:",
-        "kop": "Paspoort, visum"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort (en een vergunning of visum) nodig voor een reis naar de Tokelau-eilanden.",
         "kop": "Paspoort, visum"
       }
     ],
@@ -28300,21 +28006,20 @@
     ],
     "zinnen": 59,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 4,
-    "twijfel": 1,
+    "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 4,
       "info": 0,
-      "twijfel": 1
+      "twijfel": 0
     },
     "perRegel": {
       "rijbewijs-anwb": 1,
-      "zin-max-woorden": 5,
-      "zin-twijfeltaal": 1,
+      "zin-max-woorden": 4,
       "link-verboden-partij": 1,
       "link-tekstlengte": 1
     },
@@ -28357,23 +28062,6 @@
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met de ambassade van Tonga in Londen, Verenigd Koninkrijk voor meer informatie over visa.",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Tonga.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Tonga.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       },
       {
         "regel": "link-verboden-partij",
@@ -28663,16 +28351,16 @@
     ],
     "zinnen": 142,
     "fout": 4,
-    "letop": 29,
+    "letop": 28,
     "linkzin": 1,
-    "twijfel": 9,
+    "twijfel": 8,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 29,
+      "let-op": 28,
       "link-zin": 1,
       "info": 1,
-      "twijfel": 9
+      "twijfel": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -28684,9 +28372,9 @@
       "nederlands-verbuiging": 1,
       "woord-onbekend": 3,
       "zin-frequentiewoord": 7,
-      "zin-max-woorden": 17,
+      "zin-max-woorden": 16,
       "zin-lijdende-vorm": 4,
-      "zin-twijfeltaal": 2,
+      "zin-twijfeltaal": 1,
       "link-tekstlengte": 1,
       "aanhalingstekens": 2
     },
@@ -29015,23 +28703,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Bij verkeersongelukken met dodelijke afloop houdt de Turkse politie de chauffeurs van alle betrokken voertuigen aan.",
         "kop": "Verkeersongevallen"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor een reis naar Turkije.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor een reis naar Turkije.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       },
       {
         "regel": "link-tekstlengte",
@@ -29793,16 +29464,16 @@
     ],
     "zinnen": 75,
     "fout": 3,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 4,
-    "twijfel": 2,
+    "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 4,
       "info": 1,
-      "twijfel": 2
+      "twijfel": 1
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -29811,10 +29482,9 @@
       "rubriek-vrij-te-hoog": 1,
       "woord-onbekend": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 9,
+      "zin-max-woorden": 8,
       "zin-lijdende-vorm": 3,
       "zin-frequentiewoord": 1,
-      "zin-twijfeltaal": 1,
       "link-tekstlengte": 1
     },
     "bevindingen": [
@@ -29968,23 +29638,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met het CBP Traveler Communications Center via het contactformulier (informatie in het Engels).",
         "kop": "Paspoort, visum/ESTA, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visum nodig voor een reis naar de VS.",
-        "kop": "Paspoort, visum/ESTA, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visum nodig voor een reis naar de VS.",
-        "kop": "Paspoort, visum/ESTA, rijbewijs",
-        "herkomst": "aanvulling"
       },
       {
         "regel": "link-tekstlengte",
@@ -30525,22 +30178,21 @@
     ],
     "zinnen": 53,
     "fout": 0,
-    "letop": 7,
+    "letop": 6,
     "linkzin": 4,
-    "twijfel": 1,
+    "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 6,
       "link-zin": 4,
       "info": 0,
-      "twijfel": 1
+      "twijfel": 0
     },
     "perRegel": {
       "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 8,
-      "zin-twijfeltaal": 1,
+      "zin-max-woorden": 7,
       "link-tekstlengte": 1
     },
     "bevindingen": [
@@ -30606,23 +30258,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met het CBP Traveler Communications Center via het contactformulier (informatie in het Engels).",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 21 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een ESTA, en eventueel een visum, nodig voor een reis naar de Amerikaanse Maagdeneilanden.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort en een ESTA, en eventueel een visum, nodig voor een reis naar de Amerikaanse Maagdeneilanden.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       },
       {
         "regel": "zin-max-woorden",
@@ -30709,7 +30344,8 @@
         "regel": "bagage-heen",
         "ernst": "info",
         "bron": "SJ, blok Bagageregels",
-        "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+        "fragment": "Lees wat u mag meenemen naar Vietnam op de website van de douane van Vietnam (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Vietnam."
       },
       {
@@ -31163,20 +30799,19 @@
     ],
     "zinnen": 58,
     "fout": 0,
-    "letop": 1,
+    "letop": 0,
     "linkzin": 3,
-    "twijfel": 1,
+    "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
+      "let-op": 0,
       "link-zin": 3,
       "info": 0,
-      "twijfel": 1
+      "twijfel": 0
     },
     "perRegel": {
-      "zin-max-woorden": 4,
-      "zin-twijfeltaal": 1
+      "zin-max-woorden": 3
     },
     "bevindingen": [
       {
@@ -31202,23 +30837,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Neem contact op met de ambassade van Samoa in Brussel, België voor meer informatie over visa.",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Samoa.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-twijfeltaal",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Twijfeltaal: \"eventueel\".",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Samoa.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 18-09-2026"

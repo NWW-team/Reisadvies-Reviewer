@@ -891,3 +891,59 @@ test('de gebiedsvorm van de landzin mag, een andere landnaam niet', () => {
   { land: 'Tsjechië', kleurcodes: ['rood', 'groen'] });
   assert.ok(!japan.includes('kleur-aanduiding'));
 });
+
+/**
+ * Staat een vaste tekst er wél maar anders, dan hoort de melding dat te zeggen en de zin aan te
+ * wijzen. "Ontbreekt" stuurt de redacteur het bos in: hij ziet in het advies een zin staan die er
+ * bijna hetzelfde uitziet en weet niet wat hij moet veranderen.
+ */
+test('bagage: een andere formulering heet afwijkend en wijst de zin aan', () => {
+  const b = bevindingenVan(advies('<h3>Bagageregels</h3>'
+    + '<h4>Wat mag ik meenemen naar Tsjechië?</h4>'
+    + '<p>Check wat u mee mag nemen naar Tsjechië op de website van de Tsjechische overheid.</p>'),
+  { land: 'Tsjechië' }).filter((x) => x.regel === 'bagage-heen');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /wijkt af/);
+  assert.match(b[0].fragment, /Check wat u mee mag nemen naar Tsjechië/);
+  assert.match(b[0].verwacht, /Check wat de regels zijn bij de lokale autoriteiten/);
+});
+
+test('bagage: staat er iets heel anders, dan ontbreekt de tekst echt', () => {
+  const b = bevindingenVan(advies('<h3>Bagageregels</h3>'
+    + '<h4>Wat mag ik meenemen naar Tsjechië?</h4>'
+    + '<p>Neem geen resten van planten of dieren mee, ook niet per ongeluk.</p>'),
+  { land: 'Tsjechië' }).filter((x) => x.regel === 'bagage-heen');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /ontbreekt/);
+  assert.strictEqual(b[0].fragment, undefined, 'er is geen zin om aan te wijzen');
+});
+
+/**
+ * De kinderzin staat op de vrijstellingslijst, maar het middenstuk verschilt per land: een visum,
+ * een ESTA, een ID-kaart, een inreisvergunning. Stond hij er maar in één vorm, dan viel elke
+ * andere alsnog over de schrijfregels — over "eventueel" bijvoorbeeld, terwijl dat woord er juist
+ * hoort te staan: of je een visum nodig hebt, hangt af van de reden van het bezoek.
+ */
+test('de kinderzin is vrijgesteld, welke variant er ook staat', () => {
+  const varianten = [
+    'Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visum nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort (en eventueel een inreisvergunning) nodig voor een reis naar Tsjechië.',
+  ];
+  for (const zin of varianten) {
+    const ids = idsVan(advies('<h3>Paspoort, visum, rijbewijs</h3><p>' + zin + '</p>'), { land: 'Tsjechië' });
+    assert.ok(!ids.includes('zin-twijfeltaal'), 'niet over twijfeltaal vallen bij: ' + zin);
+    assert.ok(!ids.includes('zin-max-woorden'), 'niet over de lengte vallen bij: ' + zin);
+  }
+});
+
+test('een eigen zin die toevallig zo begint blijft wel getoetst op wat eromheen staat', () => {
+  // De vrijstelling geldt de zin zelf, niet de alinea: de zin erna wordt gewoon getoetst.
+  const ids = idsVan(advies('<h3>Paspoort, visum, rijbewijs</h3>'
+    + '<p>Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar '
+    + 'Tsjechië. Reizigers moeten er mogelijk rekening mee houden dat de wachttijden aan de grens '
+    + 'bij drukte flink kunnen oplopen in de zomermaanden.</p>'), { land: 'Tsjechië' });
+  assert.ok(ids.includes('zin-twijfeltaal'), 'de tweede zin bevat "mogelijk" en hoort gemeld te worden');
+});

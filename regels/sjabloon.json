@@ -27,16 +27,26 @@
   "rubriek_volgorde": {
     "_toelichting": "Drie lagen, niet één vaste rij. Het sjabloonblok heet 'Risico dat van toepassing is, in volgorde van relevantie', en dat woord relevantie is de kern: de volgorde mág schuiven als een risico in dit land zwaarder weegt. Als terrorisme de reden is voor kleurcode oranje, hoort terrorisme bovenaan. Alleen de bovenste laag ligt echt vast.",
     "_bron": "blok 'Risico dat van toepassing is, in volgorde van relevantie'; de indeling in lagen is een instructie van de opdrachtgever, 19 september 2026.",
-
     "_bovenaan_toelichting": "Deze twee horen bovenaan, in deze volgorde. Is er geen Actueel, dan staat Regionale risico's bovenaan. Zijn ze er allebei niet, dan begint het advies met de vaste laag. Gemeten over 226 adviezen: geen enkel advies doet dit fout, dus dit is een vangnet.",
-    "bovenaan": ["Actueel", "Regionale risico’s"],
-
+    "bovenaan": [
+      "Actueel",
+      "Regionale risico’s"
+    ],
     "_vast_toelichting": "De voorgeschreven volgorde. Hiervan afwijken mag als een risico in dit land zwaarder weegt, dus dit is een aandachtspunt en geen fout. Natuurgeweld staat onderaan deze laag: dat staat meer op zichzelf dan de risico's erboven.",
-    "vast": ["Terrorisme", "Oorlog en conflict", "Criminaliteit", "Wetten en gebruiken", "Natuurgeweld"],
-
+    "vast": [
+      "Terrorisme",
+      "Oorlog en conflict",
+      "Criminaliteit",
+      "Wetten en gebruiken",
+      "Natuurgeweld"
+    ],
     "_vrij_toelichting": "Hierbinnen ligt geen volgorde vast. Ze horen onder Wetten en gebruiken: Demonstraties sluit daar logisch op aan. Bóven Natuurgeweld mógen ze staan — Natuurgeweld staat meer op zichzelf. Instructie van de opdrachtgever, 19 september 2026. Landmijnen, Verkeersongevallen en Willekeurige arrestaties komen zelden voor.",
-    "vrij": ["Demonstraties", "Landmijnen", "Verkeersongevallen", "Willekeurige arrestaties"],
-
+    "vrij": [
+      "Demonstraties",
+      "Landmijnen",
+      "Verkeersongevallen",
+      "Willekeurige arrestaties"
+    ],
     "_vrij_onder_toelichting": "De ondergrens: een vrije rubriek hoort ná deze te staan, en na alles wat daarboven in de vaste laag staat. Wat er in de vaste laag ónder staat — Natuurgeweld — legt niets op. Zonder deze grens gaf de regel 35 meldingen waarvan 22 over Demonstraties boven Natuurgeweld, en die zijn juist goed.",
     "vrij_onder": "Wetten en gebruiken"
   },
@@ -154,7 +164,7 @@
       "bagage"
     ],
     "variant_drempel": 20,
-    "_variant_drempel_noot": "Een afwijkende tussenkop wordt alleen gemeld als de andere formulering in minstens zoveel adviezen staat. Daaronder is het geen huisstijl maar toeval: 'Geen Nederlandse ambassade of consulaat op Antarctica' lijkt op 'Geen Nederlandse ambassade op Aruba', maar die staat zelf ook maar in \u00e9\u00e9n advies, en dan zegt de gelijkenis niets. Gemeten op 18 september 2026: met deze drempel vallen de acht landspecifieke koppen weg en blijven de veertien over waar hetzelfde onderwerp elders anders heet.",
+    "_variant_drempel_noot": "Een afwijkende tussenkop wordt alleen gemeld als de andere formulering in minstens zoveel adviezen staat. Daaronder is het geen huisstijl maar toeval: 'Geen Nederlandse ambassade of consulaat op Antarctica' lijkt op 'Geen Nederlandse ambassade op Aruba', maar die staat zelf ook maar in één advies, en dan zegt de gelijkenis niets. Gemeten op 18 september 2026: met deze drempel vallen de acht landspecifieke koppen weg en blijven de veertien over waar hetzelfde onderwerp elders anders heet.",
     "natuurgeweld": {
       "_toelichting": "Onder Natuurgeweld liggen de koppen niet vast - elk land kent andere risico's - maar ze horen wel een natuurrisico te benoemen. Een kop als \"Bergen\", \"Slecht weer in de bergen\" of \"Risico's bij activiteiten\" zegt niet welk risico er speelt. Een kop die een van de woorden hieronder bevat, telt als een benoemd risico.",
       "_bron": "Instructie van de opdrachtgever, 18 september 2026: onder natuurgeweld moet het altijd een risico zijn zoals vulkanen, orkanen of overstromingen.",
@@ -205,7 +215,7 @@
       ],
       "_meting": "Op 18 september 2026 over 226 reisadviezen: 467 van de 484 koppen onder Natuurgeweld benoemen een risico. De 17 overige zijn plaatsen (Bergen, Sahara), omschrijvingen (Slecht weer in de bergen, Risico's bij activiteiten) en dieren (Haaien, Beren).",
       "_samenstelling_noot": "Een stam van vijf letters of meer mag ook middenin een woord staan, want Nederlands plakt woorden aan elkaar: 'zandstormen' en 'zeestromingen' benoemen een risico. Bij kortere stammen moet de stam aan het woordbegin staan, anders zou 'ijs' in 'prijs' vallen.",
-    "_weer_noot": "'weer' staat er bewust in: slecht weer of onvoorspelbaar weer is zelf het risico, dus een kop als 'Slecht weer in de bergen' benoemt wel degelijk waar het over gaat."
+      "_weer_noot": "'weer' staat er bewust in: slecht weer of onvoorspelbaar weer is zelf het risico, dus een kop als 'Slecht weer in de bergen' benoemt wel degelijk waar het over gaat."
     },
     "_rubrieken_noot": "Alleen nood en bagage. Onder Paspoort/visum/rijbewijs en Regionale risico's voegen redacteuren terecht landspecifieke kopjes toe (Inreisstempel, De provincie Cabinda, Grens met Mali); daar is geen vaste lijst. Gemeten op 18 september 2026: die twee rubrieken leverden samen 85 meldingen op die inhoudelijk allemaal klopten."
   },
@@ -218,14 +228,15 @@
       "Deel een kopie van uw paspoort of ID-kaart met familie in Nederland. Als u iets overkomt, is het belangrijk dat anderen uw gegevens hebben. Lees hoe u een veilige kopie maakt van uw paspoort of ID-kaart op de website van de Rijksoverheid.",
       "U heeft geen visum nodig voor {land} als u met een Nederlands paspoort reist.",
       "U heeft geen visum nodig voor {land} als u met een Nederlands paspoort of Nederlandse ID-kaart reist.",
-      "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar {land}. Reist u alleen met 1 of meer kinderen jonger dan 18 jaar? Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee.",
+      "Kinderen hebben ook een geldig paspoort{vrij} nodig voor een reis naar {land}. Reist u alleen met 1 of meer kinderen jonger dan 18 jaar? Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee.",
       "Uw Nederlandse rijbewijs is geldig in {land}. Lees meer over rijden in {land} op de website van de ANWB.",
       "In {land} is uw Nederlandse rijbewijs alleen geldig als u ook een geldig internationaal rijbewijs heeft. Lees meer over rijden in {land} op de website van de ANWB.",
       "Check wat u mag meenemen naar {land} op de website van {vrij} (informatie in het {vrij}).",
       "In een noodgeval kunt u ook terecht bij de honorair consul van Nederland in {vrij}.",
       "In een noodgeval kunt u ook terecht bij de ambassade van een ander land dat lid is van de Europese Unie.",
       "Bent u een lhbtiq+ persoon? En wilt u naar {land} reizen? De wetten en de gebruiken in dit land tegenover lhbtiq+ personen zijn vergelijkbaar met die van Nederland."
-    ]
+    ],
+    "_kinderzin_aanvulling": "Op 19 september 2026 is 'en eventueel een visum' in de kinderzin vervangen door {vrij}. Het middenstuk verschilt per land -- een visum, een ESTA, een ID-kaart, een inreisvergunning, de Thailand Digital Arrival Card -- en stond hier maar in een vorm, waardoor tien varianten in zestien adviezen alsnog op twijfeltaal ('eventueel') werden gemeld. Martijn: het woord eventueel hoort hier te blijven, want of je een visum nodig hebt hangt af van de reden van het bezoek; het anders formuleren maakt de zin alleen langer. De zin staat op deze lijst en is dus niet verplicht: hij wordt alleen vrijgesteld van de schrijfregels."
   },
   "vaste_teksten": [
     {
@@ -372,7 +383,10 @@
       "bron": "SJ, blok Bagageregels",
       "zin": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van {land}.",
       "kern": "check wat de regels zijn bij de lokale autoriteiten|check wat u mag meenemen naar",
-      "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt."
+      "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+      "herken": "wat u mee mag nemen|wat u mag meenemen|wat u mag meenenemen|wat u mee mag brengen|bij de lokale autoriteiten",
+      "boodschap_afwijkend": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
+      "_herken_aanvulling": "Toegevoegd 19 september 2026. De meldingtekst zei dat de vaste tekst ontbrak, terwijl 13 van de 21 adviezen hem wel hebben maar anders formuleren: 'Check wat u mee mag nemen naar Suriname' (5x), 'Lees wat u mag meenemen naar' (5x), 'Check wat u mag meenemen op' (2x) Monaco met de typefout 'meenenemen', en Canada met 'Check dit vooraf bij de lokale autoriteiten'. Met herken erbij meldt de tool dat de tekst afwijkt in plaats van ontbreekt, en wijst hij de zin aan die er staat."
     },
     {
       "id": "bagage-terug",

@@ -986,3 +986,81 @@ Daarmee is *"het zuidoosten van Fukushima"* een gebied en *"Naoero"* niet:
 De vorm staat nu als `"De kleurcode van het reisadvies voor {gebied} is {kleur}"` in
 `aanduiding_sjablonen`, met `herkomst: aanvulling`: hij staat niet letterlijk in de NB-kolom, maar
 is op 19 september goedgekeurd.
+
+## "Ontbreekt" terwijl de zin er wél staat (19 september 2026)
+
+Martijn wees bij Suriname op de melding *"De vaste tekst over de douaneregels van het land zelf
+ontbreekt"* en vroeg wat er dan verwacht werd. De melding klopte niet: Suriname schrijft *"Check wat
+u mee mag nemen naar Suriname op de website van de Surinaamse overheid"* — de tekst staat er, alleen
+anders.
+
+Het sjabloon kent hier al een mechanisme voor. Een vaste tekst kan naast `kern` (wat er letterlijk
+moet staan) een veld `herken` dragen: slaat dát aan terwijl `kern` faalt, dan meldt de tool dat de
+tekst *afwijkt* in plaats van *ontbreekt*, en geeft hij de gevonden zin mee als fragment — zodat de
+pagina hem markeert en je erheen kunt springen. `bagage-terug` had dat; `bagage-heen` niet.
+
+**Gemeten over de 21 adviezen die deze melding krijgen:**
+
+| wat er staat | aantal |
+|---|---:|
+| *Check wat u **mee mag nemen** naar X* | 5 |
+| *Lees wat u mag meenemen naar X* | 5 |
+| *Check wat u mag meenemen **op** …* | 2 |
+| Monaco: *Check wat u mag **meenenemen** naar Monaco* | 1 |
+| Canada: *Check dit vooraf bij de lokale autoriteiten* | 1 |
+| overige varianten op dezelfde zin | 4 |
+| **de tekst ontbreekt echt** | **3** |
+
+Die laatste drie zijn Antarctica (eigen regels over planten- en dierenresten), India (een verbodslijst)
+en Thailand (dat de kop zelfs omdraait naar *"Wat mag ik **niet** meenemen naar Thailand?"*). Daar is
+niets aan te wijzen en blijft de melding *ontbreekt*.
+
+Het aantal bevindingen verandert hier niet van: 2986 blijft 2986. Wat verandert is dat achttien
+ervan nu zeggen wat er aan de hand is en de zin aanwijzen.
+
+**Wat hiernaast nog open ligt.** Zeven andere vaste teksten hebben nog geen `herken` en zeggen dus
+altijd *ontbreekt*, samen 61 meldingen: `regionaal-gebiedenzin` (32), `nood-verwijzing-nood` (7),
+`nood-verwijzing-crisis` (7), `medicijnen-voldoende` (7), `kinderen-documenten` (4),
+`reisverzekering-oranje-rood` (3) en `rood-herhaling-voorbereiding` (1). Elk daarvan vraagt zijn
+eigen meting — welke formuleringen komen er echt voor — dus dat is een aparte ronde.
+
+## "Eventueel" in de kinderzin mag blijven (19 september 2026)
+
+Martijn over de melding *Twijfeltaal: "eventueel"* bij Suriname: *"het woord eventueel zou hier wel
+moeten blijven omdat je niet altijd een visum nodig hebt, hangt af van reden bezoek. Kan misschien
+anders, maar dan wordt wel weer langere tekst. Dus ben geneigd uitzondering te maken en deze
+variant goed te keuren."*
+
+De zin stond al op de vrijstellingslijst — maar in één vorm, zonder komma's. Suriname schrijft hem
+mét: *"Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar
+Suriname."* Daarmee sloeg de vrijstelling niet aan en viel de zin alsnog over de schrijfregels.
+
+**Geteld over 226 adviezen komt de zin overal voor, in tien varianten die de tool niet herkende:**
+
+| wat er in het midden staat | adviezen |
+|---|---:|
+| *, en eventueel een visum,* | BRA NIU SUR TON WSM |
+| *of geldige ID-kaart en eventueel een visum* | ALB TUR |
+| *, een ESTA of eventueel een visum* | PRI USA |
+| *en (eventueel) een visum* | ARM |
+| *of geldige ID-kaart, en eventueel een visum,* | BIH |
+| *(en eventueel toestemming van de immigratiedienst)* | DMA |
+| *(en eventueel een inreisvergunning)* | FSM |
+| *en eventueel toestemming voor langer verblijf* | MSR |
+| *, een Thailand Digital Arrival Card en eventueel een visum,* | THA |
+| *en een ESTA, en eventueel een visum,* | VIR |
+
+Wat al die varianten delen is het frame: *"Kinderen hebben ook een geldig paspoort … nodig voor een
+reis naar {land}."* Het middenstuk hángt van het land af, en daar heeft de lijst al een
+plaatshouder voor: `{vrij}`, *"een plek die het sjabloon openlaat"*. De regel luidt nu
+`Kinderen hebben ook een geldig paspoort{vrij} nodig voor een reis naar {land}.`
+
+**Dit is een ander soort jokerteken dan het afgewezen soort.** Bij de linkteksten wees Martijn een
+ruime vergelijking af, en terecht: daar gaat het om een *voorgeschreven* zin, en dan is elke
+afwijking het bekijken waard. Deze zin is niet voorgeschreven. Hij staat op de vrijstellingslijst,
+en die lijst zegt in zijn eigen toelichting: *"welke variant geldt hangt van het land af"*. De
+variatie is hier het uitgangspunt, niet de afwijking.
+
+**Gemeten: 2986 → 2940 bevindingen.** 16 meldingen over twijfeltaal en 30 over zinslengte, alle 46
+op dezelfde huiszin. Nagegaan of er iets anders meeviel: van de 30 verdwenen lengtemeldingen gaat
+er geen enkele over een andere zin.

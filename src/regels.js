@@ -898,21 +898,70 @@ export function maakToetser(data) {
     // De rubrieken onder veiligheidsrisico's staan in volgorde van relevantie. Koppen die het
     // sjabloon niet noemt (een ziekte bijvoorbeeld, die heet naar het virus) laten we staan waar
     // ze staan; die hebben geen vaste plek.
+    //
+    // Drie lagen, want niet alles ligt even vast:
+    //   bovenaan  Actueel en Regionale risico's, in die volgorde. Dat is een fout als het anders is.
+    //   vast      de voorgeschreven volgorde, maar afwijken mag als een risico zwaarder weegt.
+    //   vrij      geen volgorde onderling; ze horen wel onder de vaste laag.
     const volgordeRe = new RegExp(sj.rubriek_patronen.veiligheidsrisicos, 'i');
-    const gewensteVolgorde = sj.rubriek_volgorde.map(norm);
-    const rubriekenOpVolgorde = doc.koppen
+    const rv = sj.rubriek_volgorde;
+    const bovenaan = rv.bovenaan.map(norm);
+    const vast = rv.vast.map(norm);
+    const vrij = rv.vrij.map(norm);
+    const laagVan = (r) => (bovenaan.includes(r) ? 0 : vast.includes(r) ? 1 : vrij.includes(r) ? 2 : -1);
+
+    const rij = doc.koppen
       .filter((k) => k.niveau === 3 && volgordeRe.test(k.h2 || ''))
-      .map((k) => ({ tekst: k.tekst, plek: gewensteVolgorde.indexOf(norm(k.tekst)) }))
-      .filter((x) => x.plek >= 0);
-    for (let i = 1; i < rubriekenOpVolgorde.length; i++) {
-      if (rubriekenOpVolgorde[i].plek < rubriekenOpVolgorde[i - 1].plek) {
+      .map((k) => ({ tekst: k.tekst, n: norm(k.tekst) }))
+      .filter((x) => laagVan(x.n) >= 0);
+
+    // 1. Actueel en Regionale risico's horen bovenaan, in die volgorde. Geen aandachtspunt maar
+    //    een fout: hier is de lezer naar op zoek, en de volgorde ligt vast.
+    const bovenIn = rij.filter((x) => laagVan(x.n) === 0);
+    if (bovenIn.length) {
+      const hoort = bovenaan.filter((r) => bovenIn.some((x) => x.n === r));
+      const staat = rij.slice(0, bovenIn.length).map((x) => x.n);
+      if (hoort.join('|') !== staat.join('|')) {
+        b.push(bevinding('rubriek-bovenaan', ERNST.fout, 'SJ, blok Risico dat van toepassing is',
+          `${bovenIn.map((x) => `"${x.tekst}"`).join(' en ')} ${bovenIn.length > 1 ? 'horen' : 'hoort'} bovenaan te staan.`,
+          { fragment: bovenIn[0].tekst,
+            verwacht: hoort.map((r) => rv.bovenaan[bovenaan.indexOf(r)]).join(' > '),
+            notitie: 'Staat er een Actueel, dan komt die eerst en Regionale risico\'s daarna. '
+              + 'Is er geen Actueel, dan staat Regionale risico\'s bovenaan.' }));
+      }
+    }
+
+    // 2. Binnen de vaste laag de voorgeschreven volgorde. Afwijken mag als een risico in dit land
+    //    zwaarder weegt — dat is juist wat "in volgorde van relevantie" betekent — dus dit is een
+    //    aandachtspunt.
+    const vastIn = rij.filter((x) => laagVan(x.n) === 1);
+    for (let i = 1; i < vastIn.length; i++) {
+      if (vast.indexOf(vastIn[i].n) < vast.indexOf(vastIn[i - 1].n)) {
         b.push(bevinding('rubrieken-volgorde', ERNST.info, 'SJ, blok Risico dat van toepassing is',
-          `Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? "${rubriekenOpVolgorde[i].tekst}" `
-            + `staat na "${rubriekenOpVolgorde[i - 1].tekst}".`,
-          { fragment: rubriekenOpVolgorde[i].tekst,
-            notitie: 'Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. '
-              + 'De standaardvolgorde van relevantie is: ' + sj.rubriek_volgorde.join(' > ') + '.' }));
+          `Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? "${vastIn[i].tekst}" `
+            + `staat na "${vastIn[i - 1].tekst}".`,
+          { fragment: vastIn[i].tekst,
+            notitie: 'Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat '
+              + 'bovenaan. De standaardvolgorde is: ' + rv.vast.join(' > ') + '.' }));
         break;
+      }
+    }
+
+    // 3. De vrije rubrieken horen onder Wetten en gebruiken en alles wat daarboven staat.
+    //    Onderling ligt hun volgorde niet vast, en boven Natuurgeweld mógen ze staan: dat staat
+    //    meer op zichzelf, en Demonstraties sluit juist aan op Wetten en gebruiken.
+    const grens = vast.indexOf(norm(rv.vrij_onder));
+    const bindend = (x) => laagVan(x.n) === 1 && vast.indexOf(x.n) <= grens;
+    const eersteVrij = rij.findIndex((x) => laagVan(x.n) === 2);
+    if (eersteVrij >= 0) {
+      const onder = rij.slice(eersteVrij + 1).find(bindend);
+      if (onder) {
+        b.push(bevinding('rubriek-vrij-te-hoog', ERNST.info, 'SJ, blok Risico dat van toepassing is',
+          `"${rij[eersteVrij].tekst}" staat boven "${onder.tekst}".`,
+          { fragment: rij[eersteVrij].tekst,
+            notitie: `Deze rubriek hoort onder "${rv.vrij_onder}" te staan, en onder alles wat daarboven `
+              + 'komt: ' + rv.vast.slice(0, grens + 1).join(' > ') + '. Boven Natuurgeweld mag hij wel, '
+              + 'en onderling ligt de volgorde van de vrije rubrieken niet vast.' }));
       }
     }
 

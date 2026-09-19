@@ -142,6 +142,8 @@
       "label": "Volgorde van de rubrieken",
       "toelichting": "Afwijken van de standaardvolgorde kan goed zijn; dit is een aandachtspunt, geen fout.",
       "regels": [
+        "rubriek-bovenaan",
+        "rubriek-vrij-te-hoog",
         "rubrieken-volgorde"
       ]
     },

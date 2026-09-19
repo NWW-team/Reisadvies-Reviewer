@@ -596,6 +596,34 @@ test('een vaste linktekst blijft vrijgesteld, ook met de landnaam of een invoegi
     'een eigen te lange linktekst hoort wel gemeld te worden');
 });
 
+test('de rubrieken kennen drie lagen: bovenaan vast, daarna vrijer', () => {
+  const risico = (koppen) => advies("<h2>Welke veiligheidsrisico&#39;s zijn er in Tsjechi\u00eb?</h2>"
+    + koppen.map((k) => `<h3>${k}</h3><p>Tekst over dit risico.</p>`).join(''));
+  const ids = (koppen) => idsVan(risico(koppen), { land: 'Tsjechi\u00eb' });
+
+  // 1. Actueel en Regionale risico's horen bovenaan, in die volgorde. Dat is een fout.
+  assert.ok(!ids(['Actueel', "Regionale risico's", 'Terrorisme']).includes('rubriek-bovenaan'));
+  assert.ok(ids([ "Regionale risico's", 'Actueel', 'Terrorisme']).includes('rubriek-bovenaan'),
+    'Actueel hoort v\u00f3\u00f3r Regionale risico\'s');
+  assert.ok(ids(['Terrorisme', 'Actueel']).includes('rubriek-bovenaan'),
+    'Actueel hoort bovenaan, niet na een risico');
+  // Zonder Actueel staat Regionale risico's bovenaan, en dat is goed.
+  assert.ok(!ids([ "Regionale risico's", 'Terrorisme', 'Criminaliteit']).includes('rubriek-bovenaan'));
+
+  // 2. Binnen de vaste laag is afwijken een aandachtspunt, geen fout.
+  assert.ok(ids(['Criminaliteit', 'Terrorisme']).includes('rubrieken-volgorde'));
+  assert.ok(!ids(['Terrorisme', 'Criminaliteit']).includes('rubrieken-volgorde'));
+
+  // 3. Een vrije rubriek hoort onder Wetten en gebruiken \u2014 maar b\u00f3ven Natuurgeweld mag.
+  assert.ok(ids(['Demonstraties', 'Wetten en gebruiken']).includes('rubriek-vrij-te-hoog'));
+  assert.ok(!ids(['Wetten en gebruiken', 'Demonstraties', 'Natuurgeweld'])
+    .includes('rubriek-vrij-te-hoog'),
+  'Demonstraties mag boven Natuurgeweld staan: dat staat meer op zichzelf');
+  // En onderling ligt de volgorde van de vrije rubrieken niet vast.
+  assert.ok(!ids(['Wetten en gebruiken', 'Verkeersongevallen', 'Demonstraties'])
+    .includes('rubriek-vrij-te-hoog'));
+});
+
 test('een naam wordt herkend en niet gemeld', () => {
   // Namen worden overgeslagen: in 226 reisadviezen staan zoveel plaatsnamen, instituten en
   // buitenlandse bronnen dat er geen woordenlijst voor is aan te leggen. De herkenning blijft

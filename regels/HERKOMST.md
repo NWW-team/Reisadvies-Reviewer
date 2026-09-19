@@ -470,6 +470,47 @@ plaatsen waar die zitten. Die staan op de site goed, dus daarmee zou dezelfde to
 verkeerd gespelde postnaam vangen. Nog niet gebouwd: dat vraagt een ophaalronde langs een ander
 deel van de open data.
 
+## De volgorde van de rubrieken, in drie lagen (19 september 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `rubriek-bovenaan` | SJ, blok *Risico dat van toepassing is*; indeling op instructie van de opdrachtgever | fout |
+| `rubrieken-volgorde` | idem | ter overweging |
+| `rubriek-vrij-te-hoog` | idem | ter overweging |
+
+Het sjabloonblok heet *"Risico dat van toepassing is, **in volgorde van relevantie**"*, en dat woord
+relevantie is de kern: de volgorde mág schuiven als een risico in dit land zwaarder weegt. Is
+terrorisme de reden voor kleurcode oranje, dan hoort terrorisme bovenaan. Eén vaste rij van elf
+rubrieken kon dat niet uitdrukken; daarom zijn het er nu drie lagen.
+
+| laag | rubrieken | wat de tool doet |
+|---|---|---|
+| **bovenaan** | Actueel, Regionale risico's | **fout** als het anders is |
+| **vast** | Terrorisme, Oorlog en conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld | *ter overweging* bij een andere volgorde |
+| **vrij** | Demonstraties, Landmijnen, Verkeersongevallen, Willekeurige arrestaties | onderling geen volgorde; wel onder *Wetten en gebruiken* |
+
+**Waarom Natuurgeweld in de vaste laag staat.** De meting zei eerst iets anders: over 226 adviezen
+staat Natuurgeweld gemiddeld op 0,82 (waarbij 1 onderaan is), dus in de praktijk bijna onderaan. Op
+grond daarvan stelde ik voor hem naar de vrije laag te doen. De opdrachtgever koos anders, met een
+reden die de meting niet kent: Natuurgeweld staat in ruim 200 van de 226 adviezen, terwijl
+Landmijnen er 19 heeft. Wat bijna altijd voorkomt hoort een vaste plek te hebben.
+
+**En waarom Demonstraties er dan bóven mag staan.** Natuurgeweld staat onderaan de vaste laag, en de
+ondergrens voor de vrije rubrieken ligt bij *Wetten en gebruiken* — niet bij het einde van de vaste
+laag. Demonstraties sluit logisch aan op Wetten en gebruiken; Natuurgeweld staat meer op zichzelf.
+Zonder die grens gaf de regel 35 meldingen, waarvan 22 over *Demonstraties boven Natuurgeweld*, en
+die zijn juist goed. Met de grens: 23, en die kloppen.
+
+**De bovenste laag is een vangnet.** Gemeten over 226 adviezen: **0 meldingen**. Alle adviezen zetten
+Actueel en Regionale risico's al precies goed. Dat is hoe een harde regel eruit hoort te zien — hij
+bewaakt iets wat niemand mag verschuiven, en gaat daarom nooit af.
+
+| | voor | na |
+|---|---:|---:|
+| `rubrieken-volgorde` | 53 | 22 |
+| `rubriek-vrij-te-hoog` | — | 23 |
+| `rubriek-bovenaan` | — | 0 |
+
 ## Linkteksten: twee dingen rechtgezet (19 september 2026)
 
 **De vrijstelling was te smal.** `isVasteLinktekst` stelde een linktekst alleen vrij als hij

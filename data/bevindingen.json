@@ -569,12 +569,12 @@
     "letop": 6,
     "linkzin": 3,
     "twijfel": 3,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 0,
       "let-op": 6,
       "link-zin": 3,
-      "info": 2,
+      "info": 1,
       "twijfel": 3
     },
     "perRegel": {
@@ -583,7 +583,6 @@
       "h4-kop-variant": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 2,
@@ -629,14 +628,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Terrorisme, Criminaliteit, Wetten en gebruiken, Landmijnen, Demonstraties, Verkeersongevallen, Natuurgeweld"
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Verkeersongevallen\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -984,30 +975,21 @@
     "letop": 3,
     "linkzin": 1,
     "twijfel": 5,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 3,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 5
     },
     "perRegel": {
-      "rubrieken-volgorde": 1,
       "tekst-spatie-leesteken": 1,
       "zin-frequentiewoord": 5,
       "zin-max-woorden": 2,
       "aanhalingstekens": 2
     },
     "bevindingen": [
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
-      },
       {
         "regel": "tekst-spatie-leesteken",
         "ernst": "fout",
@@ -1106,18 +1088,19 @@
     "letop": 3,
     "linkzin": 1,
     "twijfel": 2,
-    "info": 1,
+    "info": 2,
     "perErnst": {
       "fout": 1,
       "let-op": 3,
       "link-zin": 1,
-      "info": 1,
+      "info": 2,
       "twijfel": 2
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 1
@@ -1142,9 +1125,17 @@
         "regel": "rubrieken-volgorde",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
+        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Wetten en gebruiken\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
+      },
+      {
+        "regel": "rubriek-vrij-te-hoog",
+        "ernst": "info",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Demonstraties\" staat boven \"Terrorisme\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-max-woorden",
@@ -1573,7 +1564,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "nederlands-verbuiging",
@@ -1704,7 +1695,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "zin-max-woorden",
@@ -1827,19 +1818,18 @@
     "letop": 7,
     "linkzin": 3,
     "twijfel": 4,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 4,
       "let-op": 7,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 4
     },
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
-      "rubrieken-volgorde": 1,
       "zin-frequentiewoord": 4,
       "zin-max-woorden": 8,
       "zin-lijdende-vorm": 1,
@@ -1870,14 +1860,6 @@
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -2400,12 +2382,12 @@
     "letop": 10,
     "linkzin": 5,
     "twijfel": 3,
-    "info": 3,
+    "info": 4,
     "perErnst": {
       "fout": 0,
       "let-op": 10,
       "link-zin": 5,
-      "info": 3,
+      "info": 4,
       "twijfel": 3
     },
     "perRegel": {
@@ -2414,6 +2396,7 @@
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 3,
@@ -2456,7 +2439,15 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Wetten en gebruiken\".",
         "fragment": "Criminaliteit",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
+      },
+      {
+        "regel": "rubriek-vrij-te-hoog",
+        "ernst": "info",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Verkeersongevallen\" staat boven \"Terrorisme\".",
+        "fragment": "Verkeersongevallen",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "tekst-niet-melden",
@@ -2603,28 +2594,19 @@
     "letop": 0,
     "linkzin": 2,
     "twijfel": 2,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 0,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 2
     },
     "perRegel": {
-      "rubrieken-volgorde": 1,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 2
     },
     "bevindingen": [
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
-      },
       {
         "regel": "zin-frequentiewoord",
         "ernst": "twijfel",
@@ -2684,7 +2666,7 @@
     },
     "perRegel": {
       "nood-contactcenter": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 3,
       "zin-twijfeltaal": 1
@@ -2699,12 +2681,12 @@
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
-        "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Terrorisme\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -2942,12 +2924,12 @@
     "letop": 7,
     "linkzin": 1,
     "twijfel": 0,
-    "info": 1,
+    "info": 2,
     "perErnst": {
       "fout": 3,
       "let-op": 7,
       "link-zin": 1,
-      "info": 1,
+      "info": 2,
       "twijfel": 0
     },
     "perRegel": {
@@ -2956,6 +2938,7 @@
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
       "tekst-plakfout": 1,
       "zin-lijdende-vorm": 1,
@@ -2998,9 +2981,17 @@
         "regel": "rubrieken-volgorde",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Demonstraties\".",
+        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Wetten en gebruiken\".",
         "fragment": "Criminaliteit",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
+      },
+      {
+        "regel": "rubriek-vrij-te-hoog",
+        "ernst": "info",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Demonstraties\" staat boven \"Criminaliteit\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "titel-leestekens",
@@ -4069,7 +4060,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "tekst-onzichtbaar-teken",
@@ -5512,7 +5503,7 @@
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "intro-vaste-tekst": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
       "tekst-cms-rest": 1,
       "woord-onbekend": 5,
@@ -5560,12 +5551,12 @@
         "verwacht": "Reist u naar Congo, Democratische Republiek? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Demonstraties\".",
-        "fragment": "Criminaliteit",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Criminaliteit\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "titel-leestekens",
@@ -5852,7 +5843,7 @@
     },
     "perRegel": {
       "intro-vaste-tekst": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
       "zin-max-woorden": 6,
       "zin-frequentiewoord": 4,
@@ -5868,12 +5859,12 @@
         "verwacht": "Reist u naar Congo, de Republiek? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
-        "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Terrorisme\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "titel-leestekens",
@@ -6063,7 +6054,7 @@
       "doc-woordenaantal": 1,
       "kleur-variant": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
       "postplaats-schrijfwijze": 1,
       "zin-frequentiewoord": 7,
@@ -6100,12 +6091,12 @@
         "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Landmijnen, Wetten en gebruiken, Natuurgeweld, Demonstraties"
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Landmijnen\".",
-        "fragment": "Wetten en gebruiken",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Landmijnen\" staat boven \"Wetten en gebruiken\".",
+        "fragment": "Landmijnen",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "tekst-dubbel-woord",
@@ -8168,19 +8159,18 @@
     "letop": 18,
     "linkzin": 6,
     "twijfel": 7,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 5,
       "let-op": 18,
       "link-zin": 6,
-      "info": 1,
+      "info": 0,
       "twijfel": 7
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-variant": 2,
       "nood-contactcenter": 1,
-      "rubrieken-volgorde": 1,
       "tekst-dubbel-woord": 1,
       "woord-onbekend": 5,
       "zin-max-woorden": 12,
@@ -8224,14 +8214,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "tekst-dubbel-woord",
@@ -8806,7 +8788,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Natuurgeweld\".",
         "fragment": "Criminaliteit",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "woord-onbekend",
@@ -9099,7 +9081,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Wetten en gebruiken\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "woord-onbekend",
@@ -9353,18 +9335,19 @@
     "letop": 7,
     "linkzin": 3,
     "twijfel": 2,
-    "info": 2,
+    "info": 3,
     "perErnst": {
       "fout": 1,
       "let-op": 7,
       "link-zin": 3,
-      "info": 2,
+      "info": 3,
       "twijfel": 2
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 9,
       "zin-frequentiewoord": 2,
       "aanhalingstekens": 1
@@ -9394,9 +9377,17 @@
         "regel": "rubrieken-volgorde",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Demonstraties\" staat na \"Verkeersongevallen\".",
-        "fragment": "Demonstraties",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
+        "fragment": "Terrorisme",
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
+      },
+      {
+        "regel": "rubriek-vrij-te-hoog",
+        "ernst": "info",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Verkeersongevallen\" staat boven \"Terrorisme\".",
+        "fragment": "Verkeersongevallen",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-max-woorden",
@@ -9543,7 +9534,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Natuurgeweld\".",
         "fragment": "Criminaliteit",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "tekst-niet-melden",
@@ -10916,7 +10907,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "woord-onbekend",
@@ -11648,7 +11639,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Wetten en gebruiken\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "zin-max-woorden",
@@ -13106,19 +13097,18 @@
     "letop": 2,
     "linkzin": 1,
     "twijfel": 3,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 3,
       "let-op": 2,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 3
     },
     "perRegel": {
       "actueel-max-woorden": 1,
       "vaste-tekst-land-leeg": 1,
       "reisverzekering-vaste-tekst": 1,
-      "rubrieken-volgorde": 1,
       "tekst-spatie-leesteken": 1,
       "zin-max-woorden": 2,
       "zin-twijfeltaal": 1,
@@ -13149,14 +13139,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die extra medische kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "tekst-spatie-leesteken",
@@ -13238,7 +13220,7 @@
       "h3-alleen-bij-uitzondering": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 13,
       "zin-lijdende-vorm": 10,
       "zin-twijfeltaal": 2,
@@ -13281,12 +13263,12 @@
         "notitie": "De rubrieken: Actueel, Terrorisme, Demonstraties, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen"
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Demonstraties\".",
-        "fragment": "Criminaliteit",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Criminaliteit\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-max-woorden",
@@ -13544,7 +13526,7 @@
       "kleur-vervolg-bullet-kort": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "woord-onbekend": 2,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 10,
@@ -13595,12 +13577,12 @@
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Demonstraties, Wetten en gebruiken, Natuurgeweld, Landmijnen"
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Demonstraties\".",
-        "fragment": "Wetten en gebruiken",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Wetten en gebruiken\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "woord-onbekend",
@@ -15044,12 +15026,12 @@
     "letop": 21,
     "linkzin": 0,
     "twijfel": 8,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 2,
       "let-op": 21,
       "link-zin": 0,
-      "info": 2,
+      "info": 1,
       "twijfel": 8
     },
     "perRegel": {
@@ -15058,7 +15040,6 @@
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 5,
@@ -15109,14 +15090,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Landmijnen, Verkeersongevallen"
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Landmijnen\" staat na \"Demonstraties\".",
-        "fragment": "Landmijnen",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -15727,7 +15700,7 @@
     },
     "perRegel": {
       "kleur-variant": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "tekst-onzichtbaar-teken": 1,
       "zin-max-woorden": 5,
       "zin-lijdende-vorm": 2,
@@ -15744,12 +15717,12 @@
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Landmijnen\".",
-        "fragment": "Wetten en gebruiken",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Landmijnen\" staat boven \"Wetten en gebruiken\".",
+        "fragment": "Landmijnen",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "tekst-onzichtbaar-teken",
@@ -16167,7 +16140,7 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "bagage-heen": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 2,
@@ -16195,12 +16168,12 @@
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Libanon."
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Demonstraties\".",
-        "fragment": "Wetten en gebruiken",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Wetten en gebruiken\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-max-woorden",
@@ -16426,12 +16399,12 @@
     "letop": 3,
     "linkzin": 2,
     "twijfel": 7,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 4,
       "let-op": 3,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 7
     },
     "perRegel": {
@@ -16440,7 +16413,6 @@
       "h3-niet-melden": 1,
       "nood-contactcenter": 1,
       "nood-lokale-hulpdiensten": 1,
-      "rubrieken-volgorde": 1,
       "zin-frequentiewoord": 6,
       "zin-max-woorden": 3,
       "zin-lijdende-vorm": 1,
@@ -16486,14 +16458,6 @@
         "boodschap": "De aanhef boven de alarmnummers wijkt af van de vaste tekst.",
         "fragment": "Er zijn geen betrouwbare telefoonnummers waarop Libische hulpdiensten bereikbaar zijn.",
         "verwacht": "Heeft u direct hulp nodig in Libië? Neem contact op met de lokale hulpdiensten:"
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Landmijnen\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -16680,7 +16644,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Wetten en gebruiken\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "zin-max-woorden",
@@ -16729,7 +16693,7 @@
       "h4-niet-melden": 1,
       "bagage-heen": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 13,
       "zin-frequentiewoord": 3,
@@ -16780,12 +16744,12 @@
         "notitie": "De rubrieken: Actueel, Terrorisme, Criminaliteit, Verkeersongevallen, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties"
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Verkeersongevallen\".",
-        "fragment": "Wetten en gebruiken",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Verkeersongevallen\" staat boven \"Wetten en gebruiken\".",
+        "fragment": "Verkeersongevallen",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "tekst-niet-melden",
@@ -17264,7 +17228,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Wetten en gebruiken\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "zin-max-woorden",
@@ -17325,12 +17289,12 @@
     "letop": 12,
     "linkzin": 5,
     "twijfel": 2,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 2,
       "let-op": 12,
       "link-zin": 5,
-      "info": 2,
+      "info": 1,
       "twijfel": 2
     },
     "perRegel": {
@@ -17340,7 +17304,6 @@
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
       "woord-onbekend": 2,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 2,
@@ -17392,14 +17355,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Landmijnen"
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Landmijnen\" staat na \"Demonstraties\".",
-        "fragment": "Landmijnen",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "woord-onbekend",
@@ -18005,12 +17960,12 @@
     "letop": 23,
     "linkzin": 3,
     "twijfel": 3,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 4,
       "let-op": 23,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 3
     },
     "perRegel": {
@@ -18018,7 +17973,6 @@
       "kleur-variant": 1,
       "kleur-formulering-verboden": 1,
       "nood-contactcenter": 1,
-      "rubrieken-volgorde": 1,
       "woord-onbekend": 3,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 3,
@@ -18062,14 +18016,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "woord-onbekend",
@@ -19878,18 +19824,18 @@
       "twijfel": 2
     },
     "perRegel": {
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 5
     },
     "bevindingen": [
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
-        "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Terrorisme\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -20539,19 +20485,18 @@
     "letop": 12,
     "linkzin": 3,
     "twijfel": 4,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 1,
       "let-op": 12,
       "link-zin": 3,
-      "info": 3,
+      "info": 2,
       "twijfel": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
-      "rubrieken-volgorde": 1,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 3,
@@ -20584,14 +20529,6 @@
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Nicaragua."
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Verkeersongevallen\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-max-woorden",
@@ -20853,7 +20790,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Natuurgeweld\".",
         "fragment": "Wetten en gebruiken",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "zin-max-woorden",
@@ -21173,7 +21110,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "woord-onbekend",
@@ -21967,12 +21904,12 @@
     "letop": 24,
     "linkzin": 5,
     "twijfel": 3,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 2,
       "let-op": 24,
       "link-zin": 5,
-      "info": 3,
+      "info": 2,
       "twijfel": 3
     },
     "perRegel": {
@@ -21983,7 +21920,6 @@
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
       "woord-onbekend": 6,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 4,
@@ -22048,14 +21984,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Demonstraties, Natuurgeweld, Verkeersongevallen"
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Demonstraties\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "woord-onbekend",
@@ -22902,12 +22830,12 @@
     "letop": 13,
     "linkzin": 5,
     "twijfel": 9,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 3,
       "let-op": 13,
       "link-zin": 5,
-      "info": 2,
+      "info": 1,
       "twijfel": 9
     },
     "perRegel": {
@@ -22918,7 +22846,6 @@
       "h3-vaste-kop": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
       "woord-onbekend": 4,
       "zin-frequentiewoord": 8,
       "zin-max-woorden": 8,
@@ -22984,14 +22911,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 8 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen, Demonstraties, Explosieven"
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Demonstraties\" staat na \"Verkeersongevallen\".",
-        "fragment": "Demonstraties",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "woord-onbekend",
@@ -23670,12 +23589,12 @@
     "letop": 10,
     "linkzin": 6,
     "twijfel": 2,
-    "info": 1,
+    "info": 2,
     "perErnst": {
       "fout": 5,
       "let-op": 10,
       "link-zin": 6,
-      "info": 1,
+      "info": 2,
       "twijfel": 2
     },
     "perRegel": {
@@ -23685,6 +23604,7 @@
       "intro-vaste-tekst": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
@@ -23751,9 +23671,17 @@
         "regel": "rubrieken-volgorde",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
-        "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Wetten en gebruiken\".",
+        "fragment": "Criminaliteit",
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
+      },
+      {
+        "regel": "rubriek-vrij-te-hoog",
+        "ernst": "info",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Demonstraties\" staat boven \"Terrorisme\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-max-woorden",
@@ -24338,17 +24266,16 @@
     "letop": 5,
     "linkzin": 3,
     "twijfel": 4,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 5,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 4
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "rubrieken-volgorde": 1,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 4,
@@ -24363,14 +24290,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Natuurgeweld\" staat na \"Landmijnen\".",
-        "fragment": "Natuurgeweld",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -25023,12 +24942,12 @@
     "letop": 11,
     "linkzin": 1,
     "twijfel": 1,
-    "info": 2,
+    "info": 3,
     "perErnst": {
       "fout": 1,
       "let-op": 11,
       "link-zin": 1,
-      "info": 2,
+      "info": 3,
       "twijfel": 1
     },
     "perRegel": {
@@ -25038,6 +24957,7 @@
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "tekst-onzichtbaar-teken": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 6,
@@ -25085,9 +25005,17 @@
         "regel": "rubrieken-volgorde",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
+        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
+      },
+      {
+        "regel": "rubriek-vrij-te-hoog",
+        "ernst": "info",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Demonstraties\" staat boven \"Terrorisme\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "tekst-onzichtbaar-teken",
@@ -26350,7 +26278,7 @@
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 2
@@ -26365,12 +26293,12 @@
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
-        "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Terrorisme\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -26445,12 +26373,12 @@
     "letop": 8,
     "linkzin": 1,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 2,
       "let-op": 8,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
@@ -26458,7 +26386,6 @@
       "h4-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
@@ -26499,14 +26426,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Terrorisme, Criminaliteit, Wetten en gebruiken, Demonstraties, Landmijnen, Natuurgeweld"
-      },
-      {
-        "regel": "rubrieken-volgorde",
-        "ernst": "info",
-        "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Landmijnen\" staat na \"Demonstraties\".",
-        "fragment": "Landmijnen",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
       },
       {
         "regel": "woord-onbekend",
@@ -27404,7 +27323,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Wetten en gebruiken\".",
         "fragment": "Criminaliteit",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "zin-max-woorden",
@@ -27621,7 +27540,7 @@
     "perRegel": {
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "nederlands-verbuiging": 1,
       "woord-onbekend": 2,
       "tekst-niet-melden": 1,
@@ -27647,12 +27566,12 @@
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Demonstraties\".",
-        "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Terrorisme\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "nederlands-verbuiging",
@@ -27897,7 +27816,7 @@
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
       "woord-onbekend": 2,
       "zin-max-woorden": 19,
@@ -27959,12 +27878,12 @@
         "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Verkeersongevallen, Wetten en gebruiken, Natuurgeweld, Demonstraties"
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Verkeersongevallen\".",
-        "fragment": "Wetten en gebruiken",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Verkeersongevallen\" staat boven \"Wetten en gebruiken\".",
+        "fragment": "Verkeersongevallen",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "tekst-dubbel-woord",
@@ -28638,7 +28557,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Criminaliteit\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -30067,17 +29986,18 @@
     "letop": 2,
     "linkzin": 0,
     "twijfel": 1,
-    "info": 1,
+    "info": 2,
     "perErnst": {
       "fout": 2,
       "let-op": 2,
       "link-zin": 0,
-      "info": 1,
+      "info": 2,
       "twijfel": 1
     },
     "perRegel": {
       "actueel-max-woorden": 1,
       "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "tekst-spatie-leesteken": 1,
       "zin-max-woorden": 2,
       "zin-frequentiewoord": 1
@@ -30094,9 +30014,17 @@
         "regel": "rubrieken-volgorde",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Landmijnen\".",
-        "fragment": "Wetten en gebruiken",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Wetten en gebruiken\".",
+        "fragment": "Criminaliteit",
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
+      },
+      {
+        "regel": "rubriek-vrij-te-hoog",
+        "ernst": "info",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Landmijnen\" staat boven \"Wetten en gebruiken\".",
+        "fragment": "Landmijnen",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "tekst-spatie-leesteken",
@@ -30225,7 +30153,7 @@
       "kleur-aanduiding": 1,
       "h4-niet-melden": 1,
       "intro-vaste-tekst": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "woord-onbekend": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 9,
@@ -30271,12 +30199,12 @@
         "verwacht": "Reist u naar Verenigde Staten van Amerika? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Wetten en gebruiken\" staat na \"Demonstraties\".",
-        "fragment": "Wetten en gebruiken",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Wetten en gebruiken\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "woord-onbekend",
@@ -30632,7 +30560,7 @@
       "h3-niet-melden": 1,
       "nood-contactcenter": 1,
       "kinderen-documenten": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 3,
@@ -30693,12 +30621,12 @@
         "verwacht": "Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee."
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Demonstraties\".",
-        "fragment": "Criminaliteit",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Demonstraties\" staat boven \"Criminaliteit\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-max-woorden",
@@ -31708,7 +31636,7 @@
       "kleur-variant": 1,
       "medicijnen-voldoende": 1,
       "rubrieken-max": 1,
-      "rubrieken-volgorde": 1,
+      "rubriek-vrij-te-hoog": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 3,
@@ -31751,12 +31679,12 @@
         "notitie": "De rubrieken: Actueel, Terrorisme, Willekeurige arrestaties, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen"
       },
       {
-        "regel": "rubrieken-volgorde",
+        "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
         "bron": "SJ, blok Risico dat van toepassing is",
-        "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Willekeurige arrestaties\".",
-        "fragment": "Criminaliteit",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "boodschap": "\"Willekeurige arrestaties\" staat boven \"Criminaliteit\".",
+        "fragment": "Willekeurige arrestaties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "woord-onbekend",
@@ -32008,7 +31936,7 @@
         "bron": "SJ, blok Risico dat van toepassing is",
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
-        "notitie": "Afwijken kan goed zijn: staat er een risico op de voorgrond, dan hoort dat bovenaan. De standaardvolgorde van relevantie is: Actueel > Regionale risico’s > Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld > Landmijnen > Demonstraties > Verkeersongevallen > Willekeurige arrestaties."
+        "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
         "regel": "woord-onbekend",

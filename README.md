@@ -307,6 +307,22 @@ toe — de toets vergelijkt op kleine letters.
 Dit staat los van de knoppen *Eens / Oneens / Onterecht* onder een bevinding. Die leggen een oordeel
 vast over dít advies; de uitzonderingenlijst verandert de regel voor alle adviezen tegelijk.
 
+## De volgorde van de rubrieken
+
+Het sjabloon zet de rubrieken onder veiligheidsrisico's *"in volgorde van relevantie"*, en dat woord
+doet er toe: de volgorde mág schuiven als een risico in dit land zwaarder weegt. Daarom drie lagen
+in plaats van één vaste rij:
+
+| laag | rubrieken | wat de tool doet |
+|---|---|---|
+| **bovenaan** | Actueel, Regionale risico's | **fout** als het anders is (0 meldingen: dit gaat altijd goed) |
+| **vast** | Terrorisme, Oorlog en conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld | *ter overweging* bij een andere volgorde (22) |
+| **vrij** | Demonstraties, Landmijnen, Verkeersongevallen, Willekeurige arrestaties | onderling niets; wel onder *Wetten en gebruiken* (23) |
+
+Demonstraties mág boven Natuurgeweld staan: die sluit aan op Wetten en gebruiken, terwijl
+Natuurgeweld meer op zichzelf staat. De lagen staan in `regels/sjabloon.json`, dus verschuiven is
+data en geen code.
+
 ## Tussenkoppen: eenduidig, niet uniform
 
 Onder *In geval van nood* en *Bagageregels* schrijft het sjabloon de tussenkoppen voor, maar niet

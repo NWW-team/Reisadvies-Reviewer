@@ -779,7 +779,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -4218,7 +4218,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
         "verwacht": "De kleurcode van het reisadvies voor Botswana is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
@@ -5232,7 +5232,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -6257,7 +6257,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
         "verwacht": "De kleurcode van het reisadvies voor Comoren is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
@@ -8085,7 +8085,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -9980,7 +9980,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -13615,7 +13615,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -13623,7 +13623,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -14883,7 +14883,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -17125,7 +17125,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -17410,7 +17410,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -21062,7 +21062,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -21687,7 +21687,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -23357,7 +23357,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -23893,7 +23893,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -24425,7 +24425,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -24694,7 +24694,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -25663,7 +25663,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
         "verwacht": "De kleurcode van het reisadvies voor El Salvador is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
@@ -27101,7 +27101,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
@@ -27109,7 +27109,7 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er.",
+        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },

@@ -774,3 +774,40 @@ Zuid-Afrika houdt de oude melding, en dat is het bewijs dat de splitsing werkt: 
 kleurcode **voor** het reisadvies*, en dat verschil zit niet in de naam maar in de zin.
 
 Stand na deze twee: `kleur-aanduiding` 32 → 2, totaal 3032 → 2982, 149 tests groen.
+
+## "Erheen" of "hierheen": geen keuze maar een telling (19 september 2026)
+
+Er lag een vraag bij Martijn over de eerste kleurbullet van een advies met meerdere kleurcodes. Die
+vraag was verkeerd gesteld: het is geen kwestie van smaak, en de telling geeft antwoord.
+
+Het sjabloon zet bij geel en groen twee bijna gelijke zinnen tegenover elkaar. Geldt de kleur voor
+het hele land, dan *"U kunt **erheen** reizen"*. Geldt hij voor een deel, dan *"U kunt **hierheen**
+reizen"*. Eén woord verschil.
+
+**Over 226 adviezen, 203 keer geteld:**
+
+| | erheen | hierheen |
+|---|---:|---:|
+| de kleur geldt voor het hele land | **136** | 3 |
+| de kleur geldt voor een deel | 16 | **48** |
+
+184 van de 203 volgen het sjabloon. Het onderscheid is dus echt en wordt breed aangehouden; de 19
+die het anders doen hebben één woord verkeerd. Er valt hier niets te kiezen.
+
+**Wat wél moest veranderen, is de melding.** Die zei *"Dit advies heeft meerdere kleurcodes, dus bij
+geel hoort de verkorte variant. Nu staat de volledige uitleg er."* Feitelijk juist, maar wie het
+moet herstellen ziet twee zinnen die identiek lijken. Scheelt het hoogstens twee woorden, dan noemt
+de melding ze nu:
+
+> Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de
+> volledige uitleg er. **Er staat "erheen", er hoort "hierheen" te staan.**
+
+Bij rood loopt de hele zin anders (*"reis er niet heen"* tegen *"reis niet hierheen"*, en de
+volledige variant heeft er een zin over de ambassade bij). Dan geeft de vergelijking niets terug en
+blijft de melding zoals hij was — een half diagnose-zinnetje is erger dan geen.
+
+Het aantal bevindingen verandert hier niet van: 2982 blijft 2982. Dit is alleen de melding die zegt
+wat er aan de hand is.
+
+**En passant gevonden:** Marokko schrijft *"Vor de rest van Marokko geldt kleurcode geel"*. Die
+typefout stond al in de tool, via `woord-onbekend`.

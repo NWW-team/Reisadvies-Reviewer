@@ -948,6 +948,23 @@ function instructieVan(vasteTekst) {
   return zinnen.slice(1).join(' ').replace(/\{land\}|\{gebieden\}/g, '').trim();
 }
 
+/**
+ * Het verschil tussen twee vaste instructies, als dat een kwestie van losse woorden is.
+ *
+ * Bij geel en groen scheelt de volledige variant maar een woord van de verkorte -- "erheen" tegen
+ * "hierheen" -- en dan is "de volledige uitleg staat er" een raadsel voor wie het moet herstellen.
+ * Staan er evenveel woorden en verschillen er hoogstens twee, dan noemen we ze. Loopt het verder
+ * uiteen (rood, waar de hele zin anders loopt), dan geeft dit niets terug en blijft de melding
+ * zoals hij was.
+ */
+function woordverschil(er, hoort) {
+  const a = (er || '').split(' ');
+  const c = (hoort || '').split(' ');
+  if (a.length !== c.length) return null;
+  const anders = a.map((w, i) => [w, c[i]]).filter(([x, y]) => x !== y);
+  return anders.length && anders.length <= 2 ? anders : null;
+}
+
 function bevinding(regel, ernst, bron, boodschap, extra = {}) {
   return { regel, ernst, bron, boodschap, ...extra };
 }
@@ -1335,11 +1352,16 @@ function maakToetser(data) {
       const andereTekst = hoortVolledig ? k.in_het_kort_deels : k.in_het_kort_volledig;
       if (instructieVan(verwachteTekst) && !genorm.includes(instructieVan(verwachteTekst))) {
         const staatDeAndere = instructieVan(andereTekst) && genorm.includes(instructieVan(andereTekst));
+        // Scheelt het maar een woord of twee, noem ze dan: dat is wat er hersteld moet worden.
+        const verschil = staatDeAndere
+          ? woordverschil(instructieVan(andereTekst), instructieVan(verwachteTekst)) : null;
+        const preciezer = verschil
+          ? ' ' + verschil.map(([x, y]) => `Er staat "${x}", er hoort "${y}" te staan.`).join(' ') : '';
         b.push(bevinding('kleur-variant', ERNST.fout, 'MX, tab Kleurcode-teksten',
           staatDeAndere
             ? (hoortVolledig
-                ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.`
-                : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.`)
+                ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.${preciezer}`
+                : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.${preciezer}`)
             : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
           { verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
               // Alleen de gebieden zelf: het sjabloon heeft "Voor de gebieden {gebieden}", dus

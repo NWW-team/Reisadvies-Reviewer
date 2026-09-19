@@ -790,3 +790,27 @@ test('de kleur van een ander land telt niet als kleurcode van dit advies', () =>
   assert.ok(!ids.includes('kleur-aanduiding'), 'rood is de kleur van de buurman, niet van dit advies');
   assert.ok(!ids.includes('kleur-vaste-tekst'));
 });
+
+test('kleurvariant: scheelt het een woord, dan noemt de melding dat woord', () => {
+  // Bij geel is het verschil tussen de volledige en de verkorte uitleg "erheen" / "hierheen".
+  const b = bevindingenVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
+    + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er '
+    + 'zijn bijzondere veiligheidsrisico&#39;s.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['oranje', 'geel'] }).filter((x) => x.regel === 'kleur-variant');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /Er staat "erheen", er hoort "hierheen" te staan\./);
+});
+
+test('kleurvariant: bij rood loopt de zin te ver uiteen voor een woordverschil', () => {
+  // Daar blijft de melding zoals hij was: geen half diagnose-zinnetje erbij.
+  const b = bevindingenVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies voor Tsjechië is rood. Wat uw situatie ook is: reis niet '
+    + 'hierheen. Het is er te gevaarlijk.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['rood'] }).filter((x) => x.regel === 'kleur-variant');
+  assert.equal(b.length, 1);
+  assert.ok(!/Er staat "/.test(b[0].boodschap));
+});

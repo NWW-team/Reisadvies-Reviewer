@@ -570,12 +570,12 @@
     "letop": 5,
     "linkzin": 3,
     "twijfel": 2,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 0,
       "let-op": 5,
       "link-zin": 3,
-      "info": 2,
+      "info": 1,
       "twijfel": 2
     },
     "perRegel": {
@@ -583,7 +583,6 @@
       "h4-natuurrisico": 1,
       "h4-kop-variant": 1,
       "reisverzekering-vaste-tekst": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 3,
@@ -622,14 +621,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die extra medische kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor een reis naar Albanië.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Albanië."
       },
       {
         "regel": "rubrieken-max",
@@ -1074,17 +1065,16 @@
     "letop": 2,
     "linkzin": 1,
     "twijfel": 1,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 1,
       "let-op": 2,
       "link-zin": 1,
-      "info": 3,
+      "info": 2,
       "twijfel": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -1099,14 +1089,6 @@
         "boodschap": "\"Fotograferen\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Fotograferen",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en (eventueel) een visum nodig voor een reis naar Armenië.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Armenië."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -1172,17 +1154,16 @@
     "letop": 5,
     "linkzin": 1,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 5,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "h2-vast": 1,
-      "kinderen-paspoort": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 4,
       "link-tekstlengte": 1
@@ -1194,14 +1175,6 @@
         "bron": "MX, tab Uitleg",
         "boodschap": "\"Wat kunt u doen in een noodsituatie?\" is geen vaste H2. Vast zijn: In het kort / Welke veiligheidsrisico's zijn er in Amerikaans-Samoa? / Wat kan ik doen in een noodsituatie? / Hoe bereid ik mijn reis naar Amerikaans-Samoa voor? / Ook nuttig.",
         "fragment": "Wat kunt u doen in een noodsituatie?"
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Amerikaans-Samoa.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Amerikaans-Samoa."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -1442,28 +1415,19 @@
     "letop": 1,
     "linkzin": 2,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 1,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "tekst-spatie-leesteken": 1,
       "zin-max-woorden": 3
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Antigua en Barbuda.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Antigua en Barbuda."
-      },
       {
         "regel": "tekst-spatie-leesteken",
         "ernst": "fout",
@@ -2761,17 +2725,16 @@
     "letop": 4,
     "linkzin": 2,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 4,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 4,
       "link-tekstlengte": 1
@@ -2784,14 +2747,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar de Bahama’s.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Bahama's."
       },
       {
         "regel": "woord-onbekend",
@@ -2859,17 +2814,16 @@
     "letop": 2,
     "linkzin": 0,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 2,
       "link-zin": 0,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 2
     },
     "bevindingen": [
@@ -2880,14 +2834,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart, en eventueel een visum, nodig voor een reis naar Bosnië en Herzegovina.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Bosnië en Herzegovina."
       },
       {
         "regel": "zin-max-woorden",
@@ -2923,19 +2869,18 @@
     "letop": 7,
     "linkzin": 1,
     "twijfel": 0,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 3,
       "let-op": 7,
       "link-zin": 1,
-      "info": 3,
+      "info": 2,
       "twijfel": 0
     },
     "perRegel": {
       "kleur-variant": 1,
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -2970,14 +2915,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die extra medische kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Belarus.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Belarus (Wit-Rusland)."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -3075,28 +3012,19 @@
     "letop": 2,
     "linkzin": 3,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 2,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "tekst-spatie-leesteken": 1,
       "zin-max-woorden": 5
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Belize.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Belize."
-      },
       {
         "regel": "tekst-spatie-leesteken",
         "ernst": "fout",
@@ -3165,19 +3093,18 @@
     "letop": 20,
     "linkzin": 3,
     "twijfel": 7,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 2,
       "let-op": 20,
       "link-zin": 3,
-      "info": 2,
+      "info": 1,
       "twijfel": 7
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
       "zin-frequentiewoord": 7,
@@ -3214,14 +3141,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Bolivia.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Bolivia."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -3775,18 +3694,17 @@
     "letop": 8,
     "linkzin": 2,
     "twijfel": 10,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 1,
       "let-op": 8,
       "link-zin": 2,
-      "info": 2,
+      "info": 1,
       "twijfel": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 2,
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 4,
@@ -3813,14 +3731,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Brazilië.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Brazilië."
       },
       {
         "regel": "woord-onbekend",
@@ -4004,28 +3914,19 @@
     "letop": 1,
     "linkzin": 1,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 1,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 2
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Barbados.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Barbados."
-      },
       {
         "regel": "zin-frequentiewoord",
         "ernst": "twijfel",
@@ -4067,30 +3968,21 @@
     "letop": 3,
     "linkzin": 1,
     "twijfel": 0,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 0,
       "let-op": 3,
       "link-zin": 1,
-      "info": 2,
+      "info": 1,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
       "tekst-onzichtbaar-teken": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 2
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Brunei Darussalam.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Brunei Darussalam."
-      },
       {
         "regel": "rubrieken-volgorde",
         "ernst": "info",
@@ -4900,12 +4792,12 @@
     "letop": 29,
     "linkzin": 5,
     "twijfel": 4,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 3,
       "let-op": 29,
       "link-zin": 5,
-      "info": 2,
+      "info": 1,
       "twijfel": 4
     },
     "perRegel": {
@@ -4913,7 +4805,6 @@
       "actueel-max-woorden": 1,
       "h3-niet-melden": 1,
       "bagage-heen": 1,
-      "kinderen-paspoort": 1,
       "tekst-onzichtbaar-teken": 1,
       "zin-max-woorden": 25,
       "zin-lijdende-vorm": 6,
@@ -4957,14 +4848,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Lees wat u mag meenemen naar China op de website van de Chinese overheid (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van China."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar China.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar China."
       },
       {
         "regel": "tekst-onzichtbaar-teken",
@@ -5992,27 +5875,18 @@
     "letop": 0,
     "linkzin": 2,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 0,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 2
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar de Cookeilanden.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Cookeilanden."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
@@ -6048,18 +5922,17 @@
     "letop": 13,
     "linkzin": 1,
     "twijfel": 8,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 4,
       "let-op": 13,
       "link-zin": 1,
-      "info": 2,
+      "info": 1,
       "twijfel": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-variant": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
@@ -6090,14 +5963,6 @@
         "fragment": "Kleurcode oranje geldt voor verschillende gebieden die grenzen aan de regio’s met kleurcode rood en gebieden in het zuidoosten van Colombia. Reis alleen hierheen als het noodzakelijk is.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Colombia.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Colombia."
       },
       {
         "regel": "rubrieken-max",
@@ -6417,29 +6282,20 @@
     "letop": 3,
     "linkzin": 2,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 3,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "woord-onbekend": 2,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Kaapverdië.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Kaapverdië."
-      },
       {
         "regel": "woord-onbekend",
         "ernst": "let-op",
@@ -7071,18 +6927,17 @@
     "letop": 2,
     "linkzin": 3,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 2,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "h4-kop-variant": 1,
       "nood-contactcenter": 1,
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 4
     },
     "bevindingen": [
@@ -7102,14 +6957,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar de Kaaimaneilanden.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Kaaimaneilanden."
       },
       {
         "regel": "zin-max-woorden",
@@ -9326,18 +9173,17 @@
     "letop": 7,
     "linkzin": 3,
     "twijfel": 2,
-    "info": 4,
+    "info": 3,
     "perErnst": {
       "fout": 1,
       "let-op": 7,
       "link-zin": 3,
-      "info": 4,
+      "info": 3,
       "twijfel": 2
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 9,
@@ -9364,14 +9210,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Fiji.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Fiji."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -10605,17 +10443,16 @@
     "letop": 9,
     "linkzin": 3,
     "twijfel": 2,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 0,
       "let-op": 9,
       "link-zin": 3,
-      "info": 2,
+      "info": 1,
       "twijfel": 2
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
-      "kinderen-paspoort": 1,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 4,
       "zin-max-woorden": 6,
@@ -10630,14 +10467,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Gambia.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Gambia."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -11023,28 +10852,19 @@
     "letop": 3,
     "linkzin": 2,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 3,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 4
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Grenada.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Grenada."
-      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -11576,12 +11396,12 @@
     "letop": 3,
     "linkzin": 3,
     "twijfel": 0,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 2,
       "let-op": 3,
       "link-zin": 3,
-      "info": 3,
+      "info": 2,
       "twijfel": 0
     },
     "perRegel": {
@@ -11589,7 +11409,6 @@
       "nood-contactcenter": 1,
       "reisverzekering-vaste-tekst": 1,
       "bagage-heen": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
       "zin-max-woorden": 4,
       "zin-lijdende-vorm": 1
@@ -11626,14 +11445,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Lees wat u mag meenemen naar Hongkong SAR op de website van de overheid van Hongkong SAR (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Hongkong SAR."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Hongkong SAR.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Hongkong SAR."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -11701,30 +11512,21 @@
     "letop": 10,
     "linkzin": 3,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 10,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "woord-onbekend": 1,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 9,
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Honduras.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Honduras."
-      },
       {
         "regel": "woord-onbekend",
         "ernst": "let-op",
@@ -11946,16 +11748,15 @@
     "letop": 3,
     "linkzin": 3,
     "twijfel": 3,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 0,
       "let-op": 3,
       "link-zin": 3,
-      "info": 3,
+      "info": 2,
       "twijfel": 3
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 1,
@@ -11963,14 +11764,6 @@
       "getallen-cijfers": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Haïti.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Haïti."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -14236,29 +14029,20 @@
     "letop": 2,
     "linkzin": 1,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 2,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-twijfeltaal": 1,
       "zin-max-woorden": 2,
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Jamaica.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Jamaica."
-      },
       {
         "regel": "zin-twijfeltaal",
         "ernst": "twijfel",
@@ -14983,17 +14767,16 @@
     "letop": 0,
     "linkzin": 2,
     "twijfel": 2,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 0,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 2
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 2,
       "zin-frequentiewoord": 2
     },
@@ -15005,14 +14788,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Kirgizië.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Kirgizië."
       },
       {
         "regel": "zin-max-woorden",
@@ -15347,17 +15122,16 @@
     "letop": 5,
     "linkzin": 3,
     "twijfel": 2,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 0,
       "let-op": 5,
       "link-zin": 3,
-      "info": 2,
+      "info": 1,
       "twijfel": 2
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 1,
       "zin-lijdende-vorm": 1,
       "zin-frequentiewoord": 2,
@@ -15371,14 +15145,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Kiribati.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Kiribati."
       },
       {
         "regel": "woord-onbekend",
@@ -15550,18 +15316,17 @@
     "letop": 12,
     "linkzin": 3,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 12,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "kleur-variant": 1,
       "reisverzekering-vaste-tekst": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 2,
       "zin-lijdende-vorm": 3,
@@ -15585,14 +15350,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Zuid-Korea.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Zuid-Korea."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -16994,28 +16751,19 @@
     "letop": 1,
     "linkzin": 1,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 1,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 2,
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Lesotho.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Lesotho."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -17256,18 +17004,17 @@
     "letop": 3,
     "linkzin": 2,
     "twijfel": 0,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 2,
       "let-op": 3,
       "link-zin": 2,
-      "info": 2,
+      "info": 1,
       "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "nood-contactcenter": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
       "zin-max-woorden": 4,
       "zin-lijdende-vorm": 1
@@ -17288,14 +17035,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Macau SAR.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Macau SAR."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -17364,12 +17103,12 @@
     "letop": 13,
     "linkzin": 5,
     "twijfel": 2,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 2,
       "let-op": 13,
       "link-zin": 5,
-      "info": 2,
+      "info": 1,
       "twijfel": 2
     },
     "perRegel": {
@@ -17378,7 +17117,6 @@
       "kleur-vervolg-bullet-kort": 1,
       "h4-niet-melden": 1,
       "bagage-heen": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 2,
@@ -17427,14 +17165,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Check wat u mee mag nemen naar Marokko op de website van de Marokkaanse douane (informatie in het Frans).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Marokko."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Marokko.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Marokko."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -17674,18 +17404,17 @@
     "letop": 2,
     "linkzin": 0,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 3,
       "let-op": 2,
       "link-zin": 0,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "postplaats-schrijfwijze": 1,
       "zin-max-woorden": 1,
@@ -17708,14 +17437,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Moldavië.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Moldavië."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -18040,12 +17761,12 @@
     "letop": 23,
     "linkzin": 3,
     "twijfel": 3,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 4,
       "let-op": 23,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 3
     },
     "perRegel": {
@@ -18053,7 +17774,6 @@
       "kleur-variant": 1,
       "kleur-formulering-verboden": 1,
       "nood-contactcenter": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 3,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 3,
@@ -18098,14 +17818,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Mexico.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Mexico."
       },
       {
         "regel": "woord-onbekend",
@@ -18357,19 +18069,18 @@
     "letop": 3,
     "linkzin": 2,
     "twijfel": 1,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 3,
       "let-op": 3,
       "link-zin": 2,
-      "info": 2,
+      "info": 1,
       "twijfel": 1
     },
     "perRegel": {
       "h3-vaste-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-terug": 1,
-      "kinderen-paspoort": 1,
       "tekst-spatie-leesteken": 2,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 3,
@@ -18399,14 +18110,6 @@
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
         "fragment": "Bekijk wat u vanuit de Marshalleilanden mee terug nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?",
         "verwacht": "Bekijk wat u vanuit Marshalleilanden mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar de Marshalleilanden .",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Marshalleilanden."
       },
       {
         "regel": "tekst-spatie-leesteken",
@@ -19119,17 +18822,16 @@
     "letop": 5,
     "linkzin": 2,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 5,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 5,
       "zin-lijdende-vorm": 2
     },
@@ -19141,14 +18843,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Mongolië.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Mongolië."
       },
       {
         "regel": "zin-max-woorden",
@@ -19225,18 +18919,17 @@
     "letop": 14,
     "linkzin": 1,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 3,
       "let-op": 14,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 9,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
@@ -19260,14 +18953,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Mozambique.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Mozambique."
       },
       {
         "regel": "woord-onbekend",
@@ -20004,17 +19689,16 @@
     "letop": 5,
     "linkzin": 2,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 5,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 2,
       "zin-max-woorden": 4,
@@ -20028,14 +19712,6 @@
         "boodschap": "\"Luchtkwaliteit\" gaat over smog, en dat hoort niet in een reisadvies.",
         "fragment": "Luchtkwaliteit",
         "notitie": "Evt. alleen indien er ernstig gevaar is voor iedereen. Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Maleisië.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Maleisië."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -20795,28 +20471,19 @@
     "letop": 0,
     "linkzin": 1,
     "twijfel": 0,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 0,
       "let-op": 0,
       "link-zin": 1,
-      "info": 2,
+      "info": 1,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "kinderen-documenten": 1,
       "zin-max-woorden": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Niue.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Niue."
-      },
       {
         "regel": "kinderen-documenten",
         "ernst": "info",
@@ -21366,18 +21033,17 @@
     "letop": 9,
     "linkzin": 1,
     "twijfel": 2,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 2,
       "let-op": 9,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 2
     },
     "perRegel": {
       "kleur-variant": 1,
       "h3-vaste-kop": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "tekst-onzichtbaar-teken": 1,
@@ -21404,14 +21070,6 @@
         "fragment": "Conflict",
         "verwacht": "Oorlog en conflict",
         "notitie": "Heet deze rubriek naar zijn eigen onderwerp (een ziekte bijvoorbeeld), dan mag de kop vrij zijn; kies dan \"oneens\". Zo niet: de vaste teksten onder deze rubriek worden niet getoetst zolang de kop afwijkt."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Oman.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Oman."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -21752,18 +21410,17 @@
     "letop": 5,
     "linkzin": 4,
     "twijfel": 4,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 1,
       "let-op": 5,
       "link-zin": 4,
-      "info": 2,
+      "info": 1,
       "twijfel": 4
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "reisverzekering-oranje-rood": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "zin-frequentiewoord": 4,
       "zin-max-woorden": 7,
@@ -21784,14 +21441,6 @@
         "bron": "SJ, blok Reisverzekering",
         "boodschap": "Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij.",
         "verwacht": "Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde risico’s of kosten bij schade zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Panama.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Panama."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -21913,12 +21562,12 @@
     "letop": 4,
     "linkzin": 0,
     "twijfel": 0,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 1,
       "let-op": 4,
       "link-zin": 0,
-      "info": 2,
+      "info": 1,
       "twijfel": 0
     },
     "perRegel": {
@@ -21927,7 +21576,6 @@
       "bagage-heen": 1,
       "criminaliteit-themapagina": 1,
       "rijbewijs-anwb": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 1
     },
     "bevindingen": [
@@ -21967,14 +21615,6 @@
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
         "verwacht": "Lees meer over rijden in Pitcairneilanden op de website van de ANWB."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar de Pitcairneilanden.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Pitcairneilanden."
       },
       {
         "regel": "woord-onbekend",
@@ -22349,18 +21989,17 @@
     "letop": 22,
     "linkzin": 4,
     "twijfel": 11,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 1,
       "let-op": 22,
       "link-zin": 4,
-      "info": 2,
+      "info": 1,
       "twijfel": 11
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 4,
       "zin-frequentiewoord": 9,
@@ -22389,14 +22028,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar de Filipijnen.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Filipijnen."
       },
       {
         "regel": "rubrieken-max",
@@ -23574,17 +23205,16 @@
     "letop": 5,
     "linkzin": 3,
     "twijfel": 2,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 5,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 2
     },
     "perRegel": {
       "h4-kop-variant": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 5,
       "zin-twijfeltaal": 1,
@@ -23600,14 +23230,6 @@
         "fragment": "Contactgegevens Nederlandse ambassade",
         "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
         "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Paraguay.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Paraguay."
       },
       {
         "regel": "woord-onbekend",
@@ -26053,18 +25675,17 @@
     "letop": 3,
     "linkzin": 4,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 2,
       "let-op": 3,
       "link-zin": 4,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "kleur-variant": 1,
       "h3-vaste-kop": 1,
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 7
     },
     "bevindingen": [
@@ -26084,14 +25705,6 @@
         "boodschap": "\"Seksueel geweld tegen vrouwen\" is geen vaste tussenkop.",
         "fragment": "Seksueel geweld tegen vrouwen",
         "notitie": "Heet deze rubriek naar zijn eigen onderwerp (een ziekte bijvoorbeeld), dan mag de kop vrij zijn; kies dan \"oneens\". Zo niet: de vaste teksten onder deze rubriek worden niet getoetst zolang de kop afwijkt."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar El Salvador.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar El Salvador."
       },
       {
         "regel": "zin-max-woorden",
@@ -26613,17 +26226,16 @@
     "letop": 4,
     "linkzin": 1,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 4,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 3,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 1
@@ -26636,14 +26248,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Sao Tomé en Principe.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Sao Tomé en Principe."
       },
       {
         "regel": "zin-max-woorden",
@@ -26701,19 +26305,18 @@
     "letop": 7,
     "linkzin": 3,
     "twijfel": 3,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 1,
       "let-op": 7,
       "link-zin": 3,
-      "info": 3,
+      "info": 2,
       "twijfel": 3
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "h3-niet-melden": 1,
       "bagage-heen": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 1,
       "zin-frequentiewoord": 3,
       "zin-max-woorden": 8,
@@ -26743,14 +26346,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Check wat u mee mag nemen naar Suriname op de website van de Surinaamse overheid.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Suriname."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Suriname.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Suriname."
       },
       {
         "regel": "woord-onbekend",
@@ -27143,17 +26738,16 @@
     "letop": 3,
     "linkzin": 3,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 3,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "titel-leestekens": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1
@@ -27166,14 +26760,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Eswatini.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Eswatini (Swaziland)."
       },
       {
         "regel": "titel-leestekens",
@@ -28311,28 +27897,19 @@
     "letop": 5,
     "linkzin": 2,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 5,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Tadzjikistan.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Tadzjikistan."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -28571,18 +28148,17 @@
     "letop": 4,
     "linkzin": 1,
     "twijfel": 4,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 1,
       "let-op": 4,
       "link-zin": 1,
-      "info": 3,
+      "info": 2,
       "twijfel": 4
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "h3-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
       "zin-frequentiewoord": 4,
       "zin-max-woorden": 3,
@@ -28605,14 +28181,6 @@
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Oost-Timor.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Oost-Timor."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -28710,17 +28278,16 @@
     "letop": 2,
     "linkzin": 4,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 2,
       "link-zin": 4,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "rijbewijs-anwb": 1,
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 4,
       "link-verboden-partij": 1,
       "link-tekstlengte": 1
@@ -28732,14 +28299,6 @@
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
         "verwacht": "Lees meer over rijden in Tonga op de website van de ANWB."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Tonga.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Tonga."
       },
       {
         "regel": "zin-max-woorden",
@@ -28805,17 +28364,16 @@
     "letop": 5,
     "linkzin": 4,
     "twijfel": 1,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 5,
       "link-zin": 4,
-      "info": 1,
+      "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
@@ -28833,14 +28391,6 @@
           "Actueel (184 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Trinidad en Tobago.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Trinidad en Tobago."
       },
       {
         "regel": "woord-onbekend",
@@ -28942,19 +28492,18 @@
     "letop": 5,
     "linkzin": 1,
     "twijfel": 2,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 2,
       "let-op": 5,
       "link-zin": 1,
-      "info": 2,
+      "info": 1,
       "twijfel": 2
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 3,
@@ -28989,14 +28538,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Tunesië.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Tunesië."
       },
       {
         "regel": "rubrieken-max",
@@ -29082,12 +28623,12 @@
     "letop": 28,
     "linkzin": 1,
     "twijfel": 8,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 4,
       "let-op": 28,
       "link-zin": 1,
-      "info": 2,
+      "info": 1,
       "twijfel": 8
     },
     "perRegel": {
@@ -29095,7 +28636,6 @@
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "alinea-max-woorden": 2,
       "nederlands-verbuiging": 1,
@@ -29144,14 +28684,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor een reis naar Turkije.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Turkije."
       },
       {
         "regel": "rubrieken-max",
@@ -29480,17 +29012,16 @@
     "letop": 1,
     "linkzin": 2,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 1,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "h3-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 2,
       "zin-lijdende-vorm": 1
     },
@@ -29502,14 +29033,6 @@
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Tuvalu.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Tuvalu."
       },
       {
         "regel": "zin-max-woorden",
@@ -29552,28 +29075,19 @@
     "letop": 2,
     "linkzin": 2,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 2,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 3,
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Taiwan.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Taiwan."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -30069,17 +29583,16 @@
     "letop": 2,
     "linkzin": 0,
     "twijfel": 1,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 2,
       "let-op": 2,
       "link-zin": 0,
-      "info": 3,
+      "info": 2,
       "twijfel": 1
     },
     "perRegel": {
       "actueel-max-woorden": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-spatie-leesteken": 1,
@@ -30093,14 +29606,6 @@
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "De bullet die naar Actueel verwijst telt 35 woorden. Maximaal 25.",
         "fragment": "Rusland voert een oorlog tegen Oekraïne. Dagelijks zijn er Russische luchtaanvallen, op de hoofdstad Kyiv (Kiev) en andere steden. De veiligheidssituatie is op dit moment slechter door toegenomen dreiging van luchtaanvallen. Lees meer onder Actueel."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Oekraïne.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Oekraïne."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -30438,28 +29943,19 @@
     "letop": 3,
     "linkzin": 3,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 3,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 5,
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Oezbekistan.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Oezbekistan."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -30525,30 +30021,21 @@
     "letop": 4,
     "linkzin": 2,
     "twijfel": 3,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 4,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 3
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 3,
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Saint Vincent en de Grenadines.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Saint Vincent en de Grenadines."
-      },
       {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
@@ -30638,12 +30125,12 @@
     "letop": 12,
     "linkzin": 4,
     "twijfel": 5,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 5,
       "let-op": 12,
       "link-zin": 4,
-      "info": 3,
+      "info": 2,
       "twijfel": 5
     },
     "perRegel": {
@@ -30652,7 +30139,6 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "nood-contactcenter": 1,
-      "kinderen-paspoort": 1,
       "kinderen-documenten": 1,
       "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 11,
@@ -30707,14 +30193,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Venezuela.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Venezuela."
       },
       {
         "regel": "kinderen-documenten",
@@ -30914,27 +30392,18 @@
     "letop": 3,
     "linkzin": 2,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 3,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 5
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar de Britse Maagdeneilanden.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Britse Maagdeneilanden."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -31111,12 +30580,12 @@
     "letop": 14,
     "linkzin": 3,
     "twijfel": 6,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 2,
       "let-op": 14,
       "link-zin": 3,
-      "info": 3,
+      "info": 2,
       "twijfel": 6
     },
     "perRegel": {
@@ -31124,7 +30593,6 @@
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
-      "kinderen-paspoort": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 13,
       "zin-frequentiewoord": 3,
@@ -31168,14 +30636,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Lees wat u mag meenemen naar Vietnam op de website van de douane van Vietnam (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Vietnam."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Vietnam.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Vietnam."
       },
       {
         "regel": "woord-onbekend",
@@ -31631,27 +31091,18 @@
     "letop": 0,
     "linkzin": 3,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
       "let-op": 0,
       "link-zin": 3,
-      "info": 1,
+      "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kinderen-paspoort": 1,
       "zin-max-woorden": 3
     },
     "bevindingen": [
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Samoa.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Samoa."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
@@ -31936,12 +31387,12 @@
     "letop": 13,
     "linkzin": 6,
     "twijfel": 0,
-    "info": 2,
+    "info": 1,
     "perErnst": {
       "fout": 3,
       "let-op": 13,
       "link-zin": 6,
-      "info": 2,
+      "info": 1,
       "twijfel": 0
     },
     "perRegel": {
@@ -31950,7 +31401,6 @@
       "h4-niet-melden": 1,
       "nood-contactcenter": 1,
       "reisverzekering-vaste-tekst": 1,
-      "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 9,
@@ -32001,14 +31451,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die extra medische kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Zuid-Afrika.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Zuid-Afrika."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -32168,17 +31610,16 @@
     "letop": 8,
     "linkzin": 1,
     "twijfel": 3,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
       "let-op": 8,
       "link-zin": 1,
-      "info": 1,
+      "info": 0,
       "twijfel": 3
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 4,
@@ -32194,14 +31635,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "kinderen-paspoort",
-        "ernst": "info",
-        "bron": "SJ, blok Reizen met kinderen",
-        "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
-        "fragment": "Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Zambia.",
-        "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Zambia."
       },
       {
         "regel": "regionaal-gebiedenzin",

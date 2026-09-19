@@ -1068,3 +1068,29 @@ test('de dubbele-puntvorm blijft beperkt tot deze ene zin', () => {
   { land: 'Tsjechië' });
   assert.ok(ids.includes('aanhalingstekens'), 'de toegevoegde verwijzing met aanhalingstekens hoort gemeld te worden');
 });
+
+/**
+ * "Eventueel" in de kinderzin is alsnog goedgekeurd, in elke vorm: of je een visum nodig hebt
+ * hangt af van de reden van je bezoek, en zonder dat woord wordt de zin feitelijk onjuist. Wat
+ * wel gemeld blijft: een heel ander document (ESTA, immigratiekaart) in plaats van het visum --
+ * dat is geen kwestie van "eventueel" maar van andere inhoud.
+ */
+test('kinderen-paspoort: "eventueel" is goedgekeurd, met of zonder komma of haakjes', () => {
+  const varianten = [
+    'Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort, en eventueel een visum, nodig voor een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort of geldige ID-kaart en eventueel een visum nodig voor '
+      + 'een reis naar Tsjechië.',
+    'Kinderen hebben ook een geldig paspoort en (eventueel) een visum nodig voor een reis naar Tsjechië.',
+  ];
+  for (const zin of varianten) {
+    const ids = idsVan(advies('<h3>Paspoort, visum, rijbewijs</h3><p>' + zin + '</p>'), { land: 'Tsjechië' });
+    assert.ok(!ids.includes('kinderen-paspoort'), 'mag niet meer oppoppen: ' + zin);
+  }
+});
+
+test('kinderen-paspoort: een heel ander document blijft wel gemeld', () => {
+  const ids = idsVan(advies('<h3>Paspoort, visum, rijbewijs</h3><p>Kinderen hebben ook een geldig paspoort '
+    + 'en een ESTA nodig voor een reis naar Tsjechië.</p>'), { land: 'Tsjechië' });
+  assert.ok(ids.includes('kinderen-paspoort'), 'een ESTA is geen visum, dus dit is echt andere inhoud');
+});

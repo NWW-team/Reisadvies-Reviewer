@@ -458,11 +458,11 @@
       "alleen_als": "kinderen hebben ook",
       "bron": "SJ, blok Reizen met kinderen",
       "zin": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar {land}.",
-      "kern": "kinderen hebben ook een geldig paspoort (of geldige id-kaart )?(en een visum )?nodig voor een reis naar",
+      "kern": "kinderen hebben ook een geldig paspoort,? (of geldige id-kaart,? )?(en (\\(eventueel\\) |eventueel )?een visum,? )?nodig voor een reis naar",
       "herken": "kinderen hebben ook een geldig paspoort",
       "boodschap_afwijkend": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
       "boodschap": "De vaste zin over de documenten voor kinderen ontbreekt.",
-      "notitie": "Het sjabloon schrijft: 'Kinderen hebben ook een geldig paspoort [evt.: of geldige ID-kaart] [evt.: en een visum] nodig voor een reis naar [NAAM LAND].' De twee haakjes zijn optioneel, dus vier vormen zijn goed. Het woord 'eventueel' hoort er niet in: dat is het markeringetje [evt.:] uit het sjabloon."
+      "notitie": "Het sjabloon schrijft: 'Kinderen hebben ook een geldig paspoort [evt.: of geldige ID-kaart] [evt.: en een visum] nodig voor een reis naar [NAAM LAND].' Op 19 september 2026 alsnog goedgekeurd: het woord 'eventueel' zelf, in elke vorm (met of zonder komma's, met of zonder haakjes) -- want of je een visum nodig hebt hangt af van de reden van je bezoek, en zonder dat woord wordt de zin feitelijk onjuist. Wat nog wel gemeld wordt: een heel ander document (ESTA, ETA, immigratiekaart, inreisvergunning) of een andere eis (toestemming voor langer verblijf) in plaats van of naast het visum -- dat is geen kwestie van 'eventueel' maar van andere inhoud."
     },
     {
       "id": "kinderen-documenten",

@@ -686,9 +686,9 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       for (const w of (REGELDATA.uitzonderingen || [])) lijst.add(w);
       woordenlijst = lijst;
       toetser = Regels.maakToetser({ ...REGELDATA, woordenlijst });
-      zetSpellingStand(lijst.size.toLocaleString('nl-NL') + ' woorden geladen. '
-        + 'Onbekende woorden staan nu onder "Mogelijke spelfouten". Namen worden overgeslagen: '
-        + 'die staan niet in de woordenlijst en zijn dus niet te beoordelen.');
+      // Het aantal geladen woorden zegt een redacteur niets; wat telt is dat de toets nu draait.
+      zetSpellingStand('Onbekende woorden staan nu onder "Mogelijke spelfouten". Namen worden '
+        + 'overgeslagen: die staan niet in de woordenlijst en zijn dus niet te beoordelen.');
       if (huidig) toetsInvoer(huidig.html, huidig.land, huidig.meta);
     } catch (e) {
       zetSpellingStand('De woordenlijst is niet op te halen: ' + e.message

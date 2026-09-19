@@ -1182,3 +1182,36 @@ staat daarom alleen voor déze ene zin apart in `vrijgestelde_formuleringen.zinn
 generieke regel.
 
 **Stand:** 3033 → 3030 bevindingen over 226 adviezen, 169 tests groen.
+
+## "Eventueel" definitief goedgekeurd, en het aantal geladen woorden eruit (19 september 2026)
+
+Bij Taiwan zag Martijn dezelfde melding terug die eerder al ter discussie stond, en besliste: *"hoeft
+niet op te poppen, keur maar goed."* Dat is de definitieve lijn — na twee eerdere wendingen op
+dezelfde vraag (eerst goedkeuren, toen "sjabloon is de waarheid, wat afwijkt mag oppoppen") ligt hij
+nu vast: het woord *eventueel* zelf hoeft nooit meer gemeld te worden, in elke vorm.
+
+De regel `kinderen-paspoort` herkent nu ook: *"en eventueel een visum"*, de komma-vorm *", en
+eventueel een visum,"*, de combinatie met ID-kaart, en de haakjesvorm *"en (eventueel) een visum"*.
+Wat **wel** gemeld blijft: een heel ander document in plaats van of naast het visum — een ESTA, een
+ETA, een immigratiekaart, een inreisvergunning, een Digital Arrival Card. Dat is geen kwestie van
+"eventueel" maar van andere inhoud, en dat hoort de redactie nog steeds te zien.
+
+**Gemeten: 91 → 28 meldingen op deze regel.** De 63 die wegvielen waren stuk voor stuk alleen het
+woord *eventueel*, in een van de vier vormen. De 28 die overblijven noemen allemaal een ander
+document of een andere eis dan het visum uit het sjabloon.
+
+**De tests die dit vastlegden bleken zelf niet te testen wat ze beweerden.** `kinderen-paspoort`
+toetst alleen binnen de rubriek *Paspoort, visum, rijbewijs* (`rubriekTekst` zoekt op het woord
+"paspoort" in de H3-kop). De eerste versie van de nieuwe tests gebruikte per ongeluk
+`<h3>Reizen met kinderen</h3>` als kop — dat bevat het woord "paspoort" niet, dus de hele toets sloeg
+nooit aan en de tests waren zinledig: ze slaagden ook zonder de eigenlijke fix. Gecorrigeerd naar
+`<h3>Paspoort, visum, rijbewijs</h3>`, zoals elk echt advies dit ook noemt (bevestigd via de
+parser: Taiwan's "Reizen met kinderen" valt onder H3 "Paspoort, visum, rijbewijs").
+
+## Het aantal geladen woorden zegt niets (19 september 2026)
+
+Martijn: *"dat aantal geladen woorden mag wel weg, zegt niks."* De statusregel bij de spellingtoets
+meldde *"409.761 woorden geladen"* voordat hij verderging met wat er te zien is. Dat getal betekent
+niets voor een redacteur — het is intern boekhouden, geen bruikbare informatie. Eruit; de tekst begint
+nu meteen met wat er nu wél te zien is: *"Onbekende woorden staan nu onder 'Mogelijke spelfouten'.
+Namen worden overgeslagen: die staan niet in de woordenlijst en zijn dus niet te beoordelen."*

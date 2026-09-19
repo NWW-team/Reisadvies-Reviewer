@@ -555,6 +555,47 @@ test('de naam van het land wordt wel getoetst', () => {
     .includes('landnaam-schrijfwijze'), 'ook een buurland telt mee');
 });
 
+test('een link die aan het woord ervoor plakt wordt gemeld', () => {
+  const ids = (t) => idsVan(advies('<p>' + t + '</p>'), { land: 'Tsjechi\u00eb' });
+  const regel = 'link-plakt-aan-woord';
+
+  // De eerste letter valt buiten de link: op de pagina lees je "Kijk", maar alleen "ijk" is
+  // klikbaar.
+  assert.ok(ids('Dit is verplicht. K<a href="https://example.org/x">ijk op de website</a>.')
+    .includes(regel));
+  assert.ok(!ids('Dit is verplicht. <a href="https://example.org/x">Kijk op de website</a>.')
+    .includes(regel), 'een normale link hoort niets te geven');
+
+  // Geen spatie tussen woord en link.
+  assert.ok(ids('Bel het telefoonnummer<a href="tel:+31247247247">+31 247 247 247</a>.')
+    .includes(regel));
+
+  // En de spatie die binnen de link staat in plaats van ervoor.
+  const b = bevindingenVan(advies('<p>Vraag dit aan via de<a href="https://example.org/x"> '
+    + 'ambassade in Brussel</a>.</p>'), { land: 'Tsjechi\u00eb' });
+  assert.ok(b.some((x) => x.regel === regel && x.boodschap.includes('binnenin')),
+    'een spatie binnen de link hoort een eigen boodschap te geven');
+});
+
+test('een vaste linktekst blijft vrijgesteld, ook met de landnaam of een invoeging erin', () => {
+  const link = (t) => idsVan(advies('<p>Kijk hier. <a href="https://example.org/x">' + t + '</a></p>'),
+    { land: 'Centraal-Afrikaanse Republiek' }).includes('link-tekstlengte');
+
+  // De vaste zin met een lange landnaam erin komt over de 70 tekens, maar daar kan een
+  // redacteur niets aan doen.
+  assert.ok(!link('Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek'),
+    'de vaste zin met de landnaam erin hoort vrijgesteld te blijven');
+
+  // En de vaste zin met een kleine aanpassing: Venezuela schrijft "nog meer", omdat de zin
+  // ervoor al een document noemt. De vaste tekst zelf is al 74 tekens.
+  assert.ok(!link('Check welke documenten u nog meer nodig heeft om te reizen met een minderjarig kind'),
+    'een vaste zin met een invoeging hoort ook vrijgesteld te zijn');
+
+  // Tegenproef: een te lange linktekst in eigen woorden hoort w\u00e9l gemeld te worden.
+  assert.ok(link('Bekijk hier de uitgebreide toelichting op alle regels die op dit moment gelden'),
+    'een eigen te lange linktekst hoort wel gemeld te worden');
+});
+
 test('een naam wordt herkend en niet gemeld', () => {
   // Namen worden overgeslagen: in 226 reisadviezen staan zoveel plaatsnamen, instituten en
   // buitenlandse bronnen dat er geen woordenlijst voor is aan te leggen. De herkenning blijft

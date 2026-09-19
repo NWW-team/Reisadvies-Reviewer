@@ -470,6 +470,46 @@ plaatsen waar die zitten. Die staan op de site goed, dus daarmee zou dezelfde to
 verkeerd gespelde postnaam vangen. Nog niet gebouwd: dat vraagt een ophaalronde langs een ander
 deel van de open data.
 
+## Linkteksten: twee dingen rechtgezet (19 september 2026)
+
+**De vrijstelling was te smal.** `isVasteLinktekst` stelde een linktekst alleen vrij als hij
+letterlijk in een vaste zin zát. Twee soorten vielen daardoor buiten de boot:
+
+1. **De vaste zin met de landnaam erin.** *"Check welke vaccinaties u nodig heeft voor de
+   Centraal-Afrikaanse Republiek"* is 75 tekens. De vaste zinnen werden rond `{land}` opgeknipt, dus
+   de hele zin stond nergens in de lijst. Nu staat hij er ook heel in, met de landnaam ingevuld.
+2. **De vaste zin met een kleine aanpassing.** Venezuela schrijft *"Check welke documenten u **nog
+   meer** nodig heeft om te reizen met een minderjarig kind"*, omdat de zin ervoor al één document
+   noemt (een notariële akte). Dat is de vaste tekst met een landspecifieke aanpassing, geen eigen
+   linktekst — en de vaste tekst zélf is al 74 tekens, dus over de limiet komt hij hoe dan ook.
+   Daarom telt een linktekst die voor minstens 85% uit een vaste zin bestaat nu ook als vast.
+
+Gemeten over 226 adviezen: van de 52 meldingen vallen er 6 weg, en alle zes zijn een vaste zin met
+de landnaam of een invoeging erin. De overige 46 blijven staan; dat zijn eigen linkteksten.
+
+**Nieuw: `link-plakt-aan-woord`.** Bij het meten hierboven viel een linktekst op die met een kleine
+letter begon: *"ijk op de website van de Arubaanse overheid"*. In de bron staat:
+
+    Dit is verplicht. K<a href="...">ijk op de website van de Arubaanse overheid</a>.
+
+De **K** staat buiten de link. Op de pagina lees je gewoon "Kijk", maar alleen *"ijk op de website"*
+is klikbaar. Dat is bij het opmaken misgegaan en is alleen aan de opmaak te zien — in de gelezen
+tekst is er niets van te merken, dus geen mens vindt dit.
+
+De parser onthoudt nu of er een letter of cijfer direct vóór een link staat. Gemeten: **5 meldingen,
+alle vijf terecht**, in drie vormen:
+
+| vorm | waar | wat er staat |
+|---|---|---|
+| eerste letter buiten de link | Aruba, Turks- en Caicos | `K` + *ijk op de website* |
+| geen spatie tussen woord en link | Burundi, Finland | *telefoonnummer* + `+31 247 247 247` |
+| spatie bínnen de link | Mozambique | *via de* + ` ambassade van Mozambique` |
+
+Die laatste krijgt een eigen boodschap, want de correctie is een andere: daar moet de spatie náár
+buiten, niet erbij.
+
+Een link kan nooit legitiem middenin een woord beginnen, dus deze regel heeft geen bewaking nodig.
+
 ## Gemeten en niet gebouwd: het posttype (18 september 2026)
 
 De open data weet per land welke post er zit: een ambassade, een consulaat-generaal of een

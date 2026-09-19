@@ -1030,6 +1030,21 @@ export function maakToetser(data) {
     };
 
     /**
+     * Dezelfde vaste zinnen, maar heel gelaten en met {land} ingevuld. Nodig voor de linkteksten:
+     * "Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek" is de vaste
+     * zin met een lange landnaam erin, en die staat niet in de opgeknipte stukken hierboven.
+     */
+    const sjabloonHeel = [];
+    for (const bronTekst of [...sj.vaste_teksten.map((x) => x.zin), ...vrijgesteld, sj.intro.standaard,
+      sj.intro.alleen_rood, sj.contactcenter.zin]) {
+      for (const zin of norm(bronTekst).split(/(?<=[.?!])\s+/)) {
+        const heel = norm(zin.replace(/\{land\}/g, norm(doc.land || ''))
+          .replace(/\{gebieden\}|\{kleur\}|\{vrij\}/g, ' '));
+        if (heel.length > 25) sjabloonHeel.push({ tekst: heel, woorden: new Set(kopWoorden(heel)) });
+      }
+    }
+
+    /**
      * Andersom dan isVasteZin: een linktekst is een stúk van een vaste tekst, niet omgekeerd.
      * "Check welke documenten u nodig heeft om te reizen met een minderjarig kind" is 74 tekens en
      * dus te lang volgens de schrijfwijzer, maar staat zo in het sjabloon. Daar valt niets aan in
@@ -1037,7 +1052,18 @@ export function maakToetser(data) {
      */
     const isVasteLinktekst = (t) => {
       const n = norm(t).replace(/[?.!]\s*$/, '');
-      return n.length > 20 && sjabloonZinnen.some((kern) => kern.includes(n));
+      if (n.length <= 20) return false;
+      if (sjabloonZinnen.some((kern) => kern.includes(n))) return true;
+      if (sjabloonHeel.some((z) => z.tekst.includes(n))) return true;
+      // Een redacteur voegt soms een woord toe waar het land om vraagt: Venezuela schrijft
+      // "Check welke documenten u nog meer nodig heeft", omdat de zin ervoor al één document
+      // noemt. Dat is de vaste tekst met een aanpassing, geen eigen linktekst — en de vaste
+      // tekst zélf is al 74 tekens, dus over de limiet komt hij hoe dan ook. Daarom telt een
+      // linktekst die voor het grootste deel uit een vaste zin bestaat ook als vast.
+      const w = kopWoorden(n);
+      if (w.size < 5) return false;
+      return sjabloonHeel.some((z) =>
+        [...w].filter((x) => z.woorden.has(x)).length / w.size >= 0.85);
     };
 
     // ---------- tekstfouten ----------
@@ -1371,6 +1397,21 @@ export function maakToetser(data) {
 
     // ---------- links ----------
     for (const l of doc.links) {
+      // Een link hoort niet tegen het woord ervoor aan te plakken. Dat gaat op drie manieren mis,
+      // en alle drie zijn ze alleen hier te zien — in de gelezen tekst is er niets van te merken.
+      if (l.plakt) {
+        b.push(bevinding('link-plakt-aan-woord', ERNST.fout, 'Tekstcontrole (SpellingSpeurneus)',
+          l.spatieBinnen
+            ? `De spatie vóór de link staat er binnenin: "${l.tekst.slice(0, 40)}…".`
+            : `De link plakt aan het woord ervoor: "${l.tekst.slice(0, 40)}…".`,
+          { fragment: l.tekst, herkomst: 'aanvulling',
+            notitie: l.spatieBinnen
+              ? 'De link begint met een spatie. Op de pagina ziet niemand dat, maar het klikvlak '
+                + 'loopt een teken te ver naar links.'
+              : 'Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste '
+                + 'letter van een woord buiten de link ("K" en dan "ijk op de website"), soms '
+                + 'plakken twee woorden aan elkaar.' }));
+      }
       if (l.tekst.length > lim.link.max_tekens_linktekst && !isVasteLinktekst(l.tekst)) {
         b.push(bevinding('link-tekstlengte', ERNST.letop, 'SW, Gebruiksvriendelijkheid > Lengte linkteksten',
           `Linktekst is ${l.tekst.length} tekens. Maximaal ${lim.link.max_tekens_linktekst}.`, { fragment: l.tekst }));

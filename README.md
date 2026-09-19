@@ -260,6 +260,11 @@ veranderde:
   woordgrenzen (*beren* zit in *proberen*), de rubriek die de matrix zelf aanwijst (*Foto's maken*
   mag bij lokale wetten, 65 meldingen minder) en samenstellingen (*zandstormen* benoemt wel een
   risico).
+- `link-plakt-aan-woord` vindt links die aan het woord ervoor vastplakken. Aruba heeft
+  `K<a>ijk op de website…</a>`: op de pagina lees je "Kijk", maar alleen "ijk" is klikbaar. 5
+  meldingen, alle vijf terecht. Tegelijk werd de vrijstelling voor vaste linkteksten verbreed: die
+  gold niet voor de vaste zin met een lange landnaam erin, en niet voor een vaste zin met een
+  landspecifieke invoeging. Dat scheelde 6 onterechte meldingen.
 - Vier controles erbij die op hetzelfde criterium zijn gekozen — het antwoord staat vast, dus de
   tool kan niet gokken: een dubbel woord (*Het het departement*), een spatie voor een leesteken
   (*Algemeen alarmnummer : 101*), de standplaats van een post (*Bogota* → *Bogotá*) en een vaste

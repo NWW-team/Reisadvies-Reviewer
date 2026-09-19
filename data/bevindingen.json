@@ -9,13 +9,13 @@
       "groen"
     ],
     "zinnen": 45,
-    "fout": 1,
+    "fout": 2,
     "letop": 4,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 4,
       "link-zin": 3,
       "info": 0,
@@ -26,6 +26,7 @@
       "bagage-terug": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
+      "link-plakt-aan-woord": 1,
       "link-tekstlengte": 1
     },
     "bevindingen": [
@@ -91,6 +92,15 @@
         "boodschap": "Deze zin telt 21 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Bekijk wat u vanuit Aruba mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
         "kop": "Bagageregels"
+      },
+      {
+        "regel": "link-plakt-aan-woord",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "De link plakt aan het woord ervoor: \"ijk op de website van de Arubaanse overh…\".",
+        "fragment": "ijk op de website van de Arubaanse overheid voor welke landen dit geldt",
+        "herkomst": "aanvulling",
+        "notitie": "Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste letter van een woord buiten de link (\"K\" en dan \"ijk op de website\"), soms plakken twee woorden aan elkaar."
       },
       {
         "regel": "link-tekstlengte",
@@ -745,13 +755,13 @@
     ],
     "zinnen": 94,
     "fout": 4,
-    "letop": 14,
+    "letop": 13,
     "linkzin": 2,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 14,
+      "let-op": 13,
       "link-zin": 2,
       "info": 1,
       "twijfel": 2
@@ -771,7 +781,6 @@
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
-      "link-tekstlengte": 1,
       "aanhalingstekens": 3
     },
     "bevindingen": [
@@ -928,13 +937,6 @@
         "boodschap": "Deze zin telt 22 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Check wat u mee mag nemen naar de VAE op de website van de overheid van de VAE (informatie in het Engels).",
         "kop": "Bagageregels"
-      },
-      {
-        "regel": "link-tekstlengte",
-        "ernst": "let-op",
-        "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
-        "boodschap": "Linktekst is 80 tekens. Maximaal 70.",
-        "fragment": "Check welke vaccinaties u nodig heeft voor de Verenigde Arabische Emiraten (VAE)"
       },
       {
         "regel": "aanhalingstekens",
@@ -1813,13 +1815,13 @@
       "geel"
     ],
     "zinnen": 98,
-    "fout": 3,
+    "fout": 4,
     "letop": 7,
     "linkzin": 3,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 7,
       "link-zin": 3,
       "info": 1,
@@ -1833,6 +1835,7 @@
       "zin-frequentiewoord": 4,
       "zin-max-woorden": 8,
       "zin-lijdende-vorm": 1,
+      "link-plakt-aan-woord": 1,
       "aanhalingstekens": 1
     },
     "bevindingen": [
@@ -1971,6 +1974,15 @@
         "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Betalingen in Burundi gaan vaak met contant geld.",
         "kop": "Geldzaken"
+      },
+      {
+        "regel": "link-plakt-aan-woord",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "De link plakt aan het woord ervoor: \"+31 247 247 247…\".",
+        "fragment": "+31 247 247 247",
+        "herkomst": "aanvulling",
+        "notitie": "Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste letter van een woord buiten de link (\"K\" en dan \"ijk op de website\"), soms plakken twee woorden aan elkaar."
       },
       {
         "regel": "aanhalingstekens",
@@ -4274,13 +4286,13 @@
     ],
     "zinnen": 60,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "linkzin": 3,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "link-zin": 3,
       "info": 1,
       "twijfel": 2
@@ -4292,7 +4304,7 @@
       "rijbewijs-anwb": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 2,
-      "link-tekstlengte": 2
+      "link-tekstlengte": 1
     },
     "bevindingen": [
       {
@@ -4385,13 +4397,6 @@
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
         "boodschap": "Linktekst is 80 tekens. Maximaal 70.",
         "fragment": "Neem contact op met de ambassade van de Centraal-Afrikaanse Republiek in Brussel"
-      },
-      {
-        "regel": "link-tekstlengte",
-        "ernst": "let-op",
-        "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
-        "boodschap": "Linktekst is 75 tekens. Maximaal 70.",
-        "fragment": "Check welke vaccinaties u nodig heeft voor de Centraal-Afrikaanse Republiek"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 18-09-2026"
@@ -5483,13 +5488,13 @@
     ],
     "zinnen": 111,
     "fout": 5,
-    "letop": 19,
+    "letop": 18,
     "linkzin": 3,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
       "fout": 5,
-      "let-op": 19,
+      "let-op": 18,
       "link-zin": 3,
       "info": 1,
       "twijfel": 8
@@ -5506,7 +5511,6 @@
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
-      "link-tekstlengte": 1,
       "aanhalingstekens": 1
     },
     "bevindingen": [
@@ -5796,13 +5800,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR).",
         "kop": "Reisvaccinaties"
-      },
-      {
-        "regel": "link-tekstlengte",
-        "ernst": "let-op",
-        "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
-        "boodschap": "Linktekst is 80 tekens. Maximaal 70.",
-        "fragment": "Check welke vaccinaties u nodig heeft voor de Democratische Republiek Congo (DRC"
       },
       {
         "regel": "aanhalingstekens",
@@ -9235,13 +9232,13 @@
       "groen"
     ],
     "zinnen": 51,
-    "fout": 1,
+    "fout": 2,
     "letop": 2,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 2,
       "link-zin": 3,
       "info": 0,
@@ -9252,7 +9249,8 @@
       "tekst-plakfout": 1,
       "zin-max-woorden": 3,
       "zin-lijdende-vorm": 1,
-      "zin-frequentiewoord": 1
+      "zin-frequentiewoord": 1,
+      "link-plakt-aan-woord": 1
     },
     "bevindingen": [
       {
@@ -9312,6 +9310,15 @@
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Lees informatie over winterbanden op de website van de Finnish Road Safety Council (informatie in het Engels).",
         "kop": "Natuurgeweld"
+      },
+      {
+        "regel": "link-plakt-aan-woord",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "De link plakt aan het woord ervoor: \"contactgegevens van de Nederlandse ambas…\".",
+        "fragment": "contactgegevens van de Nederlandse ambassade in Helsinki",
+        "herkomst": "aanvulling",
+        "notitie": "Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste letter van een woord buiten de link (\"K\" en dan \"ijk op de website\"), soms plakken twee woorden aan elkaar."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 18-09-2026"
@@ -19161,13 +19168,13 @@
       "geel"
     ],
     "zinnen": 106,
-    "fout": 3,
+    "fout": 4,
     "letop": 14,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 14,
       "link-zin": 1,
       "info": 0,
@@ -19180,7 +19187,8 @@
       "woord-onbekend": 9,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
-      "zin-lijdende-vorm": 1
+      "zin-lijdende-vorm": 1,
+      "link-plakt-aan-woord": 1
     },
     "bevindingen": [
       {
@@ -19352,6 +19360,15 @@
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
         "fragment": "Vraag vooraf een visum aan via de ambassade van Mozambique in Brussel, België (informatie in het Engels).",
         "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "link-plakt-aan-woord",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "De spatie vóór de link staat er binnenin: \"ambassade van Mozambique in Brussel…\".",
+        "fragment": "ambassade van Mozambique in Brussel",
+        "herkomst": "aanvulling",
+        "notitie": "De link begint met een spatie. Op de pagina ziet niemand dat, maar het klikvlak loopt een teken te ver naar links."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-08-2026 | Nog steeds geldig op: 18-09-2026"
@@ -27467,13 +27484,13 @@
       "groen"
     ],
     "zinnen": 56,
-    "fout": 3,
+    "fout": 4,
     "letop": 3,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 3,
       "link-zin": 2,
       "info": 0,
@@ -27483,7 +27500,8 @@
       "kleur-variant": 2,
       "intro-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
-      "zin-max-woorden": 4
+      "zin-max-woorden": 4,
+      "link-plakt-aan-woord": 1
     },
     "bevindingen": [
       {
@@ -27548,6 +27566,15 @@
         "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
         "fragment": "Check of uw Nederlandse rijbewijs geldig is op de Turks- en Caicoseilanden en of u een internationaal rijbewijs nodig heeft.",
         "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "link-plakt-aan-woord",
+        "ernst": "fout",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "De link plakt aan het woord ervoor: \"ees wat u kunt doen in geval van nood…\".",
+        "fragment": "ees wat u kunt doen in geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste letter van een woord buiten de link (\"K\" en dan \"ijk op de website\"), soms plakken twee woorden aan elkaar."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 18-09-2026"
@@ -30467,13 +30494,13 @@
     ],
     "zinnen": 58,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 2,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 2,
       "info": 0,
       "twijfel": 3
@@ -30482,7 +30509,7 @@
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 3,
-      "link-tekstlengte": 2
+      "link-tekstlengte": 1
     },
     "bevindingen": [
       {
@@ -30555,13 +30582,6 @@
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
         "boodschap": "Linktekst is 86 tekens. Maximaal 70.",
         "fragment": "Neem contact op met de ambassade van Saint Vincent en de Grenadines in Brussel, België"
-      },
-      {
-        "regel": "link-tekstlengte",
-        "ernst": "let-op",
-        "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
-        "boodschap": "Linktekst is 73 tekens. Maximaal 70.",
-        "fragment": "Check welke vaccinaties u nodig heeft voor Saint Vincent en de Grenadines"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 27-10-2025 | Nog steeds geldig op: 18-09-2026"
@@ -30578,13 +30598,13 @@
     ],
     "zinnen": 103,
     "fout": 5,
-    "letop": 12,
+    "letop": 11,
     "linkzin": 4,
     "twijfel": 5,
     "info": 2,
     "perErnst": {
       "fout": 5,
-      "let-op": 12,
+      "let-op": 11,
       "link-zin": 4,
       "info": 2,
       "twijfel": 5
@@ -30601,7 +30621,6 @@
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 1,
-      "link-tekstlengte": 1,
       "aanhalingstekens": 1
     },
     "bevindingen": [
@@ -30817,13 +30836,6 @@
         "kop": "Geldzaken"
       },
       {
-        "regel": "link-tekstlengte",
-        "ernst": "let-op",
-        "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
-        "boodschap": "Linktekst is 83 tekens. Maximaal 70.",
-        "fragment": "Check welke documenten u nog meer nodig heeft om te reizen met een minderjarig kind"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -30930,13 +30942,13 @@
     ],
     "zinnen": 53,
     "fout": 1,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 4,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 4,
       "info": 0,
       "twijfel": 1
@@ -30948,7 +30960,7 @@
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 8,
       "zin-twijfeltaal": 1,
-      "link-tekstlengte": 2
+      "link-tekstlengte": 1
     },
     "bevindingen": [
       {
@@ -31060,13 +31072,6 @@
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
         "boodschap": "Linktekst is 72 tekens. Maximaal 70.",
         "fragment": "Lees meer over de regels voor toegang tot de Amerikaanse Maagdeneilanden"
-      },
-      {
-        "regel": "link-tekstlengte",
-        "ernst": "let-op",
-        "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
-        "boodschap": "Linktekst is 73 tekens. Maximaal 70.",
-        "fragment": "Check welke vaccinaties u nodig heeft voor de Amerikaanse Maagdeneilanden"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 18-09-2026"

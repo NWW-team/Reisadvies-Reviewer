@@ -108,6 +108,7 @@
       "toelichting": "Te lange linkteksten en urls.",
       "regels": [
         "link-ook-nuttig-max",
+        "link-plakt-aan-woord",
         "link-tekstlengte",
         "url-lengte"
       ]

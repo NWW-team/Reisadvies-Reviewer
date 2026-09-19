@@ -1106,3 +1106,35 @@ zélf aan, en dan is *"hij heeft gedraaid en niets gevonden"* niet te onderschei
 niet gedraaid"*. Martijn: *"als er geen spelfouten zijn dan wil ik dat ook zien."* Een groep kan nu
 `toon_ook_leeg` dragen; bij spelling geldt dat zodra de woordenlijst binnen is. In Chromium
 gecontroleerd op Roemenië: na het aanzetten staat er **"Mogelijke spelfouten 0"**, gedimd.
+
+## De langste blokken tellen per rubriek, en Regionale risico's blijft meedoen (19 september 2026)
+
+Martijn zag bij Peru een lijstje *"Visum (187 woorden) · Reisverzekering (185 woorden) · In het
+kort (132 woorden)"* en vroeg zich af of dat de langste alinea's waren in plaats van de langste
+rubrieken.
+
+Dat klopte. De tool telde per HTML-blok — het stuk tekst tussen twee koppen — en niet per rubriek.
+Een rubriek als *Regionale risico's* bestaat op de pagina uit een H3-kop zonder eigen tekst en
+daaronder een H4 per kleur (*"Rood: niet reizen"*, *"Oranje: alleen noodzakelijke reizen"*). Zo'n
+rubriek stond dus met **0 woorden** in de lijst, terwijl zijn H4-kinderen los van elkaar meedongen
+tegen complete rubrieken als *Reisverzekering*. Appels tegen peren, en de rubriek die je wilt zien
+— vaak de grootste — viel eruit.
+
+De telling loopt nu per rubriek: elk blok telt mee onder zijn H3 (`blok.h3`), of onder zijn eigen
+kop als het zelf een H2-sectie is zonder rubrieken (zoals *In het kort*). Peru's lijstje wordt
+daarmee *"Paspoort, visum, rijbewijs (322 woorden) · Criminaliteit (256 woorden) · In geval van
+nood (250 woorden)"* — de rubriek *Visum* was maar een deel van een grotere rubriek.
+
+**Regionale risico's blijft gewoon meedoen.** Een eerdere aanname was dat deze rubriek vooral vaste
+kleurtekst is en er dus niets te winnen valt. Martijn corrigeerde dat: *"het is niet alleen een
+vaste formulering, het is ook noemen van gebieden en uitleg waarom iets oranje is bijvoorbeeld, dus
+daar kun je mogelijk ook wat inkorten."* Terecht — de gebiedsopsomming en de uitleg zijn vrije tekst,
+alleen de handelingszin erachter ligt vast. De rubriek nergens uitsluiten was dus de juiste keuze;
+in plaats daarvan krijgt de melding er een zin bij zodra Regionale risico's in het rijtje staat:
+
+> Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een
+> kleur vallen, en waarom. Daar zit vaak ruimte.
+
+**Gemeten: van de 46 adviezen boven de woordenlimiet staat Regionale risico's bij 16 in de top 3**,
+bij Thailand zelfs op de eerste plek met 702 woorden. Het aantal bevindingen verandert niet — nog
+steeds 3033 — dit is puur de aanwijzing die bij `doc-woordenaantal` wordt meegegeven.

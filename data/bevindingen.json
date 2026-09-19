@@ -162,9 +162,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1570 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Paspoort (139 woorden)",
-          "Reisverzekering (106 woorden)",
-          "Criminaliteit (84 woorden)"
+          "Paspoort, visum, rijbewijs (389 woorden)",
+          "Wetten en gebruiken (264 woorden)",
+          "In geval van nood (151 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -1548,9 +1548,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1679 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Bosbranden (213 woorden)",
-          "Tropische stormen, cyclonen en overstromingen (152 woorden)",
-          "Nood- of crisissituatie (136 woorden)"
+          "Natuurgeweld (469 woorden)",
+          "Paspoort, visum, rijbewijs (273 woorden)",
+          "In geval van nood (255 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -3202,9 +3202,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2281 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Noodtoestand (209 woorden)",
-          "Paspoort (190 woorden)",
-          "Reisverzekering (181 woorden)"
+          "Paspoort, visum, rijbewijs (471 woorden)",
+          "Actueel (230 woorden)",
+          "In geval van nood (199 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -3809,9 +3809,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1637 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Diefstal en overvallen (153 woorden)",
-          "Reizen met kinderen (114 woorden)",
-          "Reisverzekering (100 woorden)"
+          "Paspoort, visum, rijbewijs (293 woorden)",
+          "Criminaliteit (289 woorden)",
+          "In geval van nood (233 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -4679,9 +4679,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1986 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Diefstal op straat (129 woorden)",
-          "Paspoort (127 woorden)",
-          "Reizen met kinderen (118 woorden)"
+          "Paspoort, visum, rijbewijs (413 woorden)",
+          "Criminaliteit (317 woorden)",
+          "In geval van nood (219 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -4938,9 +4938,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2504 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Overstroming (203 woorden)",
-          "Visum (170 woorden)",
-          "Paspoort (129 woorden)"
+          "Paspoort, visum, rijbewijs (745 woorden)",
+          "Wetten en gebruiken (483 woorden)",
+          "Actueel (203 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -5567,11 +5567,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2034 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Ebola-uitbraak (194 woorden)",
-          "Rood: niet reizen (165 woorden)",
-          "Reisverzekering (132 woorden)"
+          "Regionale risico's (242 woorden)",
+          "Wetten en gebruiken (228 woorden)",
+          "Actueel (194 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-variant",
@@ -6085,11 +6085,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2556 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Oranje: alleen noodzakelijke reizen (238 woorden)",
-          "Rood: niet reizen (236 woorden)",
-          "Criminaliteit in de steden (180 woorden)"
+          "Regionale risico's (514 woorden)",
+          "Criminaliteit (326 woorden)",
+          "Natuurgeweld (275 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-variant",
@@ -6543,9 +6543,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1863 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Berovingen en overvallen (154 woorden)",
-          "Visum (127 woorden)",
-          "Reizen met kinderen (119 woorden)"
+          "Paspoort, visum, rijbewijs (439 woorden)",
+          "Criminaliteit (289 woorden)",
+          "Natuurgeweld (250 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -6770,9 +6770,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1887 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
+          "Paspoort, visum, rijbewijs (384 woorden)",
           "Actueel (245 woorden)",
-          "Reizen tussen Cuba en de Verenigde Staten (161 woorden)",
-          "Geldzaken (159 woorden)"
+          "In geval van nood (181 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -7963,11 +7963,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2208 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "In het kort (159 woorden)",
-          "Reisverzekering (148 woorden)",
-          "Rood: niet reizen (128 woorden)"
+          "Regionale risico's (336 woorden)",
+          "Natuurgeweld (281 woorden)",
+          "Paspoort, visum, rijbewijs (199 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-vervolg-bullet-kort",
@@ -8172,11 +8172,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2754 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Visum (193 woorden)",
-          "Noodtoestand (153 woorden)",
-          "Geel: let op, er zijn risico's (135 woorden)"
+          "Paspoort, visum, rijbewijs (557 woorden)",
+          "Criminaliteit (424 woorden)",
+          "Regionale risico's (355 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-variant",
@@ -8515,11 +8515,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2326 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Oranje: alleen noodzakelijke reizen (175 woorden)",
-          "Rood: niet reizen (159 woorden)",
-          "Visum (149 woorden)"
+          "Regionale risico's (389 woorden)",
+          "Wetten en gebruiken (346 woorden)",
+          "Paspoort, visum, rijbewijs (320 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -9051,11 +9051,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2156 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Geel: let op, er zijn risico’s (201 woorden)",
-          "Oranje: alleen noodzakelijke reizen (189 woorden)",
-          "In het kort (145 woorden)"
+          "Regionale risico’s (497 woorden)",
+          "Paspoort, visum, rijbewijs (267 woorden)",
+          "In geval van nood (194 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-variant",
@@ -9359,9 +9359,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1605 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Reisverzekering (122 woorden)",
-          "Visum (112 woorden)",
-          "Nood- of crisissituatie (95 woorden)"
+          "Natuurgeweld (275 woorden)",
+          "Paspoort, visum, rijbewijs (261 woorden)",
+          "In geval van nood (250 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -11196,9 +11196,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1821 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Diefstal en overvallen (360 woorden)",
-          "Visum (108 woorden)",
-          "Regels bij aankomst en vertrek (96 woorden)"
+          "Criminaliteit (466 woorden)",
+          "Paspoort, visum, rijbewijs (340 woorden)",
+          "Natuurgeweld (212 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -12159,9 +12159,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2594 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Reisverzekering (141 woorden)",
-          "Actieve vulkanen (130 woorden)",
-          "Visum (110 woorden)"
+          "Paspoort, visum, rijbewijs (452 woorden)",
+          "Wetten en gebruiken (435 woorden)",
+          "Natuurgeweld (428 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -12585,11 +12585,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 3100 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Oranje: alleen noodzakelijke reizen (315 woorden)",
-          "Rood: niet reizen (210 woorden)",
-          "Reisverzekering (190 woorden)"
+          "Regionale risico’s (565 woorden)",
+          "Wetten en gebruiken (377 woorden)",
+          "Paspoort, visum, rijbewijs (332 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-aanduiding",
@@ -13255,9 +13255,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2128 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Willekeurige arrestaties (261 woorden)",
-          "Spanningen in het Midden-Oosten (134 woorden)",
-          "Reisverzekering (128 woorden)"
+          "Actueel (395 woorden)",
+          "Wetten en gebruiken (385 woorden)",
+          "Paspoort, visum, rijbewijs (225 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -13564,11 +13564,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2283 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Oranje: alleen noodzakelijke reizen (274 woorden)",
-          "Rood: niet reizen (237 woorden)",
-          "Spanningen in het Midden-Oosten (163 woorden)"
+          "Regionale risico's (511 woorden)",
+          "Paspoort, visum, rijbewijs (246 woorden)",
+          "In geval van nood (207 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-aanduiding",
@@ -16216,9 +16216,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1765 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Militaire acties in het Midden-Oosten (280 woorden)",
-          "Reisverzekering (123 woorden)",
-          "Criminaliteit (108 woorden)"
+          "Actueel (308 woorden)",
+          "Paspoort, visum, rijbewijs (233 woorden)",
+          "Wetten en gebruiken (226 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -16779,9 +16779,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1741 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Visum (148 woorden)",
-          "Reisverzekering (120 woorden)",
-          "Nood- of crisissituatie (95 woorden)"
+          "Paspoort, visum, rijbewijs (320 woorden)",
+          "In geval van nood (224 woorden)",
+          "Wetten en gebruiken (175 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -17934,9 +17934,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1564 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Reisverzekering (129 woorden)",
-          "Aardbevingen en tsunami’s (100 woorden)",
-          "Nood- of crisissituatie? (96 woorden)"
+          "Wetten en gebruiken (251 woorden)",
+          "Paspoort, visum, rijbewijs (240 woorden)",
+          "Natuurgeweld (217 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -18076,11 +18076,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2497 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Oranje: alleen noodzakelijke reizen (290 woorden)",
-          "Geel: let op, er zijn risico’s (203 woorden)",
-          "Visum (176 woorden)"
+          "Regionale risico's (556 woorden)",
+          "Paspoort, visum, rijbewijs (379 woorden)",
+          "Criminaliteit (287 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-variant",
@@ -18811,11 +18811,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2058 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Militaire staatsgreep (222 woorden)",
-          "Rood: niet reizen (215 woorden)",
-          "Reisverzekering (114 woorden)"
+          "Wetten en gebruiken (357 woorden)",
+          "Regionale risico’s (319 woorden)",
+          "Paspoort, visum, rijbewijs (234 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "actueel-max-woorden",
@@ -20628,9 +20628,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1800 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Berovingen en overvallen (137 woorden)",
-          "Reisverzekering (109 woorden)",
-          "Visum (108 woorden)"
+          "Paspoort, visum, rijbewijs (329 woorden)",
+          "In geval van nood (262 woorden)",
+          "Natuurgeweld (244 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -21579,11 +21579,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2116 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Oranje: alleen noodzakelijke reizen (186 woorden)",
-          "In het kort (152 woorden)",
-          "Reisverzekering (141 woorden)"
+          "Regionale risico's (403 woorden)",
+          "Wetten en gebruiken (251 woorden)",
+          "Paspoort, visum, rijbewijs (250 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "h4-niet-melden",
@@ -22059,9 +22059,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2461 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Visum (187 woorden)",
-          "Reisverzekering (185 woorden)",
-          "In het kort (132 woorden)"
+          "Paspoort, visum, rijbewijs (322 woorden)",
+          "Criminaliteit (256 woorden)",
+          "In geval van nood (250 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -22401,9 +22401,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2436 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Rood: niet reizen (183 woorden)",
-          "Visum (182 woorden)",
-          "Reisverzekering (157 woorden)"
+          "Paspoort, visum, rijbewijs (433 woorden)",
+          "Wetten en gebruiken (358 woorden)",
+          "Natuurgeweld (328 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -22771,9 +22771,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1522 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Visum (184 woorden)",
-          "Reisverzekering (103 woorden)",
-          "Nood- of crisissituatie (94 woorden)"
+          "Paspoort, visum, rijbewijs (397 woorden)",
+          "Natuurgeweld (192 woorden)",
+          "In geval van nood (188 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -22988,11 +22988,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2264 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Oranje: alleen noodzakelijke reizen (162 woorden)",
-          "Geweld (146 woorden)",
-          "Reisverzekering (127 woorden)"
+          "Criminaliteit (299 woorden)",
+          "Regionale risico's (294 woorden)",
+          "Natuurgeweld (262 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-variant",
@@ -24572,11 +24572,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2501 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Visum (149 woorden)",
-          "Willekeurige arrestaties (141 woorden)",
-          "Registratieplicht (132 woorden)"
+          "Wetten en gebruiken (584 woorden)",
+          "Paspoort, visum, rijbewijs (493 woorden)",
+          "Regionale risico's (184 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "actueel-max-woorden",
@@ -25801,9 +25801,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1651 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Visum (148 woorden)",
-          "Reisverzekering (115 woorden)",
-          "Aardbevingen en tsunami’s (98 woorden)"
+          "Natuurgeweld (317 woorden)",
+          "Paspoort, visum, rijbewijs (306 woorden)",
+          "In geval van nood (239 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -26523,9 +26523,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1527 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Reisverzekering (124 woorden)",
-          "In het kort (96 woorden)",
-          "Nood- of crisissituatie (84 woorden)"
+          "Paspoort, visum, rijbewijs (266 woorden)",
+          "In geval van nood (183 woorden)",
+          "Wetten en gebruiken (170 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -27924,11 +27924,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 3327 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Oranje: alleen noodzakelijke reizen (610 woorden)",
-          "Visum (261 woorden)",
-          "Oplichting rondom scooterverhuur (155 woorden)"
+          "Regionale risico's (702 woorden)",
+          "Paspoort, visum, rijbewijs (534 woorden)",
+          "Wetten en gebruiken (434 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-variant",
@@ -28849,9 +28849,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1558 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Vermijd delen van Port of Spain (113 woorden)",
-          "Reisverzekering (102 woorden)",
-          "Nood- of crisissituatie (96 woorden)"
+          "Paspoort, visum, rijbewijs (275 woorden)",
+          "In geval van nood (189 woorden)",
+          "Actueel (184 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -28989,11 +28989,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2039 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Rood: niet reizen (168 woorden)",
-          "Reisverzekering (140 woorden)",
-          "Visum (116 woorden)"
+          "Regionale risico's (304 woorden)",
+          "Paspoort, visum, rijbewijs (254 woorden)",
+          "Natuurgeweld (227 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "h4-niet-melden",
@@ -29135,9 +29135,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2539 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Reisverzekering (167 woorden)",
-          "Nederlanders die ook de Turkse nationaliteit hebben (149 woorden)",
-          "Natuurbranden (126 woorden)"
+          "Wetten en gebruiken (560 woorden)",
+          "Paspoort, visum, rijbewijs (261 woorden)",
+          "Natuurgeweld (228 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -29671,9 +29671,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2438 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Verplichte reisverzekering Zanzibar (177 woorden)",
-          "Ontvoeringen (141 woorden)",
-          "Reisverzekering (119 woorden)"
+          "Reisverzekering (296 woorden)",
+          "Criminaliteit (245 woorden)",
+          "Wetten en gebruiken (231 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -29919,9 +29919,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1642 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Reisverzekering (105 woorden)",
-          "Nood- of crisissituatie (89 woorden)",
-          "Grens met de Democratische Republiek Congo (87 woorden)"
+          "Paspoort, visum, rijbewijs (213 woorden)",
+          "Wetten en gebruiken (187 woorden)",
+          "Reisvaccinaties (180 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -30281,9 +30281,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1875 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Visum en ESTA (461 woorden)",
-          "Wat kunt u doen bij natuurgeweld? (150 woorden)",
-          "Lhbtiq+ (102 woorden)"
+          "Paspoort, visum/ESTA, rijbewijs (605 woorden)",
+          "Wetten en gebruiken (247 woorden)",
+          "Natuurgeweld (245 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -30690,11 +30690,11 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 2332 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
-          "Voorkom dat u slachtoffer wordt van criminaliteit (170 woorden)",
-          "Reisverzekering (158 woorden)",
-          "Oranje: alleen noodzakelijke reizen (153 woorden)"
+          "Criminaliteit (315 woorden)",
+          "Regionale risico's (299 woorden)",
+          "Paspoort, visum, rijbewijs (285 woorden)"
         ],
-        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+        "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
       {
         "regel": "kleur-variant",
@@ -31160,9 +31160,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1712 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Visum (230 woorden)",
-          "Landmijnen (107 woorden)",
-          "Verkeersongevallen (105 woorden)"
+          "Paspoort, visum, rijbewijs (485 woorden)",
+          "In geval van nood (191 woorden)",
+          "Wetten en gebruiken (176 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -31426,9 +31426,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1511 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Visum (146 woorden)",
-          "Reisverzekering (103 woorden)",
-          "Nood- of crisissituatie (95 woorden)"
+          "Natuurgeweld (381 woorden)",
+          "Paspoort, visum, rijbewijs (294 woorden)",
+          "In geval van nood (170 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -31741,9 +31741,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1538 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Reisverzekering (123 woorden)",
-          "Visum (95 woorden)",
-          "In het kort (91 woorden)"
+          "Paspoort, visum, rijbewijs (274 woorden)",
+          "In geval van nood (210 woorden)",
+          "Wetten en gebruiken (141 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
@@ -31986,9 +31986,9 @@
         "bron": "MX, tab Richtlijn woordenaantal",
         "boodschap": "Het advies telt 1515 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
-          "Risico’s in het verkeer (141 woorden)",
-          "Voorkom dat u slachtoffer wordt van criminaliteit (112 woorden)",
-          "Nood- of crisissituatie (99 woorden)"
+          "Criminaliteit (364 woorden)",
+          "Paspoort, visum, rijbewijs (291 woorden)",
+          "In geval van nood (200 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },

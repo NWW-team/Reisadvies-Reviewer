@@ -947,3 +947,23 @@ test('een eigen zin die toevallig zo begint blijft wel getoetst op wat eromheen 
     + 'bij drukte flink kunnen oplopen in de zomermaanden.</p>'), { land: 'Tsjechië' });
   assert.ok(ids.includes('zin-twijfeltaal'), 'de tweede zin bevat "mogelijk" en hoort gemeld te worden');
 });
+
+/**
+ * De langste blokken tellen per rubriek (H3), niet per los blok. Anders staat een H3 zonder
+ * eigen tekst met 0 woorden in het rijtje en concurreren zijn H4-kinderen los van elkaar met
+ * complete rubrieken - appels tegen peren, en juist de rubriek die je wilt zien valt eruit.
+ */
+test('doc-woordenaantal: de langste blokken tellen per rubriek, met H4-kinderen opgeteld', () => {
+  const html = '<h2>In het kort</h2><p>' + 'kort '.repeat(20) + '</p>'
+    + '<h2>Welke veiligheidsrisico\'s zijn er in Testland?</h2>'
+    + '<h3>Regionale risico\'s</h3>'
+    + '<h4>Rood: niet reizen</h4><p>' + 'rood '.repeat(900) + '</p>'
+    + '<h4>Oranje: alleen noodzakelijke reizen</h4><p>' + 'oranje '.repeat(900) + '</p>'
+    + '<h3>Reisverzekering</h3><p>' + 'verzekering '.repeat(50) + '</p>';
+  const b = bevindingenVan(html, { land: 'Testland' }).find((x) => x.regel === 'doc-woordenaantal');
+  assert.ok(b, 'dit advies zit ruim boven de limiet');
+  assert.match(b.detail[0], /^Regionale risico's \(1800 woorden\)$/,
+    'de twee H4-kinderen (900 + 900) horen opgeteld onder hun rubriek te staan, niet los');
+  assert.match(b.notitie, /vrije tekst.*welke gebieden/,
+    'staat Regionale risico\'s in de lijst, dan hoort de tool te zeggen dat daar ook vrije tekst in zit');
+});

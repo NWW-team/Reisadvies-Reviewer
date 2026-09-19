@@ -1370,19 +1370,39 @@ function maakToetser(data) {
     // ---------- document ----------
     const limiet = meerdereKleuren ? lim.document.woorden_meerdere_kleurcodes : lim.document.woorden_1_kleurcode;
     if (doc.woorden >= limiet) {
-      const langste = [...doc.blokken]
-        .filter((x) => x.kop)
-        .map((x) => ({
-          kop: x.kop,
-          woorden: x.alineas.reduce((n, a) => n + a.woorden, 0)
-            + x.opsommingen.reduce((n, o) => n + o.items.reduce((m, i) => m + telWoorden(i), 0), 0),
-        }))
+      // Per rubriek, niet per blok. Een rubriek als "Regionale risico's" bestaat op de pagina uit
+      // een H3-kop zonder eigen tekst en daaronder een H4 per kleur ("Rood: niet reizen", "Oranje:
+      // alleen noodzakelijke reizen"). Telde de tool per blok, dan stond de rubriek zelf met 0
+      // woorden in de lijst en concurreerden de H4's los van elkaar met complete rubrieken als
+      // "Reisverzekering" -- appels tegen peren, en de rubriek die je juist wilt zien (vaak de
+      // grootste) viel eruit.
+      //
+      // "Regionale risico's" hoort in dit rijtje thuis. Het grootste deel is weliswaar de vaste
+      // kleurtekst, maar de rubriek bevat ook vrije tekst: welke gebieden vallen onder een kleur,
+      // en waarom. Dat is precies waar in te korten valt, dus deze rubriek uitsluiten zou verkeerd
+      // zijn -- de tool wijst aan waar de meeste woorden zitten, niet wat daarvan vast staat.
+      const perRubriek = new Map();
+      for (const blok of doc.blokken) {
+        const sleutel = blok.h3 || blok.kop;              // de rubriek, of de H2-sectie zelf
+        if (!sleutel) continue;                            // tekst zonder een eigen kop (zeldzaam)
+        const woorden = blok.alineas.reduce((n, a) => n + a.woorden, 0)
+          + blok.opsommingen.reduce((n, o) => n + o.items.reduce((m, i) => m + telWoorden(i), 0), 0);
+        perRubriek.set(sleutel, (perRubriek.get(sleutel) || 0) + woorden);
+      }
+      const langste = [...perRubriek.entries()]
+        .map(([kop, woorden]) => ({ kop, woorden }))
         .sort((x, y) => y.woorden - x.woorden)
         .slice(0, 3);
+      // Staat Regionale risico's in het rijtje, dan verdient dat een eigen zin: het grootste deel
+      // is de vaste kleurtekst, maar de rubriek bevat ook vrije tekst - welke gebieden vallen
+      // onder een kleur, en waarom - en juist dáár kan een redacteur wat inkorten.
+      const heeftRegionaal = langste.some((x) => new RegExp(sj.rubriek_patronen.regionaal, 'i').test(x.kop));
       b.push(bevinding('doc-woordenaantal', ERNST.fout, 'MX, tab Richtlijn woordenaantal',
         `Het advies telt ${doc.woorden} woorden. De richtlijn is minder dan ${limiet} bij ${meerdereKleuren ? 'meerdere kleurcodes' : '1 kleurcode'}.`,
         { detail: langste.map((x) => `${x.kop} (${x.woorden} woorden)`),
-          notitie: 'De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze.' }));
+          notitie: 'De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze.'
+            + (heeftRegionaal ? ' Bij Regionale risico\'s staat naast de vaste kleurtekst ook vrije '
+              + 'tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte.' : '') }));
     }
 
     // De matrix heeft voor de kleurcodes twee kolommen die niet door elkaar mogen lopen. Kolom

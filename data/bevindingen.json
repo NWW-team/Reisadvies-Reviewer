@@ -5788,20 +5788,19 @@
       "geel"
     ],
     "zinnen": 83,
-    "fout": 1,
+    "fout": 0,
     "letop": 6,
     "linkzin": 2,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 0,
       "let-op": 6,
       "link-zin": 2,
       "info": 1,
       "twijfel": 4
     },
     "perRegel": {
-      "intro-vaste-tekst": 1,
       "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
       "zin-max-woorden": 6,
@@ -5809,14 +5808,6 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Republiek Congo? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Congo, de Republiek? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
-      },
       {
         "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
@@ -20734,8 +20725,9 @@
         "regel": "kleur-aanduiding",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Nauru is groen."
+        "boodschap": "De vaste zin bij kleurcode groen staat er, maar noemt het land \"Naoero\". In het cms heet dit advies \"Nauru\".",
+        "verwacht": "De kleurcode van het reisadvies voor Nauru is groen.",
+        "notitie": "Of de tekst of de landenlijst loopt achter. De tool weet niet welke van de twee; hij meldt alleen dat ze niet hetzelfde zeggen."
       },
       {
         "regel": "h3-niet-melden",

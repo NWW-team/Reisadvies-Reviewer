@@ -750,10 +750,31 @@ test('kleuraanduiding: de afkorting uit de landenlijst mag', () => {
 });
 
 test('kleuraanduiding: een andere schrijfwijze van de landnaam blijft een melding', () => {
-  const ids = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Naoero '
+  const b = bevindingenVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Naoero '
     + 'is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich mee.</li></ul>',
-  { land: 'Nauru', kleurcodes: ['groen'] });
-  assert.ok(ids.includes('kleur-aanduiding'), 'Naoero wijkt af van Nauru en hoort gemeld te worden');
+  { land: 'Nauru', kleurcodes: ['groen'] }).filter((x) => x.regel === 'kleur-aanduiding');
+  assert.equal(b.length, 1, 'Naoero wijkt af van Nauru en hoort gemeld te worden');
+  // En de melding zegt wat er aan de hand is: de zin klopt, de naam niet.
+  assert.match(b[0].boodschap, /Naoero/);
+  assert.match(b[0].boodschap, /Nauru/);
+});
+
+test('kleuraanduiding: de omgedraaide naam uit de landenlijst mag', () => {
+  // Het cms sorteert onder de C; een mens schrijft "de Republiek Congo".
+  const ids = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor de Republiek '
+    + 'Congo is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich '
+    + 'mee.</li></ul>', { land: 'Congo, de Republiek', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});
+
+test('kleuraanduiding: een zin die anders loopt krijgt niet de landnaam-melding', () => {
+  // Zuid-Afrika schrijft "de kleurcode voor het reisadvies"; dat verschil zit niet in de naam.
+  const b = bevindingenVan('<h2>In het kort</h2><ul><li>De kleurcode voor het reisadvies voor '
+    + 'Zuid-Afrika is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met '
+    + 'zich mee.</li></ul>', { land: 'Zuid-Afrika', kleurcodes: ['groen'] })
+    .filter((x) => x.regel === 'kleur-aanduiding');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /niet op een van de vaste manieren/);
 });
 
 test('kleuraanduiding: een dubbele punt voor de opsomming van gebieden mag', () => {

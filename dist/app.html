@@ -818,22 +818,28 @@ const zonderApostrof = (s) => s.replace(/[\u2019']/g, (m, i, str) =>
 /**
  * Het patroon voor {land}: hoe een advies zijn eigen land in een vaste zin mag noemen.
  *
- * Het cms-veld draagt de administratieve naam, de tekst gebruikt de leesbare. Twee verschillen zijn
- * grammatica en geen keuze van de redacteur, en die staan we toe:
+ * Het cms-veld draagt de administratieve naam, de tekst gebruikt de leesbare. Drie verschillen zijn
+ * administratie of grammatica en geen keuze van de redacteur, en die staan we toe:
  *
  *   het lidwoord   "voor de Bahama's", "voor de Seychellen", "voor het VK"
  *   de haakjes     "Eswatini (Swaziland)" in het cms, "Eswatini" in de tekst
+ *   de komma       "Congo, de Republiek" in het cms, "de Republiek Congo" in de tekst
+ *
+ * Die komma is een sorteerkunstje van de landenlijst: het land staat onder de C. Draai de twee
+ * delen om en je hebt de naam zoals een mens hem schrijft. Het raakt twee landen, allebei Congo.
  *
  * Daarnaast de vier afkortingen die de adviezen echt gebruiken, uit het veld `kort` in
  * regels/landen.json: VK, VS, VAE en DRC. Dat is een gesloten lijst, geen jokerteken.
  *
- * Verder niets. Schrijft een advies "Naoero" waar het cms "Nauru" zegt, dan is dat een verschil dat
- * iemand gekozen heeft, en dan hoort het gemeld te worden.
+ * Verder niets. Wijkt de naam zelf af, dan is dat een keuze van iemand en die hoort gemeld te
+ * worden -- al is de melding dan wel een andere; zie landnaamAfwijking hieronder.
  */
 function landPatroon(land, kort) {
   const kaal = norm(land).replace(/\s*\([^)]*\)\s*$/, '').trim();
+  const komma = kaal.match(/^([^,]+),\s*(.+)$/);
+  const omgedraaid = komma ? komma[2] + ' ' + komma[1] : '';
   const afk = (kort || []).map(norm);
-  const vormen = [...new Set([norm(land), kaal, ...afk].filter(Boolean))].map(esc);
+  const vormen = [...new Set([norm(land), kaal, omgedraaid, ...afk].filter(Boolean))].map(esc);
   return '(?:de |het )?(?:' + vormen.join('|') + ')';
 }
 
@@ -842,6 +848,25 @@ function landPatroon(land, kort) {
  * als bullets. Die dubbele punt is leesteken, geen andere formulering, dus we laten hem toe.
  */
 const gebiedenPatroon = (body) => ':? ' + body;
+
+/**
+ * Zoekt de landnaam zoals een advies hem zelf schrijft: hetzelfde sjabloon, maar met een vangnet
+ * op de plek van {land}. Slaat dit wel aan waar sjabloonRegex faalde, dan staat de vaste zin er
+ * gewoon en zit het verschil alleen in de naam. Dat is een andere melding dan een zin die niet
+ * klopt, en de redacteur heeft er ook iets anders aan.
+ *
+ * Alleen de vormen met {land} doen mee: een sjabloon met {gebieden} noemt geen land.
+ */
+function landnaamAfwijking(sjablonen, tekst) {
+  for (const sj of sjablonen) {
+    if (!sj.includes('{land}') || sj.includes('{gebieden}')) continue;
+    let p = esc(norm(sj));
+    p = p.replace(/\\\{land\\\}/g, "((?:de |het )?[a-z\\u00c0-\\u017f'. -]{2,40}?)");
+    const m = tekst.match(new RegExp(p));
+    if (m) return m[1].trim();
+  }
+  return null;
+}
 
 /** Maakt van een sjabloon met {land}/{gebieden} een regex die tegen genormaliseerde tekst matcht. */
 function sjabloonRegex(sjabloon, land, kort) {
@@ -1255,12 +1280,24 @@ function maakToetser(data) {
       const k = kleurcodes.kleuren[kleur];
       if (!k) continue;
 
-      const aangeduid = (kleurcodes.aanduiding_sjablonen || []).some((sj) =>
-        sjabloonRegex(sj.replace(/\{kleur\}/g, kleur), doc.land, kortLand).test(genorm));
+      const metKleur = (kleurcodes.aanduiding_sjablonen || []).map((sj) => sj.replace(/\{kleur\}/g, kleur));
+      const aangeduid = metKleur.some((sj) => sjabloonRegex(sj, doc.land, kortLand).test(genorm));
       if (!aangeduid) {
-        b.push(bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
-          `Kleurcode ${kleur} wordt niet op een van de vaste manieren aangeduid.`,
-          { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.` }));
+        // Staat de vaste zin er wel, maar heet het land er anders? Dan is dát de melding.
+        // genorm is kleine letters; voor de melding halen we de naam op zoals hij er echt staat.
+        const kaleNaam = doc.land ? landnaamAfwijking(metKleur, genorm) : null;
+        const anders = kaleNaam
+          && (tekst.match(new RegExp(esc(kaleNaam).replace(/ /g, '\\s+'), 'i')) || [kaleNaam])[0];
+        b.push(anders
+          ? bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+            `De vaste zin bij kleurcode ${kleur} staat er, maar noemt het land "${anders}". `
+            + `In het cms heet dit advies "${doc.land}".`,
+            { verwacht: `De kleurcode van het reisadvies voor ${doc.land} is ${kleur}.`,
+              notitie: 'Of de tekst of de landenlijst loopt achter. De tool weet niet welke van de '
+                + 'twee; hij meldt alleen dat ze niet hetzelfde zeggen.' })
+          : bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+            `Kleurcode ${kleur} wordt niet op een van de vaste manieren aangeduid.`,
+            { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.` }));
       }
 
       const heeftActie = (k.actiezinnen || []).some((z) => genorm.includes(norm(z)));

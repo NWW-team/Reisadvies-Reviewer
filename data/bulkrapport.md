@@ -4,10 +4,10 @@ Gedraaid op 2026-09-19 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **73** van de 226 adviezen hebben geen enkele harde fout.
+- **74** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **216** van de 2983 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **216** van de 2982 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,7 +25,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 293 | 153 |
+| rood — fout | 292 | 152 |
 | geel/oranje — let op | 1547 | 219 |
 | lichtblauw — lange zin met link | 542 | 201 |
 | grijs — ter overweging | 129 | 93 |
@@ -60,10 +60,10 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `h3-vaste-kop` | 11 | 11 |
 | `tekst-spatie-leesteken` | 10 | 11 |
 | `actueel-max-woorden` | 10 | 10 |
-| `intro-vaste-tekst` | 8 | 8 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
+| `intro-vaste-tekst` | 7 | 7 |
 | `tekst-onzichtbaar-teken` | 7 | 7 |
 | `nood-verwijzing-nood` | 7 | 7 |
 | `nood-verwijzing-crisis` | 7 | 7 |

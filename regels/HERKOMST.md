@@ -738,7 +738,6 @@ Wat overblijft is echt:
 |---|---|---|
 | Nauru | *De kleurcode van het reisadvies voor Naoero is groen* | andere schrijfwijze dan het cms |
 | Zuid-Afrika | *De kleurcode **voor** het reisadvies voor Zuid-Afrika is geel* | moet *van het reisadvies* zijn |
-| Congo, de Republiek | cms *Congo, de Republiek*, tekst *de Republiek Congo* | omgedraaide naam |
 | VK / VS / VAE / DRC (intro) | *Reist u naar het Verenigd Koninkrijk (VK)? Bijvoorbeeld naar Engeland, Wales, Schotland of Noord-Ierland?* | een vaste zin met een toevoeging erin |
 | Mali | *veiligheidsrisico&#39;s* | html-code in de tekst |
 | Palau | *in geval van nood en hoe u zich voorbereidt* | komma ontbreekt |
@@ -746,3 +745,32 @@ Wat overblijft is echt:
 De vier intro-meldingen blijven bewust staan. Het zijn vaste zinnen met een zelfbedachte toevoeging,
 en dat is exact het geval waarvan Martijn zei: *"dan kan je beter maar die zin laten oppoppen. En
 dan vervolgens zeggen, nou hier is het toegestaan."*
+
+### Nagekomen op 19 september, na Martijns antwoord
+
+**De komma is een sorteerkunstje.** Op *Congo, de Republiek* zei Martijn: *"De Republiek Congo is in
+de tekst volgens mij wel de goede naam."* Dat klopt — de komma in de landenlijst zet het land onder
+de C, meer is het niet. Draai de delen om en je hebt de naam zoals een mens hem schrijft. Het raakt
+precies twee landen, allebei Congo, en allebei schrijven ze het in hun advies omgedraaid: *de
+Republiek Congo* en *de Democratische Republiek Congo (DRC)*. Die vorm is nu toegestaan, net als de
+haakjes en het lidwoord.
+
+**Naoero is geen fout maar een achterstand.** Op Nauru zei Martijn: *"dat kan kloppen dat de
+schrijfwijze van het land anders is en niet overal nog goed doorgevoerd, want dit is een recente
+naamswijziging die we nog op bepaalde plekken moeten doorvoeren."* De melding blijft dus staan — er
+ís iets recht te trekken — maar de tekst erbij deugde niet: *"Kleurcode groen wordt niet op een van
+de vaste manieren aangeduid"* terwijl de zin woord voor woord het sjabloon volgt.
+
+De regel kijkt nu twee keer. Faalt de strikte toets, dan gaat hetzelfde sjabloon er nog eens
+overheen met een vangnet op de plek van `{land}`. Slaat dát wel aan, dan staat de vaste zin er en
+zit het verschil alleen in de naam, en zegt de melding dat ook:
+
+> De vaste zin bij kleurcode groen staat er, maar noemt het land "Naoero". In het cms heet dit
+> advies "Nauru".
+> *Of de tekst of de landenlijst loopt achter. De tool weet niet welke van de twee; hij meldt alleen
+> dat ze niet hetzelfde zeggen.*
+
+Zuid-Afrika houdt de oude melding, en dat is het bewijs dat de splitsing werkt: daar staat *de
+kleurcode **voor** het reisadvies*, en dat verschil zit niet in de naam maar in de zin.
+
+Stand na deze twee: `kleur-aanduiding` 32 → 2, totaal 3032 → 2982, 149 tests groen.

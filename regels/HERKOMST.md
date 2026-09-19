@@ -841,3 +841,55 @@ niet op hoe de zin toevallig loopt. Dat scheelt: de Verenigde Arabische Emiraten
 kleurcode van het reisadvies voor de VAE is geel. U kunt erheen reizen"* terwijl geel daar alleen
 voor de rest van het land geldt. Op de zin alleen afgaand lijkt dat goed; met het cms-veld erbij is
 het de verkeerde variant.
+
+## De twee kolommen van de matrix uit elkaar (19 september 2026)
+
+Martijn waarschuwde hiervoor: het tabblad *Kleurcode-teksten* heeft twee kolommen met kleurteksten
+en die mogen niet door elkaar lopen.
+
+| kolom | wat | waar in het advies |
+|---|---|---|
+| **In het kort** (C) | de bullets bovenaan, volledig of verkort | het blok "In het kort" |
+| **Regionale risico's** (D) | de definitie per kleur, onder een h4-kopje dat zelf de kleur is | de rubriek Regionale risico's |
+
+Die tweede is dus twee dingen: het kopje (*"Geel: let op, er zijn risico's"*) en de tekst eronder
+(*"U kunt reizen naar gebieden met kleurcode geel. Maar let op: …"*). Ze staan als `regionaal_kop`
+en `regionaal_tekst` in `regels/kleurcodes.json` en worden getoetst door `regionaal-kleur-kop` en
+`regionaal-kleur-tekst`.
+
+**Eerst nagekeken of onze data klopt.** De zestien velden — vier kleuren × `in_het_kort_volledig`,
+`in_het_kort_deels`, `regionaal_kop`, `regionaal_tekst` — zijn tegen de cellen C2 tot en met D5
+gelegd. Alle zestien komen letterlijk overeen. Het enige verschil is de apostrof: de matrix heeft de
+gekrulde, onze data de rechte, en `norm()` maakt die gelijk.
+
+**Toen bleek de code ze wél door elkaar te halen.** `kleur-aanduiding`, `kleur-vaste-tekst` en
+`kleur-variant` zochten in de héle tekst van het advies in plaats van in het blok "In het kort". Een
+goede zin verderop dekte daarmee een foute bullet af. Dat is niet theoretisch:
+
+| land | wat er in de bullet staat | wat de tool zei |
+|---|---|---|
+| Marokko | *"**Vor** de rest van Marokko geldt kleurcode geel"* | niets |
+| India | *"De kleurcode van het reisadvies **van** India is rood"* | niets |
+| Burkina Faso | *"De kleurcode van het reisadvies voor Burkina Faso is **voor het grootste deel** rood"* | niets |
+| Irak | *"geldt **grotendeels** kleurcode oranje"* | niets |
+| Japan | *"De kleurcode van het reisadvies voor **het zuidoosten van Fukushima** is rood"* | niets |
+| Cuba | *"**Reis er alleen heen als dit** noodzakelijk is"* | niets |
+| Guinee | de handelingsinstructie bij oranje ontbreekt helemaal | *"wijkt af van de vaste tekst"* |
+
+De drie toetsen kijken nu in `kortGenorm`, het blok "In het kort". Heeft een advies dat blok niet
+(geplakte tekst), dan valt de toets terug op de hele tekst; anders zou hij helemaal niets meer
+zeggen. Guinee verschuift van `kleur-variant` naar `kleur-vaste-tekst`, wat de juistere diagnose is:
+de instructie ontbreekt, hij wijkt niet af.
+
+**Eén vals alarm kwam mee, en dat had een andere oorzaak.** Jordanië somt 151 tekens aan gebieden
+op en het jokerteken voor `{gebieden}` stopte bij 120. Geteld over 230 opsommingen in het corpus is
+de langste die van Irak met 211 tekens, daarna Armenië (155) en Jordanië (151); zes zitten boven de
+120. De grens staat nu op 220, als `GEBIEDEN_MAX`.
+
+Dat is een ander soort jokerteken dan dat voor `{land}`. Daar zou het een verkeerde landnaam
+verbergen, en daarom staat daar een gesloten lijst. De gebieden zijn per definitie vrije tekst — de
+matrix schrijft ze als *"gebieden X en Y"* — en het patroon kan geen punt passeren, dus het blijft
+binnen één zin.
+
+**Stand:** 2982 → 2987 bevindingen over 226 adviezen, 153 tests groen. Vijf meldingen erbij die
+allemaal een echte fout aanwijzen, en één betere diagnose.

@@ -7,7 +7,7 @@ Gedraaid op 2026-09-19 over 226 reisadviezen.
 - **74** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **216** van de 2982 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **216** van de 2987 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,7 +26,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 292 | 152 |
-| geel/oranje — let op | 1547 | 219 |
+| geel/oranje — let op | 1552 | 219 |
 | lichtblauw — lange zin met link | 542 | 201 |
 | grijs — ter overweging | 129 | 93 |
 | roze — twijfeltaal | 472 | 164 |
@@ -43,7 +43,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
 | `doc-woordenaantal` | 46 | 46 |
-| `kleur-variant` | 46 | 52 |
+| `kleur-variant` | 45 | 51 |
 | `link-tekstlengte` | 44 | 49 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 37 | 37 |
@@ -68,6 +68,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `nood-verwijzing-nood` | 7 | 7 |
 | `nood-verwijzing-crisis` | 7 | 7 |
 | `medicijnen-voldoende` | 7 | 7 |
+| `kleur-aanduiding` | 7 | 7 |
 | `nederlands-verbuiging` | 6 | 6 |
 | `link-verboden-partij` | 6 | 7 |
 | `link-plakt-aan-woord` | 5 | 5 |
@@ -88,18 +89,17 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `reisverzekering-oranje-rood` | 3 | 3 |
 | `tekst-cms-rest` | 2 | 2 |
 | `kleur-formulering-verboden` | 2 | 2 |
+| `kleur-vaste-tekst` | 2 | 2 |
 | `vaste-tekst-land-leeg` | 2 | 2 |
 | `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |
 | `telefoon-notatie` | 2 | 3 |
 | `criminaliteit-themapagina` | 2 | 2 |
 | `genderneutraal` | 2 | 3 |
-| `kleur-aanduiding` | 2 | 2 |
 | `regionaal-kleur-kop` | 2 | 2 |
 | `informatieservice-vaste-tekst` | 1 | 1 |
 | `vaccinaties-ggd` | 1 | 1 |
 | `vaccinaties-lcr` | 1 | 1 |
-| `kleur-vaste-tekst` | 1 | 1 |
 | `landnaam-schrijfwijze` | 1 | 1 |
 | `percentage-notatie` | 1 | 1 |
 | `valuta-notatie` | 1 | 1 |

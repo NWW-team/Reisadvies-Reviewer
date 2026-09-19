@@ -814,3 +814,30 @@ test('kleurvariant: bij rood loopt de zin te ver uiteen voor een woordverschil',
   assert.equal(b.length, 1);
   assert.ok(!/Er staat "/.test(b[0].boodschap));
 });
+
+test('de kleurbullets worden in "In het kort" getoetst, niet elders in het advies', () => {
+  // Marokko-geval: de bullet bovenaan heeft een typefout, maar onder Regionale risico's staat
+  // dezelfde zin wel goed. Dan hoort de tool die bullet nog steeds te melden.
+  const ids = idsVan('<h2>In het kort</h2><ul><li>Vor Tsjechië geldt kleurcode groen. U kunt '
+    + 'hierheen reizen. Lees welke veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>'
+    + '<h3>Regionale risico&#39;s</h3><h4>Groen: u kunt erheen reizen</h4>'
+    + '<p>De kleurcode van het reisadvies voor Tsjechië is groen. U kunt reizen naar gebieden met '
+    + 'kleurcode groen. Lees welke veiligheidsrisico&#39;s er zijn.</p>',
+  { land: 'Tsjechië', kleurcodes: ['groen'] });
+  assert.ok(ids.includes('kleur-aanduiding'), 'de goede zin verderop mag de bullet niet afdekken');
+});
+
+test('een lange gebiedenopsomming valt nog binnen het patroon', () => {
+  // Jordanië somt 151 tekens aan gebieden op; op de oude grens van 120 gaf dat vals alarm.
+  const gebieden = 'het grensgebied van Tsjechië met Polen en Duitsland (met uitzondering van '
+    + 'Cheb), de provincie Zlín, de steden Brno en Ostrava en de omliggende gebieden';
+  assert.ok(gebieden.length > 120 && gebieden.length < 220);
+  const ids = idsVan(`<h2>In het kort</h2><ul><li>Voor ${gebieden} geldt kleurcode oranje. Reis `
+    + 'alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode groen. U kunt hierheen reizen. Lees welke '
+    + 'veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['oranje', 'groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});

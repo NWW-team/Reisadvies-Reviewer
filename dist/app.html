@@ -319,8 +319,8 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .filters .alles::before { content: none; }
 /* De eerste tekstknop duwt de rest naar rechts; staan er twee, dan blijven ze bij elkaar. */
 .filters .alles:not(.alles ~ .alles) { margin-left: auto; }
-/* De spellingtoets is geen filter maar een schakelaar: de woordenlijst moet er eerst bij worden
-   gehaald. Daarom staat hij eronder en ziet hij er anders uit dan de vinkjes. */
+/* Spelling is geen filter om aan of uit te vinken: hij staat altijd aan, alleen de status ("nog
+   aan het ophalen", "klaar") en de knop om gemelde woorden te kopiëren horen hier apart. */
 .spellingknop { margin: 0 0 10px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
 .spellingknop button {
   padding: 4px 11px; border: 1px solid var(--lijn); border-radius: 999px;
@@ -452,10 +452,10 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
         <!-- Gevuld door tekenFilters(). Filteren verbergt; het schrapt niets, en de teller
              hieronder blijft zeggen hoeveel er buiten beeld staat. -->
         <div class="filters" id="filters" hidden></div>
-        <!-- De spellingtoets staat apart van de filters: hij is niet uit te vinken maar aan te
-             zetten, want de woordenlijst moet er eerst bij worden gehaald. -->
+        <!-- Spelling is onderdeel van het checken van een advies, geen aparte stap: de
+             woordenlijst wordt bij het openen van de pagina zelf opgehaald, op de achtergrond.
+             Deze regel laat alleen nog zien hoe dat gaat en, zodra het kan, wat je ermee doet. -->
         <p class="spellingknop">
-          <button type="button" id="spelling-aan">Spelling ook nakijken</button>
           <!-- Klopt een gemeld woord gewoon? Dan hoort het in regels/uitzonderingen.txt. Deze knop
                zet ze op het klembord, zodat je ze in een keer kunt doorgeven in plaats van ze een
                voor een over te typen. Overgenomen uit SpellingSpeurneus. -->
@@ -2952,17 +2952,19 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     $('knop-kopieer').disabled = false;
   }
 
-  // ---------- spellingtoets aanzetten ----------
-  // Eén keer ophalen, daarna blijft de lijst staan. De toetser wordt opnieuw gemaakt mét de lijst
-  // en het huidige advies opnieuw getoetst, zodat je meteen ziet wat het oplevert.
-  function zetSpellingStand(tekst, bezig) {
+  // ---------- spellingtoets ----------
+  // Spelling is gewoon onderdeel van het checken van een advies, geen losse stap: de pagina haalt
+  // de woordenlijst zelf op zodra ze laadt (zie "start" onderaan), zonder dat daar een klik voor
+  // nodig is. Eén keer ophalen, daarna blijft de lijst staan. Is een advies al getoetst vóór de
+  // lijst binnen is (dat kan een paar seconden duren), dan toetst zetSpellingAan hem meteen
+  // opnieuw zodra hij binnen is, zodat "Mogelijke spelfouten" alsnog verschijnt.
+  function zetSpellingStand(tekst) {
     $('spelling-stand').textContent = tekst;
-    $('spelling-aan').disabled = !!bezig || !!woordenlijst;
   }
 
   async function zetSpellingAan() {
     if (woordenlijst) return;
-    zetSpellingStand('bezig met ophalen van de woordenlijst (1,3 MB)…', true);
+    zetSpellingStand('Spelling wordt opgehaald…');
     try {
       const lijst = await haalWoordenlijst();
       // De eigen uitzonderingen zitten in de pagina zelf, niet in het opgehaalde bestand: die
@@ -2970,14 +2972,13 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
       for (const w of (REGELDATA.uitzonderingen || [])) lijst.add(w);
       woordenlijst = lijst;
       toetser = Regels.maakToetser({ ...REGELDATA, woordenlijst });
-      // Het aantal geladen woorden zegt een redacteur niets; wat telt is dat de toets nu draait.
       zetSpellingStand('Onbekende woorden staan nu onder "Mogelijke spelfouten". Namen worden '
         + 'overgeslagen: die staan niet in de woordenlijst en zijn dus niet te beoordelen.');
       if (huidig) toetsInvoer(huidig.html, huidig.land, huidig.meta);
     } catch (e) {
+      // Geen knop meer om opnieuw te proberen: een verse laadbeurt van de pagina doet dat vanzelf.
       zetSpellingStand('De woordenlijst is niet op te halen: ' + e.message
-        + ' De rest van de tool werkt gewoon.');
-      $('spelling-aan').disabled = false;
+        + ' De rest van de tool werkt gewoon; ververs de pagina om het nog eens te proberen.');
     }
   }
 
@@ -3015,8 +3016,6 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
         + woorden.join(', ');
     }
   });
-
-  $('spelling-aan').addEventListener('click', zetSpellingAan);
 
   /** Haalt het gekozen advies op: uit de pagina zelf, of uit adviezen/<ISO>.json. */
   async function kiesAdvies() {
@@ -3589,6 +3588,10 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
   // ---------- start ----------
   kiesAdvies();
   haalLijst();
+  // Spelling hoort bij het checken van een advies, dus geen losse stap meer: de woordenlijst
+  // wordt hier al opgehaald, terwijl de redacteur het eerste advies nog aan het lezen is. Geen
+  // await: de rest van de pagina hoeft niet op deze 1,3 MB te wachten.
+  zetSpellingAan();
 
   (async () => {
     db = await window.claude?.use?.('db');

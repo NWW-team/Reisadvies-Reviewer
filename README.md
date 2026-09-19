@@ -284,8 +284,9 @@ veranderde:
   het CMS, een vergeten spatie na een punt, en tekens zonder breedte. Samen 17 meldingen over 226
   adviezen, alle zeventien terecht — Estland had letterlijk het woord *undefined* op de pagina
   staan.
-- Daarna is ook de **spellingtoets** zelf overgenomen. Die staat uit tot je hem aanzet: de
-  OpenTaal-woordenlijst is 409.487 woorden en wordt pas dan opgehaald (1,3 MB). Over 226 adviezen
+- Daarna is ook de **spellingtoets** zelf overgenomen. Spelling hoort bij het checken van een
+  advies, dus geen losse stap: de OpenTaal-woordenlijst (409.487 woorden, 1,3 MB) wordt bij het
+  openen van de pagina zelf al opgehaald, op de achtergrond. Over 226 adviezen
   geeft hij 146 mogelijke spelfouten — met daarin achttien echte tikfouten die nu live staan,
   zoals *Registeer*, *doodstaf*, *riscio*, *prvincie* en *veiligsheidsrisico's* — en 1974 namen,
   die in een eigen filter staan omdat de woordenlijst geen plaatsnamen kent. Het totaal met de
@@ -302,10 +303,10 @@ Meldt de tool een woord dat gewoon goed is? Dat hoort in
 [`regels/uitzonderingen.txt`](regels/uitzonderingen.txt). Die lijst hoort bij de webredactie, niet
 bij de techniek: hij groeit met het gebruik.
 
-De weg ernaartoe: zet de spellingtoets aan, en klik op **Kopieer deze N woorden als uitzondering**.
-Die knop staat naast de spellingknop zodra er onbekende woorden zijn, en zet ze als lijst op het
-klembord. Plak ze onderaan in `uitzonderingen.txt`, één woord per regel. Hoofdletters doen er niet
-toe — de toets vergelijkt op kleine letters.
+De weg ernaartoe: klik op **Kopieer deze N woorden als uitzondering**, die verschijnt zodra er
+onbekende woorden in het advies staan, en zet ze als lijst op het klembord. Plak ze onderaan in
+`uitzonderingen.txt`, één woord per regel. Hoofdletters doen er niet toe — de toets vergelijkt op
+kleine letters.
 
 Dit staat los van de knoppen *Eens / Oneens / Onterecht* onder een bevinding. Die leggen een oordeel
 vast over dít advies; de uitzonderingenlijst verandert de regel voor alle adviezen tegelijk.

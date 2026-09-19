@@ -1215,3 +1215,22 @@ meldde *"409.761 woorden geladen"* voordat hij verderging met wat er te zien is.
 niets voor een redacteur — het is intern boekhouden, geen bruikbare informatie. Eruit; de tekst begint
 nu meteen met wat er nu wél te zien is: *"Onbekende woorden staan nu onder 'Mogelijke spelfouten'.
 Namen worden overgeslagen: die staan niet in de woordenlijst en zijn dus niet te beoordelen."*
+
+## Spelling standaard aan (19 september 2026)
+
+Martijn twijfelde over de "Spelling ook nakijken"-knop: *"Is het idee spelling ook al in filter aan
+te geven standaard of moet dat per se ophalen?"* Na uitleg dat het enige nadeel van standaard
+ophalen een paar seconden wachten is — geen kwaliteitsverlies, de toets werkt daarna gewoon goed —
+was zijn antwoord kort: *"weet niet wat nadeel is van de 1,3 mb, maakt mij niet uit"* en, in
+dezelfde lijn als zijn eerdere opmerking over losse filters, *"ik denk dat het onderdeel is/kan zijn
+van een reisadvies checken."*
+
+De knop is weg. De woordenlijst wordt nu opgehaald zodra de pagina laadt — niet wachtend op een
+klik, niet wachtend tot er een land is gekozen. Is een advies al getoetst voordat de lijst binnen is
+(dat duurt een paar seconden), dan toetst de pagina het vanzelf opnieuw zodra de lijst er is, en
+verschijnt "Mogelijke spelfouten" alsnog in de filterbalk. Mislukt het ophalen (geen internet), dan
+blijft de rest van de tool gewoon werken; een verse laadbeurt van de pagina probeert het opnieuw.
+
+In Chromium gecontroleerd: de knop bestaat niet meer, de statusregel meldt *"Onbekende woorden staan
+nu onder 'Mogelijke spelfouten'"* zonder tussenstap, en het filter staat er meteen bij het openen
+van de pagina.

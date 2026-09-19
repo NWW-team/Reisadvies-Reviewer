@@ -1273,3 +1273,27 @@ geen land bij hoort om een open-data-adres voor op te zoeken).
 `'0 5 * * 1'` — elke ochtend 06:00 UTC, wat door de zomer-/wintertijd vanzelf tussen 07:00 en 08:00
 Nederlandse tijd uitkomt (cron kent geen tijdzones). Zo staat de lijst in de tool nooit meer dan een
 dag achter, ook zonder dat iemand op de ververs-knop klikt.
+
+## De ververs-knop weer weggehaald (19 september 2026)
+
+Getest op de live site, met Saoedi-Arabië: **"Verversen lukt nu niet (Failed to fetch)."** De
+open-data-dienst staat geen rechtstreeks verzoek vanuit de browser toe. Dat was precies het scenario
+waarvoor het uitwijkpad gebouwd was, en het werkte zoals bedoeld — maar een knop die op de
+gepubliceerde site altijd faalt, hoort niet te blijven staan. Martijn: *"haal nu maar even weg, kan
+evt later nog proberen."*
+
+De knop en de `ververs()`-functie zijn eruit. Wat blijft staan: de `Adapter`-namespace die
+`scripts/bouw-pagina.mjs` in de pagina vouwt (naast `Parse` en `Regels`) — die doet nu niets, maar is
+klein, ongebruikt-maar-onschadelijk, en scheelt werk als er ooit een vervolgstap komt.
+
+**De twijfel die hij daarbij noemde is inhoudelijk terecht, en heeft al een antwoord.** Zijn zorg:
+*"kan me voorstellen dat je misschien een reisadvies dat net live is gezet even wilt checken of er
+onverhoopt geen foutjes in zitten."* Dat scenario — een advies van vandaag controleren, niet wachten
+op de volgende ophaalronde — lost **"Eigen tekst plakken"** nu al op, zonder CORS-obstakel: kopieer de
+tekst van de site zelf en plak hem in de tool. Dat werkte al voor de ververs-knop en werkt na het
+weghalen ervan nog steeds.
+
+**Een vervolgstap, mocht dat ooit gewenst zijn:** een eigen tussenstation (bijvoorbeeld een kleine
+Cloudflare Worker) dat namens de browser bij de open data ophaalt en zelf een CORS-header op zijn
+antwoord zet. Dat is nieuwe infrastructuur — een server-component naast de statische Pages-site — en
+dus een aparte afweging, geen kleine aanpassing.

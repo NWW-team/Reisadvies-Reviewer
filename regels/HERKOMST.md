@@ -20,7 +20,7 @@ Twee bronnen:
 | `kleur-eerste-bullet-voluit` | MX, tab *Kleurcode-teksten*, kolom NB | eerste bullet voluit, vervolgbullets verkort |
 | `actueel-max-woorden` | MX, tab *Koppen*, rij *In het kort* | de bullet die naar Actueel verwijst: max 25 woorden — niet de rubriek Actueel zelf |
 | `kort-informatieservice-onderaan` | MX, tab *Koppen*, rij *In het kort* | "Daaronder in Let op: Aanmelden Informatieservice": onderaan het blok |
-| `gebieden-max-drie` | MX, tab *Koppen*, rij *In het kort* | max 3 gebieden/plaatsen noemen, daarna verwijzen |
+| `gebieden-max` | MX, tab *Koppen*, rij *In het kort* | max 5 gebieden/plaatsen noemen, daarna verwijzen (was 3; zie 19 september 2026) |
 | `h2-vast` | MX, tab *Uitleg* | H2-koppen zijn vast |
 | `h3-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden* | onderwerp hoort niet in het reisadvies |
 | `h3-regionaal-alleen-bij-meerdere` | MX, tab *Koppen*, rij *Regionale risico's* | alleen bij meer dan 1 kleurcode |
@@ -929,20 +929,40 @@ missen dan er een van vier melden.
 |---|---:|---:|---:|---:|---:|---:|
 | hoe vaak | 219 | 20 | 7 | 2 | 3 | 1 |
 
-Die ene is Tsjaad: *"De kleurcode van het reisadvies is rood voor alle grensgebieden van Tsjaad, het
-gebied rond het Tsjaadmeer, en de regio's Kanem, Ouaddai, Tibesti, Borkou en Ennedi of delen
-daarvan."* Vijf regio's bij naam plus twee andere gebieden — het geval uit Martijns eigen
-formulering. Jordanië en Papoea-Nieuw-Guinea zitten op precies vijf en blijven dus stil.
+Die ene was Tsjaad — en daarover gaf Martijn meteen uitsluitsel: *"Dat voorbeeld van Tsjaad vind ik
+wel acceptabel en mag dus wel 5 zijn."*
 
-Een regel die één keer afgaat over 226 adviezen is hier het doel, niet een tekortkoming: hij bewaakt
-wat er morgen geschreven wordt.
+### Wat de eerste telling fout deed
 
-**Let op: dit staat naast de bestaande regel `gebieden-max-drie`.** Die komt uit tabblad *Koppen*
-(*"Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen"*) en geeft nul
-treffers, omdat hij alleen zoekt naar het letterlijke woord *gebieden* gevolgd door namen met
-hoofdletters. Drie en vijf zijn verschillende getallen; welke van de twee leidend is, is een vraag
-voor de redactie. Zolang die niet beantwoord is, blijven ze allebei staan en meldt alleen de nieuwe
-iets.
+*"alle grensgebieden van Tsjaad, het gebied rond het Tsjaadmeer, en de regio's Kanem, Ouaddai,
+Tibesti, Borkou en Ennedi of delen daarvan"* telde als zeven, omdat de vijf regionamen achter *de
+regio's* elk apart meetelden. Maar dat is één opsomming achter één kopwoord, en die rekent Martijn
+goed.
+
+De telling kijkt nu alleen naar delen die zélf een gebied benoemen. Namen die daarachter hangen
+horen bij het gebied dat er al staat:
+
+| zin | telt als | waarom |
+|---|---:|---|
+| *alle grensgebieden van Tsjaad, het gebied rond het Tsjaadmeer, en de regio's Kanem, Ouaddai, Tibesti, Borkou en Ennedi of delen daarvan* | **4** | drie kopwoorden plus *delen daarvan*; de vier losse regionamen horen bij *de regio's* |
+| *de noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en Nigeria* | **1** | één gebied, vier buurlanden als oriëntatiepunt |
+| *het noorden, het oosten, het zuiden en het westen van Tsjechië* | **1** | windrichtingen zijn juist de aanbevolen vorm |
+| *de provincie A, de provincie B, de stad C, het eiland D, de regio E en het district F* | **6** | zes eigen kopwoorden — dit is het geval uit de matrixregel |
+
+Daarmee gaat de regel over de 226 adviezen **geen enkele keer** af. Dat is hier het doel en geen
+tekortkoming: hij bewaakt wat er morgen geschreven wordt, en het laatste geval hierboven laat zien
+dat hij wel degelijk werkt.
+
+### De interne regel van 3 is losgelaten
+
+Martijn: *"betekent dat wij intern een regel moeten versoepelen van de 3."* De oude limiet uit
+tabblad *Koppen* — *"Bij het noemen van meerdere gebieden/plaatsen max. 3 noemen en verwijzen"* —
+staat nu ook op 5, zodat beide matrixregels hetzelfde getal aanhouden. De regel-id heet daarom niet
+langer `gebieden-max-drie` maar `gebieden-max`.
+
+Die oude regel gaf al nul treffers, omdat hij alleen zoekt naar het letterlijke woord *gebieden*
+gevolgd door namen met hoofdletters. Hij blijft staan voor opsommingen buiten een kleurbullet; de
+nieuwe regel dekt de kleurbullets zelf, met de betere telling.
 
 ## Fukushima mag wel (19 september 2026)
 

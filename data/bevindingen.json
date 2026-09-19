@@ -27207,19 +27207,18 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 0,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 0,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
-      "kleur-gebieden-max": 1,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -27231,14 +27230,6 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-gebieden-max",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Deze kleurcode noemt 7 gebieden. De richtlijn is maximaal 5; noem er anders een windrichting bij.",
-        "fragment": "De kleurcode van het reisadvies is rood voor alle grensgebieden van Tsjaad, het gebied rond het Tsjaadmeer, en de regio’s Kanem, Ouaddai, Tibesti, Borkou en Ennedi of delen daarvan.",
-        "notitie": "Niet gebied 1, 2, 3, 4, 5, 6, maar liever gebieden in het noorden en oosten. De uitwerking per gebied hoort onder Regionale risico's."
-      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",

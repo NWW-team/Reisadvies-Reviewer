@@ -134,14 +134,21 @@ const GEBIEDSVORMEN = [
 /**
  * Hoeveel gebieden noemt deze opsomming?
  *
- * Niet door op komma's en "en" te splitsen: dat telt namen en geen gebieden. Benin schrijft "de
- * noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en Nigeria" -- dat is
- * een gebied met vier buurlanden als oriëntatiepunt, niet vier gebieden.
+ * Niet door op komma's en "en" te splitsen: dat telt namen en geen gebieden. Er tellen alleen
+ * delen mee die zélf een gebied benoemen -- "de provincie Mafraq", "het grensgebied met India".
+ * Namen die achter zo'n deel hangen tellen niet apart; die horen bij het gebied dat er al staat.
  *
- * Daarom telt een deel alleen mee als het zelf een gebied benoemt ("de provincie Mafraq", "het
- * grensgebied met India"), of als het achter een deel hangt dat een meervoud aankondigde ("de
- * regio's Kanem, Ouaddai, Tibesti"). Hangt het achter een oriëntatiewoord (met, tussen, grenzen
- * aan), dan telt het niet.
+ * Dat vangt twee dingen tegelijk:
+ *
+ *   Benin schrijft "de noordelijke regio's van Benin die grenzen aan Togo, Burkina Faso, Niger en
+ *   Nigeria". Dat is één gebied met vier buurlanden als oriëntatiepunt, geen vijf gebieden.
+ *
+ *   Tsjaad schrijft "de regio's Kanem, Ouaddai, Tibesti, Borkou en Ennedi". Dat is één opsomming
+ *   achter één kopwoord, en Martijn rekent die op 19 september 2026 acceptabel.
+ *
+ * Wat wél oploopt is "de provincie A, de provincie B, de stad C, het eiland D, de regio E en het
+ * district F": zes keer een eigen kopwoord, zes gebieden. Dat is het geval uit de matrixregel --
+ * niet gebied 1, 2, 3, 4, 5, 6.
  *
  * Windrichtingen tellen met opzet niet als apart gebied: "het noorden en oosten" is juist de vorm
  * die de matrix aanraadt boven een opsomming, dus die mag hier niet tegen een advies werken.
@@ -149,8 +156,6 @@ const GEBIEDSVORMEN = [
  * De telling is met opzet voorzichtig: bij twijfel telt hij laag. Liever een opsomming van zes
  * missen dan er een van vier melden.
  */
-const ORIENTATIEWOORD = /\b(?:met|tussen|grenzen aan|grenst aan|richting|vanaf|langs|nabij|rond|vlakbij)\b/i;
-const MEERVOUDWOORD = /\b(?:regio'?s|provincies|deelstaten|staten|steden|eilanden|districten|departementen|gebieden|gouvernementen|wijken)\b/i;
 const EIGEN_GEBIED = new RegExp("\\b(?:gebied|gebieden|grensgebied|grensgebieden|grensstrook|strook|regio|regio'?s"
   + '|provincie|provincies|deelstaat|deelstaten|stad|steden|eiland|eilanden|district|districten'
   + '|departement|departementen|gouvernement|gouvernementen|kust|vallei|delta|schiereiland'
@@ -158,12 +163,7 @@ const EIGEN_GEBIED = new RegExp("\\b(?:gebied|gebieden|grensgebied|grensgebieden
 
 function telGebieden(ruw) {
   const delen = ruw.replace(/\u2019/g, "'").split(/,\s*|\s+en\s+/).map((x) => x.trim()).filter(Boolean);
-  let n = 0;
-  let vorige = null;
-  for (const deel of delen) {
-    if (EIGEN_GEBIED.test(deel)) { n++; vorige = deel; continue; }
-    if (vorige && MEERVOUDWOORD.test(vorige) && !ORIENTATIEWOORD.test(vorige)) n++;
-  }
+  const n = delen.filter((deel) => EIGEN_GEBIED.test(deel)).length;
   return Math.max(n, 1);
 }
 
@@ -878,7 +878,7 @@ export function maakToetser(data) {
       if (gebiedenMatch) {
         const n = gebiedenMatch[1].split(/,|\sen\s/).map((s) => s.trim()).filter(Boolean).length;
         if (n > lim.gebieden.max_noemen) {
-          b.push(bevinding('gebieden-max-drie', ERNST.letop, 'MX, tab Koppen, rij In het kort',
+          b.push(bevinding('gebieden-max', ERNST.letop, 'MX, tab Koppen, rij In het kort',
             `Er worden ${n} gebieden genoemd. Noem er maximaal ${lim.gebieden.max_noemen} en verwijs daarna.`,
             { fragment: gebiedenMatch[0] }));
         }

@@ -746,19 +746,18 @@
     ],
     "zinnen": 94,
     "fout": 4,
-    "letop": 14,
+    "letop": 13,
     "linkzin": 2,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 14,
+      "let-op": 13,
       "link-zin": 2,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-variant": 1,
       "kleur-vervolg-bullet-kort": 1,
       "h4-niet-melden": 1,
@@ -776,13 +775,6 @@
       "aanhalingstekens": 3
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Verenigde Arabische Emiraten is geel."
-      },
       {
         "regel": "kleur-variant",
         "ernst": "fout",
@@ -2741,34 +2733,25 @@
       "geel"
     ],
     "zinnen": 63,
-    "fout": 2,
-    "letop": 5,
+    "fout": 1,
+    "letop": 4,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 2,
-      "let-op": 5,
+      "fout": 1,
+      "let-op": 4,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "h4-niet-melden": 1,
-      "intro-vaste-tekst": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 4,
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Bahama's is geel."
-      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -2776,14 +2759,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Bahama’s? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Bahama's? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "woord-onbekend",
@@ -4285,19 +4260,18 @@
     ],
     "zinnen": 60,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 3,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 3,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "actueel-max-woorden": 1,
       "bagage-heen": 1,
       "rijbewijs-anwb": 1,
@@ -4306,13 +4280,6 @@
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Centraal-Afrikaanse Republiek is rood."
-      },
       {
         "regel": "actueel-max-woorden",
         "ernst": "fout",
@@ -5242,19 +5209,18 @@
     ],
     "zinnen": 74,
     "fout": 2,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 0,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 0,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "zin-max-woorden": 1,
@@ -5262,13 +5228,6 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Ivoorkust is oranje."
-      },
       {
         "regel": "kleur-variant",
         "ernst": "fout",
@@ -5974,39 +5933,22 @@
       "groen"
     ],
     "zinnen": 52,
-    "fout": 1,
-    "letop": 1,
+    "fout": 0,
+    "letop": 0,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 1,
+      "fout": 0,
+      "let-op": 0,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
-      "intro-vaste-tekst": 1,
       "zin-max-woorden": 2
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Cookeilanden is groen."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Cookeilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Cookeilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
@@ -6301,34 +6243,25 @@
       "geel"
     ],
     "zinnen": 67,
-    "fout": 3,
-    "letop": 4,
+    "fout": 2,
+    "letop": 3,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 3,
-      "let-op": 4,
+      "fout": 2,
+      "let-op": 3,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "intro-vaste-tekst": 1,
       "zin-max-woorden": 5,
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Comoren is geel."
-      },
       {
         "regel": "kleur-variant",
         "ernst": "fout",
@@ -6344,14 +6277,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Comoren? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Comoren? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "zin-max-woorden",
@@ -7057,33 +6982,24 @@
       "groen"
     ],
     "zinnen": 57,
-    "fout": 2,
-    "letop": 3,
+    "fout": 1,
+    "letop": 2,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 2,
-      "let-op": 3,
+      "fout": 1,
+      "let-op": 2,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "h4-kop-variant": 1,
-      "intro-vaste-tekst": 1,
       "nood-contactcenter": 1,
       "zin-max-woorden": 4
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Kaaimaneilanden is groen."
-      },
       {
         "regel": "h4-kop-variant",
         "ernst": "let-op",
@@ -7092,14 +7008,6 @@
         "fragment": "Contactgegevens Nederlandse ambassade",
         "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
         "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Kaaimaneilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Kaaimaneilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "nood-contactcenter",
@@ -7813,22 +7721,20 @@
       "geel"
     ],
     "zinnen": 64,
-    "fout": 1,
-    "letop": 4,
+    "fout": 0,
+    "letop": 3,
     "linkzin": 3,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
-      "fout": 1,
-      "let-op": 4,
+      "fout": 0,
+      "let-op": 3,
       "link-zin": 3,
       "info": 1,
       "twijfel": 3
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "intro-vaste-tekst": 1,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 4,
@@ -7836,27 +7742,12 @@
     },
     "bevindingen": [
       {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Dominicaanse Republiek is geel."
-      },
-      {
         "regel": "h3-alleen-bij-uitzondering",
         "ernst": "info",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Dominicaanse Republiek? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Dominicaanse Republiek? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -9654,39 +9545,22 @@
       "groen"
     ],
     "zinnen": 32,
-    "fout": 1,
-    "letop": 2,
+    "fout": 0,
+    "letop": 1,
     "linkzin": 0,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 2,
+      "fout": 0,
+      "let-op": 1,
       "link-zin": 0,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
-      "intro-vaste-tekst": 1,
       "zin-max-woorden": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Faeröer is groen."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Faeröer? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Faeröer? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -9927,19 +9801,18 @@
     ],
     "zinnen": 59,
     "fout": 1,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 3,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 3,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "intro-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
       "zin-max-woorden": 7,
@@ -9950,13 +9823,6 @@
       "percentage-notatie": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Verenigd Koninkrijk is groen."
-      },
       {
         "regel": "intro-vaste-tekst",
         "ernst": "fout",
@@ -12521,20 +12387,19 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 44,
+    "letop": 42,
     "linkzin": 5,
     "twijfel": 10,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 44,
+      "let-op": 42,
       "link-zin": 5,
       "info": 3,
       "twijfel": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-aanduiding": 2,
       "kleur-variant": 1,
       "kleur-eerste-bullet-voluit": 1,
       "h3-alleen-bij-uitzondering": 1,
@@ -12564,26 +12429,12 @@
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
       {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor India is rood."
-      },
-      {
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor India is oranje."
       },
       {
         "regel": "kleur-eerste-bullet-voluit",
@@ -14262,19 +14113,18 @@
     ],
     "zinnen": 98,
     "fout": 1,
-    "letop": 15,
+    "letop": 14,
     "linkzin": 2,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 15,
+      "let-op": 14,
       "link-zin": 2,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-eerste-bullet-voluit": 1,
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
@@ -14286,13 +14136,6 @@
       "aanhalingstekens": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Jordanië is oranje."
-      },
       {
         "regel": "kleur-eerste-bullet-voluit",
         "ernst": "let-op",
@@ -14451,19 +14294,18 @@
     ],
     "zinnen": 71,
     "fout": 3,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-variant": 1,
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
@@ -14476,13 +14318,6 @@
       "eenheden-voluit": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Japan is rood."
-      },
       {
         "regel": "kleur-variant",
         "ernst": "fout",
@@ -15023,20 +14858,19 @@
     ],
     "zinnen": 113,
     "fout": 2,
-    "letop": 21,
+    "letop": 20,
     "linkzin": 0,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 21,
+      "let-op": 20,
       "link-zin": 0,
       "info": 1,
       "twijfel": 8
     },
     "perRegel": {
       "kleur-variant": 2,
-      "kleur-aanduiding": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
@@ -15053,13 +14887,6 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Cambodja is oranje."
       },
       {
         "regel": "kleur-variant",
@@ -15505,19 +15332,18 @@
     ],
     "zinnen": 84,
     "fout": 1,
-    "letop": 13,
+    "letop": 12,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 13,
+      "let-op": 12,
       "link-zin": 3,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-variant": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
@@ -15527,13 +15353,6 @@
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Zuid-Korea is geel."
-      },
       {
         "regel": "kleur-variant",
         "ernst": "fout",
@@ -17795,24 +17614,22 @@
       "geel"
     ],
     "zinnen": 91,
-    "fout": 3,
-    "letop": 7,
+    "fout": 2,
+    "letop": 6,
     "linkzin": 5,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 3,
-      "let-op": 7,
+      "fout": 2,
+      "let-op": 6,
       "link-zin": 5,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-aanduiding": 1,
       "h4-niet-melden": 1,
       "h4-kop-variant": 1,
-      "intro-vaste-tekst": 1,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 7
     },
@@ -17830,13 +17647,6 @@
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
       {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Maldiven is geel."
-      },
-      {
         "regel": "h4-niet-melden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, richtlijn Niet melden",
@@ -17852,14 +17662,6 @@
         "fragment": "Nood- of crisissituatie?",
         "verwacht": "Nood- of crisissituatie",
         "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Maldiven? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Maldiven? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -18263,23 +18065,21 @@
       "groen"
     ],
     "zinnen": 58,
-    "fout": 4,
-    "letop": 4,
+    "fout": 3,
+    "letop": 3,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 4,
-      "let-op": 4,
+      "fout": 3,
+      "let-op": 3,
       "link-zin": 2,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "h3-vaste-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "intro-vaste-tekst": 1,
       "bagage-terug": 1,
       "tekst-spatie-leesteken": 2,
       "zin-frequentiewoord": 1,
@@ -18287,13 +18087,6 @@
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Marshalleilanden is groen."
-      },
       {
         "regel": "h3-vaste-kop",
         "ernst": "fout",
@@ -18309,14 +18102,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Marshalleilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Marshalleilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "bagage-terug",
@@ -21257,21 +21042,19 @@
       "geel"
     ],
     "zinnen": 98,
-    "fout": 3,
-    "letop": 10,
+    "fout": 2,
+    "letop": 9,
     "linkzin": 1,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 3,
-      "let-op": 10,
+      "fout": 2,
+      "let-op": 9,
       "link-zin": 1,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
-      "kleur-vaste-tekst": 1,
       "kleur-variant": 1,
       "h3-vaste-kop": 1,
       "regionaal-gebiedenzin": 1,
@@ -21283,20 +21066,6 @@
       "aanhalingstekens": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Oman is rood."
-      },
-      {
-        "regel": "kleur-vaste-tekst",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Bij kleurcode rood ontbreekt de vaste handelingsinstructie.",
-        "verwacht": "De kleurcode van het reisadvies voor Oman is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt."
-      },
       {
         "regel": "kleur-variant",
         "ernst": "fout",
@@ -21801,22 +21570,20 @@
       "groen"
     ],
     "zinnen": 53,
-    "fout": 2,
-    "letop": 5,
+    "fout": 1,
+    "letop": 4,
     "linkzin": 0,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
-      "fout": 2,
-      "let-op": 5,
+      "fout": 1,
+      "let-op": 4,
       "link-zin": 0,
       "info": 1,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "h3-niet-melden": 1,
-      "intro-vaste-tekst": 1,
       "reisverzekering-vaste-tekst": 1,
       "bagage-heen": 1,
       "criminaliteit-themapagina": 1,
@@ -21825,27 +21592,12 @@
     },
     "bevindingen": [
       {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Pitcairneilanden is groen."
-      },
-      {
         "regel": "h3-niet-melden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, richtlijn Niet melden",
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Pitcairneilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Pitcairneilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "reisverzekering-vaste-tekst",
@@ -22243,13 +21995,13 @@
       "geel"
     ],
     "zinnen": 146,
-    "fout": 2,
+    "fout": 1,
     "letop": 22,
     "linkzin": 4,
     "twijfel": 11,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 1,
       "let-op": 22,
       "link-zin": 4,
       "info": 1,
@@ -22258,7 +22010,6 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "intro-vaste-tekst": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 4,
       "zin-frequentiewoord": 9,
@@ -22287,14 +22038,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Filipijnen? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Filipijnen? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "rubrieken-max",
@@ -23585,13 +23328,13 @@
       "geel"
     ],
     "zinnen": 94,
-    "fout": 5,
+    "fout": 4,
     "letop": 10,
     "linkzin": 6,
     "twijfel": 2,
     "info": 2,
     "perErnst": {
-      "fout": 5,
+      "fout": 4,
       "let-op": 10,
       "link-zin": 6,
       "info": 2,
@@ -23601,7 +23344,6 @@
       "kleur-variant": 2,
       "regionaal-kleur-tekst": 2,
       "h4-kop-variant": 1,
-      "intro-vaste-tekst": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -23651,14 +23393,6 @@
         "fragment": "Contactgegevens Nederlandse vertegenwoordiging in geval van nood",
         "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
         "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Palestijnse Gebieden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Palestijnse Gebieden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "rubrieken-max",
@@ -24939,19 +24673,18 @@
     ],
     "zinnen": 86,
     "fout": 1,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 1,
       "info": 3,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-variant": 1,
       "regionaal-kleur-kop": 1,
       "bagage-heen": 1,
@@ -24965,13 +24698,6 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Saoedi-Arabië is oranje."
-      },
       {
         "regel": "kleur-variant",
         "ernst": "fout",
@@ -25540,19 +25266,18 @@
     ],
     "zinnen": 54,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 1,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 1,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "h4-niet-melden": 1,
       "titel-leestekens": 1,
       "zin-max-woorden": 1,
@@ -25560,13 +25285,6 @@
       "telefoon-notatie": 2
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Spitsbergen (Svalbard) is groen."
-      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -25625,24 +25343,22 @@
       "geel"
     ],
     "zinnen": 92,
-    "fout": 3,
-    "letop": 5,
+    "fout": 2,
+    "letop": 4,
     "linkzin": 4,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 3,
-      "let-op": 5,
+      "fout": 2,
+      "let-op": 4,
       "link-zin": 4,
       "info": 1,
       "twijfel": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-aanduiding": 1,
       "h3-vaste-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "intro-vaste-tekst": 1,
       "zin-frequentiewoord": 3,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 1,
@@ -25662,13 +25378,6 @@
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
       },
       {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Salomonseilanden is geel."
-      },
-      {
         "regel": "h3-vaste-kop",
         "ernst": "fout",
         "bron": "SJ, blok Risico dat van toepassing is; MX, tab Koppen",
@@ -25683,14 +25392,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Salomonseilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Salomonseilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -27035,34 +26736,25 @@
       "geel"
     ],
     "zinnen": 61,
-    "fout": 2,
-    "letop": 4,
+    "fout": 1,
+    "letop": 3,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 2,
-      "let-op": 4,
+      "fout": 1,
+      "let-op": 3,
       "link-zin": 3,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "h4-niet-melden": 1,
-      "intro-vaste-tekst": 1,
       "titel-leestekens": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Eswatini (Swaziland) is geel."
-      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -27070,14 +26762,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Kan evt. bij lokale wetten als het echt moet."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar Eswatini? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Eswatini (Swaziland)? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "titel-leestekens",
@@ -27226,39 +26910,22 @@
       "geel"
     ],
     "zinnen": 48,
-    "fout": 1,
-    "letop": 2,
+    "fout": 0,
+    "letop": 1,
     "linkzin": 1,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 2,
+      "fout": 0,
+      "let-op": 1,
       "link-zin": 1,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
-      "intro-vaste-tekst": 1,
       "zin-max-woorden": 2
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Seychellen is geel."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Seychellen? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Seychellen? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
@@ -27419,13 +27086,13 @@
       "groen"
     ],
     "zinnen": 56,
-    "fout": 4,
+    "fout": 3,
     "letop": 3,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 4,
+      "fout": 3,
       "let-op": 3,
       "link-zin": 2,
       "info": 0,
@@ -27433,7 +27100,6 @@
     },
     "perRegel": {
       "kleur-variant": 2,
-      "intro-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 4,
       "link-plakt-aan-woord": 1
@@ -27454,14 +27120,6 @@
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er.",
         "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Turks- en Caicoseilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Turks- en Caicoseilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -27685,20 +27343,19 @@
     ],
     "zinnen": 82,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 3,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 3,
       "info": 2,
       "twijfel": 1
     },
     "perRegel": {
       "kleur-variant": 1,
-      "kleur-aanduiding": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 4,
@@ -27713,13 +27370,6 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Togo is oranje."
       },
       {
         "regel": "bagage-heen",
@@ -28340,39 +27990,22 @@
       "groen"
     ],
     "zinnen": 41,
-    "fout": 1,
-    "letop": 3,
+    "fout": 0,
+    "letop": 2,
     "linkzin": 0,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 3,
+      "fout": 0,
+      "let-op": 2,
       "link-zin": 0,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
-      "intro-vaste-tekst": 1,
       "zin-max-woorden": 2
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Tokelau-eilanden is groen."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Tokelau-eilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Tokelau-eilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -30137,20 +29770,19 @@
     ],
     "zinnen": 75,
     "fout": 3,
-    "letop": 12,
+    "letop": 11,
     "linkzin": 4,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 12,
+      "let-op": 11,
       "link-zin": 4,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-aanduiding": 1,
       "h4-niet-melden": 1,
       "intro-vaste-tekst": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -30174,13 +29806,6 @@
           "Lhbtiq+ (102 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
-      },
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Verenigde Staten van Amerika is groen."
       },
       {
         "regel": "h4-niet-melden",
@@ -30807,39 +30432,22 @@
       "groen"
     ],
     "zinnen": 54,
-    "fout": 1,
-    "letop": 4,
+    "fout": 0,
+    "letop": 3,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 4,
+      "fout": 0,
+      "let-op": 3,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
-      "intro-vaste-tekst": 1,
       "zin-max-woorden": 5
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Britse Maagdeneilanden is groen."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Britse Maagdeneilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Britse Maagdeneilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -30893,21 +30501,19 @@
       "groen"
     ],
     "zinnen": 53,
-    "fout": 1,
-    "letop": 8,
+    "fout": 0,
+    "letop": 7,
     "linkzin": 4,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 8,
+      "fout": 0,
+      "let-op": 7,
       "link-zin": 4,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
-      "intro-vaste-tekst": 1,
       "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 8,
@@ -30915,21 +30521,6 @@
       "link-tekstlengte": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode groen wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Amerikaanse Maagdeneilanden is groen."
-      },
-      {
-        "regel": "intro-vaste-tekst",
-        "ernst": "fout",
-        "bron": "SJ, blok Introductie",
-        "boodschap": "De intro wijkt af van de vaste introductietekst.",
-        "fragment": "Reist u naar de Amerikaanse Maagdeneilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis.",
-        "verwacht": "Reist u naar Amerikaanse Maagdeneilanden? Lees welke veiligheidsrisico’s er zijn, wat u kunt doen in geval van nood, en hoe u zich voorbereidt op uw reis."
-      },
       {
         "regel": "rijbewijs-anwb",
         "ernst": "let-op",

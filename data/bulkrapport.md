@@ -4,10 +4,10 @@ Gedraaid op 2026-09-19 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **66** van de 226 adviezen hebben geen enkele harde fout.
+- **73** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
-- Gemiddeld 1.2 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **216** van de 3032 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
+- **216** van de 2983 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,8 +25,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 312 | 160 |
-| geel/oranje — let op | 1577 | 220 |
+| rood — fout | 293 | 153 |
+| geel/oranje — let op | 1547 | 219 |
 | lichtblauw — lange zin met link | 542 | 201 |
 | grijs — ter overweging | 129 | 93 |
 | roze — twijfeltaal | 472 | 164 |
@@ -49,8 +49,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `rubrieken-max` | 37 | 37 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
-| `kleur-aanduiding` | 31 | 32 |
-| `intro-vaste-tekst` | 26 | 26 |
 | `h3-niet-melden` | 25 | 25 |
 | `rubriek-vrij-te-hoog` | 23 | 23 |
 | `rubrieken-volgorde` | 22 | 22 |
@@ -62,6 +60,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `h3-vaste-kop` | 11 | 11 |
 | `tekst-spatie-leesteken` | 10 | 11 |
 | `actueel-max-woorden` | 10 | 10 |
+| `intro-vaste-tekst` | 8 | 8 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
@@ -89,17 +88,18 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `reisverzekering-oranje-rood` | 3 | 3 |
 | `tekst-cms-rest` | 2 | 2 |
 | `kleur-formulering-verboden` | 2 | 2 |
-| `kleur-vaste-tekst` | 2 | 2 |
 | `vaste-tekst-land-leeg` | 2 | 2 |
 | `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |
 | `telefoon-notatie` | 2 | 3 |
 | `criminaliteit-themapagina` | 2 | 2 |
 | `genderneutraal` | 2 | 3 |
+| `kleur-aanduiding` | 2 | 2 |
 | `regionaal-kleur-kop` | 2 | 2 |
 | `informatieservice-vaste-tekst` | 1 | 1 |
 | `vaccinaties-ggd` | 1 | 1 |
 | `vaccinaties-lcr` | 1 | 1 |
+| `kleur-vaste-tekst` | 1 | 1 |
 | `landnaam-schrijfwijze` | 1 | 1 |
 | `percentage-notatie` | 1 | 1 |
 | `valuta-notatie` | 1 | 1 |

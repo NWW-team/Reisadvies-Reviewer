@@ -730,3 +730,42 @@ test('lijdende vorm: scheidbaar werkwoord wordt herkend', () => {
   assert.equal(b.length, 1);
   assert.match(b[0].boodschap, /opgestuurd/);
 });
+
+/**
+ * Hoe een advies zijn eigen land mag noemen. Het cms-veld draagt de administratieve naam; de tekst
+ * mag daar op drie manieren van afwijken (lidwoord, haakjes, afkorting) en verder niet.
+ */
+test('kleuraanduiding: een lidwoord voor de landnaam mag', () => {
+  const ids = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor de Seychellen '
+    + 'is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich mee.</li></ul>',
+  { land: 'Seychellen', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});
+
+test('kleuraanduiding: de afkorting uit de landenlijst mag', () => {
+  const ids = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor het VK '
+    + 'is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich mee.</li></ul>',
+  { land: 'Verenigd Koninkrijk', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});
+
+test('kleuraanduiding: een andere schrijfwijze van de landnaam blijft een melding', () => {
+  const ids = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Naoero '
+    + 'is groen. U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich mee.</li></ul>',
+  { land: 'Nauru', kleurcodes: ['groen'] });
+  assert.ok(ids.includes('kleur-aanduiding'), 'Naoero wijkt af van Nauru en hoort gemeld te worden');
+});
+
+test('kleuraanduiding: een dubbele punt voor de opsomming van gebieden mag', () => {
+  const ids = idsVan('<h2>In het kort</h2><ul><li>Kleurcode groen geldt voor: het hele land. '
+    + 'U kunt hierheen reizen. Let op: reizen brengt altijd risico&#39;s met zich mee.</li></ul>',
+  { land: 'Tsjechië', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+});
+
+test('de kleur van een ander land telt niet als kleurcode van dit advies', () => {
+  const ids = idsVan(advies('<p>Het reisadvies voor Jemen is rood: reis hier niet naartoe.</p>',
+    { land: 'Oman' }), { land: 'Oman', kleurcodes: ['groen'] });
+  assert.ok(!ids.includes('kleur-aanduiding'), 'rood is de kleur van de buurman, niet van dit advies');
+  assert.ok(!ids.includes('kleur-vaste-tekst'));
+});

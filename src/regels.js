@@ -49,10 +49,39 @@ const zonderApostrof = (s) => s.replace(/[\u2019']/g, (m, i, str) =>
       (/\w/.test(str[i - 1] || '') && /\w/.test(str[i + 1] || '')) || /^s\b/.test(str.slice(i + 1)) ? '' : m);
 
 
+/**
+ * Het patroon voor {land}: hoe een advies zijn eigen land in een vaste zin mag noemen.
+ *
+ * Het cms-veld draagt de administratieve naam, de tekst gebruikt de leesbare. Twee verschillen zijn
+ * grammatica en geen keuze van de redacteur, en die staan we toe:
+ *
+ *   het lidwoord   "voor de Bahama's", "voor de Seychellen", "voor het VK"
+ *   de haakjes     "Eswatini (Swaziland)" in het cms, "Eswatini" in de tekst
+ *
+ * Daarnaast de vier afkortingen die de adviezen echt gebruiken, uit het veld `kort` in
+ * regels/landen.json: VK, VS, VAE en DRC. Dat is een gesloten lijst, geen jokerteken.
+ *
+ * Verder niets. Schrijft een advies "Naoero" waar het cms "Nauru" zegt, dan is dat een verschil dat
+ * iemand gekozen heeft, en dan hoort het gemeld te worden.
+ */
+function landPatroon(land, kort) {
+  const kaal = norm(land).replace(/\s*\([^)]*\)\s*$/, '').trim();
+  const afk = (kort || []).map(norm);
+  const vormen = [...new Set([norm(land), kaal, ...afk].filter(Boolean))].map(esc);
+  return '(?:de |het )?(?:' + vormen.join('|') + ')';
+}
+
+/**
+ * Het gebiedendeel opent vaak een opsomming: "Kleurcode rood geldt voor:" met de gebieden eronder
+ * als bullets. Die dubbele punt is leesteken, geen andere formulering, dus we laten hem toe.
+ */
+const gebiedenPatroon = (body) => ':? ' + body;
+
 /** Maakt van een sjabloon met {land}/{gebieden} een regex die tegen genormaliseerde tekst matcht. */
-function sjabloonRegex(sjabloon, land) {
+function sjabloonRegex(sjabloon, land, kort) {
   let p = esc(norm(sjabloon));
-  p = p.replace(/\\\{land\\\}/g, land ? esc(norm(land)) : "[a-z\\u00c0-\\u017f' -]{2,40}");
+  p = p.replace(/\\\{land\\\}/g, land ? landPatroon(land, kort) : "[a-z\\u00c0-\\u017f' -]{2,40}");
+  p = p.replace(/ \\\{gebieden\\\}/g, gebiedenPatroon('[^.]{2,120}'));
   p = p.replace(/\\\{gebieden\\\}/g, "[^.]{2,120}");
   return new RegExp(p);
 }
@@ -61,10 +90,11 @@ function sjabloonRegex(sjabloon, land) {
  * Als sjabloonRegex, maar zonder ankers: toetst of een vaste tekst érgens in een stuk tekst
  * voorkomt. Kent naast {land} en {gebieden} ook {kleur}, want het sjabloon gebruikt die.
  */
-function vasteTekstRegex(sjabloon, land) {
+function vasteTekstRegex(sjabloon, land, kort) {
   let p = esc(norm(sjabloon));
-  p = p.replace(/\\\{land\\\}/g, land ? '(?:' + esc(norm(land)) + ')' : "[^.?!]{2,45}");
+  p = p.replace(/\\\{land\\\}/g, land ? landPatroon(land, kort) : "[^.?!]{2,45}");
   p = p.replace(/\\\{kleur\\\}/g, '(?:rood|oranje|geel|groen)');
+  p = p.replace(/ \\\{gebieden\\\}/g, gebiedenPatroon('[^.?!]{2,160}'));
   p = p.replace(/\\\{gebieden\\\}/g, '[^.?!]{2,160}');
   return new RegExp(p);
 }
@@ -189,6 +219,15 @@ export function maakToetser(data) {
   const landOpKale = new Map();
   for (const l of ((data.landen && data.landen.landen) || [])) {
     if (l.naam && zonderTekens(l.naam) !== l.naam.toLowerCase()) landOpKale.set(zonderTekens(l.naam), l.naam);
+  }
+
+  /**
+   * De afkortingen die een advies voor zijn eigen land mag gebruiken, op de naam uit het cms-veld.
+   * Zie landPatroon: een gesloten lijstje van vier, niet een jokerteken.
+   */
+  const kortOpLand = new Map();
+  for (const l of ((data.landen && data.landen.landen) || [])) {
+    if (l.naam && l.kort && l.kort.length) kortOpLand.set(norm(l.naam), l.kort);
   }
 
   /**
@@ -397,6 +436,8 @@ export function maakToetser(data) {
     const b = [];
     const tekst = doc.volledigeTekst || '';
     const genorm = norm(tekst);
+    // De afkortingen die dit land in een vaste zin mag dragen ("het VK", "de VAE"); meestal geen.
+    const kortLand = kortOpLand.get(norm(doc.land || '')) || [];
 
     // "In het kort" is geen introductie: daar gelden eigen regels voor. Staat de eerste alinea
     // op de plek van het introveld maar begint hij met een vaste kop, dan hebben we het
@@ -439,12 +480,17 @@ export function maakToetser(data) {
     // ---------- kleurcodes ----------
     // De matrix laat meerdere manieren toe om de kleur aan te duiden (kolom NB), maar de
     // handelingsinstructie erachter ligt vast. Die twee toetsen we daarom apart.
-    for (const kleur of kleurenInTekst) {
+    //
+    // We lopen langs de kleuren van het advies zelf, niet langs de kleuren die ergens in de tekst
+    // staan. Oman verwijst naar het rode reisadvies voor Jemen; dat is de kleur van de buurman, en
+    // Oman hoort daar geen vaste rode tekst bij te zetten. Ontbreekt het cms-veld (geplakte tekst),
+    // dan valt kleurenVanAdvies terug op wat er in de tekst staat en blijft de toets wat hij was.
+    for (const kleur of kleurenVanAdvies) {
       const k = kleurcodes.kleuren[kleur];
       if (!k) continue;
 
       const aangeduid = (kleurcodes.aanduiding_sjablonen || []).some((sj) =>
-        sjabloonRegex(sj.replace(/\{kleur\}/g, kleur), doc.land).test(genorm));
+        sjabloonRegex(sj.replace(/\{kleur\}/g, kleur), doc.land, kortLand).test(genorm));
       if (!aangeduid) {
         b.push(bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
           `Kleurcode ${kleur} wordt niet op een van de vaste manieren aangeduid.`,
@@ -799,8 +845,8 @@ export function maakToetser(data) {
 
     if (introIsVeld0 && intro) {
       const introGenorm = norm(intro);
-      const heeftStandaard = vasteTekstRegex(sj.intro.standaard, doc.land).test(introGenorm);
-      const heeftRood = vasteTekstRegex(sj.intro.alleen_rood, doc.land).test(introGenorm);
+      const heeftStandaard = vasteTekstRegex(sj.intro.standaard, doc.land, kortLand).test(introGenorm);
+      const heeftRood = vasteTekstRegex(sj.intro.alleen_rood, doc.land, kortLand).test(introGenorm);
       const verwachteIntro = (alleenRood ? sj.intro.alleen_rood : sj.intro.standaard)
         .replace(/\{land\}/g, doc.land || 'land X');
       if (!heeftStandaard && !heeftRood) {
@@ -863,7 +909,7 @@ export function maakToetser(data) {
       if (vt.kleur && !vt.kleur.some((k) => kleurenInTekst.includes(k))) continue;
       if (vt.alleen_rood && !alleenRood) continue;
 
-      const kern = vt.kern ? new RegExp(vt.kern, 'i') : vasteTekstRegex(vt.zin, doc.land);
+      const kern = vt.kern ? new RegExp(vt.kern, 'i') : vasteTekstRegex(vt.zin, doc.land, kortLand);
       if (kern.test(bereikGenorm)) continue;
 
       // Wijkt de tekst af, dan staat er dus wél iets — alleen anders. Zoek de zin op waar de

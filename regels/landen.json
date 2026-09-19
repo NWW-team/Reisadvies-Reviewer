@@ -226,7 +226,10 @@
     {
       "iso": "COD",
       "locationKey": "congo-democratische-republiek",
-      "naam": "Congo, Democratische Republiek"
+      "naam": "Congo, Democratische Republiek",
+      "kort": [
+        "DRC"
+      ]
     },
     {
       "iso": "COK",
@@ -1050,17 +1053,26 @@
     {
       "iso": "ARE",
       "locationKey": "verenigde-arabische-emiraten",
-      "naam": "Verenigde Arabische Emiraten"
+      "naam": "Verenigde Arabische Emiraten",
+      "kort": [
+        "VAE"
+      ]
     },
     {
       "iso": "GBR",
       "locationKey": "verenigd-koninkrijk",
-      "naam": "Verenigd Koninkrijk"
+      "naam": "Verenigd Koninkrijk",
+      "kort": [
+        "VK"
+      ]
     },
     {
       "iso": "USA",
       "locationKey": "verenigde-staten-van-amerika",
-      "naam": "Verenigde Staten van Amerika"
+      "naam": "Verenigde Staten van Amerika",
+      "kort": [
+        "VS"
+      ]
     },
     {
       "iso": "URY",
@@ -1137,5 +1149,6 @@
       "locationKey": "kosovo"
     }
   ],
-  "_naam_toelichting": "naam is de schrijfwijze zoals het cms hem voert (veld location), overgenomen uit het opgehaalde corpus. Daarmee kan de tool zien of een landnaam in de tekst goed gespeld staat: 'Tsjechie' hoort 'Tsjechië' te zijn. Landen zonder naam zijn nog niet opgehaald; scripts/fetch-corpus.mjs vult ze aan."
+  "_naam_toelichting": "naam is de schrijfwijze zoals het cms hem voert (veld location), overgenomen uit het opgehaalde corpus. Daarmee kan de tool zien of een landnaam in de tekst goed gespeld staat: 'Tsjechie' hoort 'Tsjechië' te zijn. Landen zonder naam zijn nog niet opgehaald; scripts/fetch-corpus.mjs vult ze aan.",
+  "_kort_toelichting": "kort zijn de afkortingen die de adviezen zelf gebruiken waar het cms-veld de volledige naam draagt: \"voor het VK\", \"voor de rest van de VAE\". Het zijn er vier, geteld over het hele corpus (VS 54x, DRC 47x, VK 34x, VAE 31x); andere afkortingen achter een lidwoord zijn instanties (de ANWB, de GGD, het RIVM), geen landen. De lijst is met opzet gesloten: een land dat hier niet staat, hoort in een vaste zin voluit te staan."
 }

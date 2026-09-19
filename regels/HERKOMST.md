@@ -686,3 +686,63 @@ de lopende tekst erbij — die zag de oude regel helemaal niet.
 **Vals alarm.** Klopt een woord wel? Dan hoort het in `regels/uitzonderingen.txt`. Die lijst hoort
 bij de webredactie, niet bij de techniek, en groeit met het gebruik. De basis komt uit
 SpellingSpeurneus; wat daarna is gemeten over de reisadviezen staat er onderaan bij.
+
+## Hoe een advies zijn eigen land mag noemen (19 september 2026)
+
+Martijn stuurde het Verenigd Koninkrijk als voorbeeld: *"De kleurcode van het reisadvies voor het
+VK is groen"* werd gemeld, terwijl die zin gewoon klopt. Zijn vraag: *"In sommige gevallen heeft
+het land dus een lidwoord. Dus dan mag dat wel ervoor staan. Is daar iets op te bedenken?"*
+
+De oorzaak zat niet in de zin maar in de vergelijking. Het cms-veld `location` draagt de
+administratieve naam — *Verenigd Koninkrijk*, *Bahama's*, *Eswatini (Swaziland)* — en de tool eiste
+die naam letterlijk in de vaste zin. Drie verschillen zijn daarom vrijgegeven, want het zijn
+verschillen van taal en niet van redactie:
+
+| wat | voorbeeld | waarom |
+|---|---|---|
+| het lidwoord | *voor de Seychellen*, *voor het VK* | grammatica; het cms-veld draagt nooit een lidwoord |
+| de haakjes | cms *Eswatini (Swaziland)*, tekst *Eswatini* | de haakjes zijn een administratieve toevoeging |
+| de afkorting | *het VK*, *de VS*, *de VAE*, *de DRC* | vier stuks, uit het nieuwe veld `kort` in `landen.json` |
+
+Die vier afkortingen zijn geteld, niet bedacht: over het hele corpus staat *de VS* 54×, *de DRC*
+47×, *het VK* 34× en *de VAE* 31×. Alle andere afkortingen achter een lidwoord zijn instanties —
+*de ANWB* (225×), *de GGD* (140×), *het USGS* (53×), *het RIVM* (19×) — geen landen. De lijst is
+met opzet gesloten: een land dat er niet in staat, hoort voluit in een vaste zin.
+
+**Verder niets.** Schrijft Nauru *"voor Naoero"* waar het cms *Nauru* zegt, dan is dat een keuze van
+een redacteur en geen taalregel, en die blijft gemeld. Dat is ook waarom hier géén jokerteken is
+gebruikt: de vorm `De kleurcode van het reisadvies voor {gebieden} is {kleur}` bracht het aantal
+meldingen in één klap van 32 naar 2, maar `{gebieden}` matcht álles — dus ook *Naoero* en ook een
+verkeerd land. Dat is precies het bezwaar dat Martijn op 19 september tegen de ruime linktekst-
+vrijstelling maakte, en het geldt hier net zo goed.
+
+**Twee dingen die meeliften.**
+
+*De dubbele punt.* De gebiedenopsomming opent vaak met een dubbele punt: *"Kleurcode rood geldt
+voor:"* met de gebieden eronder als bullets (India). Dat is een leesteken, geen andere formulering,
+dus het patroon laat hem toe waar `{gebieden}` op een spatie volgt.
+
+*De kleur van de buurman.* Oman verwijst naar het rode reisadvies voor Jemen. De tool zag daar
+kleurcode rood in de tekst en eiste vervolgens van Oman de hele rode vaste tekst. De kleurcodeloop
+kijkt nu naar de kleuren van het advies zelf — het cms-veld — en niet naar elke kleur die ergens in
+de lopende tekst valt. Ontbreekt dat veld (geplakte tekst), dan valt hij terug op de tekst en
+verandert er niets. Dezelfde redenering stond al in de code voor `kleurenVanAdvies`; hij gold alleen
+nog niet voor deze loop.
+
+**Gemeten over 226 adviezen:** `kleur-aanduiding` gaat van 32 naar 2 meldingen, `intro-vaste-tekst`
+van 26 naar 8, `kleur-vaste-tekst` van 2 naar 1. Totaal 3032 → 2983.
+
+Wat overblijft is echt:
+
+| land | wat er staat | wat eraan is |
+|---|---|---|
+| Nauru | *De kleurcode van het reisadvies voor Naoero is groen* | andere schrijfwijze dan het cms |
+| Zuid-Afrika | *De kleurcode **voor** het reisadvies voor Zuid-Afrika is geel* | moet *van het reisadvies* zijn |
+| Congo, de Republiek | cms *Congo, de Republiek*, tekst *de Republiek Congo* | omgedraaide naam |
+| VK / VS / VAE / DRC (intro) | *Reist u naar het Verenigd Koninkrijk (VK)? Bijvoorbeeld naar Engeland, Wales, Schotland of Noord-Ierland?* | een vaste zin met een toevoeging erin |
+| Mali | *veiligheidsrisico&#39;s* | html-code in de tekst |
+| Palau | *in geval van nood en hoe u zich voorbereidt* | komma ontbreekt |
+
+De vier intro-meldingen blijven bewust staan. Het zijn vaste zinnen met een zelfbedachte toevoeging,
+en dat is exact het geval waarvan Martijn zei: *"dan kan je beter maar die zin laten oppoppen. En
+dan vervolgens zeggen, nou hier is het toegestaan."*

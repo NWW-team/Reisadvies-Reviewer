@@ -811,3 +811,33 @@ wat er aan de hand is.
 
 **En passant gevonden:** Marokko schrijft *"Vor de rest van Marokko geldt kleurcode geel"*. Die
 typefout stond al in de tool, via `woord-onbekend`.
+
+### Nagekeken in de matrix zelf (19 september 2026)
+
+Martijn wilde het nazoeken; de matrix staat in deze repo, dus dat kon meteen. Tabblad
+*Kleurcode-teksten*, kolom *In het kort*, cel C3 (rij Geel):
+
+> **Volledig geel:**
+> De kleurcode van het reisadvies voor land X is geel. U kunt **erheen** reizen. Maar let op: er
+> zijn bijzondere veiligheidsrisico's.
+>
+> **Deels geel:**
+> Voor de gebieden X en Y/**de rest van land X** geldt kleurcode geel. U kunt **hierheen** reizen.
+> Maar let op: er zijn bijzondere veiligheidsrisico's.
+
+Cel C2 (Groen) is identiek opgebouwd. Dat beslist het, en scherper dan de telling alleen: de matrix
+noemt *"de rest van land X"* met zoveel woorden als onderdeel van de **deels**-variant. Precies die
+zin staat in de afwijkende adviezen — *"Voor de rest van Peru geldt kleurcode geel. U kunt erheen
+reizen."* — en daar hoort dus *hierheen*.
+
+De vier teksten in `regels/kleurcodes.json` zijn tegen de cellen C2 tot en met C5 gelegd en komen
+woord voor woord overeen, inclusief het detail dat het alternatief *"/de rest van land X"* alleen
+bij groen en geel staat en niet bij oranje en rood.
+
+`scripts/erheen-hierheen.mjs` schrijft de opschoonlijst naar `data/erheen-hierheen.md`: **20 zinnen
+in 19 adviezen**, één woord per zin. Het script leunt op hetzelfde cms-veld als de regel — één
+kleurcode betekent het hele land, meer kleurcodes betekent dat elke bullet over een deel gaat — en
+niet op hoe de zin toevallig loopt. Dat scheelt: de Verenigde Arabische Emiraten schrijven *"De
+kleurcode van het reisadvies voor de VAE is geel. U kunt erheen reizen"* terwijl geel daar alleen
+voor de rest van het land geldt. Op de zin alleen afgaand lijkt dat goed; met het cms-veld erbij is
+het de verkeerde variant.

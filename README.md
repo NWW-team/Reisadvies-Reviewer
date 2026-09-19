@@ -217,6 +217,7 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 | `scripts/fetch-corpus.mjs` | ophalen van de reisadviezen |
 | `scripts/bulk.mjs` | alle adviezen toetsen en een rapport schrijven |
 | `scripts/vaste-teksten-boven-de-norm.mjs` | welke voorgeschreven zinnen zelf niet binnen de schrijfwijzer passen |
+| `scripts/erheen-hierheen.mjs` | opschoonlijst: waar staat "erheen" waar "hierheen" hoort, en andersom |
 | `scripts/bouw-adviezen.mjs` | het corpus klaarzetten als `docs/adviezen/`, zodat alle landen in de lijst staan |
 | `data/corpus/` | 226 opgehaalde reisadviezen als XML |
 | `tests/` | per regel een fixture die faalt en een die slaagt |

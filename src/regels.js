@@ -531,18 +531,21 @@ export function maakToetser(data) {
 
   /** De vaste H2's staan in vraagvorm met de landnaam erin; 'in {land}' mag ook 'op {land}'
    *  zijn, want de schrijfwijzer kent die keuze per (ei)land. */
+  // De landnaam in de kop wijkt legitiem af van het location-veld: adviezen gebruiken
+  // afkortingen ("de VAE") en lidwoorden ("op de Bahama's"), en de schrijfwijzer laat per
+  // (ei)land in of op toe. Daarom een jokerteken in plaats van de exacte naam. Drie plekken
+  // hebben dit patroon nodig — isVasteH2, beginMetVasteH2 en de check dat alle vijf er zijn —
+  // en het staat daarom hier één keer.
+  function h2Patroon(sjabloon) {
+    return esc(norm(sjabloon))
+      .replace(/\\\?/g, '\\?')
+      .replace(/\b(in|naar) \\\{land\\\}/g, '(?:in|op|naar) [^?]{2,45}')
+      .replace(/\\\{land\\\}/g, '[^?]{2,45}');
+  }
+
   function isVasteH2(kop, land) {
     const n = norm(kop);
-    return matrix.h2_vast.some((sjabloon) => {
-      // De landnaam in de kop wijkt legitiem af van het location-veld: adviezen gebruiken
-      // afkortingen ("de VAE") en lidwoorden ("op de Bahama's"), en de schrijfwijzer laat
-      // per (ei)land in of op toe. Daarom een jokerteken in plaats van de exacte naam.
-      const p = esc(norm(sjabloon))
-        .replace(/\\\?/g, '\\?')
-        .replace(/\b(in|naar) \\\{land\\\}/g, '(?:in|op|naar) [^?]{2,45}')
-        .replace(/\\\{land\\\}/g, '[^?]{2,45}');
-      return new RegExp('^' + p + '$').test(n);
-    });
+    return matrix.h2_vast.some((sjabloon) => new RegExp('^' + h2Patroon(sjabloon) + '$').test(n));
   }
 
   /**
@@ -554,10 +557,7 @@ export function maakToetser(data) {
   function beginMetVasteH2(tekst) {
     const n = norm(tekst);
     return matrix.h2_vast.some((sjabloon) => {
-      const p = esc(norm(sjabloon))
-        .replace(/\\\?/g, '\\?')
-        .replace(/\b(in|naar) \\\{land\\\}/g, '(?:in|op|naar) [^?]{2,45}')
-        .replace(/\\\{land\\\}/g, '[^?]{2,45}');
+      const p = h2Patroon(sjabloon);
       // Geen \b: een vaste kop kan op een vraagteken eindigen, en daarna is er geen
       // woordgrens. Wel eisen dat er geen letter of cijfer op volgt, zodat "in het korter"
       // niet meetelt.
@@ -960,6 +960,30 @@ export function maakToetser(data) {
     // Welke niet-melden-onderwerpen al via een kop zijn gemeld. Staat er een blok over, dan is dat
     // de melding; elke zin daarbinnen nog eens noemen voegt niets toe.
     const nmGemeld = new Set();
+
+    // ---------- de vijf vaste H2's zijn er allemaal ----------
+    // h2-vast hieronder toetst of een aanwézige H2 klopt, maar zegt niets als een H2 er
+    // helemaal niet is. Bij geplakte platte tekst zonder opmaak ziet de parser geen koppen
+    // (doc.koppen is dan leeg) en bleef de tool stil, terwijl de matrix deze vijf koppen net zo
+    // vast voorschrijft als hun inhoud. Deze toets is dus juist bedoeld voor dat geval.
+    //
+    // Alleen als er ook echt minder H2's zijn dan de vijf vereiste: staan er al vijf, dan is een
+    // "ontbrekende" kop in werkelijkheid een aanwezige kop met de verkeerde tekst, en dat is het
+    // terrein van h2-vast hieronder — die geeft de precieze foutieve tekst als fragment, wat
+    // bruikbaarder is dan hier nog eens "ontbreekt" roepen over hetzelfde probleem. Gemeten:
+    // Amerikaans-Samoa schrijft "Wat kunt u doen" i.p.v. "Wat kan ik doen", Mauritius "Hoe bereid
+    // ik mijn reis voor naar Mauritius?" i.p.v. "... naar Mauritius voor?" -- zonder deze grens
+    // meldden beide regels hetzelfde tweemaal.
+    const h2Koppen = doc.koppen.filter((k) => k.niveau === 2).map((k) => k.tekst);
+    if (h2Koppen.length < matrix.h2_vast.length) {
+      for (const sjabloon of matrix.h2_vast) {
+        if (!h2Koppen.some((h) => new RegExp('^' + h2Patroon(sjabloon) + '$').test(norm(h)))) {
+          b.push(bevinding('h2-ontbreekt', ERNST.letop, 'MX, tab Uitleg',
+            `De vaste kop "${sjabloon.replace('{land}', doc.land || 'land X')}" ontbreekt.`,
+            { verwacht: sjabloon.replace('{land}', doc.land || 'land X') }));
+        }
+      }
+    }
 
     // ---------- koppen tegen de matrix ----------
     for (const kop of doc.koppen) {

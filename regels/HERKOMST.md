@@ -1297,3 +1297,32 @@ weghalen ervan nog steeds.
 Cloudflare Worker) dat namens de browser bij de open data ophaalt en zelf een CORS-header op zijn
 antwoord zet. Dat is nieuwe infrastructuur — een server-component naast de statische Pages-site — en
 dus een aparte afweging, geen kleine aanpassing.
+
+## De vijf vaste H2's moeten er ook echt staan (19 september 2026)
+
+Martijn plakte een Algerije-advies in "tussen"-format — een oudere, platte tekstvorm van vóór de
+H2-koppen in de matrix kwamen — en zag geen enkele melding over de ontbrekende structuur: *"deze
+tekst is 'tussen' format... maar de tool geeft geen melding, de h2's zijn ook vast en moet ook check
+op zijn. ook in deze platte tekst."*
+
+Dat klopte. `h2-vast` toetst of een **aanwezige** H2 een van de vijf vaste is, maar zegt niets als er
+domweg geen H2 in de tekst staat — en bij platte, geplakte tekst zonder opmaak ziet de parser geen
+koppen, dus `doc.koppen` is dan leeg en de hele toets sloeg nergens op aan. Getest: het Algerije-
+advies van Martijn, geplakt zoals hij het aanleverde, gaf **nul** meldingen over de koppenstructuur.
+
+**De nieuwe regel `h2-ontbreekt`** loopt de vijf vaste H2's uit `matrix.h2_vast` langs en meldt welke
+niet voorkomen onder de aanwezige H2-koppen. Op hetzelfde Algerije-advies geeft dat nu vijf
+meldingen — precies de vijf ontbrekende koppen, in Chromium bevestigd.
+
+**Eén valkuil, gemeten voordat de regel de deur uitging.** Een eerste versie liep gewoon alle vijf
+langs, ongeacht hoeveel H2's er al stonden. Dat gaf twee valse meldingen op het echte corpus:
+Amerikaans-Samoa schrijft *"Wat **kunt u** doen in een noodsituatie?"* in plaats van *"Wat **kan ik**
+doen..."*, Mauritius *"Hoe bereid ik mijn reis **voor naar** Mauritius?"* in plaats van *"... **naar**
+Mauritius **voor**?"*. Bij allebei staan gewoon vijf H2's — net verkeerd geformuleerd — en `h2-vast`
+meldde dat ook al, met de foutieve tekst als fragment. De nieuwe regel meldde het probleem een tweede
+keer, alleen vager ("ontbreekt" in plaats van de precieze foute tekst).
+
+De regel gaat nu alleen af als er **minder** H2's zijn dan de vereiste vijf — staan er al vijf, dan is
+een "ontbrekende" kop in werkelijkheid een aanwezige kop met verkeerde tekst, en dat is het terrein
+van `h2-vast`. Met die grens: **0 meldingen op de 226 echte adviezen**, en nog steeds alle vijf bij
+platte tekst zonder koppen.

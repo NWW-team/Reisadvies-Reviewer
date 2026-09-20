@@ -175,7 +175,7 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies voor Afghanistan is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk.",
         "verwacht": "De kleurcode van het reisadvies voor Afghanistan is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -361,19 +361,20 @@
       "geel"
     ],
     "zinnen": 88,
-    "fout": 2,
+    "fout": 3,
     "letop": 10,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 10,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
@@ -381,6 +382,15 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Angola geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Angola is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -762,10 +772,10 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
+        "boodschap": "Deze bullet wijst een deelgebied aan, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "fragment": "De kleurcode van het reisadvies voor de VAE is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "kleur-vervolg-bullet-kort",
@@ -1061,19 +1071,20 @@
       "geel"
     ],
     "zinnen": 74,
-    "fout": 1,
+    "fout": 2,
     "letop": 2,
     "linkzin": 1,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 2,
       "link-zin": 1,
       "info": 2,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
@@ -1082,6 +1093,15 @@
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Armenië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Armenië is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -1701,24 +1721,34 @@
       "geel"
     ],
     "zinnen": 74,
-    "fout": 0,
+    "fout": 1,
     "letop": 2,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 2,
       "link-zin": 2,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "kinderen-paspoort": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Azerbeidzjan geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Azerbeidzjan is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "kinderen-paspoort",
         "ernst": "info",
@@ -1782,20 +1812,20 @@
       "geel"
     ],
     "zinnen": 98,
-    "fout": 4,
+    "fout": 5,
     "letop": 7,
     "linkzin": 3,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 4,
+      "fout": 5,
       "let-op": 7,
       "link-zin": 3,
       "info": 1,
       "twijfel": 4
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "kinderen-paspoort": 1,
@@ -1812,8 +1842,17 @@
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode oranje wijkt af van de vaste tekst.",
         "fragment": "Kleurcode oranje geldt voor de rest van het noordwesten van de provincie Bujumbura (de gemeentes Bubanza, Bukinayana, Cibitoke, Mpanda en Mugina). Reis alleen hierheen als het noodzakelijk is.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "verwacht": "De kleurcode van het reisadvies voor Burundi is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Burundi geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Burundi is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -2081,19 +2120,20 @@
       "geel"
     ],
     "zinnen": 93,
-    "fout": 1,
+    "fout": 2,
     "letop": 5,
     "linkzin": 2,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 5,
       "link-zin": 2,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "zin-max-woorden": 6,
       "zin-lijdende-vorm": 1,
@@ -2101,6 +2141,15 @@
       "eenheden-voluit": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Benin geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Benin is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -2238,7 +2287,7 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies voor Burkina Faso is voor het grootste deel rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "kleur-eerste-bullet-voluit",
@@ -2357,19 +2406,20 @@
       "geel"
     ],
     "zinnen": 117,
-    "fout": 0,
+    "fout": 1,
     "letop": 10,
     "linkzin": 5,
     "twijfel": 3,
     "info": 4,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 10,
       "link-zin": 5,
       "info": 4,
       "twijfel": 3
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
@@ -2383,6 +2433,15 @@
       "link-tekstlengte": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Bangladesh geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Bangladesh is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h3-alleen-bij-uitzondering",
         "ernst": "info",
@@ -2865,20 +2924,20 @@
       "oranje"
     ],
     "zinnen": 90,
-    "fout": 3,
+    "fout": 4,
     "letop": 7,
     "linkzin": 1,
     "twijfel": 0,
     "info": 2,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 7,
       "link-zin": 1,
       "info": 2,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
@@ -2898,7 +2957,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Belarus en Oekraïne. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "fragment": "Voor de rest van Belarus geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "De kleurcode van het reisadvies voor Belarus (Wit-Rusland) is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h3-niet-melden",
@@ -3089,13 +3157,13 @@
       "geel"
     ],
     "zinnen": 106,
-    "fout": 2,
+    "fout": 3,
     "letop": 20,
     "linkzin": 3,
     "twijfel": 7,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 20,
       "link-zin": 3,
       "info": 1,
@@ -3103,6 +3171,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
@@ -3125,6 +3194,15 @@
           "In geval van nood (199 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Bolivia geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Bolivia is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -4173,10 +4251,10 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
         "fragment": "De kleurcode van het reisadvies voor Botswana is geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
         "verwacht": "De kleurcode van het reisadvies voor Botswana is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -5168,35 +5246,25 @@
       "geel"
     ],
     "zinnen": 74,
-    "fout": 2,
+    "fout": 1,
     "letop": 2,
     "linkzin": 0,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 1,
       "let-op": 2,
       "link-zin": 0,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "zin-max-woorden": 1,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Ivoorkust geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -5244,20 +5312,20 @@
       "geel"
     ],
     "zinnen": 97,
-    "fout": 2,
+    "fout": 3,
     "letop": 5,
     "linkzin": 3,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 5,
       "link-zin": 3,
       "info": 1,
       "twijfel": 5
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "nood-contactcenter": 1,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 1,
@@ -5273,7 +5341,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor de noordelijke punt van Kameroen en de grensgebieden met Nigeria en de Centraal-Afrikaanse Republiek. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Kameroen geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Kameroen is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "nood-contactcenter",
@@ -5407,13 +5484,13 @@
       "oranje"
     ],
     "zinnen": 111,
-    "fout": 5,
+    "fout": 6,
     "letop": 18,
     "linkzin": 3,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
-      "fout": 5,
+      "fout": 6,
       "let-op": 18,
       "link-zin": 3,
       "info": 1,
@@ -5421,7 +5498,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "h4-niet-melden": 1,
       "intro-vaste-tekst": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -5454,7 +5531,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor het noorden en oosten van de DRC en voor de provincie Maï-Ndombe. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "fragment": "Voor de rest van de DRC geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "De kleurcode van het reisadvies voor Congo, Democratische Republiek is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -5743,19 +5829,20 @@
       "geel"
     ],
     "zinnen": 83,
-    "fout": 0,
+    "fout": 1,
     "letop": 5,
     "linkzin": 2,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 5,
       "link-zin": 2,
       "info": 1,
       "twijfel": 4
     },
     "perRegel": {
+      "kleur-variant": 1,
       "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
       "zin-max-woorden": 5,
@@ -5763,6 +5850,15 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van de Republiek Congo geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Congo, de Republiek is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "rubriek-vrij-te-hoog",
         "ernst": "info",
@@ -5918,13 +6014,13 @@
       "geel"
     ],
     "zinnen": 135,
-    "fout": 4,
+    "fout": 5,
     "letop": 13,
     "linkzin": 1,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
-      "fout": 4,
+      "fout": 5,
       "let-op": 13,
       "link-zin": 1,
       "info": 1,
@@ -5932,7 +6028,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
@@ -5962,7 +6058,16 @@
         "boodschap": "De uitleg bij kleurcode oranje wijkt af van de vaste tekst.",
         "fragment": "Kleurcode oranje geldt voor verschillende gebieden die grenzen aan de regio’s met kleurcode rood en gebieden in het zuidoosten van Colombia. Reis alleen hierheen als het noodzakelijk is.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Colombia geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Colombia is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "rubrieken-max",
@@ -6205,10 +6310,10 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
         "fragment": "De kleurcode van het reisadvies voor de Comoren is geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
         "verwacht": "De kleurcode van het reisadvies voor Comoren is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -7379,20 +7484,20 @@
       "geel"
     ],
     "zinnen": 70,
-    "fout": 3,
+    "fout": 4,
     "letop": 2,
     "linkzin": 3,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 2,
       "link-zin": 3,
       "info": 2,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "regionaal-kleur-tekst": 1,
       "reisverzekering-oranje-rood": 1,
       "rubrieken-max": 1,
@@ -7410,7 +7515,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor de grensgebieden met Eritrea en Somalië. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Djibouti geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Djibouti is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "regionaal-kleur-tekst",
@@ -7770,13 +7884,13 @@
       "geel"
     ],
     "zinnen": 127,
-    "fout": 3,
+    "fout": 4,
     "letop": 10,
     "linkzin": 1,
     "twijfel": 6,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 10,
       "link-zin": 1,
       "info": 1,
@@ -7784,6 +7898,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "kleur-vervolg-bullet-kort": 1,
       "h4-niet-melden": 1,
       "h4-natuurrisico": 1,
@@ -7807,6 +7922,15 @@
           "Paspoort, visum, rijbewijs (199 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Algerije geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Algerije is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "kleur-vervolg-bullet-kort",
@@ -7981,13 +8105,13 @@
       "geel"
     ],
     "zinnen": 148,
-    "fout": 5,
+    "fout": 4,
     "letop": 18,
     "linkzin": 6,
     "twijfel": 7,
     "info": 0,
     "perErnst": {
-      "fout": 5,
+      "fout": 4,
       "let-op": 18,
       "link-zin": 6,
       "info": 0,
@@ -7995,7 +8119,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 2,
+      "kleur-variant": 1,
       "nood-contactcenter": 1,
       "tekst-dubbel-woord": 1,
       "woord-onbekend": 5,
@@ -8024,16 +8148,7 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Ecuador en Colombia. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Ecuador geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "nood-contactcenter",
@@ -8324,13 +8439,13 @@
       "geel"
     ],
     "zinnen": 149,
-    "fout": 2,
+    "fout": 3,
     "letop": 13,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 13,
       "link-zin": 2,
       "info": 1,
@@ -8338,6 +8453,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
       "alinea-max-woorden": 2,
@@ -8359,6 +8475,15 @@
           "Paspoort, visum, rijbewijs (320 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Egypte geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Egypte is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -8519,24 +8644,34 @@
       "oranje"
     ],
     "zinnen": 56,
-    "fout": 0,
+    "fout": 1,
     "letop": 3,
     "linkzin": 1,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 3,
       "link-zin": 1,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "kleur-variant": 1,
       "rijbewijs-anwb": 1,
       "zin-max-woorden": 2,
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "fragment": "Voor de rest van Eritrea geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "De kleurcode van het reisadvies voor Eritrea is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "rijbewijs-anwb",
         "ernst": "let-op",
@@ -8859,13 +8994,13 @@
       "geel"
     ],
     "zinnen": 108,
-    "fout": 3,
+    "fout": 4,
     "letop": 10,
     "linkzin": 4,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 10,
       "link-zin": 4,
       "info": 1,
@@ -8873,7 +9008,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
       "woord-onbekend": 1,
@@ -8903,7 +9038,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor grote delen van het noorden en westen van Ethiopië en de zone Guji in het zuiden. En voor alle grensgebieden van Ethiopië (behalve de grens met Djibouti). Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Ethiopië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Ethiopië is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "nood-contactcenter",
@@ -9898,20 +10042,20 @@
       "geel"
     ],
     "zinnen": 99,
-    "fout": 3,
+    "fout": 2,
     "letop": 11,
     "linkzin": 2,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 2,
       "let-op": 11,
       "link-zin": 2,
       "info": 1,
       "twijfel": 5
     },
     "perRegel": {
-      "kleur-variant": 2,
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
@@ -9929,16 +10073,7 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor de regio’s Abchazië en Zuid-Ossetië. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Georgië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "h4-niet-melden",
@@ -10113,19 +10248,20 @@
       "geel"
     ],
     "zinnen": 107,
-    "fout": 1,
+    "fout": 2,
     "letop": 9,
     "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 9,
       "link-zin": 3,
       "info": 0,
       "twijfel": 3
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 9,
@@ -10134,6 +10270,15 @@
       "aanhalingstekens": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Ghana geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Ghana is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -10274,13 +10419,13 @@
       "geel"
     ],
     "zinnen": 84,
-    "fout": 2,
+    "fout": 3,
     "letop": 3,
     "linkzin": 1,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 3,
       "link-zin": 1,
       "info": 0,
@@ -10288,6 +10433,7 @@
     },
     "perRegel": {
       "kleur-vaste-tekst": 1,
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "rubrieken-max": 1,
       "zin-frequentiewoord": 3,
@@ -10301,6 +10447,15 @@
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Bij kleurcode oranje ontbreekt de vaste handelingsinstructie.",
         "verwacht": "De kleurcode van het reisadvies voor Guinee is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Guinee geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Guinee is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -10592,23 +10747,33 @@
       "geel"
     ],
     "zinnen": 66,
-    "fout": 0,
+    "fout": 1,
     "letop": 2,
     "linkzin": 0,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 2,
       "link-zin": 0,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "kleur-variant": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Guinee-Bissau geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Guinee-Bissau is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
@@ -11508,25 +11673,35 @@
       "geel"
     ],
     "zinnen": 90,
-    "fout": 0,
+    "fout": 1,
     "letop": 10,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 10,
       "link-zin": 3,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "woord-onbekend": 1,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 9,
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Honduras geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Honduras is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "woord-onbekend",
         "ernst": "let-op",
@@ -11910,13 +12085,13 @@
       "geel"
     ],
     "zinnen": 163,
-    "fout": 4,
+    "fout": 5,
     "letop": 24,
     "linkzin": 7,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
-      "fout": 4,
+      "fout": 5,
       "let-op": 24,
       "link-zin": 7,
       "info": 1,
@@ -11924,6 +12099,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h4-natuurrisico": 1,
       "h3-alleen-bij-uitzondering": 1,
@@ -11949,6 +12125,15 @@
           "Natuurgeweld (428 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Indonesië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "verwacht": "De kleurcode van het reisadvies voor Indonesië is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -12333,13 +12518,13 @@
       "geel"
     ],
     "zinnen": 197,
-    "fout": 2,
+    "fout": 3,
     "letop": 43,
     "linkzin": 5,
     "twijfel": 10,
     "info": 3,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 43,
       "link-zin": 5,
       "info": 3,
@@ -12348,7 +12533,7 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-aanduiding": 1,
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "kleur-eerste-bullet-voluit": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
@@ -12390,7 +12575,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies van India is rood voor de regio’s Jammu en Kasjmir, Aksai Chin, voor de deelstaat Manipur en voor de grensstrook tussen India en Pakistan. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van India geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor India is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "kleur-eerste-bullet-voluit",
@@ -13565,20 +13759,20 @@
       "groen"
     ],
     "zinnen": 61,
-    "fout": 2,
+    "fout": 1,
     "letop": 2,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 1,
       "let-op": 2,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-variant": 2,
+      "kleur-variant": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 3
@@ -13588,19 +13782,10 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
+        "boodschap": "Deze bullet wijst een deelgebied aan, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "fragment": "De kleurcode van het reisadvies is geel voor het schiereiland Reykjanes. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van IJsland geldt kleurcode groen. U kunt erheen reizen. Lees welke veiligheidsrisico’s er zijn.",
-        "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "reisverzekering-vaste-tekst",
@@ -13655,20 +13840,20 @@
       "geel"
     ],
     "zinnen": 105,
-    "fout": 2,
+    "fout": 3,
     "letop": 13,
     "linkzin": 5,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 13,
       "link-zin": 5,
       "info": 1,
       "twijfel": 3
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "h4-niet-melden": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
@@ -13685,7 +13870,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor de grensgebieden tussen Israël en Gaza, Libanon en Egypte. Ook voor de bezette Golanhoogten geldt kleurcode rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico's.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Israël geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Israël is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -14088,19 +14282,20 @@
       "geel"
     ],
     "zinnen": 98,
-    "fout": 1,
+    "fout": 2,
     "letop": 14,
     "linkzin": 2,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 14,
       "link-zin": 2,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "kleur-eerste-bullet-voluit": 1,
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
@@ -14112,6 +14307,15 @@
       "aanhalingstekens": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Jordanië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Jordanië is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "kleur-eerste-bullet-voluit",
         "ernst": "let-op",
@@ -14269,20 +14473,20 @@
       "groen"
     ],
     "zinnen": 71,
-    "fout": 3,
+    "fout": 4,
     "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 10,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
@@ -14301,7 +14505,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies voor het zuidoosten van Fukushima is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico's.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij groen hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Japan geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico’s er zijn.",
+        "verwacht": "De kleurcode van het reisadvies voor Japan is groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h3-niet-melden",
@@ -14527,20 +14740,20 @@
       "geel"
     ],
     "zinnen": 122,
-    "fout": 2,
+    "fout": 3,
     "letop": 15,
     "linkzin": 4,
     "twijfel": 2,
     "info": 2,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 15,
       "link-zin": 4,
       "info": 2,
       "twijfel": 2
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "h3-vaste-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
       "criminaliteit-themapagina": 1,
@@ -14562,7 +14775,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor het oosten van Kenia dat grenst aan Somalië en Ethiopië. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Kenia geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Kenia is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h3-vaste-kop",
@@ -14836,20 +15058,20 @@
       "geel"
     ],
     "zinnen": 113,
-    "fout": 2,
+    "fout": 1,
     "letop": 20,
     "linkzin": 0,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 1,
       "let-op": 20,
       "link-zin": 0,
       "info": 1,
       "twijfel": 8
     },
     "perRegel": {
-      "kleur-variant": 2,
+      "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
@@ -14866,16 +15088,7 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor de strook van 5 kilometer vanaf de grens met Thailand. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Cambodja geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -15312,20 +15525,20 @@
       "groen"
     ],
     "zinnen": 84,
-    "fout": 1,
+    "fout": 2,
     "letop": 12,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 12,
       "link-zin": 3,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 2,
@@ -15341,7 +15554,16 @@
         "boodschap": "De uitleg bij kleurcode geel wijkt af van de vaste tekst.",
         "fragment": "Kleurcode geel geldt voor het gebied ten zuiden van de gedemilitariseerde zone (DMZ). U kunt hierheen reizen in een georganiseerde groep. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij groen hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Zuid-Korea geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "verwacht": "De kleurcode van het reisadvies voor Zuid-Korea is groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "reisverzekering-vaste-tekst",
@@ -15514,10 +15736,10 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft één kleurcode, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
         "fragment": "De kleurcode van het reisadvies voor Koeweit is oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "De kleurcode van het reisadvies voor Koeweit is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "kinderen-paspoort",
@@ -15636,19 +15858,20 @@
       "geel"
     ],
     "zinnen": 119,
-    "fout": 1,
+    "fout": 2,
     "letop": 22,
     "linkzin": 3,
     "twijfel": 6,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 22,
       "link-zin": 3,
       "info": 0,
       "twijfel": 6
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "nood-verwijzing-nood": 1,
       "nood-verwijzing-crisis": 1,
@@ -15660,6 +15883,15 @@
       "aanhalingstekens": 3
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Laos geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Laos is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -16136,25 +16368,35 @@
       "geel"
     ],
     "zinnen": 76,
-    "fout": 1,
+    "fout": 2,
     "letop": 3,
     "linkzin": 0,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 3,
       "link-zin": 0,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 2
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Liberia geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Liberia is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h3-niet-melden",
         "ernst": "fout",
@@ -16243,10 +16485,10 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft één kleurcode, dus bij rood hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij rood hoort de volledige uitleg. Nu staat de verkorte variant er.",
         "fragment": "De kleurcode van het reisadvies voor Libië is rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
         "verwacht": "De kleurcode van het reisadvies voor Libië is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -16919,19 +17161,20 @@
       "groen"
     ],
     "zinnen": 71,
-    "fout": 1,
+    "fout": 2,
     "letop": 3,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 3,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "reisverzekering-oranje-rood": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
@@ -16939,6 +17182,15 @@
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij groen hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Letland geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico’s er zijn.",
+        "verwacht": "De kleurcode van het reisadvies voor Letland is groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "reisverzekering-oranje-rood",
         "ernst": "fout",
@@ -17099,13 +17351,13 @@
       "geel"
     ],
     "zinnen": 108,
-    "fout": 2,
+    "fout": 1,
     "letop": 13,
     "linkzin": 5,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 1,
       "let-op": 13,
       "link-zin": 5,
       "info": 1,
@@ -17113,7 +17365,6 @@
     },
     "perRegel": {
       "kleur-aanduiding": 1,
-      "kleur-variant": 1,
       "kleur-vervolg-bullet-kort": 1,
       "h4-niet-melden": 1,
       "bagage-heen": 1,
@@ -17132,15 +17383,6 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
         "verwacht": "De kleurcode van het reisadvies voor Marokko is geel."
-      },
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Vor de rest van Marokko geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "kleur-vervolg-bullet-kort",
@@ -17400,20 +17642,19 @@
       "geel"
     ],
     "zinnen": 74,
-    "fout": 3,
+    "fout": 2,
     "letop": 2,
     "linkzin": 0,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 2,
       "let-op": 2,
       "link-zin": 0,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
       "postplaats-schrijfwijze": 1,
@@ -17421,15 +17662,6 @@
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Moldavië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -17757,13 +17989,13 @@
       "geel"
     ],
     "zinnen": 156,
-    "fout": 4,
+    "fout": 5,
     "letop": 23,
     "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
-      "fout": 4,
+      "fout": 5,
       "let-op": 23,
       "link-zin": 3,
       "info": 0,
@@ -17771,7 +18003,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "kleur-formulering-verboden": 1,
       "nood-contactcenter": 1,
       "woord-onbekend": 3,
@@ -17801,7 +18033,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor de actieve vulkanen Popocatépetl en Colima. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Mexico geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Mexico is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "kleur-formulering-verboden",
@@ -18475,13 +18716,13 @@
       "oranje"
     ],
     "zinnen": 98,
-    "fout": 3,
+    "fout": 4,
     "letop": 10,
     "linkzin": 5,
     "twijfel": 6,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 10,
       "link-zin": 5,
       "info": 0,
@@ -18489,6 +18730,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "actueel-max-woorden": 1,
       "h4-kop-variant": 1,
       "h3-niet-melden": 1,
@@ -18511,6 +18753,15 @@
           "Paspoort, visum, rijbewijs (234 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "fragment": "Voor de rest van Myanmar geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "De kleurcode van het reisadvies voor Myanmar is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "actueel-max-woorden",
@@ -18915,20 +19166,20 @@
       "geel"
     ],
     "zinnen": 106,
-    "fout": 3,
+    "fout": 5,
     "letop": 14,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 5,
       "let-op": 14,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 3,
       "h4-niet-melden": 1,
       "woord-onbekend": 9,
       "zin-max-woorden": 5,
@@ -18944,7 +19195,25 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor het noordoosten van de provincie Cabo Delgado. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "fragment": "Kleurcode oranje geldt voor de rest van de provincie Cabo Delgado en voor de districten Erati en Memba in de provincie Nampula. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "De kleurcode van het reisadvies voor Mozambique is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Mozambique geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Mozambique is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -19124,20 +19393,20 @@
       "geel"
     ],
     "zinnen": 90,
-    "fout": 1,
+    "fout": 2,
     "letop": 6,
     "linkzin": 1,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 6,
       "link-zin": 1,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 1
@@ -19150,7 +19419,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor een groot deel van het (noord)oosten van Mauritanië. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Mauritanië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Mauritanië is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "zin-max-woorden",
@@ -19238,19 +19516,20 @@
       "groen"
     ],
     "zinnen": 73,
-    "fout": 1,
+    "fout": 2,
     "letop": 5,
     "linkzin": 4,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 5,
       "link-zin": 4,
       "info": 1,
       "twijfel": 0
     },
     "perRegel": {
+      "kleur-variant": 1,
       "rijbewijs-anwb": 1,
       "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
@@ -19259,6 +19538,15 @@
       "link-verboden-partij": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij groen hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Montserrat geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico’s er zijn.",
+        "verwacht": "De kleurcode van het reisadvies voor Montserrat is groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "rijbewijs-anwb",
         "ernst": "let-op",
@@ -19685,19 +19973,20 @@
       "geel"
     ],
     "zinnen": 86,
-    "fout": 1,
+    "fout": 2,
     "letop": 5,
     "linkzin": 2,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 5,
       "link-zin": 2,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 2,
@@ -19705,6 +19994,15 @@
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Maleisië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Maleisië is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -20015,19 +20313,20 @@
       "oranje"
     ],
     "zinnen": 115,
-    "fout": 0,
+    "fout": 1,
     "letop": 12,
     "linkzin": 5,
     "twijfel": 8,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 12,
       "link-zin": 5,
       "info": 0,
       "twijfel": 8
     },
     "perRegel": {
+      "kleur-variant": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 2,
       "zin-max-woorden": 11,
@@ -20035,6 +20334,15 @@
       "zin-lijdende-vorm": 3
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "fragment": "Voor de rest van Nigeria geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "De kleurcode van het reisadvies voor Nigeria is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "rubrieken-max",
         "ernst": "let-op",
@@ -21029,20 +21337,19 @@
       "geel"
     ],
     "zinnen": 98,
-    "fout": 2,
+    "fout": 1,
     "letop": 9,
     "linkzin": 1,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 2,
+      "fout": 1,
       "let-op": 9,
       "link-zin": 1,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
-      "kleur-variant": 1,
       "h3-vaste-kop": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
@@ -21053,15 +21360,6 @@
       "aanhalingstekens": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Oman geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
       {
         "regel": "h3-vaste-kop",
         "ernst": "fout",
@@ -21182,13 +21480,13 @@
       "geel"
     ],
     "zinnen": 116,
-    "fout": 3,
+    "fout": 4,
     "letop": 8,
     "linkzin": 2,
     "twijfel": 10,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 8,
       "link-zin": 2,
       "info": 0,
@@ -21196,6 +21494,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
@@ -21217,6 +21516,15 @@
           "Paspoort, visum, rijbewijs (250 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Pakistan, onder andere de hoofdstad Islamabad, geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Pakistan is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -21406,19 +21714,20 @@
       "geel"
     ],
     "zinnen": 89,
-    "fout": 1,
+    "fout": 2,
     "letop": 5,
     "linkzin": 4,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 5,
       "link-zin": 4,
       "info": 1,
       "twijfel": 4
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "reisverzekering-oranje-rood": 1,
       "regionaal-gebiedenzin": 1,
@@ -21427,6 +21736,15 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Panama geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Panama is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h3-alleen-bij-uitzondering",
         "ernst": "info",
@@ -21641,13 +21959,13 @@
       "geel"
     ],
     "zinnen": 137,
-    "fout": 2,
+    "fout": 1,
     "letop": 24,
     "linkzin": 5,
     "twijfel": 3,
     "info": 2,
     "perErnst": {
-      "fout": 2,
+      "fout": 1,
       "let-op": 24,
       "link-zin": 5,
       "info": 2,
@@ -21655,7 +21973,6 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "nood-lokale-hulpdiensten": 1,
       "reisverzekering-vaste-tekst": 1,
@@ -21679,15 +21996,6 @@
           "In geval van nood (250 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
-      },
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Peru geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -21985,13 +22293,13 @@
       "geel"
     ],
     "zinnen": 146,
-    "fout": 1,
+    "fout": 2,
     "letop": 22,
     "linkzin": 4,
     "twijfel": 11,
     "info": 1,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 22,
       "link-zin": 4,
       "info": 1,
@@ -21999,6 +22307,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 4,
@@ -22020,6 +22329,15 @@
           "Natuurgeweld (328 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van de Filipijnen geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Filipijnen is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -22559,13 +22877,13 @@
       "geel"
     ],
     "zinnen": 136,
-    "fout": 3,
+    "fout": 4,
     "letop": 14,
     "linkzin": 5,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 14,
       "link-zin": 5,
       "info": 1,
@@ -22573,7 +22891,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "kleur-vervolg-bullet-kort": 1,
       "kort-verwijzing-hoogste-kleur": 1,
       "h3-alleen-bij-uitzondering": 1,
@@ -22607,7 +22925,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor het gebied rond de Panguna-mijn op het eiland Bougainville. Wat uw situatie ook is: reis niet hierheen. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Papoea-Nieuw-Guinea geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "verwacht": "De kleurcode van het reisadvies voor Papoea-Nieuw-Guinea is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "kleur-vervolg-bullet-kort",
@@ -23053,7 +23380,7 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies voor Noord-Korea is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Nederland heeft geen ambassade in Pyongyang en de Nederlandse ambassade in Seoel (Zuid-Korea) kan u niet helpen als u in de problemen komt.",
         "verwacht": "De kleurcode van het reisadvies voor Noord-Korea is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "nood-lokale-hulpdiensten",
@@ -23352,16 +23679,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor Gaza en delen van de Westelijke Jordaanoever. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
+        "boodschap": "Deze bullet wijst een deelgebied aan, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "fragment": "Voor Oost-Jeruzalem geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "regionaal-kleur-tekst",
@@ -23880,20 +24207,19 @@
       "groen"
     ],
     "zinnen": 87,
-    "fout": 3,
+    "fout": 2,
     "letop": 5,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 2,
       "let-op": 5,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
       "h4-niet-melden": 2,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
@@ -23902,15 +24228,6 @@
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Roemenië geldt kleurcode groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
-        "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -24140,13 +24457,13 @@
       "oranje"
     ],
     "zinnen": 169,
-    "fout": 3,
+    "fout": 4,
     "letop": 20,
     "linkzin": 4,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 20,
       "link-zin": 4,
       "info": 1,
@@ -24154,6 +24471,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "actueel-max-woorden": 1,
       "h3-niet-melden": 1,
       "kinderen-paspoort": 1,
@@ -24176,6 +24494,15 @@
           "Regionale risico's (184 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "fragment": "Voor de rest van Rusland geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "De kleurcode van het reisadvies voor Rusland is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "actueel-max-woorden",
@@ -24417,20 +24744,19 @@
       "geel"
     ],
     "zinnen": 115,
-    "fout": 3,
+    "fout": 2,
     "letop": 17,
     "linkzin": 4,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 2,
       "let-op": 17,
       "link-zin": 4,
       "info": 1,
       "twijfel": 3
     },
     "perRegel": {
-      "kleur-variant": 1,
       "actueel-max-woorden": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
@@ -24444,15 +24770,6 @@
       "tijd-notatie": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Rwanda geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
       {
         "regel": "actueel-max-woorden",
         "ernst": "fout",
@@ -24689,20 +25006,19 @@
       "geel"
     ],
     "zinnen": 86,
-    "fout": 1,
+    "fout": 0,
     "letop": 11,
     "linkzin": 1,
     "twijfel": 1,
     "info": 3,
     "perErnst": {
-      "fout": 1,
+      "fout": 0,
       "let-op": 11,
       "link-zin": 1,
       "info": 3,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
       "regionaal-kleur-kop": 1,
       "kort-verwijzing-hoogste-kleur": 1,
       "bagage-heen": 1,
@@ -24716,15 +25032,6 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Saoedi-Arabië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
       {
         "regel": "regionaal-kleur-kop",
         "ernst": "let-op",
@@ -24984,19 +25291,20 @@
       "geel"
     ],
     "zinnen": 76,
-    "fout": 3,
+    "fout": 4,
     "letop": 6,
     "linkzin": 2,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 6,
       "link-zin": 2,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h3-niet-melden": 1,
       "nood-contactcenter": 1,
       "tekst-spatie-leesteken": 1,
@@ -25007,6 +25315,15 @@
       "aanhalingstekens": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Senegal geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Senegal is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h3-niet-melden",
         "ernst": "fout",
@@ -25693,10 +26010,10 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
         "fragment": "De kleurcode van het reisadvies voor El Salvador is geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
         "verwacht": "De kleurcode van het reisadvies voor El Salvador is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h3-vaste-kop",
@@ -26981,7 +27298,7 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies voor Syrië is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade is gesloten en kan u niet helpen als u in de problemen komt.",
         "verwacht": "De kleurcode van het reisadvies voor Syrië is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -27085,20 +27402,20 @@
       "groen"
     ],
     "zinnen": 56,
-    "fout": 3,
+    "fout": 2,
     "letop": 3,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 3,
+      "fout": 2,
       "let-op": 3,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "kleur-variant": 2,
+      "kleur-variant": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 4,
       "link-plakt-aan-woord": 1
@@ -27108,19 +27425,10 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
+        "boodschap": "Deze bullet wijst een deelgebied aan, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
         "fragment": "De kleurcode van het reisadvies is geel voor het eiland Providenciales. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-variant",
-        "ernst": "fout",
-        "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van de Turks- en Caicoseilanden geldt kleurcode groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
-        "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -27184,19 +27492,20 @@
       "oranje"
     ],
     "zinnen": 93,
-    "fout": 3,
+    "fout": 4,
     "letop": 8,
     "linkzin": 0,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 8,
       "link-zin": 0,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -27208,6 +27517,15 @@
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "fragment": "Voor de rest van Tsjaad geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "De kleurcode van het reisadvies voor Tsjaad is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",
@@ -27343,20 +27661,20 @@
       "geel"
     ],
     "zinnen": 82,
-    "fout": 1,
+    "fout": 2,
     "letop": 2,
     "linkzin": 3,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 2,
       "link-zin": 3,
       "info": 2,
       "twijfel": 1
     },
     "perRegel": {
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 4,
@@ -27371,7 +27689,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor het noordelijke deel van de regio Savanes dat grenst aan Burkina Faso. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Togo geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Togo is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "bagage-heen",
@@ -27450,13 +27777,13 @@
       "geel"
     ],
     "zinnen": 187,
-    "fout": 3,
+    "fout": 4,
     "letop": 30,
     "linkzin": 3,
     "twijfel": 8,
     "info": 5,
     "perErnst": {
-      "fout": 3,
+      "fout": 4,
       "let-op": 30,
       "link-zin": 3,
       "info": 5,
@@ -27464,7 +27791,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "regionaal-kleur-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
@@ -27501,7 +27828,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor de strook van 5 kilometer vanaf de grens met Cambodja. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Thailand geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Thailand is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "regionaal-kleur-kop",
@@ -28488,13 +28824,13 @@
       "geel"
     ],
     "zinnen": 109,
-    "fout": 2,
+    "fout": 3,
     "letop": 5,
     "linkzin": 1,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 5,
       "link-zin": 1,
       "info": 1,
@@ -28502,6 +28838,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
@@ -28522,6 +28859,15 @@
           "Natuurgeweld (227 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Tunesië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Tunesië is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -28619,13 +28965,13 @@
       "geel"
     ],
     "zinnen": 142,
-    "fout": 4,
+    "fout": 5,
     "letop": 28,
     "linkzin": 1,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
-      "fout": 4,
+      "fout": 5,
       "let-op": 28,
       "link-zin": 1,
       "info": 1,
@@ -28633,7 +28979,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
@@ -28667,7 +29013,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Turkije en Syrië, en Turkije en Irak. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Turkije geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Turkije is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -29133,13 +29488,13 @@
       "geel"
     ],
     "zinnen": 131,
-    "fout": 2,
+    "fout": 3,
     "letop": 17,
     "linkzin": 2,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 3,
       "let-op": 17,
       "link-zin": 2,
       "info": 1,
@@ -29147,6 +29502,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
@@ -29169,6 +29525,15 @@
           "Wetten en gebruiken (231 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Tanzania geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Tanzania is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -29939,23 +30304,33 @@
       "geel"
     ],
     "zinnen": 81,
-    "fout": 0,
+    "fout": 1,
     "letop": 3,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
-      "fout": 0,
+      "fout": 1,
       "let-op": 3,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "kleur-variant": 1,
       "zin-max-woorden": 5,
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Oezbekistan geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Oezbekistan is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -30121,13 +30496,13 @@
       "oranje"
     ],
     "zinnen": 103,
-    "fout": 5,
+    "fout": 6,
     "letop": 12,
     "linkzin": 4,
     "twijfel": 5,
     "info": 2,
     "perErnst": {
-      "fout": 5,
+      "fout": 6,
       "let-op": 12,
       "link-zin": 4,
       "info": 2,
@@ -30135,7 +30510,7 @@
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-variant": 1,
+      "kleur-variant": 2,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "nood-contactcenter": 1,
@@ -30168,7 +30543,16 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies is rood voor de meeste grensgebieden en grote delen van het noordwesten, noordoosten en zuiden van Venezuela. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
-        "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+        "notitie": "Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij oranje hoort de volledige uitleg. Nu staat de verkorte variant er.",
+        "fragment": "Voor de rest van Venezuela geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "De kleurcode van het reisadvies voor Venezuela is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "h4-niet-melden",
@@ -31184,7 +31568,7 @@
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
         "fragment": "De kleurcode van het reisadvies voor Jemen is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Bent u in Jemen? Verlaat het land als dat op een veilige manier kan. De Nederlandse ambassade in Sana’a is gesloten en kan u niet helpen als u in de problemen komt.",
         "verwacht": "De kleurcode van het reisadvies voor Jemen is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
-        "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
         "regel": "medicijnen-voldoende",
@@ -31606,19 +31990,20 @@
       "geel"
     ],
     "zinnen": 76,
-    "fout": 1,
+    "fout": 2,
     "letop": 8,
     "linkzin": 1,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 8,
       "link-zin": 1,
       "info": 0,
       "twijfel": 3
     },
     "perRegel": {
+      "kleur-variant": 1,
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
@@ -31628,6 +32013,15 @@
       "aanhalingstekens": 1
     },
     "bevindingen": [
+      {
+        "regel": "kleur-variant",
+        "ernst": "fout",
+        "bron": "MX, tab Kleurcode-teksten",
+        "boodschap": "Deze bullet gaat over het hele land of de rest ervan, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
+        "fragment": "Voor de rest van Zambia geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
+        "verwacht": "De kleurcode van het reisadvies voor Zambia is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "notitie": "Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in \"In het kort\"."
+      },
       {
         "regel": "h4-niet-melden",
         "ernst": "fout",

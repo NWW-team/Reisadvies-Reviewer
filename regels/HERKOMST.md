@@ -1350,3 +1350,57 @@ de rest van de tool: *"Kies eerst een land, of plak zelf een reisadvies."*
 In Chromium gecontroleerd: de plaatshouder staat er en is niet terug te kiezen na een echte keuze,
 beide panelen tonen de juiste lege-staat, de knoppen zijn uit, klikken op de oordeelstoets zonder
 keuze crasht niet, en na het kiezen van een land werkt alles zoals altijd.
+
+## Erheen of hierheen: het onderscheid zit in de bullet, niet in het advies (20 september 2026)
+
+Een mobiele screenshot van een Marokko-bevinding (`kleur-variant`, "Er staat 'erheen', er hoort
+'hierheen' te staan" bij "Voor de rest van Marokko geldt kleurcode geel. U kunt erheen reizen.")
+zette Martijn aan het twijfelen over de regel zelf: *"Dit denk ik te moeten herzien want bij heel
+land is erheen denk ik beter dan hierheen, hierheen is meer een gerichtere verwijzing naar een
+deelgebied."*
+
+Tot dan toetste de tool het verschil aan het **aantal kleurcodes van het hele advies**: één
+kleurcode betekende de volledige uitleg (erheen), meer dan één de verkorte (hierheen) — voor élke
+bullet, ook de bullet die "de rest van het land" noemt. Dat is letterlijk wat de matrix zegt
+(tabblad *Kleurcode-teksten*, kolom *In het kort*, rijen Groen en Geel): "Deels" zet "de gebieden X
+en Y" en "de rest van land X" op één hoop, allebei met "hierheen".
+
+Martijn, definitief: *"Ik denk dat het wel een duidelijke en goede regel is. Dus hierheen als je
+terug wijst op een eerder genoemd gebied uit die zin of passage. En erheen als het over een groter
+geheel van een land gaat. Of over de rest van een land. Dus een iets abstracter geheel."* Met de
+kanttekening dat de matrix zelf op dit punt nog moet worden nagelopen — het cel-voorbeeld ("de rest
+van land X" onder "Deels") staat er immers haaks op.
+
+**De regel `kleur-variant` toetst nu per bullet, niet meer per advies.** Wijst de bullet terug naar
+een eerder genoemd, specifiek deelgebied ("voor de gebieden X en Y", "voor het oosten van..."), dan
+hoort daar de verkorte uitleg (hierheen) bij. Noemt de bullet zelf "de rest van [land]" of "het hele
+land", dan is dat geen gerichte verwijzing maar een groter geheel, en hoort daar de volledige uitleg
+(erheen) bij — ook al heeft het advies als geheel meerdere kleurcodes.
+
+**Gemeten effect op de 226 echte adviezen: van 51 naar 92 meldingen bij `kleur-variant` (+41), geen
+verandering bij enige andere regel.** Dat is groter dan de eerste steekproef liet zien. Twee kanten:
+
+- **13 adviezen die eerst fout gemeld werden, worden nu terecht niet meer gemeld** — ze schreven al
+  "erheen" bij "de rest van [land]" (Ivoorkust, Ecuador, Georgië, IJsland, Cambodja, Marokko,
+  Moldavië, Oman, Peru, Roemenië, Rwanda, Saoedi-Arabië, Turks- en Caicoseilanden). Marokko's eigen
+  typefout ("Vor de rest van Marokko" in plaats van "Voor") stond niet in de weg: de bullet wordt op
+  de hele openingszin getoetst, niet op een strikt sjabloon dat met "voor" moet beginnen.
+- **41 adviezen die eerst goed gemeld werden (ze volgden de huidige matrix-tekst letterlijk) worden
+  nu voor het eerst gemeld** — ze schrijven "hierheen" bij "de rest van [land]", en dat is precies
+  hoe verreweg de meeste adviezen het nu doen. Die meerderheid moet onder de nieuwe regel dus naar
+  "erheen".
+
+Drie bestaande bevindingen kregen alleen een preciezere boodschap (geen nieuwe of verdwenen
+melding): VAE, IJsland en de Turks- en Caicoseilanden noemen een specifiek benoemd deelgebied
+(schiereiland, eiland) met het verkeerde woord: dat bleef fout, maar "dit advies heeft meerdere
+kleurcodes" is vervangen door "deze bullet wijst een deelgebied aan" — de echte reden, nu dat niet
+meer samenvalt met het aantal kleurcodes van het advies.
+
+`scripts/erheen-hierheen.mjs` (het redactielijstje) toetst dezelfde regel en is meegewijzigd;
+`data/erheen-hierheen.md` opnieuw gegenereerd. 176 tests groen, twee bestaande kleurvariant-tests
+aangepast (het oude "faalt"-fragment "de rest van + erheen" is onder de nieuwe regel juist), twee
+nieuwe tests toegevoegd die het "de rest van"-onderscheid met en zonder deelgebied dekken.
+
+**Nog open:** Martijn loopt de matrix zelf na op consistentie met deze regel — het cel-voorbeeld bij
+"Deels" noemt "de rest van land X" nog naast "de gebieden X en Y" onder "hierheen", en dat behoeft
+een update om niet langer tegen de tool in te gaan.

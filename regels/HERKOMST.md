@@ -1326,3 +1326,27 @@ De regel gaat nu alleen af als er **minder** H2's zijn dan de vereiste vijf — 
 een "ontbrekende" kop in werkelijkheid een aanwezige kop met verkeerde tekst, en dat is het terrein
 van `h2-vast`. Met die grens: **0 meldingen op de 226 echte adviezen**, en nog steeds alle vijf bij
 platte tekst zonder koppen.
+
+## De tool opent leeg, niet op Tsjechië (20 september 2026)
+
+Martijn: *"bij het openen van de tool staat hij automatisch op Tsjechië, kan dit kies een land ofzo
+en dat je dan een land moet selecteren uit dropdown."* Terecht — Tsjechië is toevallig het eerste
+ingebouwde voorbeeld (voor de Artifact-versie, die geen verzoeken kan doen), en op de Pages-versie
+werd dat meteen getoetst en getoond nog vóórdat de volledige landenlijst binnen was. Een redacteur
+die de tool opent ziet dan een advies staan zonder het zelf gekozen te hebben — makkelijk aan te
+zien voor "dit is het advies dat ik moest checken."
+
+De dropdown begint nu met een plaatshouder, **"Kies een land…"**, die standaard geselecteerd staat
+en `disabled` is zodra er een echt land gekozen is (dus niet per ongeluk terug te kiezen). Er wordt
+bij het laden niets meer automatisch getoetst; het advies- en bevindingenpaneel tonen in plaats
+daarvan een korte uitleg (*"Kies eerst een land..., of plak zelf de tekst van een reisadvies"*).
+Print, kopiëren en de oordeelstoets blijven uitgeschakeld tot er iets gekozen is.
+
+**Eén ding moest nog gedicht worden.** De knop "Oordeelstoets uitvoeren" was zonder gekozen advies
+niet uitgeschakeld en zijn code las rechtstreeks `huidig.doc.volledigeTekst` — zonder gekozen advies
+(`huidig === null`) had dat een crash gegeven. Die is nu ook gevangen, met dezelfde soort melding als
+de rest van de tool: *"Kies eerst een land, of plak zelf een reisadvies."*
+
+In Chromium gecontroleerd: de plaatshouder staat er en is niet terug te kiezen na een echte keuze,
+beide panelen tonen de juiste lege-staat, de knoppen zijn uit, klikken op de oordeelstoets zonder
+keuze crasht niet, en na het kiezen van een land werkt alles zoals altijd.

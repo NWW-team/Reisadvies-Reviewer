@@ -455,7 +455,8 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
   <div class="werkblad">
     <section class="paneel tekst">
       <h2>Het advies</h2>
-      <div class="body advies" id="advies"></div>
+      <div class="body advies" id="advies"><p class="leeg">Kies eerst een land in de lijst
+        hierboven, of plak zelf de tekst van een reisadvies.</p></div>
     </section>
 
     <section class="paneel">
@@ -475,7 +476,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
           <span id="spelling-stand" role="status" aria-live="polite"></span>
         </p>
         <p class="verborgen-melding" id="verborgen" role="status" aria-live="polite"></p>
-        <div id="bevindingen"></div>
+        <div id="bevindingen"><p class="leeg">Nog geen advies gekozen.</p></div>
         <div class="oordeelsblok">
           <h3>Oordeelstoets</h3>
           <p class="uitleg">B1-woordmoeilijkheid, begrijpelijkheid, en of een onderwerp dat de matrix als
@@ -3077,6 +3078,20 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     kiezer.appendChild(o);
   };
 
+  // Staat er meteen een land gekozen (Tsjechië, het eerste voorbeeld), dan denkt een redacteur al
+  // gauw dat dát het advies is dat hij zelf moest kiezen. Deze plaatshouder dwingt een bewuste
+  // keuze af: hij staat vooraan, is de standaardwaarde, en is disabled zodat je er na het kiezen
+  // van een echt land niet per ongeluk op terug kunt komen.
+  function plaatshouder() {
+    const o = document.createElement('option');
+    o.value = '';
+    o.textContent = 'Kies een land…';
+    o.disabled = true;
+    o.selected = true;
+    kiezer.appendChild(o);
+  }
+
+  plaatshouder();
   VOORBEELDEN.forEach((v, i) => optie('voorbeeld:' + i, v.land + ' — ' + v.kenmerk));
   $('bron-regel').textContent = REGELDATA.matrix.koppen.length + ' koppen uit de matrix · '
     + Object.keys(REGELDATA.kleurcodes.kleuren).length + ' kleurcodes · '
@@ -3177,7 +3192,8 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
 
   /** Haalt het gekozen advies op: uit de pagina zelf, of uit adviezen/<ISO>.json. */
   async function kiesAdvies() {
-    const waarde = kiezer.value || 'voorbeeld:0';
+    const waarde = kiezer.value;
+    if (!waarde) return;          // de plaatshouder "Kies een land…" toetst nog niets
     if (!waarde.startsWith('iso:')) {
       const v = VOORBEELDEN[Number(waarde.slice('voorbeeld:'.length)) || 0];
       return toetsInvoer(v.html, v.land, { titel: v.titel, url: v.url, iso: v.iso });
@@ -3211,14 +3227,15 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     }
     if (!Array.isArray(lijst) || !lijst.length) return;
     kiezer.innerHTML = '';
+    plaatshouder();
     for (const a of lijst) {
       optie('iso:' + a.iso, a.land + (a.kleurcodes && a.kleurcodes.length
         ? ' — kleurcode ' + a.kleurcodes.join('/') : ''));
     }
-    // Het advies dat al op het scherm staat blijft staan; alleen de lijst wordt ruimer.
+    // Het advies dat al op het scherm staat blijft staan; alleen de lijst wordt ruimer. Is er nog
+    // niets gekozen, dan blijft de plaatshouder gewoon staan — geen automatische keuze meer.
     const alStaat = huidig && huidig.land && [...kiezer.options].find((o) => o.textContent.startsWith(huidig.land));
     if (alStaat) kiezer.value = alStaat.value;
-    else await kiesAdvies();
   }
 
   // ---------- status ----------
@@ -3500,6 +3517,7 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
   $('knop-oordeel').addEventListener('click', async () => {
     const knop = $('knop-oordeel');
     const uit = $('oordeelsuitvoer');
+    if (!huidig) { uit.textContent = 'Kies eerst een land, of plak zelf een reisadvies.'; return; }
     knop.disabled = true;
     uit.textContent = 'Bezig…';
     try {
@@ -3744,7 +3762,9 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     return gelukt;
   }
   // ---------- start ----------
-  kiesAdvies();
+  // Geen kiesAdvies() hier: de pagina start bewust zonder gekozen land (zie de plaatshouder
+  // "Kies een land…"), zodat een redacteur niet per ongeluk het eerste voorbeeld voor zijn eigen
+  // keuze aanziet. haalLijst() vult de dropdown; kiezen doet de redacteur zelf.
   haalLijst();
   // Spelling hoort bij het checken van een advies, dus geen losse stap meer: de woordenlijst
   // wordt hier al opgehaald, terwijl de redacteur het eerste advies nog aan het lezen is. Geen

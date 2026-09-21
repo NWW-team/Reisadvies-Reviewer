@@ -1475,24 +1475,13 @@ function maakToetser(data) {
       // Meerdere kleurcodes betekent: per gebied de verkorte variant, en de volledige uitleg volgt
       // onder Regionale risico's. Zo blijft "In het kort" kort en staat hetzelfde niet twee keer.
       //
-      // Maar ook bij meerdere kleurcodes gaat niet elke bullet over een afgebakend deelgebied. Wijst
-      // hij terug naar iets specifiek dat eerder in de zin genoemd is ("voor de gebieden X en Y"),
-      // dan is dat een deelgebied en hoort "hierheen" erbij. Gaat het om een groter, abstracter
-      // geheel -- "voor de rest van land X", of "het hele land" -- dan is dat geen gerichte
-      // verwijzing en hoort ook daar "erheen" bij, ook al heeft het advies als geheel meerdere
-      // kleurcodes. Dat onderscheid zit in de bullet zelf, niet in het aantal kleuren van het advies.
-      //
       // We vergelijken de handelingsinstructie: alles ná de openingszin. De openingszin zelf is al
       // gedekt door kleur-eerste-bullet-voluit en kleur-vervolg-bullet-kort. Let op dat het
       // verschil niet één woord is: groen en geel zetten "erheen" tegenover "hierheen", rood zet
       // "er niet heen" tegenover "niet hierheen", en bij oranje is de instructie in beide
       // varianten gelijk. Daarom toetsen we de hele instructie en niet dat ene woord.
       if (!kleurenVanAdvies.includes(kleur)) continue;   // kleur van een ánder land
-      const kleurRe = new RegExp('\\b' + kleur + '\\b');
-      const bullet = kortBlokStukken(doc).find((x) => kleurRe.test(norm(x)));
-      const opening = bullet ? norm(bullet.split(/(?<=\.)\s+/)[0]) : '';
-      const wijstNaarGeheel = kleurenVanAdvies.length > 1 && /\b(?:de rest van|het hele)\b/.test(opening);
-      const hoortVolledig = kleurenVanAdvies.length === 1 || wijstNaarGeheel;
+      const hoortVolledig = kleurenVanAdvies.length === 1;
       const verwachteTekst = hoortVolledig ? k.in_het_kort_volledig : k.in_het_kort_deels;
       const andereTekst = hoortVolledig ? k.in_het_kort_deels : k.in_het_kort_volledig;
       if (instructieVan(verwachteTekst) && !kortGenorm.includes(instructieVan(verwachteTekst))) {
@@ -1502,11 +1491,15 @@ function maakToetser(data) {
           ? woordverschil(instructieVan(andereTekst), instructieVan(verwachteTekst)) : null;
         const preciezer = verschil
           ? ' ' + verschil.map(([x, y]) => `Er staat "${x}", er hoort "${y}" te staan.`).join(' ') : '';
+        // De bullet waar het om gaat, zodat de pagina hem kan markeren en je erheen kunt springen.
+        // Zonder dit stond er wel een melding maar werd er niets onderstreept.
+        const kleurRe = new RegExp('\\b' + kleur + '\\b');
+        const bullet = kortBlokStukken(doc).find((x) => kleurRe.test(norm(x)));
         b.push(bevinding('kleur-variant', ERNST.fout, 'MX, tab Kleurcode-teksten',
           staatDeAndere
             ? (hoortVolledig
-                ? `Deze bullet gaat over het hele land of de rest ervan, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.${preciezer}`
-                : `Deze bullet wijst een deelgebied aan, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.${preciezer}`)
+                ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.${preciezer}`
+                : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.${preciezer}`)
             : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
           { ...(bullet ? { fragment: bullet } : {}),
             verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
@@ -1515,8 +1508,8 @@ function maakToetser(data) {
               // gebieden X en Y".
               .replace(/\{gebieden\}/g, 'X en Y'),
             notitie: hoortVolledig
-              ? 'Bij het hele land, of de rest ervan, geldt de kleur voor een groter geheel; dan staat de volledige uitleg in "In het kort".'
-              : 'Bij een gericht deelgebied staat de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));
+              ? 'Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in "In het kort".'
+              : 'Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));
       }
     }
 

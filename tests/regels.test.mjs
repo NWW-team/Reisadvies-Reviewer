@@ -792,47 +792,16 @@ test('de kleur van een ander land telt niet als kleurcode van dit advies', () =>
 });
 
 test('kleurvariant: scheelt het een woord, dan noemt de melding dat woord', () => {
-  // Bij geel is het verschil tussen de volledige en de verkorte uitleg "erheen" / "hierheen". Dit
-  // is een genoemd deelgebied ("het oosten"), geen "de rest van" of "het hele land" -- dus hoort
-  // hier de verkorte variant met "hierheen".
+  // Bij geel is het verschil tussen de volledige en de verkorte uitleg "erheen" / "hierheen".
   const b = bevindingenVan('<h2>In het kort</h2><ul>'
     + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
     + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
-    + '<li>Voor het oosten van Tsjechië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er '
+    + '<li>Voor de rest van Tsjechië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er '
     + 'zijn bijzondere veiligheidsrisico&#39;s.</li></ul>'
     + '<p>Let op: meld u aan voor de informatieservice.</p>',
   { land: 'Tsjechië', kleurcodes: ['oranje', 'geel'] }).filter((x) => x.regel === 'kleur-variant');
   assert.equal(b.length, 1);
   assert.match(b[0].boodschap, /Er staat "erheen", er hoort "hierheen" te staan\./);
-});
-
-/**
- * Martijn, 20 september 2026: "hierheen" hoort bij een gerichte verwijzing naar een eerder
- * genoemd deelgebied; "erheen" bij een groter, abstracter geheel -- ook "de rest van" het land,
- * ook al heeft het advies als geheel meerdere kleurcodes. Dat onderscheid zit in de bullet zelf,
- * niet in het aantal kleuren van het advies.
- */
-test('kleurvariant: "de rest van" het land is geen deelgebied, ook niet bij meerdere kleurcodes', () => {
-  const ids = idsVan('<h2>In het kort</h2><ul>'
-    + '<li>Voor het oosten van Tsjechië geldt kleurcode oranje. Reis alleen hierheen als het '
-    + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
-    + '<li>Voor de rest van Tsjechië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er '
-    + 'zijn bijzondere veiligheidsrisico&#39;s.</li></ul>'
-    + '<p>Let op: meld u aan voor de informatieservice.</p>',
-  { land: 'Tsjechië', kleurcodes: ['oranje', 'geel'] });
-  assert.ok(!ids.includes('kleur-variant'), '"de rest van" plus "erheen" is nu de juiste vorm');
-});
-
-test('kleurvariant: "de rest van" het land met "hierheen" is juist nu de fout', () => {
-  const b = bevindingenVan('<h2>In het kort</h2><ul>'
-    + '<li>Voor het oosten van Tsjechië geldt kleurcode oranje. Reis alleen hierheen als het '
-    + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
-    + '<li>Voor de rest van Tsjechië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er '
-    + 'zijn bijzondere veiligheidsrisico&#39;s.</li></ul>'
-    + '<p>Let op: meld u aan voor de informatieservice.</p>',
-  { land: 'Tsjechië', kleurcodes: ['oranje', 'geel'] }).filter((x) => x.regel === 'kleur-variant');
-  assert.equal(b.length, 1);
-  assert.match(b[0].boodschap, /Er staat "hierheen", er hoort "erheen" te staan\./);
 });
 
 test('kleurvariant: bij rood loopt de zin te ver uiteen voor een woordverschil', () => {

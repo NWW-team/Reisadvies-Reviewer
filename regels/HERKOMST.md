@@ -1404,3 +1404,31 @@ nieuwe tests toegevoegd die het "de rest van"-onderscheid met en zonder deelgebi
 **Nog open:** Martijn loopt de matrix zelf na op consistentie met deze regel — het cel-voorbeeld bij
 "Deels" noemt "de rest van land X" nog naast "de gebieden X en Y" onder "hierheen", en dat behoeft
 een update om niet langer tegen de tool in te gaan.
+
+## Erheen of hierheen, teruggedraaid: toch gewoon per advies (21 september 2026)
+
+Een dag later, bij een Saoedi-Arabië-bevinding die "erheen" bij "de rest van Saoedi-Arabië" nog
+steeds als fout meldde: *"lijkt me prima om dit toch aan te houden, want dan staat het goed in
+format en in de meeste reisadviezen, maar dacht dat we eerder hadden gedacht: doe maar erheen bij
+land en hierheen bij gebied. Maar ik bedenk nu het staat ws al op veel plekken zoals in format dus
+laten we dat voorlopig maar aanhouden. en dus ok als tool deze melding geeft."* Bevestigd op de
+vraag of dat een volledige terugdraai naar de oude regel betekent: ja.
+
+Reden, met de meting van gisteren in de hand: van de 226 adviezen schrijven er 41 al "hierheen" bij
+"de rest van [land]" — dat is de meerderheid, en dat is ook wat de matrix letterlijk voorschrijft
+("Deels": "de gebieden X en Y/de rest van land X" horen allebei bij "hierheen"). Het per-bullet
+onderscheid uit de vorige sectie zou die 41 hebben laten aanpassen om bij de 13 uitzonderingen te
+passen — omgekeerde verhouding van wat je wilt. Aanhouden wat de matrix al zegt en wat de meeste
+adviezen al doen, scheelt bovendien fors: 92 terug naar 51 meldingen bij `kleur-variant`.
+
+**`kleur-variant` toetst weer aan het aantal kleurcodes van het hele advies**, niet meer per bullet:
+één kleurcode is de volledige uitleg (erheen), meer dan één de verkorte (hierheen) — ook bij "de
+rest van [land]". Dat is precies de regel van vóór 20 september. `scripts/erheen-hierheen.mjs` en
+`data/erheen-hierheen.md` zijn mee teruggedraaid (weer 20 adviezen, net als voorheen). De twee tests
+die het per-bullet-onderscheid dekten zijn verwijderd; de resterende kleurvariant-test staat weer op
+zijn oorspronkelijke fragment. 174 tests groen, gemeten op het corpus: exact terug naar 51 meldingen
+bij `kleur-variant`, geen wijziging elders.
+
+Bijvangst van dit rondje: het Saoedi-Arabië-scherm dat Martijn zag, toonde de tekst van vóór de
+merge van gisteren terwijl die al op productie stond — vermoedelijk een tabblad dat al open stond en
+niet ververst was, niet een kapotte deploy.

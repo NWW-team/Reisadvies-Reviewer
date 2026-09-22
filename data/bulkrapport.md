@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-09-21 over 226 reisadviezen.
+Gedraaid op 2026-09-22 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **67** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.2 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **200** van de 3008 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **201** van de 3007 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,7 +26,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 331 | 159 |
-| geel/oranje — let op | 1522 | 216 |
+| geel/oranje — let op | 1521 | 216 |
 | lichtblauw — lange zin met link | 542 | 201 |
 | grijs — ter overweging | 157 | 109 |
 | roze — twijfeltaal | 456 | 158 |
@@ -39,7 +39,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `zin-frequentiewoord` | 147 | 387 |
 | `zin-lijdende-vorm` | 124 | 271 |
 | `kleur-variant` | 70 | 92 |
-| `woord-onbekend` | 67 | 138 |
+| `woord-onbekend` | 68 | 139 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
 | `zin-twijfeltaal` | 53 | 69 |
@@ -97,16 +97,16 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `telefoon-notatie` | 2 | 3 |
 | `criminaliteit-themapagina` | 2 | 2 |
 | `genderneutraal` | 2 | 3 |
-| `kort-verwijzing-hoogste-kleur` | 2 | 2 |
-| `regionaal-kleur-kop` | 2 | 2 |
 | `informatieservice-vaste-tekst` | 1 | 1 |
 | `vaccinaties-ggd` | 1 | 1 |
 | `vaccinaties-lcr` | 1 | 1 |
 | `landnaam-schrijfwijze` | 1 | 1 |
 | `percentage-notatie` | 1 | 1 |
 | `valuta-notatie` | 1 | 1 |
+| `kort-verwijzing-hoogste-kleur` | 1 | 1 |
 | `rood-herhaling-voorbereiding` | 1 | 1 |
 | `tijd-notatie` | 1 | 1 |
+| `regionaal-kleur-kop` | 1 | 1 |
 
 ## Langste adviezen
 
@@ -119,8 +119,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | Colombia | 2556 | 2000 |
 | Turkije | 2539 | 2000 |
 | China | 2504 | 1500 |
-| Rusland | 2501 | 2000 |
 | Mexico | 2497 | 2000 |
+| Rusland | 2494 | 2000 |
 | Peru | 2461 | 2000 |
 | Tanzania | 2438 | 2000 |
 | Filipijnen | 2436 | 2000 |

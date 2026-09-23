@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-09-22 over 226 reisadviezen.
+Gedraaid op 2026-09-23 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **67** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.2 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **201** van de 3007 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **201** van de 3011 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,8 +26,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 331 | 159 |
-| geel/oranje — let op | 1521 | 216 |
-| lichtblauw — lange zin met link | 542 | 201 |
+| geel/oranje — let op | 1524 | 216 |
+| lichtblauw — lange zin met link | 543 | 201 |
 | grijs — ter overweging | 157 | 109 |
 | roze — twijfeltaal | 456 | 158 |
 
@@ -35,7 +35,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 219 | 1273 |
+| `zin-max-woorden` | 219 | 1275 |
 | `zin-frequentiewoord` | 147 | 387 |
 | `zin-lijdende-vorm` | 124 | 271 |
 | `kleur-variant` | 70 | 92 |
@@ -44,9 +44,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `aanhalingstekens` | 53 | 86 |
 | `zin-twijfeltaal` | 53 | 69 |
 | `doc-woordenaantal` | 46 | 46 |
-| `link-tekstlengte` | 44 | 49 |
+| `link-tekstlengte` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
-| `rubrieken-max` | 37 | 37 |
+| `rubrieken-max` | 38 | 38 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 28 | 28 |
@@ -115,7 +115,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | Thailand | 3327 | 2000 |
 | India | 3100 | 2000 |
 | Ecuador | 2754 | 2000 |
-| Indonesië | 2594 | 2000 |
+| Indonesië | 2640 | 2000 |
 | Colombia | 2556 | 2000 |
 | Turkije | 2539 | 2000 |
 | China | 2504 | 1500 |

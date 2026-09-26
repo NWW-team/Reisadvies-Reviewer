@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-09-25 over 226 reisadviezen.
+Gedraaid op 2026-09-26 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **67** van de 226 adviezen hebben geen enkele harde fout.
-- **46** adviezen zitten boven de woordenlimiet.
-- Gemiddeld 1.2 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **202** van de 3021 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **45** adviezen zitten boven de woordenlimiet.
+- Gemiddeld 1.3 eigen fouten per advies, los van wat uit de standaardtekst komt.
+- **203** van de 3022 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,31 +25,31 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 331 | 159 |
-| geel/oranje — let op | 1532 | 216 |
-| lichtblauw — lange zin met link | 545 | 201 |
-| grijs — ter overweging | 157 | 109 |
-| roze — twijfeltaal | 456 | 157 |
+| rood — fout | 332 | 159 |
+| geel/oranje — let op | 1533 | 216 |
+| lichtblauw — lange zin met link | 544 | 201 |
+| grijs — ter overweging | 158 | 110 |
+| roze — twijfeltaal | 455 | 156 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 219 | 1282 |
-| `zin-frequentiewoord` | 146 | 386 |
-| `zin-lijdende-vorm` | 124 | 272 |
+| `zin-max-woorden` | 219 | 1281 |
+| `zin-frequentiewoord` | 145 | 385 |
+| `zin-lijdende-vorm` | 124 | 273 |
 | `kleur-variant` | 70 | 92 |
 | `woord-onbekend` | 69 | 140 |
 | `h4-niet-melden` | 64 | 65 |
 | `zin-twijfeltaal` | 54 | 70 |
 | `aanhalingstekens` | 53 | 86 |
-| `doc-woordenaantal` | 46 | 46 |
+| `doc-woordenaantal` | 45 | 45 |
 | `link-tekstlengte` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 38 | 38 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
-| `kinderen-paspoort` | 28 | 28 |
+| `kinderen-paspoort` | 29 | 29 |
 | `h3-niet-melden` | 24 | 24 |
 | `rubriek-vrij-te-hoog` | 23 | 23 |
 | `rubrieken-volgorde` | 22 | 22 |
@@ -58,9 +58,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
 | `h4-kop-variant` | 12 | 13 |
+| `tekst-spatie-leesteken` | 11 | 12 |
+| `actueel-max-woorden` | 11 | 11 |
 | `h3-vaste-kop` | 11 | 11 |
-| `tekst-spatie-leesteken` | 10 | 11 |
-| `actueel-max-woorden` | 10 | 10 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
@@ -116,7 +116,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | Thailand | 3385 | 2000 |
 | India | 3100 | 2000 |
 | Ecuador | 2754 | 2000 |
-| Colombia | 2684 | 2000 |
+| Colombia | 2681 | 2000 |
 | Mexico | 2651 | 2000 |
 | Indonesië | 2640 | 2000 |
 | Turkije | 2539 | 2000 |

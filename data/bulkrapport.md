@@ -1,6 +1,6 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-09-26 over 226 reisadviezen.
+Gedraaid op 2026-09-27 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 

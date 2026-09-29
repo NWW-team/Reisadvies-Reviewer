@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-09-28 over 226 reisadviezen.
+Gedraaid op 2026-09-29 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **67** van de 226 adviezen hebben geen enkele harde fout.
 - **45** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.3 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **203** van de 3019 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **203** van de 3018 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -29,7 +29,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | geel/oranje — let op | 1531 | 216 |
 | lichtblauw — lange zin met link | 543 | 201 |
 | grijs — ter overweging | 158 | 110 |
-| roze — twijfeltaal | 455 | 156 |
+| roze — twijfeltaal | 454 | 156 |
 
 ## Per regel
 
@@ -41,8 +41,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `kleur-variant` | 70 | 92 |
 | `woord-onbekend` | 69 | 140 |
 | `h4-niet-melden` | 64 | 65 |
-| `zin-twijfeltaal` | 54 | 70 |
 | `aanhalingstekens` | 53 | 86 |
+| `zin-twijfeltaal` | 53 | 69 |
 | `doc-woordenaantal` | 45 | 45 |
 | `link-tekstlengte` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
@@ -117,7 +117,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | India | 3100 | 2000 |
 | Ecuador | 2754 | 2000 |
 | Colombia | 2681 | 2000 |
-| Mexico | 2651 | 2000 |
+| Mexico | 2658 | 2000 |
 | Indonesië | 2640 | 2000 |
 | Turkije | 2539 | 2000 |
 | China | 2504 | 1500 |

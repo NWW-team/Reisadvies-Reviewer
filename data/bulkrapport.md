@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-09-30 over 226 reisadviezen.
+Gedraaid op 2026-10-01 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **67** van de 226 adviezen hebben geen enkele harde fout.
 - **45** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.3 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **203** van de 3018 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **203** van de 3022 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,7 +26,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 332 | 159 |
-| geel/oranje — let op | 1531 | 216 |
+| geel/oranje — let op | 1535 | 216 |
 | lichtblauw — lange zin met link | 543 | 201 |
 | grijs — ter overweging | 158 | 110 |
 | roze — twijfeltaal | 454 | 156 |
@@ -35,9 +35,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 219 | 1278 |
+| `zin-max-woorden` | 219 | 1280 |
 | `zin-frequentiewoord` | 145 | 385 |
-| `zin-lijdende-vorm` | 124 | 273 |
+| `zin-lijdende-vorm` | 124 | 275 |
 | `kleur-variant` | 70 | 92 |
 | `woord-onbekend` | 69 | 140 |
 | `h4-niet-melden` | 64 | 65 |
@@ -123,8 +123,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | China | 2504 | 1500 |
 | Rusland | 2494 | 2000 |
 | Peru | 2461 | 2000 |
-| Tanzania | 2438 | 2000 |
 | Filipijnen | 2436 | 2000 |
+| Tanzania | 2347 | 2000 |
 | Venezuela | 2332 | 2000 |
 | Egypte | 2326 | 2000 |
 | Irak | 2283 | 2000 |

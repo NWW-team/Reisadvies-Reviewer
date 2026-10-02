@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-01 over 226 reisadviezen.
+Gedraaid op 2026-10-02 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **67** van de 226 adviezen hebben geen enkele harde fout.
 - **45** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.3 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **203** van de 3022 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **204** van de 3022 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,8 +26,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 332 | 159 |
-| geel/oranje — let op | 1535 | 216 |
-| lichtblauw — lange zin met link | 543 | 201 |
+| geel/oranje — let op | 1534 | 216 |
+| lichtblauw — lange zin met link | 544 | 201 |
 | grijs — ter overweging | 158 | 110 |
 | roze — twijfeltaal | 454 | 156 |
 
@@ -35,11 +35,11 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 219 | 1280 |
+| `zin-max-woorden` | 219 | 1279 |
 | `zin-frequentiewoord` | 145 | 385 |
 | `zin-lijdende-vorm` | 124 | 275 |
 | `kleur-variant` | 70 | 92 |
-| `woord-onbekend` | 69 | 140 |
+| `woord-onbekend` | 70 | 141 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
 | `zin-twijfeltaal` | 53 | 69 |
@@ -117,13 +117,13 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | India | 3100 | 2000 |
 | Ecuador | 2754 | 2000 |
 | Colombia | 2681 | 2000 |
-| Mexico | 2658 | 2000 |
 | Indonesië | 2640 | 2000 |
-| Turkije | 2539 | 2000 |
 | China | 2504 | 1500 |
+| Mexico | 2497 | 2000 |
 | Rusland | 2494 | 2000 |
 | Peru | 2461 | 2000 |
 | Filipijnen | 2436 | 2000 |
+| Turkije | 2411 | 2000 |
 | Tanzania | 2347 | 2000 |
 | Venezuela | 2332 | 2000 |
 | Egypte | 2326 | 2000 |

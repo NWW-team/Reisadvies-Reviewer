@@ -101,7 +101,7 @@
     {
       "id": "spelling",
       "label": "Mogelijke spelfouten",
-      "toelichting": "Woorden die niet in de OpenTaal-woordenlijst staan en er geen naam uitzien. Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, dan meldt de tool het niet meer.",
+      "toelichting": "Woorden die niet in de OpenTaal-woordenlijst staan en er geen naam uitzien. Klopt het woord wel? Klik dan op \"Woord is juist\". Het komt op de lijst met voorgestelde woorden en na opname in regels/uitzonderingen.txt meldt de tool het niet meer.",
       "regels": [
         "woord-onbekend"
       ],

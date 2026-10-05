@@ -1745,12 +1745,22 @@ function maakToetser(data) {
       const bv = kleurcodes.bullet_vormen;
       const kleurBullets = bullets.filter((i) => new RegExp(bv._herkennen_als_kleurbullet, 'i').test(i));
       const past = (tekst, patronen) => patronen.some((pat) => new RegExp(pat).test(norm(tekst)));
+      // Bij meerdere kleurcodes geldt de eerste bullet voor een deel van het land; dan hoeft hij
+      // niet voluit, maar de voorkeur is "De kleurcode van het reisadvies is oranje voor ..."
+      // (Martijn, 5 oktober 2026). Een voorkeur, geen fout.
       if (kleurBullets.length && !past(kleurBullets[0], bv.eerste_voluit)) {
-        b.push(bevinding('kleur-eerste-bullet-voluit', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
-          'De eerste bullet over de kleurcode staat niet voluit.',
-          { fragment: kleurBullets[0],
-            verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is … `
-              + '(of: De kleurcode van het reisadvies is … voor …)' }));
+        const eersteKleur = kleurcodes.volgorde.find((k) => new RegExp('\\b' + k + '\\b').test(norm(kleurBullets[0])));
+        b.push(meerdereKleuren
+          ? bevinding('kleur-eerste-bullet-voluit', ERNST.info, 'MX, tab Kleurcode-teksten, kolom NB',
+            'De eerste bullet over de kleurcode begint bij voorkeur met "De kleurcode van het reisadvies is … voor …".',
+            { fragment: kleurBullets[0],
+              verwacht: `De kleurcode van het reisadvies is ${eersteKleur || '…'} voor …`,
+              notitie: 'Dit advies heeft meerdere kleurcodes, dus de bullet hoeft niet voluit. Dit is een voorkeur, geen fout.' })
+          : bevinding('kleur-eerste-bullet-voluit', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
+            'De eerste bullet over de kleurcode staat niet voluit.',
+            { fragment: kleurBullets[0],
+              verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is … `
+                + '(of: De kleurcode van het reisadvies is … voor …)' }));
       }
       // Een vervolgbullet die de volledige vorm herhaalt maakt "In het kort" onnodig lang; het is
       // juist de bedoeling dat alleen de eerste voluit staat.

@@ -26,9 +26,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 291 | 152 |
-| geel/oranje — let op | 1531 | 216 |
+| geel/oranje — let op | 1528 | 216 |
 | lichtblauw — lange zin met link | 543 | 201 |
-| grijs — ter overweging | 158 | 110 |
+| grijs — ter overweging | 161 | 112 |
 | roze — twijfeltaal | 454 | 156 |
 
 ## Per regel

@@ -2195,15 +2195,15 @@
     ],
     "zinnen": 91,
     "fout": 1,
-    "letop": 12,
+    "letop": 11,
     "linkzin": 2,
     "twijfel": 3,
-    "info": 0,
+    "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
+      "let-op": 11,
       "link-zin": 2,
-      "info": 0,
+      "info": 1,
       "twijfel": 3
     },
     "perRegel": {
@@ -2235,11 +2235,12 @@
       },
       {
         "regel": "kleur-eerste-bullet-voluit",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "De eerste bullet over de kleurcode staat niet voluit.",
+        "boodschap": "De eerste bullet over de kleurcode begint bij voorkeur met \"De kleurcode van het reisadvies is … voor …\".",
         "fragment": "De kleurcode van het reisadvies voor Burkina Faso is voor het grootste deel rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "De kleurcode van het reisadvies voor Burkina Faso is … (of: De kleurcode van het reisadvies is … voor …)"
+        "verwacht": "De kleurcode van het reisadvies is rood voor …",
+        "notitie": "Dit advies heeft meerdere kleurcodes, dus de bullet hoeft niet voluit. Dit is een voorkeur, geen fout."
       },
       {
         "regel": "rubrieken-max",
@@ -12357,15 +12358,15 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 43,
+    "letop": 42,
     "linkzin": 5,
     "twijfel": 10,
-    "info": 3,
+    "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 43,
+      "let-op": 42,
       "link-zin": 5,
-      "info": 3,
+      "info": 4,
       "twijfel": 10
     },
     "perRegel": {
@@ -12417,11 +12418,12 @@
       },
       {
         "regel": "kleur-eerste-bullet-voluit",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "De eerste bullet over de kleurcode staat niet voluit.",
+        "boodschap": "De eerste bullet over de kleurcode begint bij voorkeur met \"De kleurcode van het reisadvies is … voor …\".",
         "fragment": "De kleurcode van het reisadvies van India is rood voor de regio’s Jammu en Kasjmir, Aksai Chin, voor de deelstaat Manipur en voor de grensstrook tussen India en Pakistan. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "De kleurcode van het reisadvies voor India is … (of: De kleurcode van het reisadvies is … voor …)"
+        "verwacht": "De kleurcode van het reisadvies is rood voor …",
+        "notitie": "Dit advies heeft meerdere kleurcodes, dus de bullet hoeft niet voluit. Dit is een voorkeur, geen fout."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -14128,15 +14130,15 @@
     ],
     "zinnen": 98,
     "fout": 1,
-    "letop": 14,
+    "letop": 13,
     "linkzin": 2,
     "twijfel": 1,
-    "info": 0,
+    "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 14,
+      "let-op": 13,
       "link-zin": 2,
-      "info": 0,
+      "info": 1,
       "twijfel": 1
     },
     "perRegel": {
@@ -14153,11 +14155,12 @@
     "bevindingen": [
       {
         "regel": "kleur-eerste-bullet-voluit",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "De eerste bullet over de kleurcode staat niet voluit.",
+        "boodschap": "De eerste bullet over de kleurcode begint bij voorkeur met \"De kleurcode van het reisadvies is … voor …\".",
         "fragment": "Voor het grensgebied van Jordanië met Irak en Syrië (met uitzondering van Umm Qais), de provincie Mafraq, de steden Aqaba en Azraq en de omliggende gebieden geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan. Lees meer onder Regionale risico’s.",
-        "verwacht": "De kleurcode van het reisadvies voor Jordanië is … (of: De kleurcode van het reisadvies is … voor …)"
+        "verwacht": "De kleurcode van het reisadvies is oranje voor …",
+        "notitie": "Dit advies heeft meerdere kleurcodes, dus de bullet hoeft niet voluit. Dit is een voorkeur, geen fout."
       },
       {
         "regel": "h4-niet-melden",

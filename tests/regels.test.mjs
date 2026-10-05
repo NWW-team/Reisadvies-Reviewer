@@ -804,6 +804,30 @@ test('kleurvariant: scheelt het een woord, dan noemt de melding dat woord', () =
   assert.match(b[0].boodschap, /Er staat "erheen", er hoort "hierheen" te staan\./);
 });
 
+test('eerste kleurbullet bij meerdere kleurcodes: een voorkeur, geen fout', () => {
+  // Jordanië: "Voor het grensgebied ... geldt kleurcode oranje." hoeft niet voluit omdat het advies
+  // deels oranje is; de voorkeur is "De kleurcode van het reisadvies is oranje voor ...".
+  const b = bevindingenVan('<h2>In het kort</h2><ul>'
+    + '<li>Voor het grensgebied van Tsjechië met Polen geldt kleurcode oranje. Reis alleen hierheen '
+    + 'als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er '
+    + 'zijn bijzondere veiligheidsrisico&#39;s.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['oranje', 'geel'] }).filter((x) => x.regel === 'kleur-eerste-bullet-voluit');
+  assert.equal(b.length, 1);
+  assert.equal(b[0].ernst, 'info');
+  assert.equal(b[0].verwacht, 'De kleurcode van het reisadvies is oranje voor …');
+});
+
+test('eerste kleurbullet bij één kleurcode blijft een let-op', () => {
+  const b = bevindingenVan('<h2>In het kort</h2><ul><li>Kleurcode groen geldt voor Tsjechië. U kunt '
+    + 'erheen reizen. Lees welke veiligheidsrisico&#39;s er zijn.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Tsjechië', kleurcodes: ['groen'] }).filter((x) => x.regel === 'kleur-eerste-bullet-voluit');
+  assert.equal(b.length, 1);
+  assert.equal(b[0].ernst, 'let-op');
+});
+
 test('kleurvariant: bij rood loopt de zin te ver uiteen voor een woordverschil', () => {
   // Daar blijft de melding zoals hij was: geen half diagnose-zinnetje erbij.
   const b = bevindingenVan('<h2>In het kort</h2><ul>'

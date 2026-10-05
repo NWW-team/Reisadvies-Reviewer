@@ -1438,3 +1438,20 @@ de live site bleef twee weken op de per-bullet-regel draaien. Martijn liep er bi
 *"dit klopt niet, hier gelden 2 kleurcodes en de formulering is goed/volgens wat in de matrix
 staat"* — bij "Voor de rest van Jordanië geldt kleurcode geel. U kunt hierheen reizen." meldde de
 tool dat "erheen" moest. Met deze merge is die melding weg.
+
+## Eerste kleurbullet bij meerdere kleurcodes: voorkeur, geen fout (5 oktober 2026)
+
+Jordanië opent "In het kort" met *"Voor het grensgebied van Jordanië met Irak en Syrië (...) geldt
+kleurcode oranje."* De tool meldde dat de eerste kleurbullet niet voluit stond. Martijn: *"de
+formulering hoeft niet voluit. want is deels oranje. Wel voorkeur om te beginnen met De kleurcode
+van het reisadvies is oranje voor..."*
+
+`kleur-eerste-bullet-voluit` maakt daarom nu onderscheid naar het aantal kleurcodes:
+
+- **Eén kleurcode:** ongewijzigd (*let op*). De bullet gaat over het hele land en staat voluit.
+- **Meerdere kleurcodes:** *ter overweging*. De melding noemt de voorkeursvorm *"De kleurcode van
+  het reisadvies is [kleur] voor …"*, met de kleur van die bullet ingevuld.
+
+Gemeten op 226 adviezen: de regel ging af bij drie adviezen (Burkina Faso, India, Jordanië), alle drie
+met meerdere kleurcodes. Die drie zijn nu *ter overweging* in plaats van *let op*; er komt niets bij
+en er valt niets weg.

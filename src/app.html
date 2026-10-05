@@ -101,6 +101,12 @@
   --letop: #ffc95e;
   --letop-vlak: #2e2513;
   --letop-rand: #ffb612;
+  --linkzin: #8fcae7;
+  --linkzin-vlak: #11293c;
+  --linkzin-rand: #4aa3dd;
+  --twijfel: #f9a8d4;
+  --twijfel-vlak: #2f1024;
+  --twijfel-rand: #d16bab;
   --info: #a2b4c6;
   --info-vlak: #1e2c3b;
   --info-rand: #3b5168;
@@ -247,16 +253,68 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .groep.twijfel .bev { border-left-color: var(--twijfel-rand); }
 .groep.info .bev { border-left-color: var(--info-rand); }
 .bev.actief { outline: 2px solid var(--blauw); outline-offset: 1px; }
-.bev .regelnaam { font-family: var(--mono); font-size: .72rem; color: var(--gedempt); }
-.bev .tekst { margin: 3px 0 0; font-size: .91rem; }
+/* Terugval voor een labeltje van een regel zonder filter: dan de kleur van de ernst. */
+.e-fout { --e: var(--fout); --e-vlak: var(--fout-vlak); --e-rand: var(--fout-rand); }
+.e-letop { --e: var(--letop); --e-vlak: var(--letop-vlak); --e-rand: var(--letop-rand); }
+.e-linkzin { --e: var(--linkzin); --e-vlak: var(--linkzin-vlak); --e-rand: var(--linkzin-rand); }
+.e-twijfel { --e: var(--twijfel); --e-vlak: var(--twijfel-vlak); --e-rand: var(--twijfel-rand); }
+.e-info { --e: var(--info); --e-vlak: var(--info-vlak); --e-rand: var(--info-rand); }
+/* Elk filter een eigen, zachte kleur: genoeg om twee soorten uit elkaar te houden, niet zo veel
+   dat het om aandacht schreeuwt. Het labeltje op een kaartje draagt de kleur van zijn filter. De
+   ernst (rood, oranje, blauw, roze) blijft op de rand van het kaartje en in de markering in de tekst. */
+.g-format { --e: #8a2f28; --e-vlak: #fcf1f0; --e-rand: #ecc4c0; }
+.g-zinslengte { --e: #7a4c14; --e-vlak: #fdf5ea; --e-rand: #efd4b0; }
+.g-zinslengte-link { --e: #1f4f7a; --e-vlak: #eff6fc; --e-rand: #bdd7ec; }
+.g-tekstfouten { --e: #5b3d7a; --e-vlak: #f5f0fa; --e-rand: #d8c9e9; }
+.g-spelling { --e: #6b5a1e; --e-vlak: #faf7e8; --e-rand: #e4daaf; }
+.g-linktekst { --e: #1d5f66; --e-vlak: #edf7f7; --e-rand: #b6dcde; }
+.g-lijdende-vorm { --e: #2f6130; --e-vlak: #f0f7ef; --e-rand: #c2debf; }
+.g-twijfeltaal { --e: #84305f; --e-vlak: #fcf0f6; --e-rand: #eec7db; }
+.g-frequentiewoorden { --e: #6a4070; --e-vlak: #f7f1f7; --e-rand: #ddcade; }
+.g-rubriekvolgorde { --e: #46576a; --e-vlak: #f2f5f8; --e-rand: #cdd6df; }
+.g-notatie { --e: #5c5a2a; --e-vlak: #f7f6ec; --e-rand: #dad7b4; }
+@media (prefers-color-scheme: dark) {
+:root:not([data-theme="light"]) .g-format { --e: #f0b4ad; --e-vlak: #2b1a1a; --e-rand: #6b3a36; }
+:root:not([data-theme="light"]) .g-zinslengte { --e: #f3c98f; --e-vlak: #2a2216; --e-rand: #6e5330; }
+:root:not([data-theme="light"]) .g-zinslengte-link { --e: #a9cdef; --e-vlak: #152638; --e-rand: #34597d; }
+:root:not([data-theme="light"]) .g-tekstfouten { --e: #cdb6ec; --e-vlak: #241b31; --e-rand: #56427a; }
+:root:not([data-theme="light"]) .g-spelling { --e: #e3d38f; --e-vlak: #282514; --e-rand: #66592c; }
+:root:not([data-theme="light"]) .g-linktekst { --e: #9fd6da; --e-vlak: #13292b; --e-rand: #2f6266; }
+:root:not([data-theme="light"]) .g-lijdende-vorm { --e: #aed8ac; --e-vlak: #17281a; --e-rand: #3d6a3f; }
+:root:not([data-theme="light"]) .g-twijfeltaal { --e: #f0b3d3; --e-vlak: #2d1823; --e-rand: #74405e; }
+:root:not([data-theme="light"]) .g-frequentiewoorden { --e: #dcbfdf; --e-vlak: #271d29; --e-rand: #634a66; }
+:root:not([data-theme="light"]) .g-rubriekvolgorde { --e: #bccbd9; --e-vlak: #1b242e; --e-rand: #485a6d; }
+:root:not([data-theme="light"]) .g-notatie { --e: #d8d4a3; --e-vlak: #252416; --e-rand: #5d5a33; }
+}
+:root[data-theme="dark"] .g-format { --e: #f0b4ad; --e-vlak: #2b1a1a; --e-rand: #6b3a36; }
+:root[data-theme="dark"] .g-zinslengte { --e: #f3c98f; --e-vlak: #2a2216; --e-rand: #6e5330; }
+:root[data-theme="dark"] .g-zinslengte-link { --e: #a9cdef; --e-vlak: #152638; --e-rand: #34597d; }
+:root[data-theme="dark"] .g-tekstfouten { --e: #cdb6ec; --e-vlak: #241b31; --e-rand: #56427a; }
+:root[data-theme="dark"] .g-spelling { --e: #e3d38f; --e-vlak: #282514; --e-rand: #66592c; }
+:root[data-theme="dark"] .g-linktekst { --e: #9fd6da; --e-vlak: #13292b; --e-rand: #2f6266; }
+:root[data-theme="dark"] .g-lijdende-vorm { --e: #aed8ac; --e-vlak: #17281a; --e-rand: #3d6a3f; }
+:root[data-theme="dark"] .g-twijfeltaal { --e: #f0b3d3; --e-vlak: #2d1823; --e-rand: #74405e; }
+:root[data-theme="dark"] .g-frequentiewoorden { --e: #dcbfdf; --e-vlak: #271d29; --e-rand: #634a66; }
+:root[data-theme="dark"] .g-rubriekvolgorde { --e: #bccbd9; --e-vlak: #1b242e; --e-rand: #485a6d; }
+:root[data-theme="dark"] .g-notatie { --e: #d8d4a3; --e-vlak: #252416; --e-rand: #5d5a33; }
+.bev .bovenrij { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.bev .soort {
+  font-size: .72rem; font-weight: 500; line-height: 1.5; padding: 0 9px; border-radius: 999px;
+  border: 1px solid var(--e-rand, var(--lijn-sterk)); background: var(--e-vlak, var(--vlak-2));
+  color: var(--e, var(--gedempt)); cursor: help;
+}
+.bev .tekst { margin: 6px 0 0; font-size: .91rem; }
 .bev blockquote { margin: 8px 0 0; padding: 6px 10px; border-left: 2px solid var(--lijn-sterk); background: var(--vlak-2); font-size: .84rem; cursor: pointer; }
-.bev .bron { margin-top: 7px; font-size: .74rem; color: var(--gedempt); }
 .bev .verwacht { margin-top: 7px; font-size: .8rem; color: var(--gedempt); }
 .bev .verwacht b { color: var(--inkt); font-weight: 600; }
-.oordeel { display: flex; gap: 5px; margin-top: 9px; flex-wrap: wrap; align-items: center; }
-.oordeel .vraag { font-size: .72rem; color: var(--gedempt); margin-right: 3px; }
-.oordeel button { padding: 2px 10px; font-size: .74rem; font-weight: 600; border-radius: 99px; }
-.oordeel button[aria-pressed="true"] { background: var(--donkerblauw); border-color: var(--donkerblauw); color: #fff; }
+/* Eén knop, rechtsboven en bewust bescheiden: de richtlijn volg je, dus "eens" of "oneens" is geen
+   vraag. Wat wel kan, is dat de tool zich vergist. */
+.bev .onterecht {
+  margin-left: auto; padding: 0 9px; font-size: .72rem; font-weight: 500; line-height: 1.6;
+  border-radius: 999px; border: 1px solid var(--lijn); background: none; color: var(--gedempt);
+}
+.bev .onterecht:hover:not(:disabled):not([aria-pressed="true"]) { border-color: var(--gedempt); color: var(--inkt); background: none; }
+.bev .onterecht[aria-pressed="true"] { background: var(--donkerblauw); border-color: var(--donkerblauw); color: #fff; }
 
 .leeg { color: var(--gedempt); font-size: .9rem; padding: 8px 0; }
 .geen-fouten { color: var(--kc-groen); font-weight: 600; }
@@ -305,7 +363,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
   content: '\2713'; font-size: .8em; line-height: 1; opacity: .75;
 }
 .filters button[aria-pressed="false"]::before { content: '\00d7'; opacity: .6; }
-.filters button[aria-pressed="true"] { background: var(--accent-zacht); border-color: var(--accent); }
+.filters button[aria-pressed="true"] { background: var(--e-vlak, var(--accent-zacht)); border-color: var(--e-rand, var(--accent)); color: var(--e, var(--inkt)); }
 .filters button:hover { border-color: var(--gedempt); }
 .filters button .n { font-variant-numeric: tabular-nums; color: var(--gedempt); font-size: .72rem; }
 /* Uit is doelbewust gedempt en doorgestreept, niet onzichtbaar: je moet kunnen zien dat je filtert. */
@@ -338,6 +396,19 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 
 /* ---------- uitleg bij een gekozen oordeel ---------- */
 .bev .gekozen { margin-top: 6px; font-size: .76rem; color: var(--gedempt); }
+
+/* ---------- voorgestelde woorden voor de woordenlijst ---------- */
+.voorstellen { margin-top: 26px; border: 1px solid var(--lijn); background: var(--vlak); box-shadow: var(--schaduw); }
+.voorstellen > h2 { font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; color: #fff;
+  margin: 0; padding: 11px 18px; background: var(--donkerblauw); font-weight: 700; }
+.voorstellen .body { padding: 14px 18px 16px; }
+.voorstellen p.uitleg { font-size: .84rem; color: var(--gedempt); margin: 0 0 10px; max-width: 75ch; }
+.voorstellen ul { list-style: none; margin: 0 0 12px; padding: 0; columns: 3 220px; column-gap: 24px; }
+.voorstellen li { break-inside: avoid; padding: 3px 0; font-size: .88rem; }
+.voorstellen label { display: flex; gap: 8px; align-items: baseline; cursor: pointer; }
+.voorstellen .landen { font-size: .74rem; color: var(--gedempt); }
+.voorstellen .knoppen { display: flex; gap: 9px; align-items: center; flex-wrap: wrap; }
+.voorstellen .knoppen span { font-size: .8rem; color: var(--gedempt); }
 
 /* ---------- terugkoppeling bij de knoppen ---------- */
 .melding { margin: 0; padding-block: 10px 0; font-size: .83rem; color: var(--gedempt); }
@@ -373,7 +444,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 #rapport .r-tekst .zin { cursor: auto; }
 
 @media print {
-  .lint, .band, .balk, #plakvak, .status, .werkblad, .voorbehoud, .melding { display: none !important; }
+  .lint, .band, .balk, #plakvak, .status, .werkblad, .voorstellen, .voorbehoud, .melding { display: none !important; }
   .wrap { max-width: none; padding-inline: 0; }
   body { background: #fff; color: #000; font-size: 10.5pt; }
   #rapport { display: block; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -475,6 +546,22 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
     </section>
   </div>
 
+  <!-- Woorden die een redacteur als juist heeft gemeld. Hier loopt de beheerder ze na: wat klopt,
+       gaat naar regels/uitzonderingen.txt en verdwijnt na de volgende bouw vanzelf van deze lijst. -->
+  <section class="voorstellen" id="voorstellen" hidden>
+    <h2>Voorgestelde woorden voor de woordenlijst</h2>
+    <div class="body">
+      <p class="uitleg">Deze woorden zijn als juist gemeld. Vink aan wat erbij mag en kopieer ze. Plak ze
+        daarna in <code>regels/uitzonderingen.txt</code>. Na de volgende bouw meldt de tool ze niet meer
+        en verdwijnen ze van deze lijst.</p>
+      <ul id="voorstellen-lijst"></ul>
+      <div class="knoppen">
+        <button type="button" id="voorstellen-kopieer">Kopieer aangevinkte woorden</button>
+        <span id="voorstellen-stand" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+
   <div class="voorbehoud">
     <h2>Waar de tool niets over zegt</h2>
     <ul>
@@ -520,10 +607,21 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   }
   const $ = (id) => document.getElementById(id);
   let huidig = null;          // {doc, resultaat, land}
-  let oordelen = {};          // sleutel -> 'eens'|'oneens'|'onterecht'
+  let oordelen = {};          // sleutel -> 'onterecht' (oudere rijen kunnen nog 'eens'/'oneens' zijn)
   let db = null;
+  // Woorden die als juist zijn gemeld: woord -> landen waarin ze gemeld zijn. Gevuld uit de
+  // database (alle beoordelaars) en bijgewerkt bij elke klik op "Woord is juist".
+  const woordVoorstellen = new Map();
 
-  const sleutelVan = (bev) => bev.regel + '::' + String(bev.fragment || bev.boodschap).slice(0, 80);
+  /** Het gemelde woord uit een spellingbevinding. */
+  const woordVan = (bev) => (String(bev.boodschap).match(/"([^"]+)"/) || [])[1] || '';
+
+  // Bij een spellingbevinding is het woord zelf de sleutel, niet de zin: staan er twee onbekende
+  // woorden in één zin, dan zijn dat twee meldingen die je los moet kunnen afkeuren. En zo staat
+  // in de database meteen het woord, en dat is precies wat de lijst met voorstellen nodig heeft.
+  const sleutelVan = (bev) => bev.regel + '::' + (bev.regel === 'woord-onbekend'
+    ? woordVan(bev)
+    : String(bev.fragment || bev.boodschap).slice(0, 80));
 
   // ---------- filters ----------
   // Filteren verbergt, het schrapt niet: de regels draaien onveranderd en huidig.resultaat blijft
@@ -585,7 +683,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     const toonLeeg = (g) => g.toon_ook_leeg && (g.id !== 'spelling' || !!woordenlijst);
     const knoppen = GROEPEN.filter((g) => tel[g.id] > 0 || toonLeeg(g)).map((g) =>
       '<button type="button" data-filter="' + g.id + '" aria-pressed="' + filters[g.id] + '"'
-        + (tel[g.id] ? '' : ' class="leeg"')
+        + ' class="g-' + g.id + (tel[g.id] ? '' : ' leeg') + '"'
         + ' title="' + esc(tel[g.id] ? g.toelichting : 'Deze toets heeft gedraaid en niets gevonden.') + '">'
         + esc(g.label) + ' <span class="n">' + tel[g.id] + '</span></button>').join('');
     if (!knoppen) { doel.hidden = true; return; }
@@ -610,15 +708,14 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   const VOLGORDE = Regels.ERNST_VOLGORDE;
   const ernstKlasse = { 'fout': 'fout', 'let-op': 'letop', 'link-zin': 'linkzin',
     'twijfel': 'twijfel', 'info': 'info' };
-  // Drie oordelen met drie verschillende gevolgen. "Oneens" zegt iets over dit advies: de regel
-  // klopt, maar hier geldt een bewuste uitzondering. "Onterecht" zegt iets over de tool: de
-  // bevinding had er niet moeten staan. Dat onderscheid is de reden dat ze naast elkaar staan.
-  const OORDEEL_LABEL = { eens: 'Eens', oneens: 'Oneens', onterecht: 'Onterecht' };
-  const OORDEEL_UITLEG = {
-    eens: 'De bevinding klopt; de tekst gaat hierop aangepast worden.',
-    oneens: 'De regel klopt, maar in dit advies wijken we er bewust van af.',
-    onterecht: 'De bevinding zelf deugt niet: de tool ziet iets dat er niet staat.',
-  };
+  // Eén oordeel: onterecht. Eens of oneens zijn met een richtlijn is geen keuze voor de
+  // redacteur; de richtlijnen volg je. Wat wel kan, is dat de tool zich vergist. Bij een
+  // spellingbevinding betekent dat: het woord is goed, en dan komt het op de lijst met
+  // voorgestelde woorden voor de woordenlijst. Was eerder: Eens / Oneens / Onterecht.
+  const isOnterecht = (s) => oordelen[s] === 'onterecht';
+  const ONTERECHT_UITLEG = 'De bevinding zelf deugt niet: de tool ziet iets dat er niet staat.';
+  const WOORD_UITLEG = 'Dit woord is goed gespeld. Het staat nu op de lijst met voorgestelde woorden '
+    + 'voor de woordenlijst, onderaan de pagina.';
   const ernstLabel = { 'fout': 'Fout', 'let-op': 'Let op', 'link-zin': 'Lange zin met link',
     'twijfel': 'Twijfeltaal', 'info': 'Ter overweging' };
   // Korter, voor de tellers in de balk.
@@ -942,25 +1039,31 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
 
   function kaart(bev, i) {
     const s = sleutelVan(bev);
-    const gekozen = oordelen[s];
-    const knop = (w) => '<button type="button" data-oordeel="' + w + '" data-sleutel="' + esc(s)
-      + '" title="' + esc(OORDEEL_UITLEG[w]) + '"'
-      + ' aria-pressed="' + (gekozen === w ? 'true' : 'false') + '">' + OORDEEL_LABEL[w] + '</button>';
+    const gekozen = isOnterecht(s);
+    const woord = bev.regel === 'woord-onbekend';
+    const uitleg = woord ? WOORD_UITLEG : ONTERECHT_UITLEG;
+    // Het labeltje noemt de soort, met dezelfde naam en kleur als het filter erboven. De
+    // technische regelnaam en de bron (SW, MX, SJ) staan in de tooltip, voor wie wil nagaan
+    // waar een regel vandaan komt; in het rapport om te delen staan ze gewoon voluit.
+    const g = groepVan(bev);
+    const soort = '<span class="soort ' + (g ? 'g-' + g.id : 'e-' + ernstKlasse[bev.ernst]) + '" title="'
+      + esc(bev.regel + ' \u00b7 ' + bev.bron) + '">' + esc(g ? g.label : bev.regel) + '</span>';
+    const knop = '<button type="button" class="onterecht" data-oordeel="onterecht" data-sleutel="' + esc(s)
+      + '" data-woord="' + esc(woord ? woordVan(bev) : '') + '" title="' + esc(uitleg) + '"'
+      + ' aria-pressed="' + gekozen + '">' + (woord ? 'Woord is juist' : 'Onterecht') + '</button>';
     return '<div class="bev" data-index="' + i + '">'
-      + '<div class="regelnaam">' + esc(bev.regel) + '</div>'
+      + '<div class="bovenrij">' + soort + knop + '</div>'
       + '<p class="tekst">' + esc(bev.boodschap) + '</p>'
       + (bev.fragment ? '<blockquote data-naar="' + i + '">' + esc(bev.fragment) + '</blockquote>' : '')
       + (bev.verwacht ? '<div class="verwacht">Verwacht: <b>' + esc(bev.verwacht) + '</b></div>' : '')
       + (bev.detail ? '<div class="verwacht">Langste blokken: <b>' + esc(bev.detail.join(' · ')) + '</b></div>' : '')
-      + (bev.notitie ? '<div class="verwacht">' + esc(bev.notitie) + '</div>' : '')
-      + (bev.herkomst === 'aanvulling'
+      + (bev.notitie && !woord ? '<div class="verwacht">' + esc(bev.notitie) + '</div>' : '')
+      // De aanvullingswaarschuwing gaat over schrijfregels; bij een spelfout zegt hij niets.
+      + (bev.herkomst === 'aanvulling' && !woord
           ? '<div class="aanvulling">Aanvulling &mdash; deze regel past de schrijfwijzer toe, maar dit woord '
             + 'staat er niet letterlijk in. Beoordeel of hij mag blijven.</div>'
           : '')
-      + '<div class="bron">' + esc(bev.bron) + '</div>'
-      + '<div class="oordeel"><span class="vraag">Klopt deze bevinding?</span>'
-        + knop('eens') + knop('oneens') + knop('onterecht') + '</div>'
-      + (gekozen ? '<div class="gekozen">' + esc(OORDEEL_UITLEG[gekozen]) + '</div>' : '')
+      + (gekozen ? '<div class="gekozen">' + esc(uitleg) + '</div>' : '')
       + '</div>';
   }
 
@@ -973,7 +1076,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     if (quote) return richtOp(Number(quote.dataset.naar), 'melding');
 
     const knop = e.target.closest('[data-oordeel]');
-    if (knop) return legOordeelVast(knop.dataset.sleutel, knop.dataset.oordeel);
+    if (knop) return legOordeelVast(knop.dataset.sleutel, knop.dataset.oordeel, knop.dataset.woord);
 
     const f = e.target.closest('[data-filter]');
     if (f) { filters[f.dataset.filter] = !filters[f.dataset.filter]; return tekenNaFilter(); }
@@ -1050,8 +1153,17 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     if (doel) doel.scrollIntoView({ block: 'center', behavior: 'smooth' });
   }
 
-  async function legOordeelVast(sleutel, waarde) {
+  async function legOordeelVast(sleutel, waarde, woord) {
     oordelen[sleutel] = oordelen[sleutel] === waarde ? undefined : waarde;
+    if (woord) {
+      const land = (huidig && huidig.land) || '(onbekend)';
+      if (oordelen[sleutel]) voegVoorstelToe(woord, land);
+      else if (woordVoorstellen.has(woord)) {
+        woordVoorstellen.get(woord).delete(land);
+        if (!woordVoorstellen.get(woord).size) woordVoorstellen.delete(woord);
+      }
+      tekenVoorstellen();
+    }
     tekenBevindingen();
     if (!db) return;
     const id = sleutel.replace(/[^A-Za-z0-9_.~:@+-]/g, '_').slice(0, 180);
@@ -1140,6 +1252,42 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     }
   });
 
+  // ---------- voorgestelde woorden voor de woordenlijst ----------
+  // Een redacteur meldt een woord als juist; de beheerder loopt de lijst na en zet wat klopt in
+  // regels/uitzonderingen.txt. Dat bestand gaat bij het bouwen de pagina in, dus een woord dat
+  // daar al staat hoort hier niet meer bij: de lijst ruimt zichzelf op.
+  const bekendeUitzonderingen = new Set((REGELDATA.uitzonderingen || []).map((w) => w.toLowerCase()));
+
+  function voegVoorstelToe(woord, land) {
+    if (!woord || bekendeUitzonderingen.has(woord.toLowerCase())) return;
+    if (!woordVoorstellen.has(woord)) woordVoorstellen.set(woord, new Set());
+    woordVoorstellen.get(woord).add(land);
+  }
+
+  function tekenVoorstellen() {
+    const vak = $('voorstellen');
+    const woorden = [...woordVoorstellen.keys()].sort((a, b) => a.localeCompare(b, 'nl'));
+    vak.hidden = !woorden.length;
+    if (!woorden.length) return;
+    // Wat al aangevinkt stond, blijft aangevinkt als de lijst opnieuw wordt getekend.
+    const aan = new Set([...document.querySelectorAll('#voorstellen-lijst input:checked')].map((x) => x.value));
+    $('voorstellen-lijst').innerHTML = woorden.map((w) => '<li><label><input type="checkbox" value="'
+      + esc(w) + '"' + (aan.has(w) ? ' checked' : '') + '> <span>' + esc(w) + '</span> <span class="landen">'
+      + esc([...woordVoorstellen.get(w)].sort().join(', ')) + '</span></label></li>').join('');
+  }
+
+  $('voorstellen-kopieer').addEventListener('click', async () => {
+    const woorden = [...document.querySelectorAll('#voorstellen-lijst input:checked')].map((x) => x.value);
+    if (!woorden.length) { $('voorstellen-stand').textContent = 'Vink eerst een of meer woorden aan.'; return; }
+    try {
+      await navigator.clipboard.writeText(woorden.join('\n'));
+      $('voorstellen-stand').textContent = woorden.length + (woorden.length === 1 ? ' woord' : ' woorden')
+        + ' gekopieerd. Plak ze in regels/uitzonderingen.txt.';
+    } catch {
+      $('voorstellen-stand').textContent = 'Kopi\u00ebren mag hier niet. De woorden zijn: ' + woorden.join(', ');
+    }
+  });
+
   // ---------- rapport om te delen ----------
   // Twee wegen naar buiten, allebei zonder bibliotheek en zonder server. Printen geeft via het
   // printvenster van de browser een pdf of papier; kopieren zet het rapport als opgemaakte html
@@ -1225,8 +1373,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
           + (bev.verwacht ? '<div class="r-bij">Verwacht: ' + esc(bev.verwacht) + '</div>' : '')
           + (bev.detail ? '<div class="r-bij">Langste blokken: ' + esc(bev.detail.join(' &middot; ')) + '</div>' : '')
           + (bev.notitie ? '<div class="r-bij">' + esc(bev.notitie) + '</div>' : '')
-          + (oordeel ? '<div class="r-bij">Oordeel van de redacteur: ' + OORDEEL_LABEL[oordeel]
-              + ' &mdash; ' + esc(OORDEEL_UITLEG[oordeel]) + '</div>' : '')
+          + (oordeel === 'onterecht' ? '<div class="r-bij">Door de redacteur gemeld als onterecht.</div>' : '')
           + '</div>');
       }
     }
@@ -1262,7 +1409,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         if (bev.verwacht) r.push('    verwacht: ' + bev.verwacht);
         if (bev.detail) r.push('    langste blokken: ' + bev.detail.join(' / '));
         if (bev.notitie) r.push('    ' + bev.notitie);
-        if (oordeel) r.push('    oordeel:  ' + OORDEEL_LABEL[oordeel] + ' - ' + OORDEEL_UITLEG[oordeel]);
+        if (oordeel === 'onterecht') r.push('    oordeel:  door de redacteur gemeld als onterecht');
       }
       r.push('');
     }
@@ -1345,7 +1492,11 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       for (const r of (rijen || [])) {
         const d = r.data ? r.data() : r;
         if (d && d.regel) oordelen[d.regel + '::' + (d.fragment || '')] = d.oordeel;
+        // Oudere spellingoordelen hadden de hele zin als fragment; alleen een los woord telt.
+        if (d && d.regel === 'woord-onbekend' && d.oordeel === 'onterecht'
+            && d.fragment && !/\s/.test(d.fragment)) voegVoorstelToe(d.fragment, d.land || '(onbekend)');
       }
+      tekenVoorstellen();
       if (huidig) tekenBevindingen();
     } catch (e) { /* geen eerdere oordelen; niet erg */ }
   })();

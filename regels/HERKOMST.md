@@ -1432,3 +1432,9 @@ bij `kleur-variant`, geen wijziging elders.
 Bijvangst van dit rondje: het Saoedi-Arabië-scherm dat Martijn zag, toonde de tekst van vóór de
 merge van gisteren terwijl die al op productie stond — vermoedelijk een tabblad dat al open stond en
 niet ververst was, niet een kapotte deploy.
+
+**Pas op 5 oktober gemerged.** De terugdraai stond op 21 september klaar maar is toen niet gemerged;
+de live site bleef twee weken op de per-bullet-regel draaien. Martijn liep er bij Jordanië tegenaan:
+*"dit klopt niet, hier gelden 2 kleurcodes en de formulering is goed/volgens wat in de matrix
+staat"* — bij "Voor de rest van Jordanië geldt kleurcode geel. U kunt hierheen reizen." meldde de
+tool dat "erheen" moest. Met deze merge is die melding weg.

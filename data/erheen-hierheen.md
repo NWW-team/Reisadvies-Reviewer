@@ -22,7 +22,7 @@ Over 226 reisadviezen staat dit 20 keer andersom. Eén woord per advies.
 | IJsland | De kleurcode van het reisadvies is geel voor het schiereiland Reykjanes. U kunt erheen reizen. | hierheen |
 | IJsland | Voor de rest van IJsland geldt kleurcode groen. U kunt erheen reizen. | hierheen |
 | Cambodja | Voor de rest van Cambodja geldt kleurcode geel. U kunt erheen reizen. | hierheen |
-| Marokko | Vor de rest van Marokko geldt kleurcode geel. U kunt erheen reizen. | hierheen |
+| Marokko | Voor de rest van Marokko geldt kleurcode geel. U kunt erheen reizen. | hierheen |
 | Moldavië | Voor de rest van Moldavië geldt kleurcode geel. U kunt erheen reizen. | hierheen |
 | Oman | Voor de rest van Oman geldt kleurcode geel. U kunt erheen reizen. | hierheen |
 | Peru | Voor de rest van Peru geldt kleurcode geel. U kunt erheen reizen. | hierheen |
@@ -34,4 +34,4 @@ Over 226 reisadviezen staat dit 20 keer andersom. Eén woord per advies.
 | Turks- en Caicoseilanden | De kleurcode van het reisadvies is geel voor het eiland Providenciales. U kunt erheen reizen. | hierheen |
 | Turks- en Caicoseilanden | Voor de rest van de Turks- en Caicoseilanden geldt kleurcode groen. U kunt erheen reizen. | hierheen |
 
-Gegenereerd met `node scripts/erheen-hierheen.mjs` op 2026-09-21.
+Gegenereerd met `node scripts/erheen-hierheen.mjs` op 2026-10-05.

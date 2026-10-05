@@ -1694,8 +1694,8 @@ export function maakToetser(data) {
           b.push(bevinding('woord-onbekend', ERNST.letop, 'Tekstcontrole (SpellingSpeurneus)',
             `"${w}" staat niet in de woordenlijst.`,
             { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
-              notitie: 'Klopt het woord wel? Zet het dan in regels/uitzonderingen.txt, '
-                + 'dan meldt de tool het niet meer.' }));
+              notitie: 'Klopt het woord wel? Klik dan op "Woord is juist"; het komt op de lijst '
+                + 'met voorstellen voor regels/uitzonderingen.txt.' }));
         }
       }
     }

@@ -1,0 +1,968 @@
+{
+  "_bron": "Afgeleid uit data/corpus/: de koppen die de reisadviezen zelf gebruiken, met het niveau waarop ze het vaakst staan. De landnaam is vervangen door {land}.",
+  "_toelichting": "Alleen voor geplakte platte tekst: daar is de opmaak weg en herkent de parser een kop aan deze lijst. Geen norm; de regels toetsen hier niet op.",
+  "_gedraaid": "2026-10-06",
+  "_adviezen": 226,
+  "koppen": [
+    {
+      "kop": "Bagageregels",
+      "niveau": 3,
+      "adviezen": 226
+    },
+    {
+      "kop": "In geval van nood",
+      "niveau": 3,
+      "adviezen": 226
+    },
+    {
+      "kop": "In het kort",
+      "niveau": 2,
+      "adviezen": 226
+    },
+    {
+      "kop": "Medicijnen",
+      "niveau": 3,
+      "adviezen": 226
+    },
+    {
+      "kop": "Ook nuttig",
+      "niveau": 2,
+      "adviezen": 226
+    },
+    {
+      "kop": "Reisvaccinaties",
+      "niveau": 3,
+      "adviezen": 226
+    },
+    {
+      "kop": "Reisverzekering",
+      "niveau": 3,
+      "adviezen": 226
+    },
+    {
+      "kop": "Lokale hulpdiensten",
+      "niveau": 4,
+      "adviezen": 225
+    },
+    {
+      "kop": "Wat kan ik doen in een noodsituatie?",
+      "niveau": 2,
+      "adviezen": 225
+    },
+    {
+      "kop": "Wetten en gebruiken",
+      "niveau": 3,
+      "adviezen": 225
+    },
+    {
+      "kop": "Rijbewijs",
+      "niveau": 4,
+      "adviezen": 224
+    },
+    {
+      "kop": "Wat mag ik mee terugnemen naar Nederland?",
+      "niveau": 4,
+      "adviezen": 224
+    },
+    {
+      "kop": "Reizen met kinderen",
+      "niveau": 4,
+      "adviezen": 223
+    },
+    {
+      "kop": "Nood- of crisissituatie",
+      "niveau": 4,
+      "adviezen": 222
+    },
+    {
+      "kop": "Criminaliteit",
+      "niveau": 3,
+      "adviezen": 215
+    },
+    {
+      "kop": "Visum",
+      "niveau": 4,
+      "adviezen": 215
+    },
+    {
+      "kop": "Drugs",
+      "niveau": 4,
+      "adviezen": 214
+    },
+    {
+      "kop": "Contactgegevens Nederlandse ambassade in geval van nood",
+      "niveau": 4,
+      "adviezen": 208
+    },
+    {
+      "kop": "Natuurgeweld",
+      "niveau": 3,
+      "adviezen": 205
+    },
+    {
+      "kop": "Lhbtiq+",
+      "niveau": 4,
+      "adviezen": 198
+    },
+    {
+      "kop": "Paspoort",
+      "niveau": 4,
+      "adviezen": 179
+    },
+    {
+      "kop": "Paspoort, visum, rijbewijs",
+      "niveau": 3,
+      "adviezen": 170
+    },
+    {
+      "kop": "Wat mag ik meenemen naar {land}?",
+      "niveau": 4,
+      "adviezen": 168
+    },
+    {
+      "kop": "Hoe bereid ik mijn reis naar {land} voor?",
+      "niveau": 2,
+      "adviezen": 166
+    },
+    {
+      "kop": "Welke veiligheidsrisico's zijn er in {land}?",
+      "niveau": 2,
+      "adviezen": 156
+    },
+    {
+      "kop": "Terrorisme",
+      "niveau": 3,
+      "adviezen": 123
+    },
+    {
+      "kop": "Demonstraties",
+      "niveau": 3,
+      "adviezen": 120
+    },
+    {
+      "kop": "Nederlandse ambassade in {land}",
+      "niveau": 4,
+      "adviezen": 77
+    },
+    {
+      "kop": "Voorkom dat u slachtoffer wordt van criminaliteit",
+      "niveau": 4,
+      "adviezen": 75
+    },
+    {
+      "kop": "Regionale risico's",
+      "niveau": 3,
+      "adviezen": 71
+    },
+    {
+      "kop": "Geen Nederlandse ambassade in {land}",
+      "niveau": 4,
+      "adviezen": 69
+    },
+    {
+      "kop": "Aardbevingen",
+      "niveau": 4,
+      "adviezen": 68
+    },
+    {
+      "kop": "Overstromingen",
+      "niveau": 4,
+      "adviezen": 61
+    },
+    {
+      "kop": "Rood: niet reizen",
+      "niveau": 4,
+      "adviezen": 61
+    },
+    {
+      "kop": "Wat kunt u doen bij natuurgeweld?",
+      "niveau": 4,
+      "adviezen": 61
+    },
+    {
+      "kop": "Actueel",
+      "niveau": 3,
+      "adviezen": 60
+    },
+    {
+      "kop": "Oranje: alleen noodzakelijke reizen",
+      "niveau": 4,
+      "adviezen": 58
+    },
+    {
+      "kop": "Geel: let op, er zijn risico's",
+      "niveau": 4,
+      "adviezen": 56
+    },
+    {
+      "kop": "Foto's maken",
+      "niveau": 4,
+      "adviezen": 53
+    },
+    {
+      "kop": "Paspoort of ID-kaart",
+      "niveau": 4,
+      "adviezen": 47
+    },
+    {
+      "kop": "Paspoort, ID-kaart, rijbewijs",
+      "niveau": 3,
+      "adviezen": 45
+    },
+    {
+      "kop": "Registratieplicht",
+      "niveau": 4,
+      "adviezen": 44
+    },
+    {
+      "kop": "Verkeersongevallen",
+      "niveau": 3,
+      "adviezen": 41
+    },
+    {
+      "kop": "Gele koorts",
+      "niveau": 4,
+      "adviezen": 37
+    },
+    {
+      "kop": "Tropische stormen",
+      "niveau": 4,
+      "adviezen": 29
+    },
+    {
+      "kop": "Bosbranden",
+      "niveau": 4,
+      "adviezen": 25
+    },
+    {
+      "kop": "Orkanen",
+      "niveau": 4,
+      "adviezen": 25
+    },
+    {
+      "kop": "Geldzaken",
+      "niveau": 3,
+      "adviezen": 24
+    },
+    {
+      "kop": "Zakkenrollers en diefstal",
+      "niveau": 4,
+      "adviezen": 22
+    },
+    {
+      "kop": "Aardbevingen en tsunami's",
+      "niveau": 4,
+      "adviezen": 19
+    },
+    {
+      "kop": "Landmijnen",
+      "niveau": 3,
+      "adviezen": 19
+    },
+    {
+      "kop": "Lawines",
+      "niveau": 4,
+      "adviezen": 19
+    },
+    {
+      "kop": "Seks met minderjarigen",
+      "niveau": 4,
+      "adviezen": 19
+    },
+    {
+      "kop": "Hoe bereid ik mijn reis naar de {land} voor?",
+      "niveau": 2,
+      "adviezen": 18
+    },
+    {
+      "kop": "Alcohol",
+      "niveau": 4,
+      "adviezen": 16
+    },
+    {
+      "kop": "Islamitische wetten en gebruiken",
+      "niveau": 4,
+      "adviezen": 16
+    },
+    {
+      "kop": "Wat mag ik meenemen naar de {land}?",
+      "niveau": 4,
+      "adviezen": 16
+    },
+    {
+      "kop": "Identificatieplicht",
+      "niveau": 4,
+      "adviezen": 15
+    },
+    {
+      "kop": "Sterke stromingen",
+      "niveau": 4,
+      "adviezen": 15
+    },
+    {
+      "kop": "Vulkanen",
+      "niveau": 4,
+      "adviezen": 15
+    },
+    {
+      "kop": "Welke veiligheidsrisico's zijn er op de {land}?",
+      "niveau": 2,
+      "adviezen": 15
+    },
+    {
+      "kop": "Drogeren",
+      "niveau": 4,
+      "adviezen": 14
+    },
+    {
+      "kop": "Willekeurige arrestaties",
+      "niveau": 4,
+      "adviezen": 13
+    },
+    {
+      "kop": "Dubbele nationaliteit",
+      "niveau": 4,
+      "adviezen": 12
+    },
+    {
+      "kop": "Fotografie",
+      "niveau": 4,
+      "adviezen": 12
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op de {land}",
+      "niveau": 4,
+      "adviezen": 12
+    },
+    {
+      "kop": "Geen Nederlandse ambassade op {land}",
+      "niveau": 4,
+      "adviezen": 11
+    },
+    {
+      "kop": "Wegverkeer",
+      "niveau": 4,
+      "adviezen": 11
+    },
+    {
+      "kop": "Welke veiligheidsrisico's zijn er op {land}?",
+      "niveau": 2,
+      "adviezen": 11
+    },
+    {
+      "kop": "Mpox-virus (apenpokken)",
+      "niveau": 4,
+      "adviezen": 9
+    },
+    {
+      "kop": "Spanningen in het Midden-Oosten",
+      "niveau": 4,
+      "adviezen": 9
+    },
+    {
+      "kop": "Cholera",
+      "niveau": 4,
+      "adviezen": 8
+    },
+    {
+      "kop": "Lange gevangenisstraf voor seks met minderjarigen",
+      "niveau": 4,
+      "adviezen": 8
+    },
+    {
+      "kop": "Overstromingen en aardverschuivingen",
+      "niveau": 4,
+      "adviezen": 8
+    },
+    {
+      "kop": "Piraten",
+      "niveau": 4,
+      "adviezen": 8
+    },
+    {
+      "kop": "Groen: u kunt erheen reizen",
+      "niveau": 4,
+      "adviezen": 7
+    },
+    {
+      "kop": "Natuurbranden",
+      "niveau": 4,
+      "adviezen": 7
+    },
+    {
+      "kop": "Actieve vulkanen",
+      "niveau": 4,
+      "adviezen": 6
+    },
+    {
+      "kop": "Contactgegevens Nederlandse ambassade",
+      "niveau": 4,
+      "adviezen": 6
+    },
+    {
+      "kop": "Drugsgeweld",
+      "niveau": 4,
+      "adviezen": 6
+    },
+    {
+      "kop": "Fotograferen",
+      "niveau": 4,
+      "adviezen": 6
+    },
+    {
+      "kop": "Gesloten grenzen",
+      "niveau": 4,
+      "adviezen": 6
+    },
+    {
+      "kop": "Gevaarlijke stromingen",
+      "niveau": 4,
+      "adviezen": 6
+    },
+    {
+      "kop": "Paspoort, rijbewijs",
+      "niveau": 3,
+      "adviezen": 6
+    },
+    {
+      "kop": "Zakkenrollers",
+      "niveau": 4,
+      "adviezen": 6
+    },
+    {
+      "kop": "Aardverschuivingen en overstromingen",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Camouflagekleding",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Conflict",
+      "niveau": 3,
+      "adviezen": 5
+    },
+    {
+      "kop": "Explosieven",
+      "niveau": 3,
+      "adviezen": 5
+    },
+    {
+      "kop": "Foto's en video's maken",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Immigratieformulier",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Kritiek uiten",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Ontvoeringen",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Orkanen en tropische stormen",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Prostitutie",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Rijden onder invloed",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Seksueel geweld tegen vrouwen",
+      "niveau": 4,
+      "adviezen": 5
+    },
+    {
+      "kop": "Berovingen",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Berovingen en overvallen",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Bos- en natuurbranden",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Drones",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Drugs en alcohol",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Eerder verblijf in Israël",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Geweld",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Internet en sociale media",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Luchtvervuiling",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Militaire acties in het Midden-Oosten",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Noodtoestand",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Oplichting",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Regels bij aankomst en vertrek",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Reizen met een boot",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Reizen per boot",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Sterke stromingen in de zee",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Vliegverkeer",
+      "niveau": 4,
+      "adviezen": 4
+    },
+    {
+      "kop": "Aardbevingen en aardverschuivingen",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Bergen",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Berovingen en diefstal",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Diefstal en overvallen",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Dodelijke verkeersongevallen",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "E-sigaretten (vapes)",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Extreme weersomstandigheden",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Gewelddadige criminaliteit",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Grenscontroles",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Kledingvoorschriften",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Liefdesfraude",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Maximaal verblijf",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Militaire zones",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Nood- of crisissituatie?",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Overvallen en berovingen",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Overvallen en ontvoeringen",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Seksueel geweld",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Tropische stormen en overstromingen",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Verkeersregels",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Visum en ESTA",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Welke veiligheidsrisico's zijn er in de {land}?",
+      "niveau": 2,
+      "adviezen": 3
+    },
+    {
+      "kop": "Zakkenrollers en overvallen",
+      "niveau": 4,
+      "adviezen": 3
+    },
+    {
+      "kop": "Aardbevingen en overstromingen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Aardverschuivingen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Aardverschuivingen en modderstromen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Alcohol en drugs",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Berovingen en ontvoeringen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Bootvervoer",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Bosbranden en overstromingen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Dienstplicht",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Ebola",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Ebola-uitbraak",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Gedwongen prostitutie",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Geen foto's van militaire objecten",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Geen honorair consul van Nederland in {land}",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Inreisregels",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Inreisstempel",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Muistromen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Nederlandse ambassade en consulaat-generaal in {land}",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Nederlandse Vertegenwoordiging op {land}",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Ongewenst gedrag tegen vrouwen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Ontvoering",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Oplichting en dwangarbeid",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Oplichting via internet",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Orkanen en overstromingen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Overstroming",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Overstromingen en flash floods",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Overtredingen op straat",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Overvallen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Overvallen in het verkeer",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Paspoort, visum",
+      "niveau": 3,
+      "adviezen": 2
+    },
+    {
+      "kop": "Paspoort, visum/ESTA, rijbewijs",
+      "niveau": 3,
+      "adviezen": 2
+    },
+    {
+      "kop": "Piraterij",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Regenseizoen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Regenseizoen, sneeuwval en lawines",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Registratie",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Registreer uw reis",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Registreren voor aankomst",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Reizen en kinderen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Risico's in het verkeer",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Roken",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Rookverbod",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Slecht weer in de bergen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Sociale media",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Spanningen Midden-Oosten",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Taxi's",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Tropische stormen en orkanen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Veerboten",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Veiligheidswet",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Verbod op plastic tassen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Vergunning voor bergtochten",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Vervuilde alcohol",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Visum verlengen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Vulkaanuitbarstingen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Weer in de bergen",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Werken zonder werkvergunning",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Woestijnwind Harmattan",
+      "niveau": 4,
+      "adviezen": 2
+    },
+    {
+      "kop": "Zakkenrollers en berovingen",
+      "niveau": 4,
+      "adviezen": 2
+    }
+  ]
+}

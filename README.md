@@ -183,6 +183,7 @@ node scripts/haal-woordenlijst.mjs  # haalt de OpenTaal-woordenlijst op voor de 
 node scripts/fetch-posten.mjs       # haalt de ambassades en consulaten op (alleen op een runner)
 node scripts/bouw-postplaatsen.mjs  # leest daar de standplaatsen uit
 node scripts/bouw-koppenlijst.mjs   # telt welke h4-koppen in gebruik zijn
+node scripts/bouw-platte-koppen.mjs  # alle koppen met hun niveau, om geplakte platte tekst te lezen
 node scripts/bouw-site.mjs       # bouwt docs/index.html uit dist/app.html
 ```
 
@@ -206,6 +207,7 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 | `regels/groepen.json` | de filterindeling: welke regel hoort bij welk vinkje boven de bevindingen |
 | `regels/postplaatsen.json` | de standplaatsen van de posten, uit de open data; voor de schrijfwijzetoets |
 | `regels/koppen-in-gebruik.json` | welke h4-tussenkoppen de adviezen gebruiken en hoe vaak; afgeleid uit het corpus, geen norm |
+| `regels/koppen-plat.json` | alle koppen (h2-h4) die in minstens twee adviezen staan, met hun niveau; alleen om geplakte platte tekst weer in koppen en blokken te verdelen, geen norm |
 | `regels/tekstcontrole.json` | resten van het CMS, vergeten spaties en onzichtbare tekens — overgenomen uit SpellingSpeurneus |
 | `regels/uitzonderingen.txt` | goedgekeurde woorden die niet in de OpenTaal-woordenlijst staan; deze lijst hoort bij de redactie |
 | `regels/speurneus.json` | de goedgekeurde woorden en namen uit SpellingSpeurneus, elke ochtend opgehaald met `scripts/haal-speurneus.mjs`; niet met de hand bewerken |

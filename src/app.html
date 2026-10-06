@@ -306,6 +306,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .bev .tekst { margin: 6px 0 0; font-size: .91rem; }
 .bev blockquote { margin: 8px 0 0; padding: 6px 10px; border-left: 2px solid var(--lijn-sterk); background: var(--vlak-2); font-size: .84rem; cursor: pointer; }
 .bev .verwacht { margin-top: 7px; font-size: .8rem; color: var(--gedempt); }
+.bev .bron { margin-top: 7px; font-size: .74rem; color: var(--gedempt); }
 .bev .verwacht b { color: var(--inkt); font-weight: 600; }
 /* Eén knop, rechtsboven en bewust bescheiden: de richtlijn volg je, dus "eens" of "oneens" is geen
    vraag. Wat wel kan, is dat de tool zich vergist. */
@@ -1063,6 +1064,10 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
           ? '<div class="aanvulling">Aanvulling &mdash; deze regel past de schrijfwijzer toe, maar dit woord '
             + 'staat er niet letterlijk in. Beoordeel of hij mag blijven.</div>'
           : '')
+      // De bron staat verder alleen in de tooltip, maar de verwijzing naar SpellingSpeurneus blijft
+      // zichtbaar: dat is het tooltje van de redactie zelf, en het is goed om te zien waar het werk
+      // vandaan komt.
+      + (/SpellingSpeurneus/.test(bev.bron || '') ? '<div class="bron">' + esc(bev.bron) + '</div>' : '')
       + (gekozen ? '<div class="gekozen">' + esc(uitleg) + '</div>' : '')
       + '</div>';
   }

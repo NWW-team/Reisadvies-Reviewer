@@ -1174,25 +1174,24 @@ function regioAdvies(oranjeBlok) {
 }
 const regioMeta = { land: 'Tsjechië', kleurcodes: ['oranje', 'geel'] };
 
-test('aanhef gebiedenlijst: geen opsomming, dan geen aanhef nodig', () => {
-  const ids = idsVan(regioAdvies('<p>Voor het grensgebied met Polen geldt kleurcode oranje.</p>'), regioMeta);
-  assert.ok(!ids.includes('regionaal-gebiedenzin'));
-});
-
-test('aanhef gebiedenlijst: de sjabloonzin en de omgedraaide vorm mogen allebei', () => {
+test('aanhef gebiedenlijst: alle varianten in het corpus mogen', () => {
+  // Martijn, 6 oktober 2026: ook een preciezer woord dan "gebieden", en de omgedraaide vorm.
   for (const aanhef of ['Voor de volgende gebieden geldt kleurcode oranje:',
-    'Kleurcode oranje geldt voor de volgende gebieden:']) {
+    'Kleurcode oranje geldt voor de volgende gebieden:',
+    'Voor de volgende provincies geldt kleurcode oranje:',
+    'Kleurcode oranje geldt voor:']) {
     const ids = idsVan(regioAdvies(`<p>${aanhef}</p><ul><li>Het noorden</li><li>Het oosten</li></ul>`), regioMeta);
     assert.ok(!ids.includes('regionaal-gebiedenzin'), aanhef);
+    assert.ok(!ids.includes('kleur-formulering-verboden'), aanhef);
   }
 });
 
-test('aanhef gebiedenlijst: een andere vorm wijkt af en wijst de zin aan', () => {
-  const b = bevindingenVan(regioAdvies('<p>Voor de volgende provincies geldt kleurcode oranje:</p>'
-    + '<ul><li>Zlín</li><li>Olomouc</li></ul>'), regioMeta).filter((x) => x.regel === 'regionaal-gebiedenzin');
+test('"geldt de kleurcode oranje" is "geldt kleurcode oranje"', () => {
+  const b = bevindingenVan(regioAdvies('<p>Voor de volgende gebieden geldt de kleurcode oranje:</p>'
+    + '<ul><li>Zlín</li><li>Olomouc</li></ul>'), regioMeta).filter((x) => x.regel === 'kleur-formulering-verboden');
   assert.equal(b.length, 1);
-  assert.match(b[0].boodschap, /wijkt af/);
-  assert.equal(b[0].fragment, 'Voor de volgende provincies geldt kleurcode oranje:');
+  assert.equal(b[0].fragment, 'Voor de volgende gebieden geldt de kleurcode oranje:');
+  assert.equal(b[0].verwacht, 'geldt kleurcode oranje');
 });
 
 test('kleuraanduiding: "voor het grootste deel" mag bij uitzondering', () => {

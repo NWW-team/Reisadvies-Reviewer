@@ -1479,11 +1479,28 @@ risico's met "kleurcode" die op een dubbele punt eindigt. Zo'n zin moet een van 
 Een andere vorm heet "wijkt af", en de melding wijst die zin aan. Gemeten: **32 naar 11
 meldingen**, allemaal met fragment. De 11 die blijven zijn varianten als "Voor de volgende
 **provincies**/**eilanden**/**vulkanen** geldt kleurcode …:", "… geldt **de** kleurcode …:" en
-"Kleurcode rood geldt voor:". Nog voor te leggen of een preciezer woord dan "gebieden" mag.
+"Kleurcode rood geldt voor:". Zie de volgende sectie: die mogen alle.
 
 Wat de regel nu niet meer ziet: een gebiedenlijst zonder enige aanhef. Daar valt niet betrouwbaar
 een gebiedenlijst van een lijst met adviezen te onderscheiden ("Maakt u een noodzakelijke reis…?"),
 en de oude regel ving die gevallen ook niet: hij zocht alleen de zin.
+
+## Alle aanheffen mogen, alleen niet "geldt de kleurcode" (6 oktober 2026)
+
+Voorgelegd: de elf aanheffen die na de vorige stap nog als afwijkend werden gemeld. Martijn: *"ja
+deze voorbeelden mogen, hoeft geen melding.... Alleen: geldt de kleurcode oranje moet zijn geldt
+kleurcode oranje."*
+
+Daarmee blijft er voor `regionaal-gebiedenzin` niets te toetsen: elke aanhef in het corpus is goed,
+ook met "eilanden", "provincies" of "vulkanen" in plaats van "gebieden", met "Verder geldt …" of
+met "Kleurcode rood geldt voor:". De regel staat in `regels/sjabloon.json` op `niet_toetsen`. De
+zin blijft daar wel staan, omdat hij als sjabloonzin is vrijgesteld van de schrijfregels.
+
+"geldt **de** kleurcode [kleur]" valt nu onder `kleur-formulering-verboden` (*let op*), overal in
+het advies en ook in opsommingen. Gemeten: `regionaal-gebiedenzin` **11 naar 0**,
+`kleur-formulering-verboden` **2 naar 5**. De drie nieuwe zijn Papoea-Nieuw-Guinea (de aanhef) en
+Pakistan, twee keer tussen haakjes in een opsommingsregel: "(voor de steden Islamabad, … geldt de
+kleurcode geel)".
 
 ## "Voor het grootste deel" mag bij uitzondering (6 oktober 2026)
 

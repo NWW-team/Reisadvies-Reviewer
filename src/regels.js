@@ -1134,6 +1134,15 @@ export function maakToetser(data) {
         { fragment: z.tekst, kop: z.h3 || z.h2,
           verwacht: `de kleurcode voor … is ${m[2].toLowerCase()}` }));
     }
+    // "geldt de kleurcode oranje" is "geldt kleurcode oranje", zonder lidwoord (Martijn, 6 oktober
+    // 2026, bij de aanhef van Papoea-Nieuw-Guinea).
+    for (const z of zinnenMetBullets) {
+      const m = z.tekst.match(/\bgeldt de kleurcode (rood|oranje|geel|groen)\b/i);
+      if (!m) continue;
+      b.push(bevinding('kleur-formulering-verboden', ERNST.letop, 'SJ, blok Regionale risico’s',
+        `"${m[0]}" schrijven we zonder lidwoord.`,
+        { fragment: z.tekst, kop: z.h3 || z.h2, verwacht: `geldt kleurcode ${m[1].toLowerCase()}` }));
+    }
 
     // ---------- vaste teksten uit het sjabloon ----------
     // Per rubriek legt het sjabloon letterlijke teksten vast. De tool meldt alleen dát een vaste
@@ -1200,7 +1209,7 @@ export function maakToetser(data) {
     }
 
     for (const vt of sj.vaste_teksten) {
-      if (vt.eigen_toets) continue;
+      if (vt.niet_toetsen) continue;
       const bereik = vt.rubriek ? rubriekTekst(doc, sj.rubriek_patronen[vt.rubriek]) : tekst;
       if (bereik === null) continue;                                   // rubriek staat niet in dit advies
       const bereikGenorm = norm(bereik);
@@ -1226,29 +1235,6 @@ export function maakToetser(data) {
         { ...(fragment ? { fragment } : {}),
           verwacht: vt.zin.replace(/\{land\}/g, doc.land || 'land X')
             .replace(/\{kleur\}|\{gebieden\}/g, '…') }));
-    }
-
-    // ---------- de aanhef boven een opsomming van gebieden ----------
-    // De aanhef hoort boven een opsomming. Noemt een advies het gebied in een gewone zin, dan is
-    // er geen aanhef nodig; dat meldde de tool eerst wel (Armenië, Marokko en zo nog 20). We
-    // toetsen daarom alleen de zinnen die werkelijk een opsomming inleiden: een zin met
-    // "kleurcode" die op een dubbele punt eindigt. Die moet een van de toegestane vormen hebben.
-    const gebiedenzin = sj.vaste_teksten.find((v) => v.id === 'regionaal-gebiedenzin');
-    const regioAanhefRe = sj.rubriek_patronen.regionaal && new RegExp(sj.rubriek_patronen.regionaal, 'i');
-    if (gebiedenzin && regioAanhefRe) {
-      const toegestaan = gebiedenzin.toegestaan.map((p) => new RegExp(p));
-      const aanhefzinnen = doc.blokken
-        .filter((x) => regioAanhefRe.test(x.kop || '') || regioAanhefRe.test(x.h3 || ''))
-        .flatMap((x) => x.alineas.flatMap((a) => a.zinnen))
-        .filter((z) => /\bkleurcode\b[^.]*:\s*$/.test(norm(z)));
-      for (const zin of aanhefzinnen) {
-        if (toegestaan.some((re) => re.test(norm(zin).trim()))) continue;
-        const kleur = kleurcodes.volgorde.find((k) => new RegExp('\\b' + k + '\\b').test(norm(zin)));
-        b.push(bevinding(gebiedenzin.id, gebiedenzin.ernst, gebiedenzin.bron, gebiedenzin.boodschap_afwijkend,
-          { fragment: zin,
-            verwacht: gebiedenzin.zin.replace('{kleur}', kleur || '…')
-              + ` (of: Kleurcode ${kleur || '…'} geldt voor de volgende gebieden:)` }));
-      }
     }
 
     // ---------- aantal en volgorde van de rubrieken ----------

@@ -7,7 +7,7 @@ Gedraaid op 2026-10-06 over 226 reisadviezen.
 - **74** van de 226 adviezen hebben geen enkele harde fout.
 - **45** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **203** van de 2954 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **203** van de 2946 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,7 +26,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 291 | 152 |
-| geel/oranje — let op | 1506 | 216 |
+| geel/oranje — let op | 1498 | 216 |
 | lichtblauw — lange zin met link | 543 | 201 |
 | grijs — ter overweging | 160 | 111 |
 | roze — twijfeltaal | 454 | 156 |
@@ -60,7 +60,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `tekst-spatie-leesteken` | 11 | 12 |
 | `actueel-max-woorden` | 11 | 11 |
 | `h3-vaste-kop` | 11 | 11 |
-| `regionaal-gebiedenzin` | 9 | 11 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
@@ -80,6 +79,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `tekst-plakfout` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `tekst-dubbel-woord` | 4 | 4 |
+| `kleur-formulering-verboden` | 4 | 5 |
 | `schuine-streep` | 4 | 4 |
 | `kleur-aanduiding` | 4 | 4 |
 | `h2-vast` | 3 | 3 |
@@ -87,7 +87,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `afkortingen-uitschrijven` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
 | `tekst-cms-rest` | 2 | 2 |
-| `kleur-formulering-verboden` | 2 | 2 |
 | `kleur-vaste-tekst` | 2 | 2 |
 | `regionaal-kleur-tekst` | 2 | 3 |
 | `vaste-tekst-land-leeg` | 2 | 2 |

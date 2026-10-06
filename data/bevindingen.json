@@ -721,13 +721,13 @@
     ],
     "zinnen": 94,
     "fout": 4,
-    "letop": 13,
+    "letop": 12,
     "linkzin": 2,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 13,
+      "let-op": 12,
       "link-zin": 2,
       "info": 1,
       "twijfel": 2
@@ -739,7 +739,6 @@
       "h4-kop-variant": 1,
       "intro-vaste-tekst": 1,
       "bagage-heen": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "nederlands-verbuiging": 1,
       "tekst-onzichtbaar-teken": 1,
@@ -799,14 +798,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Check wat u mee mag nemen naar de VAE op de website van de overheid van de VAE (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Verenigde Arabische Emiraten."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Voor de volgende eilanden geldt kleurcode rood:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -11862,13 +11853,13 @@
     ],
     "zinnen": 171,
     "fout": 4,
-    "letop": 24,
+    "letop": 23,
     "linkzin": 8,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 24,
+      "let-op": 23,
       "link-zin": 8,
       "info": 1,
       "twijfel": 9
@@ -11879,7 +11870,6 @@
       "h4-natuurrisico": 1,
       "h3-alleen-bij-uitzondering": 1,
       "nood-contactcenter": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "tekst-spatie-leesteken": 1,
       "woord-onbekend": 8,
@@ -11932,14 +11922,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Voor de volgende provincies geldt kleurcode oranje:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -12294,13 +12276,13 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 43,
+    "letop": 41,
     "linkzin": 5,
     "twijfel": 10,
     "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 43,
+      "let-op": 41,
       "link-zin": 5,
       "info": 4,
       "twijfel": 10
@@ -12312,7 +12294,6 @@
       "kleur-eerste-bullet-voluit": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
-      "regionaal-gebiedenzin": 2,
       "rubrieken-max": 1,
       "woord-onbekend": 10,
       "tekst-niet-melden": 3,
@@ -12375,22 +12356,6 @@
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van India."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Kleurcode rood geldt voor:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Kleurcode oranje geldt voor:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -13294,13 +13259,13 @@
     ],
     "zinnen": 99,
     "fout": 2,
-    "letop": 19,
+    "letop": 17,
     "linkzin": 2,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 19,
+      "let-op": 17,
       "link-zin": 2,
       "info": 1,
       "twijfel": 3
@@ -13310,7 +13275,6 @@
       "kleur-aanduiding": 1,
       "actueel-max-woorden": 1,
       "kleur-vervolg-bullet-kort": 1,
-      "regionaal-gebiedenzin": 2,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "woord-onbekend": 2,
@@ -13354,22 +13318,6 @@
         "boodschap": "Deze vervolgbullet over de kleurcode heeft niet de verkorte vaste vorm.",
         "fragment": "Voor de Koerdistan Regio Irak en de zuidelijke provincies geldt grotendeels kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode … (of: Kleurcode … geldt voor …)"
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Kleurcode rood geldt voor de volgende provincies en gebieden:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Verder geldt kleurcode oranje voor de volgende gebieden:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -14500,13 +14448,13 @@
     ],
     "zinnen": 122,
     "fout": 2,
-    "letop": 16,
+    "letop": 15,
     "linkzin": 4,
     "twijfel": 2,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 16,
+      "let-op": 15,
       "link-zin": 4,
       "info": 2,
       "twijfel": 2
@@ -14517,7 +14465,6 @@
       "h3-alleen-bij-uitzondering": 1,
       "criminaliteit-themapagina": 1,
       "kinderen-paspoort": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 9,
@@ -14568,14 +14515,6 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en (vanaf 16 jaar) een eTA nodig voor een reis naar Kenia.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Kenia."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Voor de volgende grensgebieden tussen Kenia en Somalië geldt kleurcode rood:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -17680,13 +17619,13 @@
     ],
     "zinnen": 156,
     "fout": 4,
-    "letop": 24,
+    "letop": 23,
     "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 4,
-      "let-op": 24,
+      "let-op": 23,
       "link-zin": 3,
       "info": 0,
       "twijfel": 3
@@ -17696,7 +17635,6 @@
       "kleur-variant": 1,
       "kleur-formulering-verboden": 1,
       "nood-contactcenter": 1,
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 3,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 3,
@@ -17741,14 +17679,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Voor de volgende vulkanen geldt kleurcode rood:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
       },
       {
         "regel": "woord-onbekend",
@@ -18847,13 +18777,13 @@
     ],
     "zinnen": 106,
     "fout": 3,
-    "letop": 15,
+    "letop": 14,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 15,
+      "let-op": 14,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
@@ -18861,7 +18791,6 @@
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 9,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
@@ -18885,14 +18814,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Kleurcode rood geldt voor de districten in het noordoosten van de provincie Cabo Delgado:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
       },
       {
         "regel": "woord-onbekend",
@@ -19618,20 +19539,19 @@
     ],
     "zinnen": 86,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 2,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 2,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 2,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1
@@ -19644,14 +19564,6 @@
         "boodschap": "\"Luchtkwaliteit\" gaat over smog, en dat hoort niet in een reisadvies.",
         "fragment": "Luchtkwaliteit",
         "notitie": "Evt. alleen indien er ernstig gevaar is voor iedereen. Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
-        "fragment": "Voor de volgende eilanden rondom Sabah geldt kleurcode oranje:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
       },
       {
         "regel": "woord-onbekend",
@@ -21119,13 +21031,13 @@
     ],
     "zinnen": 116,
     "fout": 3,
-    "letop": 8,
+    "letop": 10,
     "linkzin": 2,
     "twijfel": 10,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 8,
+      "let-op": 10,
       "link-zin": 2,
       "info": 0,
       "twijfel": 10
@@ -21134,6 +21046,7 @@
       "doc-woordenaantal": 1,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
+      "kleur-formulering-verboden": 2,
       "rubrieken-max": 1,
       "zin-frequentiewoord": 7,
       "zin-max-woorden": 7,
@@ -21169,6 +21082,24 @@
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+      },
+      {
+        "regel": "kleur-formulering-verboden",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico’s",
+        "boodschap": "\"geldt de kleurcode geel\" schrijven we zonder lidwoord.",
+        "fragment": "de provincie Punjab, waaronder de stad Rawalpindi (voor de steden Islamabad, Faisalabad, Lahore en Sialkot, en de snelwegen tussen deze steden, geldt de kleurcode geel)",
+        "kop": "Regionale risico's",
+        "verwacht": "geldt kleurcode geel"
+      },
+      {
+        "regel": "kleur-formulering-verboden",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico’s",
+        "boodschap": "\"geldt de kleurcode geel\" schrijven we zonder lidwoord.",
+        "fragment": "de regio Gilgit-Baltistan (voor de Hunza Valley, Deosai Nationaal Park en de steden Gilgit en Skardu geldt de kleurcode geel)",
+        "kop": "Regionale risico's",
+        "verwacht": "geldt kleurcode geel"
       },
       {
         "regel": "rubrieken-max",
@@ -22506,7 +22437,7 @@
       "kort-verwijzing-hoogste-kleur": 1,
       "h3-alleen-bij-uitzondering": 1,
       "h3-vaste-kop": 1,
-      "regionaal-gebiedenzin": 1,
+      "kleur-formulering-verboden": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 4,
       "zin-frequentiewoord": 8,
@@ -22570,12 +22501,13 @@
         "notitie": "Heet deze rubriek naar zijn eigen onderwerp (een ziekte bijvoorbeeld), dan mag de kop vrij zijn; kies dan \"oneens\". Zo niet: de vaste teksten onder deze rubriek worden niet getoetst zolang de kop afwijkt."
       },
       {
-        "regel": "regionaal-gebiedenzin",
+        "regel": "kleur-formulering-verboden",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "boodschap": "\"geldt de kleurcode oranje\" schrijven we zonder lidwoord.",
         "fragment": "Voor de volgende gebieden geldt de kleurcode oranje:",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
+        "kop": "Regionale risico's",
+        "verwacht": "geldt kleurcode oranje"
       },
       {
         "regel": "rubrieken-max",

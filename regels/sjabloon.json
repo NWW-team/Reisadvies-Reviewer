@@ -481,14 +481,8 @@
       "bron": "SJ, blok Regionale risico’s",
       "zin": "Voor de volgende gebieden geldt kleurcode {kleur}:",
       "kern": "voor de volgende gebieden geldt kleurcode",
-      "eigen_toets": true,
-      "toegestaan": [
-        "^voor de volgende gebieden geldt kleurcode (rood|oranje|geel|groen):$",
-        "^kleurcode (rood|oranje|geel|groen) geldt voor de volgende gebieden:$"
-      ],
-      "_toegestaan_bron": "De eerste vorm is de sjabloonzin. De tweede is de omgedraaide vorm, op 6 oktober 2026 door Martijn goedgekeurd bij Jordanië ('de formulering die er nu staat mag ook').",
-      "_eigen_toets": "Getoetst in src/regels.js, niet in de algemene lus: alleen zinnen die een opsomming inleiden (met 'kleurcode', eindigend op een dubbele punt) moeten deze vorm hebben. Een advies dat het gebied in een gewone zin noemt, heeft geen aanhef nodig.",
-      "boodschap_afwijkend": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+      "niet_toetsen": true,
+      "_niet_toetsen": "Op 6 oktober 2026 keurde Martijn alle aanheffen in het corpus goed, ook met een preciezer woord dan 'gebieden' (eilanden, provincies, vulkanen) en de omgedraaide vorm ('Kleurcode oranje geldt voor de volgende gebieden:'). Alleen 'geldt de kleurcode' wordt gemeld, door kleur-formulering-verboden. De zin blijft hier staan omdat hij als sjabloonzin is vrijgesteld van de schrijfregels.",
       "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt."
     },
     {

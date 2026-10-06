@@ -320,6 +320,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .leeg { color: var(--gedempt); font-size: .9rem; padding: 8px 0; }
 .geen-fouten { color: var(--kc-groen); font-weight: 600; }
 
+[hidden] { display: none !important; }
 .oordeelsblok { border-top: 1px solid var(--lijn); margin-top: 18px; padding-top: 16px; }
 .oordeelsblok h3 { font-size: .8rem; margin: 0 0 4px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--donkerblauw); }
 :root[data-theme="dark"] .oordeelsblok h3 { color: var(--lichtblauw); }
@@ -537,7 +538,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
         </p>
         <p class="verborgen-melding" id="verborgen" role="status" aria-live="polite"></p>
         <div id="bevindingen"><p class="leeg">Nog geen advies gekozen.</p></div>
-        <div class="oordeelsblok">
+        <div class="oordeelsblok" id="oordeelsblok">
           <h3>Oordeelstoets</h3>
           <p class="uitleg">B1-woordmoeilijkheid, begrijpelijkheid, en of een onderwerp dat de matrix als
             <em>verwijzen</em> aanmerkt niet te ver is uitgeschreven. Met een herschrijfvoorstel op zinsniveau.</p>
@@ -763,7 +764,10 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     + 'schrijfwijzer, format-matrix en sjabloon van Nederlandwereldwijd.nl';
 
   function toetsInvoer(html, land, meta = {}) {
-    const doc = Parse.parseAdvies(html, { land, titel: meta.titel, url: meta.url });
+    // koppen: geplakte platte tekst heeft geen opmaak meer, en dan herkent de parser een kop aan
+    // de koppen die de adviezen echt gebruiken. Voor html doet de lijst niets.
+    const doc = Parse.parseAdvies(html, { land, titel: meta.titel, url: meta.url,
+      koppen: REGELDATA.koppenPlat });
     const resultaat = toetser(doc);
     // De ruwe html blijft bewaard, zodat het advies opnieuw getoetst kan worden zonder het
     // opnieuw op te halen — dat gebeurt als de spellingtoets erbij wordt gezet.
@@ -899,6 +903,9 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   async function kiesAdvies() {
     const waarde = kiezer.value;
     if (!waarde) return;          // de plaatshouder "Kies een land…" toetst nog niets
+    // Wie een land kiest, is klaar met plakken: het plakvak van een eerdere eigen tekst hoort
+    // dan weg, anders lijkt het alsof die tekst nog getoetst wordt.
+    $('plakvak').hidden = true;
     if (!waarde.startsWith('iso:')) {
       const v = VOORBEELDEN[Number(waarde.slice('voorbeeld:'.length)) || 0];
       return toetsInvoer(v.html, v.land, { titel: v.titel, url: v.url, iso: v.iso });
@@ -996,7 +1003,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
           stukken.push('<p>' + onderdeel.alinea.zinnen.map((z) => markeer(z, perZin, ruim)).join(' ') + '</p>');
         } else {
           stukken.push('<ul>' + onderdeel.opsomming.items
-            .map((x) => '<li>' + markeer(x, perZin, ruim) + '</li>').join('') + '</ul>');
+            .map((x) => '<li>' + markeerItem(x, perZin, ruim) + '</li>').join('') + '</ul>');
         }
       }
     }
@@ -1031,19 +1038,39 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       + esc(kop) + '</span>';
   }
 
-  function markeer(zin, perZin, ruim) {
+  /**
+   * Een bullet is vaak meer dan een zin. Slaat een bevinding op de hele bullet, dan kleuren we
+   * hem helemaal; wijst ze één zin erin aan (de afwijkende zin van een kleurbullet), dan alleen
+   * die zin. Anders onderstreept de pagina ook de zinnen die wel kloppen.
+   */
+  function markeerItem(item, perZin, ruim) {
+    const k = norm(item);
+    const zinnen = Parse.splitsZinnen(item);
+    if (zinnen.length < 2) return markeer(item, perZin, ruim);
+    // Bevindingen over de hele bullet gelden voor elke zin erin, ook een korte. Per zin komen
+    // daar de bevindingen over alleen die zin bij; de zwaarste bepaalt de kleur. Zo blijft een
+    // fout in één zin rood, ook als de bullet als geheel een let-op heeft.
+    const heel = [...(perZin.get(k) || []),
+      ...(k.length >= ZIN_MIN ? ruim.filter((x) => x.k.includes(k)).map((x) => x.i) : [])];
+    return zinnen.map((z) => markeer(z, perZin, ruim, heel)).join(' ');
+  }
+
+  function markeer(zin, perZin, ruim, extra = []) {
     const k = norm(zin);
     let treffers = perZin.get(k);
     if (!treffers) {
       treffers = k.length < ZIN_MIN ? []
         : ruim.filter((x) => x.k.includes(k) || k.includes(x.k)).map((x) => x.i);
-      if (!treffers.length) return esc(zin);
     }
+    treffers = [...new Set([...treffers, ...extra])];
+    if (!treffers.length) return esc(zin);
     // Staan er meer bevindingen op één zin, dan wint de eerste uit de vaste volgorde: een fout
     // moet je hoe dan ook zien, ook als er twijfeltaal in dezelfde zin staat.
     const ernsten = new Set(treffers.map((i) => huidig.resultaat.bevindingen[i].ernst));
     const zwaarste = VOLGORDE.find((e) => ernsten.has(e)) || 'info';
-    return '<span class="zin m-' + ernstKlasse[zwaarste] + '" data-bev="' + treffers[0] + '" '
+    // Klikken springt naar de bevinding die de kleur bepaalt, niet zomaar naar de eerste.
+    const naar = treffers.find((i) => huidig.resultaat.bevindingen[i].ernst === zwaarste) ?? treffers[0];
+    return '<span class="zin m-' + ernstKlasse[zwaarste] + '" data-bev="' + naar + '" '
       + 'title="' + esc(treffers.length + ' bevinding' + (treffers.length > 1 ? 'en' : '')) + '">' + esc(zin) + '</span>';
   }
 
@@ -1230,11 +1257,126 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     vak.hidden = !vak.hidden;
     if (!vak.hidden) $('invoer').focus();
   });
+  // Wie tekst kopieert van de site, uit het cms of uit Word, heeft op het klembord meestal ook
+  // de opmaak: koppen, bullets, links. In het tekstvak komt alleen de platte tekst, en dan weet
+  // de tool niet meer wat een kop is en meldt hij vaste koppen als ontbrekend. Daarom houden we
+  // de opgemaakte versie apart vast en toetsen we die. Typt iemand daarna zelf in het vak, dan
+  // klopt die versie niet meer met wat er staat en vervalt hij.
+  let plakHtml = null;
+  $('invoer').addEventListener('paste', (e) => {
+    const html = e.clipboardData && e.clipboardData.getData('text/html');
+    const tekst = e.clipboardData && e.clipboardData.getData('text/plain');
+    const schoon = html ? schoonPlakHtml(html) : null;
+    if (!schoon) { plakHtml = null; return; }
+    e.preventDefault();
+    $('invoer').value = tekst || schoon.replace(/<[^>]+>/g, ' ');
+    plakHtml = schoon;
+  });
+  $('invoer').addEventListener('input', () => { plakHtml = null; });
+
   $('knop-toets').addEventListener('click', () => {
     const tekst = $('invoer').value.trim();
     if (!tekst) return;
-    toetsInvoer(tekst, $('land-invoer').value.trim() || null);
+    const invoer = plakHtml || tekst;
+    toetsInvoer(invoer, $('land-invoer').value.trim() || raadLand(invoer));
   });
+
+  /** Zonder ingevuld land: de intro ("Reist u naar Cambodja?") of de vaste kop noemt het land. */
+  function raadLand(invoer) {
+    const t = invoer.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+    const m = t.match(/Reist u naar ([^?.]{2,40})\?/)
+      || t.match(/Welke veiligheidsrisico[’']s zijn er in ([^?.]{2,40})\?/)
+      || t.match(/Hoe bereid ik mijn reis naar ([^?.]{2,40}) voor\?/);
+    return m ? m[1].trim() : null;
+  }
+
+  /**
+   * Maakt de html van het klembord klein en voorspelbaar: alleen koppen, alinea's, lijsten,
+   * links en vet/cursief. Word zet bullets als alinea's met een eigen bulletteken erin
+   * (mso-list); die worden weer echte bullets. Een alinea die precies een bekende kop is (in
+   * Word vaak gewoon vetgedrukte tekst) wordt een kop. Levert null als er niets bruikbaars in zit.
+   */
+  function schoonPlakHtml(html) {
+    let dom;
+    try { dom = new DOMParser().parseFromString(html, 'text/html'); } catch (e) { return null; }
+    const kopVan = Parse.kopHerkenner(REGELDATA.koppenPlat);
+    const escT = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const uit = [];
+    let inLijst = false;
+    const sluitLijst = () => { if (inLijst) { uit.push('</ul>'); inLijst = false; } };
+    const inline = (node) => {
+      let r = '';
+      for (const n of node.childNodes) {
+        if (n.nodeType === 3) { r += escT(n.textContent); continue; }
+        if (n.nodeType !== 1) continue;
+        const tag = n.tagName.toLowerCase();
+        const stijl = n.getAttribute('style') || '';
+        if (/mso-list:\s*ignore/i.test(stijl)) continue;           // Words eigen bulletteken
+        if (tag === 'br') { r += ' '; continue; }
+        const binnen = inline(n);
+        if (tag === 'a' && n.getAttribute('href')) {
+          r += '<a href="' + escT(n.getAttribute('href')).replace(/"/g, '&quot;') + '">' + binnen + '</a>';
+        } else if (/^(strong|b|em|i|u)$/.test(tag)) {
+          r += '<' + tag + '>' + binnen + '</' + tag + '>';
+        } else r += binnen;
+      }
+      return r;
+    };
+    const blok = (node) => {
+      for (const n of node.childNodes) {
+        if (n.nodeType === 3) {
+          if (n.textContent.trim()) { sluitLijst(); uit.push('<p>' + escT(n.textContent) + '</p>'); }
+          continue;
+        }
+        if (n.nodeType !== 1) continue;
+        const tag = n.tagName.toLowerCase();
+        if (/^(script|style|meta|link|title|head|nav|button|form)$/.test(tag)) continue;
+        const tekst = n.textContent.replace(/\s+/g, ' ').trim();
+        const klasse = n.getAttribute('class') || '';
+        const stijl = n.getAttribute('style') || '';
+        if (/^h[1-6]$/.test(tag)) {
+          if (!tekst) continue;
+          sluitLijst();
+          const niveau = Math.min(4, Math.max(2, Number(tag[1]))) ;
+          uit.push('<h' + niveau + '>' + inline(n) + '</h' + niveau + '>');
+        } else if (tag === 'ul' || tag === 'ol') {
+          sluitLijst();
+          uit.push('<ul>');
+          for (const li of n.children) {
+            if (li.tagName.toLowerCase() === 'li' && li.textContent.trim()) uit.push('<li>' + inline(li) + '</li>');
+          }
+          uit.push('</ul>');
+        } else if (tag === 'li') {
+          if (!tekst) continue;
+          if (!inLijst) { uit.push('<ul>'); inLijst = true; }
+          uit.push('<li>' + inline(n) + '</li>');
+        } else if (tag === 'p' && (/MsoListParagraph/i.test(klasse) || /mso-list:\s*l\d/i.test(stijl))) {
+          if (!tekst) continue;
+          if (!inLijst) { uit.push('<ul>'); inLijst = true; }
+          uit.push('<li>' + inline(n).replace(/^\s*[\u2022\u00b7\-o\u25aa\u25cf\uf0b7]\s+/, '') + '</li>');
+        } else if (tag === 'p') {
+          if (!tekst) continue;
+          sluitLijst();
+          const niveau = kopVan(tekst);
+          uit.push(niveau ? '<h' + niveau + '>' + escT(tekst) + '</h' + niveau + '>' : '<p>' + inline(n) + '</p>');
+        } else {
+          // div, section, span, table...: daarin zitten de echte blokken, of losse tekst.
+          const heeftBlokken = n.querySelector('p,h1,h2,h3,h4,h5,h6,ul,ol,li,div,table');
+          if (heeftBlokken) blok(n);
+          else if (tekst) {
+            sluitLijst();
+            const niveau = kopVan(tekst);
+            uit.push(niveau ? '<h' + niveau + '>' + escT(tekst) + '</h' + niveau + '>' : '<p>' + inline(n) + '</p>');
+          }
+        }
+      }
+    };
+    blok(dom.body);
+    sluitLijst();
+    const res = uit.join('\n');
+    // Alleen de moeite waard als er structuur in zit; anders doet de platte tekst hetzelfde.
+    return /<(h[2-4]|li)\b/.test(res) ? res : null;
+  }
   kiezer.addEventListener('change', kiesAdvies);
 
   // ---------- laag 2: de oordeelstoets ----------
@@ -1521,6 +1663,13 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     return gelukt;
   }
   // ---------- start ----------
+  // De oordeelstoets vraagt een taalmodel om een oordeel, en dat kan alleen waar de pagina als
+  // Claude-artifact draait. Op de gepubliceerde site is er geen model; dan deed de knop niets
+  // anders dan melden dat hij niet werkt. Dan laten we knop en blok gewoon weg.
+  if (typeof window.claude?.use !== 'function') {
+    $('knop-oordeel').hidden = true;
+    $('oordeelsblok').hidden = true;
+  }
   // Geen kiesAdvies() hier: de pagina start bewust zonder gekozen land (zie de plaatshouder
   // "Kies een land…"), zodat een redacteur niet per ongeluk het eerste voorbeeld voor zijn eigen
   // keuze aanziet. haalLijst() vult de dropdown; kiezen doet de redacteur zelf.

@@ -96,6 +96,35 @@ export function telWoorden(tekst) {
 }
 
 /**
+ * Geeft een functie die van een regel zegt of het een bekende kop is, en zo ja op welk niveau.
+ * `koppen` is [{kop, niveau}], waarin {land} voor de landnaam staat. Zonder lijst herkent hij
+ * niets, en blijft de platte tekst wat hij was: alinea's en bullets.
+ */
+export function kopHerkenner(koppen) {
+  const sleutel = (s) => s.replace(/[\u2018\u2019\u02bc]/g, "'").replace(/\s+/g, ' ')
+    .replace(/[\s:]+$/, '').trim().toLowerCase();
+  const vast = new Map();
+  const metLand = [];
+  for (const k of koppen || []) {
+    if (!k || !k.kop) continue;
+    if (k.kop.includes('{land}')) {
+      const delen = sleutel(k.kop).split('{land}').map((d) => d.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      // De landnaam mag van alles zijn: een geplakte tekst heeft niet altijd een land erbij.
+      metLand.push({ re: new RegExp('^' + delen.join('.{2,40}?') + '$'), niveau: k.niveau });
+    } else if (!vast.has(sleutel(k.kop))) {
+      vast.set(sleutel(k.kop), k.niveau);
+    }
+  }
+  return (regel) => {
+    const k = sleutel(regel);
+    if (!k || k.length > 90) return 0;
+    if (vast.has(k)) return vast.get(k);
+    const m = metLand.find((x) => x.re.test(k));
+    return m ? m.niveau : 0;
+  };
+}
+
+/**
  * @param {string} invoer      HTML of platte tekst van het reisadvies
  * @param {object} [meta]      {titel, land, metadescription, url, kleurcodes:[...]}
  * @returns genormaliseerd document
@@ -154,18 +183,55 @@ export function parseAdvies(invoer, meta = {}) {
   }
 
   if (doc.bron === 'tekst') {
-    // Platte tekst: lege regel scheidt alinea's, een regel die eindigt zonder leesteken
-    // en kort is behandelen we niet automatisch als kop — dat zou raden zijn.
-    for (const stuk of invoer.split(/\n\s*\n/)) {
-      const t = schoon(stuk);
-      if (!t) continue;
-      const bullets = stuk.split('\n').filter((r) => /^\s*[-*\u2022]/.test(r));
-      if (bullets.length > 1) {
-        voegOpsomming(blokVoorInhoud(), { items: bullets.map((b) => schoon(b.replace(/^\s*[-*\u2022]\s*/, ''))) });
-      } else {
-        voegAlinea(blokVoorInhoud(), { tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
+    // Platte tekst: de opmaak is weg. Wie een advies van de site of uit het cms kopieert, krijgt
+    // elke kop, alinea en bullet op een eigen regel, vaak zonder lege regel ertussen en zonder
+    // bulletteken. Een kop herkennen we alleen aan de lijst van koppen die de adviezen werkelijk
+    // gebruiken (meta.koppen); een korte regel zonder punt zomaar als kop zien zou raden zijn.
+    //
+    // Onder "In het kort" zijn de regels bullets, behalve de oproep voor de Informatieservice
+    // eronder ("Let op: ..."): zo schrijft het sjabloon dat blok voor. Elders is een regel zonder bulletteken een alinea.
+    const kopVan = kopHerkenner(meta.koppen);
+    let lijst = null;
+    let vorige = null;               // de laatste alinea, voor een harde regelafbreking
+    const sluitLijst = () => {
+      if (lijst && lijst.items.length) voegOpsomming(blokVoorInhoud(), lijst);
+      lijst = null;
+    };
+    for (const ruw of invoer.split(/\r?\n/)) {
+      // De site zet "Let op:" als label vóór een kader, zonder spatie erachter. Dat label staat
+      // niet in de tekst van het advies zelf; kopieer je de pagina, dan plakt het tegen de
+      // eerste zin aan ("Let op:E-mail ontvangen ..."). Een schrijver typt zelf wel een spatie.
+      const regel = ruw.replace(/^(\s*)Let op:(?=\S)/, '$1');
+      const t = schoon(regel);
+      if (!t) { sluitLijst(); vorige = null; continue; }
+      const niveau = kopVan(t);
+      if (niveau) {
+        sluitLijst(); vorige = null;
+        nieuwBlok(niveau, t);
+        continue;
       }
+      const blok = blokVoorInhoud();
+      const bullet = /^\s*[-*\u2022\u00b7\u25aa\u25cf]\s*/.test(regel);
+      const inHetKort = (blok.kop || '').trim().toLowerCase() === 'in het kort';
+      const slot = /^let op\b|^e-mail ontvangen|informatieservice/i.test(t);
+      if (bullet || (inHetKort && !slot)) {
+        vorige = null;
+        if (!lijst) lijst = { items: [], geordend: false, h2: huidigH2, h3: huidigH3 };
+        lijst.items.push(schoon(regel.replace(/^\s*[-*\u2022\u00b7\u25aa\u25cf]\s*/, '')));
+        continue;
+      }
+      sluitLijst();
+      // Een regel die midden in een zin begint (kleine letter, vorige regel zonder leesteken
+      // aan het eind) is een afgebroken regel van dezelfde alinea, geen nieuwe alinea.
+      if (vorige && !/[.!?:]$/.test(vorige.tekst) && /^[a-z\u00e0-\u00ff]/.test(t)) {
+        vorige.tekst += ' ' + t;
+        vorige.zinnen = splitsZinnen(vorige.tekst);
+        vorige.woorden = telWoorden(vorige.tekst);
+        continue;
+      }
+      vorige = voegAlinea(blok, { tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
     }
+    sluitLijst();
   } else {
     const tokens = tokeniseer(invoer);
     let buffer = '';
@@ -267,4 +333,4 @@ export function parseAdvies(invoer, meta = {}) {
   return doc;
 }
 
-export default { parseAdvies, splitsZinnen, telWoorden };
+export default { parseAdvies, splitsZinnen, telWoorden, kopHerkenner };

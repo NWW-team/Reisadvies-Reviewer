@@ -1155,3 +1155,19 @@ test('de lijst uit SpellingSpeurneus vult de uitzonderingen aan, en een spelfout
   assert.ok(!lijst.includes('kiev'), 'een als fout aangewezen naam hoort eruit te blijven');
   assert.ok(lijst.includes('digid'), 'de eigen uitzonderingen blijven staan');
 });
+
+test('kleurvariant: de melding citeert alleen de zin die afwijkt, niet de hele bullet', () => {
+  // Cambodja: in de bullet klopt "Het is er te gevaarlijk." wel. Citeert de melding de hele
+  // bullet, dan lijkt het of iets anders erin fout is.
+  const b = bevindingenVan('<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is rood voor de strook van 5 kilometer vanaf de grens met '
+    + 'Thailand. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder '
+    + 'Regionale risico&#39;s.</li>'
+    + '<li>Kleurcode oranje geldt voor de strook van 5 tot 20 kilometer vanaf de grens met Cambodja. '
+    + 'Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>',
+  { land: 'Cambodja', kleurcodes: ['rood', 'oranje'] }).filter((x) => x.regel === 'kleur-variant');
+  assert.equal(b.length, 1);
+  assert.equal(b[0].fragment, 'Wat uw situatie ook is: reis er niet heen.');
+  assert.equal(b[0].verwacht, 'Wat uw situatie ook is: reis niet hierheen.');
+});

@@ -30,7 +30,7 @@ function alsNamespace(bron, naam, exports, vervang = []) {
   return `const ${naam} = (function () {\n${code}\nreturn { ${exports.join(', ')} };\n})();`;
 }
 
-const parse = alsNamespace(lees('src', 'parse.js'), 'Parse', ['parseAdvies', 'splitsZinnen', 'telWoorden']);
+const parse = alsNamespace(lees('src', 'parse.js'), 'Parse', ['parseAdvies', 'splitsZinnen', 'telWoorden', 'kopHerkenner']);
 const regels = alsNamespace(lees('src', 'regels.js'), 'Regels', ['maakToetser', 'norm', 'ERNST', 'ERNST_VOLGORDE'],
   [[/^import \{ telWoorden, splitsZinnen \} from '\.\/parse\.js';$/m,
     'const telWoorden = Parse.telWoorden;\nconst splitsZinnen = Parse.splitsZinnen;']]);
@@ -49,6 +49,8 @@ const regeldata = {
   tekstcontrole: JSON.parse(lees('regels', 'tekstcontrole.json')),
   landen: JSON.parse(lees('regels', 'landen.json')),
   koppenInGebruik: JSON.parse(lees('regels', 'koppen-in-gebruik.json')),
+  // Alleen om geplakte platte tekst te lezen: welke regels koppen zijn (zie bouw-platte-koppen.mjs).
+  koppenPlat: JSON.parse(lees('regels', 'koppen-plat.json')).koppen.map(({ kop, niveau }) => ({ kop, niveau })),
   postplaatsen: JSON.parse(lees('regels', 'postplaatsen.json')),
   groepen: JSON.parse(lees('regels', 'groepen.json')),
   // De uitzonderingen gaan wél mee in de pagina: het zijn een paar honderd woorden die de

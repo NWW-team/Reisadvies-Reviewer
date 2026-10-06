@@ -799,6 +799,40 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     $('spelling-stand').textContent = tekst;
   }
 
+  /**
+   * De goedgekeurde woorden en namen en de als fout aangewezen namen uit SpellingSpeurneus, live.
+   * Beide tabellen zijn leesbaar met de publieke sleutel. Valt terug op de ingebouwde lijst als
+   * het ophalen niet lukt of te lang duurt. Kleine letters.
+   */
+  async function haalSpeurneus() {
+    const terugval = { goed: [], fout: (REGELDATA.naamIsSpelfout || []).slice(), live: false };
+    const bron = REGELDATA.speurneusBron;
+    if (!bron) return terugval;
+    const kop = { apikey: bron.sleutel, Authorization: 'Bearer ' + bron.sleutel };
+    const haal = async (tabel, kolommen, actief) => {
+      const rijen = [];
+      for (let van = 0; ; van += 1000) {
+        const res = await fetch(bron.url + '/rest/v1/' + tabel + '?select=' + kolommen + '&' + actief
+          + '=is.null&order=id&limit=1000&offset=' + van,
+          { headers: kop, signal: AbortSignal.timeout(10000) });
+        if (!res.ok) throw new Error(tabel + ': status ' + res.status);
+        const blok = await res.json();
+        rijen.push(...blok);
+        if (blok.length < 1000) return rijen;
+      }
+    };
+    try {
+      const [goed, fout] = await Promise.all([
+        haal('goedgekeurd', 'woord', 'ingetrokken_op'),
+        haal('naam_is_spelfout', 'woord', 'teruggezet_op'),
+      ]);
+      const klein = (r) => String(r.woord).trim().toLowerCase();
+      return { goed: goed.map(klein), fout: fout.map(klein), live: true };
+    } catch (e) {
+      return terugval;
+    }
+  }
+
   async function zetSpellingAan() {
     if (woordenlijst) return;
     zetSpellingStand('Spelling wordt opgehaald…');
@@ -807,10 +841,15 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       // De eigen uitzonderingen zitten in de pagina zelf, niet in het opgehaalde bestand: die
       // beheert de redactie in regels/uitzonderingen.txt en ze horen bij elke herbouw mee te komen.
       for (const w of (REGELDATA.uitzonderingen || [])) lijst.add(w);
+      // De lijst van SpellingSpeurneus zit al in de pagina, van de laatste ochtendronde. Hier komt
+      // de actuele erbij, zodat wat de redactie daar vandaag goedkeurt of als fout aanwijst meteen
+      // meetelt. Lukt dat niet, dan blijft de ingebouwde lijst gelden.
+      const sn = await haalSpeurneus();
+      for (const w of sn.goed) lijst.add(w);
       // Wat de redactie in SpellingSpeurneus als spelfout heeft aangewezen, telt nooit als goed.
-      for (const w of (REGELDATA.naamIsSpelfout || [])) lijst.delete(w);
+      for (const w of sn.fout) lijst.delete(w);
       woordenlijst = lijst;
-      toetser = Regels.maakToetser({ ...REGELDATA, woordenlijst });
+      toetser = Regels.maakToetser({ ...REGELDATA, woordenlijst, naamIsSpelfout: sn.fout });
       zetSpellingStand('Onbekende woorden staan nu onder "Mogelijke spelfouten". Namen worden '
         + 'overgeslagen: die staan niet in de woordenlijst en zijn dus niet te beoordelen.');
       if (huidig) toetsInvoer(huidig.html, huidig.land, huidig.meta);

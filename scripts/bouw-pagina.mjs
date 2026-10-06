@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { leesUitzonderingen, leesSpeurneus } from '../src/woordenlijst.mjs';
 import { uitApiRespons } from '../src/adapter.js';
+import { SPEURNEUS } from '../src/speurneus-bron.mjs';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
 const lees = (...p) => readFileSync(join(wortel, ...p), 'utf8');
@@ -58,6 +59,8 @@ const regeldata = {
   // Namen die de redactie in SpellingSpeurneus als verkeerd gespeld heeft aangewezen. Die meldt
   // de spellingtoets ook als ze als naam herkend worden.
   naamIsSpelfout: leesSpeurneus().fout,
+  // Waar de pagina de lijst van SpellingSpeurneus live ophaalt; de lijst hierboven is de terugval.
+  speurneusBron: SPEURNEUS,
 };
 
 // Drie echte adviezen, gekozen om verschillende situaties te laten zien.

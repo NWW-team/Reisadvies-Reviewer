@@ -21,13 +21,13 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { SPEURNEUS } from '../src/speurneus-bron.mjs';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
 const uit = join(wortel, 'regels', 'speurneus.json');
 
-// Uit docs/index.html van SpellingSpeurneus. Wisselt die van sleutel of project, dan hier aanpassen.
-const BASIS = process.env.SPEURNEUS_URL || 'https://riwznqurcluudvyrkwxe.supabase.co';
-const SLEUTEL = process.env.SPEURNEUS_KEY || 'sb_publishable_8D0tbPlRD5eWqjIJDdQgKg_BxKn2Knx';
+const BASIS = process.env.SPEURNEUS_URL || SPEURNEUS.url;
+const SLEUTEL = process.env.SPEURNEUS_KEY || SPEURNEUS.sleutel;
 const BLOK = 1000; // PostgREST geeft er standaard niet meer dan duizend per verzoek
 
 /** Alle actieve rijen van een tabel. `actief` is de kolom die leeg is zolang de rij geldt. */

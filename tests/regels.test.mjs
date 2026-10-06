@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { advies, idsVan, bevindingenVan, regeldata,
   idsVanMetSpelling, bevindingenMetSpelling } from './helpers.mjs';
-import { ERNST_VOLGORDE } from '../src/regels.js';
+import { ERNST_VOLGORDE, maakToetser } from '../src/regels.js';
+import { parseAdvies } from '../src/parse.js';
+import { leesUitzonderingen } from '../src/woordenlijst.mjs';
 
 /**
  * Per regel één fragment dat de regel moet laten afgaan en één dat dat niet mag.
@@ -1132,4 +1134,24 @@ test('h2-ontbreekt blijft stil als alle vijf er staan maar één verkeerd is gef
   const ids = idsVan(html, { land: 'Testland' });
   assert.ok(!ids.includes('h2-ontbreekt'), 'vijf koppen aanwezig, dus geen "ontbreekt"-melding');
   assert.ok(ids.includes('h2-vast'), 'de verkeerde formulering hoort wel gemeld te worden, door h2-vast');
+});
+
+test('een naam die SpellingSpeurneus als spelfout aanwijst, wordt toch gemeld', () => {
+  // Namen slaat de spellingtoets normaal over. Een naam die de redactie in SpellingSpeurneus naar
+  // de spelfouten heeft verplaatst (regels/speurneus.json, naam_is_spelfout) is de uitzondering.
+  const woordenlijst = new Set(['de', 'reis', 'niet', 'naar']);
+  const metLijst = maakToetser({ ...regeldata, woordenlijst, naamIsSpelfout: ['Kiev'] });
+  const zonder = maakToetser({ ...regeldata, woordenlijst, naamIsSpelfout: [] });
+  const tekst = advies('<p>Reis niet naar de Kiev regio.</p>');
+  const gemeld = (t) => t(parseAdvies(tekst, { land: 'Tsjechië' })).bevindingen
+    .some((x) => x.regel === 'woord-onbekend' && x.boodschap.startsWith('"Kiev"'));
+  assert.ok(gemeld(metLijst), 'een als fout aangewezen naam hoort gemeld te worden');
+  assert.ok(!gemeld(zonder), 'zonder aanwijzing blijft het een naam die wordt overgeslagen');
+});
+
+test('de lijst uit SpellingSpeurneus vult de uitzonderingen aan, en een spelfout wint', () => {
+  const lijst = leesUitzonderingen(undefined, { goed: ['speurwoord', 'kiev'], fout: ['kiev'] });
+  assert.ok(lijst.includes('speurwoord'), 'een goedgekeurd woord hoort erbij te komen');
+  assert.ok(!lijst.includes('kiev'), 'een als fout aangewezen naam hoort eruit te blijven');
+  assert.ok(lijst.includes('digid'), 'de eigen uitzonderingen blijven staan');
 });

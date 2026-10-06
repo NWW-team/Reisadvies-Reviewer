@@ -442,6 +442,28 @@ een CMS-rest en *demonstraties.Volg* een vergeten spatie, en dat is telkens de n
 gespelde variant staan geen van beide in de woordenlijst, dus de tool ziet geen verschil. Dat
 nakijken blijft mensenwerk — met één uitzondering, hieronder: de naam van het land zelf.
 
+
+## Goedgekeurde woorden uit SpellingSpeurneus, dagelijks bijgewerkt (6 oktober 2026)
+
+De basis van `regels/uitzonderingen.txt` is op 18 september eenmalig overgenomen uit SpellingSpeurneus.
+Daar is het tekstbestand inmiddels vervangen door de tabel `goedgekeurd` in Supabase: een collega keurt
+woorden en namen goed in het scherm, en dat is daar de enige lijst. Een eenmalige kopie liep dus uit
+de pas.
+
+Sindsdien haalt de workflow *Corpus ophalen* elke ochtend twee tabellen op met
+`scripts/haal-speurneus.mjs`, en zet ze in `regels/speurneus.json`:
+
+- `goedgekeurd` (woorden én namen): telt als goed gespeld, net als `uitzonderingen.txt`.
+- `naam_is_spelfout`: namen die de redactie daar als verkeerd gespeld heeft aangewezen. Die winnen
+  van allebei de lijsten, en worden door `woord-onbekend` óók gemeld als ze als naam herkend worden —
+  normaal slaat de toets namen over, maar van deze weet de redactie dat ze fout staan.
+
+Lezen kan met de publieke sleutel van SpellingSpeurneus; hier wordt niets teruggeschreven. Lukt het
+ophalen niet, of komt er minder dan de helft van de vorige keer terug, dan blijft het bestand van
+gisteren staan. `uitzonderingen.txt` blijft de eigen lijst van deze tool, voor woorden die alleen in
+reisadviezen spelen. De controles zelf (`scripts/crawl.py`) gaan niet automatisch mee: dat is code,
+geen lijst.
+
 ## De naam van het land (18 september 2026)
 
 | regel-id | vindplaats | ernst |

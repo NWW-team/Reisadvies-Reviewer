@@ -806,6 +806,8 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       // De eigen uitzonderingen zitten in de pagina zelf, niet in het opgehaalde bestand: die
       // beheert de redactie in regels/uitzonderingen.txt en ze horen bij elke herbouw mee te komen.
       for (const w of (REGELDATA.uitzonderingen || [])) lijst.add(w);
+      // Wat de redactie in SpellingSpeurneus als spelfout heeft aangewezen, telt nooit als goed.
+      for (const w of (REGELDATA.naamIsSpelfout || [])) lijst.delete(w);
       woordenlijst = lijst;
       toetser = Regels.maakToetser({ ...REGELDATA, woordenlijst });
       zetSpellingStand('Onbekende woorden staan nu onder "Mogelijke spelfouten". Namen worden '

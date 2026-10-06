@@ -20826,13 +20826,13 @@
     ],
     "zinnen": 116,
     "fout": 3,
-    "letop": 10,
+    "letop": 11,
     "linkzin": 2,
     "twijfel": 10,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 11,
       "link-zin": 2,
       "info": 0,
       "twijfel": 10
@@ -20842,7 +20842,7 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 2,
+      "woord-onbekend": 3,
       "zin-frequentiewoord": 7,
       "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1,
@@ -20884,6 +20884,16 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Baluchistan\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "In Pakistan komen regelmatig terroristische aanslagen en andere gewelddadige incidenten voor, vooral in de provincies Baluchistan en Khyber-Phakhtunkhwa.",
+        "kop": "Terrorisme",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "woord-onbekend",

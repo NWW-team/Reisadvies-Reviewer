@@ -93,6 +93,7 @@
         "postplaats-schrijfwijze",
         "nederlands-verbuiging",
         "tekst-dubbel-woord",
+        "tekst-dubbel-blok",
         "tekst-spatie-leesteken",
         "tekst-onzichtbaar-teken",
         "tekst-plakfout"
@@ -129,18 +130,18 @@
     },
     {
       "id": "twijfeltaal",
-      "label": "Twijfeltaal: misschien, mogelijk",
-      "toelichting": "Misschien, mogelijk, waarschijnlijk: woorden die de bewering zelf verzwakken. Daar is bijna altijd een stelliger formulering voor.",
+      "label": "Dubbele twijfeltaal",
+      "toelichting": "Twee keer twijfel in één zin, zoals \"kan\" met \"mogelijk\". Eén losse \"mogelijk\" of \"regelmatig\" telt niet: bij het beschrijven van mogelijke risico’s ontkom je daar niet altijd aan.",
       "regels": [
         "zin-twijfeltaal"
       ]
     },
     {
-      "id": "frequentiewoorden",
-      "label": "Twijfeltaal: vaak, soms",
-      "toelichting": "Vaak, soms, regelmatig. Ook twijfeltaal volgens de schrijfwijzer, maar soms feitelijke nuance: over terroristische groepen kun je niet schrijven dat ze aanslagen plegen.",
+      "id": "dubbelop",
+      "label": "Dubbelop: en ook, zoals bijvoorbeeld",
+      "toelichting": "Woorden die samen twee keer hetzelfde zeggen: en ook, en daarnaast, daarnaast ook, zoals bijvoorbeeld, zoals … etc. Eén van de twee kan weg.",
       "regels": [
-        "zin-frequentiewoord"
+        "zin-dubbelop"
       ]
     },
     {

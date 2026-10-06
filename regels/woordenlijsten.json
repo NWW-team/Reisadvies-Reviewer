@@ -44,7 +44,34 @@
       "doorgaans"
     ],
     "_frequentie_noot": "Deze woorden blijven twijfeltaal en blijven dus gemeld; ze zijn alleen apart te filteren. Het verschil: ze zeggen hoe vaak iets gebeurt, en dat is soms feitelijke nuance in plaats van slap taalgebruik. Over terroristische groepen kun je niet schrijven dat ze aanslagen plegen; ze doen het regelmatig of soms. Bij de overige woorden (misschien, mogelijk, waarschijnlijk) verzwakt het woord de bewering zelf, en daar is bijna altijd een stelliger formulering voor. Let op: de schrijfwijzer noemt \"vaak\" letterlijk als voorbeeld van twijfeltaal, dus dit onderscheid is een hulpmiddel bij het nalopen en geen versoepeling van de regel.",
-    "_frequentie_meting": "Op 18 september 2026 over 226 reisadviezen: regelmatig 153, vaak 129, soms 107 - samen 389 van de 473 twijfeltaal-bevindingen (82%). De verzwakkers samen 58."
+    "_frequentie_meting": "Op 18 september 2026 over 226 reisadviezen: regelmatig 153, vaak 129, soms 107 - samen 389 van de 473 twijfeltaal-bevindingen (82%). De verzwakkers samen 58.",
+    "_dubbel_noot": "Sinds 6 oktober 2026 meldt de tool een twijfelwoord niet meer los, maar alleen als het dubbelop staat: een verzwakker (misschien, mogelijk, eventueel ...) samen met een hulpwerkwoord van mogelijkheid (kan, kunnen, zou) of met een tweede twijfelwoord in dezelfde zin. Reden (redactie, 6 oktober 2026): een reisadvies beschrijft mogelijke risico's, en dan ontkom je niet altijd aan woorden als mogelijk of regelmatig. 'Kan' en 'mogelijk' in één zin zegt het echter twee keer.",
+    "modaal": [
+      "kan",
+      "kunnen",
+      "kunt",
+      "zou",
+      "zouden"
+    ],
+    "_modaal_noot": "Hulpwerkwoorden die zelf al mogelijkheid uitdrukken. Los zijn ze geen twijfeltaal; samen met een verzwakker wel dubbelop.",
+    "geen_twijfel": [
+      "zo \\S+ mogelijk",
+      "zoveel mogelijk",
+      "zo veel mogelijk",
+      "zomin mogelijk",
+      "niet mogelijk",
+      "waar mogelijk",
+      "indien mogelijk",
+      "als dat mogelijk is",
+      "als het mogelijk is",
+      "mogelijk maken",
+      "mogelijk gemaakt",
+      "maakt het mogelijk",
+      "maken het mogelijk",
+      "het is mogelijk om",
+      "is het mogelijk om"
+    ],
+    "_geen_twijfel_noot": "Vaste verbindingen waarin 'mogelijk' geen twijfel uitdrukt maar een mate of een mogelijkheid ('zo snel mogelijk', 'het is niet mogelijk'). Die tellen niet als twijfelwoord."
   },
   "negatieve_lading": {
     "_bron": "Begrijpelijkheid > Positieve taal: 'Gebruik zo min mogelijk woorden met een negatieve lading, zoals niet, nooit, probleem, mislukt etc.'",
@@ -324,5 +351,86 @@
     ]
   },
   "_herkomst_bepaald_op": "2026-09-15, door elke ingang te zoeken in de Schrijfwijzer, de Matrix en het Sjabloon. Opnieuw bepalen zodra een van die documenten wijzigt.",
-  "_let_op_code_in_dit_bestand": "Twee velden in dit bestand zijn geen data maar reguliere expressies die worden uitgevoerd: lijdende_vorm.deelwoord_patroon en genderneutraal.lhbtiq.patronen[].patroon. Alle andere ingangen worden ontsnapt voordat er een regex van wordt gemaakt, en de domeinen gaan via stringvergelijking. Pas die twee velden dus alleen aan met kennis van reguliere expressies, en meet daarna de looptijd: op 2026-09-15 bleef die onder 1 ms bij 12.000 tekens."
+  "_let_op_code_in_dit_bestand": "Vier velden in dit bestand zijn geen data maar reguliere expressies die worden uitgevoerd: lijdende_vorm.deelwoord_patroon, genderneutraal.lhbtiq.patronen[].patroon, twijfeltaal.geen_twijfel en dubbelop.paren[].patroon. Alle andere ingangen worden ontsnapt voordat er een regex van wordt gemaakt, en de domeinen gaan via stringvergelijking. Pas die velden dus alleen aan met kennis van reguliere expressies, en meet daarna de looptijd: op 2026-09-15 bleef die onder 1 ms bij 12.000 tekens.",
+  "dubbelop": {
+    "_bron": "Aanvulling op verzoek van de redactie (6 oktober 2026): woordcombinaties die twee keer hetzelfde zeggen. Steunt op SW, Begrijpelijkheid > B1, maar de lijst zelf staat niet in de schrijfwijzer; een bevinding krijgt daarom herkomst 'aanvulling'.",
+    "paren": [
+      {
+        "patroon": "\\ben ook\\b",
+        "advies": "\"en\" of \"ook\" is genoeg."
+      },
+      {
+        "patroon": "\\ben daarnaast\\b",
+        "advies": "\"en\" of \"daarnaast\" is genoeg."
+      },
+      {
+        "patroon": "\\bdaarnaast (?:\\S+ ){0,3}?ook\\b",
+        "advies": "\"daarnaast\" of \"ook\" is genoeg."
+      },
+      {
+        "patroon": "\\ben bovendien\\b",
+        "advies": "\"en\" of \"bovendien\" is genoeg."
+      },
+      {
+        "patroon": "\\bbovendien (?:\\S+ ){0,3}?ook\\b",
+        "advies": "\"bovendien\" of \"ook\" is genoeg."
+      },
+      {
+        "patroon": "\\beveneens (?:\\S+ ){0,2}?ook\\b|\\book eveneens\\b",
+        "advies": "\"eveneens\" of \"ook\" is genoeg."
+      },
+      {
+        "patroon": "\\bverder (?:\\S+ ){0,2}?ook nog\\b",
+        "advies": "\"verder\" of \"ook nog\" is genoeg."
+      },
+      {
+        "patroon": "\\bzoals bijvoorbeeld\\b|\\bbijvoorbeeld zoals\\b",
+        "advies": "Kies \"zoals\" of \"bijvoorbeeld\"."
+      },
+      {
+        "patroon": "\\bzoals onder andere\\b|\\bzoals o\\.a\\.|\\bonder andere zoals\\b",
+        "advies": "Kies \"zoals\" of \"onder andere\"."
+      },
+      {
+        "patroon": "\\bonder andere bijvoorbeeld\\b|\\bbijvoorbeeld onder andere\\b",
+        "advies": "Kies \"onder andere\" of \"bijvoorbeeld\"."
+      },
+      {
+        "patroon": "\\b(?:zoals|bijvoorbeeld|onder andere|o\\.a\\.)\\b[^.!?]*\\b(?:etc|enzovoort|enz|en dergelijke|e\\.d)\\b",
+        "advies": "Een voorbeeld is al onvolledig; \"etc.\" of \"enzovoort\" kan weg."
+      },
+      {
+        "patroon": "\\bmet name (?:\\S+ ){0,1}?vooral\\b|\\bvooral (?:\\S+ ){0,1}?met name\\b",
+        "advies": "Kies \"vooral\" of \"met name\"."
+      },
+      {
+        "patroon": "\\bmaar (?:\\S+ ){0,2}?echter\\b|\\bechter (?:\\S+ ){0,2}?maar\\b",
+        "advies": "Kies \"maar\" of \"echter\"."
+      },
+      {
+        "patroon": "\\bdus daarom\\b|\\bdaarom dus\\b",
+        "advies": "Kies \"dus\" of \"daarom\"."
+      },
+      {
+        "patroon": "\\bal reeds\\b|\\breeds al\\b",
+        "advies": "Kies \"al\"."
+      },
+      {
+        "patroon": "\\bvooraf (?:\\S+ ){0,3}?van tevoren\\b|\\bvan tevoren (?:\\S+ ){0,3}?vooraf\\b",
+        "advies": "Kies \"vooraf\" of \"van tevoren\"."
+      },
+      {
+        "patroon": "\\bsamen (?:\\S+ ){0,2}?met elkaar\\b|\\bgezamenlijk samen\\b|\\bsamen gezamenlijk\\b",
+        "advies": "\"samen\" is genoeg."
+      },
+      {
+        "patroon": "\\bnog steeds (?:\\S+ ){0,2}?nog\\b|\\bnog altijd (?:\\S+ ){0,2}?nog steeds\\b",
+        "advies": "Eén keer \"nog\" is genoeg."
+      },
+      {
+        "patroon": "\\bomdat\\b[^.!?]*\\bdaarom\\b",
+        "advies": "\"omdat\" en \"daarom\" in één zin zeggen allebei waarom. Eén is genoeg."
+      }
+    ]
+  }
 }

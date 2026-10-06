@@ -25,7 +25,8 @@ Twee bronnen:
 | `h3-niet-melden` | MX, tab *Koppen*, richtlijn *Niet melden* | onderwerp hoort niet in het reisadvies |
 | `h3-regionaal-alleen-bij-meerdere` | MX, tab *Koppen*, rij *Regionale risico's* | alleen bij meer dan 1 kleurcode |
 | `zin-max-woorden` | SW, *Begrijpelijkheid > B1* | max 15 woorden per zin; met een link erin een eigen ernst |
-| `zin-twijfeltaal` | SW, *Begrijpelijkheid > B1* | misschien, vaak, mogelijk, bijna … |
+| `zin-twijfeltaal` | SW, *Begrijpelijkheid > B1* | dubbele twijfel in één zin: kan + mogelijk, misschien + soms (sinds 6 oktober 2026) |
+| `zin-dubbelop` | SW, *Begrijpelijkheid > B1* (aanvulling) | en ook, daarnaast ook, zoals bijvoorbeeld … |
 | `zin-lijdende-vorm` | SW, *Begrijpelijkheid > B1* | schrijf actief |
 | `tekst-negatieve-lading` | SW, *Begrijpelijkheid > Positieve taal* | dichtheidstoets, geen fout per woord |
 | `vragen-opeenvolgend` | SW, *Begrijpelijkheid > Vraagvorm* | max 2 vragen achter elkaar |
@@ -1460,3 +1461,55 @@ de live site bleef twee weken op de per-bullet-regel draaien. Martijn liep er bi
 *"dit klopt niet, hier gelden 2 kleurcodes en de formulering is goed/volgens wat in de matrix
 staat"* — bij "Voor de rest van Jordanië geldt kleurcode geel. U kunt hierheen reizen." meldde de
 tool dat "erheen" moest. Met deze merge is die melding weg.
+
+## Drie punten uit de redactie: dubbele blokken, kaders, twijfeltaal en foto's (6 oktober 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `tekst-dubbel-blok` | SW, *Relevantie*: "Overbodige informatie bieden wij niet." (aanvulling) | let op |
+| `zin-twijfeltaal` | SW, *Begrijpelijkheid > B1*: "Vermijd twijfeltaal." — nu alleen dubbelop | twijfeltaal |
+| `zin-dubbelop` | SW, *Begrijpelijkheid > B1* (aanvulling; de lijst staat niet in de schrijfwijzer) | twijfeltaal |
+| `h4-niet-melden`, `tekst-niet-melden` | MX, *Foto's maken* — trefwoorden verbreed | ongewijzigd |
+
+**`tekst-dubbel-blok`** — een alinea of bullet van minstens vijftien woorden die bijna letterlijk
+nog eens in het advies staat. Aanleiding: Burkina Faso. Een redacteur zette het verzekeringskader
+("Laat familie in Nederland weten hoe en waar u verzekerd bent ...") in een gewoon contentblok,
+terwijl het al in een herbruikbaar blok stond; op de site staan dan twee kaders onder elkaar, de
+tweede licht anders verwoord. De vergelijking is daarom op woorden (Dice ≥ 0,85, woordvolgorde
+telt niet), niet op de letterlijke tekst. Twee uitzonderingen, allebei gemeten op het corpus:
+
+- *Korte zinnen.* "Lees wat u verder kunt doen bij een bosbrand in het buitenland" staat met
+  opzet onder elk natuurrisico. Onder de vijftien woorden telt het niet.
+- *Een verschil dat iets zegt.* Het sjabloon zet "Blijft u korter dan 90 dagen? ... geen visum
+  nodig" naast "langer dan 90 dagen ... een visum nodig". Zit het verschil in een ontkenning, een
+  tegenstelling (korter/langer, wel/niet) of een getal, dan is het geen dubbeling. Zonder deze
+  uitzondering gaf de regel 98 meldingen, bijna allemaal dit visumpaar.
+
+Gemeten over 226 adviezen: 14 meldingen, waarvan 6 keer het verzekeringskader dubbel (BFA, COK,
+ERI, NZL, PCN, SLE).
+
+**Kaders.** Wat het cms als `<div class="notification attention">` levert (op de site een tekst
+met een blauwe streep ervoor), krijgt in de parser `kader: true` en in de tool een subtiele
+blauwe streep. Geen regel; alleen weergave, zodat je ziet wat de lezer als kader ziet.
+
+**Twijfeltaal alleen dubbelop.** Een reisadvies beschrijft mogelijke risico's; dan ontkom je niet
+altijd aan *mogelijk*, *misschien* of *regelmatig*. Een los twijfelwoord geeft daarom geen
+melding meer. Wel: een verzwakker (*misschien, mogelijk, wellicht, eventueel ...*) samen met een
+hulpwerkwoord dat al mogelijkheid uitdrukt (*kan, kunnen, kunt, zou, zouden*) of met een tweede
+twijfelwoord. Een frequentiewoord met *kunnen* ("er kunnen regelmatig overvallen zijn") telt
+niet: dat is een feitelijke nuance. Vaste verbindingen als *zo snel mogelijk* en *niet mogelijk*
+tellen niet als twijfel. `zin-frequentiewoord` is daarmee vervallen: frequentiewoorden tellen
+alleen nog mee als tweede twijfelwoord naast een verzwakker. Gemeten: van 454 twijfeltaal-meldingen
+naar 7.
+
+**`zin-dubbelop`** — woorden die samen twee keer hetzelfde zeggen: *en ook*, *en daarnaast*,
+*daarnaast (...) ook*, *bovendien (...) ook*, *zoals bijvoorbeeld*, *zoals onder andere*, *zoals ...
+etc.*, *maar echter*, *dus daarom*, *al reeds*, *vooraf ... van tevoren*, *omdat ... daarom* en
+nog een paar. De lijst staat in `regels/woordenlijsten.json` onder `dubbelop`. Eén melding per zin,
+ook als er meer stapelingen in staan ("en daarnaast ook" is één melding). Gemeten: 11 meldingen.
+
+**Foto's maken breder.** De kop heet niet overal "Foto's maken": Litouwen heeft "Foto- en
+filmverbod", andere adviezen "Fotografie" (12 keer), "Foto's en video's maken" of "Geen foto's
+van militaire objecten". De trefwoorden zijn uitgebreid met *foto's, fotografie, fotografeer(t),
+fotoverbod, filmverbod, filmopnames*. Los *foto* of *film* niet: "de flitspaal neemt een foto"
+gaat niet over foto's maken als risico. `h4-niet-melden` ging van 65 naar 90 meldingen.

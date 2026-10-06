@@ -58,6 +58,12 @@ alleen een letterlijke treffer, want een kop is te kort voor de ruime vergelijki
 over iets dat *ontbreekt* hebben niets om aan te wijzen en blijven ongemarkeerd — die staan
 alleen in de lijst, met de verwachte formulering erbij.
 
+**Kaders.** Een tekst die op de site in een kader staat (in het cms `notification attention`, zoals
+de oproep voor de Informatieservice of "Laat familie in Nederland weten hoe en waar u verzekerd
+bent"), krijgt in het linkerpaneel een dunne blauwe streep ervoor, net als op de site. Staat
+zo'n tekst twee keer in het advies — bijvoorbeeld omdat hij al in een herbruikbaar blok stond en
+er in een gewoon contentblok nog eens bij is gezet — dan meldt de tool dat als *Tekstfouten*.
+
 **Vijf kleuren, vaste volgorde.** De ernst van een bevinding is een *soort*, geen rangorde van
 erg naar minder erg. De lijst staat altijd in deze volgorde, zodat je hem van boven naar beneden
 kunt aflopen:
@@ -68,14 +74,14 @@ kunt aflopen:
 | geel/oranje | **Let op** | te lange zin zonder link, te lange linktekst, lijdende vorm |
 | lichtblauw | **Lange zin met link** | meer dan 15 woorden *en* een link in de zin — vaak op te lossen door de linktekst in te korten |
 | grijs | **Ter overweging** | de rest: notatieregels en signalen om over na te denken |
-| roze | **Twijfeltaal** | misschien, vaak, mogelijk, bijna … — onderaan, want het is bijna altijd een stapel losse woorden die je in één ronde wegwerkt |
+| roze | **Twijfeltaal** | dubbele twijfel (*kan* + *mogelijk*) en woorden die dubbelop staan (*en ook*, *zoals bijvoorbeeld*) — onderaan, want het is bijna altijd een stapel losse woorden die je in één ronde wegwerkt |
 
 Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een fout moet je hoe
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
 *Te lange zinnen*, *Te lange zinnen incl. link*, *Tekstfouten*, *Mogelijke spelfouten*,
-*Linkteksten*, *Lijdende vorm*, *Twijfeltaal: misschien, mogelijk*, *Twijfeltaal: vaak, soms*,
+*Linkteksten*, *Lijdende vorm*, *Dubbele twijfeltaal*, *Dubbelop: en ook, zoals bijvoorbeeld*,
 *Volgorde van de rubrieken* en *Notatie en stijl*. Alles staat aan; een klik zet een soort weg. Een aangevinkte knop is gevuld
 met een vinkje, een uitgezette is doorgestreept met een kruisje, zodat je ziet wat een klik doet. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.

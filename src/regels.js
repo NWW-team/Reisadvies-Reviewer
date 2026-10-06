@@ -24,8 +24,9 @@ import { telWoorden, splitsZinnen } from './parse.js';
  *   link-zin lichtblauw   te lange zin waarin een link staat — vaak los te maken door de
  *                         linktekst in te korten, dus een ander gesprek dan een lange lopende zin
  *   info     grijs        de rest: notatieregels en signalen om over na te denken
- *   twijfel  roze         twijfeltaal — onderaan, want het is bijna altijd een stapel losse
- *                         woorden ("vaak", "misschien") die je in één ronde wegwerkt
+ *   twijfel  roze         dubbele twijfeltaal en dubbelop — onderaan, want het is bijna altijd
+ *                         een stapel losse woorden ("kan mogelijk", "en ook") die je in één ronde
+ *                         wegwerkt
  */
 const ERNST = { fout: 'fout', letop: 'let-op', linkzin: 'link-zin', twijfel: 'twijfel', info: 'info' };
 
@@ -444,6 +445,48 @@ export function maakToetser(data) {
   const alsSet = (lijst) => new Set((lijst || []).map((x) => String(x).toLowerCase()));
   const extraTwijfel = alsSet(wl.twijfeltaal._aanvullingen);
   const frequentieWoorden = alsSet(wl.twijfeltaal.frequentie);
+
+  /**
+   * Twijfeltaal telt alleen als hij dubbelop staat. Een reisadvies beschrijft mogelijke risico's,
+   * en dan ontkom je niet altijd aan "mogelijk" of "regelmatig" (redactie, 6 oktober 2026). Wel
+   * te vermijden: twee keer twijfel in één zin, zoals "kan" met "mogelijk", of "misschien" met
+   * "soms". Er moet minstens één verzwakker bij zijn; "kunnen" met "regelmatig" is een feitelijke
+   * nuance over hoe vaak iets gebeurt, en geen dubbele twijfel.
+   *
+   * De vaste verbindingen in geen_twijfel ("zo snel mogelijk", "niet mogelijk") worden eerst uit
+   * de zin geknipt: daarin drukt "mogelijk" geen twijfel uit.
+   */
+  const twijfelRes = wl.twijfeltaal.woorden.map((w) => ({ w,
+    re: new RegExp('(?<![\\p{L}\\p{N}])' + esc(w) + '(?![\\p{L}\\p{N}])', 'giu') }));
+  const modaalRe = new RegExp('(?<![\\p{L}\\p{N}])(' + (wl.twijfeltaal.modaal || []).map(esc).join('|')
+    + ')(?![\\p{L}\\p{N}])', 'giu');
+  const geenTwijfelRe = (wl.twijfeltaal.geen_twijfel || []).length
+    ? new RegExp('(?<![\\p{L}\\p{N}])(?:' + wl.twijfeltaal.geen_twijfel.join('|') + ')(?![\\p{L}\\p{N}])', 'giu')
+    : null;
+
+  function dubbeleTwijfel(zin) {
+    const z = geenTwijfelRe ? zin.replace(geenTwijfelRe, (m) => ' '.repeat(m.length)) : zin;
+    const gevonden = [];          // {w, van, tot}
+    for (const { w, re } of twijfelRes) {
+      for (const m of z.matchAll(re)) gevonden.push({ w: m[0], van: m.index, tot: m.index + m[0].length,
+        verzwakker: !frequentieWoorden.has(w.toLowerCase()) });
+    }
+    // Een langere ingang wint van een kortere die erin zit ("mogelijkerwijs" en "mogelijk").
+    const twijfel = gevonden.filter((g) => !gevonden.some((h) => h !== g && h.van <= g.van && h.tot >= g.tot
+      && (h.tot - h.van) > (g.tot - g.van)));
+    if (!twijfel.some((g) => g.verzwakker)) return null;
+    // "zou kunnen" en "kan voorkomen" staan zelf op de lijst; het hulpwerkwoord daarin telt niet
+    // nog een keer mee.
+    const modaal = [...z.matchAll(modaalRe)].map((m) => ({ w: m[0], van: m.index, tot: m.index + m[0].length }))
+      .filter((m) => !twijfel.some((g) => g.van <= m.van && g.tot >= m.tot));
+    const alle = [...twijfel, ...modaal].sort((a, b) => a.van - b.van);
+    const uniek = [...new Map(alle.map((g) => [g.w.toLowerCase(), g])).values()];
+    return uniek.length >= 2 ? uniek.map((g) => g.w) : null;
+  }
+
+  /** Woordcombinaties die twee keer hetzelfde zeggen: "en ook", "zoals bijvoorbeeld". */
+  const dubbelopParen = ((wl.dubbelop && wl.dubbelop.paren) || [])
+    .map((p) => ({ re: new RegExp(p.patroon, 'i'), advies: p.advies }));
   const extraGender = alsSet(wl.genderneutraal._aanvullingen);
   const extraAfk = alsSet(wl.afkortingen._aanvullingen);
   const extraEenheid = alsSet(wl.eenheden_voluit._aanvullingen);
@@ -1755,6 +1798,57 @@ export function maakToetser(data) {
       }
     }
 
+    // Een heel blok tekst dat twee keer in het advies staat. Gebeurt als een redacteur een tekst
+    // in een gewoon contentblok zet terwijl hij al in een herbruikbaar blok staat: op de site staan
+    // dan twee (bijna) gelijke kaders onder elkaar. Alleen alinea's en bullets van minstens vijftien
+    // woorden: korte zinnen ("Lees wat u verder kunt doen bij een bosbrand in het buitenland.") staan met
+    // opzet onder meer rubrieken. Bijna gelijk telt ook — de tweede kopie is vaak licht herschreven
+    // ("hoe en waar u verzekerd bent" tegenover "hoe en waar u bent verzekerd") — dus op woorden,
+    // niet op de letterlijke tekst. Maar zit het verschil in een ontkenning, een tegenstelling of
+    // een getal, dan zeggen de twee iets anders: het sjabloon zet "Blijft u korter dan 90 dagen?
+    // ... geen visum nodig" met opzet naast "langer dan 90 dagen ... een visum nodig".
+    {
+      const stukken = [];
+      for (const blok of doc.blokken) {
+        for (const o of blok.onderdelen) {
+          const teksten = o.soort === 'alinea' ? [o.alinea.tekst] : o.opsomming.items;
+          for (const tekst of teksten) {
+            const woorden = (norm(tekst).match(/[\p{L}\p{N}]+/gu) || []);
+            if (woorden.length < 15) continue;
+            const telling = new Map();
+            for (const w of woorden) telling.set(w, (telling.get(w) || 0) + 1);
+            stukken.push({ tekst, kop: blok.kop || blok.h2, n: woorden.length, telling });
+          }
+        }
+      }
+      const gelijkenis = (a, b) => {
+        let gedeeld = 0;
+        for (const [w, n] of a.telling) gedeeld += Math.min(n, b.telling.get(w) || 0);
+        return (2 * gedeeld) / (a.n + b.n);
+      };
+      const betekenisWoord = /^(geen|niet|nooit|wel|altijd|korter|langer|minder|meer|binnen|buiten|voor|na|\p{N}.*)$/u;
+      const verschilZegtIets = (a, b) => [[a, b], [b, a]].some(([x, y]) => [...x.telling]
+        .some(([w, n]) => n > (y.telling.get(w) || 0) && betekenisWoord.test(w)));
+      const gemeld = new Set();
+      for (let j = 1; j < stukken.length; j++) {
+        for (let i = 0; i < j; i++) {
+          if (gemeld.has(i)) continue;
+          const a = stukken[i];
+          const c = stukken[j];
+          if (Math.min(a.n, c.n) / Math.max(a.n, c.n) < 0.8 || gelijkenis(a, c) < 0.85
+            || verschilZegtIets(a, c)) continue;
+          gemeld.add(j);
+          const waar = a.kop && c.kop && norm(a.kop) !== norm(c.kop) ? ` ook onder "${a.kop}"` : ' twee keer';
+          b.push(bevinding('tekst-dubbel-blok', ERNST.letop, 'SW, Relevantie',
+            (norm(a.tekst) === norm(c.tekst) ? 'Deze tekst staat' : 'Deze tekst staat bijna letterlijk') + waar + '.',
+            { fragment: c.tekst, kop: c.kop, herkomst: 'aanvulling',
+              notitie: 'Eerder: "' + a.tekst + '". Staat de tekst al in een herbruikbaar blok? '
+                + 'Haal dan de kopie in het gewone contentblok weg.' }));
+          break;
+        }
+      }
+    }
+
     // Een onderwerp dat de matrix als "niet melden" aanmerkt, hoort ook niet in de lopende tekst.
     // Vaste teksten tellen niet mee: het trefwoord "ziekenhuis" staat in de voorgeschreven noodzin
     // ("u bent opgenomen in het ziekenhuis"), en daar kan een redacteur niets aan doen.
@@ -1787,20 +1881,26 @@ export function maakToetser(data) {
             + (metLink ? ' De linktekst telt mee — kort die eerst in.' : ''),
           { fragment: z.tekst, kop: z.h3 || z.h2 }));
       }
-      for (const w of wl.twijfeltaal.woorden) {
-        if (!new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) continue;
-        // Twee soorten twijfeltaal, met dezelfde herkomst maar een ander gesprek. "Misschien" en
-        // "mogelijk" verzwakken de bewering zelf; daar is bijna altijd een stelliger zin voor.
-        // "Regelmatig" en "soms" zeggen hoe váák iets gebeurt, en dat is soms feitelijke nuance:
-        // over terroristische groepen kun je niet schrijven dát ze aanslagen plegen. Ze blijven
-        // allebei gemeld — de schrijfwijzer noemt "vaak" letterlijk — maar apart te filteren.
-        const isFrequentie = frequentieWoorden.has(w.toLowerCase());
-        b.push(bevinding(isFrequentie ? 'zin-frequentiewoord' : 'zin-twijfeltaal',
-          ERNST.twijfel, 'SW, Begrijpelijkheid > B1',
-          isFrequentie
-            ? `"${w}" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?`
-            : `Twijfeltaal: "${w}".`,
-          { fragment: z.tekst, kop: z.h3 || z.h2, ...herkomst(extraTwijfel, w) }));
+      const twijfel = dubbeleTwijfel(z.tekst);
+      if (twijfel) {
+        const lijst = twijfel.map((w) => '"' + w + '"');
+        b.push(bevinding('zin-twijfeltaal', ERNST.twijfel, 'SW, Begrijpelijkheid > B1',
+          `Dubbele twijfeltaal: ${lijst.slice(0, -1).join(', ')} en ${lijst[lijst.length - 1]} in één zin. `
+            + 'Eén keer is genoeg.',
+          { fragment: z.tekst, kop: z.h3 || z.h2,
+            ...(twijfel.some((w) => extraTwijfel.has(w.toLowerCase())) ? { herkomst: 'aanvulling' } : {}) }));
+      }
+      const dubbelop = [];
+      for (const p of dubbelopParen) {
+        const m = z.tekst.match(p.re);
+        if (m && !dubbelop.some((d) => d.stuk.includes(m[0]) || m[0].includes(d.stuk))) {
+          dubbelop.push({ stuk: m[0], advies: p.advies });
+        }
+      }
+      if (dubbelop.length) {
+        b.push(bevinding('zin-dubbelop', ERNST.twijfel, 'SW, Begrijpelijkheid > B1',
+          'Dubbelop: ' + dubbelop.map((d) => `"${d.stuk}" — ${d.advies}`).join(' '),
+          { fragment: z.tekst, kop: z.h3 || z.h2, herkomst: 'aanvulling' }));
       }
       const lv = lijdendeVorm(z.tekst);
       if (lv) {

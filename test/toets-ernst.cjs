@@ -29,7 +29,7 @@ test('een lange zin zonder link is let-op, met link een eigen soort', () => {
 });
 
 test('twijfeltaal heeft een eigen soort', () => {
-  const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
+  const b = eerste('<p>Het kan misschien verstandig zijn om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);
   assert.strictEqual(b.ernst, Regels.ERNST.twijfel);
 });

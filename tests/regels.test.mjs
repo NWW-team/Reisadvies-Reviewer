@@ -193,15 +193,28 @@ const gevallen = [
     slaagt: '<p>In zee zwemmen dolfijnen.</p>',
   },
   {
-    // Zelfde regel, ander gesprek: dit woord zegt hoe vaak iets gebeurt.
-    regel: 'zin-frequentiewoord',
-    faalt: '<p>In dit gebied komen regelmatig overvallen voor.</p>',
-    slaagt: '<p>In dit gebied komen overvallen voor.</p>',
+    // Alleen dubbele twijfel telt: een reisadvies beschrijft mogelijke risico's, dus één
+    // "mogelijk" mag. "Kan" en "mogelijk" in één zin zegt het twee keer.
+    regel: 'zin-twijfeltaal',
+    faalt: '<p>Er kunnen mogelijk aanslagen plaatsvinden.</p>',
+    slaagt: '<p>Er vinden mogelijk aanslagen plaats.</p>',
   },
   {
-    regel: 'zin-twijfeltaal',
-    faalt: '<p>U heeft misschien een visum nodig.</p>',
-    slaagt: '<p>U heeft een visum nodig.</p>',
+    regel: 'zin-dubbelop',
+    faalt: '<p>Neem water mee, zoals bijvoorbeeld flessen uit de supermarkt.</p>',
+    slaagt: '<p>Neem water mee, bijvoorbeeld flessen uit de supermarkt.</p>',
+  },
+  {
+    // Een kader dat al in een herbruikbaar blok staat en er in een gewoon contentblok nog eens
+    // bij is gezet, licht herschreven (Burkina Faso, oktober 2026).
+    regel: 'tekst-dubbel-blok',
+    faalt: '<h3>Reisverzekering</h3><div class="notification attention">Laat familie in Nederland weten '
+      + 'hoe en waar u verzekerd bent. In een noodgeval kan uw familie dan de hulp van uw verzekeraar '
+      + 'inroepen.</div><div class="notification attention">Laat familie in Nederland weten hoe en waar '
+      + 'u bent verzekerd. In een noodgeval kan uw familie dan hulp inschakelen van uw verzekeraar.</div>',
+    slaagt: '<h3>Reisverzekering</h3><div class="notification attention">Laat familie in Nederland weten '
+      + 'hoe en waar u bent verzekerd. In een noodgeval kan uw familie dan hulp inschakelen van uw '
+      + 'verzekeraar.</div>',
   },
   {
     regel: 'zin-lijdende-vorm',
@@ -352,8 +365,8 @@ test('elke regel-id uit de tests staat ook in HERKOMST.md', async () => {
 function alleRegelIds() {
   const bron = readFileSync(new URL('../src/regels.js', import.meta.url), 'utf8');
   const ids = new Set([...bron.matchAll(/bevinding\('([a-z0-9-]+)'/g)].map((m) => m[1]));
-  // Een regel mag zijn id in een keuze-expressie bepalen: twijfeltaal splitst zo in verzwakkers
-  // en frequentiewoorden. Beide takken tellen mee.
+  // Een regel mag zijn id in een keuze-expressie bepalen (metLink ? ... : ...). Beide takken
+  // tellen mee.
   for (const m of bron.matchAll(/bevinding\(\s*\w+\s*\?\s*'([a-z0-9-]+)'\s*:\s*'([a-z0-9-]+)'/g)) {
     ids.add(m[1]); ids.add(m[2]);
   }
@@ -947,7 +960,7 @@ test('een eigen zin die toevallig zo begint blijft wel getoetst op wat eromheen 
     + '<p>Kinderen hebben ook een geldig paspoort en eventueel een visum nodig voor een reis naar '
     + 'Tsjechië. Reizigers moeten er mogelijk rekening mee houden dat de wachttijden aan de grens '
     + 'bij drukte flink kunnen oplopen in de zomermaanden.</p>'), { land: 'Tsjechië' });
-  assert.ok(ids.includes('zin-twijfeltaal'), 'de tweede zin bevat "mogelijk" en hoort gemeld te worden');
+  assert.ok(ids.includes('zin-twijfeltaal'), 'de tweede zin bevat "mogelijk" én "kunnen" en hoort gemeld te worden');
 });
 
 /**
@@ -1170,4 +1183,74 @@ test('kleurvariant: de melding citeert alleen de zin die afwijkt, niet de hele b
   assert.equal(b.length, 1);
   assert.equal(b[0].fragment, 'Wat uw situatie ook is: reis er niet heen.');
   assert.equal(b[0].verwacht, 'Wat uw situatie ook is: reis niet hierheen.');
+});
+
+/**
+ * Twijfeltaal telt alleen dubbelop (redactie, 6 oktober 2026). Een los twijfelwoord beschrijft vaak
+ * gewoon een mogelijk risico; twee keer twijfel in één zin is er één te veel.
+ */
+test('twijfeltaal: een los woord mag, dubbelop niet', () => {
+  const ids = (zin) => idsVan(advies('<h3>Criminaliteit</h3><p>' + zin + '</p>'));
+  for (const zin of [
+    'In dit gebied komen regelmatig overvallen voor.',
+    'Er vinden mogelijk aanslagen plaats.',
+    'Er kunnen regelmatig overvallen zijn.',             // frequentie + kunnen: feitelijke nuance
+    'Vertrek zo snel mogelijk als het kan.',            // "zo snel mogelijk" is geen twijfel
+    'Het is niet mogelijk om te pinnen, dus u kunt beter contant geld meenemen.',
+  ]) assert.ok(!ids(zin).includes('zin-twijfeltaal'), 'geen melding verwacht bij: ' + zin);
+  for (const zin of [
+    'Er kunnen mogelijk aanslagen plaatsvinden.',
+    'Misschien zijn er soms controles.',
+    'Wellicht zou u een gids kunnen nemen.',
+  ]) assert.ok(ids(zin).includes('zin-twijfeltaal'), 'melding verwacht bij: ' + zin);
+  const b = bevindingenVan(advies('<h3>Criminaliteit</h3><p>Er kunnen mogelijk aanslagen plaatsvinden.</p>'))
+    .find((x) => x.regel === 'zin-twijfeltaal');
+  assert.match(b.boodschap, /"kunnen" en "mogelijk"/);
+});
+
+test('dubbelop: en ook, daarnaast ook, zoals bijvoorbeeld', () => {
+  const ids = (zin) => idsVan(advies('<h3>Criminaliteit</h3><p>' + zin + '</p>'));
+  for (const zin of [
+    'Wees alert bij vliegvelden en ook in hotels.',
+    'Daarnaast kunt u ook de politie bellen.',
+    'Er zijn en daarnaast overvallen.',
+    'Neem documenten mee, zoals uw paspoort, rijbewijs etc.',
+  ]) assert.ok(ids(zin).includes('zin-dubbelop'), 'melding verwacht bij: ' + zin);
+  for (const zin of [
+    'Wees alert bij vliegvelden. Ook in hotels.',
+    'Daarnaast kunt u de politie bellen.',
+    'Neem documenten mee, zoals uw paspoort en rijbewijs.',
+  ]) assert.ok(!ids(zin).includes('zin-dubbelop'), 'geen melding verwacht bij: ' + zin);
+  // "en daarnaast ook" is één stapeling, geen twee bevindingen.
+  const n = bevindingenVan(advies('<h3>Criminaliteit</h3><p>Er zijn zakkenrollers en daarnaast ook overvallers.</p>'))
+    .filter((x) => x.regel === 'zin-dubbelop').length;
+  assert.strictEqual(n, 1);
+});
+
+test('dubbel blok: tegengestelde sjabloonzinnen zijn geen dubbeling', () => {
+  // Het sjabloon zet deze twee met opzet naast elkaar; ze verschillen in korter/langer en geen.
+  const html = '<h3>Paspoort, visum, rijbewijs</h3>'
+    + '<p>Blijft u korter dan 90 dagen in Tsjechië? En reist u met een Nederlands paspoort? Dan heeft u geen visum nodig.</p>'
+    + '<p>Blijft u langer dan 90 dagen in Tsjechië? En reist u met een Nederlands paspoort? Dan heeft u een visum nodig.</p>';
+  assert.ok(!idsVan(advies(html), { land: 'Tsjechië' }).includes('tekst-dubbel-blok'));
+});
+
+test('een kader op de site (notification attention) blijft herkenbaar in het document', () => {
+  const doc = parseAdvies('<h3>Reisverzekering</h3><p>Gewone tekst.</p>'
+    + '<div class="notification attention">Laat familie in Nederland weten hoe en waar u bent verzekerd.</div>');
+  const alineas = doc.blokken.flatMap((b) => b.alineas);
+  assert.strictEqual(alineas.length, 2);
+  assert.ok(!alineas[0].kader);
+  assert.strictEqual(alineas[1].kader, true);
+  // Geplakt van de site plakt het label "Let op:" tegen de kadertekst; ook dat is een kader.
+  const plat = parseAdvies('Gewone tekst.\nLet op:Laat familie weten waar u verzekerd bent.');
+  assert.strictEqual(plat.blokken.flatMap((b) => b.alineas)[1].kader, true);
+});
+
+test("foto's maken: ook onder een andere kop", () => {
+  for (const kop of ['Foto- en filmverbod', 'Fotografie', 'Foto’s en video’s maken', 'Geen foto’s van militaire objecten']) {
+    const ids = idsVan(advies('<h2>Welke veiligheidsrisico’s zijn er in Tsjechië?</h2><h3>Lokale wetten</h3>'
+      + '<h4>' + kop + '</h4><p>Fotografeer geen militaire objecten.</p>'), { land: 'Tsjechië' });
+    assert.ok(ids.includes('h4-niet-melden'), 'melding verwacht bij kop: ' + kop);
+  }
 });

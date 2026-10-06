@@ -201,6 +201,7 @@ export function parseAdvies(invoer, meta = {}) {
       // De site zet "Let op:" als label vóór een kader, zonder spatie erachter. Dat label staat
       // niet in de tekst van het advies zelf; kopieer je de pagina, dan plakt het tegen de
       // eerste zin aan ("Let op:E-mail ontvangen ..."). Een schrijver typt zelf wel een spatie.
+      const kader = /^\s*Let op:(?=\S)/.test(ruw);
       const regel = ruw.replace(/^(\s*)Let op:(?=\S)/, '$1');
       const t = schoon(regel);
       if (!t) { sluitLijst(); vorige = null; continue; }
@@ -229,7 +230,8 @@ export function parseAdvies(invoer, meta = {}) {
         vorige.woorden = telWoorden(vorige.tekst);
         continue;
       }
-      vorige = voegAlinea(blok, { tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
+      vorige = voegAlinea(blok, { tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t),
+        ...(kader ? { kader: true } : {}) });
     }
     sluitLijst();
   } else {
@@ -239,6 +241,12 @@ export function parseAdvies(invoer, meta = {}) {
     let linkOpen = null;
     const opmaakStack = [];
     let lijst = null;
+    // De site zet sommige teksten in een kader met een blauwe streep ervoor: de oproep voor de
+    // Informatieservice, "Laat familie in Nederland weten hoe en waar u verzekerd bent". In het cms
+    // is dat <div class="notification attention">. Het telt als gewone tekst, maar de tool tekent
+    // het ook als kader, zodat je ziet wat de lezer op de site als blok ziet.
+    const divs = [];                 // per open <div>: is het een kader?
+    const inKader = () => divs.includes(true);
 
     const spoel = () => {
       const t = schoon(buffer);
@@ -249,7 +257,8 @@ export function parseAdvies(invoer, meta = {}) {
       if (context === 'h3') { nieuwBlok(3, t); return; }
       if (context === 'h4') { nieuwBlok(4, t); return; }
       if (context === 'li') { if (lijst) lijst.items.push(t); return; }
-      voegAlinea(blokVoorInhoud(), { tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t) });
+      voegAlinea(blokVoorInhoud(), { tekst: t, zinnen: splitsZinnen(t), woorden: telWoorden(t),
+        ...(inKader() ? { kader: true } : {}) });
     };
 
     for (const tok of tokens) {
@@ -286,13 +295,20 @@ export function parseAdvies(invoer, meta = {}) {
         continue;
       }
       if (naam === 'ul' || naam === 'ol') {
-        if (!sluit) { spoel(); lijst = { items: [], geordend: naam === 'ol', h2: huidigH2, h3: huidigH3 }; }
+        if (!sluit) {
+          spoel();
+          lijst = { items: [], geordend: naam === 'ol', h2: huidigH2, h3: huidigH3, ...(inKader() ? { kader: true } : {}) };
+        }
         else if (lijst) { spoel(); voegOpsomming(blokVoorInhoud(), lijst); lijst = null; }
         continue;
       }
       if (!BLOKTAGS.has(naam)) continue;
 
       spoel();
+      if (naam === 'div') {
+        if (sluit) divs.pop();
+        else divs.push(/\b(attention|notification)\b/i.test(attr(attrs, 'class') || ''));
+      }
       if (sluit) { context = null; continue; }
       if (naam === 'h1' || naam === 'h2' || naam === 'h3' || naam === 'h4') context = naam;
       else if (naam === 'li') context = 'li';

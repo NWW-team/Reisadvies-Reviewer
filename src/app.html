@@ -227,6 +227,10 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .advies p { margin: 0 0 .65em; }
 .advies ul { margin: 0 0 .8em; padding-left: 1.15em; }
 .advies li { margin-bottom: .25em; }
+/* Een kader op de site (in het cms: notification attention), zoals de oproep voor de
+   Informatieservice. Subtiel: alleen de blauwe streep ervoor, zoals op de site zelf. */
+.advies .kader, #rapport .r-tekst .kader { border-left: 3px solid var(--blauw); padding-left: .7em; }
+.advies ul.kader { padding-left: 1.85em; }
 .filters button.leeg { opacity: .55; }
 .filters button.leeg .n { font-variant-numeric: tabular-nums; }
 .zin { cursor: pointer; }
@@ -270,7 +274,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .g-linktekst { --e: #1d726f; --e-vlak: #d6faf9; --e-rand: #8de2e0; }
 .g-lijdende-vorm { --e: #1d7224; --e-vlak: #d6fad9; --e-rand: #8de294; }
 .g-twijfeltaal { --e: #721d4a; --e-vlak: #fad6e9; --e-rand: #e28dba; }
-.g-frequentiewoorden { --e: #671d72; --e-vlak: #f6d6fa; --e-rand: #d78de2; }
+.g-dubbelop { --e: #671d72; --e-vlak: #f6d6fa; --e-rand: #d78de2; }
 .g-rubriekvolgorde { --e: #3d4652; --e-vlak: #e3e7ed; --e-rand: #adb6c2; }
 .g-notatie { --e: #61721d; --e-vlak: #f3fad6; --e-rand: #d1e28d; }
 @media (prefers-color-scheme: dark) {
@@ -282,7 +286,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 :root:not([data-theme="light"]) .g-linktekst { --e: #abedeb; --e-vlak: #1c403f; --e-rand: #3d8f8c; }
 :root:not([data-theme="light"]) .g-lijdende-vorm { --e: #abedb0; --e-vlak: #1c401f; --e-rand: #3d8f44; }
 :root:not([data-theme="light"]) .g-twijfeltaal { --e: #edabce; --e-vlak: #401c2f; --e-rand: #8f3d69; }
-:root:not([data-theme="light"]) .g-frequentiewoorden { --e: #e4abed; --e-vlak: #3b1c40; --e-rand: #843d8f; }
+:root:not([data-theme="light"]) .g-dubbelop { --e: #e4abed; --e-vlak: #3b1c40; --e-rand: #843d8f; }
 :root:not([data-theme="light"]) .g-rubriekvolgorde { --e: #c4cbd4; --e-vlak: #292d32; --e-rand: #5c6470; }
 :root:not([data-theme="light"]) .g-notatie { --e: #e0edab; --e-vlak: #39401c; --e-rand: #7e8f3d; }
 }
@@ -294,7 +298,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 :root[data-theme="dark"] .g-linktekst { --e: #abedeb; --e-vlak: #1c403f; --e-rand: #3d8f8c; }
 :root[data-theme="dark"] .g-lijdende-vorm { --e: #abedb0; --e-vlak: #1c401f; --e-rand: #3d8f44; }
 :root[data-theme="dark"] .g-twijfeltaal { --e: #edabce; --e-vlak: #401c2f; --e-rand: #8f3d69; }
-:root[data-theme="dark"] .g-frequentiewoorden { --e: #e4abed; --e-vlak: #3b1c40; --e-rand: #843d8f; }
+:root[data-theme="dark"] .g-dubbelop { --e: #e4abed; --e-vlak: #3b1c40; --e-rand: #843d8f; }
 :root[data-theme="dark"] .g-rubriekvolgorde { --e: #c4cbd4; --e-vlak: #292d32; --e-rand: #5c6470; }
 :root[data-theme="dark"] .g-notatie { --e: #e0edab; --e-vlak: #39401c; --e-rand: #7e8f3d; }
 .bev .bovenrij { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
@@ -1000,9 +1004,11 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       // Informatieservice bóven de bullets van "In het kort".
       for (const onderdeel of blok.onderdelen) {
         if (onderdeel.soort === 'alinea') {
-          stukken.push('<p>' + onderdeel.alinea.zinnen.map((z) => markeer(z, perZin, ruim)).join(' ') + '</p>');
+          stukken.push((onderdeel.alinea.kader ? '<p class="kader" title="Kader op de site">' : '<p>')
+            + onderdeel.alinea.zinnen.map((z) => markeer(z, perZin, ruim)).join(' ') + '</p>');
         } else {
-          stukken.push('<ul>' + onderdeel.opsomming.items
+          stukken.push((onderdeel.opsomming.kader ? '<ul class="kader" title="Kader op de site">' : '<ul>')
+            + onderdeel.opsomming.items
             .map((x) => '<li>' + markeerItem(x, perZin, ruim) + '</li>').join('') + '</ul>');
         }
       }

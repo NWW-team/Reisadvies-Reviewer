@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-05 over 226 reisadviezen.
+Gedraaid op 2026-10-06 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **74** van de 226 adviezen hebben geen enkele harde fout.
 - **45** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **203** van de 2977 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **203** van de 2954 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,9 +26,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 291 | 152 |
-| geel/oranje — let op | 1528 | 216 |
+| geel/oranje — let op | 1506 | 216 |
 | lichtblauw — lange zin met link | 543 | 201 |
-| grijs — ter overweging | 161 | 112 |
+| grijs — ter overweging | 160 | 111 |
 | roze — twijfeltaal | 454 | 156 |
 
 ## Per regel
@@ -48,7 +48,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 38 | 38 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
-| `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |
 | `h3-niet-melden` | 24 | 24 |
 | `rubriek-vrij-te-hoog` | 23 | 23 |
@@ -61,6 +60,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `tekst-spatie-leesteken` | 11 | 12 |
 | `actueel-max-woorden` | 11 | 11 |
 | `h3-vaste-kop` | 11 | 11 |
+| `regionaal-gebiedenzin` | 9 | 11 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
@@ -74,7 +74,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `link-plakt-aan-woord` | 5 | 5 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
-| `kleur-aanduiding` | 5 | 5 |
 | `titel-leestekens` | 5 | 5 |
 | `vragen-opeenvolgend` | 5 | 7 |
 | `kleur-vervolg-bullet-kort` | 4 | 4 |
@@ -82,8 +81,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `kinderen-documenten` | 4 | 4 |
 | `tekst-dubbel-woord` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
+| `kleur-aanduiding` | 4 | 4 |
 | `h2-vast` | 3 | 3 |
-| `kleur-eerste-bullet-voluit` | 3 | 3 |
 | `postplaats-schrijfwijze` | 3 | 3 |
 | `afkortingen-uitschrijven` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
@@ -94,6 +93,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `vaste-tekst-land-leeg` | 2 | 2 |
 | `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |
+| `kleur-eerste-bullet-voluit` | 2 | 2 |
 | `telefoon-notatie` | 2 | 3 |
 | `criminaliteit-themapagina` | 2 | 2 |
 | `genderneutraal` | 2 | 3 |

@@ -804,8 +804,9 @@
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Voor de volgende eilanden geldt kleurcode rood:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -1054,20 +1055,19 @@
     ],
     "zinnen": 74,
     "fout": 1,
-    "letop": 2,
+    "letop": 1,
     "linkzin": 1,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 2,
+      "let-op": 1,
       "link-zin": 1,
       "info": 2,
       "twijfel": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 2,
@@ -1081,13 +1081,6 @@
         "boodschap": "\"Fotograferen\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Fotograferen",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-volgorde",
@@ -2195,21 +2188,19 @@
     ],
     "zinnen": 91,
     "fout": 1,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 2,
     "twijfel": 3,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 2,
-      "info": 1,
+      "info": 0,
       "twijfel": 3
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-variant": 1,
-      "kleur-eerste-bullet-voluit": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
       "zin-frequentiewoord": 3,
@@ -2218,13 +2209,6 @@
     },
     "bevindingen": [
       {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Burkina Faso is rood."
-      },
-      {
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
@@ -2232,15 +2216,6 @@
         "fragment": "De kleurcode van het reisadvies voor Burkina Faso is voor het grootste deel rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-eerste-bullet-voluit",
-        "ernst": "info",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "De eerste bullet over de kleurcode begint bij voorkeur met \"De kleurcode van het reisadvies is … voor …\".",
-        "fragment": "De kleurcode van het reisadvies voor Burkina Faso is voor het grootste deel rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "De kleurcode van het reisadvies is rood voor …",
-        "notitie": "Dit advies heeft meerdere kleurcodes, dus de bullet hoeft niet voluit. Dit is een voorkeur, geen fout."
       },
       {
         "regel": "rubrieken-max",
@@ -2378,13 +2353,13 @@
     ],
     "zinnen": 117,
     "fout": 0,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 5,
     "twijfel": 3,
     "info": 4,
     "perErnst": {
       "fout": 0,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 5,
       "info": 4,
       "twijfel": 3
@@ -2392,7 +2367,6 @@
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -2418,13 +2392,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Lees wat u mag meenemen naar Bangladesh op de website van de overheid van Bangladesh (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Bangladesh."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-max",
@@ -2886,13 +2853,13 @@
     ],
     "zinnen": 90,
     "fout": 3,
-    "letop": 7,
+    "letop": 6,
     "linkzin": 1,
     "twijfel": 0,
     "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 7,
+      "let-op": 6,
       "link-zin": 1,
       "info": 2,
       "twijfel": 0
@@ -2901,7 +2868,6 @@
       "kleur-variant": 1,
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
@@ -2935,13 +2901,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die extra medische kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-volgorde",
@@ -3110,13 +3069,13 @@
     ],
     "zinnen": 106,
     "fout": 2,
-    "letop": 20,
+    "letop": 19,
     "linkzin": 3,
     "twijfel": 7,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 20,
+      "let-op": 19,
       "link-zin": 3,
       "info": 1,
       "twijfel": 7
@@ -3125,7 +3084,6 @@
       "doc-woordenaantal": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
       "zin-frequentiewoord": 7,
       "zin-lijdende-vorm": 1,
@@ -3161,13 +3119,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "woord-onbekend",
@@ -10130,20 +10081,19 @@
     ],
     "zinnen": 107,
     "fout": 1,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 3,
       "info": 0,
       "twijfel": 3
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 9,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 1,
@@ -10157,13 +10107,6 @@
         "boodschap": "\"Fotograferen\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Fotograferen",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -10609,29 +10552,21 @@
     ],
     "zinnen": 66,
     "fout": 0,
-    "letop": 2,
+    "letop": 1,
     "linkzin": 0,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 1,
       "link-zin": 0,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 1
     },
     "bevindingen": [
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -12002,8 +11937,9 @@
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Voor de volgende provincies geldt kleurcode oranje:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -12358,13 +12294,13 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 42,
+    "letop": 43,
     "linkzin": 5,
     "twijfel": 10,
     "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 42,
+      "let-op": 43,
       "link-zin": 5,
       "info": 4,
       "twijfel": 10
@@ -12376,7 +12312,7 @@
       "kleur-eerste-bullet-voluit": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
-      "regionaal-gebiedenzin": 1,
+      "regionaal-gebiedenzin": 2,
       "rubrieken-max": 1,
       "woord-onbekend": 10,
       "tekst-niet-melden": 3,
@@ -12444,8 +12380,17 @@
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Kleurcode rood geldt voor:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico’s",
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Kleurcode oranje geldt voor:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -13349,13 +13294,13 @@
     ],
     "zinnen": 99,
     "fout": 2,
-    "letop": 18,
+    "letop": 19,
     "linkzin": 2,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 18,
+      "let-op": 19,
       "link-zin": 2,
       "info": 1,
       "twijfel": 3
@@ -13365,7 +13310,7 @@
       "kleur-aanduiding": 1,
       "actueel-max-woorden": 1,
       "kleur-vervolg-bullet-kort": 1,
-      "regionaal-gebiedenzin": 1,
+      "regionaal-gebiedenzin": 2,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "woord-onbekend": 2,
@@ -13414,8 +13359,17 @@
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Kleurcode rood geldt voor de volgende provincies en gebieden:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico’s",
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Verder geldt kleurcode oranje voor de volgende gebieden:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -13599,13 +13553,13 @@
     ],
     "zinnen": 61,
     "fout": 2,
-    "letop": 2,
+    "letop": 1,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 2,
+      "let-op": 1,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
@@ -13613,7 +13567,6 @@
     "perRegel": {
       "kleur-variant": 2,
       "reisverzekering-vaste-tekst": 1,
-      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 3
     },
     "bevindingen": [
@@ -13642,13 +13595,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -14130,13 +14076,13 @@
     ],
     "zinnen": 98,
     "fout": 1,
-    "letop": 13,
+    "letop": 12,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 13,
+      "let-op": 12,
       "link-zin": 2,
       "info": 1,
       "twijfel": 1
@@ -14144,7 +14090,6 @@
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
       "h4-niet-melden": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 8,
@@ -14169,13 +14114,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-max",
@@ -14312,13 +14250,13 @@
     ],
     "zinnen": 71,
     "fout": 3,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
@@ -14327,7 +14265,6 @@
       "kleur-variant": 1,
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 2,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1,
@@ -14360,13 +14297,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "woord-onbekend",
@@ -14570,13 +14500,13 @@
     ],
     "zinnen": 122,
     "fout": 2,
-    "letop": 15,
+    "letop": 16,
     "linkzin": 4,
     "twijfel": 2,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 15,
+      "let-op": 16,
       "link-zin": 4,
       "info": 2,
       "twijfel": 2
@@ -14587,6 +14517,7 @@
       "h3-alleen-bij-uitzondering": 1,
       "criminaliteit-themapagina": 1,
       "kinderen-paspoort": 1,
+      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 9,
@@ -14637,6 +14568,14 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en (vanaf 16 jaar) een eTA nodig voor een reis naar Kenia.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Kenia."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico’s",
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Voor de volgende grensgebieden tussen Kenia en Somalië geldt kleurcode rood:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -14879,13 +14818,13 @@
     ],
     "zinnen": 113,
     "fout": 2,
-    "letop": 20,
+    "letop": 19,
     "linkzin": 0,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 20,
+      "let-op": 19,
       "link-zin": 0,
       "info": 1,
       "twijfel": 8
@@ -14893,7 +14832,6 @@
     "perRegel": {
       "kleur-variant": 2,
       "h3-alleen-bij-uitzondering": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 8,
@@ -14926,13 +14864,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-max",
@@ -15355,13 +15286,13 @@
     ],
     "zinnen": 84,
     "fout": 1,
-    "letop": 12,
+    "letop": 11,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
+      "let-op": 11,
       "link-zin": 3,
       "info": 0,
       "twijfel": 1
@@ -15369,7 +15300,6 @@
     "perRegel": {
       "kleur-variant": 1,
       "reisverzekering-vaste-tekst": 1,
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 2,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 8,
@@ -15392,13 +15322,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "woord-onbekend",
@@ -16179,20 +16102,19 @@
     ],
     "zinnen": 76,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 0,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 0,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
       "h3-niet-melden": 1,
-      "regionaal-gebiedenzin": 1,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 2
     },
@@ -16204,13 +16126,6 @@
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -16962,20 +16877,19 @@
     ],
     "zinnen": 71,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "reisverzekering-oranje-rood": 1,
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 2,
       "zin-frequentiewoord": 1
@@ -16987,13 +16901,6 @@
         "bron": "SJ, blok Reisverzekering",
         "boodschap": "Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij.",
         "verwacht": "Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde risico’s of kosten bij schade zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "woord-onbekend",
@@ -17142,13 +17049,13 @@
     ],
     "zinnen": 108,
     "fout": 2,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 5,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 5,
       "info": 1,
       "twijfel": 2
@@ -17157,7 +17064,6 @@
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "bagage-heen": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 10,
@@ -17190,13 +17096,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Check wat u mee mag nemen naar Marokko op de website van de Marokkaanse douane (informatie in het Frans).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Marokko."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-max",
@@ -17416,13 +17315,13 @@
     ],
     "zinnen": 78,
     "fout": 3,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 0,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 0,
       "info": 0,
       "twijfel": 1
@@ -17430,7 +17329,6 @@
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "postplaats-schrijfwijze": 1,
       "zin-max-woorden": 2,
@@ -17453,13 +17351,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-max",
@@ -17789,13 +17680,13 @@
     ],
     "zinnen": 156,
     "fout": 4,
-    "letop": 23,
+    "letop": 24,
     "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 4,
-      "let-op": 23,
+      "let-op": 24,
       "link-zin": 3,
       "info": 0,
       "twijfel": 3
@@ -17805,6 +17696,7 @@
       "kleur-variant": 1,
       "kleur-formulering-verboden": 1,
       "nood-contactcenter": 1,
+      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 3,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 3,
@@ -17849,6 +17741,14 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico’s",
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Voor de volgende vulkanen geldt kleurcode rood:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
       },
       {
         "regel": "woord-onbekend",
@@ -18947,13 +18847,13 @@
     ],
     "zinnen": 106,
     "fout": 3,
-    "letop": 14,
+    "letop": 15,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 14,
+      "let-op": 15,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
@@ -18961,6 +18861,7 @@
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
+      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 9,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
@@ -18984,6 +18885,14 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
+      },
+      {
+        "regel": "regionaal-gebiedenzin",
+        "ernst": "let-op",
+        "bron": "SJ, blok Regionale risico’s",
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Kleurcode rood geldt voor de districten in het noordoosten van de provincie Cabo Delgado:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode rood: (of: Kleurcode rood geldt voor de volgende gebieden:)"
       },
       {
         "regel": "woord-onbekend",
@@ -19270,13 +19179,13 @@
     ],
     "zinnen": 73,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 4,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 4,
       "info": 1,
       "twijfel": 0
@@ -19284,7 +19193,6 @@
     "perRegel": {
       "rijbewijs-anwb": 1,
       "kinderen-paspoort": 1,
-      "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 6,
       "link-verboden-partij": 1
@@ -19304,13 +19212,6 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en eventueel toestemming voor langer verblijf nodig voor een reis naar Montserrat.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Montserrat."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -19748,8 +19649,9 @@
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Voor de volgende eilanden rondom Sabah geldt kleurcode oranje:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
       },
       {
         "regel": "woord-onbekend",
@@ -21072,13 +20974,13 @@
     ],
     "zinnen": 98,
     "fout": 2,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 1,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 1,
       "info": 0,
       "twijfel": 2
@@ -21086,7 +20988,6 @@
     "perRegel": {
       "kleur-variant": 1,
       "h3-vaste-kop": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "tekst-onzichtbaar-teken": 1,
       "tekst-niet-melden": 1,
@@ -21112,13 +21013,6 @@
         "fragment": "Conflict",
         "verwacht": "Oorlog en conflict",
         "notitie": "Heet deze rubriek naar zijn eigen onderwerp (een ziekte bijvoorbeeld), dan mag de kop vrij zijn; kies dan \"oneens\". Zo niet: de vaste teksten onder deze rubriek worden niet getoetst zolang de kop afwijkt."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-max",
@@ -21449,13 +21343,13 @@
     ],
     "zinnen": 89,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 4,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 4,
       "info": 1,
       "twijfel": 4
@@ -21463,7 +21357,6 @@
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "reisverzekering-oranje-rood": 1,
-      "regionaal-gebiedenzin": 1,
       "zin-frequentiewoord": 4,
       "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1
@@ -21483,13 +21376,6 @@
         "bron": "SJ, blok Reisverzekering",
         "boodschap": "Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij.",
         "verwacht": "Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde risico’s of kosten bij schade zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -22687,8 +22573,9 @@
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+        "boodschap": "De aanhef boven de opsomming van gebieden wijkt af van de vaste tekst.",
+        "fragment": "Voor de volgende gebieden geldt de kleurcode oranje:",
+        "verwacht": "Voor de volgende gebieden geldt kleurcode oranje: (of: Kleurcode oranje geldt voor de volgende gebieden:)"
       },
       {
         "regel": "rubrieken-max",
@@ -23931,13 +23818,13 @@
     ],
     "zinnen": 87,
     "fout": 3,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
@@ -23946,7 +23833,6 @@
       "kleur-variant": 1,
       "h4-niet-melden": 2,
       "h3-alleen-bij-uitzondering": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1
@@ -23984,13 +23870,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-max",
@@ -24479,13 +24358,13 @@
     ],
     "zinnen": 115,
     "fout": 3,
-    "letop": 17,
+    "letop": 16,
     "linkzin": 4,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 17,
+      "let-op": 16,
       "link-zin": 4,
       "info": 1,
       "twijfel": 3
@@ -24494,7 +24373,6 @@
       "kleur-variant": 1,
       "actueel-max-woorden": 1,
       "bagage-heen": 1,
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 4,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 13,
@@ -24528,13 +24406,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Lees wat u mag meenemen naar Rwanda op de website van de Rwandese douane (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Rwanda."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "woord-onbekend",
@@ -24751,13 +24622,13 @@
     ],
     "zinnen": 86,
     "fout": 1,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 1,
     "twijfel": 1,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 1,
       "info": 3,
       "twijfel": 1
@@ -24765,7 +24636,6 @@
     "perRegel": {
       "kleur-variant": 1,
       "bagage-heen": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-onzichtbaar-teken": 1,
@@ -24791,13 +24661,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Check wat u mee mag nemen naar Saoedi-Arabië op de website van IATA (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Saoedi-Arabië."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-volgorde",
@@ -25886,19 +25749,18 @@
     ],
     "zinnen": 103,
     "fout": 0,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
@@ -25906,13 +25768,6 @@
       "vragen-opeenvolgend": 1
     },
     "bevindingen": [
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
       {
         "regel": "woord-onbekend",
         "ernst": "let-op",
@@ -27137,20 +26992,19 @@
     ],
     "zinnen": 56,
     "fout": 3,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "kleur-variant": 2,
-      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 4,
       "link-plakt-aan-woord": 1
     },
@@ -27172,13 +27026,6 @@
         "fragment": "Voor de rest van de Turks- en Caicoseilanden geldt kleurcode groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
         "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -27395,13 +27242,13 @@
     ],
     "zinnen": 82,
     "fout": 1,
-    "letop": 2,
+    "letop": 1,
     "linkzin": 3,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 2,
+      "let-op": 1,
       "link-zin": 3,
       "info": 2,
       "twijfel": 1
@@ -27409,7 +27256,6 @@
     "perRegel": {
       "kleur-variant": 1,
       "bagage-heen": 1,
-      "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1,
       "eenheden-voluit": 1
@@ -27431,13 +27277,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Check wat u mag meenemen op de website van de luchthaven van Lomé (informatie in het Frans).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Togo."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "zin-max-woorden",
@@ -29182,13 +29021,13 @@
     ],
     "zinnen": 137,
     "fout": 2,
-    "letop": 21,
+    "letop": 20,
     "linkzin": 2,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 21,
+      "let-op": 20,
       "link-zin": 2,
       "info": 1,
       "twijfel": 4
@@ -29197,7 +29036,6 @@
       "doc-woordenaantal": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 2,
       "zin-max-woorden": 11,
@@ -29233,13 +29071,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-max",
@@ -31687,20 +31518,19 @@
     ],
     "zinnen": 76,
     "fout": 1,
-    "letop": 8,
+    "letop": 7,
     "linkzin": 1,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 7,
       "link-zin": 1,
       "info": 0,
       "twijfel": 3
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 4,
       "zin-lijdende-vorm": 2,
@@ -31715,13 +31545,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "woord-onbekend",

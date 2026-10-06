@@ -1455,3 +1455,41 @@ van het reisadvies is oranje voor..."*
 Gemeten op 226 adviezen: de regel ging af bij drie adviezen (Burkina Faso, India, Jordanië), alle drie
 met meerdere kleurcodes. Die drie zijn nu *ter overweging* in plaats van *let op*; er komt niets bij
 en er valt niets weg.
+
+## Aanhef boven de gebiedenlijst: alleen waar een lijst staat (6 oktober 2026)
+
+Martijn bij Jordanië: de melding *"De vaste aanhef boven de opsomming van gebieden ontbreekt"*
+linkte nergens heen, terwijl er boven de oranje opsomming wel een aanhef stond: *"Kleurcode oranje
+geldt voor de volgende gebieden:"*. *"De formulering die er nu staat mag ook."*
+
+Twee dingen klopten niet aan `regionaal-gebiedenzin`:
+
+1. **De regel zocht de sjabloonzin ergens in de rubriek**, en meldde "ontbreekt" als hij er niet
+   stond. Ook bij adviezen zonder gebiedenlijst, zoals Armenië en Marokko. Die noemen het gebied in
+   een gewone zin ("Voor het grensgebied tussen Marokko en Algerije geldt kleurcode oranje.") en
+   hebben dus geen aanhef nodig. Dat waren de meeste van de 32 meldingen.
+2. **Een andere aanhef werd niet herkend**, dus kon de melding niets aanwijzen.
+
+Nu toetst de regel alleen de zinnen die echt een opsomming inleiden: een zin onder Regionale
+risico's met "kleurcode" die op een dubbele punt eindigt. Zo'n zin moet een van twee vormen hebben:
+
+- *Voor de volgende gebieden geldt kleurcode [kleur]:* (de sjabloonzin)
+- *Kleurcode [kleur] geldt voor de volgende gebieden:* (de omgedraaide vorm, goedgekeurd bij Jordanië)
+
+Een andere vorm heet "wijkt af", en de melding wijst die zin aan. Gemeten: **32 naar 11
+meldingen**, allemaal met fragment. De 11 die blijven zijn varianten als "Voor de volgende
+**provincies**/**eilanden**/**vulkanen** geldt kleurcode …:", "… geldt **de** kleurcode …:" en
+"Kleurcode rood geldt voor:". Nog voor te leggen of een preciezer woord dan "gebieden" mag.
+
+Wat de regel nu niet meer ziet: een gebiedenlijst zonder enige aanhef. Daar valt niet betrouwbaar
+een gebiedenlijst van een lijst met adviezen te onderscheiden ("Maakt u een noodzakelijke reis…?"),
+en de oude regel ving die gevallen ook niet: hij zocht alleen de zin.
+
+## "Voor het grootste deel" mag bij uitzondering (6 oktober 2026)
+
+Burkina Faso: *"De kleurcode van het reisadvies voor Burkina Faso is voor het grootste deel rood."*
+Martijn: *"het grootste deel, mag wel bij uitzondering als het inderdaad voor grootste deel [van
+het] land geldt."* Toegevoegd als aanduidingsvorm en als vorm voor de eerste kleurbullet. Gevolg:
+`kleur-aanduiding` 5 naar 4 en `kleur-eerste-bullet-voluit` 2 naar 1. De melding `kleur-variant` bij
+Burkina Faso blijft staan: de instructie erachter ("reis er niet heen … Lees meer onder Regionale
+risico's") is de volledige variant zonder de ambassadezin, en wijkt dus van beide vaste teksten af.

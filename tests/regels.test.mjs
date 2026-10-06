@@ -1157,3 +1157,51 @@ test('h2-ontbreekt blijft stil als alle vijf er staan maar één verkeerd is gef
   assert.ok(!ids.includes('h2-ontbreekt'), 'vijf koppen aanwezig, dus geen "ontbreekt"-melding');
   assert.ok(ids.includes('h2-vast'), 'de verkeerde formulering hoort wel gemeld te worden, door h2-vast');
 });
+
+/**
+ * De aanhef "Voor de volgende gebieden geldt kleurcode …:" hoort boven een opsomming van gebieden.
+ * Noemt een advies het gebied in een gewone zin, dan is er geen aanhef nodig.
+ */
+function regioAdvies(oranjeBlok) {
+  return '<h2>In het kort</h2><ul>'
+    + '<li>De kleurcode van het reisadvies is oranje voor het noorden. Reis alleen hierheen als het '
+    + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li>'
+    + '<li>Voor de rest van Tsjechië geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er '
+    + 'zijn bijzondere veiligheidsrisico&#39;s.</li></ul>'
+    + '<p>Let op: meld u aan voor de informatieservice.</p>'
+    + "<h2>Welke veiligheidsrisico's zijn er in Tsjechië?</h2><h3>Regionale risico's</h3>"
+    + '<h4>Oranje: alleen noodzakelijke reizen</h4>' + oranjeBlok;
+}
+const regioMeta = { land: 'Tsjechië', kleurcodes: ['oranje', 'geel'] };
+
+test('aanhef gebiedenlijst: geen opsomming, dan geen aanhef nodig', () => {
+  const ids = idsVan(regioAdvies('<p>Voor het grensgebied met Polen geldt kleurcode oranje.</p>'), regioMeta);
+  assert.ok(!ids.includes('regionaal-gebiedenzin'));
+});
+
+test('aanhef gebiedenlijst: de sjabloonzin en de omgedraaide vorm mogen allebei', () => {
+  for (const aanhef of ['Voor de volgende gebieden geldt kleurcode oranje:',
+    'Kleurcode oranje geldt voor de volgende gebieden:']) {
+    const ids = idsVan(regioAdvies(`<p>${aanhef}</p><ul><li>Het noorden</li><li>Het oosten</li></ul>`), regioMeta);
+    assert.ok(!ids.includes('regionaal-gebiedenzin'), aanhef);
+  }
+});
+
+test('aanhef gebiedenlijst: een andere vorm wijkt af en wijst de zin aan', () => {
+  const b = bevindingenVan(regioAdvies('<p>Voor de volgende provincies geldt kleurcode oranje:</p>'
+    + '<ul><li>Zlín</li><li>Olomouc</li></ul>'), regioMeta).filter((x) => x.regel === 'regionaal-gebiedenzin');
+  assert.equal(b.length, 1);
+  assert.match(b[0].boodschap, /wijkt af/);
+  assert.equal(b[0].fragment, 'Voor de volgende provincies geldt kleurcode oranje:');
+});
+
+test('kleuraanduiding: "voor het grootste deel" mag bij uitzondering', () => {
+  // Burkina Faso: de kleur geldt voor het grootste deel van het land.
+  const ids = idsVan('<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Tsjechië is '
+    + 'voor het grootste deel rood. Wat uw situatie ook is: reis niet hierheen. Het is er te '
+    + 'gevaarlijk.</li><li>Voor de stad Brno geldt kleurcode oranje. Reis alleen hierheen als het '
+    + 'noodzakelijk is. Het is niet veilig er op vakantie te gaan.</li></ul>',
+  { land: 'Tsjechië', kleurcodes: ['rood', 'oranje'] });
+  assert.ok(!ids.includes('kleur-aanduiding'));
+  assert.ok(!ids.includes('kleur-eerste-bullet-voluit'));
+});

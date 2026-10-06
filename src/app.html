@@ -996,7 +996,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
           stukken.push('<p>' + onderdeel.alinea.zinnen.map((z) => markeer(z, perZin, ruim)).join(' ') + '</p>');
         } else {
           stukken.push('<ul>' + onderdeel.opsomming.items
-            .map((x) => '<li>' + markeer(x, perZin, ruim) + '</li>').join('') + '</ul>');
+            .map((x) => '<li>' + markeerItem(x, perZin, ruim) + '</li>').join('') + '</ul>');
         }
       }
     }
@@ -1029,6 +1029,19 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     return '<span class="zin m-' + ernstKlasse[zwaarste] + '" data-bev="' + treffers[0] + '" '
       + 'title="' + esc(treffers.length + ' bevinding' + (treffers.length > 1 ? 'en' : '')) + '">'
       + esc(kop) + '</span>';
+  }
+
+  /**
+   * Een bullet is vaak meer dan een zin. Slaat een bevinding op de hele bullet, dan kleuren we
+   * hem helemaal; wijst ze één zin erin aan (de afwijkende zin van een kleurbullet), dan alleen
+   * die zin. Anders onderstreept de pagina ook de zinnen die wel kloppen.
+   */
+  function markeerItem(item, perZin, ruim) {
+    const k = norm(item);
+    const heel = perZin.has(k) || (k.length >= ZIN_MIN && ruim.some((x) => x.k.includes(k)));
+    const zinnen = Parse.splitsZinnen(item);
+    if (heel || zinnen.length < 2) return markeer(item, perZin, ruim);
+    return zinnen.map((z) => markeer(z, perZin, ruim)).join(' ');
   }
 
   function markeer(zin, perZin, ruim) {

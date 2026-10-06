@@ -279,6 +279,47 @@ function woordverschil(er, hoort) {
   return anders.length && anders.length <= 2 ? anders : null;
 }
 
+/**
+ * Welke zin van een kleurbullet wijkt af, en welke vaste zin hoort ervoor in de plaats?
+ *
+ * Een kleurbullet is drie of vier zinnen. Als de melding de hele bullet citeert, zoek je zelf
+ * welke zin het is -- en lees je makkelijk een andere zin als de boosdoener. Daarom zoeken we per
+ * vaste zin die ontbreekt de zin in de bullet die er het meest op lijkt (minstens de helft van de
+ * woorden gemeen). Lukt dat voor elke ontbrekende zin, en liggen de gevonden zinnen aaneen, dan
+ * geeft dit {fragment, verwacht} met alleen die zinnen terug. Anders null, en blijft de melding
+ * de hele bullet tonen.
+ *
+ * De openingszin telt niet mee: die noemt land of gebied en heeft eigen toetsen.
+ */
+function afwijkendeZinnen(bullet, verwacht) {
+  const kaal = (z) => norm(z).replace(/[.!?]$/, '');
+  const woorden = (z) => new Set(kaal(z).split(/[^\p{L}\p{N}']+/u).filter(Boolean));
+  const zinnen = splitsZinnen(bullet);
+  const vast = splitsZinnen(verwacht).slice(1);
+  const ontbreekt = vast.filter((v) => !zinnen.some((z) => kaal(z) === kaal(v)));
+  if (!ontbreekt.length) return null;
+  const plekken = [];
+  for (const v of ontbreekt) {
+    const wv = woorden(v);
+    let beste = -1, score = 0;
+    zinnen.forEach((z, i) => {
+      if (i === 0) return;
+      const wz = woorden(z);
+      const gemeen = [...wv].filter((w) => wz.has(w)).length;
+      const s = gemeen / Math.max(wv.size, wz.size);
+      if (s > score) { score = s; beste = i; }
+    });
+    if (beste < 0 || score < 0.5) return null;
+    plekken.push(beste);
+  }
+  const uniek = [...new Set(plekken)].sort((a, b) => a - b);
+  if (uniek[uniek.length - 1] - uniek[0] !== uniek.length - 1) return null;
+  return {
+    fragment: zinnen.slice(uniek[0], uniek[uniek.length - 1] + 1).join(' '),
+    verwacht: ontbreekt.join(' '),
+  };
+}
+
 function bevinding(regel, ernst, bron, boodschap, extra = {}) {
   return { regel, ernst, bron, boodschap, ...extra };
 }
@@ -717,18 +758,21 @@ export function maakToetser(data) {
         // Zonder dit stond er wel een melding maar werd er niets onderstreept.
         const kleurRe = new RegExp('\\b' + kleur + '\\b');
         const bullet = kortBlokStukken(doc).find((x) => kleurRe.test(norm(x)));
+        const vasteTekst = verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
+          // Alleen de gebieden zelf: het sjabloon heeft "Voor de gebieden {gebieden}", dus
+          // "de gebieden" staat er al. Anders leest de suggestie als "Voor de gebieden de
+          // gebieden X en Y".
+          .replace(/\{gebieden\}/g, 'X en Y');
+        // Liefst alleen de zin die afwijkt, niet de hele bullet: anders lijkt het alsof er iets
+        // anders in die bullet niet klopt.
+        const precies = bullet ? afwijkendeZinnen(bullet, vasteTekst) : null;
         b.push(bevinding('kleur-variant', ERNST.fout, 'MX, tab Kleurcode-teksten',
           staatDeAndere
             ? (hoortVolledig
                 ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.${preciezer}`
                 : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.${preciezer}`)
             : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
-          { ...(bullet ? { fragment: bullet } : {}),
-            verwacht: verwachteTekst.replace(/\{land\}/g, doc.land || 'land X')
-              // Alleen de gebieden zelf: het sjabloon heeft "Voor de gebieden {gebieden}", dus
-              // "de gebieden" staat er al. Anders leest de suggestie als "Voor de gebieden de
-              // gebieden X en Y".
-              .replace(/\{gebieden\}/g, 'X en Y'),
+          { ...(precies || { ...(bullet ? { fragment: bullet } : {}), verwacht: vasteTekst }),
             notitie: hoortVolledig
               ? 'Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in "In het kort".'
               : 'Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));

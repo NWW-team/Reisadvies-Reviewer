@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-02 over 226 reisadviezen.
+Gedraaid op 2026-10-05 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **67** van de 226 adviezen hebben geen enkele harde fout.
+- **74** van de 226 adviezen hebben geen enkele harde fout.
 - **45** adviezen zitten boven de woordenlimiet.
-- Gemiddeld 1.3 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **204** van de 3022 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
+- **203** van de 2977 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,9 +25,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 332 | 159 |
-| geel/oranje — let op | 1534 | 216 |
-| lichtblauw — lange zin met link | 544 | 201 |
+| rood — fout | 291 | 152 |
+| geel/oranje — let op | 1531 | 216 |
+| lichtblauw — lange zin met link | 543 | 201 |
 | grijs — ter overweging | 158 | 110 |
 | roze — twijfeltaal | 454 | 156 |
 
@@ -35,15 +35,15 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 219 | 1279 |
+| `zin-max-woorden` | 219 | 1278 |
 | `zin-frequentiewoord` | 145 | 385 |
 | `zin-lijdende-vorm` | 124 | 275 |
-| `kleur-variant` | 70 | 92 |
-| `woord-onbekend` | 70 | 141 |
+| `woord-onbekend` | 70 | 140 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
 | `zin-twijfeltaal` | 53 | 69 |
 | `doc-woordenaantal` | 45 | 45 |
+| `kleur-variant` | 45 | 51 |
 | `link-tekstlengte` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 38 | 38 |
@@ -70,14 +70,14 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `nood-verwijzing-crisis` | 7 | 7 |
 | `medicijnen-voldoende` | 7 | 7 |
 | `nederlands-verbuiging` | 6 | 6 |
-| `kleur-aanduiding` | 6 | 6 |
 | `link-verboden-partij` | 6 | 7 |
 | `link-plakt-aan-woord` | 5 | 5 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
-| `kleur-vervolg-bullet-kort` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
+| `kleur-aanduiding` | 5 | 5 |
 | `titel-leestekens` | 5 | 5 |
 | `vragen-opeenvolgend` | 5 | 7 |
+| `kleur-vervolg-bullet-kort` | 4 | 4 |
 | `tekst-plakfout` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `tekst-dubbel-woord` | 4 | 4 |
@@ -117,7 +117,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | India | 3100 | 2000 |
 | Ecuador | 2754 | 2000 |
 | Colombia | 2681 | 2000 |
-| Indonesië | 2640 | 2000 |
+| Indonesië | 2672 | 2000 |
 | China | 2504 | 1500 |
 | Mexico | 2497 | 2000 |
 | Rusland | 2494 | 2000 |

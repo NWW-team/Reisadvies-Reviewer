@@ -300,6 +300,9 @@ export function maakToetser(data) {
   // eigen realm, en een Set van daar is geen `instanceof Set` van hier.
   const wlijst = data.woordenlijst;
   const spelling = wlijst && typeof wlijst.has === 'function' && wlijst.size ? wlijst : null;
+  // Namen die de redactie in SpellingSpeurneus als verkeerd gespeld heeft aangewezen. Een naam
+  // wordt hieronder normaal overgeslagen; deze niet, want van deze weten we dat hij fout staat.
+  const naamIsSpelfout = new Set((data.naamIsSpelfout || []).map((w) => w.toLowerCase()));
 
   // De leestekens die niet achter een spatie horen. Een eigen const, niet in de regeldata
   // terugschrijven: die is gedeeld en maakToetser kan meer dan een keer worden aangeroepen.
@@ -1687,6 +1690,14 @@ export function maakToetser(data) {
           // waren het 1974 meldingen tegen 146 mogelijke spelfouten; die zouden de echte fouten
           // wegdrukken. De herkenning blijft wél staan: zonder dat zou "European" in "European
           // Avalanche Warning Service" als spelfout worden gemeld.
+          if (naamIsSpelfout.has(w.toLowerCase())) {
+            b.push(bevinding('woord-onbekend', ERNST.letop, 'Tekstcontrole (SpellingSpeurneus)',
+              `"${w}" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.`,
+              { fragment: z.tekst, kop: z.kop, herkomst: 'aanvulling',
+                notitie: 'De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten '
+                  + 'verplaatst. Klopt hij toch? Zet hem daar terug.' }));
+            continue;
+          }
           const metHoofd = /^\p{Lu}/u.test(w);
           const buurHoofd = [stukken[i - 1], stukken[i + 1]].some((x) => x && /^\p{Lu}/u.test(x));
           if (metHoofd && (w !== beginWoord || buurHoofd)) continue;

@@ -7,7 +7,7 @@ Gedraaid op 2026-10-06 over 226 reisadviezen.
 - **73** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **203** van de 2976 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **127** van de 2900 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,7 +26,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 292 | 153 |
-| geel/oranje — let op | 1530 | 216 |
+| geel/oranje — let op | 1454 | 215 |
 | lichtblauw — lange zin met link | 542 | 201 |
 | grijs — ter overweging | 158 | 110 |
 | roze — twijfeltaal | 454 | 156 |
@@ -38,7 +38,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `zin-max-woorden` | 219 | 1276 |
 | `zin-frequentiewoord` | 145 | 385 |
 | `zin-lijdende-vorm` | 124 | 275 |
-| `woord-onbekend` | 70 | 140 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
 | `zin-twijfeltaal` | 53 | 69 |
@@ -47,6 +46,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `link-tekstlengte` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 38 | 38 |
+| `woord-onbekend` | 36 | 64 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |

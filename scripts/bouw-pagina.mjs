@@ -11,7 +11,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { leesUitzonderingen } from '../src/woordenlijst.mjs';
+import { leesUitzonderingen, leesSpeurneus } from '../src/woordenlijst.mjs';
 import { uitApiRespons } from '../src/adapter.js';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -53,7 +53,11 @@ const regeldata = {
   // De uitzonderingen gaan wél mee in de pagina: het zijn een paar honderd woorden die de
   // redactie beheert. De OpenTaal-lijst zelf niet — die is 409.487 woorden en wordt pas opgehaald
   // als een redacteur de spellingtoets aanzet.
+  // Inclusief de goedgekeurde woorden en namen uit SpellingSpeurneus (regels/speurneus.json).
   uitzonderingen: leesUitzonderingen(),
+  // Namen die de redactie in SpellingSpeurneus als verkeerd gespeld heeft aangewezen. Die meldt
+  // de spellingtoets ook als ze als naam herkend worden.
+  naamIsSpelfout: leesSpeurneus().fout,
 };
 
 // Drie echte adviezen, gekozen om verschillende situaties te laten zien.

@@ -208,6 +208,7 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 | `regels/koppen-in-gebruik.json` | welke h4-tussenkoppen de adviezen gebruiken en hoe vaak; afgeleid uit het corpus, geen norm |
 | `regels/tekstcontrole.json` | resten van het CMS, vergeten spaties en onzichtbare tekens — overgenomen uit SpellingSpeurneus |
 | `regels/uitzonderingen.txt` | goedgekeurde woorden die niet in de OpenTaal-woordenlijst staan; deze lijst hoort bij de redactie |
+| `regels/speurneus.json` | de goedgekeurde woorden en namen uit SpellingSpeurneus, elke ochtend opgehaald met `scripts/haal-speurneus.mjs`; niet met de hand bewerken |
 | `docs/woordenlijst.txt.gz` | de OpenTaal-woordenlijst, ingepakt. Ophalen met `scripts/haal-woordenlijst.mjs` |
 | `data/opentaal.sha256` | de versie van de woordenlijst waarop deze tool zich baseert |
 | `regels/HERKOMST.md` | per regel-id de vindplaats in de schrijfwijzer of de matrix |

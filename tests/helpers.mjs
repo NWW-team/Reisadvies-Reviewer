@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { maakToetser } from '../src/regels.js';
 import { parseAdvies } from '../src/parse.js';
-import { laadWoordenlijst } from '../src/woordenlijst.mjs';
+import { laadWoordenlijst, leesSpeurneus } from '../src/woordenlijst.mjs';
 
 const wortel = join(dirname(fileURLToPath(import.meta.url)), '..');
 const laad = (naam) => JSON.parse(readFileSync(join(wortel, 'regels', naam), 'utf8'));
@@ -19,6 +19,7 @@ export const regeldata = {
   koppenInGebruik: laad('koppen-in-gebruik.json'),
   postplaatsen: laad('postplaatsen.json'),
   groepen: laad('groepen.json'),
+  naamIsSpelfout: leesSpeurneus().fout,
 };
 
 const toetser = maakToetser(regeldata);

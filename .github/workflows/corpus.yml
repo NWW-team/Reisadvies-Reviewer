@@ -63,6 +63,21 @@ jobs:
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           echo "Bestanden: $(ls data/corpus | wc -l)"
 
+      # De goedgekeurde woorden en namen uit SpellingSpeurneus, het spellingtooltje van de redactie.
+      # Wat een collega daar goedkeurt (of als verkeerd gespelde naam aanwijst), staat zo de
+      # volgende ochtend ook in deze tool. Mislukt het, dan blijft de lijst van gisteren staan.
+      - name: SpellingSpeurneus ophalen
+        run: |
+          echo '### SpellingSpeurneus' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          node scripts/haal-speurneus.mjs 2>&1 | tee -a "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      # Pagina en site opnieuw bouwen, zodat de lijst ook in de gepubliceerde tool zit. Vóór de
+      # bulkslag: die leest dist/app.html en hoort dezelfde regels te gebruiken.
+      - name: Pagina en site bouwen
+        run: node scripts/bouw-pagina.mjs && node scripts/bouw-site.mjs
+
       - name: Bulkslag draaien
         run: node scripts/bulk.mjs || true
 
@@ -73,7 +88,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data/ docs/adviezen/
+          git add data/ docs/adviezen/ docs/index.html dist/ regels/
           if git diff --staged --quiet; then
             echo 'Geen wijzigingen in het corpus.'
           else

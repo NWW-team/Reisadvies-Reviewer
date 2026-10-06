@@ -132,13 +132,13 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 13,
+    "letop": 12,
     "linkzin": 4,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 13,
+      "let-op": 12,
       "link-zin": 4,
       "info": 0,
       "twijfel": 3
@@ -149,7 +149,6 @@
       "h4-niet-melden": 1,
       "h4-kop-variant": 1,
       "nood-lokale-hulpdiensten": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 3,
@@ -201,16 +200,6 @@
         "boodschap": "De aanhef boven de alarmnummers wijkt af van de vaste tekst.",
         "fragment": "Houd er rekening mee dat er geen hulpdiensten in Afghanistan zijn.",
         "verwacht": "Heeft u direct hulp nodig in Afghanistan? Neem contact op met de lokale hulpdiensten:"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"mahram\" staat niet in de woordenlijst.",
-        "fragment": "Vrouwen moeten altijd vergezeld worden door een ‘mahram’ (een mannelijk familielid).",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -362,13 +351,13 @@
     ],
     "zinnen": 88,
     "fout": 2,
-    "letop": 10,
+    "letop": 11,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
+      "let-op": 11,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
@@ -377,6 +366,7 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 1
     },
@@ -403,6 +393,16 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Pundo\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Zoals Cabo Ledo, het schiereiland Mussolo, Kwanza Lodge, Quiçama National Park, Barro do Dande, Pedras Negras de Pundo Andongo en de Calendula Falls.",
+        "kop": "Landmijnen",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -1694,19 +1694,20 @@
     ],
     "zinnen": 74,
     "fout": 0,
-    "letop": 2,
+    "letop": 3,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 3,
       "link-zin": 2,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
       "kinderen-paspoort": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1
     },
@@ -1718,6 +1719,16 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en visum nodig voor een reis naar Azerbeidzjan. Reist u alleen met 1 of meer kinderen jonger dan 18 jaar? Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee. Zo voorkomt u problemen en lange wachttijden bij grenscontroles.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Azerbeidzjan."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Khojavand\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De regio Karabach en omringende districten (Zengilan, Jabrayil, Qubadli, Lachin, Kelbajar, Fizuli, Khojavand, Agdam en Tartar). Toegang tot dit gebied zonder toestemming vooraf van de Azerbeidzjaanse autoriteiten is voor buitenlanders verboden. In het hele gebied liggen niet-ontplofte munitie en mijnen.",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -2195,13 +2206,13 @@
     ],
     "zinnen": 91,
     "fout": 1,
-    "letop": 12,
+    "letop": 11,
     "linkzin": 2,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
+      "let-op": 11,
       "link-zin": 2,
       "info": 0,
       "twijfel": 3
@@ -2211,7 +2222,6 @@
       "kleur-variant": 1,
       "kleur-eerste-bullet-voluit": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 4,
       "zin-max-woorden": 6
@@ -2247,16 +2257,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"voyage\" staat niet in de woordenlijst.",
-        "fragment": "Voor Burkina Faso is een ingevuld fiche de voyage verplicht.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -3109,13 +3109,13 @@
     ],
     "zinnen": 106,
     "fout": 2,
-    "letop": 20,
+    "letop": 19,
     "linkzin": 3,
     "twijfel": 7,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 20,
+      "let-op": 19,
       "link-zin": 3,
       "info": 1,
       "twijfel": 7
@@ -3125,7 +3125,6 @@
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 1,
       "zin-frequentiewoord": 7,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 16,
@@ -3167,16 +3166,6 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"turísmo\" staat niet in de woordenlijst.",
-        "fragment": "Ga naar ‘Para viajeros’ en ‘Vehículos de turísmo’ en vul het formulier in. U kunt ook de app ‘An sivetur’ downloaden. Op het formulier staat hoelang u uw voertuig in Bolivia mag houden. Overschrijdt u die datum? Dan wordt uw voertuig in beslag genomen.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -3710,13 +3699,13 @@
     ],
     "zinnen": 112,
     "fout": 1,
-    "letop": 8,
+    "letop": 7,
     "linkzin": 2,
     "twijfel": 10,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 7,
       "link-zin": 2,
       "info": 1,
       "twijfel": 10
@@ -3724,7 +3713,7 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "woord-onbekend": 2,
+      "woord-onbekend": 1,
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 4,
       "zin-max-woorden": 4,
@@ -3757,16 +3746,6 @@
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Av\" staat niet in de woordenlijst.",
         "fragment": "Av.",
-        "kop": "In geval van nood",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Afrânio\" staat niet in de woordenlijst.",
-        "fragment": "Afrânio de Melo Franco 159",
         "kop": "In geval van nood",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
@@ -5271,13 +5250,13 @@
     ],
     "zinnen": 97,
     "fout": 2,
-    "letop": 5,
+    "letop": 7,
     "linkzin": 3,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 5,
+      "let-op": 7,
       "link-zin": 3,
       "info": 1,
       "twijfel": 5
@@ -5285,6 +5264,7 @@
     "perRegel": {
       "kleur-variant": 1,
       "nood-contactcenter": 1,
+      "woord-onbekend": 2,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 4,
@@ -5308,6 +5288,26 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Cameroun\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De streek rond Mount Cameroun is een risicogebied.",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Adamaouad\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "de regio Adamaouad",
+        "kop": "Regionale risico’s",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -5434,13 +5434,13 @@
     ],
     "zinnen": 111,
     "fout": 5,
-    "letop": 18,
+    "letop": 17,
     "linkzin": 3,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
       "fout": 5,
-      "let-op": 18,
+      "let-op": 17,
       "link-zin": 3,
       "info": 1,
       "twijfel": 8
@@ -5453,7 +5453,7 @@
       "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
       "tekst-cms-rest": 1,
-      "woord-onbekend": 5,
+      "woord-onbekend": 4,
       "zin-max-woorden": 9,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
@@ -5522,16 +5522,6 @@
         "kop": null,
         "herkomst": "aanvulling",
         "notitie": "Een bezoeker ziet dit letterlijk op de pagina staan."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"lturi\" staat niet in de woordenlijst.",
-        "fragment": "lturi",
-        "kop": "Actueel",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "woord-onbekend",
@@ -6328,19 +6318,19 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 2,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 2,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "woord-onbekend": 2,
+      "woord-onbekend": 1,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 1
     },
@@ -6350,16 +6340,6 @@
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Instituto\" staat niet in de woordenlijst.",
-        "fragment": "Instituto nacional de metrologia e geofísica (informatie in het Portugees)",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"geofísica\" staat niet in de woordenlijst.",
         "fragment": "Instituto nacional de metrologia e geofísica (informatie in het Portugees)",
         "kop": "Natuurgeweld",
         "herkomst": "aanvulling",
@@ -6849,13 +6829,13 @@
     ],
     "zinnen": 43,
     "fout": 1,
-    "letop": 8,
+    "letop": 7,
     "linkzin": 1,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 7,
       "link-zin": 1,
       "info": 1,
       "twijfel": 0
@@ -6865,7 +6845,6 @@
       "reisverzekering-vaste-tekst": 1,
       "bagage-terug": 1,
       "kinderen-paspoort": 1,
-      "woord-onbekend": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 3,
       "link-tekstlengte": 1,
@@ -6902,16 +6881,6 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en een digitale immigratiekaart nodig voor een reis naar Curaçao.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Curaçao."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"trago-meisjes\" staat niet in de woordenlijst.",
-        "fragment": "Slachtoffers worden ook wel ‘trago-meisjes’ genoemd.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -8013,13 +7982,13 @@
     ],
     "zinnen": 148,
     "fout": 5,
-    "letop": 18,
+    "letop": 19,
     "linkzin": 6,
     "twijfel": 7,
     "info": 0,
     "perErnst": {
       "fout": 5,
-      "let-op": 18,
+      "let-op": 19,
       "link-zin": 6,
       "info": 0,
       "twijfel": 7
@@ -8029,7 +7998,7 @@
       "kleur-variant": 2,
       "nood-contactcenter": 1,
       "tekst-dubbel-woord": 1,
-      "woord-onbekend": 5,
+      "woord-onbekend": 6,
       "zin-max-woorden": 12,
       "zin-lijdende-vorm": 4,
       "zin-frequentiewoord": 7,
@@ -8084,6 +8053,16 @@
         "verwacht": "via",
         "herkomst": "aanvulling",
         "notitie": "Meestal blijft bij het herschrijven van een zin het oude woord staan."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Guyaquil\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "In een noodgeval kunt u terecht bij de honorair consul van Nederland in Quito of Guyaquil (informatie in het Engels).",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "woord-onbekend",
@@ -8613,13 +8592,13 @@
     ],
     "zinnen": 81,
     "fout": 1,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 2,
     "twijfel": 0,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 2,
       "info": 2,
       "twijfel": 0
@@ -8629,7 +8608,7 @@
       "reisverzekering-vaste-tekst": 1,
       "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
-      "woord-onbekend": 2,
+      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1,
       "aanhalingstekens": 1
@@ -8670,16 +8649,6 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Criminaliteit\" staat na \"Natuurgeweld\".",
         "fragment": "Criminaliteit",
         "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"spuugtruc\" staat niet in de woordenlijst.",
-        "fragment": "Kijk in de grote steden uit voor de ‘spuugtruc’.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "woord-onbekend",
@@ -9911,13 +9880,13 @@
     ],
     "zinnen": 99,
     "fout": 3,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 2,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 2,
       "info": 1,
       "twijfel": 5
@@ -9927,7 +9896,6 @@
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "zin-frequentiewoord": 5,
       "zin-max-woorden": 8,
       "zin-lijdende-vorm": 1,
@@ -9974,16 +9942,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"ongevallendekking\" staat niet in de woordenlijst.",
-        "fragment": "Voor Georgië heeft u voor u hele verblijf een geldige reisverzekering nodig met zorg- en ongevallendekking. Kunt u die bij aankomst niet op papier of digitaal laten zien? Dan mag u mogelijk het land niet in. De verzekering moet minimaal 30.000 Georgische lari vergoeden. Uw polis moet in het Georgisch of Engels zijn.",
-        "kop": "Reisverzekering",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -11923,13 +11881,13 @@
     ],
     "zinnen": 171,
     "fout": 4,
-    "letop": 24,
+    "letop": 21,
     "linkzin": 8,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 24,
+      "let-op": 21,
       "link-zin": 8,
       "info": 1,
       "twijfel": 9
@@ -11943,7 +11901,7 @@
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "tekst-spatie-leesteken": 1,
-      "woord-onbekend": 8,
+      "woord-onbekend": 5,
       "zin-max-woorden": 16,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 5,
@@ -12022,16 +11980,6 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Drankvergiftiging\" staat niet in de woordenlijst.",
-        "fragment": "Drankvergiftiging",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Ibu\" staat niet in de woordenlijst.",
         "fragment": "Ibu op het eiland Halmahera",
         "kop": "Natuurgeweld",
@@ -12064,26 +12012,6 @@
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Semeru\" staat niet in de woordenlijst.",
         "fragment": "Semeru in Oost-Java",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Marapi\" staat niet in de woordenlijst.",
-        "fragment": "Marapi in West-Sumatra",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Sinabung\" staat niet in de woordenlijst.",
-        "fragment": "Sinabung in Noord-Sumatra",
         "kop": "Natuurgeweld",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
@@ -12354,13 +12282,13 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 43,
+    "letop": 35,
     "linkzin": 5,
     "twijfel": 10,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 43,
+      "let-op": 35,
       "link-zin": 5,
       "info": 3,
       "twijfel": 10
@@ -12374,7 +12302,7 @@
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 10,
+      "woord-onbekend": 2,
       "tekst-niet-melden": 3,
       "zin-max-woorden": 24,
       "zin-frequentiewoord": 10,
@@ -12453,56 +12381,6 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"e-FRRO-portaal\" staat niet in de woordenlijst.",
-        "fragment": "Start de aanvraag via het e-FRRO-portaal (informatie in het Engels).",
-        "kop": "Actueel",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"verwerkingsduur\" staat niet in de woordenlijst.",
-        "fragment": "Houd er rekening mee dat de verwerkingsduur enkele dagen tot weken kan duren, afhankelijk van de regio en het type visum.",
-        "kop": "Actueel",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"technical\" staat niet in de woordenlijst.",
-        "fragment": "Pas op voor ‘technische verkrachting’, oftewel ‘technical rape’.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"rape\" staat niet in de woordenlijst.",
-        "fragment": "Pas op voor ‘technische verkrachting’, oftewel ‘technical rape’.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"huwelijksbeloftes\" staat niet in de woordenlijst.",
-        "fragment": "Hiervan is sprake als een vrouw een man aanklaagt voor het verbreken van huwelijksbeloftes.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Lakshadweep\" staat niet in de woordenlijst.",
         "fragment": "Lakshadweep",
         "kop": "Wetten en gebruiken",
@@ -12516,36 +12394,6 @@
         "boodschap": "\"weerswaarschuwingen\" staat niet in de woordenlijst.",
         "fragment": "Check de weerswaarschuwingen op de website van het India Meteorological Department (informatie in het Engels).",
         "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"cams\" staat niet in de woordenlijst.",
-        "fragment": "filmapparaten (behalve smartphones en action cams van bijvoorbeeld GoPro)",
-        "kop": "Bagageregels",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"opnameapparaten\" staat niet in de woordenlijst.",
-        "fragment": "opnameapparaten",
-        "kop": "Bagageregels",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"radiotransmitters\" staat niet in de woordenlijst.",
-        "fragment": "radiotransmitters",
-        "kop": "Bagageregels",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
@@ -13344,13 +13192,13 @@
     ],
     "zinnen": 99,
     "fout": 2,
-    "letop": 18,
+    "letop": 16,
     "linkzin": 2,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 18,
+      "let-op": 16,
       "link-zin": 2,
       "info": 1,
       "twijfel": 3
@@ -13363,7 +13211,6 @@
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
-      "woord-onbekend": 2,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 10,
       "zin-twijfeltaal": 1,
@@ -13426,26 +13273,6 @@
         "boodschap": "\"Demonstraties\" staat boven \"Wetten en gebruiken\".",
         "fragment": "Demonstraties",
         "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"damdoorbraak\" staat niet in de woordenlijst.",
-        "fragment": "De kans op een damdoorbraak is groot.",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"e-visaportaal\" staat niet in de woordenlijst.",
-        "fragment": "Of vraag een e-visum aan via het e-visaportaal van de Koerdische Regionale Overheid (informatie in het Engels).",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -13919,13 +13746,13 @@
     ],
     "zinnen": 79,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "linkzin": 4,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "link-zin": 4,
       "info": 0,
       "twijfel": 2
@@ -13933,7 +13760,6 @@
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
       "nederlands-verbuiging": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1,
       "zin-frequentiewoord": 2
@@ -13957,16 +13783,6 @@
         "verwacht": "Nederlandse consulaat-generaal",
         "herkomst": "aanvulling",
         "notitie": "Na \"het\" krijgt het bijvoeglijk naamwoord een -e."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"vulkaangebied\" staat niet in de woordenlijst.",
-        "fragment": "Vraag vooraf of er risico’s zijn in het vulkaangebied waar u heen gaat, bijvoorbeeld bij uw reisorganisatie of het hotel waar u verblijft. Volg altijd de aanwijzingen van de lokale autoriteiten.",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -14125,13 +13941,13 @@
     ],
     "zinnen": 98,
     "fout": 1,
-    "letop": 14,
+    "letop": 13,
     "linkzin": 2,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 14,
+      "let-op": 13,
       "link-zin": 2,
       "info": 0,
       "twijfel": 1
@@ -14141,7 +13957,6 @@
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 8,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 3,
@@ -14177,16 +13992,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"waarschuwingsperiode\" staat niet in de woordenlijst.",
-        "fragment": "Hoort u sirenes van het luchtalarm? Blijf binnen en blijf weg bij de ramen. 3 lange alarmtonen betekent de start van de waarschuwingsperiode, 1 lange toon betekent het einde ervan.",
-        "kop": "Actueel",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -14306,13 +14111,13 @@
     ],
     "zinnen": 71,
     "fout": 3,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
@@ -14322,7 +14127,7 @@
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 2,
+      "woord-onbekend": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 3,
@@ -14361,16 +14166,6 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"e-sigarettenvloeistof\" staat niet in de woordenlijst.",
-        "fragment": "U mag in Japan maximaal 120 ml per maand aan e-sigarettenvloeistof bij u hebben voor eigen gebruik.",
-        "kop": "Bagageregels",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "woord-onbekend",
@@ -14564,13 +14359,13 @@
     ],
     "zinnen": 122,
     "fout": 2,
-    "letop": 15,
+    "letop": 14,
     "linkzin": 4,
     "twijfel": 2,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 15,
+      "let-op": 14,
       "link-zin": 4,
       "info": 2,
       "twijfel": 2
@@ -14582,7 +14377,6 @@
       "criminaliteit-themapagina": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 9,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
@@ -14638,16 +14432,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 9 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"matatu's\" staat niet in de woordenlijst.",
-        "fragment": "Pas ook op met ‘matatu’s’ (kleine busjes) en ‘boda boda’s’ (motortaxi’s).",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -15155,20 +14939,19 @@
     ],
     "zinnen": 68,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 3,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 3,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
-      "woord-onbekend": 1,
       "zin-lijdende-vorm": 1,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 6
@@ -15181,16 +14964,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"retourvliegticket\" staat niet in de woordenlijst.",
-        "fragment": "Blijft u 90 dagen of korter in Kiribati? En reist u met een Nederlands paspoort? Dan heeft u geen visum nodig. U heeft wel een retourvliegticket of een doorreisticket nodig.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -15349,13 +15122,13 @@
     ],
     "zinnen": 84,
     "fout": 1,
-    "letop": 12,
+    "letop": 10,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
+      "let-op": 10,
       "link-zin": 3,
       "info": 0,
       "twijfel": 1
@@ -15364,7 +15137,6 @@
       "kleur-variant": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 2,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 8,
       "zin-frequentiewoord": 1
@@ -15393,26 +15165,6 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"hennepproducten\" staat niet in de woordenlijst.",
-        "fragment": "Dit geldt ook voor verdovende middelen zoals marihuana, CBD-olie en hennepproducten.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"medicijnveiligheid\" staat niet in de woordenlijst.",
-        "fragment": "Lees informatie over het meenemen van medicijnen naar Zuid-Korea op de website van het Koreaanse ministerie van Voedsel- en medicijnveiligheid (informatie in het Engels).",
-        "kop": "Medicijnen",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -15673,13 +15425,13 @@
     ],
     "zinnen": 119,
     "fout": 1,
-    "letop": 22,
+    "letop": 21,
     "linkzin": 3,
     "twijfel": 6,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 22,
+      "let-op": 21,
       "link-zin": 3,
       "info": 0,
       "twijfel": 6
@@ -15688,7 +15440,7 @@
       "h4-niet-melden": 1,
       "nood-verwijzing-nood": 1,
       "nood-verwijzing-crisis": 1,
-      "woord-onbekend": 5,
+      "woord-onbekend": 4,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 5,
@@ -15717,16 +15469,6 @@
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"watersportactiviteiten\" staat niet in de woordenlijst.",
-        "fragment": "Pas ook op als u watersportactiviteiten gaat doen.",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "woord-onbekend",
@@ -15972,13 +15714,13 @@
     ],
     "zinnen": 92,
     "fout": 1,
-    "letop": 11,
+    "letop": 12,
     "linkzin": 2,
     "twijfel": 3,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
+      "let-op": 12,
       "link-zin": 2,
       "info": 3,
       "twijfel": 3
@@ -15988,6 +15730,7 @@
       "bagage-heen": 1,
       "kinderen-paspoort": 1,
       "rubriek-vrij-te-hoog": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 2,
@@ -16030,6 +15773,16 @@
         "boodschap": "\"Demonstraties\" staat boven \"Wetten en gebruiken\".",
         "fragment": "Demonstraties",
         "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Hairi\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Het Libanese luchtruim is open. U kunt via andere Europese luchthavens naar Nederland vliegen. Lees meer informatie op de website van Beirut-Rafic Hairi International Airport (informatie in het Engels).",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -16956,13 +16709,13 @@
     ],
     "zinnen": 71,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
@@ -16970,7 +16723,6 @@
     "perRegel": {
       "reisverzekering-oranje-rood": 1,
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 2,
       "zin-frequentiewoord": 1
     },
@@ -16988,16 +16740,6 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"forštate\" staat niet in de woordenlijst.",
-        "fragment": "Vooral in de wijken Bolderaja en Maskavas forštate, in de buurt van het treinstation.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -17783,13 +17525,13 @@
     ],
     "zinnen": 156,
     "fout": 4,
-    "letop": 23,
+    "letop": 21,
     "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 4,
-      "let-op": 23,
+      "let-op": 21,
       "link-zin": 3,
       "info": 0,
       "twijfel": 3
@@ -17799,7 +17541,7 @@
       "kleur-variant": 1,
       "kleur-formulering-verboden": 1,
       "nood-contactcenter": 1,
-      "woord-onbekend": 3,
+      "woord-onbekend": 1,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 6,
@@ -17848,29 +17590,9 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"express'-ontvoeringen\" staat niet in de woordenlijst.",
-        "fragment": "In de steden van Mexico is er risico op ‘express’-ontvoeringen.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Secretary\" staat niet in de woordenlijst.",
         "fragment": "Secretary of Integrated Risk Management and Civil Protection – Government of Mexico City",
         "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"zelfbedieningspoort\" staat niet in de woordenlijst.",
-        "fragment": "Ga op het vliegveld langs een elektronische zelfbedieningspoort (E-Gate). U krijgt dan een geprinte bon met een QR-code. Met deze QR-code registreert u uw verblijf via de website van de immigratiedienst. Lees meer over registratie (informatie in het Engels).",
-        "kop": "Paspoort, visum, rijbewijs",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
@@ -18263,13 +17985,13 @@
     ],
     "zinnen": 79,
     "fout": 4,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 4,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
@@ -18280,7 +18002,6 @@
       "h4-kop-variant": 1,
       "intro-vaste-tekst": 1,
       "tekst-cms-rest": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 1
     },
@@ -18328,16 +18049,6 @@
         "notitie": "Een bezoeker ziet dit letterlijk op de pagina staan."
       },
       {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"baanaanbod\" staat niet in de woordenlijst.",
-        "fragment": "Wees voorzichtig bij een verzoek om geld, een baanaanbod of zakelijk voorstel van iemand met wie u via internet contact heeft.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -18383,13 +18094,13 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 3,
+    "letop": 1,
     "linkzin": 2,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 1,
       "link-zin": 2,
       "info": 1,
       "twijfel": 4
@@ -18397,7 +18108,6 @@
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "reisverzekering-vaste-tekst": 1,
-      "woord-onbekend": 2,
       "zin-frequentiewoord": 4,
       "zin-max-woorden": 2
     },
@@ -18417,26 +18127,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Rotskliffen\" staat niet in de woordenlijst.",
-        "fragment": "Rotskliffen kunnen afbrokkelen en instorten.",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"rotskliffen\" staat niet in de woordenlijst.",
-        "fragment": "Gevaar bij rotskliffen",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -18501,13 +18191,13 @@
     ],
     "zinnen": 98,
     "fout": 3,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 5,
     "twijfel": 6,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 5,
       "info": 0,
       "twijfel": 6
@@ -18517,7 +18207,6 @@
       "actueel-max-woorden": 1,
       "h4-kop-variant": 1,
       "h3-niet-melden": 1,
-      "woord-onbekend": 1,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 4,
       "zin-max-woorden": 8,
@@ -18560,16 +18249,6 @@
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Telefoonregistratie\" staat niet in de woordenlijst.",
-        "fragment": "Telefoonregistratie",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -18941,13 +18620,13 @@
     ],
     "zinnen": 106,
     "fout": 3,
-    "letop": 14,
+    "letop": 11,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 14,
+      "let-op": 11,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
@@ -18955,7 +18634,7 @@
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "woord-onbekend": 9,
+      "woord-onbekend": 6,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
@@ -18978,16 +18657,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"paspoortkopieën\" staat niet in de woordenlijst.",
-        "fragment": "De Mozambikaanse autoriteiten accepteren geen paspoortkopieën.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "woord-onbekend",
@@ -19023,16 +18692,6 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"da\" staat niet in de woordenlijst.",
-        "fragment": "Mocimboa da Praia",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Mueda\" staat niet in de woordenlijst.",
         "fragment": "Mueda",
         "kop": "Regionale risico's",
@@ -19045,16 +18704,6 @@
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Muidumbe\" staat niet in de woordenlijst.",
         "fragment": "Muidumbe",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Quissanga\" staat niet in de woordenlijst.",
-        "fragment": "Quissanga",
         "kop": "Regionale risico's",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
@@ -19150,19 +18799,20 @@
     ],
     "zinnen": 90,
     "fout": 1,
-    "letop": 6,
+    "letop": 7,
     "linkzin": 1,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 7,
       "link-zin": 1,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
       "kleur-variant": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 1
@@ -19176,6 +18826,16 @@
         "fragment": "De kleurcode van het reisadvies is rood voor een groot deel van het (noord)oosten van Mauritanië. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Noukachott\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "In een noodgeval kunt u ook terecht bij de honorair consul van Nederland in Noukachott (informatie in het Engels).",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -19514,11 +19174,11 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"sigarettenvloeipapier\" staat niet in de woordenlijst.",
-        "fragment": "Ook mag u geen sigarettenvloeipapier invoeren of bezitten.",
-        "kop": "Bagageregels",
+        "boodschap": "\"Mauritus\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Lees informatie over het weer in Mauritus op de website van de Meteorologische dienst van Mauritius (informatie in het Engels).",
+        "kop": "Natuurgeweld",
         "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -19711,13 +19371,13 @@
     ],
     "zinnen": 86,
     "fout": 1,
-    "letop": 5,
+    "letop": 3,
     "linkzin": 2,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 3,
       "link-zin": 2,
       "info": 0,
       "twijfel": 1
@@ -19725,7 +19385,6 @@
     "perRegel": {
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 2,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1
     },
@@ -19744,26 +19403,6 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"tassendieven\" staat niet in de woordenlijst.",
-        "fragment": "In de steden zijn tassendieven actief die vanaf een motor uw tas stelen.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"benauwdheidsklachten\" staat niet in de woordenlijst.",
-        "fragment": "Bent u astmatisch of heeft u andere benauwdheidsklachten?",
-        "kop": "Reisvaccinaties",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -19819,20 +19458,19 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
-      "woord-onbekend": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 1
@@ -19845,16 +19483,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"gravelwegen\" staat niet in de woordenlijst.",
-        "fragment": "Rijd rustig en neem een extra reserveband mee, als je op gravelwegen gaat rijden.",
-        "kop": "Verkeersongevallen",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "tekst-niet-melden",
@@ -20052,20 +19680,20 @@
     ],
     "zinnen": 115,
     "fout": 0,
-    "letop": 12,
+    "letop": 11,
     "linkzin": 5,
     "twijfel": 8,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 12,
+      "let-op": 11,
       "link-zin": 5,
       "info": 0,
       "twijfel": 8
     },
     "perRegel": {
       "rubrieken-max": 1,
-      "woord-onbekend": 2,
+      "woord-onbekend": 1,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 3
@@ -20077,16 +19705,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"overheidsdoelen\" staat niet in de woordenlijst.",
-        "fragment": "Gewapende groepen vallen regelmatig overheidsdoelen aan.",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "woord-onbekend",
@@ -20875,13 +20493,13 @@
     ],
     "zinnen": 87,
     "fout": 0,
-    "letop": 7,
+    "letop": 6,
     "linkzin": 6,
     "twijfel": 3,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 6,
       "link-zin": 6,
       "info": 3,
       "twijfel": 3
@@ -20890,7 +20508,6 @@
       "h3-alleen-bij-uitzondering": 1,
       "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-lijdende-vorm": 5,
       "zin-frequentiewoord": 3
@@ -20919,16 +20536,6 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
         "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"visumstatus\" staat niet in de woordenlijst.",
-        "fragment": "Bekijk de website van Immigration New Zealand voor informatie over wat u moet doen als uw reis- of visumstatus hierdoor wordt beïnvloed (informatie in Engels).",
-        "kop": "Actueel",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -21219,13 +20826,13 @@
     ],
     "zinnen": 116,
     "fout": 3,
-    "letop": 8,
+    "letop": 10,
     "linkzin": 2,
     "twijfel": 10,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 8,
+      "let-op": 10,
       "link-zin": 2,
       "info": 0,
       "twijfel": 10
@@ -21235,6 +20842,7 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
+      "woord-onbekend": 2,
       "zin-frequentiewoord": 7,
       "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1,
@@ -21276,6 +20884,26 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Khyber-Phakhtunkhwa\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "In Pakistan komen regelmatig terroristische aanslagen en andere gewelddadige incidenten voor, vooral in de provincies Baluchistan en Khyber-Phakhtunkhwa.",
+        "kop": "Terrorisme",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Balistan\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Kleurcode oranje geldt voor de provincies Sindh, delen van Punjab, de regio Jammu en Kasjmir aan de Pakistaanse kant van de bestandslijn, en delen van Gilgit Balistan. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "kop": "In het kort",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -21595,13 +21223,13 @@
     ],
     "zinnen": 53,
     "fout": 1,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 0,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 0,
       "info": 1,
       "twijfel": 0
@@ -21611,8 +21239,7 @@
       "reisverzekering-vaste-tekst": 1,
       "bagage-heen": 1,
       "criminaliteit-themapagina": 1,
-      "rijbewijs-anwb": 1,
-      "woord-onbekend": 1
+      "rijbewijs-anwb": 1
     },
     "bevindingen": [
       {
@@ -21651,16 +21278,6 @@
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
         "verwacht": "Lees meer over rijden in Pitcairneilanden op de website van de ANWB."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"honingproducten\" staat niet in de woordenlijst.",
-        "fragment": "U mag geen zaden, planten, honing en honingproducten meenemen naar de Pitcairneilanden.",
-        "kop": "Bagageregels",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 06-10-2026"
@@ -21678,13 +21295,13 @@
     ],
     "zinnen": 137,
     "fout": 2,
-    "letop": 24,
+    "letop": 18,
     "linkzin": 5,
     "twijfel": 3,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 24,
+      "let-op": 18,
       "link-zin": 5,
       "info": 2,
       "twijfel": 3
@@ -21697,7 +21314,6 @@
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 6,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 1,
@@ -21762,66 +21378,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Demonstraties, Natuurgeweld, Verkeersongevallen"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"veiligheidspatrouilles\" staat niet in de woordenlijst.",
-        "fragment": "Houd rekening met meer veiligheidspatrouilles.",
-        "kop": "Actueel",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"zandbuggy's\" staat niet in de woordenlijst.",
-        "fragment": "Er zijn ernstige ongelukken gebeurd met recreatieve zandbuggy’s, vooral in de zandduinen rond Ica en het meer van Huacachina.",
-        "kop": "Verkeersongevallen",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Zandbuggy's\" staat niet in de woordenlijst.",
-        "fragment": "Zandbuggy’s zijn vaak niet goed onderhouden en veiligheidsuitrusting is niet altijd aanwezig.",
-        "kop": "Verkeersongevallen",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"zandbuggy\" staat niet in de woordenlijst.",
-        "fragment": "Boekt u een tour met een zandbuggy?",
-        "kop": "Verkeersongevallen",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"iPerú\" staat niet in de woordenlijst.",
-        "fragment": "Verspreid over Peru zijn 36 kantoren van het toerismebureau iPerú.",
-        "kop": "In geval van nood",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Kruidenbrouwsels\" staat niet in de woordenlijst.",
-        "fragment": "Kruidenbrouwsels",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -22022,13 +21578,13 @@
     ],
     "zinnen": 146,
     "fout": 1,
-    "letop": 22,
+    "letop": 21,
     "linkzin": 4,
     "twijfel": 11,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 22,
+      "let-op": 21,
       "link-zin": 4,
       "info": 1,
       "twijfel": 11
@@ -22037,7 +21593,7 @@
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 4,
+      "woord-onbekend": 3,
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 8,
       "zin-twijfeltaal": 2,
@@ -22099,16 +21655,6 @@
         "boodschap": "\"Mayon\" staat niet in de woordenlijst.",
         "fragment": "Mayon (provincie Albay)",
         "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"betalingsgarantie\" staat niet in de woordenlijst.",
-        "fragment": "Voor een reis naar de Filipijnen is een goede reisverzekering extra belangrijk. Want de gezondheidszorg buiten de grote steden is beperkt. Particuliere ziekenhuizen in de grote steden bieden goede medische zorg. De behandeling kan duur zijn. Houd er rekening mee dat de meeste ziekenhuizen een vooruitbetaling of een betalingsgarantie vragen voordat zij u hulp verlenen.",
-        "kop": "Reisverzekering",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
@@ -22382,13 +21928,13 @@
     ],
     "zinnen": 79,
     "fout": 3,
-    "letop": 14,
+    "letop": 12,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 14,
+      "let-op": 12,
       "link-zin": 2,
       "info": 1,
       "twijfel": 1
@@ -22399,7 +21945,6 @@
       "h3-alleen-bij-uitzondering": 1,
       "intro-vaste-tekst": 1,
       "rijbewijs-anwb": 1,
-      "woord-onbekend": 2,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
@@ -22449,26 +21994,6 @@
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
         "verwacht": "Lees meer over rijden in Palau op de website van de ANWB."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"zonnebrandmiddelen\" staat niet in de woordenlijst.",
-        "fragment": "U mag in Palau geen zonnebrandmiddelen gebruiken, bezitten of verkopen met chemische stoffen die schadelijk kunnen zijn voor het koraal.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Zonnebrandmiddelen\" staat niet in de woordenlijst.",
-        "fragment": "Zonnebrandmiddelen",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -22596,13 +22121,13 @@
     ],
     "zinnen": 136,
     "fout": 3,
-    "letop": 14,
+    "letop": 10,
     "linkzin": 5,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 14,
+      "let-op": 10,
       "link-zin": 5,
       "info": 1,
       "twijfel": 9
@@ -22616,7 +22141,6 @@
       "h3-vaste-kop": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 4,
       "zin-frequentiewoord": 8,
       "zin-max-woorden": 8,
       "zin-lijdende-vorm": 1,
@@ -22690,46 +22214,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 8 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen, Demonstraties, Explosieven"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"aansprakelijkheidsregels\" staat niet in de woordenlijst.",
-        "fragment": "In Papoea-Nieuw-Guinea gelden strenge aansprakelijkheidsregels.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"self-service\" staat niet in de woordenlijst.",
-        "fragment": "Of vul de kaart bij aankomst in bij een self-service kiosk.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"stammengeweld\" staat niet in de woordenlijst.",
-        "fragment": "Vermijd gebieden met stammengeweld.",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"seksartikelen\" staat niet in de woordenlijst.",
-        "fragment": "bezit en verkoop van seksartikelen en pornografisch materiaal",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -23238,20 +22722,19 @@
     ],
     "zinnen": 72,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 3,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 3,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
       "h4-kop-variant": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 5,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
@@ -23266,16 +22749,6 @@
         "fragment": "Contactgegevens Nederlandse ambassade",
         "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
         "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"hoogrisicoland\" staat niet in de woordenlijst.",
-        "fragment": "Een bewijs van vaccinatie tegen gele koorts is verplicht als u vanuit een hoogrisicoland naar Paraguay reist.",
-        "kop": "Reisvaccinaties",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -23700,13 +23173,13 @@
     ],
     "zinnen": 78,
     "fout": 0,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
@@ -23714,7 +23187,6 @@
     "perRegel": {
       "kinderen-paspoort": 1,
       "tekst-onzichtbaar-teken": 1,
-      "woord-onbekend": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 4,
       "zin-lijdende-vorm": 3,
@@ -23739,16 +23211,6 @@
         "kop": "Actueel",
         "herkomst": "aanvulling",
         "notitie": "Dit teken is niet te zien maar staat er wel. Het hoort hier weg; in dit fragment staat er ␣ op de plek waar het stond."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"bewakings\" staat niet in de woordenlijst.",
-        "fragment": "Beelden van (bewakings)camera’s worden in rechtszaken geaccepteerd als bewijsmateriaal.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "tekst-niet-melden",
@@ -23851,33 +23313,22 @@
     ],
     "zinnen": 51,
     "fout": 0,
-    "letop": 1,
+    "letop": 0,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
+      "let-op": 0,
       "link-zin": 3,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
-      "woord-onbekend": 1,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 1
     },
     "bevindingen": [
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"du\" staat niet in de woordenlijst.",
-        "fragment": "Check actuele waarschuwingen voor uitbarstingen op de website van het Institut de Physique du Globe de Paris (informatie in het Engels).",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
@@ -24473,13 +23924,13 @@
     ],
     "zinnen": 115,
     "fout": 3,
-    "letop": 17,
+    "letop": 14,
     "linkzin": 4,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 17,
+      "let-op": 14,
       "link-zin": 4,
       "info": 1,
       "twijfel": 3
@@ -24489,7 +23940,7 @@
       "actueel-max-woorden": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 4,
+      "woord-onbekend": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 13,
       "zin-twijfeltaal": 1,
@@ -24534,38 +23985,8 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"bed-and-breakfast-locaties\" staat niet in de woordenlijst.",
-        "fragment": "In bed-and-breakfast-locaties en goedkopere hotels is dit vaak niet zo.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Umuganda\" staat niet in de woordenlijst.",
         "fragment": "Umuganda is een landelijk gemeenschapsevenement in Rwanda.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"gemeenschapsevenement\" staat niet in de woordenlijst.",
-        "fragment": "Umuganda is een landelijk gemeenschapsevenement in Rwanda.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"uitreist\" staat niet in de woordenlijst.",
-        "fragment": "U heeft geen reisvergunning nodig als u tijdens Umuganda Rwanda in- of uitreist.",
         "kop": "Wetten en gebruiken",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
@@ -24823,11 +24244,11 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"meningitisvaccinatie\" staat niet in de woordenlijst.",
-        "fragment": "Check welke vaccinaties u nodig heeft voor Saoedi-Arabië op de website van GGD Reisvaccinaties. Reist u naar Mekka? Regel dan de verplichte meningitisvaccinatie.",
-        "kop": "Reisvaccinaties",
+        "boodschap": "\"Saoedie-Arabie\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Neem geen drugs, alcohol, varkensvleesproducten of pornografisch materiaal mee naar Saoedi-Arabië. Dit is verboden en strafbaar. Handbagage wordt bij aankomst op het vliegveld in Saoedie-Arabie gescand op deze artikelen.",
+        "kop": "Bagageregels",
         "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -25022,13 +24443,13 @@
     ],
     "zinnen": 76,
     "fout": 3,
-    "letop": 6,
+    "letop": 4,
     "linkzin": 2,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 6,
+      "let-op": 4,
       "link-zin": 2,
       "info": 0,
       "twijfel": 2
@@ -25037,7 +24458,6 @@
       "h3-niet-melden": 1,
       "nood-contactcenter": 1,
       "tekst-spatie-leesteken": 1,
-      "woord-onbekend": 2,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 2,
@@ -25069,26 +24489,6 @@
         "kop": "In geval van nood",
         "herkomst": "aanvulling",
         "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"d'identité\" staat niet in de woordenlijst.",
-        "fragment": "Na registratie ontvangt u een ‘carte d’identité d’étranger’.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"d'étranger\" staat niet in de woordenlijst.",
-        "fragment": "Na registratie ontvangt u een ‘carte d’identité d’étranger’.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "tekst-niet-melden",
@@ -25168,20 +24568,19 @@
     ],
     "zinnen": 82,
     "fout": 0,
-    "letop": 9,
+    "letop": 8,
     "linkzin": 4,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 9,
+      "let-op": 8,
       "link-zin": 4,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
       "bagage-heen": 1,
-      "woord-onbekend": 1,
       "zin-lijdende-vorm": 4,
       "zin-max-woorden": 8,
       "zin-twijfeltaal": 1,
@@ -25195,16 +24594,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Lees wat u mag meenemen naar Singapore op de website van de douane van Singapore (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Singapore."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"rookwetgeving\" staat niet in de woordenlijst.",
-        "fragment": "Lees informatie over de rookwetgeving en waar u mag roken op de website van de overheid van Singapore (informatie in het Engels).",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -25880,20 +25269,19 @@
     ],
     "zinnen": 103,
     "fout": 0,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 2,
@@ -25906,16 +25294,6 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"piratenaanvallen\" staat niet in de woordenlijst.",
-        "fragment": "Voor de kust komen piratenaanvallen en gewapende overvallen op schepen voor.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -26123,13 +25501,13 @@
     ],
     "zinnen": 89,
     "fout": 2,
-    "letop": 8,
+    "letop": 7,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 8,
+      "let-op": 7,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
@@ -26139,7 +25517,6 @@
       "h4-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1
@@ -26179,16 +25556,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Terrorisme, Criminaliteit, Wetten en gebruiken, Demonstraties, Landmijnen, Natuurgeweld"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"oppositietroepen\" staat niet in de woordenlijst.",
-        "fragment": "In het hele land zijn gewelddadige confrontaties tussen het regeringsleger en oppositietroepen.",
-        "kop": "Actueel",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -26339,13 +25706,13 @@
     ],
     "zinnen": 81,
     "fout": 1,
-    "letop": 7,
+    "letop": 6,
     "linkzin": 3,
     "twijfel": 3,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
+      "let-op": 6,
       "link-zin": 3,
       "info": 2,
       "twijfel": 3
@@ -26354,7 +25721,6 @@
       "h3-alleen-bij-uitzondering": 1,
       "h3-niet-melden": 1,
       "bagage-heen": 1,
-      "woord-onbekend": 1,
       "zin-frequentiewoord": 3,
       "zin-max-woorden": 8,
       "zin-lijdende-vorm": 1
@@ -26383,16 +25749,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Check wat u mee mag nemen naar Suriname op de website van de Surinaamse overheid.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Suriname."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Pinkaarten\" staat niet in de woordenlijst.",
-        "fragment": "Pinkaarten met een Vpay-logo worden niet door alle pinautomaten geaccepteerd.",
-        "kop": "Geldzaken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -26504,13 +25860,13 @@
     ],
     "zinnen": 61,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
@@ -26519,7 +25875,6 @@
       "h4-niet-melden": 1,
       "h4-natuurrisico": 1,
       "rijbewijs-anwb": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 3,
       "aanhalingstekens": 1
     },
@@ -26547,16 +25902,6 @@
         "boodschap": "De verwijzing naar de ANWB wijkt af van de vaste tekst.",
         "fragment": "de website van de ANWB",
         "verwacht": "Lees meer over rijden in Slowakije op de website van de ANWB."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"vignetaanvraag\" staat niet in de woordenlijst.",
-        "fragment": "het Slowaakse portaal voor vignetaanvraag (informatie in het Engels)",
-        "kop": "Paspoort, ID-kaart, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -26665,20 +26010,19 @@
     ],
     "zinnen": 57,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 3,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 3,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
-      "woord-onbekend": 1,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 3
@@ -26691,16 +26035,6 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"vuurverbod\" staat niet in de woordenlijst.",
-        "fragment": "Lees waar een vuurverbod geldt op de website van de Zweedse overheid (informatie in het Engels).",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -27292,11 +26626,11 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"anti-overheidsprotesten\" staat niet in de woordenlijst.",
-        "fragment": "In de hoofdstad N’Djamena en andere steden in Tsjaad kunnen anti-overheidsprotesten plaatsvinden.",
-        "kop": "Demonstraties",
+        "boodschap": "\"Ouaddai\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De kleurcode van het reisadvies is rood voor alle grensgebieden van Tsjaad, het gebied rond het Tsjaadmeer, en de regio’s Kanem, Ouaddai, Tibesti, Borkou en Ennedi of delen daarvan. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
+        "kop": "In het kort",
         "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "woord-onbekend",
@@ -27496,13 +26830,13 @@
     ],
     "zinnen": 192,
     "fout": 3,
-    "letop": 31,
+    "letop": 30,
     "linkzin": 4,
     "twijfel": 8,
     "info": 5,
     "perErnst": {
       "fout": 3,
-      "let-op": 31,
+      "let-op": 30,
       "link-zin": 4,
       "info": 5,
       "twijfel": 8
@@ -27517,7 +26851,7 @@
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
-      "woord-onbekend": 2,
+      "woord-onbekend": 1,
       "zin-max-woorden": 19,
       "zin-frequentiewoord": 6,
       "zin-twijfeltaal": 2,
@@ -27612,16 +26946,6 @@
         "boodschap": "\"ZDe\" staat niet in de woordenlijst.",
         "fragment": "ZDe grens is gesloten.",
         "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"cannabisregels\" staat niet in de woordenlijst.",
-        "fragment": "Heeft u een vraag over cannabisregels?",
-        "kop": "Wetten en gebruiken",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
@@ -28421,13 +27745,13 @@
     ],
     "zinnen": 75,
     "fout": 1,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 3,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 3,
       "info": 1,
       "twijfel": 0
@@ -28435,7 +27759,6 @@
     "perRegel": {
       "kinderen-paspoort": 1,
       "tekst-spatie-leesteken": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 5,
       "link-tekstlengte": 1
     },
@@ -28457,16 +27780,6 @@
         "kop": "Criminaliteit",
         "herkomst": "aanvulling",
         "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"vertrekkaart\" staat niet in de woordenlijst.",
-        "fragment": "Dan heeft u een digitale aankomst- en vertrekkaart nodig.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -28531,13 +27844,13 @@
     ],
     "zinnen": 109,
     "fout": 2,
-    "letop": 5,
+    "letop": 4,
     "linkzin": 1,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 5,
+      "let-op": 4,
       "link-zin": 1,
       "info": 1,
       "twijfel": 2
@@ -28547,7 +27860,6 @@
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1
@@ -28587,16 +27899,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"geldcontroles\" staat niet in de woordenlijst.",
-        "fragment": "Houd rekening met strenge geldcontroles bij aankomst.",
-        "kop": "Bagageregels",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -28662,13 +27964,13 @@
     ],
     "zinnen": 142,
     "fout": 4,
-    "letop": 27,
+    "letop": 24,
     "linkzin": 2,
     "twijfel": 8,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 27,
+      "let-op": 24,
       "link-zin": 2,
       "info": 1,
       "twijfel": 8
@@ -28681,7 +27983,6 @@
       "rubrieken-max": 1,
       "alinea-max-woorden": 2,
       "nederlands-verbuiging": 1,
-      "woord-onbekend": 3,
       "zin-frequentiewoord": 7,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 4,
@@ -28760,36 +28061,6 @@
         "verwacht": "Nederlands consulaat-generaal",
         "herkomst": "aanvulling",
         "notitie": "\"consulaat-generaal\" is een het-woord. Zonder lidwoord krijgt het bijvoeglijk naamwoord geen -e. Staat er een lidwoord te weinig, dan is \"het nederlandse consulaat-generaal\" ook goed."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"methanolvergiftiging\" staat niet in de woordenlijst.",
-        "fragment": "Lees informatie over methanolvergiftiging op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR).",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"koranschendingen\" staat niet in de woordenlijst.",
-        "fragment": "Verschillende terroristische organisaties hebben vanwege eerdere koranschendingen met aanslagen gedreigd.",
-        "kop": "Demonstraties",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"geldigheidsvoorwaarden\" staat niet in de woordenlijst.",
-        "fragment": "Lees meer informatie over het visum en de geldigheidsvoorwaarden van uw paspoort op de website van de Turkse overheid (informatie in het Engels).",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -29176,13 +28447,13 @@
     ],
     "zinnen": 137,
     "fout": 2,
-    "letop": 21,
+    "letop": 19,
     "linkzin": 2,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 21,
+      "let-op": 19,
       "link-zin": 2,
       "info": 1,
       "twijfel": 4
@@ -29193,7 +28464,6 @@
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 2,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 6,
@@ -29241,26 +28511,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"snatchers\" staat niet in de woordenlijst.",
-        "fragment": "Wees ook alert op ‘bag snatchers’.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"vertrekpier\" staat niet in de woordenlijst.",
-        "fragment": "Bij de vertrekpier van de veerboten zijn veel opdringerige en onbetrouwbare kaartverkopers.",
-        "kop": "Verkeersongevallen",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -29808,13 +29058,13 @@
     ],
     "zinnen": 75,
     "fout": 3,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 4,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 4,
       "info": 2,
       "twijfel": 1
@@ -29825,7 +29075,6 @@
       "intro-vaste-tekst": 1,
       "kinderen-paspoort": 1,
       "rubriek-vrij-te-hoog": 1,
-      "woord-onbekend": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 8,
       "zin-lijdende-vorm": 3,
@@ -29876,16 +29125,6 @@
         "boodschap": "\"Demonstraties\" staat boven \"Wetten en gebruiken\".",
         "fragment": "Demonstraties",
         "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"legerinstallaties\" staat niet in de woordenlijst.",
-        "fragment": "Fotografeer of film in de VS geen legerinstallaties en militaire bases.",
-        "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "tekst-niet-melden",
@@ -30014,22 +29253,33 @@
     ],
     "zinnen": 81,
     "fout": 0,
-    "letop": 3,
+    "letop": 4,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 4,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
+      "woord-onbekend": 1,
       "zin-max-woorden": 5,
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Karakalkpakstan\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "In de regio’s Karakalkpakstan en Chorezm is de luchtkwaliteit het hele jaar slecht.",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -30196,13 +29446,13 @@
     ],
     "zinnen": 103,
     "fout": 5,
-    "letop": 12,
+    "letop": 14,
     "linkzin": 4,
     "twijfel": 5,
     "info": 2,
     "perErnst": {
       "fout": 5,
-      "let-op": 12,
+      "let-op": 14,
       "link-zin": 4,
       "info": 2,
       "twijfel": 5
@@ -30215,6 +29465,7 @@
       "nood-contactcenter": 1,
       "kinderen-documenten": 1,
       "rubriek-vrij-te-hoog": 1,
+      "woord-onbekend": 2,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 3,
@@ -30282,6 +29533,26 @@
         "boodschap": "\"Demonstraties\" staat boven \"Criminaliteit\".",
         "fragment": "Demonstraties",
         "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Paraguana-schiereiland\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "In de grensgebieden met Colombia en Brazilië en in het noordelijke deel van Paraguana-schiereiland wordt ook veel drugs gesmokkeld.",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Maquetia\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De snelweg tussen het internationale vliegveld Maquetia en Caracas is overdag veilig.",
+        "kop": "Criminaliteit",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -30651,13 +29922,13 @@
     ],
     "zinnen": 96,
     "fout": 2,
-    "letop": 14,
+    "letop": 13,
     "linkzin": 3,
     "twijfel": 6,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 14,
+      "let-op": 13,
       "link-zin": 3,
       "info": 2,
       "twijfel": 6
@@ -30667,7 +29938,6 @@
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 13,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 2,
@@ -30710,16 +29980,6 @@
         "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
         "fragment": "Lees wat u mag meenemen naar Vietnam op de website van de douane van Vietnam (informatie in het Engels).",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Vietnam."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"aankomstformulier\" staat niet in de woordenlijst.",
-        "fragment": "Dan moet u online een digitaal aankomstformulier invullen (digital pre-arrival form).",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -31215,13 +30475,13 @@
     ],
     "zinnen": 86,
     "fout": 2,
-    "letop": 13,
+    "letop": 12,
     "linkzin": 3,
     "twijfel": 5,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 13,
+      "let-op": 12,
       "link-zin": 3,
       "info": 2,
       "twijfel": 5
@@ -31232,7 +30492,6 @@
       "medicijnen-voldoende": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 7,
@@ -31281,16 +30540,6 @@
         "boodschap": "\"Willekeurige arrestaties\" staat boven \"Criminaliteit\".",
         "fragment": "Willekeurige arrestaties",
         "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"korandemonstraties\" staat niet in de woordenlijst.",
-        "fragment": "Nederlanders doelwit na korandemonstraties",
-        "kop": "Willekeurige arrestaties",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -31458,13 +30707,13 @@
     ],
     "zinnen": 74,
     "fout": 3,
-    "letop": 13,
+    "letop": 12,
     "linkzin": 6,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 13,
+      "let-op": 12,
       "link-zin": 6,
       "info": 1,
       "twijfel": 0
@@ -31476,7 +30725,6 @@
       "nood-contactcenter": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-volgorde": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 9,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2,
@@ -31533,16 +30781,6 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
         "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"uitreist\" staat niet in de woordenlijst.",
-        "fragment": "Dit geldt als u Zuid-Afrika in- of uitreist.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -31681,13 +30919,13 @@
     ],
     "zinnen": 76,
     "fout": 1,
-    "letop": 8,
+    "letop": 7,
     "linkzin": 1,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 7,
       "link-zin": 1,
       "info": 0,
       "twijfel": 3
@@ -31695,7 +30933,6 @@
     "perRegel": {
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 4,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 3,
@@ -31716,16 +30953,6 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"jacking\" staat niet in de woordenlijst.",
-        "fragment": "Wees ook alert op ‘car jacking’.",
-        "kop": "Criminaliteit",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -31820,13 +31047,13 @@
     ],
     "zinnen": 68,
     "fout": 2,
-    "letop": 4,
+    "letop": 2,
     "linkzin": 4,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 4,
+      "let-op": 2,
       "link-zin": 4,
       "info": 1,
       "twijfel": 2
@@ -31835,7 +31062,6 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "kinderen-paspoort": 1,
-      "woord-onbekend": 2,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1
@@ -31864,26 +31090,6 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en visum nodig voor een reis naar Zimbabwe.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Zimbabwe."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"immigratiebalie\" staat niet in de woordenlijst.",
-        "fragment": "Vul het formulier in via de website van de Zimbabwaanse immigratiedienst (informatie in het Engels) en laat deze zien bij de immigratiebalie.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"inreisdatum\" staat niet in de woordenlijst.",
-        "fragment": "Wilt u de geldigheid van uw stempel met inreisdatum verlengen? Neem contact op met het immigratiekantoor in de hoofdstad Harare. U kunt de geldigheid met maximaal 1 maand verlengen.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",

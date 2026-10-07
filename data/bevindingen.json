@@ -9,13 +9,13 @@
       "groen"
     ],
     "zinnen": 45,
-    "fout": 2,
+    "fout": 1,
     "letop": 4,
     "linkzin": 3,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
-      "fout": 2,
+      "fout": 1,
       "let-op": 4,
       "link-zin": 3,
       "info": 1,
@@ -27,7 +27,6 @@
       "kinderen-paspoort": 1,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
-      "link-plakt-aan-woord": 1,
       "link-tekstlengte": 1
     },
     "bevindingen": [
@@ -103,23 +102,14 @@
         "kop": "Bagageregels"
       },
       {
-        "regel": "link-plakt-aan-woord",
-        "ernst": "fout",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "De link plakt aan het woord ervoor: \"ijk op de website van de Arubaanse overh…\".",
-        "fragment": "ijk op de website van de Arubaanse overheid voor welke landen dit geldt",
-        "herkomst": "aanvulling",
-        "notitie": "Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste letter van een woord buiten de link (\"K\" en dan \"ijk op de website\"), soms plakken twee woorden aan elkaar."
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
-        "boodschap": "Linktekst is 71 tekens. Maximaal 70.",
-        "fragment": "ijk op de website van de Arubaanse overheid voor welke landen dit geldt"
+        "boodschap": "Linktekst is 73 tekens. Maximaal 70.",
+        "fragment": "Kijk op de website van de Arubaanse overheid voor welke landen dit geldt."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "AFG.xml",
@@ -337,7 +327,7 @@
         "fragment": "Vrouwen moeten altijd vergezeld worden door een ‘mahram’ (een mannelijk familielid)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "AGO.xml",
@@ -351,13 +341,13 @@
     ],
     "zinnen": 88,
     "fout": 2,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
@@ -366,7 +356,6 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 1
     },
@@ -393,16 +382,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Pundo\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "Zoals Cabo Ledo, het schiereiland Mussolo, Kwanza Lodge, Quiçama National Park, Barro do Dande, Pedras Negras de Pundo Andongo en de Calendula Falls.",
-        "kop": "Landmijnen",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -465,7 +444,7 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 23 woorden. Maximaal 15.",
-        "fragment": "Zoals Cabo Ledo, het schiereiland Mussolo, Kwanza Lodge, Quiçama National Park, Barro do Dande, Pedras Negras de Pundo Andongo en de Calendula Falls.",
+        "fragment": "Zoals Cabo Ledo, het schiereiland Mussolo, Kwanza Lodge, Quiçama National Park, Barro do Dande, Pedras Negras de Pungo Andongo en de Calendula Falls.",
         "kop": "Landmijnen"
       },
       {
@@ -493,7 +472,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "AIA.xml",
@@ -554,7 +533,7 @@
         "fragment": "Orkanen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-11-2025 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-11-2025 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ALB.xml",
@@ -670,7 +649,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "AND.xml",
@@ -707,7 +686,7 @@
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ARE.xml",
@@ -755,8 +734,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "De kleurcode van het reisadvies voor de VAE is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -1040,7 +1019,7 @@
         "fragment": "Omstanders ‘helpen’ zogenaamd dit te verwijderen, terwijl u beroofd wordt."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ARM.xml",
@@ -1130,7 +1109,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ASM.xml",
@@ -1216,7 +1195,7 @@
         "fragment": "Neem contact op met de Department of Legal Affairs van Amerikaans-Samoa"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ATA.xml",
@@ -1391,7 +1370,7 @@
         "fragment": "Richtlijnen van de International Association of Antarctica Tour Operators (IAATO)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ATG.xml",
@@ -1455,7 +1434,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-03-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-03-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "AUS.xml",
@@ -1610,7 +1589,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "AUT.xml",
@@ -1680,7 +1659,7 @@
         "fragment": "Sinds oktober 2023 is het dreigingsniveau in Oostenrijk aangepast naar het niveau ‘hoog’, als gevolg van de situatie in het Midden-Oosten."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "AZE.xml",
@@ -1694,20 +1673,19 @@
     ],
     "zinnen": 74,
     "fout": 0,
-    "letop": 3,
+    "letop": 2,
     "linkzin": 2,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 2,
       "link-zin": 2,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
       "kinderen-paspoort": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1
     },
@@ -1719,16 +1697,6 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en visum nodig voor een reis naar Azerbeidzjan. Reist u alleen met 1 of meer kinderen jonger dan 18 jaar? Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee. Zo voorkomt u problemen en lange wachttijden bij grenscontroles.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Azerbeidzjan."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Khojavand\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "De regio Karabach en omringende districten (Zengilan, Jabrayil, Qubadli, Lachin, Kelbajar, Fizuli, Khojavand, Agdam en Tartar). Toegang tot dit gebied zonder toestemming vooraf van de Azerbeidzjaanse autoriteiten is voor buitenlanders verboden. In het hele gebied liggen niet-ontplofte munitie en mijnen.",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -1771,7 +1739,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BDI.xml",
@@ -1963,7 +1931,7 @@
         "fragment": "Reis ook niet op de RN9 (tussen Bubanza en Bukinanyana, langs het Kibirawoud) en op de RN5 (tussen Bujumbura en Bukavu) tussen 18.00 uur ‘s avonds en 8."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BEL.xml",
@@ -2070,7 +2038,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 06-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 06-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BEN.xml",
@@ -2192,7 +2160,7 @@
         "fragment": "De grensstrook (50 km) tussen Benin en Nigeria, in de departementen Alibori en Borgou."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BFA.xml",
@@ -2239,8 +2207,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies voor Burkina Faso is voor het grootste deel rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -2363,7 +2331,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BGD.xml",
@@ -2577,7 +2545,7 @@
         "fragment": "Neem hiervoor contact op met het ministerie van Buitenlandse Zaken van Bangladesh"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BGR.xml",
@@ -2639,7 +2607,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BHR.xml",
@@ -2728,7 +2696,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BHS.xml",
@@ -2741,20 +2709,19 @@
     ],
     "zinnen": 63,
     "fout": 1,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 4,
       "link-tekstlengte": 1
     },
@@ -2766,16 +2733,6 @@
         "boodschap": "\"Foto’s maken\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Foto’s maken",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"metrologisch\" staat niet in de woordenlijst.",
-        "fragment": "Lees actuele informatie over het weer op de Bahama's op de website van het metrologisch instituut van de Bahama’s (informatie in het Engels).",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -2798,7 +2755,7 @@
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 23 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "Lees actuele informatie over het weer op de Bahama's op de website van het metrologisch instituut van de Bahama’s (informatie in het Engels).",
+        "fragment": "Lees actuele informatie over het weer op de Bahama's op de website van het meteorologisch instituut van de Bahama’s (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -2817,7 +2774,7 @@
         "fragment": "contact op met het Nederlandse consulaat-generaal in Miami, Verenigde Staten"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BIH.xml",
@@ -2871,7 +2828,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BLR.xml",
@@ -2915,8 +2872,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Belarus en Oekraïne. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -3015,7 +2972,7 @@
         "fragment": "Heeft u naast de Nederlandse ook de Belarussische nationaliteit?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BLZ.xml",
@@ -3095,7 +3052,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BOL.xml",
@@ -3388,7 +3345,7 @@
         "fragment": "U kunt ook de app ‘An sivetur’ downloaden."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BQ-BO.xml",
@@ -3515,7 +3472,7 @@
         "fragment": "Lees wat u kunt doen op de crisiswebsite van het Openbaar Lichaam Bonaire"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BQ-SA.xml",
@@ -3896,7 +3853,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BRB.xml",
@@ -3950,7 +3907,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BRN.xml",
@@ -4025,7 +3982,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BTN.xml",
@@ -4136,7 +4093,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "BWA.xml",
@@ -4172,8 +4129,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
-        "fragment": "De kleurcode van het reisadvies voor Botswana is geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "De kleurcode van het reisadvies voor Botswana is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt hierheen reizen.",
+        "verwacht": "U kunt erheen reizen.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
@@ -4209,7 +4166,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CAF.xml",
@@ -4327,7 +4284,7 @@
         "fragment": "Neem contact op met de ambassade van de Centraal-Afrikaanse Republiek in Brussel"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CAN.xml",
@@ -4340,13 +4297,13 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 8,
+    "letop": 7,
     "linkzin": 5,
     "twijfel": 0,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
+      "let-op": 7,
       "link-zin": 5,
       "info": 2,
       "twijfel": 0
@@ -4355,7 +4312,6 @@
       "reisverzekering-vaste-tekst": 1,
       "bagage-heen": 1,
       "kinderen-paspoort": 1,
-      "woord-onbekend": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1,
@@ -4385,16 +4341,6 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en een reisautorisatie (eTA) nodig voor een reis naar Canada.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Canada."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"autorisation\" staat niet in de woordenlijst.",
-        "fragment": "Blijft u 6 maanden of korter in Canada? En reist u met een Nederlands paspoort? Check voor vertrek of u een reisautorisatie nodig heeft. Dit heet een eTA (electronic travel autorisation). U heeft ook een eTA nodig als u een overstap maakt in Canada. Vraag een eTA aan op de website van de Canadese overheid (informatie in het Engels en Frans).",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "tekst-niet-melden",
@@ -4484,7 +4430,7 @@
         "fragment": "Bekijk of u een verklaring nodig heeft voor uw medicijnen op de website van de Canadese overheid"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CHE.xml",
@@ -4529,7 +4475,7 @@
         "fragment": "Europese ziektekostenverzekeringskaart (European Health Insurance Card, EHIC)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CHL.xml",
@@ -4781,7 +4727,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CHN.xml",
@@ -5159,7 +5105,7 @@
         "fragment": "Wees alert op Chinese jongeren die goed Engels spreken en zich als ‘gids’ aanbieden."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CIV.xml",
@@ -5198,8 +5144,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Ivoorkust geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -5235,7 +5181,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CMR.xml",
@@ -5250,13 +5196,13 @@
     ],
     "zinnen": 97,
     "fout": 2,
-    "letop": 7,
+    "letop": 5,
     "linkzin": 3,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 7,
+      "let-op": 5,
       "link-zin": 3,
       "info": 1,
       "twijfel": 5
@@ -5264,7 +5210,6 @@
     "perRegel": {
       "kleur-variant": 1,
       "nood-contactcenter": 1,
-      "woord-onbekend": 2,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 4,
@@ -5277,8 +5222,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor de noordelijke punt van Kameroen en de grensgebieden met Nigeria en de Centraal-Afrikaanse Republiek. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -5288,26 +5233,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Cameroun\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "De streek rond Mount Cameroun is een risicogebied.",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Adamaouad\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "de regio Adamaouad",
-        "kop": "Regionale risico’s",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -5420,7 +5345,7 @@
         "fragment": "Het grensgebied tussen Kameroen en Nigeria (40 km vanaf de grens)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "COD.xml",
@@ -5478,8 +5403,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor het noorden en oosten van de DRC en voor de provincie Maï-Ndombe. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -5746,7 +5671,7 @@
         "fragment": "Lees meer over rijden in de DRC op de website van de ANWB onder ‘Congo-Kinshasa’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "COG.xml",
@@ -5875,7 +5800,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "COK.xml",
@@ -5920,7 +5845,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "COL.xml",
@@ -6209,7 +6134,7 @@
         "kop": "Demonstraties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "COM.xml",
@@ -6245,8 +6170,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
-        "fragment": "De kleurcode van het reisadvies voor de Comoren is geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "De kleurcode van het reisadvies voor Comoren is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt hierheen reizen.",
+        "verwacht": "U kunt erheen reizen.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
@@ -6305,7 +6230,7 @@
         "fragment": "Neem contact op met de ambassade van de Comoren in Brussel voor meer informatie over visa"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CPV.xml",
@@ -6378,7 +6303,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CRI.xml",
@@ -6603,26 +6528,26 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CUB.xml",
     "iso": "CUB",
     "land": "Cuba",
-    "woorden": 1887,
+    "woorden": 1888,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "oranje"
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 13,
+    "letop": 12,
     "linkzin": 4,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 13,
+      "let-op": 12,
       "link-zin": 4,
       "info": 0,
       "twijfel": 2
@@ -6636,15 +6561,14 @@
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 1,
       "link-tekstlengte": 1,
-      "aanhalingstekens": 1,
-      "afkortingen-uitschrijven": 1
+      "aanhalingstekens": 1
     },
     "bevindingen": [
       {
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 1887 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
+        "boodschap": "Het advies telt 1888 woorden. De richtlijn is minder dan 1500 bij 1 kleurcode.",
         "detail": [
           "Paspoort, visum, rijbewijs (384 woorden)",
           "Actueel (245 woorden)",
@@ -6808,15 +6732,9 @@
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘D’. Gebruik geen aanhalingstekens.",
         "fragment": "Maximaal 48 uur voor vertrek naar Cuba moet u het online immigratieformulier ‘D’Viajeros’ invullen (informatie in het Spaans)."
-      },
-      {
-        "regel": "afkortingen-uitschrijven",
-        "ernst": "let-op",
-        "bron": "SW, Schrijfregels > Afkortingen",
-        "boodschap": "\"etc.\" uitschrijven als \"enzovoort\" (1×)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CUW.xml",
@@ -6929,7 +6847,7 @@
         "fragment": "Slachtoffers worden ook wel ‘trago-meisjes’ genoemd."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CYM.xml",
@@ -7009,7 +6927,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CYP.xml",
@@ -7164,7 +7082,7 @@
         "fragment": "Dit deel noemt zich de ‘Turkse Republiek van Noord-Cyprus’ en wordt alleen door Turkije erkend."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "CZE.xml",
@@ -7255,7 +7173,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "DEU.xml",
@@ -7366,7 +7284,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "DJI.xml",
@@ -7408,8 +7326,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor de grensgebieden met Eritrea en Somalië. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -7490,7 +7408,7 @@
         "fragment": "het grensgebied tussen Djibouti en Eritrea (10 km tot de grens)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "DMA.xml",
@@ -7577,7 +7495,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "DNK.xml",
@@ -7644,7 +7562,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "DOM.xml",
@@ -7756,7 +7674,7 @@
         "fragment": "Neem contact op met de ambassade van de Dominicaanse Republiek in Den Haag"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "DZA.xml",
@@ -7967,7 +7885,7 @@
         "fragment": "Zoals een bonnetje van de winkel of een ‘certificaat van authenticiteit’, waarop staat dat uw souvenir een kopie is en geen origineel antiek voorwerp."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ECU.xml",
@@ -7982,13 +7900,13 @@
     ],
     "zinnen": 148,
     "fout": 5,
-    "letop": 19,
+    "letop": 18,
     "linkzin": 6,
     "twijfel": 7,
     "info": 0,
     "perErnst": {
       "fout": 5,
-      "let-op": 19,
+      "let-op": 18,
       "link-zin": 6,
       "info": 0,
       "twijfel": 7
@@ -7998,7 +7916,7 @@
       "kleur-variant": 2,
       "nood-contactcenter": 1,
       "tekst-dubbel-woord": 1,
-      "woord-onbekend": 6,
+      "woord-onbekend": 5,
       "zin-max-woorden": 12,
       "zin-lijdende-vorm": 4,
       "zin-frequentiewoord": 7,
@@ -8022,8 +7940,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Ecuador en Colombia. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -8031,8 +7949,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Ecuador geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -8053,16 +7971,6 @@
         "verwacht": "via",
         "herkomst": "aanvulling",
         "notitie": "Meestal blijft bij het herschrijven van een zin het oude woord staan."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Guyaquil\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "In een noodgeval kunt u terecht bij de honorair consul van Nederland in Quito of Guyaquil (informatie in het Engels).",
-        "kop": "In geval van nood",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "woord-onbekend",
@@ -8279,7 +8187,7 @@
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 20 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "In een noodgeval kunt u terecht bij de honorair consul van Nederland in Quito of Guyaquil (informatie in het Engels).",
+        "fragment": "In een noodgeval kunt u terecht bij de honorair consul van Nederland in Quito of Guayaquil (informatie in het Engels).",
         "kop": "In geval van nood"
       },
       {
@@ -8310,7 +8218,7 @@
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘rip currents’. Gebruik geen aanhalingstekens.",
-        "fragment": "Aan de kust van Ecuador komen gevaarlijke stromingen voor (muistromingen of ‘rip currents’)."
+        "fragment": "Aan de kust van Ecuador komen gevaarlijke stromingen voor (muistromen of ‘rip currents’)."
       },
       {
         "regel": "aanhalingstekens",
@@ -8320,7 +8228,7 @@
         "fragment": "De periode van 365 dagen (het ‘chronologische jaar’) gaat in op de dag van uw (eerste) aankomst als toerist."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "EGY.xml",
@@ -8516,7 +8424,7 @@
         "fragment": "U kunt het slachtoffer worden van ‘bezness’ (liefdesfraude)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ERI.xml",
@@ -8579,7 +8487,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ESP.xml",
@@ -8732,7 +8640,7 @@
         "fragment": "Kijk in de grote steden uit voor de ‘spuugtruc’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-10-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-10-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "EST.xml",
@@ -8842,13 +8750,13 @@
         "fragment": "En bekijk actuele informatie over welke documenten u nodig heeft om de grens over te steken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ETH.xml",
     "iso": "ETH",
     "land": "Ethiopië",
-    "woorden": 2239,
+    "woorden": 2237,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
@@ -8857,13 +8765,13 @@
     ],
     "zinnen": 110,
     "fout": 4,
-    "letop": 10,
+    "letop": 8,
     "linkzin": 4,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 10,
+      "let-op": 8,
       "link-zin": 4,
       "info": 1,
       "twijfel": 3
@@ -8874,19 +8782,17 @@
       "actueel-max-woorden": 1,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
-      "woord-onbekend": 1,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 3,
       "zin-max-woorden": 8,
-      "aanhalingstekens": 2,
-      "afkortingen-uitschrijven": 1
+      "aanhalingstekens": 2
     },
     "bevindingen": [
       {
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 2239 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
+        "boodschap": "Het advies telt 2237 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
           "Regionale risico’s (553 woorden)",
           "Paspoort, visum, rijbewijs (267 woorden)",
@@ -8899,8 +8805,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor grote delen van het noorden en westen van Ethiopië en de zone Guji in het zuiden. En voor alle grensgebieden van Ethiopië (behalve de grens met Djibouti). Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -8925,16 +8831,6 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Wetten en gebruiken\".",
         "fragment": "Terrorisme",
         "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"o.a\" staat niet in de woordenlijst.",
-        "fragment": "U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals o.a. dengue (knokkelkoorts), chikungunya, zikakoorts, malaria en gele koorts.",
-        "kop": "Reisvaccinaties",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -9053,15 +8949,9 @@
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘nep-nieuws’. Gebruik geen aanhalingstekens.",
         "fragment": "De Ethiopische overheid houdt sociale media in de gaten om verspreiding van ‘nep-nieuws’ te voorkomen."
-      },
-      {
-        "regel": "afkortingen-uitschrijven",
-        "ernst": "let-op",
-        "bron": "SW, Schrijfregels > Afkortingen",
-        "boodschap": "\"o.a.\" uitschrijven als \"onder andere\" (1×)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-10-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-10-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "FIN.xml",
@@ -9162,7 +9052,7 @@
         "notitie": "Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste letter van een woord buiten de link (\"K\" en dan \"ijk op de website\"), soms plakken twee woorden aan elkaar."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "FJI.xml",
@@ -9304,7 +9194,7 @@
         "fragment": "Houd bij hevige regenval ook rekening met ‘flash floods’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "FRA.xml",
@@ -9461,7 +9351,7 @@
         "fragment": "De Franse overheid schat de kans op een terroristische aanslag op dit moment in als ‘waarschijnlijk’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "FRO.xml",
@@ -9487,7 +9377,7 @@
     },
     "perRegel": {},
     "bevindingen": [],
-    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "FSM.xml",
@@ -9617,7 +9507,7 @@
         "fragment": "Neem contact op met de ambassade van Micronesië in Washington D.C., Verenigde Staten"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GAB.xml",
@@ -9705,7 +9595,7 @@
         "fragment": "Ambulance: 1300 / 01 73 30 99"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GBR.xml",
@@ -9907,8 +9797,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor de regio’s Abchazië en Zuid-Ossetië. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -9916,8 +9806,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Georgië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -10070,7 +9960,7 @@
         "fragment": "het grensgebied tussen de regio’s Abchazië en Zuid-Ossetië en de rest van Georgië (‘administrative boundary lines’)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GHA.xml",
@@ -10231,7 +10121,7 @@
         "fragment": "Pas op voor ‘love scams’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GIN.xml",
@@ -10336,7 +10226,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GLP.xml",
@@ -10397,7 +10287,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GMB.xml",
@@ -10549,7 +10439,7 @@
         "fragment": "Deze toeslag is 20 euro, 20 Amerikaanse dollar of 1."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GNB.xml",
@@ -10595,7 +10485,7 @@
         "kop": "Regionale risico's"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GNQ.xml",
@@ -10632,7 +10522,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GRC.xml",
@@ -10645,13 +10535,13 @@
     ],
     "zinnen": 67,
     "fout": 1,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 6,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 6,
       "info": 1,
       "twijfel": 5
@@ -10660,7 +10550,6 @@
       "h4-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-volgorde": 1,
-      "woord-onbekend": 1,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 4,
@@ -10692,16 +10581,6 @@
         "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"weerssituatie\" staat niet in de woordenlijst.",
-        "fragment": "Lees meer over de actuele weerssituatie op de website van de Griekse weerdienst, HNMS (informatie in het Engels).",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -10730,7 +10609,7 @@
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "Lees meer over de actuele weerssituatie op de website van de Griekse weerdienst, HNMS (informatie in het Engels).",
+        "fragment": "Lees meer over de actuele weersituatie op de website van de Griekse weerdienst, HNMS (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -10806,7 +10685,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GRD.xml",
@@ -10876,7 +10755,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GRL.xml",
@@ -10938,7 +10817,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GTM.xml",
@@ -11169,7 +11048,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GUF.xml",
@@ -11241,7 +11120,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "GUY.xml",
@@ -11350,7 +11229,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "HKG.xml",
@@ -11465,7 +11344,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "HND.xml",
@@ -11612,7 +11491,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "HRV.xml",
@@ -11702,7 +11581,7 @@
         "fragment": "Bos- en natuurbranden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "HTI.xml",
@@ -11821,7 +11700,7 @@
         "fragment": "Alleen kleine regionale luchtvaartmaatschappijen voeren nog een beperkt aantal vluchten uit vanuit het vliegveld Cap-Haïtien."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "HUN.xml",
@@ -11867,7 +11746,7 @@
         "kop": "Demonstraties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 31-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 31-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "IDN.xml",
@@ -12267,7 +12146,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "IND.xml",
@@ -12282,13 +12161,13 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 35,
+    "letop": 34,
     "linkzin": 5,
     "twijfel": 10,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 35,
+      "let-op": 34,
       "link-zin": 5,
       "info": 3,
       "twijfel": 10
@@ -12302,7 +12181,7 @@
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 2,
+      "woord-onbekend": 1,
       "tekst-niet-melden": 3,
       "zin-max-woorden": 24,
       "zin-frequentiewoord": 10,
@@ -12336,8 +12215,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies van India is rood voor de regio’s Jammu en Kasjmir, Aksai Chin, voor de deelstaat Manipur en voor de grensstrook tussen India en Pakistan. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -12384,16 +12263,6 @@
         "boodschap": "\"Lakshadweep\" staat niet in de woordenlijst.",
         "fragment": "Lakshadweep",
         "kop": "Wetten en gebruiken",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"weerswaarschuwingen\" staat niet in de woordenlijst.",
-        "fragment": "Check de weerswaarschuwingen op de website van het India Meteorological Department (informatie in het Engels).",
-        "kop": "Natuurgeweld",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
@@ -12756,7 +12625,7 @@
         "fragment": "U kunt uw visum verlengen via de Indian Bureau of Immigration / Foreigners Regional Registration Office (FRRO)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "IRL.xml",
@@ -12866,7 +12735,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "IRN.xml",
@@ -13178,7 +13047,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "IRQ.xml",
@@ -13407,7 +13276,7 @@
         "fragment": "Algemeen alarmnummer: +964 (0) 751 501 9756 (alleen in de provincie Erbil)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ISL.xml",
@@ -13444,8 +13313,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "De kleurcode van het reisadvies is geel voor het schiereiland Reykjanes. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -13453,8 +13322,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van IJsland geldt kleurcode groen. U kunt erheen reizen. Lees welke veiligheidsrisico’s er zijn.",
-        "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -13497,7 +13366,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ISR.xml",
@@ -13538,8 +13407,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor de grensgebieden tussen Israël en Gaza, Libanon en Egypte. Ook voor de bezette Golanhoogten geldt kleurcode rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico's.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -13733,7 +13602,7 @@
         "fragment": "Neem voor vertrek naar Israël contact op met de ambassade van Israël in Den Haag"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ITA.xml",
@@ -13865,7 +13734,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "JAM.xml",
@@ -13927,7 +13796,7 @@
         "fragment": "Neem hiervoor contact op met de ambassade van Jamaica in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "JOR.xml",
@@ -14097,7 +13966,7 @@
         "fragment": "Droge ‘wadi’s’ (valleien) lopen dan snel onder water."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "JPN.xml",
@@ -14140,8 +14009,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies voor het zuidoosten van Fukushima is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico's.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -14257,7 +14126,7 @@
         "fragment": "U mag in Japan maximaal 120 ml per maand aan e-sigarettenvloeistof bij u hebben voor eigen gebruik."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "KAZ.xml",
@@ -14344,28 +14213,28 @@
         "fragment": "In december 2025 is in Kazachstan wetgeving aangenomen die gericht is op het tegengaan van wat de autoriteiten beschouwen als ‘lhbtiq+-propaganda’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "KEN.xml",
     "iso": "KEN",
     "land": "Kenia",
-    "woorden": 1934,
+    "woorden": 1935,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
       "oranje",
       "geel"
     ],
-    "zinnen": 122,
+    "zinnen": 123,
     "fout": 2,
-    "letop": 14,
+    "letop": 13,
     "linkzin": 4,
     "twijfel": 2,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 14,
+      "let-op": 13,
       "link-zin": 4,
       "info": 2,
       "twijfel": 2
@@ -14381,8 +14250,7 @@
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2,
-      "aanhalingstekens": 3,
-      "afkortingen-uitschrijven": 1
+      "aanhalingstekens": 3
     },
     "bevindingen": [
       {
@@ -14390,8 +14258,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor het oosten van Kenia dat grenst aan Somalië en Ethiopië. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -14563,15 +14431,9 @@
         "bron": "SW, Schrijfregels > Aanhalingstekens",
         "boodschap": "Aanhalingstekens om ‘carjacking’. Gebruik geen aanhalingstekens.",
         "fragment": "Kijk dan uit voor ‘carjacking’."
-      },
-      {
-        "regel": "afkortingen-uitschrijven",
-        "ernst": "let-op",
-        "bron": "SW, Schrijfregels > Afkortingen",
-        "boodschap": "\"etc.\" uitschrijven als \"enzovoort\" (1×)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "KGZ.xml",
@@ -14642,7 +14504,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "KHM.xml",
@@ -14684,8 +14546,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor de strook van 5 kilometer vanaf de grens met Thailand. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -14693,8 +14555,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Cambodja geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -14926,7 +14788,7 @@
         "fragment": "Of gaat u reizen met de bus of motortaxi (‘motodop’)?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "KIR.xml",
@@ -15038,7 +14900,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "KNA.xml",
@@ -15107,7 +14969,7 @@
         "fragment": "Neem contact op met de ambassade van Saint Kitts en Nevis in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "KOR.xml",
@@ -15147,8 +15009,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode geel wijkt af van de vaste tekst.",
-        "fragment": "Kleurcode geel geldt voor het gebied ten zuiden van de gedemilitariseerde zone (DMZ). U kunt hierheen reizen in een georganiseerde groep. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt hierheen reizen in een georganiseerde groep.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -15263,7 +15125,7 @@
         "kop": "Medicijnen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "KWT.xml",
@@ -15411,7 +15273,7 @@
         "fragment": "Koeweit erkent alleen paspoorten die het geslacht aangeven met de letters ‘M’ (man) of ‘F’ (vrouw)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LAO.xml",
@@ -15701,7 +15563,7 @@
         "fragment": "Ook bieden personen die ‘samenwerken’ met de lokale politie soms drugs aan op straat en in bars, om toeristen in de val te lokken."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LBN.xml",
@@ -15714,13 +15576,13 @@
     ],
     "zinnen": 92,
     "fout": 1,
-    "letop": 12,
+    "letop": 11,
     "linkzin": 2,
     "twijfel": 3,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
+      "let-op": 11,
       "link-zin": 2,
       "info": 3,
       "twijfel": 3
@@ -15730,7 +15592,6 @@
       "bagage-heen": 1,
       "kinderen-paspoort": 1,
       "rubriek-vrij-te-hoog": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 2,
@@ -15773,16 +15634,6 @@
         "boodschap": "\"Demonstraties\" staat boven \"Wetten en gebruiken\".",
         "fragment": "Demonstraties",
         "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Hairi\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "Het Libanese luchtruim is open. U kunt via andere Europese luchthavens naar Nederland vliegen. Lees meer informatie op de website van Beirut-Rafic Hairi International Airport (informatie in het Engels).",
-        "kop": "Actueel",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -15912,7 +15763,7 @@
         "fragment": "Diefstal uit en van auto’s (‘carjacking’) komt voor."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LBR.xml",
@@ -15992,7 +15843,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-03-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-03-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LBY.xml",
@@ -16033,8 +15884,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft één kleurcode, dus bij rood hoort de volledige uitleg. Nu staat de verkorte variant er.",
-        "fragment": "De kleurcode van het reisadvies voor Libië is rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
-        "verwacht": "De kleurcode van het reisadvies voor Libië is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "fragment": "Wat uw situatie ook is: reis niet hierheen.",
+        "verwacht": "Wat uw situatie ook is: reis er niet heen.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
@@ -16158,7 +16009,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LCA.xml",
@@ -16219,7 +16070,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LIE.xml",
@@ -16273,7 +16124,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LKA.xml",
@@ -16578,7 +16429,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LTU.xml",
@@ -16649,7 +16500,7 @@
         "fragment": "Download de LT72 app om notificaties te ontvangen en volg de laatste adviezen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LUX.xml",
@@ -16695,7 +16546,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "LVA.xml",
@@ -16766,7 +16617,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MAC.xml",
@@ -16863,7 +16714,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MAR.xml",
@@ -16878,13 +16729,13 @@
     ],
     "zinnen": 108,
     "fout": 2,
-    "letop": 10,
+    "letop": 9,
     "linkzin": 5,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
+      "let-op": 9,
       "link-zin": 5,
       "info": 1,
       "twijfel": 2
@@ -16895,7 +16746,6 @@
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
@@ -16907,8 +16757,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Marokko geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -16940,16 +16790,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Landmijnen"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"motorvoortuigen\" staat niet in de woordenlijst.",
-        "fragment": "Reist u met een groep motorvoortuigen via Marokko naar landen ten zuiden van Marokko?",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -17063,82 +16903,33 @@
         "fragment": "Wilt u samen met uw echtgenoot of partner in een hotel of andere accommodatie verblijven?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MCO.xml",
     "iso": "MCO",
     "land": "Monaco",
-    "woorden": 815,
+    "woorden": 809,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "groen"
     ],
     "zinnen": 39,
     "fout": 0,
-    "letop": 3,
-    "linkzin": 1,
+    "letop": 0,
+    "linkzin": 0,
     "twijfel": 0,
-    "info": 1,
+    "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
-      "link-zin": 1,
-      "info": 1,
+      "let-op": 0,
+      "link-zin": 0,
+      "info": 0,
       "twijfel": 0
     },
-    "perRegel": {
-      "h2-vast": 1,
-      "bagage-heen": 1,
-      "woord-onbekend": 2,
-      "zin-max-woorden": 1
-    },
-    "bevindingen": [
-      {
-        "regel": "h2-vast",
-        "ernst": "let-op",
-        "bron": "MX, tab Uitleg",
-        "boodschap": "\"Welke veiilgheidsrisico's zijn er in Monaco?\" is geen vaste H2. Vast zijn: In het kort / Welke veiligheidsrisico's zijn er in Monaco? / Wat kan ik doen in een noodsituatie? / Hoe bereid ik mijn reis naar Monaco voor? / Ook nuttig.",
-        "fragment": "Welke veiilgheidsrisico's zijn er in Monaco?"
-      },
-      {
-        "regel": "bagage-heen",
-        "ernst": "info",
-        "bron": "SJ, blok Bagageregels",
-        "boodschap": "De tekst over de douaneregels van het land zelf wijkt af van de vaste tekst.",
-        "fragment": "Check wat u mag meenenemen naar Monaco op de website van de Franse douane (informatie in het Engels).",
-        "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Monaco."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"meenenemen\" staat niet in de woordenlijst.",
-        "fragment": "Check wat u mag meenenemen naar Monaco op de website van de Franse douane (informatie in het Engels).",
-        "kop": "Bagageregels",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"veiilgheidsrisico's\" staat niet in de woordenlijst.",
-        "fragment": "Welke veiilgheidsrisico's zijn er in Monaco?",
-        "kop": "Welke veiilgheidsrisico's zijn er in Monaco?",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "link-zin",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "Check wat u mag meenenemen naar Monaco op de website van de Franse douane (informatie in het Engels).",
-        "kop": "Bagageregels"
-      }
-    ],
-    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "perRegel": {},
+    "bevindingen": [],
+    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MDA.xml",
@@ -17178,8 +16969,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Moldavië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -17240,7 +17031,7 @@
         "kop": "Demonstraties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MDG.xml",
@@ -17376,7 +17167,7 @@
         "fragment": "Vliegreis via Midden-Oosten"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MDV.xml",
@@ -17510,7 +17301,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MEX.xml",
@@ -17566,8 +17357,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor de actieve vulkanen Popocatépetl en Colima. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -17800,7 +17591,7 @@
         "fragment": "In de steden van Mexico is er risico op ‘express’-ontvoeringen."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MHL.xml",
@@ -17918,7 +17709,7 @@
         "fragment": "Neem contact op met het Ministerie van Immigratie van de Marshalleilanden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MKD.xml",
@@ -17972,7 +17763,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MLI.xml",
@@ -18081,7 +17872,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MLT.xml",
@@ -18177,7 +17968,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MMR.xml",
@@ -18402,7 +18193,7 @@
         "fragment": "Hier zijn drugsbendes actief en ‘scamming kartels’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MNE.xml",
@@ -18510,7 +18301,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MNG.xml",
@@ -18605,7 +18396,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MOZ.xml",
@@ -18620,13 +18411,13 @@
     ],
     "zinnen": 106,
     "fout": 3,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
@@ -18634,7 +18425,7 @@
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "woord-onbekend": 6,
+      "woord-onbekend": 5,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
@@ -18646,8 +18437,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor het noordoosten van de provincie Cabo Delgado. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -18704,16 +18495,6 @@
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Muidumbe\" staat niet in de woordenlijst.",
         "fragment": "Muidumbe",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"prvincie\" staat niet in de woordenlijst.",
-        "fragment": "De districten Erati en Memba in het noorden van de prvincie Nampula (sinds 4 december 2025).",
         "kop": "Regionale risico's",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
@@ -18784,7 +18565,7 @@
         "notitie": "De link begint met een spatie. Op de pagina ziet niemand dat, maar het klikvlak loopt een teken te ver naar links."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MRT.xml",
@@ -18799,20 +18580,19 @@
     ],
     "zinnen": 90,
     "fout": 1,
-    "letop": 7,
+    "letop": 6,
     "linkzin": 1,
     "twijfel": 2,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
+      "let-op": 6,
       "link-zin": 1,
       "info": 0,
       "twijfel": 2
     },
     "perRegel": {
       "kleur-variant": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 1
@@ -18823,19 +18603,9 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor een groot deel van het (noord)oosten van Mauritanië. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Noukachott\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "In een noodgeval kunt u ook terecht bij de honorair consul van Nederland in Noukachott (informatie in het Engels).",
-        "kop": "In geval van nood",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -18910,7 +18680,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MSR.xml",
@@ -19031,7 +18801,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MTQ.xml",
@@ -19121,34 +18891,32 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MUS.xml",
     "iso": "MUS",
     "land": "Mauritius",
-    "woorden": 1229,
+    "woorden": 1228,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "geel"
     ],
     "zinnen": 60,
-    "fout": 1,
-    "letop": 5,
+    "fout": 0,
+    "letop": 4,
     "linkzin": 5,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
-      "fout": 1,
-      "let-op": 5,
+      "fout": 0,
+      "let-op": 4,
       "link-zin": 5,
       "info": 0,
       "twijfel": 1
     },
     "perRegel": {
       "h2-vast": 1,
-      "tekst-plakfout": 1,
-      "woord-onbekend": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 8
     },
@@ -19159,26 +18927,6 @@
         "bron": "MX, tab Uitleg",
         "boodschap": "\"Hoe bereid ik mijn reis voor naar Mauritius?\" is geen vaste H2. Vast zijn: In het kort / Welke veiligheidsrisico's zijn er in Mauritius? / Wat kan ik doen in een noodsituatie? / Hoe bereid ik mijn reis naar Mauritius voor? / Ook nuttig.",
         "fragment": "Hoe bereid ik mijn reis voor naar Mauritius?"
-      },
-      {
-        "regel": "tekst-plakfout",
-        "ernst": "fout",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"invullen.n\": hier is een spatie vergeten.",
-        "fragment": "Als u het formulier bij aankomst nog niet heeft ingevuld, dan moet u op het vliegveld alsnog een immigratieformulier invullen.n.",
-        "kop": "Paspoort, visum, rijbewijs",
-        "herkomst": "aanvulling",
-        "notitie": "Let op: hier staat een los teken tegen het woord aan. Kijk of dat weg moet in plaats van dat er een spatie bij komt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Mauritus\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "Lees informatie over het weer in Mauritus op de website van de Meteorologische dienst van Mauritius (informatie in het Engels).",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -19217,7 +18965,7 @@
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 20 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "Lees informatie over het weer in Mauritus op de website van de Meteorologische dienst van Mauritius (informatie in het Engels).",
+        "fragment": "Lees informatie over het weer in Mauritius op de website van de Meteorologische dienst van Mauritius (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -19248,12 +18996,12 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 21 woorden. Maximaal 15.",
-        "fragment": "Als u het formulier bij aankomst nog niet heeft ingevuld, dan moet u op het vliegveld alsnog een immigratieformulier invullen.n.",
+        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
+        "fragment": "Als u het formulier bij aankomst nog niet heeft ingevuld, dan moet u op het vliegveld alsnog een immigratieformulier invullen.",
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MWI.xml",
@@ -19357,7 +19105,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "MYS.xml",
@@ -19445,7 +19193,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NAM.xml",
@@ -19526,7 +19274,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-10-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-10-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NCL.xml",
@@ -19572,7 +19320,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NER.xml",
@@ -19666,13 +19414,13 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NGA.xml",
     "iso": "NGA",
     "land": "Nigeria",
-    "woorden": 1779,
+    "woorden": 1778,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
@@ -19680,20 +19428,19 @@
     ],
     "zinnen": 115,
     "fout": 0,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 5,
     "twijfel": 8,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 5,
       "info": 0,
       "twijfel": 8
     },
     "perRegel": {
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 3
@@ -19705,16 +19452,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"lassakoortsvirus\" staat niet in de woordenlijst.",
-        "fragment": "In Nigeria is een uitbraak van het lassakoortsvirus.",
-        "kop": "Reisvaccinaties",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -19893,7 +19630,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NIC.xml",
@@ -20109,7 +19846,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NIU.xml",
@@ -20154,7 +19891,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NOR.xml",
@@ -20216,7 +19953,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NPL.xml",
@@ -20328,7 +20065,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NRU.xml",
@@ -20480,7 +20217,7 @@
         "fragment": "neem contact op met het consulaat-generaal van Naoero in Brisbane, Australië"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "NZL.xml",
@@ -20658,7 +20395,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "OMN.xml",
@@ -20701,8 +20438,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Oman geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -20811,13 +20548,13 @@
         "fragment": "Deze ‘flash floods’ sleuren alles mee en zijn vaak dodelijk."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PAK.xml",
     "iso": "PAK",
     "land": "Pakistan",
-    "woorden": 2116,
+    "woorden": 2115,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
@@ -20826,13 +20563,13 @@
     ],
     "zinnen": 116,
     "fout": 3,
-    "letop": 11,
+    "letop": 9,
     "linkzin": 2,
     "twijfel": 10,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 11,
+      "let-op": 9,
       "link-zin": 2,
       "info": 0,
       "twijfel": 10
@@ -20842,7 +20579,7 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 3,
+      "woord-onbekend": 1,
       "zin-frequentiewoord": 7,
       "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1,
@@ -20854,7 +20591,7 @@
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 2116 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
+        "boodschap": "Het advies telt 2115 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
           "Regionale risico's (403 woorden)",
           "Wetten en gebruiken (251 woorden)",
@@ -20890,28 +20627,8 @@
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Baluchistan\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "In Pakistan komen regelmatig terroristische aanslagen en andere gewelddadige incidenten voor, vooral in de provincies Baluchistan en Khyber-Phakhtunkhwa.",
+        "fragment": "In Pakistan komen regelmatig terroristische aanslagen en andere gewelddadige incidenten voor, vooral in de provincies Baluchistan en Khyber-Pakhtunkhwa.",
         "kop": "Terrorisme",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Khyber-Phakhtunkhwa\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "In Pakistan komen regelmatig terroristische aanslagen en andere gewelddadige incidenten voor, vooral in de provincies Baluchistan en Khyber-Phakhtunkhwa.",
-        "kop": "Terrorisme",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Balistan\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "Kleurcode oranje geldt voor de provincies Sindh, delen van Punjab, de regio Jammu en Kasjmir aan de Pakistaanse kant van de bestandslijn, en delen van Gilgit Balistan. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "kop": "In het kort",
         "herkomst": "aanvulling",
         "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
@@ -20936,7 +20653,7 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "In Pakistan komen regelmatig terroristische aanslagen en andere gewelddadige incidenten voor, vooral in de provincies Baluchistan en Khyber-Phakhtunkhwa.",
+        "fragment": "In Pakistan komen regelmatig terroristische aanslagen en andere gewelddadige incidenten voor, vooral in de provincies Baluchistan en Khyber-Pakhtunkhwa.",
         "kop": "Terrorisme"
       },
       {
@@ -20944,7 +20661,7 @@
         "ernst": "twijfel",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
-        "fragment": "In Pakistan komen regelmatig terroristische aanslagen en andere gewelddadige incidenten voor, vooral in de provincies Baluchistan en Khyber-Phakhtunkhwa.",
+        "fragment": "In Pakistan komen regelmatig terroristische aanslagen en andere gewelddadige incidenten voor, vooral in de provincies Baluchistan en Khyber-Pakhtunkhwa.",
         "kop": "Terrorisme"
       },
       {
@@ -21067,7 +20784,7 @@
         "fragment": "U heeft mogelijk een ‘Non-Objection Certificate’ (NOC) nodig."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PAN.xml",
@@ -21220,7 +20937,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PCN.xml",
@@ -21290,7 +21007,7 @@
         "verwacht": "Lees meer over rijden in Pitcairneilanden op de website van de ANWB."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PER.xml",
@@ -21347,8 +21064,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Peru geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -21574,7 +21291,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PHL.xml",
@@ -21925,7 +21642,7 @@
         "fragment": "Wel wordt lichamelijk contact in het openbaar soms gezien als een ‘ernstig schandaal’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PLW.xml",
@@ -22116,7 +21833,7 @@
         "fragment": "Neem alleen ‘koraal-veilige’ zonnebrandmiddelen mee of koop deze in winkels in Palau."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PNG.xml",
@@ -22384,7 +22101,7 @@
         "fragment": "Houd rekening met ‘flash flooding’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "POL.xml",
@@ -22455,7 +22172,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PRI.xml",
@@ -22542,7 +22259,7 @@
         "kop": "Paspoort, visum/ESTA, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PRK.xml",
@@ -22581,8 +22298,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies voor Noord-Korea is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Nederland heeft geen ambassade in Pyongyang en de Nederlandse ambassade in Seoel (Zuid-Korea) kan u niet helpen als u in de problemen komt.",
-        "verwacht": "De kleurcode van het reisadvies voor Noord-Korea is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "fragment": "Nederland heeft geen ambassade in Pyongyang en de Nederlandse ambassade in Seoel (Zuid-Korea) kan u niet helpen als u in de problemen komt.",
+        "verwacht": "De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
@@ -22637,7 +22354,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PRT.xml",
@@ -22719,7 +22436,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PRY.xml",
@@ -22825,7 +22542,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PSE.xml",
@@ -22869,8 +22586,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor Gaza en delen van de Westelijke Jordaanoever. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -22878,8 +22595,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor Oost-Jeruzalem geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -23068,7 +22785,7 @@
         "fragment": "contactgegevens van de Nederlandse vertegenwoordiging in de Palestijnse Gebieden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "PYF.xml",
@@ -23170,7 +22887,7 @@
         "fragment": "Houd bij hevige regenval op bergachtige eilanden, zoals Tahiti en Moorea, ook rekening met ‘flash floods’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "QAT.xml",
@@ -23310,7 +23027,7 @@
         "fragment": "In Qatar is het verboden en strafbaar om een relatie te hebben met iemand anders dan uw wettige echtgenoot of echtgenote."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "REU.xml",
@@ -23372,7 +23089,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-01-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-01-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ROU.xml",
@@ -23412,8 +23129,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Roemenië geldt kleurcode groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
-        "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -23495,7 +23212,7 @@
         "kop": "Verkeersongevallen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "RS-KM.xml",
@@ -23638,7 +23355,7 @@
     "bestand": "RUS.xml",
     "iso": "RUS",
     "land": "Rusland",
-    "woorden": 2494,
+    "woorden": 2495,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
@@ -23646,13 +23363,13 @@
     ],
     "zinnen": 169,
     "fout": 3,
-    "letop": 21,
+    "letop": 20,
     "linkzin": 4,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 21,
+      "let-op": 20,
       "link-zin": 4,
       "info": 1,
       "twijfel": 2
@@ -23663,7 +23380,6 @@
       "h3-niet-melden": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 13,
       "zin-frequentiewoord": 2,
@@ -23675,11 +23391,11 @@
         "regel": "doc-woordenaantal",
         "ernst": "fout",
         "bron": "MX, tab Richtlijn woordenaantal",
-        "boodschap": "Het advies telt 2494 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
+        "boodschap": "Het advies telt 2495 woorden. De richtlijn is minder dan 2000 bij meerdere kleurcodes.",
         "detail": [
           "Wetten en gebruiken (584 woorden)",
           "Paspoort, visum, rijbewijs (489 woorden)",
-          "Regionale risico's (183 woorden)"
+          "Regionale risico's (184 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
       },
@@ -23712,16 +23428,6 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"rondnOekraïne\" staat niet in de woordenlijst.",
-        "fragment": "De regio’s (oblasten) in het westen van Rusland rondnOekraïne: Brjansk, Orjol, Koersk, Belgorod, Lipetsk, Voronezj, Rostov en Krasnodar. Sinds de oorlog van Rusland tegen Oekraïne is de situatie in het grensgebied onvoorspelbaar en gevaarlijk. Er vinden raket- en drone-aanvallen plaats.",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "tekst-niet-melden",
@@ -23920,7 +23626,7 @@
         "fragment": "Bij aankomst in Rusland ontvangt u van de grenspolitie een ‘migration card’ (een klein wit kaartje)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "RWA.xml",
@@ -23965,8 +23671,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Rwanda geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -24161,7 +23867,7 @@
         "fragment": "Dit vindt elke laatste zaterdag van de maand plaats tussen 07."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SAU.xml",
@@ -24205,8 +23911,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van Saoedi-Arabië geldt kleurcode geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -24254,8 +23960,8 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Saoedie-Arabie\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "Neem geen drugs, alcohol, varkensvleesproducten of pornografisch materiaal mee naar Saoedi-Arabië. Dit is verboden en strafbaar. Handbagage wordt bij aankomst op het vliegveld in Saoedie-Arabie gescand op deze artikelen.",
+        "boodschap": "\"Saoedie-Arabië\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Neem geen drugs, alcohol, varkensvleesproducten of pornografisch materiaal mee naar Saoedi-Arabië. Dit is verboden en strafbaar. Handbagage wordt bij aankomst op het vliegveld in Saoedie-Arabië gescand op deze artikelen.",
         "kop": "Bagageregels",
         "herkomst": "aanvulling",
         "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
@@ -24325,7 +24031,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SDN.xml",
@@ -24565,7 +24271,7 @@
         "fragment": "Na registratie ontvangt u een ‘carte d’identité d’étranger’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SGP.xml",
@@ -24719,7 +24425,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SJM.xml",
@@ -24797,7 +24503,7 @@
         "fragment": "Gouverneur (Police officer on Duty): 0047 79 02 12 22"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SLB.xml",
@@ -24955,7 +24661,7 @@
         "fragment": "Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen op de Salomonseilanden."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SLE.xml",
@@ -25130,8 +24836,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft één kleurcode, dus bij geel hoort de volledige uitleg. Nu staat de verkorte variant er. Er staat \"hierheen\", er hoort \"erheen\" te staan.",
-        "fragment": "De kleurcode van het reisadvies voor El Salvador is geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
-        "verwacht": "De kleurcode van het reisadvies voor El Salvador is geel. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt hierheen reizen.",
+        "verwacht": "U kunt erheen reizen.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
@@ -25199,7 +24905,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SMR.xml",
@@ -25265,7 +24971,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SOM.xml",
@@ -25624,7 +25330,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "STP.xml",
@@ -25703,7 +25409,7 @@
         "fragment": "Neem contact op met de ambassade van Sao Tomé en Principe in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SUR.xml",
@@ -25945,7 +25651,7 @@
         "fragment": "Registreer u bij het kantoor voor registratie van buitenlandse inwoners (“foreign police”) in de regio waar u verblijft."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SVN.xml",
@@ -26198,7 +25904,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SXM.xml",
@@ -26322,7 +26028,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "SYR.xml",
@@ -26360,8 +26066,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies voor Syrië is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade is gesloten en kan u niet helpen als u in de problemen komt.",
-        "verwacht": "De kleurcode van het reisadvies voor Syrië is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "fragment": "De Nederlandse ambassade is gesloten en kan u niet helpen als u in de problemen komt.",
+        "verwacht": "De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
@@ -26498,8 +26204,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij geel hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "De kleurcode van het reisadvies is geel voor het eiland Providenciales. U kunt erheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico’s. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor X en Y geldt kleurcode geel. U kunt hierheen reizen. Maar let op: er zijn bijzondere veiligheidsrisico's.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -26507,8 +26213,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Dit advies heeft meerdere kleurcodes, dus bij groen hoort de verkorte variant. Nu staat de volledige uitleg er. Er staat \"erheen\", er hoort \"hierheen\" te staan.",
-        "fragment": "Voor de rest van de Turks- en Caicoseilanden geldt kleurcode groen. U kunt erheen reizen. Lees welke veiligheidsrisico's er zijn.",
-        "verwacht": "Voor X en Y geldt kleurcode groen. U kunt hierheen reizen. Lees welke veiligheidsrisico's er zijn.",
+        "fragment": "U kunt erheen reizen.",
+        "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -26566,7 +26272,7 @@
     "bestand": "TCD.xml",
     "iso": "TCD",
     "land": "Tsjaad",
-    "woorden": 1668,
+    "woorden": 1669,
     "woordenlimiet": 2000,
     "kleurcodes": [
       "rood",
@@ -26574,13 +26280,13 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 8,
+    "letop": 6,
     "linkzin": 0,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 8,
+      "let-op": 6,
       "link-zin": 0,
       "info": 1,
       "twijfel": 2
@@ -26590,7 +26296,6 @@
       "h3-niet-melden": 1,
       "rubriek-vrij-te-hoog": 1,
       "nederlands-verbuiging": 1,
-      "woord-onbekend": 2,
       "tekst-niet-melden": 1,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 4,
@@ -26631,26 +26336,6 @@
         "verwacht": "Nederlands ambassadekantoor",
         "herkomst": "aanvulling",
         "notitie": "\"ambassadekantoor\" is een het-woord. Zonder lidwoord krijgt het bijvoeglijk naamwoord geen -e. Staat er een lidwoord te weinig, dan is \"het nederlandse ambassadekantoor\" ook goed."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Ouaddai\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "De kleurcode van het reisadvies is rood voor alle grensgebieden van Tsjaad, het gebied rond het Tsjaadmeer, en de regio’s Kanem, Ouaddai, Tibesti, Borkou en Ennedi of delen daarvan. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "kop": "In het kort",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"vande\" staat niet in de woordenlijst.",
-        "fragment": "In het noorden: de regio’s Ennedi (behalve de steden Fada en Amdjarass) en Tibesti. En het noordelijke en oostelijke deel vande regio Borkou.",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "tekst-niet-melden",
@@ -26718,7 +26403,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "TGO.xml",
@@ -26758,8 +26443,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor het noordelijke deel van de regio Savanes dat grenst aan Burkina Faso. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -26840,13 +26525,13 @@
     ],
     "zinnen": 192,
     "fout": 3,
-    "letop": 30,
+    "letop": 29,
     "linkzin": 4,
     "twijfel": 8,
     "info": 5,
     "perErnst": {
       "fout": 3,
-      "let-op": 30,
+      "let-op": 29,
       "link-zin": 4,
       "info": 5,
       "twijfel": 8
@@ -26861,7 +26546,6 @@
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 19,
       "zin-frequentiewoord": 6,
       "zin-twijfeltaal": 2,
@@ -26888,8 +26572,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor de strook van 5 kilometer vanaf de grens met Cambodja. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -26948,16 +26632,6 @@
         "verwacht": "de",
         "herkomst": "aanvulling",
         "notitie": "Meestal blijft bij het herschrijven van een zin het oude woord staan."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"ZDe\" staat niet in de woordenlijst.",
-        "fragment": "ZDe grens is gesloten.",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -27275,7 +26949,7 @@
         "fragment": "Een visa-run is maximaal twee keer per jaar toegestaan."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "TJK.xml",
@@ -27369,7 +27043,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "TKL.xml",
@@ -27415,7 +27089,7 @@
         "kop": "Paspoort, visum"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "TKM.xml",
@@ -27526,7 +27200,7 @@
         "fragment": "Neem vooraf contact op met de ambassade van Turkmenistan in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "TLS.xml",
@@ -27839,7 +27513,7 @@
         "fragment": "Neem contact op met de ambassade van Trinidad en Tobago in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "TUN.xml",
@@ -27959,7 +27633,7 @@
         "kop": "Verkeersongevallen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-09-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "TUR.xml",
@@ -28018,8 +27692,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor het grensgebied tussen Turkije en Syrië, en Turkije en Irak. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -28319,7 +27993,7 @@
         "fragment": "De Turkse wet tegen desinformatie bepaalt dat het delen van ‘opzettelijk misleidende informatie die de veiligheid, openbare orde en volksgezondheid in gevaar brengt’ strafbaar is."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-10-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-10-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "TUV.xml",
@@ -28382,7 +28056,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "TWN.xml",
@@ -28992,7 +28666,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-08-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "URY.xml",
@@ -29249,7 +28923,7 @@
         "fragment": "contactgegevens van de Nederlandse ambassade en consulaten-generaal in de VS"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "UZB.xml",
@@ -29263,33 +28937,22 @@
     ],
     "zinnen": 81,
     "fout": 0,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
-      "woord-onbekend": 1,
       "zin-max-woorden": 5,
       "zin-lijdende-vorm": 1
     },
     "bevindingen": [
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Karakalkpakstan\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
-        "fragment": "In de regio’s Karakalkpakstan en Chorezm is de luchtkwaliteit het hele jaar slecht.",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
-      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -29339,7 +29002,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "VCT.xml",
@@ -29442,7 +29105,7 @@
         "fragment": "Neem contact op met de ambassade van Saint Vincent en de Grenadines in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-10-2025 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-10-2025 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "VEN.xml",
@@ -29501,8 +29164,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies is rood voor de meeste grensgebieden en grote delen van het noordwesten, noordoosten en zuiden van Venezuela. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "fragment": "Wat uw situatie ook is: reis er niet heen.",
+        "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -29919,7 +29582,7 @@
         "fragment": "Lees meer over de regels voor toegang tot de Amerikaanse Maagdeneilanden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "VNM.xml",
@@ -30472,7 +30135,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "YEM.xml",
@@ -30525,8 +30188,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
-        "fragment": "De kleurcode van het reisadvies voor Jemen is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Bent u in Jemen? Verlaat het land als dat op een veilige manier kan. De Nederlandse ambassade in Sana’a is gesloten en kan u niet helpen als u in de problemen komt.",
-        "verwacht": "De kleurcode van het reisadvies voor Jemen is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "fragment": "De Nederlandse ambassade in Sana’a is gesloten en kan u niet helpen als u in de problemen komt.",
+        "verwacht": "De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
@@ -30915,7 +30578,7 @@
         "fragment": "U kunt wel reizen met de ‘Gautrain’ (hogesnelheidstrein tussen Johannesburg en Pretoria) en de Gautrain-busdienst (buslijn tussen Johannesburg en Pretoria)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 07-10-2026"
   },
   {
     "bestand": "ZMB.xml",

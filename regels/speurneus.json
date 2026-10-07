@@ -1,7 +1,7 @@
 {
   "_bron": "SpellingSpeurneus (NWW-team), tabellen goedgekeurd en naam_is_spelfout in Supabase. Opgehaald met scripts/haal-speurneus.mjs; niet met de hand bewerken, de volgende ronde overschrijft het. Eigen aanvullingen horen in regels/uitzonderingen.txt.",
   "_toelichting": "woorden en namen tellen als goed gespeld, net als regels/uitzonderingen.txt. naam_is_spelfout wint van allebei: een naam die de redactie als fout heeft aangewezen, telt hier nooit als goed, ook niet als hij in uitzonderingen.txt staat.",
-  "_opgehaald": "2026-10-06",
+  "_opgehaald": "2026-10-07",
   "woorden": [
     "aankomstformulier",
     "aansprakelijkheidsregels",
@@ -23,6 +23,7 @@
     "approval",
     "arrival",
     "aswolken",
+    "authorization",
     "ayahuasca",
     "ayahuasca-ceremonies",
     "baanaanbod",
@@ -218,7 +219,6 @@
     "mpox",
     "mpox-virus",
     "muistromen",
-    "mvv",
     "nacional",
     "namaakproducten",
     "natuurrisico's",
@@ -380,6 +380,7 @@
     "watersportactiviteiten",
     "webarchief",
     "webformulier",
+    "weerwaarschuwingen",
     "wegenautoriteit",
     "Wegpolitie",
     "windkaart",
@@ -452,6 +453,7 @@
     "Ouaddaï",
     "Paceville",
     "Paleski-reservaat",
+    "Paraguaná-schiereiland",
     "Paraguayo",
     "Polynésie",
     "Prefectural",
@@ -486,11 +488,13 @@
     "Khojavand",
     "Khyber-Phakhtunkhwa",
     "Maquetia",
+    "Maquetía",
     "Mauritus",
     "Noukachott",
     "Ouaddai",
     "Paraguana-schiereiland",
     "Pundo",
-    "Saoedie-Arabie"
+    "Saoedie-Arabie",
+    "Saoedie-Arabië"
   ]
 }

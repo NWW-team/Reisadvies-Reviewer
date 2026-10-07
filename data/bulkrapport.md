@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-06 over 226 reisadviezen.
+Gedraaid op 2026-10-07 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **73** van de 226 adviezen hebben geen enkele harde fout.
+- **74** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **128** van de 2901 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **101** van de 2868 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,17 +25,17 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 292 | 153 |
-| geel/oranje — let op | 1455 | 215 |
-| lichtblauw — lange zin met link | 542 | 201 |
-| grijs — ter overweging | 158 | 110 |
+| rood — fout | 290 | 152 |
+| geel/oranje — let op | 1426 | 214 |
+| lichtblauw — lange zin met link | 541 | 200 |
+| grijs — ter overweging | 157 | 109 |
 | roze — twijfeltaal | 454 | 156 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 219 | 1276 |
+| `zin-max-woorden` | 218 | 1275 |
 | `zin-frequentiewoord` | 145 | 385 |
 | `zin-lijdende-vorm` | 124 | 275 |
 | `h4-niet-melden` | 64 | 65 |
@@ -46,15 +46,15 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `link-tekstlengte` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 38 | 38 |
-| `woord-onbekend` | 36 | 65 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |
 | `h3-niet-melden` | 24 | 24 |
 | `rubriek-vrij-te-hoog` | 23 | 23 |
 | `rubrieken-volgorde` | 22 | 22 |
-| `bagage-heen` | 21 | 21 |
 | `nood-contactcenter` | 20 | 20 |
+| `bagage-heen` | 20 | 20 |
+| `woord-onbekend` | 19 | 40 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
 | `h4-kop-variant` | 12 | 13 |
@@ -71,22 +71,21 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `medicijnen-voldoende` | 7 | 7 |
 | `nederlands-verbuiging` | 6 | 6 |
 | `link-verboden-partij` | 6 | 7 |
-| `link-plakt-aan-woord` | 5 | 5 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
 | `kleur-aanduiding` | 5 | 5 |
 | `titel-leestekens` | 5 | 5 |
 | `vragen-opeenvolgend` | 5 | 7 |
 | `kleur-vervolg-bullet-kort` | 4 | 4 |
-| `tekst-plakfout` | 4 | 4 |
+| `link-plakt-aan-woord` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `tekst-dubbel-woord` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
-| `h2-vast` | 3 | 3 |
 | `kleur-eerste-bullet-voluit` | 3 | 3 |
+| `tekst-plakfout` | 3 | 3 |
 | `postplaats-schrijfwijze` | 3 | 3 |
-| `afkortingen-uitschrijven` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
+| `h2-vast` | 2 | 2 |
 | `tekst-cms-rest` | 2 | 2 |
 | `kleur-formulering-verboden` | 2 | 2 |
 | `kleur-vaste-tekst` | 2 | 2 |
@@ -120,7 +119,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | Indonesië | 2672 | 2000 |
 | China | 2504 | 1500 |
 | Mexico | 2497 | 2000 |
-| Rusland | 2494 | 2000 |
+| Rusland | 2495 | 2000 |
 | Peru | 2461 | 2000 |
 | Filipijnen | 2436 | 2000 |
 | Turkije | 2411 | 2000 |

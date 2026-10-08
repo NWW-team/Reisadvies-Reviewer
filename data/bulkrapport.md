@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-07 over 226 reisadviezen.
+Gedraaid op 2026-10-08 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **74** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **101** van de 2868 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **123** van de 2889 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,17 +26,17 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 290 | 152 |
-| geel/oranje — let op | 1426 | 214 |
-| lichtblauw — lange zin met link | 541 | 200 |
-| grijs — ter overweging | 157 | 109 |
-| roze — twijfeltaal | 454 | 156 |
+| geel/oranje — let op | 1443 | 212 |
+| lichtblauw — lange zin met link | 545 | 200 |
+| grijs — ter overweging | 158 | 109 |
+| roze — twijfeltaal | 453 | 156 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
 | `zin-max-woorden` | 218 | 1275 |
-| `zin-frequentiewoord` | 145 | 385 |
+| `zin-frequentiewoord` | 145 | 384 |
 | `zin-lijdende-vorm` | 124 | 275 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
@@ -46,16 +46,16 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `link-tekstlengte` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 38 | 38 |
+| `woord-onbekend` | 38 | 62 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |
 | `h3-niet-melden` | 24 | 24 |
-| `rubriek-vrij-te-hoog` | 23 | 23 |
+| `rubriek-vrij-te-hoog` | 24 | 24 |
 | `rubrieken-volgorde` | 22 | 22 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |
-| `woord-onbekend` | 19 | 40 |
-| `tekst-niet-melden` | 17 | 19 |
+| `tekst-niet-melden` | 16 | 18 |
 | `rijbewijs-anwb` | 13 | 13 |
 | `h4-kop-variant` | 12 | 13 |
 | `tekst-spatie-leesteken` | 11 | 12 |

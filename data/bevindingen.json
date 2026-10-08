@@ -109,7 +109,7 @@
         "fragment": "Kijk op de website van de Arubaanse overheid voor welke landen dit geldt."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "AFG.xml",
@@ -327,7 +327,7 @@
         "fragment": "Vrouwen moeten altijd vergezeld worden door een ‘mahram’ (een mannelijk familielid)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "AGO.xml",
@@ -341,13 +341,13 @@
     ],
     "zinnen": 88,
     "fout": 2,
-    "letop": 10,
+    "letop": 11,
     "linkzin": 2,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
+      "let-op": 11,
       "link-zin": 2,
       "info": 0,
       "twijfel": 0
@@ -356,6 +356,7 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-lijdende-vorm": 1
     },
@@ -382,6 +383,16 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Mussolo\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Zoals Cabo Ledo, het schiereiland Mussolo, Kwanza Lodge, Quiçama National Park, Barro do Dande, Pedras Negras de Pungo Andongo en de Calendula Falls.",
+        "kop": "Landmijnen",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -472,7 +483,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "AIA.xml",
@@ -533,7 +544,7 @@
         "fragment": "Orkanen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-11-2025 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-11-2025 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ALB.xml",
@@ -649,7 +660,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "AND.xml",
@@ -686,7 +697,7 @@
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ARE.xml",
@@ -1019,7 +1030,7 @@
         "fragment": "Omstanders ‘helpen’ zogenaamd dit te verwijderen, terwijl u beroofd wordt."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ARM.xml",
@@ -1109,7 +1120,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ASM.xml",
@@ -1195,7 +1206,7 @@
         "fragment": "Neem contact op met de Department of Legal Affairs van Amerikaans-Samoa"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ATA.xml",
@@ -1370,7 +1381,7 @@
         "fragment": "Richtlijnen van de International Association of Antarctica Tour Operators (IAATO)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ATG.xml",
@@ -1434,7 +1445,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-03-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-03-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "AUS.xml",
@@ -1589,7 +1600,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "AUT.xml",
@@ -1659,7 +1670,7 @@
         "fragment": "Sinds oktober 2023 is het dreigingsniveau in Oostenrijk aangepast naar het niveau ‘hoog’, als gevolg van de situatie in het Midden-Oosten."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "AZE.xml",
@@ -1739,7 +1750,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BDI.xml",
@@ -1754,13 +1765,13 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 7,
+    "letop": 9,
     "linkzin": 3,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 7,
+      "let-op": 9,
       "link-zin": 3,
       "info": 1,
       "twijfel": 4
@@ -1770,6 +1781,7 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "kinderen-paspoort": 1,
+      "woord-onbekend": 2,
       "zin-frequentiewoord": 4,
       "zin-max-woorden": 8,
       "zin-lijdende-vorm": 1,
@@ -1809,6 +1821,26 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en visum nodig voor een reis naar Burundi.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Burundi."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Bukinayana\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Het gaat om de gemeentes Bubanza, Bukinayana, Cibitoke, Mpanda en Mugina, in de voormalige provincies Bubanza en Cibitoke.",
+        "kop": "Regionale risico’s",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Kayosha\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De meeste controles vinden plaats in de volkswijken Kayosha, Musaga, Kamenge, Cibitoke, Ngagara en Nyakabiga.",
+        "kop": "Wetten en gebruiken",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -1931,7 +1963,7 @@
         "fragment": "Reis ook niet op de RN9 (tussen Bubanza en Bukinanyana, langs het Kibirawoud) en op de RN5 (tussen Bujumbura en Bukavu) tussen 18.00 uur ‘s avonds en 8."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BEL.xml",
@@ -2038,7 +2070,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 06-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 06-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BEN.xml",
@@ -2160,7 +2192,7 @@
         "fragment": "De grensstrook (50 km) tussen Benin en Nigeria, in de departementen Alibori en Borgou."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BFA.xml",
@@ -2331,7 +2363,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BGD.xml",
@@ -2545,7 +2577,7 @@
         "fragment": "Neem hiervoor contact op met het ministerie van Buitenlandse Zaken van Bangladesh"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BGR.xml",
@@ -2607,7 +2639,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BHR.xml",
@@ -2696,7 +2728,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BHS.xml",
@@ -2774,7 +2806,7 @@
         "fragment": "contact op met het Nederlandse consulaat-generaal in Miami, Verenigde Staten"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BIH.xml",
@@ -2828,7 +2860,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BLR.xml",
@@ -2972,7 +3004,7 @@
         "fragment": "Heeft u naast de Nederlandse ook de Belarussische nationaliteit?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BLZ.xml",
@@ -3052,7 +3084,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BOL.xml",
@@ -3066,13 +3098,13 @@
     ],
     "zinnen": 106,
     "fout": 2,
-    "letop": 19,
+    "letop": 20,
     "linkzin": 3,
     "twijfel": 7,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 19,
+      "let-op": 20,
       "link-zin": 3,
       "info": 1,
       "twijfel": 7
@@ -3082,6 +3114,7 @@
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
+      "woord-onbekend": 1,
       "zin-frequentiewoord": 7,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 16,
@@ -3123,6 +3156,16 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Titicameer\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Veel gebieden in Bolivia liggen boven 3.000 meter. Zoals de steden La Paz, Oruro en Potosi, de zoutvlakte Salar de Uyuni en het Titicameer. U kunt daar last krijgen van hoogteziekte. Lees informatie over hoogteziekte op de website van de GGD.",
+        "kop": "Reisvaccinaties",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -3345,7 +3388,7 @@
         "fragment": "U kunt ook de app ‘An sivetur’ downloaden."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BQ-BO.xml",
@@ -3472,7 +3515,7 @@
         "fragment": "Lees wat u kunt doen op de crisiswebsite van het Openbaar Lichaam Bonaire"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BQ-SA.xml",
@@ -3541,7 +3584,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BQ-SE.xml",
@@ -3643,7 +3686,7 @@
         "fragment": "Lees wat u kunt doen op de website van het Openbaar Lichaam Sint Eustatius"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BRA.xml",
@@ -3853,27 +3896,27 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BRB.xml",
     "iso": "BRB",
     "land": "Barbados",
-    "woorden": 1113,
+    "woorden": 1130,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "groen"
     ],
-    "zinnen": 61,
+    "zinnen": 60,
     "fout": 0,
-    "letop": 1,
-    "linkzin": 1,
+    "letop": 0,
+    "linkzin": 2,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
-      "link-zin": 1,
+      "let-op": 0,
+      "link-zin": 2,
       "info": 0,
       "twijfel": 1
     },
@@ -3892,10 +3935,10 @@
       },
       {
         "regel": "zin-max-woorden",
-        "ernst": "let-op",
+        "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Lees informatie over orkanen en het lokale weer op de volgende websites (informatie in het Engels):",
+        "boodschap": "Deze zin telt 31 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
+        "fragment": "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -3907,7 +3950,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BRN.xml",
@@ -3982,7 +4025,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BTN.xml",
@@ -4093,7 +4136,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "BWA.xml",
@@ -4166,7 +4209,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CAF.xml",
@@ -4284,7 +4327,7 @@
         "fragment": "Neem contact op met de ambassade van de Centraal-Afrikaanse Republiek in Brussel"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CAN.xml",
@@ -4430,7 +4473,7 @@
         "fragment": "Bekijk of u een verklaring nodig heeft voor uw medicijnen op de website van de Canadese overheid"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CHE.xml",
@@ -4488,13 +4531,13 @@
     ],
     "zinnen": 96,
     "fout": 1,
-    "letop": 13,
+    "letop": 14,
     "linkzin": 8,
     "twijfel": 5,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 13,
+      "let-op": 14,
       "link-zin": 8,
       "info": 0,
       "twijfel": 5
@@ -4502,6 +4545,7 @@
     "perRegel": {
       "doc-woordenaantal": 1,
       "rubrieken-max": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 13,
       "zin-frequentiewoord": 5,
       "zin-lijdende-vorm": 7
@@ -4525,6 +4569,16 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Oorlog en conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Lastarría\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De hoofdstad Santiago, vooral in populaire wandelgebieden. Bijvoorbeeld bij Cerro San Cristobal, Cerro Santa Lucia, Patio Bellavista, Cerro Manquehue, Parque Forestal, Plaza de Armas, Plaza Baquedano en Lastarría.",
+        "kop": "Criminaliteit",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -4727,7 +4781,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CHN.xml",
@@ -5105,7 +5159,7 @@
         "fragment": "Wees alert op Chinese jongeren die goed Engels spreken en zich als ‘gids’ aanbieden."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CIV.xml",
@@ -5181,7 +5235,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CMR.xml",
@@ -5196,13 +5250,13 @@
     ],
     "zinnen": 97,
     "fout": 2,
-    "letop": 5,
+    "letop": 6,
     "linkzin": 3,
     "twijfel": 5,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 5,
+      "let-op": 6,
       "link-zin": 3,
       "info": 1,
       "twijfel": 5
@@ -5210,6 +5264,7 @@
     "perRegel": {
       "kleur-variant": 1,
       "nood-contactcenter": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 4,
@@ -5233,6 +5288,16 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"ISWAP\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De terroristische organisaties Boko Haram en Islamitische Staat Provincie West-Afrika (ISWAP) plegen in Kameroen regelmatig aanslagen en ontvoeringen.",
+        "kop": "Terrorisme",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -5345,7 +5410,7 @@
         "fragment": "Het grensgebied tussen Kameroen en Nigeria (40 km vanaf de grens)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "COD.xml",
@@ -5671,7 +5736,7 @@
         "fragment": "Lees meer over rijden in de DRC op de website van de ANWB onder ‘Congo-Kinshasa’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "COG.xml",
@@ -5800,7 +5865,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "COK.xml",
@@ -5845,7 +5910,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "COL.xml",
@@ -6134,7 +6199,7 @@
         "kop": "Demonstraties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "COM.xml",
@@ -6230,7 +6295,7 @@
         "fragment": "Neem contact op met de ambassade van de Comoren in Brussel voor meer informatie over visa"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CPV.xml",
@@ -6303,7 +6368,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CRI.xml",
@@ -6528,7 +6593,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CUB.xml",
@@ -6734,7 +6799,7 @@
         "fragment": "Maximaal 48 uur voor vertrek naar Cuba moet u het online immigratieformulier ‘D’Viajeros’ invullen (informatie in het Spaans)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CUW.xml",
@@ -6847,7 +6912,7 @@
         "fragment": "Slachtoffers worden ook wel ‘trago-meisjes’ genoemd."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CYM.xml",
@@ -6927,7 +6992,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CYP.xml",
@@ -7082,7 +7147,7 @@
         "fragment": "Dit deel noemt zich de ‘Turkse Republiek van Noord-Cyprus’ en wordt alleen door Turkije erkend."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "CZE.xml",
@@ -7095,13 +7160,13 @@
     ],
     "zinnen": 64,
     "fout": 1,
-    "letop": 3,
+    "letop": 4,
     "linkzin": 3,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 4,
       "link-zin": 3,
       "info": 0,
       "twijfel": 0
@@ -7109,6 +7174,7 @@
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
       "landnaam-schrijfwijze": 1,
+      "woord-onbekend": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 3
     },
@@ -7131,6 +7197,16 @@
         "verwacht": "Tsjechië",
         "herkomst": "aanvulling",
         "notitie": "Deze schrijfwijze komt uit de landenlijst van de open data."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Tsjechie\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Bent u in Tsjechie en bent u in nood? Bijvoorbeeld: u bent opgenomen in het ziekenhuis, of u bent bestolen. Lees wat u kunt doen in geval van nood.",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -7173,7 +7249,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "DEU.xml",
@@ -7284,7 +7360,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "DJI.xml",
@@ -7408,7 +7484,7 @@
         "fragment": "het grensgebied tussen Djibouti en Eritrea (10 km tot de grens)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "DMA.xml",
@@ -7495,7 +7571,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "DNK.xml",
@@ -7562,7 +7638,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "DOM.xml",
@@ -7575,19 +7651,20 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 3,
+    "letop": 4,
     "linkzin": 3,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 4,
       "link-zin": 3,
       "info": 1,
       "twijfel": 3
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
+      "woord-onbekend": 1,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 4,
@@ -7601,6 +7678,16 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Worldweather\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Severe Worldweather Information",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -7674,7 +7761,7 @@
         "fragment": "Neem contact op met de ambassade van de Dominicaanse Republiek in Den Haag"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "DZA.xml",
@@ -7885,7 +7972,7 @@
         "fragment": "Zoals een bonnetje van de winkel of een ‘certificaat van authenticiteit’, waarop staat dat uw souvenir een kopie is en geen origineel antiek voorwerp."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ECU.xml",
@@ -8228,7 +8315,7 @@
         "fragment": "De periode van 365 dagen (het ‘chronologische jaar’) gaat in op de dag van uw (eerste) aankomst als toerist."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "EGY.xml",
@@ -8424,7 +8511,7 @@
         "fragment": "U kunt het slachtoffer worden van ‘bezness’ (liefdesfraude)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ERI.xml",
@@ -8487,7 +8574,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ESP.xml",
@@ -8640,7 +8727,7 @@
         "fragment": "Kijk in de grote steden uit voor de ‘spuugtruc’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-10-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "EST.xml",
@@ -8750,7 +8837,7 @@
         "fragment": "En bekijk actuele informatie over welke documenten u nodig heeft om de grens over te steken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ETH.xml",
@@ -8765,13 +8852,13 @@
     ],
     "zinnen": 110,
     "fout": 4,
-    "letop": 8,
+    "letop": 10,
     "linkzin": 4,
     "twijfel": 3,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 8,
+      "let-op": 10,
       "link-zin": 4,
       "info": 1,
       "twijfel": 3
@@ -8782,6 +8869,7 @@
       "actueel-max-woorden": 1,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
+      "woord-onbekend": 2,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 3,
       "zin-max-woorden": 8,
@@ -8831,6 +8919,26 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Wetten en gebruiken\".",
         "fragment": "Terrorisme",
         "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Gulelle\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Wees ook alert in hoofdstad Addis Abeba en op toeristische plekken zoals Entoto Park en Gulelle Botanical Gardens.",
+        "kop": "Criminaliteit",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Maokomo\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "de zones Kamashi en Maokomo in de regio Benishangul-Gumuz",
+        "kop": "Regionale risico’s",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -8951,7 +9059,7 @@
         "fragment": "De Ethiopische overheid houdt sociale media in de gaten om verspreiding van ‘nep-nieuws’ te voorkomen."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-10-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "FIN.xml",
@@ -9052,7 +9160,7 @@
         "notitie": "Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste letter van een woord buiten de link (\"K\" en dan \"ijk op de website\"), soms plakken twee woorden aan elkaar."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "FJI.xml",
@@ -9194,34 +9302,34 @@
         "fragment": "Houd bij hevige regenval ook rekening met ‘flash floods’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "FRA.xml",
     "iso": "FRA",
     "land": "Frankrijk",
-    "woorden": 1230,
+    "woorden": 1131,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 70,
+    "zinnen": 71,
     "fout": 0,
-    "letop": 8,
-    "linkzin": 4,
+    "letop": 6,
+    "linkzin": 5,
     "twijfel": 2,
-    "info": 1,
+    "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
-      "link-zin": 4,
-      "info": 1,
+      "let-op": 6,
+      "link-zin": 5,
+      "info": 2,
       "twijfel": 2
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-volgorde": 1,
-      "tekst-niet-melden": 1,
+      "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 8,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
@@ -9246,21 +9354,12 @@
         "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
       },
       {
-        "regel": "tekst-niet-melden",
-        "ernst": "let-op",
-        "bron": "MX, tab Koppen, richtlijn Niet melden",
-        "boodschap": "\"luchtkwaliteit\" gaat over smog, en dat onderwerp hoort niet in een reisadvies.",
-        "fragment": "De natuurbranden kunnen leiden tot evacuaties, wegafsluitingen, slechte luchtkwaliteit en verstoringen van het verkeer en andere voorzieningen.",
-        "kop": "Actueel",
-        "notitie": "Evt. alleen indien er ernstig gevaar is voor iedereen. Is het gevolg van bosbrand, plaats het dan bij Natuurgeweld."
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "De natuurbranden kunnen leiden tot evacuaties, wegafsluitingen, slechte luchtkwaliteit en verstoringen van het verkeer en andere voorzieningen.",
-        "kop": "Actueel"
+        "regel": "rubriek-vrij-te-hoog",
+        "ernst": "info",
+        "bron": "SJ, blok Risico dat van toepassing is",
+        "boodschap": "\"Demonstraties\" staat boven \"Criminaliteit\".",
+        "fragment": "Demonstraties",
+        "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
       },
       {
         "regel": "zin-max-woorden",
@@ -9304,6 +9403,14 @@
         "kop": "Terrorisme"
       },
       {
+        "regel": "zin-frequentiewoord",
+        "ernst": "twijfel",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
+        "fragment": "In Frankrijk zijn regelmatig demonstraties.",
+        "kop": "Demonstraties"
+      },
+      {
         "regel": "zin-max-woorden",
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -9329,19 +9436,19 @@
       },
       {
         "regel": "zin-max-woorden",
+        "ernst": "link-zin",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin telt 16 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
+        "fragment": "Lees informatie over bosbrandgevaar in Frankrijk op de website van Météo France (informatie in het Frans).",
+        "kop": "Natuurgeweld"
+      },
+      {
+        "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "In Frankrijk bent u strafbaar als u zich niet kunt identificeren met een geldig paspoort of geldige ID-kaart.",
         "kop": "Wetten en gebruiken"
-      },
-      {
-        "regel": "zin-frequentiewoord",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
-        "fragment": "In Frankrijk zijn regelmatig demonstraties.",
-        "kop": "Demonstraties"
       },
       {
         "regel": "aanhalingstekens",
@@ -9351,7 +9458,7 @@
         "fragment": "De Franse overheid schat de kans op een terroristische aanslag op dit moment in als ‘waarschijnlijk’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "FRO.xml",
@@ -9377,7 +9484,7 @@
     },
     "perRegel": {},
     "bevindingen": [],
-    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "FSM.xml",
@@ -9507,7 +9614,7 @@
         "fragment": "Neem contact op met de ambassade van Micronesië in Washington D.C., Verenigde Staten"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GAB.xml",
@@ -9595,7 +9702,7 @@
         "fragment": "Ambulance: 1300 / 01 73 30 99"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GBR.xml",
@@ -9608,13 +9715,13 @@
     ],
     "zinnen": 59,
     "fout": 1,
-    "letop": 9,
+    "letop": 10,
     "linkzin": 3,
     "twijfel": 1,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 10,
       "link-zin": 3,
       "info": 2,
       "twijfel": 1
@@ -9623,6 +9730,7 @@
       "intro-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
       "kinderen-paspoort": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 7,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
@@ -9653,6 +9761,16 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort en een ETA nodig voor een reis naar het VK. Blijft een kind langer dan 180 dagen in het VK? Dan heeft het kind ook een visum nodig.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Verenigd Koninkrijk."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Vereningd\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Het dreigingsniveau voor terrorisme is in het Vereningd Koninkrijk niveau 4 (‘severe’), op een schaal van 1 tot en met 5.",
+        "kop": "Terrorisme",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -9756,7 +9874,7 @@
         "fragment": "Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GEO.xml",
@@ -9960,7 +10078,7 @@
         "fragment": "het grensgebied tussen de regio’s Abchazië en Zuid-Ossetië en de rest van Georgië (‘administrative boundary lines’)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GHA.xml",
@@ -9974,13 +10092,13 @@
     ],
     "zinnen": 107,
     "fout": 1,
-    "letop": 9,
+    "letop": 11,
     "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 11,
       "link-zin": 3,
       "info": 0,
       "twijfel": 3
@@ -9988,6 +10106,7 @@
     "perRegel": {
       "h4-niet-melden": 1,
       "regionaal-gebiedenzin": 1,
+      "woord-onbekend": 2,
       "zin-max-woorden": 9,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 1,
@@ -10008,6 +10127,26 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"ISWA\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Dit zijn groepen die banden hebben met Al Qaida in de Islamitische Maghreb (AQIM), Islamitische Staat van Libië en Islamitische Staat West-Afrika (ISWA).",
+        "kop": "Terrorisme",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Earthquakes\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Lees informatie over aardschokken op de website van het USGS Earthquakes Hazards Program (informatie in het Engels).",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -10121,7 +10260,7 @@
         "fragment": "Pas op voor ‘love scams’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GIN.xml",
@@ -10226,7 +10365,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GLP.xml",
@@ -10287,7 +10426,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GMB.xml",
@@ -10439,7 +10578,7 @@
         "fragment": "Deze toeslag is 20 euro, 20 Amerikaanse dollar of 1."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GNB.xml",
@@ -10485,7 +10624,7 @@
         "kop": "Regionale risico's"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GNQ.xml",
@@ -10522,7 +10661,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GRC.xml",
@@ -10685,7 +10824,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GRD.xml",
@@ -10755,7 +10894,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GRL.xml",
@@ -10817,7 +10956,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GTM.xml",
@@ -11048,7 +11187,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GUF.xml",
@@ -11120,7 +11259,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "GUY.xml",
@@ -11133,13 +11272,13 @@
     ],
     "zinnen": 62,
     "fout": 2,
-    "letop": 6,
+    "letop": 7,
     "linkzin": 0,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 6,
+      "let-op": 7,
       "link-zin": 0,
       "info": 0,
       "twijfel": 1
@@ -11148,6 +11287,7 @@
       "h3-vaste-kop": 1,
       "h4-niet-melden": 1,
       "nood-lokale-hulpdiensten": 1,
+      "woord-onbekend": 1,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 1,
@@ -11178,6 +11318,16 @@
         "boodschap": "De aanhef boven de alarmnummers wijkt af van de vaste tekst.",
         "fragment": "Neem dan contact op met de lokale hulpdiensten:",
         "verwacht": "Heeft u direct hulp nodig in Guyana? Neem contact op met de lokale hulpdiensten:"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Ruimsveldt\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Criminaliteit komt vooral voor in Stabroek, de Bourda Markets en in de wijken Sophia, South Ruimsveldt en Tigerbay van de hoofdstad Georgetown.",
+        "kop": "Criminaliteit",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "tekst-niet-melden",
@@ -11229,7 +11379,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "HKG.xml",
@@ -11344,7 +11494,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "HND.xml",
@@ -11491,7 +11641,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "HRV.xml",
@@ -11581,7 +11731,7 @@
         "fragment": "Bos- en natuurbranden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "HTI.xml",
@@ -11700,7 +11850,7 @@
         "fragment": "Alleen kleine regionale luchtvaartmaatschappijen voeren nog een beperkt aantal vluchten uit vanuit het vliegveld Cap-Haïtien."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "HUN.xml",
@@ -11746,7 +11896,7 @@
         "kop": "Demonstraties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 31-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 31-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "IDN.xml",
@@ -11760,13 +11910,13 @@
     ],
     "zinnen": 171,
     "fout": 4,
-    "letop": 21,
+    "letop": 19,
     "linkzin": 8,
     "twijfel": 9,
     "info": 1,
     "perErnst": {
       "fout": 4,
-      "let-op": 21,
+      "let-op": 19,
       "link-zin": 8,
       "info": 1,
       "twijfel": 9
@@ -11780,7 +11930,7 @@
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "tekst-spatie-leesteken": 1,
-      "woord-onbekend": 5,
+      "woord-onbekend": 3,
       "zin-max-woorden": 16,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 5,
@@ -11879,28 +12029,8 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Merapi\" staat niet in de woordenlijst.",
-        "fragment": "Merapi in Midden-Java",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Semeru\" staat niet in de woordenlijst.",
         "fragment": "Semeru in Oost-Java",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Karangetang\" staat niet in de woordenlijst.",
-        "fragment": "Karangetang op het eiland Siau",
         "kop": "Natuurgeweld",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
@@ -12146,7 +12276,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "IND.xml",
@@ -12625,7 +12755,7 @@
         "fragment": "U kunt uw visum verlengen via de Indian Bureau of Immigration / Foreigners Regional Registration Office (FRRO)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "IRL.xml",
@@ -12735,7 +12865,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "IRN.xml",
@@ -13047,7 +13177,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "IRQ.xml",
@@ -13276,7 +13406,7 @@
         "fragment": "Algemeen alarmnummer: +964 (0) 751 501 9756 (alleen in de provincie Erbil)"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 25-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 25-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ISL.xml",
@@ -13366,7 +13496,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ISR.xml",
@@ -13602,7 +13732,7 @@
         "fragment": "Neem voor vertrek naar Israël contact op met de ambassade van Israël in Den Haag"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ITA.xml",
@@ -13734,7 +13864,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "JAM.xml",
@@ -13796,7 +13926,7 @@
         "fragment": "Neem hiervoor contact op met de ambassade van Jamaica in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "JOR.xml",
@@ -13966,7 +14096,7 @@
         "fragment": "Droge ‘wadi’s’ (valleien) lopen dan snel onder water."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "JPN.xml",
@@ -13980,13 +14110,13 @@
     ],
     "zinnen": 71,
     "fout": 3,
-    "letop": 9,
+    "letop": 10,
     "linkzin": 1,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 9,
+      "let-op": 10,
       "link-zin": 1,
       "info": 1,
       "twijfel": 1
@@ -13996,7 +14126,7 @@
       "h3-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
-      "woord-onbekend": 1,
+      "woord-onbekend": 2,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 3,
@@ -14040,11 +14170,21 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Safetytips\" staat niet in de woordenlijst.",
-        "fragment": "Safetytips",
-        "kop": "Natuurgeweld",
+        "boodschap": "\"Minimisōma\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Hieronder vallen steden als Futaba, Iitate, Katsurao, Minimisōma, Namie, Okuma en Tomioka.",
+        "kop": "Regionale risico's",
         "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Kabuki-Cho\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Bijvoorbeeld Roppongi, Shibuya, Shinjuku en Kabuki-Cho in Tokio of Namba in Osaka.",
+        "kop": "Criminaliteit",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -14126,7 +14266,7 @@
         "fragment": "U mag in Japan maximaal 120 ml per maand aan e-sigarettenvloeistof bij u hebben voor eigen gebruik."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "KAZ.xml",
@@ -14139,19 +14279,20 @@
     ],
     "zinnen": 79,
     "fout": 1,
-    "letop": 5,
+    "letop": 6,
     "linkzin": 1,
     "twijfel": 0,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 6,
       "link-zin": 1,
       "info": 0,
       "twijfel": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
+      "woord-onbekend": 1,
       "zin-lijdende-vorm": 2,
       "zin-max-woorden": 3,
       "aanhalingstekens": 1
@@ -14164,6 +14305,16 @@
         "boodschap": "\"Fotograferen\" gaat over foto's maken, en dat hoort niet in een reisadvies.",
         "fragment": "Fotograferen",
         "notitie": "Foto's maken liever niet opnemen in het reisadvies. Foto's maken van militairen e.d. moet je nergens doen. Erg algemeen. Alleen opnemen als het een aanzienlijk risico is met relatief hoge straffen."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Kazachstaanse\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Check wat u mag meenemen naar Kazachstan op de website van de Kazachstaanse ambassade (informatie in het Engels).",
+        "kop": "Bagageregels",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -14213,7 +14364,7 @@
         "fragment": "In december 2025 is in Kazachstan wetgeving aangenomen die gericht is op het tegengaan van wat de autoriteiten beschouwen als ‘lhbtiq+-propaganda’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "KEN.xml",
@@ -14433,7 +14584,7 @@
         "fragment": "Kijk dan uit voor ‘carjacking’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "KGZ.xml",
@@ -14504,7 +14655,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "KHM.xml",
@@ -14788,7 +14939,7 @@
         "fragment": "Of gaat u reizen met de bus of motortaxi (‘motodop’)?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 10-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 10-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "KIR.xml",
@@ -14801,19 +14952,20 @@
     ],
     "zinnen": 68,
     "fout": 0,
-    "letop": 4,
+    "letop": 5,
     "linkzin": 3,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 5,
       "link-zin": 3,
       "info": 1,
       "twijfel": 2
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
+      "woord-onbekend": 1,
       "zin-lijdende-vorm": 1,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 6
@@ -14826,6 +14978,16 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Kibirati\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Op sommige eilanden in Kibirati is geen of weinig telefoon- en internetbereik.",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -14900,7 +15062,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "KNA.xml",
@@ -15125,7 +15287,7 @@
         "kop": "Medicijnen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "KWT.xml",
@@ -15273,7 +15435,7 @@
         "fragment": "Koeweit erkent alleen paspoorten die het geslacht aangeven met de letters ‘M’ (man) of ‘F’ (vrouw)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "LAO.xml",
@@ -15563,7 +15725,7 @@
         "fragment": "Ook bieden personen die ‘samenwerken’ met de lokale politie soms drugs aan op straat en in bars, om toeristen in de val te lokken."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "LBN.xml",
@@ -15576,13 +15738,13 @@
     ],
     "zinnen": 92,
     "fout": 1,
-    "letop": 11,
+    "letop": 12,
     "linkzin": 2,
     "twijfel": 3,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
+      "let-op": 12,
       "link-zin": 2,
       "info": 3,
       "twijfel": 3
@@ -15592,6 +15754,7 @@
       "bagage-heen": 1,
       "kinderen-paspoort": 1,
       "rubriek-vrij-te-hoog": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 2,
@@ -15634,6 +15797,16 @@
         "boodschap": "\"Demonstraties\" staat boven \"Wetten en gebruiken\".",
         "fragment": "Demonstraties",
         "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"UCGS\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Lees informatie over aardbevingen op de website van het UCGS Earthquake Hazards Program (informatie in het Engels).",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -15763,7 +15936,7 @@
         "fragment": "Diefstal uit en van auto’s (‘carjacking’) komt voor."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "LBR.xml",
@@ -15843,7 +16016,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-03-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-03-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "LBY.xml",
@@ -16009,7 +16182,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "LCA.xml",
@@ -16124,7 +16297,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 27-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "LKA.xml",
@@ -16429,7 +16602,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "LTU.xml",
@@ -16500,7 +16673,7 @@
         "fragment": "Download de LT72 app om notificaties te ontvangen en volg de laatste adviezen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 07-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "LUX.xml",
@@ -16546,7 +16719,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "LVA.xml",
@@ -16617,7 +16790,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MAC.xml",
@@ -16714,7 +16887,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MAR.xml",
@@ -16903,7 +17076,7 @@
         "fragment": "Wilt u samen met uw echtgenoot of partner in een hotel of andere accommodatie verblijven?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MCO.xml",
@@ -16929,7 +17102,7 @@
     },
     "perRegel": {},
     "bevindingen": [],
-    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MDA.xml",
@@ -17031,7 +17204,7 @@
         "kop": "Demonstraties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MDG.xml",
@@ -17044,24 +17217,35 @@
     ],
     "zinnen": 77,
     "fout": 0,
-    "letop": 5,
+    "letop": 6,
     "linkzin": 4,
     "twijfel": 4,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 6,
       "link-zin": 4,
       "info": 0,
       "twijfel": 4
     },
     "perRegel": {
+      "woord-onbekend": 1,
       "zin-max-woorden": 8,
       "zin-frequentiewoord": 2,
       "zin-twijfeltaal": 2,
       "opmaak-vet-onderstreept": 1
     },
     "bevindingen": [
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Doxcyline\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Dan moet u misschien 3 dagen lang een anti-choleramedicijn (Doxcyline) gebruiken.",
+        "kop": "Reisvaccinaties",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
       {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
@@ -17167,7 +17351,7 @@
         "fragment": "Vliegreis via Midden-Oosten"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MDV.xml",
@@ -17301,7 +17485,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MEX.xml",
@@ -17316,13 +17500,13 @@
     ],
     "zinnen": 156,
     "fout": 4,
-    "letop": 21,
+    "letop": 20,
     "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 4,
-      "let-op": 21,
+      "let-op": 20,
       "link-zin": 3,
       "info": 0,
       "twijfel": 3
@@ -17332,7 +17516,6 @@
       "kleur-variant": 1,
       "kleur-formulering-verboden": 1,
       "nood-contactcenter": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 6,
@@ -17376,16 +17559,6 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Secretary\" staat niet in de woordenlijst.",
-        "fragment": "Secretary of Integrated Risk Management and Civil Protection – Government of Mexico City",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -17591,7 +17764,7 @@
         "fragment": "In de steden van Mexico is er risico op ‘express’-ontvoeringen."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MHL.xml",
@@ -17709,7 +17882,7 @@
         "fragment": "Neem contact op met het Ministerie van Immigratie van de Marshalleilanden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MKD.xml",
@@ -17763,7 +17936,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 29-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MLI.xml",
@@ -17872,7 +18045,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MLT.xml",
@@ -17968,7 +18141,7 @@
         "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MMR.xml",
@@ -18193,7 +18366,7 @@
         "fragment": "Hier zijn drugsbendes actief en ‘scamming kartels’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 11-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 11-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MNE.xml",
@@ -18206,13 +18379,13 @@
     ],
     "zinnen": 73,
     "fout": 1,
-    "letop": 4,
+    "letop": 3,
     "linkzin": 1,
     "twijfel": 2,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 3,
       "link-zin": 1,
       "info": 1,
       "twijfel": 2
@@ -18221,7 +18394,6 @@
       "h4-niet-melden": 1,
       "h4-natuurrisico": 1,
       "h3-alleen-bij-uitzondering": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 3,
       "zin-frequentiewoord": 2
     },
@@ -18249,16 +18421,6 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Hydrometeorological\" staat niet in de woordenlijst.",
-        "fragment": "Hydrometeorological and Seismological Service of Montenegro",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -18301,7 +18463,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MNG.xml",
@@ -18396,7 +18558,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MOZ.xml",
@@ -18411,13 +18573,13 @@
     ],
     "zinnen": 106,
     "fout": 3,
-    "letop": 10,
+    "letop": 8,
     "linkzin": 1,
     "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 8,
       "link-zin": 1,
       "info": 0,
       "twijfel": 1
@@ -18425,7 +18587,7 @@
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "woord-onbekend": 5,
+      "woord-onbekend": 3,
       "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
@@ -18463,16 +18625,6 @@
         "regel": "woord-onbekend",
         "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Meluco\" staat niet in de woordenlijst.",
-        "fragment": "Meluco",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Mocimboa\" staat niet in de woordenlijst.",
         "fragment": "Mocimboa da Praia",
         "kop": "Regionale risico's",
@@ -18485,16 +18637,6 @@
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Mueda\" staat niet in de woordenlijst.",
         "fragment": "Mueda",
-        "kop": "Regionale risico's",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Muidumbe\" staat niet in de woordenlijst.",
-        "fragment": "Muidumbe",
         "kop": "Regionale risico's",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
@@ -18565,7 +18707,7 @@
         "notitie": "De link begint met een spatie. Op de pagina ziet niemand dat, maar het klikvlak loopt een teken te ver naar links."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MRT.xml",
@@ -18680,7 +18822,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MSR.xml",
@@ -18801,34 +18943,34 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-10-2025 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MTQ.xml",
     "iso": "MTQ",
     "land": "Martinique",
-    "woorden": 1069,
+    "woorden": 1075,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "geel"
     ],
-    "zinnen": 59,
+    "zinnen": 57,
     "fout": 1,
-    "letop": 1,
-    "linkzin": 3,
-    "twijfel": 2,
+    "letop": 0,
+    "linkzin": 4,
+    "twijfel": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 1,
-      "link-zin": 3,
+      "let-op": 0,
+      "link-zin": 4,
       "info": 0,
-      "twijfel": 2
+      "twijfel": 1
     },
     "perRegel": {
       "nederlands-verbuiging": 1,
       "zin-max-woorden": 4,
-      "zin-frequentiewoord": 2
+      "zin-frequentiewoord": 1
     },
     "bevindingen": [
       {
@@ -18844,18 +18986,10 @@
       },
       {
         "regel": "zin-max-woorden",
-        "ernst": "let-op",
+        "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Lees informatie over orkanen en het lokale weer op de volgende websites (informatie in het Engels):",
-        "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-frequentiewoord",
-        "ernst": "twijfel",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "\"soms\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
-        "fragment": "Soms ook zware aardbevingen.",
+        "boodschap": "Deze zin telt 31 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
+        "fragment": "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -18891,7 +19025,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 20-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MUS.xml",
@@ -19001,7 +19135,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MWI.xml",
@@ -19105,7 +19239,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "MYS.xml",
@@ -19193,7 +19327,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NAM.xml",
@@ -19274,7 +19408,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-10-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NCL.xml",
@@ -19320,7 +19454,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NER.xml",
@@ -19414,7 +19548,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NGA.xml",
@@ -19428,19 +19562,20 @@
     ],
     "zinnen": 115,
     "fout": 0,
-    "letop": 10,
+    "letop": 12,
     "linkzin": 5,
     "twijfel": 8,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 10,
+      "let-op": 12,
       "link-zin": 5,
       "info": 0,
       "twijfel": 8
     },
     "perRegel": {
       "rubrieken-max": 1,
+      "woord-onbekend": 2,
       "zin-max-woorden": 11,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 3
@@ -19452,6 +19587,26 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"ISWAP\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "In deze gebieden zijn aanvallen van criminele bendes en terreurgroepen zoals Boko Haram en de Islamitische Staat West Africa Provincie (ISWAP).",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Benueen\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Het aantal geweldsincidenten zoals ontvoeringen en berovingen neemt vooral toe in de deelstaten Adamawa, Kaduna, Kogi, Kwara, Nasarawa, Niger, Plateau, Taraba, Benueen Oyo.",
+        "kop": "Criminaliteit",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -19630,7 +19785,7 @@
         "kop": "Reisvaccinaties"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NIC.xml",
@@ -19846,7 +20001,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NIU.xml",
@@ -19891,7 +20046,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NOR.xml",
@@ -19953,7 +20108,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NPL.xml",
@@ -20065,7 +20220,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NRU.xml",
@@ -20217,7 +20372,7 @@
         "fragment": "neem contact op met het consulaat-generaal van Naoero in Brisbane, Australië"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 03-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 03-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "NZL.xml",
@@ -20395,7 +20550,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "OMN.xml",
@@ -21007,7 +21162,7 @@
         "verwacht": "Lees meer over rijden in Pitcairneilanden op de website van de ANWB."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "PER.xml",
@@ -21022,13 +21177,13 @@
     ],
     "zinnen": 137,
     "fout": 2,
-    "letop": 18,
+    "letop": 20,
     "linkzin": 5,
     "twijfel": 3,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 18,
+      "let-op": 20,
       "link-zin": 5,
       "info": 2,
       "twijfel": 3
@@ -21041,6 +21196,7 @@
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
       "rubrieken-max": 1,
+      "woord-onbekend": 2,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 1,
@@ -21105,6 +21261,26 @@
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Demonstraties, Natuurgeweld, Verkeersongevallen"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Huallaga-river\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Kleurcode oranje geldt voor het grensgebied tussen Peru en Colombia, en het gebied langs de Huallaga-river in de Huánuco-regio. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "kop": "In het kort",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Huallaga-rivier\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De Huallaga-rivier in de Huánuco-regio (Cordillera Azul). Hier wordt coca verbouwd en zijn drugsbendes en andere misdaadorganisaties actief.",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -21305,13 +21481,13 @@
     ],
     "zinnen": 146,
     "fout": 1,
-    "letop": 21,
+    "letop": 20,
     "linkzin": 4,
     "twijfel": 11,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 21,
+      "let-op": 20,
       "link-zin": 4,
       "info": 1,
       "twijfel": 11
@@ -21320,7 +21496,7 @@
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
-      "woord-onbekend": 3,
+      "woord-onbekend": 2,
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 8,
       "zin-twijfeltaal": 2,
@@ -21361,16 +21537,6 @@
         "bron": "Tekstcontrole (SpellingSpeurneus)",
         "boodschap": "\"Bulusan\" staat niet in de woordenlijst.",
         "fragment": "Bulusan (provincie Sorsogon)",
-        "kop": "Natuurgeweld",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"Kanlaon\" staat niet in de woordenlijst.",
-        "fragment": "Kanlaon (op Negros Island)",
         "kop": "Natuurgeweld",
         "herkomst": "aanvulling",
         "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
@@ -21642,7 +21808,7 @@
         "fragment": "Wel wordt lichamelijk contact in het openbaar soms gezien als een ‘ernstig schandaal’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "PLW.xml",
@@ -22101,7 +22267,7 @@
         "fragment": "Houd rekening met ‘flash flooding’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "POL.xml",
@@ -22185,19 +22351,20 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 2,
+    "letop": 3,
     "linkzin": 3,
     "twijfel": 1,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 3,
       "link-zin": 3,
       "info": 1,
       "twijfel": 1
     },
     "perRegel": {
       "kinderen-paspoort": 1,
+      "woord-onbekend": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 5
     },
@@ -22209,6 +22376,16 @@
         "boodschap": "De zin over de documenten voor kinderen wijkt af van het sjabloon.",
         "fragment": "Kinderen hebben ook een geldig paspoort, een ESTA of eventueel een visum nodig voor een reis naar Puerto Rico.",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Puerto Rico."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Nemosio\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Vermijd de armere wijken zoals Nemosio Canales en Llorens Torres.",
+        "kop": "Criminaliteit",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -22354,7 +22531,7 @@
         "kop": "In geval van nood"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "PRT.xml",
@@ -22436,7 +22613,7 @@
         "herkomst": "aanvulling"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "PRY.xml",
@@ -22542,7 +22719,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "PSE.xml",
@@ -22557,13 +22734,13 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 11,
+    "letop": 13,
     "linkzin": 6,
     "twijfel": 2,
     "info": 2,
     "perErnst": {
       "fout": 4,
-      "let-op": 11,
+      "let-op": 13,
       "link-zin": 6,
       "info": 2,
       "twijfel": 2
@@ -22575,6 +22752,7 @@
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
+      "woord-onbekend": 2,
       "zin-max-woorden": 13,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
@@ -22648,6 +22826,26 @@
         "boodschap": "\"Demonstraties\" staat boven \"Terrorisme\".",
         "fragment": "Demonstraties",
         "notitie": "Deze rubriek hoort onder \"Wetten en gebruiken\" te staan, en onder alles wat daarboven komt: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken. Boven Natuurgeweld mag hij wel, en onderling ligt de volgorde van de vrije rubrieken niet vast."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Masafar\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Dit gebied ligt ten zuiden van de provincies Qalqilya, Tulkaren, Jenin en Tubas, en ten noorden van het gebied Masafar Yatta.",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Masafer\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De provincies Jenin, Tubas, Tulkarm en Qalqilya in het noorden van de Westelijke Jordaanoever, en het gebied Masafer Yatta ten zuiden van de stad Hebron. Hier komt incidenteel geweld voor. Zoals steek- en schietincidenten bij controleposten, Israëlische nederzettingen, boerenbedrijven en rond vluchtelingenkampen. De veiligheidssituatie is instabiel.",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -22887,7 +23085,7 @@
         "fragment": "Houd bij hevige regenval op bergachtige eilanden, zoals Tahiti en Moorea, ook rekening met ‘flash floods’."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "QAT.xml",
@@ -23212,7 +23410,7 @@
         "kop": "Verkeersongevallen"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "RS-KM.xml",
@@ -23867,7 +24065,7 @@
         "fragment": "Dit vindt elke laatste zaterdag van de maand plaats tussen 07."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SAU.xml",
@@ -24031,7 +24229,7 @@
         "kop": "Wetten en gebruiken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SDN.xml",
@@ -24145,7 +24343,7 @@
         "fragment": "Diefstal en ‘carjacking’"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SEN.xml",
@@ -24801,7 +24999,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 13-04-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 13-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SLV.xml",
@@ -24905,7 +25103,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 21-05-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SMR.xml",
@@ -25099,7 +25297,7 @@
         "fragment": "Of vermoedt u dat u tijdens uw aankomende bezoek aan Somalië moet trouwen of niet mag terugkeren naar Nederland?"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SRB.xml",
@@ -25563,7 +25761,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 18-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 18-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SVK.xml",
@@ -25651,7 +25849,7 @@
         "fragment": "Registreer u bij het kantoor voor registratie van buitenlandse inwoners (“foreign police”) in de regio waar u verblijft."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 04-09-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 04-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SVN.xml",
@@ -25809,7 +26007,7 @@
         "kop": "Natuurgeweld"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 02-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SWZ.xml",
@@ -25904,7 +26102,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "SXM.xml",
@@ -26167,7 +26365,7 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 24-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "TCA.xml",
@@ -26266,7 +26464,7 @@
         "notitie": "Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste letter van een woord buiten de link (\"K\" en dan \"ijk op de website\"), soms plakken twee woorden aan elkaar."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 05-01-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "TCD.xml",
@@ -26403,7 +26601,7 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 22-04-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "TGO.xml",
@@ -26525,13 +26723,13 @@
     ],
     "zinnen": 192,
     "fout": 3,
-    "letop": 29,
+    "letop": 30,
     "linkzin": 4,
     "twijfel": 8,
     "info": 5,
     "perErnst": {
       "fout": 3,
-      "let-op": 29,
+      "let-op": 30,
       "link-zin": 4,
       "info": 5,
       "twijfel": 8
@@ -26546,6 +26744,7 @@
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 19,
       "zin-frequentiewoord": 6,
       "zin-twijfeltaal": 2,
@@ -26632,6 +26831,16 @@
         "verwacht": "de",
         "herkomst": "aanvulling",
         "notitie": "Meestal blijft bij het herschrijven van een zin het oude woord staan."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Nathawi\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "De districten Chana, Nathawi, Thepha en Sabayoi in de zuidelijke provincie Songkhla.",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -27429,13 +27638,13 @@
     ],
     "zinnen": 75,
     "fout": 1,
-    "letop": 3,
+    "letop": 4,
     "linkzin": 3,
     "twijfel": 0,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 4,
       "link-zin": 3,
       "info": 1,
       "twijfel": 0
@@ -27443,6 +27652,7 @@
     "perRegel": {
       "kinderen-paspoort": 1,
       "tekst-spatie-leesteken": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 5,
       "link-tekstlengte": 1
     },
@@ -27464,6 +27674,16 @@
         "kop": "Criminaliteit",
         "herkomst": "aanvulling",
         "notitie": "Een leesteken sluit aan op het woord ervoor. In dit fragment staat er ␣ op de plek van de spatie."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Tobago?Neem\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Heeft u direct hulp nodig in Trinidad en Tobago?Neem contact op met de lokale hulpdiensten:",
+        "kop": "In geval van nood",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -27993,7 +28213,7 @@
         "fragment": "De Turkse wet tegen desinformatie bepaalt dat het delen van ‘opzettelijk misleidende informatie die de veiligheid, openbare orde en volksgezondheid in gevaar brengt’ strafbaar is."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 01-10-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 01-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "TUV.xml",
@@ -28117,7 +28337,7 @@
         "fragment": "Vraag na aankomst een verblijfsvergunning (Alien Resident Certificate/ARC) aan"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 26-08-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 26-08-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "TZA.xml",
@@ -28379,7 +28599,7 @@
         "fragment": "Neem geen waardevolle spullen mee tijdens vervoer in een ‘bajaj’ (tuktuk/klein driewielig vervoersmiddel)."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "UGA.xml",
@@ -28392,13 +28612,13 @@
     ],
     "zinnen": 92,
     "fout": 2,
-    "letop": 11,
+    "letop": 10,
     "linkzin": 2,
     "twijfel": 4,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 11,
+      "let-op": 10,
       "link-zin": 2,
       "info": 0,
       "twijfel": 4
@@ -28407,7 +28627,6 @@
       "doc-woordenaantal": 1,
       "h3-vaste-kop": 1,
       "h4-kop-variant": 1,
-      "woord-onbekend": 1,
       "zin-max-woorden": 10,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 3,
@@ -28443,16 +28662,6 @@
         "fragment": "Contactgegevens Nederlandse ambassade",
         "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
         "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
-      },
-      {
-        "regel": "woord-onbekend",
-        "ernst": "let-op",
-        "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"plaatvinden\" staat niet in de woordenlijst.",
-        "fragment": "Terroristische aanslagen kunnen nog steeds plaatvinden.",
-        "kop": "Terrorisme",
-        "herkomst": "aanvulling",
-        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",
@@ -28575,7 +28784,7 @@
         "fragment": "U heeft ook een ‘approval letter’ nodig."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "UKR.xml",
@@ -29002,27 +29211,27 @@
         "kop": "Bagageregels"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "VCT.xml",
     "iso": "VCT",
     "land": "Saint Vincent en de Grenadines",
-    "woorden": 1184,
+    "woorden": 1199,
     "woordenlimiet": 1500,
     "kleurcodes": [
       "groen"
     ],
     "zinnen": 58,
     "fout": 0,
-    "letop": 4,
-    "linkzin": 2,
+    "letop": 3,
+    "linkzin": 3,
     "twijfel": 3,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
-      "link-zin": 2,
+      "let-op": 3,
+      "link-zin": 3,
       "info": 0,
       "twijfel": 3
     },
@@ -29043,10 +29252,10 @@
       },
       {
         "regel": "zin-max-woorden",
-        "ernst": "let-op",
+        "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Lees informatie over orkanen en het lokale weer op de volgende websites (informatie in het Engels):",
+        "boodschap": "Deze zin telt 31 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
+        "fragment": "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -29062,7 +29271,7 @@
         "ernst": "link-zin",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15. De linktekst telt mee — kort die eerst in.",
-        "fragment": "Bekijk of er waarschuwingen zijn voor de vulkaan (informatie in het Engels) en volg het lokale nieuws.",
+        "fragment": "Bekijk of er waarschuwingen zijn voor de vulkaan bij het Global Volcanism Program (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -29105,7 +29314,7 @@
         "fragment": "Neem contact op met de ambassade van Saint Vincent en de Grenadines in Brussel, België"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 27-10-2025 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 08-10-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "VEN.xml",
@@ -29582,7 +29791,7 @@
         "fragment": "Lees meer over de regels voor toegang tot de Amerikaanse Maagdeneilanden"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 07-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "VNM.xml",
@@ -29843,13 +30052,13 @@
     ],
     "zinnen": 92,
     "fout": 2,
-    "letop": 8,
+    "letop": 10,
     "linkzin": 6,
     "twijfel": 4,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 8,
+      "let-op": 10,
       "link-zin": 6,
       "info": 1,
       "twijfel": 4
@@ -29858,6 +30067,7 @@
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "h3-niet-melden": 1,
+      "woord-onbekend": 2,
       "zin-max-woorden": 10,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 1,
@@ -29893,6 +30103,26 @@
         "boodschap": "\"Geldzaken\" hoort niet in een reisadvies.",
         "fragment": "Geldzaken",
         "notitie": "Evt. uitschrijven indien strikt noodzakelijk, bijvoorbeeld een land waar je echt in de problemen komt zonder contant geld en pinnen niet mogelijk is. Valuta-informatie is overal te vinden."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Geo-hazards\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "En lees informatie over tsunami’s op de website van het Vanuatu Meteorology & Geo-hazards Department (informatie in het Engels).",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Geo-Hazards\" is in SpellingSpeurneus als verkeerd gespelde naam aangewezen.",
+        "fragment": "Check waarschuwingen voor vulkaanuitbarstingen op de website van het Vanuatu Meteorology & Geo-Hazards Department (informatie in het Engels).",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
       },
       {
         "regel": "zin-max-woorden",
@@ -30037,7 +30267,7 @@
         "fragment": "Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen in Vanuatu."
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 23-01-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 23-01-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "WLF.xml",
@@ -30367,7 +30597,7 @@
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 16-09-2026 | Nog steeds geldig op: 08-10-2026"
   },
   {
     "bestand": "ZAF.xml",
@@ -30829,6 +31059,6 @@
         "kop": "Geldzaken"
       }
     ],
-    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 06-10-2026"
+    "gewijzigd": "Laatst gewijzigd op: 30-06-2026 | Nog steeds geldig op: 08-10-2026"
   }
 ]

@@ -1,6 +1,6 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-09 over 226 reisadviezen.
+Gedraaid op 2026-10-10 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
@@ -120,10 +120,10 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | China | 2504 | 1500 |
 | Mexico | 2497 | 2000 |
 | Rusland | 2495 | 2000 |
+| Tanzania | 2486 | 2000 |
 | Peru | 2461 | 2000 |
 | Filipijnen | 2436 | 2000 |
 | Turkije | 2411 | 2000 |
-| Tanzania | 2347 | 2000 |
 | Venezuela | 2332 | 2000 |
 | Egypte | 2326 | 2000 |
 | Irak | 2283 | 2000 |

@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-10 over 226 reisadviezen.
+Gedraaid op 2026-10-11 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **75** van de 226 adviezen hebben geen enkele harde fout.
+- **74** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **130** van de 2896 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **130** van de 2901 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,22 +25,22 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 289 | 151 |
-| geel/oranje — let op | 1451 | 212 |
-| lichtblauw — lange zin met link | 545 | 200 |
+| rood — fout | 290 | 152 |
+| geel/oranje — let op | 1453 | 212 |
+| lichtblauw — lange zin met link | 546 | 200 |
 | grijs — ter overweging | 158 | 109 |
-| roze — twijfeltaal | 453 | 156 |
+| roze — twijfeltaal | 454 | 156 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 218 | 1276 |
+| `zin-max-woorden` | 218 | 1278 |
 | `zin-frequentiewoord` | 146 | 385 |
 | `zin-lijdende-vorm` | 124 | 275 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
-| `zin-twijfeltaal` | 52 | 68 |
+| `zin-twijfeltaal` | 53 | 69 |
 | `doc-woordenaantal` | 46 | 46 |
 | `link-tekstlengte` | 44 | 50 |
 | `kleur-variant` | 44 | 50 |
@@ -58,8 +58,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `tekst-niet-melden` | 16 | 18 |
 | `rijbewijs-anwb` | 13 | 13 |
 | `h4-kop-variant` | 12 | 13 |
+| `actueel-max-woorden` | 12 | 12 |
 | `tekst-spatie-leesteken` | 11 | 12 |
-| `actueel-max-woorden` | 11 | 11 |
 | `h3-vaste-kop` | 11 | 11 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
@@ -85,13 +85,13 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `tekst-plakfout` | 3 | 3 |
 | `postplaats-schrijfwijze` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
+| `alinea-max-woorden` | 3 | 5 |
 | `h2-vast` | 2 | 2 |
 | `tekst-cms-rest` | 2 | 2 |
 | `kleur-formulering-verboden` | 2 | 2 |
 | `kleur-vaste-tekst` | 2 | 2 |
 | `regionaal-kleur-tekst` | 2 | 3 |
 | `vaste-tekst-land-leeg` | 2 | 2 |
-| `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |
 | `telefoon-notatie` | 2 | 3 |
 | `criminaliteit-themapagina` | 2 | 2 |

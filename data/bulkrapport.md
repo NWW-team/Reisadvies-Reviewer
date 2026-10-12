@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-11 over 226 reisadviezen.
+Gedraaid op 2026-10-12 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **74** van de 226 adviezen hebben geen enkele harde fout.
+- **75** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **130** van de 2901 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **124** van de 2897 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,8 +25,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 290 | 152 |
-| geel/oranje — let op | 1453 | 212 |
+| rood — fout | 289 | 151 |
+| geel/oranje — let op | 1450 | 212 |
 | lichtblauw — lange zin met link | 546 | 200 |
 | grijs — ter overweging | 158 | 109 |
 | roze — twijfeltaal | 454 | 156 |
@@ -35,7 +35,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 218 | 1278 |
+| `zin-max-woorden` | 218 | 1280 |
 | `zin-frequentiewoord` | 146 | 385 |
 | `zin-lijdende-vorm` | 124 | 275 |
 | `h4-niet-melden` | 64 | 65 |
@@ -44,9 +44,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `doc-woordenaantal` | 46 | 46 |
 | `link-tekstlengte` | 44 | 50 |
 | `kleur-variant` | 44 | 50 |
-| `woord-onbekend` | 41 | 69 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 38 | 38 |
+| `woord-onbekend` | 36 | 64 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |
@@ -100,7 +100,6 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `vaccinaties-ggd` | 1 | 1 |
 | `vaccinaties-lcr` | 1 | 1 |
 | `kort-max-bullets` | 1 | 1 |
-| `landnaam-schrijfwijze` | 1 | 1 |
 | `percentage-notatie` | 1 | 1 |
 | `valuta-notatie` | 1 | 1 |
 | `kort-verwijzing-hoogste-kleur` | 1 | 1 |
@@ -112,7 +111,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | land | woorden | limiet |
 |---|---:|---:|
-| Thailand | 3385 | 2000 |
+| Thailand | 3387 | 2000 |
 | India | 3100 | 2000 |
 | Ecuador | 2754 | 2000 |
 | Colombia | 2681 | 2000 |

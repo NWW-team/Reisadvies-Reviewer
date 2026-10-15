@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-14 over 226 reisadviezen.
+Gedraaid op 2026-10-15 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **75** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **116** van de 2890 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **117** van de 2891 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,7 +25,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 289 | 151 |
+| rood — fout | 290 | 151 |
 | geel/oranje — let op | 1443 | 212 |
 | lichtblauw — lange zin met link | 546 | 200 |
 | grijs — ter overweging | 158 | 109 |
@@ -78,11 +78,11 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `vragen-opeenvolgend` | 5 | 7 |
 | `kleur-vervolg-bullet-kort` | 4 | 4 |
 | `link-plakt-aan-woord` | 4 | 4 |
+| `tekst-plakfout` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `tekst-dubbel-woord` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
 | `kleur-eerste-bullet-voluit` | 3 | 3 |
-| `tekst-plakfout` | 3 | 3 |
 | `postplaats-schrijfwijze` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
 | `alinea-max-woorden` | 3 | 5 |

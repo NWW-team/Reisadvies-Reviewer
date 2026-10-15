@@ -1,15 +1,11 @@
 {
-  "uitgevoerd": "2026-10-14T10:46:25.964Z",
+  "uitgevoerd": "2026-10-15T10:29:01.060Z",
   "gevraagd": 227,
-  "gelukt": 225,
+  "gelukt": 226,
   "mislukt": [
     {
       "iso": "VAT",
       "reden": "404 op zowel ISO-code als locationKey"
-    },
-    {
-      "iso": "BQ-SE",
-      "reden": "HTTP 429"
     }
   ]
 }

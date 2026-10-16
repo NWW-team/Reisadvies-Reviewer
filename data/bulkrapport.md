@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-15 over 226 reisadviezen.
+Gedraaid op 2026-10-16 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **75** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **117** van de 2891 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **118** van de 2894 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,18 +26,18 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 290 | 151 |
-| geel/oranje — let op | 1443 | 212 |
+| geel/oranje — let op | 1444 | 212 |
 | lichtblauw — lange zin met link | 546 | 200 |
-| grijs — ter overweging | 158 | 109 |
+| grijs — ter overweging | 160 | 110 |
 | roze — twijfeltaal | 454 | 156 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 218 | 1281 |
+| `zin-max-woorden` | 218 | 1280 |
 | `zin-frequentiewoord` | 146 | 385 |
-| `zin-lijdende-vorm` | 124 | 275 |
+| `zin-lijdende-vorm` | 124 | 276 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
 | `zin-twijfeltaal` | 53 | 69 |
@@ -46,13 +46,13 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `kleur-variant` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 39 | 39 |
+| `woord-onbekend` | 33 | 57 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
-| `woord-onbekend` | 32 | 56 |
 | `kinderen-paspoort` | 29 | 29 |
+| `rubriek-vrij-te-hoog` | 25 | 25 |
 | `h3-niet-melden` | 24 | 24 |
-| `rubriek-vrij-te-hoog` | 24 | 24 |
-| `rubrieken-volgorde` | 22 | 22 |
+| `rubrieken-volgorde` | 23 | 23 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 16 | 18 |

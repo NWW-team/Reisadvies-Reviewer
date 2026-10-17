@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-16 over 226 reisadviezen.
+Gedraaid op 2026-10-17 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **75** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **118** van de 2894 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **119** van de 2895 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,27 +26,27 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 290 | 151 |
-| geel/oranje — let op | 1444 | 212 |
+| geel/oranje — let op | 1446 | 212 |
 | lichtblauw — lange zin met link | 546 | 200 |
 | grijs — ter overweging | 160 | 110 |
-| roze — twijfeltaal | 454 | 156 |
+| roze — twijfeltaal | 453 | 156 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 218 | 1280 |
+| `zin-max-woorden` | 218 | 1281 |
 | `zin-frequentiewoord` | 146 | 385 |
 | `zin-lijdende-vorm` | 124 | 276 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
-| `zin-twijfeltaal` | 53 | 69 |
+| `zin-twijfeltaal` | 52 | 68 |
 | `doc-woordenaantal` | 46 | 46 |
 | `link-tekstlengte` | 44 | 49 |
 | `kleur-variant` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 39 | 39 |
-| `woord-onbekend` | 33 | 57 |
+| `woord-onbekend` | 34 | 58 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |
@@ -116,8 +116,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | Ecuador | 2754 | 2000 |
 | Colombia | 2681 | 2000 |
 | Indonesië | 2672 | 2000 |
+| Mexico | 2570 | 2000 |
 | China | 2504 | 1500 |
-| Mexico | 2497 | 2000 |
 | Rusland | 2495 | 2000 |
 | Tanzania | 2486 | 2000 |
 | Peru | 2461 | 2000 |

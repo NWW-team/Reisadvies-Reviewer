@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-17 over 226 reisadviezen.
+Gedraaid op 2026-10-18 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **75** van de 226 adviezen hebben geen enkele harde fout.
 - **46** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **119** van de 2895 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **120** van de 2897 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,7 +26,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 290 | 151 |
-| geel/oranje — let op | 1446 | 212 |
+| geel/oranje — let op | 1448 | 212 |
 | lichtblauw — lange zin met link | 546 | 200 |
 | grijs — ter overweging | 160 | 110 |
 | roze — twijfeltaal | 453 | 156 |
@@ -37,7 +37,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 |---|---:|---:|
 | `zin-max-woorden` | 218 | 1281 |
 | `zin-frequentiewoord` | 146 | 385 |
-| `zin-lijdende-vorm` | 124 | 276 |
+| `zin-lijdende-vorm` | 124 | 277 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
 | `zin-twijfeltaal` | 52 | 68 |
@@ -46,7 +46,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `kleur-variant` | 44 | 50 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 39 | 39 |
-| `woord-onbekend` | 34 | 58 |
+| `woord-onbekend` | 35 | 59 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |

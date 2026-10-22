@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-21 over 226 reisadviezen.
+Gedraaid op 2026-10-22 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **76** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **122** van de 2900 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **122** van de 2902 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -28,15 +28,15 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | rood — fout | 291 | 150 |
 | geel/oranje — let op | 1453 | 212 |
 | lichtblauw — lange zin met link | 546 | 200 |
-| grijs — ter overweging | 159 | 110 |
-| roze — twijfeltaal | 451 | 156 |
+| grijs — ter overweging | 160 | 111 |
+| roze — twijfeltaal | 452 | 156 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
 | `zin-max-woorden` | 218 | 1281 |
-| `zin-frequentiewoord` | 145 | 384 |
+| `zin-frequentiewoord` | 145 | 385 |
 | `zin-lijdende-vorm` | 124 | 278 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
@@ -50,8 +50,8 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |
+| `rubriek-vrij-te-hoog` | 25 | 25 |
 | `h3-niet-melden` | 24 | 24 |
-| `rubriek-vrij-te-hoog` | 24 | 24 |
 | `rubrieken-volgorde` | 23 | 23 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |

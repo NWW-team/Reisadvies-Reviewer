@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-22 over 226 reisadviezen.
+Gedraaid op 2026-10-23 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **76** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **122** van de 2902 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **121** van de 2895 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,22 +25,22 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 291 | 150 |
-| geel/oranje — let op | 1453 | 212 |
-| lichtblauw — lange zin met link | 546 | 200 |
+| rood — fout | 290 | 150 |
+| geel/oranje — let op | 1450 | 212 |
+| lichtblauw — lange zin met link | 545 | 200 |
 | grijs — ter overweging | 160 | 111 |
-| roze — twijfeltaal | 452 | 156 |
+| roze — twijfeltaal | 450 | 156 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 218 | 1281 |
-| `zin-frequentiewoord` | 145 | 385 |
+| `zin-max-woorden` | 218 | 1278 |
+| `zin-frequentiewoord` | 145 | 384 |
 | `zin-lijdende-vorm` | 124 | 278 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |
-| `zin-twijfeltaal` | 52 | 67 |
+| `zin-twijfeltaal` | 51 | 66 |
 | `doc-woordenaantal` | 47 | 47 |
 | `link-tekstlengte` | 44 | 49 |
 | `kleur-variant` | 44 | 50 |
@@ -78,20 +78,20 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `link-verboden-partij` | 5 | 6 |
 | `kleur-vervolg-bullet-kort` | 4 | 4 |
 | `link-plakt-aan-woord` | 4 | 4 |
-| `tekst-plakfout` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `tekst-dubbel-woord` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
 | `kleur-eerste-bullet-voluit` | 3 | 3 |
+| `tekst-plakfout` | 3 | 3 |
 | `postplaats-schrijfwijze` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
-| `alinea-max-woorden` | 3 | 5 |
 | `h2-vast` | 2 | 2 |
 | `tekst-cms-rest` | 2 | 2 |
 | `kleur-formulering-verboden` | 2 | 2 |
 | `kleur-vaste-tekst` | 2 | 2 |
 | `regionaal-kleur-tekst` | 2 | 3 |
 | `vaste-tekst-land-leeg` | 2 | 2 |
+| `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |
 | `telefoon-notatie` | 2 | 3 |
 | `criminaliteit-themapagina` | 2 | 2 |

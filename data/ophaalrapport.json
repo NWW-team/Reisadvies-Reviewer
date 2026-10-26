@@ -1,38 +1,22 @@
 {
-  "uitgevoerd": "2026-10-25T10:18:00.980Z",
+  "uitgevoerd": "2026-10-26T11:44:15.357Z",
   "gevraagd": 227,
-  "gelukt": 217,
+  "gelukt": 221,
   "mislukt": [
     {
       "iso": "VAT",
       "reden": "404 op zowel ISO-code als locationKey"
     },
     {
-      "iso": "UGA",
-      "reden": "HTTP 429"
-    },
-    {
-      "iso": "UKR",
-      "reden": "HTTP 429"
-    },
-    {
       "iso": "USA",
       "reden": "HTTP 429"
     },
     {
-      "iso": "URY",
+      "iso": "VIR",
       "reden": "HTTP 429"
     },
     {
-      "iso": "UZB",
-      "reden": "HTTP 429"
-    },
-    {
-      "iso": "YEM",
-      "reden": "HTTP 429"
-    },
-    {
-      "iso": "ZWE",
+      "iso": "BQ-SA",
       "reden": "HTTP 429"
     },
     {

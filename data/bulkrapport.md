@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-28 over 226 reisadviezen.
+Gedraaid op 2026-10-29 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **76** van de 226 adviezen hebben geen enkele harde fout.
+- **77** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **104** van de 2878 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **101** van de 2876 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,9 +25,9 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 290 | 150 |
-| geel/oranje — let op | 1433 | 212 |
-| lichtblauw — lange zin met link | 546 | 200 |
+| rood — fout | 289 | 149 |
+| geel/oranje — let op | 1431 | 212 |
+| lichtblauw — lange zin met link | 547 | 200 |
 | grijs — ter overweging | 160 | 111 |
 | roze — twijfeltaal | 449 | 156 |
 
@@ -35,7 +35,7 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 218 | 1279 |
+| `zin-max-woorden` | 218 | 1280 |
 | `zin-frequentiewoord` | 145 | 383 |
 | `zin-lijdende-vorm` | 124 | 278 |
 | `h4-niet-melden` | 64 | 65 |
@@ -51,16 +51,16 @@ lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
 | `kinderen-paspoort` | 29 | 29 |
 | `rubriek-vrij-te-hoog` | 25 | 25 |
 | `h3-niet-melden` | 24 | 24 |
-| `woord-onbekend` | 24 | 45 |
 | `rubrieken-volgorde` | 23 | 23 |
+| `woord-onbekend` | 22 | 43 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
 | `actueel-max-woorden` | 13 | 13 |
 | `h4-kop-variant` | 12 | 13 |
-| `tekst-spatie-leesteken` | 11 | 12 |
 | `h3-vaste-kop` | 11 | 11 |
+| `tekst-spatie-leesteken` | 10 | 11 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |

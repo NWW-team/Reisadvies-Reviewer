@@ -77,8 +77,8 @@
     {
       "id": "zinslengte-link",
       "label": "Te lange zinnen incl. link",
-      "ernst": "link-zin",
-      "toelichting": "Zinnen boven de limiet met een link erin. Daar zit de lengte vaak in de linktekst, dus dat is een andere klus: eerst de linktekst inkorten.",
+      "ernst": "info",
+      "toelichting": "Zinnen boven de limiet met een link erin. Daar zit de lengte vaak in de linktekst, dus dat is een andere klus: eerst de linktekst inkorten. Ter overweging: of voor zinnen met een link een ruimere grens moet gelden, ligt ter bespreking.",
       "regels": [
         "zin-max-woorden"
       ]

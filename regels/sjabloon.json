@@ -221,6 +221,16 @@
     },
     "_rubrieken_noot": "Alleen nood en bagage. Onder Paspoort/visum/rijbewijs en Regionale risico's voegen redacteuren terecht landspecifieke kopjes toe (Inreisstempel, De provincie Cabinda, Grens met Mali); daar is geen vaste lijst. Gemeten op 18 september 2026: die twee rubrieken leverden samen 85 meldingen op die inhoudelijk allemaal klopten."
   },
+  "voorbeeld_twijfeltaal": {
+    "_toelichting": "Twijfeltaal die in een voorbeeldzin van het sjabloon zelf staat. Een redacteur die het voorbeeld volgt, heeft het sjabloon netjes gevolgd; de tool meldt het woord dan niet. Alleen de twijfeltaal valt weg: is de zin te lang, dan blijft dat gewoon gemeld. Of het sjabloon deze woorden moet houden, staat op de lijst ter bespreking (regels/TER-BESPREKING.md).",
+    "_bron": "Sjabloon Reisadviezen - nieuwe format.docx. Op 30 oktober 2026 woordelijk teruggevonden; Martijn op diezelfde dag: wie het sjabloon volgt, hoeft geen melding te krijgen.",
+    "frasen": [
+      {"frase": "zijn regelmatig demonstraties", "bron": "SJ, blok Demonstraties, voorbeeldtekst"},
+      {"frase": "moet u mogelijk naar een ander land worden overgebracht", "bron": "SJ, blok Reisverzekering, waarschuwing gebrekkige gezondheidszorg"},
+      {"frase": "dan komt u mogelijk het land niet in", "bron": "SJ, blok Reisvaccinaties, gele koorts"},
+      {"frase": "dieven proberen vaak hun slachtoffers af te leiden", "bron": "SJ, blok Criminaliteit, voorbeeld Argentinië"}
+    ]
+  },
   "vrijgestelde_formuleringen": {
     "_toelichting": "Vaste formuleringen uit het sjabloon die NIET verplicht zijn: welke variant geldt hangt van het land af. Ze staan hier alleen om ze vrij te stellen van de schrijfregels (zinslengte, lengte van de linktekst, notatie). De tool meldt dus niet dat ze ontbreken - daarvoor is vaste_teksten - maar valt er ook niet over zodra ze er staan. Dat is de bedoeling: de tekst volgt keurig het format, dus de tool hoort te zwijgen. Willen we deze teksten korter, dan is dat een herziening van het sjabloon en geen bevinding per advies.",
     "_bron": "Sjabloon Reisadviezen - nieuwe format.docx, blokken Paspoort/Visum/Rijbewijs, Reizen met kinderen, Bagageregels, In geval van nood en Wetten en gebruiken. Elke zin hieronder is op 18 september 2026 woordelijk teruggevonden in dat document.",

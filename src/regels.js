@@ -20,17 +20,18 @@ import { telWoorden, splitsZinnen } from './parse.js';
  *
  *   fout     rood         het mag echt niet: een onderwerp dat er niet hoort, of een vaste
  *                         formulering die niet is aangehouden
- *   let-op   geel/oranje  te lang of te passief geschreven: zinnen, linkteksten, lijdende vorm
- *   link-zin lichtblauw   te lange zin waarin een link staat — vaak los te maken door de
- *                         linktekst in te korten, dus een ander gesprek dan een lange lopende zin
- *   info     grijs        de rest: notatieregels en signalen om over na te denken
- *   twijfel  roze         twijfeltaal — onderaan, want het is bijna altijd een stapel losse
- *                         woorden ("vaak", "misschien") die je in één ronde wegwerkt
+ *   let-op   geel/oranje  te lang of te passief geschreven: zinnen, linkteksten, lijdende vorm,
+ *                         en een vaste tekst uit het sjabloon die ontbreekt of afwijkt
+ *   info     grijs        ter overweging: notatieregels, een te lange zin waar een link in staat,
+ *                         twijfeltaal — signalen om over na te denken, niet om zonder meer aan te passen
+ *
+ * Een lange zin met een link en twijfeltaal hadden eerst elk een eigen kleur (lichtblauw en roze).
+ * Martijn op 30 oktober 2026: dat is allebei ter overweging. Ze houden wel een eigen filter.
  */
-const ERNST = { fout: 'fout', letop: 'let-op', linkzin: 'link-zin', twijfel: 'twijfel', info: 'info' };
+const ERNST = { fout: 'fout', letop: 'let-op', info: 'info' };
 
 /** De volgorde waarin bevindingen worden getoond en geteld. */
-const ERNST_VOLGORDE = [ERNST.fout, ERNST.letop, ERNST.linkzin, ERNST.info, ERNST.twijfel];
+const ERNST_VOLGORDE = [ERNST.fout, ERNST.letop, ERNST.info];
 
 /** Normaliseert voor tekstvergelijking: kleine letters, rechte apostrof, enkele spaties. */
 export function norm(s) {
@@ -1774,14 +1775,17 @@ export function maakToetser(data) {
       }
     }
 
+    const sjabloonTwijfel = ((sj.voorbeeld_twijfeltaal && sj.voorbeeld_twijfeltaal.frasen) || [])
+      .map((x) => norm(x.frase));
     for (const z of doc.zinnen) {
       if (isVasteZin(z.tekst)) continue;
       if (z.woorden > lim.zin.max_woorden) {
         // Zit er een link in, dan zit de lengte vaak in de linktekst. Dat los je op door de
-        // linktekst in te korten, niet door de zin te splitsen — een eigen kleur dus, zodat de
-        // redacteur die twee apart kan aflopen.
+        // linktekst in te korten, niet door de zin te splitsen. Zo'n zin is ter overweging: of
+        // voor zinnen met een link een ruimere grens moet gelden (25 woorden?), ligt ter
+        // bespreking voor de schrijfwijzer.
         const metLink = doc.links.some((l) => l.tekst && z.tekst.includes(l.tekst));
-        b.push(bevinding('zin-max-woorden', metLink ? ERNST.linkzin : ERNST.letop,
+        b.push(bevinding('zin-max-woorden', metLink ? ERNST.info : ERNST.letop,
           'SW, Begrijpelijkheid > B1',
           `Deze zin telt ${z.woorden} woorden. Maximaal ${lim.zin.max_woorden}.`
             + (metLink ? ' De linktekst telt mee — kort die eerst in.' : ''),
@@ -1794,9 +1798,12 @@ export function maakToetser(data) {
         // "Regelmatig" en "soms" zeggen hoe váák iets gebeurt, en dat is soms feitelijke nuance:
         // over terroristische groepen kun je niet schrijven dát ze aanslagen plegen. Ze blijven
         // allebei gemeld — de schrijfwijzer noemt "vaak" letterlijk — maar apart te filteren.
+        // Staat het woord in een voorbeeldzin van het sjabloon ("In {land} zijn regelmatig
+        // demonstraties"), dan heeft de redacteur het sjabloon gevolgd en zwijgt de tool.
+        if (sjabloonTwijfel.some((f) => f.includes(w.toLowerCase()) && norm(z.tekst).includes(f))) continue;
         const isFrequentie = frequentieWoorden.has(w.toLowerCase());
         b.push(bevinding(isFrequentie ? 'zin-frequentiewoord' : 'zin-twijfeltaal',
-          ERNST.twijfel, 'SW, Begrijpelijkheid > B1',
+          ERNST.info, 'SW, Begrijpelijkheid > B1',
           isFrequentie
             ? `"${w}" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?`
             : `Twijfeltaal: "${w}".`,
@@ -2029,8 +2036,6 @@ export function maakToetser(data) {
         zinnen: doc.zinnen.length,
         fout: b.filter((x) => x.ernst === ERNST.fout).length,
         letop: b.filter((x) => x.ernst === ERNST.letop).length,
-        linkzin: b.filter((x) => x.ernst === ERNST.linkzin).length,
-        twijfel: b.filter((x) => x.ernst === ERNST.twijfel).length,
         info: b.filter((x) => x.ernst === ERNST.info).length,
         // Hetzelfde nog eens, maar op volgorde en met de ernst als sleutel: daar tekent de
         // pagina de balk mee, zonder de namen nog een keer te hoeven kennen.

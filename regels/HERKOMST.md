@@ -1466,3 +1466,25 @@ de live site bleef twee weken op de per-bullet-regel draaien. Martijn liep er bi
 *"dit klopt niet, hier gelden 2 kleurcodes en de formulering is goed/volgens wat in de matrix
 staat"* — bij "Voor de rest van Jordanië geldt kleurcode geel. U kunt hierheen reizen." meldde de
 tool dat "erheen" moest. Met deze merge is die melding weg.
+
+## Drie soorten in plaats van vijf, en twijfeltaal uit sjabloonvoorbeelden (30 oktober 2026)
+
+Martijn: een te lange zin waar een link in staat is *ter overweging* — kijk of hij korter kan.
+Twijfeltaal is ook ter overweging. Daarmee vervallen de eigen kleuren lichtblauw (*Lange zin met
+link*) en roze (*Twijfeltaal*); `zin-max-woorden` met een link, `zin-twijfeltaal` en
+`zin-frequentiewoord` geven nu `info`. De filters blijven: *Te lange zinnen incl. link* bakent zich
+nu af op ernst `info` in plaats van `link-zin`. Binnen een soort staan de bevindingen op de
+volgorde van de filters, zodat twijfeltaal onderaan blijft.
+
+Of voor zinnen met een link een ruimere grens moet gelden (bijvoorbeeld 25 woorden), is een vraag
+voor de schrijfwijzer en staat in `regels/TER-BESPREKING.md`. De grens in de tool blijft tot dan 15.
+
+Twijfeltaal die in een voorbeeldzin van het sjabloon staat, meldt de tool niet meer
+(`voorbeeld_twijfeltaal` in `sjabloon.json`): wie het voorbeeld volgt, heeft het sjabloon gevolgd.
+Alleen de twijfeltaal valt weg; een te lange zin blijft gemeld. Bij de vier frasen telt alleen
+*"zijn regelmatig demonstraties"* in het corpus: 42 meldingen minder. De zinnen staan ook op de
+lijst ter bespreking.
+
+De labelkleuren van *Fout en format* en *Te lange zinnen* leken als zachte tinten op elkaar (rozig
+en perzik). Ze zijn nu echt rood en echt oranje. *Twijfeltaal: vaak, soms* was paars-roze naast
+het roze van *Twijfeltaal: misschien* en is zandbruin geworden.

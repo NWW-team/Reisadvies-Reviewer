@@ -5,8 +5,7 @@
 /* Kleuren uit de Rijkshuisstijl zoals Nederlandwereldwijd.nl die gebruikt: hemelblauw voor de
    band, donkerblauw voor koppen, en de vier officiele kleurcodes voor de reisadviezen zelf.
    De ernst van een bevinding gebruikt dezelfde familie — rood voor een echte fout, geel/oranje
-   voor te lang of te passief, lichtblauw voor een lange zin met een link, roze voor twijfeltaal —
-   omdat dat sneller scant dan een aparte set. De kleurcodes zelf staan altijd bij hun naam
+   voor let op, grijs voor ter overweging — omdat dat sneller scant dan een aparte set. De kleurcodes zelf staan altijd bij hun naam
    ("kleurcode geel") en als chip met tekst, dus verwarring blijft beperkt tot de kleur alleen.
    RO Sans is niet vrij beschikbaar; Fira Sans is de dichtstbijzijnde humanistische schreefloze. */
 :root {
@@ -28,12 +27,6 @@
   --letop: #8a5a00;
   --letop-vlak: #fff3d6;
   --letop-rand: #e17000;
-  --linkzin: #154273;
-  --linkzin-vlak: #dceefa;
-  --linkzin-rand: #007bc7;
-  --twijfel: #a90061;
-  --twijfel-vlak: #fce4f1;
-  --twijfel-rand: #f092cd;
   --info: #535353;
   --info-vlak: #f0f0f0;
   --info-rand: #b4b4b4;
@@ -66,12 +59,6 @@
     --letop: #ffc95e;
     --letop-vlak: #2e2513;
     --letop-rand: #ffb612;
-    --linkzin: #8fcae7;
-    --linkzin-vlak: #11293c;
-    --linkzin-rand: #4aa3dd;
-    --twijfel: #f9a8d4;
-    --twijfel-vlak: #2f1024;
-    --twijfel-rand: #d16bab;
     --info: #a2b4c6;
     --info-vlak: #1e2c3b;
     --info-rand: #3b5168;
@@ -101,12 +88,6 @@
   --letop: #ffc95e;
   --letop-vlak: #2e2513;
   --letop-rand: #ffb612;
-  --linkzin: #8fcae7;
-  --linkzin-vlak: #11293c;
-  --linkzin-rand: #4aa3dd;
-  --twijfel: #f9a8d4;
-  --twijfel-vlak: #2f1024;
-  --twijfel-rand: #d16bab;
   --info: #a2b4c6;
   --info-vlak: #1e2c3b;
   --info-rand: #3b5168;
@@ -180,10 +161,6 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .cel .waarde small { font-size: .78rem; font-weight: 400; color: var(--gedempt); }
 .cel.fout .waarde { color: var(--fout); }
 .cel.letop .waarde { color: var(--letop); }
-.cel.linkzin .waarde { color: var(--linkzin); }
-.cel.twijfel .waarde { color: var(--twijfel); }
-:root[data-theme="dark"] .cel.linkzin .waarde { color: var(--linkzin); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cel.linkzin .waarde { color: var(--linkzin); } }
 .meter { height: 8px; background: var(--vlak-2); margin-top: 9px; overflow: hidden; }
 .meter i { display: block; height: 100%; background: var(--blauw); transition: width .3s; }
 .meter.over i { background: var(--fout); }
@@ -232,8 +209,6 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .zin { cursor: pointer; }
 .zin.m-fout { background: var(--fout-vlak); box-shadow: inset 0 -2px 0 var(--fout-rand); }
 .zin.m-letop { background: var(--letop-vlak); box-shadow: inset 0 -2px 0 var(--letop-rand); }
-.zin.m-linkzin { background: var(--linkzin-vlak); box-shadow: inset 0 -2px 0 var(--linkzin-rand); }
-.zin.m-twijfel { background: var(--twijfel-vlak); box-shadow: inset 0 -2px 0 var(--twijfel-rand); }
 .zin.m-info { background: var(--info-vlak); box-shadow: inset 0 -1px 0 var(--info-rand); }
 .zin.actief { outline: 2px solid var(--blauw); outline-offset: 1px; }
 
@@ -242,59 +217,55 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .groep > h3 .aantal { font-family: var(--mono); font-weight: 400; color: var(--gedempt); font-size: .76rem; letter-spacing: 0; }
 .groep.fout > h3 { color: var(--fout); }
 .groep.letop > h3 { color: var(--letop); }
-.groep.linkzin > h3 { color: var(--linkzin); }
-.groep.twijfel > h3 { color: var(--twijfel); }
 .groep.info > h3 { color: var(--info); }
 
 .bev { border: 1px solid var(--lijn); border-left: 4px solid var(--lijn-sterk); padding: 11px 13px; margin-bottom: 9px; background: var(--vlak); }
 .groep.fout .bev { border-left-color: var(--fout-rand); }
 .groep.letop .bev { border-left-color: var(--letop-rand); }
-.groep.linkzin .bev { border-left-color: var(--linkzin-rand); }
-.groep.twijfel .bev { border-left-color: var(--twijfel-rand); }
 .groep.info .bev { border-left-color: var(--info-rand); }
 .bev.actief { outline: 2px solid var(--blauw); outline-offset: 1px; }
 /* Terugval voor een labeltje van een regel zonder filter: dan de kleur van de ernst. */
 .e-fout { --e: var(--fout); --e-vlak: var(--fout-vlak); --e-rand: var(--fout-rand); }
 .e-letop { --e: var(--letop); --e-vlak: var(--letop-vlak); --e-rand: var(--letop-rand); }
-.e-linkzin { --e: var(--linkzin); --e-vlak: var(--linkzin-vlak); --e-rand: var(--linkzin-rand); }
-.e-twijfel { --e: var(--twijfel); --e-vlak: var(--twijfel-vlak); --e-rand: var(--twijfel-rand); }
 .e-info { --e: var(--info); --e-vlak: var(--info-vlak); --e-rand: var(--info-rand); }
 /* Elk filter een eigen, zachte kleur: genoeg om twee soorten uit elkaar te houden, niet zo veel
    dat het om aandacht schreeuwt. Het labeltje op een kaartje draagt de kleur van zijn filter. De
-   ernst (rood, oranje, blauw, roze) blijft op de rand van het kaartje en in de markering in de tekst. */
-.g-format { --e: #72221d; --e-vlak: #fad8d6; --e-rand: #e2928d; }
-.g-zinslengte { --e: #72451d; --e-vlak: #fae7d6; --e-rand: #e2b58d; }
+   ernst (rood, oranje, grijs) blijft op de rand van het kaartje en in de markering in de tekst.
+   Fout en format is echt rood en Te lange zinnen echt oranje: als zachte tinten leken ze op elkaar
+   (30 oktober 2026). Om dezelfde reden heeft twijfeltaal over hoe vaak iets gebeurt zandbruin. */
+.g-format { --e: #8f1d16; --e-vlak: #fbd3cd; --e-rand: #e5786c; }
+.g-zinslengte { --e: #7a4100; --e-vlak: #ffe1b8; --e-rand: #f0a040; }
 .g-zinslengte-link { --e: #1d4a72; --e-vlak: #d6e9fa; --e-rand: #8dbae2; }
 .g-tekstfouten { --e: #3c1d72; --e-vlak: #e3d6fa; --e-rand: #ac8de2; }
 .g-spelling { --e: #72611d; --e-vlak: #faf3d6; --e-rand: #e2d18d; }
 .g-linktekst { --e: #1d726f; --e-vlak: #d6faf9; --e-rand: #8de2e0; }
 .g-lijdende-vorm { --e: #1d7224; --e-vlak: #d6fad9; --e-rand: #8de294; }
 .g-twijfeltaal { --e: #721d4a; --e-vlak: #fad6e9; --e-rand: #e28dba; }
-.g-frequentiewoorden { --e: #671d72; --e-vlak: #f6d6fa; --e-rand: #d78de2; }
+.g-frequentiewoorden { --e: #5a4632; --e-vlak: #ece2d6; --e-rand: #bfa68a; }
 .g-rubriekvolgorde { --e: #3d4652; --e-vlak: #e3e7ed; --e-rand: #adb6c2; }
 .g-notatie { --e: #61721d; --e-vlak: #f3fad6; --e-rand: #d1e28d; }
 @media (prefers-color-scheme: dark) {
-:root:not([data-theme="light"]) .g-format { --e: #edafab; --e-vlak: #401e1c; --e-rand: #8f433d; }
-:root:not([data-theme="light"]) .g-zinslengte { --e: #edcaab; --e-vlak: #402d1c; --e-rand: #8f633d; }
+:root:not([data-theme="light"]) .g-format { --e: #f4aca2; --e-vlak: #461a15; --e-rand: #a3443a; }
+:root:not([data-theme="light"]) .g-zinslengte { --e: #f7c587; --e-vlak: #45290a; --e-rand: #a2641c; }
 :root:not([data-theme="light"]) .g-zinslengte-link { --e: #abceed; --e-vlak: #1c2f40; --e-rand: #3d698f; }
 :root:not([data-theme="light"]) .g-tekstfouten { --e: #c3abed; --e-vlak: #291c40; --e-rand: #5b3d8f; }
 :root:not([data-theme="light"]) .g-spelling { --e: #ede0ab; --e-vlak: #40391c; --e-rand: #8f7e3d; }
 :root:not([data-theme="light"]) .g-linktekst { --e: #abedeb; --e-vlak: #1c403f; --e-rand: #3d8f8c; }
 :root:not([data-theme="light"]) .g-lijdende-vorm { --e: #abedb0; --e-vlak: #1c401f; --e-rand: #3d8f44; }
 :root:not([data-theme="light"]) .g-twijfeltaal { --e: #edabce; --e-vlak: #401c2f; --e-rand: #8f3d69; }
-:root:not([data-theme="light"]) .g-frequentiewoorden { --e: #e4abed; --e-vlak: #3b1c40; --e-rand: #843d8f; }
+:root:not([data-theme="light"]) .g-frequentiewoorden { --e: #dccab4; --e-vlak: #352b20; --e-rand: #7d6950; }
 :root:not([data-theme="light"]) .g-rubriekvolgorde { --e: #c4cbd4; --e-vlak: #292d32; --e-rand: #5c6470; }
 :root:not([data-theme="light"]) .g-notatie { --e: #e0edab; --e-vlak: #39401c; --e-rand: #7e8f3d; }
 }
-:root[data-theme="dark"] .g-format { --e: #edafab; --e-vlak: #401e1c; --e-rand: #8f433d; }
-:root[data-theme="dark"] .g-zinslengte { --e: #edcaab; --e-vlak: #402d1c; --e-rand: #8f633d; }
+:root[data-theme="dark"] .g-format { --e: #f4aca2; --e-vlak: #461a15; --e-rand: #a3443a; }
+:root[data-theme="dark"] .g-zinslengte { --e: #f7c587; --e-vlak: #45290a; --e-rand: #a2641c; }
 :root[data-theme="dark"] .g-zinslengte-link { --e: #abceed; --e-vlak: #1c2f40; --e-rand: #3d698f; }
 :root[data-theme="dark"] .g-tekstfouten { --e: #c3abed; --e-vlak: #291c40; --e-rand: #5b3d8f; }
 :root[data-theme="dark"] .g-spelling { --e: #ede0ab; --e-vlak: #40391c; --e-rand: #8f7e3d; }
 :root[data-theme="dark"] .g-linktekst { --e: #abedeb; --e-vlak: #1c403f; --e-rand: #3d8f8c; }
 :root[data-theme="dark"] .g-lijdende-vorm { --e: #abedb0; --e-vlak: #1c401f; --e-rand: #3d8f44; }
 :root[data-theme="dark"] .g-twijfeltaal { --e: #edabce; --e-vlak: #401c2f; --e-rand: #8f3d69; }
-:root[data-theme="dark"] .g-frequentiewoorden { --e: #e4abed; --e-vlak: #3b1c40; --e-rand: #843d8f; }
+:root[data-theme="dark"] .g-frequentiewoorden { --e: #dccab4; --e-vlak: #352b20; --e-rand: #7d6950; }
 :root[data-theme="dark"] .g-rubriekvolgorde { --e: #c4cbd4; --e-vlak: #292d32; --e-rand: #5c6470; }
 :root[data-theme="dark"] .g-notatie { --e: #e0edab; --e-vlak: #39401c; --e-rand: #7e8f3d; }
 .bev .bovenrij { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
@@ -429,19 +400,14 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
   break-inside: avoid; }
 #rapport .r-bev.fout { border-left-color: var(--fout-rand); }
 #rapport .r-bev.letop { border-left-color: var(--letop-rand); }
-#rapport .r-bev.linkzin { border-left-color: var(--linkzin-rand); }
-#rapport .r-bev.twijfel { border-left-color: var(--twijfel-rand); }
 #rapport .r-regel { font-family: var(--mono); font-size: .72rem; color: var(--gedempt); }
 #rapport .r-cite { font-style: italic; }
 #rapport .r-bij { font-size: .8rem; color: var(--gedempt); }
 /* In een pdf of op papier draagt kleur alleen niet: onderstrepen doet dat wel. */
-#rapport .r-tekst .m-fout, #rapport .r-tekst .m-letop, #rapport .r-tekst .m-linkzin,
-#rapport .r-tekst .m-twijfel, #rapport .r-tekst .m-info {
+#rapport .r-tekst .m-fout, #rapport .r-tekst .m-letop, #rapport .r-tekst .m-info {
   text-decoration: underline; text-underline-offset: 2px; }
 #rapport .r-tekst .m-fout { text-decoration-color: var(--fout-rand); text-decoration-thickness: 2px; }
 #rapport .r-tekst .m-letop { text-decoration-color: var(--letop-rand); text-decoration-thickness: 2px; }
-#rapport .r-tekst .m-linkzin { text-decoration-color: var(--linkzin-rand); text-decoration-thickness: 2px; }
-#rapport .r-tekst .m-twijfel { text-decoration-color: var(--twijfel-rand); text-decoration-thickness: 2px; }
 #rapport .r-tekst .m-info { text-decoration-color: var(--info-rand); text-decoration-thickness: 1px; }
 #rapport .r-tekst .zin { cursor: auto; }
 
@@ -708,8 +674,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   }
   // De volgorde komt uit de regellaag, zodat paneel, balk en rapport hem niet los bijhouden.
   const VOLGORDE = Regels.ERNST_VOLGORDE;
-  const ernstKlasse = { 'fout': 'fout', 'let-op': 'letop', 'link-zin': 'linkzin',
-    'twijfel': 'twijfel', 'info': 'info' };
+  const ernstKlasse = { 'fout': 'fout', 'let-op': 'letop', 'info': 'info' };
   // Eén oordeel: onterecht. Eens of oneens zijn met een richtlijn is geen keuze voor de
   // redacteur; de richtlijnen volg je. Wat wel kan, is dat de tool zich vergist. Bij een
   // spellingbevinding betekent dat: het woord is goed, en dan komt het op de lijst met
@@ -718,11 +683,9 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
   const ONTERECHT_UITLEG = 'De bevinding zelf deugt niet: de tool ziet iets dat er niet staat.';
   const WOORD_UITLEG = 'Dit woord is goed gespeld. Het staat nu op de lijst met voorgestelde woorden '
     + 'voor de woordenlijst, onderaan de pagina.';
-  const ernstLabel = { 'fout': 'Fout', 'let-op': 'Let op', 'link-zin': 'Lange zin met link',
-    'twijfel': 'Twijfeltaal', 'info': 'Ter overweging' };
+  const ernstLabel = { 'fout': 'Fout', 'let-op': 'Let op', 'info': 'Ter overweging' };
   // Korter, voor de tellers in de balk.
-  const ernstEtiket = { 'fout': 'Fout', 'let-op': 'Let op', 'link-zin': 'Zin met link',
-    'twijfel': 'Twijfeltaal', 'info': 'Overig' };
+  const ernstEtiket = { 'fout': 'Fout', 'let-op': 'Let op', 'info': 'Ter overweging' };
 
   function esc(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -1098,9 +1061,13 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         if (!perRegel.has(b.regel)) perRegel.set(b.regel, []);
         perRegel.get(b.regel).push([b, i]);
       }
+      // Binnen een soort op de volgorde van de filters: zo staat twijfeltaal onder ter overweging
+      // nog altijd onderaan, als een stapel losse woorden die je in één ronde wegwerkt.
+      const plek = (items) => { const g = groepVan(items[0][0]); return g ? GROEPEN.indexOf(g) : GROEPEN.length; };
+      const gesorteerd = [...perRegel.values()].sort((a, b) => plek(a) - plek(b));
       return '<div class="groep ' + ernstKlasse[ernst] + '"><h3>' + ernstLabel[ernst]
         + ' <span class="aantal">' + groep.length + '</span></h3>'
-        + [...perRegel.values()].map((items) => items.map(([b, i]) => kaart(b, i)).join('')).join('')
+        + gesorteerd.map((items) => items.map(([b, i]) => kaart(b, i)).join('')).join('')
         + '</div>';
     }).join('');
     $('bevindingen').innerHTML = html;
@@ -1495,15 +1462,11 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     '.r-bev{margin:0 0 7pt;padding-left:7pt;border-left:3px solid #b4b4b4}',
     '.r-bev.fout{border-left-color:#ca005d}',
     '.r-bev.letop{border-left-color:#e17000}',
-    '.r-bev.linkzin{border-left-color:#007bc7}',
-    '.r-bev.twijfel{border-left-color:#f092cd}',
     '.r-regel{font-family:Consolas,monospace;font-size:8pt;color:#535353}',
     '.r-cite{font-style:italic}',
     '.r-bij{font-size:9.5pt;color:#535353}',
     '.m-fout{text-decoration:underline;text-decoration-color:#d52b1e}',
     '.m-letop{text-decoration:underline;text-decoration-color:#e17000}',
-    '.m-linkzin{text-decoration:underline;text-decoration-color:#007bc7}',
-    '.m-twijfel{text-decoration:underline;text-decoration-color:#f092cd}',
     '.m-info{text-decoration:underline;text-decoration-color:#767676}',
   ].join('');
 

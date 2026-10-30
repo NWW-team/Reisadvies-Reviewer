@@ -40,8 +40,7 @@ if (!existsSync(corpusMap) || readdirSync(corpusMap).filter((f) => f.endsWith('.
 }
 
 const ERNST_NAAM = {
-  'fout': 'rood — fout', 'let-op': 'geel/oranje — let op', 'link-zin': 'lichtblauw — lange zin met link',
-  'info': 'grijs — ter overweging', 'twijfel': 'roze — twijfeltaal',
+  'fout': 'rood — fout', 'let-op': 'geel/oranje — let op', 'info': 'grijs — ter overweging',
 };
 
 const resultaten = [];
@@ -127,7 +126,7 @@ const regels = [
   '## Per soort bevinding',
   '',
   'De ernst is een soort, geen rangorde: rood is echt fout, geel/oranje te lang of te passief,',
-  'lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.',
+  'grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).',
   '',
   '| soort | bevindingen | in hoeveel adviezen |',
   '|---|---:|---:|',

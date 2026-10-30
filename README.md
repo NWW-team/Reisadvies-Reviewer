@@ -58,20 +58,25 @@ alleen een letterlijke treffer, want een kop is te kort voor de ruime vergelijki
 over iets dat *ontbreekt* hebben niets om aan te wijzen en blijven ongemarkeerd — die staan
 alleen in de lijst, met de verwachte formulering erbij.
 
-**Vijf kleuren, vaste volgorde.** De ernst van een bevinding is een *soort*, geen rangorde van
+**Drie kleuren, vaste volgorde.** De ernst van een bevinding is een *soort*, geen rangorde van
 erg naar minder erg. De lijst staat altijd in deze volgorde, zodat je hem van boven naar beneden
 kunt aflopen:
 
 | kleur | soort | waarvoor |
 | --- | --- | --- |
 | rood | **Fout** | het mag echt niet: een onderwerp dat er niet hoort, een vaste formulering die niet is aangehouden |
-| geel/oranje | **Let op** | te lange zin zonder link, te lange linktekst, lijdende vorm |
-| lichtblauw | **Lange zin met link** | meer dan 15 woorden *en* een link in de zin — vaak op te lossen door de linktekst in te korten |
-| grijs | **Ter overweging** | de rest: notatieregels en signalen om over na te denken |
-| roze | **Twijfeltaal** | misschien, vaak, mogelijk, bijna … — onderaan, want het is bijna altijd een stapel losse woorden die je in één ronde wegwerkt |
+| geel/oranje | **Let op** | te lange zin zonder link, te lange linktekst, lijdende vorm, een vaste tekst uit het sjabloon die ontbreekt of afwijkt |
+| grijs | **Ter overweging** | notatieregels, een te lange zin mét een link erin, twijfeltaal (misschien, vaak, mogelijk …) — signalen om over na te denken |
+
+Binnen *Ter overweging* staan de bevindingen op de volgorde van de filters, dus twijfeltaal
+onderaan: het is bijna altijd een stapel losse woorden die je in één ronde wegwerkt. Een lange
+zin met een link en twijfeltaal hadden eerst een eigen kleur (lichtblauw en roze); sinds 30
+oktober 2026 zijn ze ter overweging, met hun eigen filter.
 
 Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een fout moet je hoe
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
+Twijfeltaal uit een voorbeeldzin van het sjabloon (*"In … zijn regelmatig demonstraties"*) telt
+ook niet mee: wie het voorbeeld volgt, heeft het sjabloon gevolgd.
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
 *Te lange zinnen*, *Te lange zinnen incl. link*, *Tekstfouten*, *Mogelijke spelfouten*,

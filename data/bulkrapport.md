@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-10-29 over 226 reisadviezen.
+Gedraaid op 2026-10-30 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **77** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **101** van de 2876 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **101** van de 2834 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -21,22 +21,20 @@ de standaardtekst lost ze allemaal tegelijk op.
 ## Per soort bevinding
 
 De ernst is een soort, geen rangorde: rood is echt fout, geel/oranje te lang of te passief,
-lichtblauw een lange zin met een link erin, roze twijfeltaal, grijs de rest.
+grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 289 | 149 |
-| geel/oranje — let op | 1431 | 212 |
-| lichtblauw — lange zin met link | 547 | 200 |
-| grijs — ter overweging | 160 | 111 |
-| roze — twijfeltaal | 449 | 156 |
+| geel/oranje — let op | 1491 | 214 |
+| grijs — ter overweging | 1054 | 214 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
 | `zin-max-woorden` | 218 | 1280 |
-| `zin-frequentiewoord` | 145 | 383 |
+| `zin-frequentiewoord` | 137 | 341 |
 | `zin-lijdende-vorm` | 124 | 278 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 86 |

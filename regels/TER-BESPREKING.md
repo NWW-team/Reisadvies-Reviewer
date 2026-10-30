@@ -15,7 +15,8 @@ verzamelt alvast wat erin moet.
 
 ### Verkeersongevallen
 
-Afgesproken was: alleen bij uitzondering. Nu staat het weer in zo'n 50 reisadviezen.
+Afgesproken was: alleen bij uitzondering. Nu heeft 41 van de 226 reisadviezen er een eigen kop
+voor (gemeten 30 oktober 2026).
 
 De argumenten om het niet op te nemen (Martijn, 30 oktober 2026):
 
@@ -39,7 +40,8 @@ de andere adviezen?
 ### Geldzaken
 
 Ook alleen in heel uitzonderlijke gevallen, bijvoorbeeld als je nergens kunt pinnen en dus veel
-contant geld moet meenemen. Een kop *Geldzaken* hoort er volgens het format niet in.
+contant geld moet meenemen. Een kop *Geldzaken* hoort er volgens het format niet in. Nu staat
+hij in 24 van de 226 reisadviezen (gemeten 30 oktober 2026).
 
 ## Schrijfregels die knellen
 

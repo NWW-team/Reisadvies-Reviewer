@@ -379,7 +379,7 @@
     },
     {
       "id": "medicijnen-voldoende",
-      "ernst": "info",
+      "ernst": "let-op",
       "rubriek": "medicijnen",
       "bron": "SJ, blok Medicijnen",
       "zin": "Neem voldoende medicijnen mee, ook voor extra dagen.",
@@ -388,7 +388,7 @@
     },
     {
       "id": "bagage-heen",
-      "ernst": "info",
+      "ernst": "let-op",
       "rubriek": "bagage",
       "bron": "SJ, blok Bagageregels",
       "zin": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van {land}.",
@@ -432,7 +432,7 @@
     },
     {
       "id": "paspoort-kopie",
-      "ernst": "info",
+      "ernst": "let-op",
       "rubriek": "paspoort",
       "bron": "SJ, blok Paspoort, visum, rijbewijs",
       "zin": "Deel een kopie van uw paspoort met familie in Nederland.",
@@ -453,7 +453,7 @@
     },
     {
       "id": "kinderen-paspoort",
-      "ernst": "info",
+      "ernst": "let-op",
       "rubriek": "paspoort",
       "alleen_als": "kinderen hebben ook",
       "bron": "SJ, blok Reizen met kinderen",
@@ -466,7 +466,7 @@
     },
     {
       "id": "kinderen-documenten",
-      "ernst": "info",
+      "ernst": "let-op",
       "rubriek": "paspoort",
       "alleen_als": "kinderen|minderjarig",
       "bron": "SJ, blok Paspoort, visum, rijbewijs",

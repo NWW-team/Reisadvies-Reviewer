@@ -694,14 +694,6 @@ test('elke bevinding valt in precies een filtergroep', () => {
   }
 });
 
-test('elke ernst die een regel kan geven valt onder een filter', () => {
-  // Bakent een groep af op ernst, dan moeten alle ernsten die die regel kan opleveren gedekt zijn.
-  // Anders valt een bevinding buiten elk filter en is hij nooit uit te zetten.
-  const zin = regeldata.groepen.groepen.filter((g) => g.regels.includes('zin-max-woorden'));
-  assert.deepEqual(new Set(zin.map((g) => g.ernst)), new Set(['let-op', 'info']),
-    'zin-max-woorden geeft let-op (zonder link) en info (met link); beide horen een eigen filter te hebben');
-});
-
 test('elke filtergroep heeft een label en een toelichting', () => {
   for (const g of regeldata.groepen.groepen) {
     assert.ok(g.id && g.label && g.toelichting, `groep ${g.id || '(zonder id)'} is niet compleet`);

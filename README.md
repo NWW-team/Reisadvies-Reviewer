@@ -65,13 +65,17 @@ kunt aflopen:
 | kleur | soort | waarvoor |
 | --- | --- | --- |
 | rood | **Fout** | het mag echt niet: een onderwerp dat er niet hoort, een vaste formulering die niet is aangehouden |
-| geel/oranje | **Let op** | te lange zin zonder link, te lange linktekst, lijdende vorm, een vaste tekst uit het sjabloon die ontbreekt of afwijkt |
-| grijs | **Ter overweging** | notatieregels, een te lange zin mét een link erin, twijfeltaal (misschien, vaak, mogelijk …) — signalen om over na te denken |
+| geel/oranje | **Let op** | te lange zin, te lange linktekst, lijdende vorm, een vaste tekst uit het sjabloon die ontbreekt of afwijkt |
+| grijs | **Ter overweging** | notatieregels, twijfeltaal (misschien, vaak, mogelijk …) — signalen om over na te denken |
 
 Binnen *Ter overweging* staan de bevindingen op de volgorde van de filters, dus twijfeltaal
-onderaan: het is bijna altijd een stapel losse woorden die je in één ronde wegwerkt. Een lange
-zin met een link en twijfeltaal hadden eerst een eigen kleur (lichtblauw en roze); sinds 30
-oktober 2026 zijn ze ter overweging, met hun eigen filter.
+onderaan: het is bijna altijd een stapel losse woorden die je in één ronde wegwerkt. Twijfeltaal
+had eerst een eigen kleur (roze); sinds 30 oktober 2026 is het ter overweging, met een eigen filter.
+
+**Wat de tool met opzet niet meldt, maar wel telt.** Een te lange zin met een link erin, en
+twijfeltaal uit een voorbeeldzin van het sjabloon, liggen ter bespreking
+(`regels/TER-BESPREKING.md`). De tool meldt ze niet; ze staan per advies in
+`samenvatting.teBespreken`, zodat het totaaloverzicht kan laten zien om hoeveel het gaat.
 
 Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een fout moet je hoe
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.
@@ -79,15 +83,15 @@ Twijfeltaal uit een voorbeeldzin van het sjabloon (*"In … zijn regelmatig demo
 ook niet mee: wie het voorbeeld volgt, heeft het sjabloon gevolgd.
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
-*Te lange zinnen*, *Te lange zinnen incl. link*, *Tekstfouten*, *Mogelijke spelfouten*,
+*Te lange zinnen*, *Tekstfouten*, *Mogelijke spelfouten*,
 *Linkteksten*, *Lijdende vorm*, *Twijfeltaal: misschien, mogelijk*, *Twijfeltaal: vaak, soms*,
 *Volgorde van de rubrieken* en *Notatie en stijl*. Alles staat aan; een klik zet een soort weg. Een aangevinkte knop is gevuld
 met een vinkje, een uitgezette is doorgestreept met een kruisje, zodat je ziet wat een klik doet. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
 
-Te lange zinnen staan in twee filters, want het zijn twee klussen: zit de lengte in de linktekst,
-dan kort je die in; is het een lange lopende zin, dan splits je hem. Ze komen uit dezelfde regel,
-dus een filtergroep mag zich met het veld `ernst` beperken tot bevindingen van die soort.
+Een filtergroep mag zich met het veld `ernst` beperken tot bevindingen van die soort. Dat werd
+gebruikt om te lange zinnen met en zonder link te scheiden; sinds de zinnen met link niet meer
+gemeld worden, gebruikt geen groep het meer.
 
 Kleur en groep zijn met opzet twee verschillende dingen. De **kleur** zegt hoe ernstig een bevinding
 is en bepaalt de volgorde. De **groep** zegt wat voor soort het is en bepaalt alleen wat je opzij
@@ -182,6 +186,7 @@ node --test test/toets-markering.cjs test/toets-in-het-kort.cjs test/toets-ernst
                                  # markering, de regels van In het kort, en de ernstindeling
 node scripts/fetch-corpus.mjs    # reisadviezen ophalen (zie hieronder)
 node scripts/bulk.mjs            # alle adviezen toetsen -> data/bulkrapport.md
+node scripts/totaaloverzicht.mjs # eerste meting tegenover nu -> data/totaaloverzicht.md
 node scripts/bouw-pagina.mjs     # vouwt regels, parser en 3 echte adviezen in dist/app.html
 node scripts/bouw-adviezen.mjs   # zet alle 226 adviezen klaar in docs/adviezen/
 node scripts/haal-woordenlijst.mjs  # haalt de OpenTaal-woordenlijst op voor de spellingtoets
@@ -226,6 +231,7 @@ De runner commit het corpus terug naar de repo, zodat het daarna voor iedereen b
 | `dist/app.html` | de gebouwde tool als één bestand — gegenereerd, niet met de hand bijwerken |
 | `scripts/fetch-corpus.mjs` | ophalen van de reisadviezen |
 | `scripts/bulk.mjs` | alle adviezen toetsen en een rapport schrijven |
+| `scripts/totaaloverzicht.mjs` | totaaloverzicht voor het gesprek over format en praktijk: de eerste meting (14 september 2026) tegenover nu |
 | `scripts/vaste-teksten-boven-de-norm.mjs` | welke voorgeschreven zinnen zelf niet binnen de schrijfwijzer passen |
 | `scripts/erheen-hierheen.mjs` | opschoonlijst: waar staat "erheen" waar "hierheen" hoort, en andersom |
 | `scripts/bouw-adviezen.mjs` | het corpus klaarzetten als `docs/adviezen/`, zodat alle landen in de lijst staan |

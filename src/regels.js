@@ -1775,21 +1775,25 @@ export function maakToetser(data) {
       }
     }
 
+    // Wat de tool niet meldt maar wel ter bespreking ligt: dat telt mee in de samenvatting.
+    const teBespreken = { langeZinMetLink: [], twijfelUitSjabloon: [] };
     const sjabloonTwijfel = ((sj.voorbeeld_twijfeltaal && sj.voorbeeld_twijfeltaal.frasen) || [])
       .map((x) => norm(x.frase));
     for (const z of doc.zinnen) {
       if (isVasteZin(z.tekst)) continue;
       if (z.woorden > lim.zin.max_woorden) {
-        // Zit er een link in, dan zit de lengte vaak in de linktekst. Dat los je op door de
-        // linktekst in te korten, niet door de zin te splitsen. Zo'n zin is ter overweging: of
-        // voor zinnen met een link een ruimere grens moet gelden (25 woorden?), ligt ter
-        // bespreking voor de schrijfwijzer.
+        // Zit er een link in, dan zit de lengte vaak in de linktekst. Zo'n zin meldt de tool niet:
+        // of voor zinnen met een link een ruimere grens moet gelden (25 woorden?), ligt ter
+        // bespreking voor de schrijfwijzer (Martijn, 30 oktober 2026). Hij telt wel mee in de
+        // samenvatting, zodat het totaaloverzicht laat zien om hoeveel zinnen het gaat.
         const metLink = doc.links.some((l) => l.tekst && z.tekst.includes(l.tekst));
-        b.push(bevinding('zin-max-woorden', metLink ? ERNST.info : ERNST.letop,
-          'SW, Begrijpelijkheid > B1',
-          `Deze zin telt ${z.woorden} woorden. Maximaal ${lim.zin.max_woorden}.`
-            + (metLink ? ' De linktekst telt mee — kort die eerst in.' : ''),
-          { fragment: z.tekst, kop: z.h3 || z.h2 }));
+        if (metLink) {
+          teBespreken.langeZinMetLink.push(z.tekst);
+        } else {
+          b.push(bevinding('zin-max-woorden', ERNST.letop, 'SW, Begrijpelijkheid > B1',
+            `Deze zin telt ${z.woorden} woorden. Maximaal ${lim.zin.max_woorden}.`,
+            { fragment: z.tekst, kop: z.h3 || z.h2 }));
+        }
       }
       for (const w of wl.twijfeltaal.woorden) {
         if (!new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) continue;
@@ -1800,7 +1804,10 @@ export function maakToetser(data) {
         // allebei gemeld — de schrijfwijzer noemt "vaak" letterlijk — maar apart te filteren.
         // Staat het woord in een voorbeeldzin van het sjabloon ("In {land} zijn regelmatig
         // demonstraties"), dan heeft de redacteur het sjabloon gevolgd en zwijgt de tool.
-        if (sjabloonTwijfel.some((f) => f.includes(w.toLowerCase()) && norm(z.tekst).includes(f))) continue;
+        if (sjabloonTwijfel.some((f) => f.includes(w.toLowerCase()) && norm(z.tekst).includes(f))) {
+          teBespreken.twijfelUitSjabloon.push(z.tekst);
+          continue;
+        }
         const isFrequentie = frequentieWoorden.has(w.toLowerCase());
         b.push(bevinding(isFrequentie ? 'zin-frequentiewoord' : 'zin-twijfeltaal',
           ERNST.info, 'SW, Begrijpelijkheid > B1',
@@ -2041,6 +2048,7 @@ export function maakToetser(data) {
         // pagina de balk mee, zonder de namen nog een keer te hoeven kennen.
         perErnst: Object.fromEntries(ERNST_VOLGORDE.map((e) => [e, b.filter((x) => x.ernst === e).length])),
         perRegel,
+        teBespreken,
       },
       buitenScope: [
         'Politieke gevoeligheden: daar doet de tool geen uitspraak over.',

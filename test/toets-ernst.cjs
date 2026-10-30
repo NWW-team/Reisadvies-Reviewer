@@ -15,17 +15,16 @@ const eerste = (html, id) => bevindingen(html).find((x) => x.regel === id);
 const LANGE_ZIN = 'De autoriteiten van Testland kunnen bij onrust besluiten om wegen af te sluiten '
   + 'en het openbaar vervoer in de hoofdstad stil te leggen.';
 
-test('een lange zin zonder link is let-op, met link ter overweging', () => {
+test('een lange zin zonder link is let-op, met link wordt hij niet gemeld', () => {
   const zonder = eerste(`<p>${LANGE_ZIN}</p>`, 'zin-max-woorden');
   assert.ok(zonder);
   assert.strictEqual(zonder.ernst, Regels.ERNST.letop);
 
-  const met = eerste(`<p>De autoriteiten van Testland kunnen bij onrust besluiten om wegen af te sluiten, `
-    + `<a href="https://www.nederlandwereldwijd.nl/">lees meer over de gevolgen voor reizigers</a>.</p>`,
-  'zin-max-woorden');
-  assert.ok(met, 'ook met een link geldt de grens van 15 woorden');
-  assert.strictEqual(met.ernst, Regels.ERNST.info);
-  assert.match(met.boodschap, /linktekst telt mee/);
+  const html = `<p>De autoriteiten van Testland kunnen bij onrust besluiten om wegen af te sluiten, `
+    + `<a href="https://www.nederlandwereldwijd.nl/">lees meer over de gevolgen voor reizigers</a>.</p>`;
+  assert.strictEqual(eerste(html, 'zin-max-woorden'), undefined, 'een lange zin met link ligt ter bespreking');
+  const r = toetser(Parse.parseAdvies(html, { land: 'Testland' }));
+  assert.strictEqual(r.samenvatting.teBespreken.langeZinMetLink.length, 1, 'maar telt wel mee in de samenvatting');
 });
 
 test('twijfeltaal is ter overweging', () => {

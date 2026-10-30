@@ -1488,3 +1488,19 @@ lijst ter bespreking.
 De labelkleuren van *Fout en format* en *Te lange zinnen* leken als zachte tinten op elkaar (rozig
 en perzik). Ze zijn nu echt rood en echt oranje. *Twijfeltaal: vaak, soms* was paars-roze naast
 het roze van *Twijfeltaal: misschien* en is zandbruin geworden.
+
+## Lange zinnen met een link: alleen ter bespreking (30 oktober 2026)
+
+Dezelfde dag, een stap verder: *"Lange zinnen met de link wil ik ook alleen op het bespreeklijstje.
+Die hoeven we niet in de toets te tonen."* `zin-max-woorden` meldt een zin met een link erin dus
+niet meer; het filter *Te lange zinnen incl. link* is weg. De zin telt wel mee in
+`samenvatting.teBespreken.langeZinMetLink`, net als twijfeltaal uit een sjabloonvoorbeeld in
+`teBespreken.twijfelUitSjabloon`. Daarmee laat het totaaloverzicht (`data/totaaloverzicht.md`) zien
+om hoeveel het gaat, zonder dat de redacteur er een melding over krijgt.
+
+Bij dezelfde ronde vastgelegd:
+
+- **Erheen of hierheen** — *"Wat de matrix zegt is goed om aan te houden."* Het *voorlopig* van 21
+  september is daarmee definitief.
+- **Verkeersongevallen en Geldzaken** blijven gemeld: *"die mogen gewoon oppoppen."*
+- **Vaste sjabloonzinnen boven de norm** blijven vrijgesteld; ze gaan apart op de bespreeklijst.

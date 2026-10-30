@@ -90,7 +90,8 @@ geen vaste formulering en worden niet getoetst.
 Een vaste tekst die ontbreekt of afwijkt is minstens *let op*, nooit *ter overweging*: wat in het
 sjabloon staat, hoort er gewoon in. `medicijnen-voldoende`, `bagage-heen`, `paspoort-kopie`,
 `kinderen-paspoort` en `kinderen-documenten` stonden eerst op *ter overweging* en zijn daarom
-opgehoogd (30 oktober 2026). Alleen als hij aan de regel niets verandert, telt `alleen_als` mee.
+opgehoogd (30 oktober 2026). Een regel met `alleen_als` blijft alleen gelden als het advies over
+dat onderwerp gaat.
 
 `informatieservice-vaste-tekst` verving `kort-informatieservice`: die MX-regel keek alleen of het
 woord *informatieservice* ergens stond, het sjabloon legt de hele oproep vast.

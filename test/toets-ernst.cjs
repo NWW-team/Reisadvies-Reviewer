@@ -15,23 +15,30 @@ const eerste = (html, id) => bevindingen(html).find((x) => x.regel === id);
 const LANGE_ZIN = 'De autoriteiten van Testland kunnen bij onrust besluiten om wegen af te sluiten '
   + 'en het openbaar vervoer in de hoofdstad stil te leggen.';
 
-test('een lange zin zonder link is let-op, met link een eigen soort', () => {
+test('een lange zin zonder link is let-op, met link wordt hij niet gemeld', () => {
   const zonder = eerste(`<p>${LANGE_ZIN}</p>`, 'zin-max-woorden');
   assert.ok(zonder);
   assert.strictEqual(zonder.ernst, Regels.ERNST.letop);
 
-  const met = eerste(`<p>De autoriteiten van Testland kunnen bij onrust besluiten om wegen af te sluiten, `
-    + `<a href="https://www.nederlandwereldwijd.nl/">lees meer over de gevolgen voor reizigers</a>.</p>`,
-  'zin-max-woorden');
-  assert.ok(met, 'ook met een link geldt de grens van 15 woorden');
-  assert.strictEqual(met.ernst, Regels.ERNST.linkzin);
-  assert.match(met.boodschap, /linktekst telt mee/);
+  const html = `<p>De autoriteiten van Testland kunnen bij onrust besluiten om wegen af te sluiten, `
+    + `<a href="https://www.nederlandwereldwijd.nl/">lees meer over de gevolgen voor reizigers</a>.</p>`;
+  assert.strictEqual(eerste(html, 'zin-max-woorden'), undefined, 'een lange zin met link ligt ter bespreking');
+  const r = toetser(Parse.parseAdvies(html, { land: 'Testland' }));
+  assert.strictEqual(r.samenvatting.teBespreken.langeZinMetLink.length, 1, 'maar telt wel mee in de samenvatting');
 });
 
-test('twijfeltaal heeft een eigen soort', () => {
+test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);
-  assert.strictEqual(b.ernst, Regels.ERNST.twijfel);
+  assert.strictEqual(b.ernst, Regels.ERNST.info);
+});
+
+test('twijfeltaal uit een voorbeeldzin van het sjabloon wordt niet gemeld', () => {
+  const b = bevindingen('<p>In Testland zijn regelmatig demonstraties, vooral in de grotere steden.</p>'
+    + '<p>Heeft u geen bewijs van vaccinatie tegen gele koorts? Dan komt u mogelijk het land niet in.</p>');
+  assert.strictEqual(b.filter((x) => x.regel === 'zin-frequentiewoord' || x.regel === 'zin-twijfeltaal').length, 0);
+  // Buiten de voorbeeldzin blijft hetzelfde woord gewoon gemeld.
+  assert.ok(eerste('<p>Er vallen regelmatig stroomstoringen in Testland.</p>', 'zin-frequentiewoord'));
 });
 
 test('elke ernst die een regel geeft staat in de vaste volgorde', () => {

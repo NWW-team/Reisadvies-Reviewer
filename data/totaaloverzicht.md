@@ -1,6 +1,6 @@
 # Totaaloverzicht reisadviezen
 
-Gedraaid op 2026-10-30 over 226 reisadviezen. De kolom
+Gedraaid op 2026-11-02 over 226 reisadviezen. De kolom
 *14 september 2026* is de eerste meting: de teksten van toen, door de regels van nu. Zo zegt het
 verschil alleen wat er in de adviezen is veranderd.
 
@@ -81,8 +81,8 @@ de tool vraagt dan of dat hier zo is.
 |---|---:|---:|
 | Boven de woordenlimiet | 46 (46) | 47 (47) |
 | Meer rubrieken dan toegestaan (max. 6) | 36 (36) | 39 (39) |
-| Actueel-bullet boven 25 woorden | 10 (10) | 13 (13) |
 | Tussenkop heet elders anders | 12 (13) | 12 (13) |
+| Actueel-bullet boven 25 woorden | 10 (10) | 12 (12) |
 | Rubriek die geen vaste kop is | 11 (11) | 11 (11) |
 | Tussenkop onder Natuurgeweld noemt geen risico | 7 (7) | 7 (7) |
 | Link naar een partij waar we niet naar linken | 6 (7) | 5 (6) |
@@ -113,7 +113,7 @@ meting al opgelost.
 |---|---:|---:|
 | Zin boven 15 woorden (zonder link) | 192 (731) | 190 (733) |
 | Twijfeltaal: vaak, soms, regelmatig … | 141 (346) | 137 (341) |
-| Lijdende vorm | 123 (271) | 124 (278) |
+| Lijdende vorm | 123 (271) | 124 (277) |
 | Aanhalingstekens | 53 (86) | 53 (86) |
 | Twijfeltaal: misschien, mogelijk … | 52 (68) | 51 (66) |
 | Linktekst boven 70 tekens | 44 (49) | 44 (49) |

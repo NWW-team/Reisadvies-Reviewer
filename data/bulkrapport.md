@@ -4,10 +4,10 @@ Gedraaid op 2026-11-02 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **77** van de 226 adviezen hebben geen enkele harde fout.
+- **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
-- Gemiddeld 1.1 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **101** van de 2285 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
+- **100** van de 2281 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,8 +25,8 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 288 | 149 |
-| geel/oranje — let op | 1490 | 214 |
+| rood — fout | 286 | 148 |
+| geel/oranje — let op | 1488 | 214 |
 | grijs — ter overweging | 507 | 161 |
 
 ## Per regel
@@ -55,10 +55,10 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
-| `h4-kop-variant` | 12 | 13 |
 | `actueel-max-woorden` | 12 | 12 |
 | `h3-vaste-kop` | 11 | 11 |
-| `tekst-spatie-leesteken` | 10 | 11 |
+| `h4-kop-variant` | 10 | 11 |
+| `tekst-spatie-leesteken` | 9 | 10 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
@@ -88,7 +88,6 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `kleur-formulering-verboden` | 2 | 2 |
 | `kleur-vaste-tekst` | 2 | 2 |
 | `regionaal-kleur-tekst` | 2 | 3 |
-| `vaste-tekst-land-leeg` | 2 | 2 |
 | `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |
 | `telefoon-notatie` | 2 | 3 |
@@ -100,6 +99,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `kort-max-bullets` | 1 | 1 |
 | `percentage-notatie` | 1 | 1 |
 | `valuta-notatie` | 1 | 1 |
+| `vaste-tekst-land-leeg` | 1 | 1 |
 | `kort-verwijzing-hoogste-kleur` | 1 | 1 |
 | `rood-herhaling-voorbereiding` | 1 | 1 |
 | `tijd-notatie` | 1 | 1 |

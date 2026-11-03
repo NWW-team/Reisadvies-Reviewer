@@ -3528,7 +3528,8 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
       // Informatieservice bóven de bullets van "In het kort".
       for (const onderdeel of blok.onderdelen) {
         if (onderdeel.soort === 'alinea') {
-          stukken.push('<p>' + onderdeel.alinea.zinnen.map((z) => markeer(z, perZin, ruim)).join(' ') + '</p>');
+          const alinea = norm(onderdeel.alinea.zinnen.join(' '));
+          stukken.push('<p>' + onderdeel.alinea.zinnen.map((z) => markeer(z, perZin, ruim, [], alinea)).join(' ') + '</p>');
         } else {
           stukken.push('<ul>' + onderdeel.opsomming.items
             .map((x) => '<li>' + markeerItem(x, perZin, ruim) + '</li>').join('') + '</ul>');
@@ -3580,15 +3581,23 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
     // fout in één zin rood, ook als de bullet als geheel een let-op heeft.
     const heel = [...(perZin.get(k) || []),
       ...(k.length >= ZIN_MIN ? ruim.filter((x) => x.k.includes(k)).map((x) => x.i) : [])];
-    return zinnen.map((z) => markeer(z, perZin, ruim, heel)).join(' ');
+    return zinnen.map((z) => markeer(z, perZin, ruim, heel, k)).join(' ');
   }
 
-  function markeer(zin, perZin, ruim, extra = []) {
+  /**
+   * `omgeving` is de hele bullet of alinea waar de zin in staat. Valt de zin binnen een groter
+   * fragment, dan moet die omgeving er ook bij horen. Anders kleurt een zin die twee keer in het
+   * advies staat op beide plekken mee: bij Colombia staat "Behalve de stad Inírida (kleurcode
+   * geel)." onder twee bullets, en de melding over "Het het departement Guainía" sprong naar de
+   * verkeerde.
+   */
+  function markeer(zin, perZin, ruim, extra = [], omgeving = '') {
     const k = norm(zin);
     let treffers = perZin.get(k);
     if (!treffers) {
+      const hoortErbij = (x) => !omgeving || x.k.includes(omgeving) || omgeving.includes(x.k);
       treffers = k.length < ZIN_MIN ? []
-        : ruim.filter((x) => x.k.includes(k) || k.includes(x.k)).map((x) => x.i);
+        : ruim.filter((x) => (x.k.includes(k) && hoortErbij(x)) || k.includes(x.k)).map((x) => x.i);
     }
     treffers = [...new Set([...treffers, ...extra])];
     if (!treffers.length) return esc(zin);
@@ -3659,8 +3668,9 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
       + (bev.verwacht ? '<div class="verwacht">Verwacht: <b>' + esc(bev.verwacht) + '</b></div>' : '')
       + (bev.detail ? '<div class="verwacht">Langste blokken: <b>' + esc(bev.detail.join(' · ')) + '</b></div>' : '')
       + (bev.notitie && !woord ? '<div class="verwacht">' + esc(bev.notitie) + '</div>' : '')
-      // De aanvullingswaarschuwing gaat over schrijfregels; bij een spelfout zegt hij niets.
-      + (bev.herkomst === 'aanvulling' && !woord
+      // De aanvullingswaarschuwing gaat over schrijfregels. Bij een spelfout of een tekstfout
+      // ("het het", een vergeten spatie) zegt hij niets: daar is geen schrijfwijzer bij nodig.
+      + (bev.herkomst === 'aanvulling' && !woord && (groepVan(bev) || {}).id !== 'tekstfouten'
           ? '<div class="aanvulling">Aanvulling &mdash; deze regel past de schrijfwijzer toe, maar dit woord '
             + 'staat er niet letterlijk in. Beoordeel of hij mag blijven.</div>'
           : '')

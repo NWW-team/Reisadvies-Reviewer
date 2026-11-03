@@ -3656,8 +3656,9 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
       + (bev.verwacht ? '<div class="verwacht">Verwacht: <b>' + esc(bev.verwacht) + '</b></div>' : '')
       + (bev.detail ? '<div class="verwacht">Langste blokken: <b>' + esc(bev.detail.join(' · ')) + '</b></div>' : '')
       + (bev.notitie && !woord ? '<div class="verwacht">' + esc(bev.notitie) + '</div>' : '')
-      // De aanvullingswaarschuwing gaat over schrijfregels; bij een spelfout zegt hij niets.
-      + (bev.herkomst === 'aanvulling' && !woord
+      // De aanvullingswaarschuwing gaat over schrijfregels. Bij een spelfout of een tekstfout
+      // ("het het", een vergeten spatie) zegt hij niets: daar is geen schrijfwijzer bij nodig.
+      + (bev.herkomst === 'aanvulling' && !woord && (groepVan(bev) || {}).id !== 'tekstfouten'
           ? '<div class="aanvulling">Aanvulling &mdash; deze regel past de schrijfwijzer toe, maar dit woord '
             + 'staat er niet letterlijk in. Beoordeel of hij mag blijven.</div>'
           : '')

@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-03 over 226 reisadviezen.
+Gedraaid op 2026-11-04 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **100** van de 2281 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **100** van de 2284 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,18 +26,18 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 286 | 148 |
-| geel/oranje — let op | 1488 | 214 |
+| geel/oranje — let op | 1491 | 214 |
 | grijs — ter overweging | 507 | 161 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 190 | 733 |
+| `zin-max-woorden` | 190 | 735 |
 | `zin-frequentiewoord` | 137 | 341 |
 | `zin-lijdende-vorm` | 124 | 277 |
 | `h4-niet-melden` | 64 | 65 |
-| `aanhalingstekens` | 53 | 86 |
+| `aanhalingstekens` | 54 | 87 |
 | `zin-twijfeltaal` | 51 | 66 |
 | `doc-woordenaantal` | 47 | 47 |
 | `link-tekstlengte` | 44 | 49 |

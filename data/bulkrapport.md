@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-04 over 226 reisadviezen.
+Gedraaid op 2026-11-05 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **100** van de 2284 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **99** van de 2280 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,20 +25,20 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 286 | 148 |
-| geel/oranje — let op | 1491 | 214 |
-| grijs — ter overweging | 507 | 161 |
+| rood — fout | 285 | 148 |
+| geel/oranje — let op | 1487 | 214 |
+| grijs — ter overweging | 508 | 161 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 190 | 735 |
+| `zin-max-woorden` | 190 | 736 |
 | `zin-frequentiewoord` | 137 | 341 |
-| `zin-lijdende-vorm` | 124 | 277 |
+| `zin-lijdende-vorm` | 124 | 274 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 54 | 87 |
-| `zin-twijfeltaal` | 51 | 66 |
+| `zin-twijfeltaal` | 51 | 67 |
 | `doc-woordenaantal` | 47 | 47 |
 | `link-tekstlengte` | 44 | 49 |
 | `kleur-variant` | 44 | 50 |
@@ -77,10 +77,10 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `kleur-vervolg-bullet-kort` | 4 | 4 |
 | `link-plakt-aan-woord` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
-| `tekst-dubbel-woord` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
 | `kleur-eerste-bullet-voluit` | 3 | 3 |
 | `tekst-plakfout` | 3 | 3 |
+| `tekst-dubbel-woord` | 3 | 3 |
 | `postplaats-schrijfwijze` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
 | `h2-vast` | 2 | 2 |
@@ -90,7 +90,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `regionaal-kleur-tekst` | 2 | 3 |
 | `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |
-| `telefoon-notatie` | 2 | 3 |
+| `telefoon-notatie` | 2 | 2 |
 | `criminaliteit-themapagina` | 2 | 2 |
 | `genderneutraal` | 2 | 3 |
 | `informatieservice-vaste-tekst` | 1 | 1 |
@@ -103,13 +103,12 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `kort-verwijzing-hoogste-kleur` | 1 | 1 |
 | `rood-herhaling-voorbereiding` | 1 | 1 |
 | `tijd-notatie` | 1 | 1 |
-| `regionaal-kleur-kop` | 1 | 1 |
 
 ## Langste adviezen
 
 | land | woorden | limiet |
 |---|---:|---:|
-| Thailand | 3387 | 2000 |
+| Thailand | 3348 | 2000 |
 | India | 3100 | 2000 |
 | Indonesië | 2789 | 2000 |
 | Ecuador | 2754 | 2000 |

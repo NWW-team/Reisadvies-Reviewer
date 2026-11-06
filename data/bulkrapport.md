@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-05 over 226 reisadviezen.
+Gedraaid op 2026-11-06 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **99** van de 2280 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **100** van de 2277 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,16 +26,16 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 285 | 148 |
-| geel/oranje — let op | 1487 | 214 |
-| grijs — ter overweging | 508 | 161 |
+| geel/oranje — let op | 1485 | 214 |
+| grijs — ter overweging | 507 | 160 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 190 | 736 |
-| `zin-frequentiewoord` | 137 | 341 |
-| `zin-lijdende-vorm` | 124 | 274 |
+| `zin-max-woorden` | 190 | 735 |
+| `zin-frequentiewoord` | 136 | 340 |
+| `zin-lijdende-vorm` | 123 | 273 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 54 | 87 |
 | `zin-twijfeltaal` | 51 | 67 |
@@ -55,7 +55,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
-| `actueel-max-woorden` | 12 | 12 |
+| `actueel-max-woorden` | 11 | 11 |
 | `h3-vaste-kop` | 11 | 11 |
 | `h4-kop-variant` | 10 | 11 |
 | `tekst-spatie-leesteken` | 9 | 10 |
@@ -76,10 +76,10 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `link-verboden-partij` | 5 | 6 |
 | `kleur-vervolg-bullet-kort` | 4 | 4 |
 | `link-plakt-aan-woord` | 4 | 4 |
+| `tekst-plakfout` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
 | `kleur-eerste-bullet-voluit` | 3 | 3 |
-| `tekst-plakfout` | 3 | 3 |
 | `tekst-dubbel-woord` | 3 | 3 |
 | `postplaats-schrijfwijze` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |

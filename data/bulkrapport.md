@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-06 over 226 reisadviezen.
+Gedraaid op 2026-11-07 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **100** van de 2277 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **101** van de 2279 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,8 +26,8 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 285 | 148 |
-| geel/oranje — let op | 1485 | 214 |
-| grijs — ter overweging | 507 | 160 |
+| geel/oranje — let op | 1486 | 214 |
+| grijs — ter overweging | 508 | 160 |
 
 ## Per regel
 
@@ -47,10 +47,10 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |
-| `rubriek-vrij-te-hoog` | 25 | 25 |
+| `rubriek-vrij-te-hoog` | 26 | 26 |
 | `h3-niet-melden` | 24 | 24 |
 | `rubrieken-volgorde` | 23 | 23 |
-| `woord-onbekend` | 22 | 43 |
+| `woord-onbekend` | 23 | 44 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
@@ -108,7 +108,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | land | woorden | limiet |
 |---|---:|---:|
-| Thailand | 3348 | 2000 |
+| Thailand | 3308 | 2000 |
 | India | 3100 | 2000 |
 | Indonesië | 2789 | 2000 |
 | Ecuador | 2754 | 2000 |

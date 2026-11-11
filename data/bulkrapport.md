@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-10 over 226 reisadviezen.
+Gedraaid op 2026-11-11 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **101** van de 2279 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **102** van de 2279 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -40,8 +40,8 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `aanhalingstekens` | 54 | 87 |
 | `zin-twijfeltaal` | 51 | 67 |
 | `doc-woordenaantal` | 47 | 47 |
-| `link-tekstlengte` | 44 | 49 |
 | `kleur-variant` | 44 | 50 |
+| `link-tekstlengte` | 43 | 48 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 39 | 39 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
@@ -49,8 +49,8 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `kinderen-paspoort` | 29 | 29 |
 | `rubriek-vrij-te-hoog` | 26 | 26 |
 | `h3-niet-melden` | 24 | 24 |
+| `woord-onbekend` | 24 | 45 |
 | `rubrieken-volgorde` | 23 | 23 |
-| `woord-onbekend` | 23 | 44 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |

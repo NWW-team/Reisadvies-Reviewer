@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-11 over 226 reisadviezen.
+Gedraaid op 2026-11-12 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **102** van de 2279 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **101** van de 2281 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,27 +25,27 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 285 | 148 |
-| geel/oranje — let op | 1486 | 214 |
+| rood — fout | 283 | 148 |
+| geel/oranje — let op | 1490 | 214 |
 | grijs — ter overweging | 508 | 160 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 190 | 735 |
+| `zin-max-woorden` | 190 | 737 |
 | `zin-frequentiewoord` | 136 | 340 |
 | `zin-lijdende-vorm` | 123 | 273 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 54 | 87 |
 | `zin-twijfeltaal` | 51 | 67 |
 | `doc-woordenaantal` | 47 | 47 |
-| `kleur-variant` | 44 | 50 |
+| `kleur-variant` | 45 | 51 |
 | `link-tekstlengte` | 43 | 48 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
-| `rubrieken-max` | 39 | 39 |
+| `rubrieken-max` | 40 | 40 |
+| `regionaal-gebiedenzin` | 33 | 33 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
-| `regionaal-gebiedenzin` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |
 | `rubriek-vrij-te-hoog` | 26 | 26 |
 | `h3-niet-melden` | 24 | 24 |
@@ -55,18 +55,18 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
-| `actueel-max-woorden` | 11 | 11 |
 | `h3-vaste-kop` | 11 | 11 |
 | `h4-kop-variant` | 10 | 11 |
+| `actueel-max-woorden` | 10 | 10 |
 | `tekst-spatie-leesteken` | 9 | 10 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
-| `intro-vaste-tekst` | 7 | 7 |
 | `tekst-onzichtbaar-teken` | 7 | 7 |
 | `nood-verwijzing-nood` | 7 | 7 |
 | `nood-verwijzing-crisis` | 7 | 7 |
 | `medicijnen-voldoende` | 7 | 7 |
+| `intro-vaste-tekst` | 6 | 6 |
 | `nederlands-verbuiging` | 6 | 6 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
@@ -84,7 +84,6 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `postplaats-schrijfwijze` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
 | `h2-vast` | 2 | 2 |
-| `tekst-cms-rest` | 2 | 2 |
 | `kleur-formulering-verboden` | 2 | 2 |
 | `kleur-vaste-tekst` | 2 | 2 |
 | `regionaal-kleur-tekst` | 2 | 3 |
@@ -96,6 +95,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `informatieservice-vaste-tekst` | 1 | 1 |
 | `vaccinaties-ggd` | 1 | 1 |
 | `vaccinaties-lcr` | 1 | 1 |
+| `tekst-cms-rest` | 1 | 1 |
 | `kort-max-bullets` | 1 | 1 |
 | `percentage-notatie` | 1 | 1 |
 | `valuta-notatie` | 1 | 1 |

@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-13 over 226 reisadviezen.
+Gedraaid op 2026-11-14 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **101** van de 2281 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **101** van de 2280 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,7 +26,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 283 | 148 |
-| geel/oranje — let op | 1490 | 214 |
+| geel/oranje — let op | 1489 | 214 |
 | grijs — ter overweging | 508 | 160 |
 
 ## Per regel
@@ -43,7 +43,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `kleur-variant` | 45 | 51 |
 | `link-tekstlengte` | 43 | 48 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
-| `rubrieken-max` | 40 | 40 |
+| `rubrieken-max` | 39 | 39 |
 | `regionaal-gebiedenzin` | 33 | 33 |
 | `reisverzekering-vaste-tekst` | 32 | 32 |
 | `kinderen-paspoort` | 29 | 29 |

@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-14 over 226 reisadviezen.
+Gedraaid op 2026-11-15 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **101** van de 2280 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **101** van de 2277 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,14 +26,14 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 283 | 148 |
-| geel/oranje — let op | 1489 | 214 |
+| geel/oranje — let op | 1486 | 214 |
 | grijs — ter overweging | 508 | 160 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 190 | 737 |
+| `zin-max-woorden` | 190 | 734 |
 | `zin-frequentiewoord` | 136 | 340 |
 | `zin-lijdende-vorm` | 123 | 273 |
 | `h4-niet-melden` | 64 | 65 |
@@ -108,7 +108,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | land | woorden | limiet |
 |---|---:|---:|
-| Thailand | 3308 | 2000 |
+| Thailand | 3225 | 2000 |
 | India | 3100 | 2000 |
 | Indonesië | 2789 | 2000 |
 | Ecuador | 2754 | 2000 |

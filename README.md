@@ -75,6 +75,8 @@ had eerst een eigen kleur (roze); sinds 30 oktober 2026 is het ter overweging, m
 **Zinslengte.** Een zin mag 15 woorden hebben, een zin met een link 20. De toevoeging
 *"(informatie in het Engels)"* telt niet mee, en ook niet een andere taal (schrijfwijzer, versie
 9 november 2026).
+De zinsregels (lengte, twijfeltaal, lijdende vorm) lopen over alinea's én bullets. Alleen de bullet
+in *In het kort* die naar Actueel verwijst, houdt zijn eigen grens van 25 woorden uit de matrix.
 
 **Wat de tool met opzet niet meldt, maar wel telt.** Twijfeltaal uit een voorbeeldzin van het
 sjabloon ligt ter bespreking (`regels/TER-BESPREKING.md`). De tool meldt het niet; het staat per

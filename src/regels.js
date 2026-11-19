@@ -1783,14 +1783,22 @@ export function maakToetser(data) {
     // andere taal of meer talen: "(informatie in het Engels en Frans)". Staat er meer in de
     // toevoeging dan alleen talen, dan telt hij gewoon mee.
     const TAALTOEVOEGING = /\((?:informatie )?in het \p{Lu}\p{L}+(?:(?:,| en| of)(?: het)? \p{Lu}\p{L}+)*\)/giu;
-    for (const z of doc.zinnen) {
+    // Ook de zinnen in bullets: bijna de helft van de tekst staat in een opsomming, en een lange zin
+    // is daar net zo goed te lang (Martijn, 19 november 2026). De bullet in "In het kort" die naar
+    // Actueel verwijst houdt zijn eigen grens van 25 woorden uit de matrix (actueel-max-woorden).
+    const kortBlokZin = doc.blokken.find((x) => norm(x.kop || '') === norm('In het kort'));
+    const actueelBulletZin = kortBlokZin && kortBlokZin.opsommingen.flatMap((o) => o.items)
+      .find((i) => /\bactueel\b/i.test(i));
+    const bulletZinnen = doc.opsommingen.flatMap((o) => o.items.flatMap((i) => splitsZinnen(i)
+      .map((t) => ({ tekst: t, woorden: telWoorden(t), h2: o.h2, h3: o.h3, actueel: i === actueelBulletZin }))));
+    for (const z of [...doc.zinnen, ...bulletZinnen]) {
       if (isVasteZin(z.tekst)) continue;
       // Een zin met een link mag langer zijn: de linktekst zelf neemt al ruimte in.
       const metLink = doc.links.some((l) => l.tekst && z.tekst.includes(l.tekst));
       const toevoeging = metLink ? (z.tekst.match(TAALTOEVOEGING) || []) : [];
       const woorden = z.woorden - toevoeging.reduce((n, t) => n + telWoorden(t), 0);
       const max = metLink ? lim.zin.max_woorden_met_link : lim.zin.max_woorden;
-      if (woorden > max) {
+      if (woorden > max && !z.actueel) {
         b.push(bevinding('zin-max-woorden', ERNST.letop, 'SW, Begrijpelijkheid > B1',
           metLink
             ? `Deze zin met link telt ${woorden} woorden. Maximaal ${max}.`

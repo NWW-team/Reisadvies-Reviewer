@@ -55,21 +55,29 @@ uitzondering zijn?
 
 ### Vaste zinnen uit het sjabloon die zelf boven de norm zitten
 
-Tien formuleringen uit het sjabloon zijn zelf langer dan de schrijfwijzer toestaat: 15 woorden,
+Zeventien formuleringen uit het sjabloon zijn zelf langer dan de schrijfwijzer toestaat: 15 woorden,
 of 20 als er een link in de zin staat. De tool meldt ze niet, want de redacteur volgt het sjabloon.
-De meest gebruikte:
+Sinds de tool ook zinnen in bullets toetst (19 november 2026), zijn er zeven bijgekomen die altijd
+in een opsomming staan. De meest gebruikte:
 
 | woorden | in hoeveel adviezen | zin |
 |---:|---:|---|
 | 32 (met link) | 192 | Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400. |
-| 18 | 76 | Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |
+| 20 | 113 | Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie. |
+| 16 tot 25 | 110 | U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals dengue (knokkelkoorts), chikungunya … (de lijst verschilt per land) |
+| 18 | 97 | Als u in het ziekenhuis belandt, moet u mogelijk naar een ander land worden overgebracht voor medische zorg. *(ook lijdende vorm en twijfeltaal)* |
+| 16 of 18 | 157 | (Let op:) Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |
+| 16 of 18 | ongeveer 50 | Uw Nederlandse paspoort (of ID-kaart) moet geldig zijn tijdens de hele periode dat u in het land bent. |
 | 16 | 58 | Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar [land]. |
 | 18 | 55 | U heeft geen visum nodig voor [land] als u met een Nederlands paspoort of Nederlandse ID-kaart reist. |
 | 16 | 42 | Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig voor een reis naar [land]. |
 
-Door de nieuwe grens voor zinnen met een link vallen vier zinnen nu wél binnen de norm, waaronder
-die over de medicijnverklaring en over reizen met een minderjarig kind. De volledige lijst staat in
-[`data/vaste-teksten-boven-de-norm.md`](../data/vaste-teksten-boven-de-norm.md).
+Door de grens van 20 woorden voor zinnen met een link vallen vier zinnen wél binnen de norm,
+waaronder die over de medicijnverklaring en over reizen met een minderjarig kind. De volledige lijst
+staat in [`data/vaste-teksten-boven-de-norm.md`](../data/vaste-teksten-boven-de-norm.md).
+
+Is een zin ingekort in het sjabloon, dan is het daarna geen punt meer: de tool toetst de nieuwe
+formulering gewoon mee.
 
 Vraag: kunnen we deze zinnen zo herschrijven dat ze binnen de richtlijn vallen? Vooral de zin over
 het contactcenter (32 woorden, met twee telefoonnummers) zou je kunnen opknippen.

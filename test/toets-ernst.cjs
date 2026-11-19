@@ -38,6 +38,18 @@ test('een zin zonder link mag 15 woorden, met link 20, en de taaltoevoeging telt
   assert.strictEqual(eerste(engels, 'zin-max-woorden'), undefined);
 });
 
+test('ook zinnen in bullets worden getoetst, behalve sjabloonzinnen en de Actueel-bullet', () => {
+  const html = '<h2>In het kort</h2><ul><li>De situatie in Testland is onrustig door hevige gevechten tussen het leger '
+    + 'en rebellen in het noorden. Lees meer onder Actueel.</li></ul>'
+    + '<h3>Natuurgeweld</h3><ul>'
+    + `<li>${LANGE_ZIN}</li>`
+    + '<li>Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.</li>'
+    + '</ul>';
+  const lang = bevindingen(html).filter((x) => x.regel === 'zin-max-woorden');
+  assert.strictEqual(lang.length, 1, 'alleen de eigen lange zin in de bullet');
+  assert.strictEqual(lang[0].fragment, LANGE_ZIN);
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

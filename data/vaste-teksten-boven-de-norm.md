@@ -8,12 +8,11 @@ hieronder liggen vast in het sjabloon of de matrix en komen daar zelf overheen. 
 niet: een redacteur die het format keurig volgt hoort geen fout te krijgen. Maar als een
 voorgeschreven zin structureel te lang is, is dat een gesprek over het sjabloon.
 
-**16 zinnen** zitten boven de norm.
+**15 zinnen** zitten boven de norm.
 
 | woorden | in hoeveel adviezen | soort | link | zin |
 |---:|---:|---|---|---|
 | 32 | 192 | verplicht | ja | Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400. |
-| 20 | 113 | als van toepassing |  | Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie. |
 | 16 | 110 | als van toepassing |  | U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals …. |
 | 18 | 97 | als van toepassing |  | Als u in het ziekenhuis belandt, moet u mogelijk naar een ander land worden overgebracht voor medische zorg. |
 | 16 | 81 | als van toepassing |  | Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |

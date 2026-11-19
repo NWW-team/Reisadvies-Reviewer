@@ -887,13 +887,54 @@ export function maakToetser(data) {
       // verwijst — de rij zegt "actuele ontwikkeling … met verwijzing naar Actueel" — en niet
       // bij de rubriek Actueel zelf. De uitleg ónder die kop mag langer zijn: daar staat wat er
       // speelt, waar, en wat de reiziger kan doen.
-      const actueelBullet = bullets.find((i) => /\bactueel\b/i.test(i));
+      //
+      // De matrix: "In bullets: actuele ontwikkeling (alleen als er iets speelt op het gebied van
+      // veiligheid) met verwijzing naar Actueel, daarna kleurcode 1, 2 en 3." Martijn, 19 november
+      // 2026: de bullets leggen de kleurcode uit, één kleurcode per bullet. Is er een actualiteit,
+      // dan staat die in bullet 1, verwijst hij naar Actueel en telt hij maximaal 25 woorden. Bij
+      // uitzondering verwijst hij rechtstreeks naar een andere rubriek: Natuurgeweld bij een groot
+      // risico in een bepaalde periode (bosbranden, overstromingen, orkanen), of een rubriek waar
+      // veel klantvragen over komen (de ETA voor het VK, onder Paspoort, visum).
+      const isKleurBullet = (i) => new RegExp(kleurcodes.bullet_vormen._herkennen_als_kleurbullet, 'i').test(i);
+      const andere = bullets.map((tekst, plek) => ({ tekst, plek })).filter((x) => !isKleurBullet(x.tekst));
+      const actualiteit = andere[0];
+      const actueelBullet = actualiteit ? actualiteit.tekst : bullets.find((i) => /\bactueel\b/i.test(i));
       if (actueelBullet) {
         const nActueel = telWoorden(actueelBullet);
         if (nActueel > lim.actueel.max_woorden) {
           b.push(bevinding('actueel-max-woorden', ERNST.fout, 'MX, tab Koppen, rij In het kort',
-            `De bullet die naar Actueel verwijst telt ${nActueel} woorden. Maximaal ${lim.actueel.max_woorden}.`,
+            `De actualiteit in "In het kort" telt ${nActueel} woorden. Maximaal ${lim.actueel.max_woorden}.`,
             { fragment: actueelBullet }));
+        }
+      }
+      if (actualiteit && actualiteit.plek !== 0) {
+        b.push(bevinding('kort-actualiteit-eerste', ERNST.letop, 'MX, tab Koppen, rij In het kort',
+          'Deze actualiteit staat niet bovenaan. Hij hoort in de eerste bullet van "In het kort", '
+          + 'boven de kleurcodes.', { fragment: actualiteit.tekst }));
+      }
+      for (const extra of andere.slice(1)) {
+        b.push(bevinding('kort-een-actualiteit', ERNST.letop, 'MX, tab Koppen, rij In het kort',
+          `"In het kort" heeft ${andere.length} bullets die geen kleurcode uitleggen. Alleen de eerste `
+          + 'bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.',
+          { fragment: extra.tekst,
+            notitie: 'Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan '
+              + 'komt het in de ene actualiteit bovenaan.' }));
+      }
+      if (actualiteit) {
+        const verwijzing = /\blees meer onder\s+(.+?)\.?\s*$/i.exec(actualiteit.tekst);
+        const doel = verwijzing && verwijzing[1].replace(/^['‘"“]|['’"”]$/g, '').trim();
+        if (!doel) {
+          b.push(bevinding('kort-actualiteit-verwijzing', ERNST.letop, 'MX, tab Koppen, rij In het kort',
+            'Deze actualiteit verwijst niet naar Actueel.',
+            { fragment: actualiteit.tekst, verwacht: 'Lees meer onder Actueel.' }));
+        } else if (!/^actueel\b/i.test(doel)) {
+          b.push(bevinding('kort-actualiteit-verwijzing', ERNST.info, 'MX, tab Koppen, rij In het kort',
+            `Deze actualiteit verwijst naar "${doel}" in plaats van naar Actueel. Dat kan alleen bij `
+            + 'uitzondering. Klopt het dat dat hier zo is?',
+            { fragment: actualiteit.tekst,
+              notitie: 'Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, '
+                + 'overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel '
+                + 'klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum.' }));
         }
       }
 
@@ -1784,11 +1825,13 @@ export function maakToetser(data) {
     // toevoeging dan alleen talen, dan telt hij gewoon mee.
     const TAALTOEVOEGING = /\((?:informatie )?in het \p{Lu}\p{L}+(?:(?:,| en| of)(?: het)? \p{Lu}\p{L}+)*\)/giu;
     // Ook de zinnen in bullets: bijna de helft van de tekst staat in een opsomming, en een lange zin
-    // is daar net zo goed te lang (Martijn, 19 november 2026). De bullet in "In het kort" die naar
-    // Actueel verwijst houdt zijn eigen grens van 25 woorden uit de matrix (actueel-max-woorden).
+    // is daar net zo goed te lang (Martijn, 19 november 2026). De actualiteit bovenaan "In het kort"
+    // houdt zijn eigen grens van 25 woorden uit de matrix (actueel-max-woorden).
     const kortBlokZin = doc.blokken.find((x) => norm(x.kop || '') === norm('In het kort'));
-    const actueelBulletZin = kortBlokZin && kortBlokZin.opsommingen.flatMap((o) => o.items)
-      .find((i) => /\bactueel\b/i.test(i));
+    // Welke bullet dat is, bepalen we net als hierboven: de eerste die geen kleurcode uitlegt.
+    const kortBulletsZin = kortBlokZin ? kortBlokZin.opsommingen.flatMap((o) => o.items) : [];
+    const actueelBulletZin = kortBulletsZin.find((i) => !new RegExp(kleurcodes.bullet_vormen._herkennen_als_kleurbullet, 'i').test(i))
+      || kortBulletsZin.find((i) => /\bactueel\b/i.test(i));
     const bulletZinnen = doc.opsommingen.flatMap((o) => o.items.flatMap((i) => splitsZinnen(i)
       .map((t) => ({ tekst: t, woorden: telWoorden(t), h2: o.h2, h3: o.h3, actueel: i === actueelBulletZin }))));
     for (const z of [...doc.zinnen, ...bulletZinnen]) {

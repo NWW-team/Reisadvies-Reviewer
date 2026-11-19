@@ -40,9 +40,9 @@ de tool vraagt dan of dat hier zo is.
 | | 14 september 2026 | nu |
 |---|---:|---:|
 | Volledige of verkorte kleurtekst niet zoals de matrix voorschrijft (erheen/hierheen) | 46 (52) | 44 (50) |
-| Kleurcode niet op een van de vaste manieren aangeduid | 6 (6) | 5 (5) |
+| Kleurcode niet op een van de vaste manieren aangeduid | 5 (5) | 4 (4) |
 | Vervolgbullet voluit in plaats van verkort | 5 (5) | 4 (4) |
-| Eerste kleurbullet niet voluit | 3 (3) | 3 (3) |
+| Eerste kleurbullet niet voluit | 2 (2) | 2 (2) |
 | Vaste handelingsinstructie bij een kleur ontbreekt | 2 (2) | 2 (2) |
 | Kleur genoemd zonder het woord kleurcode | 2 (2) | 2 (2) |
 | Vaste uitleg per kleur onder Regionale risico's wijkt af | 2 (3) | 2 (3) |
@@ -81,9 +81,9 @@ de tool vraagt dan of dat hier zo is.
 |---|---:|---:|
 | Boven de woordenlimiet | 46 (46) | 47 (47) |
 | Meer rubrieken dan toegestaan (max. 6) | 36 (36) | 39 (39) |
+| Actueel-bullet boven 25 woorden | 10 (10) | 11 (11) |
 | Tussenkop heet elders anders | 12 (13) | 10 (11) |
 | Rubriek die geen vaste kop is | 11 (11) | 10 (10) |
-| Actueel-bullet boven 25 woorden | 10 (10) | 10 (10) |
 | Tussenkop onder Natuurgeweld noemt geen risico | 7 (7) | 7 (7) |
 | Link naar een partij waar we niet naar linken | 6 (7) | 5 (6) |
 | H2 die geen vaste kop is | 4 (4) | 2 (2) |

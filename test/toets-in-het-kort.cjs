@@ -18,17 +18,57 @@ const ids = (html) => toetser(Parse.parseAdvies(html, { land: 'Testland' })).bev
 const bevinding = (html, id) => toetser(Parse.parseAdvies(html, { land: 'Testland' }))
   .bevindingen.find((x) => x.regel === id);
 
-test('de 25 woorden gelden voor de bullet die naar Actueel verwijst', () => {
+test('de 25 woorden gelden voor de actualiteit bovenaan "In het kort"', () => {
   const html = `<h2>In het kort</h2><ul><li>${LANG}</li></ul>${INFO}`;
   const b = bevinding(html, 'actueel-max-woorden');
-  assert.ok(b, 'een Actueel-bullet van meer dan 25 woorden hoort gemeld te worden');
-  assert.match(b.boodschap, /bullet die naar Actueel verwijst/);
+  assert.ok(b, 'een actualiteit van meer dan 25 woorden hoort gemeld te worden');
+  assert.match(b.boodschap, /actualiteit in "In het kort" telt/);
   assert.ok(b.fragment, 'de bullet hoort aanwijsbaar te zijn in de tekst');
 });
 
-test('een bullet zonder verwijzing naar Actueel valt buiten deze regel', () => {
+test('een actualiteit zonder verwijzing naar Actueel: ook 25 woorden, en een melding over de verwijzing', () => {
   const html = `<h2>In het kort</h2><ul><li>${LANG.replace('Lees meer onder Actueel.', 'Lees meer hieronder.')}</li></ul>${INFO}`;
-  assert.ok(!ids(html).includes('actueel-max-woorden'));
+  assert.ok(ids(html).includes('actueel-max-woorden'));
+  const v = bevinding(html, 'kort-actualiteit-verwijzing');
+  assert.ok(v);
+  assert.strictEqual(v.ernst, Regels.ERNST.letop);
+});
+
+test('een actualiteit die naar een andere rubriek verwijst, is een vraag en geen fout', () => {
+  const html = '<h2>In het kort</h2><ul><li>In de zomer zijn er bosbranden. Lees meer onder Natuurgeweld.</li>'
+    + '<li>De kleurcode van het reisadvies voor Testland is geel.</li></ul>' + INFO;
+  const v = bevinding(html, 'kort-actualiteit-verwijzing');
+  assert.ok(v);
+  assert.strictEqual(v.ernst, Regels.ERNST.info);
+  assert.match(v.boodschap, /"Natuurgeweld" in plaats van naar Actueel/);
+});
+
+test('de actualiteit hoort in bullet 1, en er is er maar één', () => {
+  const html = '<h2>In het kort</h2><ul>'
+    + '<li>Onlangs is in Testland de doodstraf ingevoerd. Lees meer onder Wetten en gebruiken.</li>'
+    + '<li>In Testland kunt u zonder reden worden gearresteerd. Lees meer onder Actueel.</li>'
+    + '<li>De kleurcode van het reisadvies voor Testland is rood.</li></ul>' + INFO;
+  const extra = bevinding(html, 'kort-een-actualiteit');
+  assert.ok(extra);
+  assert.match(extra.fragment, /gearresteerd/);
+  assert.ok(!ids(html).includes('kort-actualiteit-eerste'), 'de eerste staat wel bovenaan');
+
+  const laat = '<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Testland is geel.</li>'
+    + '<li>Er zijn overstromingen geweest. Lees meer onder Actueel.</li></ul>' + INFO;
+  assert.ok(ids(laat).includes('kort-actualiteit-eerste'));
+
+  const goed = '<h2>In het kort</h2><ul><li>Er zijn overstromingen geweest. Lees meer onder Actueel.</li>'
+    + '<li>De kleurcode van het reisadvies voor Testland is geel.</li></ul>' + INFO;
+  for (const id of ['kort-actualiteit-eerste', 'kort-een-actualiteit', 'kort-actualiteit-verwijzing']) {
+    assert.ok(!ids(goed).includes(id), id + ' hoort hier niet af te gaan');
+  }
+});
+
+test('"voor het grootste deel rood" is een geldige eerste kleurbullet', () => {
+  const html = '<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Testland is voor het grootste deel rood.</li></ul>' + INFO;
+  const r = toetser(Parse.parseAdvies(html, { land: 'Testland', kleurcodes: ['rood'] })).bevindingen.map((x) => x.regel);
+  assert.ok(!r.includes('kleur-aanduiding'));
+  assert.ok(!r.includes('kleur-eerste-bullet-voluit'));
 });
 
 test('de uitleg onder de kop Actueel mag langer zijn dan 25 woorden', () => {

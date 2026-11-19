@@ -1560,3 +1560,41 @@ Een zin die het sjabloon vrij volgt maar er wel van afwijkt, blijft gemeld. Voor
 paspoort of ID-kaart moet geldig zijn …"* zonder *Nederlandse* (Griekenland), en *"Uw Nederlandse
 paspoort moet nog minimaal 6 maanden geldig zijn …"*. Die laatste staat in 107 adviezen maar niet
 in het sjabloon.
+
+## De opbouw van "In het kort" (19 november 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `kort-actualiteit-eerste` | MX, tab *Koppen*, rij *In het kort*: "actuele ontwikkeling … met verwijzing naar Actueel, daarna kleurcode 1, 2 en 3" | let op |
+| `kort-een-actualiteit` | idem; aangescherpt door Martijn, 19 november 2026 | let op |
+| `kort-actualiteit-verwijzing` | idem | let op zonder verwijzing, ter overweging bij een andere rubriek |
+
+Martijn, bij Burkina Faso: *"In het kort zijn dus bullets die de kleurcode uitleggen met per bullet
+een kleurcode. Is er een actualiteit, dan moet die in bullet 1, en mag max 25 woorden zijn."* De
+actualiteit verwijst naar Actueel. *"In uitzonderlijke gevallen kan er direct naar een specifieke
+rubriek worden verwezen"*: Natuurgeweld bij een groot risico in een bepaalde periode (bosbranden in
+de zomer, overstromingen, orkanen), of een rubriek waar veel klantvragen over komen. Het voorbeeld
+is de ETA voor het VK: er kwamen wekelijks vragen over binnen van mensen die het niet konden vinden,
+en daarom staat het nu bovenaan.
+
+Een bullet die geen kleurcode uitlegt, is een actualiteit (herkend aan het woord *kleurcode*, net
+als de kleurregels). Daaruit volgt:
+
+- **De eerste daarvan moet bullet 1 zijn** (`kort-actualiteit-eerste`).
+- **Meer dan één is te veel** (`kort-een-actualiteit`, een melding per extra bullet).
+- **De verwijzing.** Geen verwijzing is *let op*. Een verwijzing naar een andere rubriek dan Actueel
+  is *ter overweging*, met de vraag of het een uitzondering is: de tool kan niet weten of er
+  klantvragen achter zitten.
+- **25 woorden** (`actueel-max-woorden`) geldt nu voor de actualiteit, waar hij ook naar verwijst.
+  Eerst gold de grens alleen voor een bullet waarin het woord *Actueel* stond. Dezelfde bullet is
+  vrijgesteld van de gewone zinslengte.
+
+Gemeten over 226 adviezen: 154 hebben alleen kleurbullets, 64 één actualiteit, 8 meer dan één
+(Burkina Faso, China, Colombia, Ierland, Iran, Rwanda, Zuid-Sudan, Tanzania). Een actualiteit
+staat één keer niet bovenaan (Nepal). Twaalf verwijzen naar een andere rubriek, onder meer
+Natuurgeweld (4), Demonstraties (2), Wetten en gebruiken (2) en Paspoort, visum (2, het VK en de VS).
+
+**"Voor het grootste deel rood."** Burkina Faso schrijft *"De kleurcode van het reisadvies voor Burkina
+Faso is voor het grootste deel rood."* Martijn: dat is goed; het wordt wel eens gebruikt als bijna het
+hele land één kleur heeft en een enkele plaats een andere. De vorm staat nu in `aanduiding_sjablonen`
+en in `bullet_vormen.eerste_voluit` van `kleurcodes.json`.

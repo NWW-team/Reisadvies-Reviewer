@@ -7,7 +7,7 @@ Gedraaid op 2026-11-19 over 226 reisadviezen.
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **106** van de 3226 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **106** van de 3351 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -16,6 +16,7 @@ de standaardtekst lost ze allemaal tegelijk op.
 
 | regel | in hoeveel adviezen | wat |
 |---|---:|---|
+| `natuurgeweld-contact` | 112 | De zin over contact met de lokale autoriteiten wijkt af van het sjabloon. |
 | `zin-max-woorden` | 55 | Deze zin telt 18 woorden. Maximaal 15. |
 | `zin-max-woorden` | 52 | Deze zin telt 18 woorden. Maximaal 15. |
 | `h4-niet-melden` | 49 | "Foto’s maken" gaat over foto's maken, en dat hoort niet in een reisadvies. |
@@ -28,7 +29,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 281 | 148 |
-| geel/oranje — let op | 2256 | 224 |
+| geel/oranje — let op | 2381 | 225 |
 | grijs — ter overweging | 689 | 184 |
 
 ## Per regel
@@ -38,6 +39,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `zin-max-woorden` | 223 | 1366 |
 | `zin-lijdende-vorm` | 158 | 405 |
 | `zin-frequentiewoord` | 146 | 416 |
+| `natuurgeweld-contact` | 125 | 125 |
 | `zin-twijfeltaal` | 99 | 162 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 85 |

@@ -50,6 +50,18 @@ test('ook zinnen in bullets worden getoetst, behalve sjabloonzinnen en de Actuee
   assert.strictEqual(lang[0].fragment, LANGE_ZIN);
 });
 
+test('de oude contactzin met "uw hotel" wijkt af van het sjabloon, de nieuwe niet', () => {
+  const blok = (z) => '<h2>Welke veiligheidsrisico\'s zijn er in Testland?</h2><h3>Natuurgeweld</h3><ul><li>' + z + '</li></ul>';
+  const oud = bevindingen(blok('Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.'));
+  const melding = oud.find((x) => x.regel === 'natuurgeweld-contact');
+  assert.ok(melding);
+  assert.match(melding.verwacht, /uw accommodatie/);
+  assert.ok(melding.fragment, 'de zin die er staat hoort aanwijsbaar te zijn');
+  assert.ok(!oud.some((x) => x.regel === 'zin-max-woorden'), 'geen tweede melding over de lengte');
+  const nieuw = bevindingen(blok('Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie.'));
+  assert.ok(!nieuw.some((x) => x.regel === 'natuurgeweld-contact' || x.regel === 'zin-max-woorden'));
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

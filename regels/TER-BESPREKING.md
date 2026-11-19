@@ -63,7 +63,7 @@ in een opsomming staan. De meest gebruikte:
 | woorden | in hoeveel adviezen | zin |
 |---:|---:|---|
 | 32 (met link) | 192 | Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400. |
-| 20 | 113 | Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie. |
+| 20 | 128 | Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie. *(sinds november 2026 "accommodatie" in plaats van "hotel"; de tool meldt de oude vorm als afwijking)* |
 | 16 tot 25 | 110 | U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals dengue (knokkelkoorts), chikungunya … (de lijst verschilt per land) |
 | 18 | 97 | Als u in het ziekenhuis belandt, moet u mogelijk naar een ander land worden overgebracht voor medische zorg. *(ook lijdende vorm en twijfeltaal)* |
 | 16 of 18 | 157 | (Let op:) Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |
@@ -81,6 +81,22 @@ formulering gewoon mee.
 
 Vraag: kunnen we deze zinnen zo herschrijven dat ze binnen de richtlijn vallen? Vooral de zin over
 het contactcenter (32 woorden, met twee telefoonnummers) zou je kunnen opknippen.
+
+### Verwijzingen naar de themapagina's bij natuurrisico's
+
+Het sjabloon van november 2026 heeft bij de voorbeelden onder *Natuurgeweld* een verwijzing naar een
+themapagina gekregen:
+
+> Lees wat u verder kunt doen bij een bosbrand in het buitenland.
+> Lees wat u verder kunt doen bij een overstroming in het buitenland.
+> Lees wat u verder kunt doen bij een aardbeving in het buitenland.
+
+In de adviezen staan ze nu bij de bosbranden 10 keer, de overstromingen 10 keer en de aardbevingen
+9 keer, plus 3 keer *"bij een natuurbrand"*. Ze staan in het sjabloon onder *[Bijv.]*, dus de tool
+eist ze niet.
+
+Vraag: zijn dit voorbeelden, of moet elk advies dat een van deze risico's noemt de verwijzing
+hebben? In het tweede geval worden het vaste teksten en gaat de tool ze controleren.
 
 ### Twijfeltaal in de voorbeeldzinnen van het sjabloon
 

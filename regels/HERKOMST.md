@@ -1581,7 +1581,12 @@ Een bullet die geen kleurcode uitlegt, is een actualiteit (herkend aan het woord
 als de kleurregels). Daaruit volgt:
 
 - **De eerste daarvan moet bullet 1 zijn** (`kort-actualiteit-eerste`).
-- **Meer dan één is te veel** (`kort-een-actualiteit`, een melding per extra bullet).
+- **Meer dan één is te veel** (`kort-een-actualiteit`, een melding per extra bullet). Welke de
+  actualiteit is en welke te veel: de bullet die naar Actueel verwijst is de actualiteit, want het
+  sjabloon zegt *"Onder Actueel volgt nadere uitleg"*. De andere krijgen de melding, ook als ze
+  bovenaan staan. Bij Burkina Faso is de doodstraf (Lees meer onder Wetten en gebruiken, bullet 1)
+  dus te veel en is de arrestatie (Lees meer onder Actueel, bullet 2) de goede (Martijn, dezelfde
+  dag). *Niet bovenaan* geldt alleen als er een kleurbullet boven de actualiteit staat.
 - **De verwijzing.** Geen verwijzing is *let op*. Een verwijzing naar een andere rubriek dan Actueel
   is *ter overweging*, met de vraag of het een uitzondering is: de tool kan niet weten of er
   klantvragen achter zitten.

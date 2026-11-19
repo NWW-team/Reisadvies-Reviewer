@@ -48,10 +48,14 @@ test('de actualiteit hoort in bullet 1, en er is er maar één', () => {
     + '<li>Onlangs is in Testland de doodstraf ingevoerd. Lees meer onder Wetten en gebruiken.</li>'
     + '<li>In Testland kunt u zonder reden worden gearresteerd. Lees meer onder Actueel.</li>'
     + '<li>De kleurcode van het reisadvies voor Testland is rood.</li></ul>' + INFO;
-  const extra = bevinding(html, 'kort-een-actualiteit');
-  assert.ok(extra);
-  assert.match(extra.fragment, /gearresteerd/);
-  assert.ok(!ids(html).includes('kort-actualiteit-eerste'), 'de eerste staat wel bovenaan');
+  // De bullet die naar Actueel verwijst is de actualiteit; de andere is er een te veel, ook al
+  // staat hij bovenaan (Burkina Faso).
+  const extra = toetser(Parse.parseAdvies(html, { land: 'Testland' })).bevindingen
+    .filter((x) => x.regel === 'kort-een-actualiteit');
+  assert.strictEqual(extra.length, 1);
+  assert.match(extra[0].fragment, /doodstraf/);
+  assert.ok(!ids(html).includes('kort-actualiteit-eerste'), 'alleen een overbodige bullet staat erboven');
+  assert.ok(!ids(html).includes('kort-actualiteit-verwijzing'), 'de actualiteit verwijst naar Actueel');
 
   const laat = '<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Testland is geel.</li>'
     + '<li>Er zijn overstromingen geweest. Lees meer onder Actueel.</li></ul>' + INFO;

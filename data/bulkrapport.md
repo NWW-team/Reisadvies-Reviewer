@@ -7,7 +7,7 @@ Gedraaid op 2026-11-19 over 226 reisadviezen.
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **106** van de 3228 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **106** van de 3226 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -29,7 +29,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 |---|---:|---:|
 | rood — fout | 281 | 148 |
 | geel/oranje — let op | 2256 | 224 |
-| grijs — ter overweging | 691 | 184 |
+| grijs — ter overweging | 689 | 184 |
 
 ## Per regel
 
@@ -57,9 +57,9 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
-| `kort-actualiteit-verwijzing` | 12 | 12 |
 | `actueel-max-woorden` | 11 | 11 |
 | `h4-kop-variant` | 10 | 11 |
+| `kort-actualiteit-verwijzing` | 10 | 10 |
 | `h3-vaste-kop` | 10 | 10 |
 | `tekst-spatie-leesteken` | 9 | 10 |
 | `kort-een-actualiteit` | 8 | 9 |

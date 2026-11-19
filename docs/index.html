@@ -1796,7 +1796,12 @@ function maakToetser(data) {
       // veel klantvragen over komen (de ETA voor het VK, onder Paspoort, visum).
       const isKleurBullet = (i) => new RegExp(kleurcodes.bullet_vormen._herkennen_als_kleurbullet, 'i').test(i);
       const andere = bullets.map((tekst, plek) => ({ tekst, plek })).filter((x) => !isKleurBullet(x.tekst));
-      const actualiteit = andere[0];
+      // Staan er meer, dan is de bullet die naar Actueel verwijst de actualiteit: het sjabloon zegt
+      // "Onder Actueel volgt nadere uitleg". De andere zijn dan te veel, ook als ze bovenaan staan.
+      // Bij Burkina Faso is de tweede bullet (gearresteerd, Lees meer onder Actueel) de goede en is
+      // de eerste (de doodstraf, Lees meer onder Wetten en gebruiken) er een te veel.
+      const naarActueel = (t) => /\blees meer onder\s+['‘"“]?actueel\b/i.test(t);
+      const actualiteit = andere.find((x) => naarActueel(x.tekst)) || andere[0];
       const actueelBullet = actualiteit ? actualiteit.tekst : bullets.find((i) => /\bactueel\b/i.test(i));
       if (actueelBullet) {
         const nActueel = telWoorden(actueelBullet);
@@ -1806,15 +1811,17 @@ function maakToetser(data) {
             { fragment: actueelBullet }));
         }
       }
-      if (actualiteit && actualiteit.plek !== 0) {
+      // Niet bovenaan is het alleen als er een kleurbullet boven staat. Staat er een overbodige
+      // bullet boven, dan is dié de melding, niet de actualiteit zelf.
+      if (actualiteit && bullets.slice(0, actualiteit.plek).some(isKleurBullet)) {
         b.push(bevinding('kort-actualiteit-eerste', ERNST.letop, 'MX, tab Koppen, rij In het kort',
           'Deze actualiteit staat niet bovenaan. Hij hoort in de eerste bullet van "In het kort", '
           + 'boven de kleurcodes.', { fragment: actualiteit.tekst }));
       }
-      for (const extra of andere.slice(1)) {
+      for (const extra of andere.filter((x) => x !== actualiteit)) {
         b.push(bevinding('kort-een-actualiteit', ERNST.letop, 'MX, tab Koppen, rij In het kort',
-          `"In het kort" heeft ${andere.length} bullets die geen kleurcode uitleggen. Alleen de eerste `
-          + 'bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.',
+          `"In het kort" heeft ${andere.length} bullets die geen kleurcode uitleggen. Er hoort één `
+          + 'actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.',
           { fragment: extra.tekst,
             notitie: 'Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan '
               + 'komt het in de ene actualiteit bovenaan.' }));
@@ -2729,8 +2736,9 @@ function maakToetser(data) {
     const kortBlokZin = doc.blokken.find((x) => norm(x.kop || '') === norm('In het kort'));
     // Welke bullet dat is, bepalen we net als hierboven: de eerste die geen kleurcode uitlegt.
     const kortBulletsZin = kortBlokZin ? kortBlokZin.opsommingen.flatMap((o) => o.items) : [];
-    const actueelBulletZin = kortBulletsZin.find((i) => !new RegExp(kleurcodes.bullet_vormen._herkennen_als_kleurbullet, 'i').test(i))
-      || kortBulletsZin.find((i) => /\bactueel\b/i.test(i));
+    const nietKleurZin = kortBulletsZin.filter((i) => !new RegExp(kleurcodes.bullet_vormen._herkennen_als_kleurbullet, 'i').test(i));
+    const actueelBulletZin = nietKleurZin.find((i) => /\blees meer onder\s+['‘"“]?actueel\b/i.test(i))
+      || nietKleurZin[0] || kortBulletsZin.find((i) => /\bactueel\b/i.test(i));
     const bulletZinnen = doc.opsommingen.flatMap((o) => o.items.flatMap((i) => splitsZinnen(i)
       .map((t) => ({ tekst: t, woorden: telWoorden(t), h2: o.h2, h3: o.h3, actueel: i === actueelBulletZin }))));
     for (const z of [...doc.zinnen, ...bulletZinnen]) {

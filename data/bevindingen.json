@@ -2485,16 +2485,15 @@
     "zinnen": 91,
     "fout": 1,
     "letop": 12,
-    "info": 3,
+    "info": 2,
     "perErnst": {
       "fout": 1,
       "let-op": 12,
-      "info": 3
+      "info": 2
     },
     "perRegel": {
       "kleur-variant": 1,
       "kort-een-actualiteit": 1,
-      "kort-actualiteit-verwijzing": 1,
       "rubrieken-max": 1,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 5,
@@ -2520,17 +2519,9 @@
         "regel": "kort-een-actualiteit",
         "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
-        "fragment": "In Burkina Faso kunt u zonder duidelijke reden worden gearresteerd. Lees meer onder Actueel.",
-        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
-      },
-      {
-        "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
-        "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "Deze actualiteit verwijst naar \"Wetten en gebruiken\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Er hoort één actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.",
         "fragment": "Onlangs is in Burkina Faso opnieuw de doodstraf ingevoerd. Lees meer onder Wetten en gebruiken.",
-        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
       {
         "regel": "rubrieken-max",
@@ -5259,7 +5250,7 @@
         "regel": "kort-een-actualiteit",
         "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Er hoort één actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.",
         "fragment": "Reist u naar Hongkong, Macau of Taiwan? Lees het reisadvies Hongkong SAR, het reisadvies Macau SAR of het reisadvies Taiwan.",
         "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
@@ -6580,7 +6571,7 @@
         "regel": "kort-een-actualiteit",
         "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Er hoort één actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.",
         "fragment": "Op 10 augustus 2026 was er een zware aardbeving in het westen van Colombia. Er vinden nog altijd naschokken plaats. Lees meer onder Actueel.",
         "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
@@ -13884,7 +13875,7 @@
         "regel": "kort-een-actualiteit",
         "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Er hoort één actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.",
         "fragment": "Reist u naar Noord-Ierland? Lees dan het reisadvies voor het Verenigd Koninkrijk (VK).",
         "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
@@ -13993,7 +13984,7 @@
         "regel": "kort-een-actualiteit",
         "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "\"In het kort\" heeft 3 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "boodschap": "\"In het kort\" heeft 3 bullets die geen kleurcode uitleggen. Er hoort één actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.",
         "fragment": "Als gevolg van sancties is het luchtverkeer van en naar Iran beperkt. Lees meer onder Actueel.",
         "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
@@ -14001,7 +13992,7 @@
         "regel": "kort-een-actualiteit",
         "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "\"In het kort\" heeft 3 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "boodschap": "\"In het kort\" heeft 3 bullets die geen kleurcode uitleggen. Er hoort één actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.",
         "fragment": "In Iran kunt u zonder duidelijke reden worden gearresteerd en voor langere tijd in de gevangenis worden vastgezet. Ook het bezit van een Nederlands paspoort kan een reden zijn om u te arresteren. Lees meer onder Actueel.",
         "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
@@ -25928,7 +25919,7 @@
         "regel": "kort-een-actualiteit",
         "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Er hoort één actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.",
         "fragment": "Door onrust in de DRC is de spanning aan de Rwandese kant van de grens opgelopen. Lees meer onder Regionale risico’s.",
         "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
@@ -27636,7 +27627,7 @@
         "regel": "kort-een-actualiteit",
         "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Er hoort één actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.",
         "fragment": "Bent u in Zuid-Sudan? Verlaat het land als dat op een veilige manier kan. Houd er rekening mee dat luchtvaartmaatschappijen hun vluchten uit Zuid-Sudan elk moment kunnen stopzetten.",
         "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
@@ -30720,16 +30711,15 @@
     "zinnen": 138,
     "fout": 2,
     "letop": 30,
-    "info": 9,
+    "info": 8,
     "perErnst": {
       "fout": 2,
       "let-op": 30,
-      "info": 9
+      "info": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "kort-een-actualiteit": 1,
-      "kort-actualiteit-verwijzing": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
@@ -30762,17 +30752,9 @@
         "regel": "kort-een-actualiteit",
         "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
-        "fragment": "Tanzania heeft extra maatregelen ingevoerd vanwege ebola-uitbraken in de Democratische Republiek Congo en Uganda. Lees meer onder Actueel.",
-        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
-      },
-      {
-        "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
-        "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "Deze actualiteit verwijst naar \"Reisverzekering\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Er hoort één actualiteit te staan, met een verwijzing naar Actueel; deze bullet is er een te veel.",
         "fragment": "Sinds 1 oktober 2026 is een Tanzaniaanse reisverzekering verplicht. Lees meer onder Reisverzekering.",
-        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
       {
         "regel": "h4-niet-melden",

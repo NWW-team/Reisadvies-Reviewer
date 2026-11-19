@@ -68,7 +68,7 @@
     {
       "id": "zinslengte",
       "label": "Te lange zinnen",
-      "toelichting": "Zinnen boven de limiet uit de schrijfwijzer. Die los je op door de zin te splitsen. Een te lange zin met een link erin meldt de tool niet: of daar een ruimere grens moet gelden, ligt ter bespreking.",
+      "toelichting": "Zinnen boven de limiet uit de schrijfwijzer: 15 woorden, of 20 als er een link in staat. De toevoeging (informatie in het Engels) telt niet mee.",
       "regels": [
         "zin-max-woorden"
       ]

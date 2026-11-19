@@ -10,27 +10,22 @@
     ],
     "zinnen": 45,
     "fout": 1,
-    "letop": 5,
+    "letop": 6,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 6,
       "info": 1
     },
     "perRegel": {
       "nood-contactcenter": 1,
       "bagage-terug": 1,
       "kinderen-paspoort": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 3,
       "zin-frequentiewoord": 1,
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over de weersomstandigheden op de website van het National Hurricane Center (informatie in het Engels).",
-        "Voordat u naar Aruba reist moet u online een immigratiekaart invullen op de website van de overheid van Aruba.",
-        "Bekijk wat u vanuit Aruba mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?"
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -82,6 +77,14 @@
         "kop": "In geval van nood"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20.",
+        "fragment": "Bekijk wat u vanuit Aruba mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
+        "kop": "Bagageregels"
+      },
+      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -102,11 +105,11 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 12,
+    "letop": 13,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 12,
+      "let-op": 13,
       "info": 3
     },
     "perRegel": {
@@ -115,18 +118,12 @@
       "h4-niet-melden": 1,
       "h4-kop-variant": 1,
       "nood-lokale-hulpdiensten": 1,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 7,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 3,
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees wat u kunt doen op de pagina Gedwongen te trouwen of achtergelaten in het buitenland.",
-        "Lees informatie over aardbevingen en aardverschuivingen op de website van USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Het Nederlandse ministerie van Buitenlandse Zaken is 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Vraag een visum aan bij de ambassade van Afghanistan in Den Haag (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -244,6 +241,14 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 34 woorden. Maximaal 20.",
+        "fragment": "Het Nederlandse ministerie van Buitenlandse Zaken is 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
         "fragment": "Controleer bij de luchtvaartmaatschappij of uw paspoort en andere reisdocumenten voldoen aan de eisen om Afghanistan binnen te komen.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -309,11 +314,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de ambassade van Angola in Den Haag voor meer informatie over visa.",
-        "Bekijk welke documenten u nodig heeft voor een visum op de website van het consulaat-generaal van Angola.",
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -438,10 +438,6 @@
       "opmaak-vet-onderstreept": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago.",
-        "Neem contact op met de autoriteiten van Anguilla voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -491,10 +487,6 @@
       "zin-frequentiewoord": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het op de website van Europees aardbevingscentrum EMSC (informatie in het Engels).",
-        "Neem contact op met de ambassade van Albanië in Den Haag voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -586,7 +578,6 @@
       "reisverzekering-vaste-tekst": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -613,11 +604,11 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 16,
+    "letop": 17,
     "info": 2,
     "perErnst": {
       "fout": 4,
-      "let-op": 16,
+      "let-op": 17,
       "info": 2
     },
     "perRegel": {
@@ -631,17 +622,13 @@
       "rubrieken-max": 1,
       "nederlands-verbuiging": 1,
       "tekst-onzichtbaar-teken": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 6,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 1,
       "aanhalingstekens": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de ambassade van de VAE in Den Haag als u langer dan 90 dagen in de VAE wilt blijven (informatie in het Engels).",
-        "Check wat u mee mag nemen naar de VAE op de website van IATA (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -795,6 +782,14 @@
         "kop": "Wetten en gebruiken"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 23 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Neem contact op met de ambassade van de VAE in Den Haag als u langer dan 90 dagen in de VAE wilt blijven (informatie in het Engels).",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -850,9 +845,6 @@
       "zin-frequentiewoord": 5
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over bosbranden in Argentinië op de website van de Argentijnse overheid (informatie in het Spaans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -953,9 +945,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de Armeense ambassade in Den Haag voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -1034,9 +1023,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de Department of Legal Affairs van Amerikaans-Samoa voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -1123,7 +1109,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -1287,10 +1272,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago.",
-        "Neem contact op met de immigratiedienst van Antigua en Barbuda voor meer informatie over het verlengen van uw verblijf (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -1326,11 +1307,11 @@
     ],
     "zinnen": 69,
     "fout": 2,
-    "letop": 4,
+    "letop": 5,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 4,
+      "let-op": 5,
       "info": 3
     },
     "perRegel": {
@@ -1340,16 +1321,9 @@
       "nederlands-verbuiging": 1,
       "tekst-niet-melden": 1,
       "zin-frequentiewoord": 1,
-      "zin-max-woorden": 3
+      "zin-max-woorden": 4
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de waarschuwingen voor hittegolven op de website van het Australisch overheidsbureau voor meteorologie (informatie in het Engels).",
-        "De kans hierop is het grootst tussen november en april in Queensland, het Noordelijke Territorium en het noorden van West-Australië.",
-        "In de regio’s Nieuw-Zuid-Wales, het Australisch Hoofdstedelijk Territorium, Victoria, Tasmanië en Zuid-Australië is de kans op stormen en hevige onweersbuien het hele jaar groot.",
-        "In het Noordelijk Territorium, afgelegen gedeelten van Queensland en het noorden van West-Australië komt meer criminaliteit en overmatig alcoholgebruik voor.",
-        "Check welk visum u nodig heeft op de website van de Australische overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -1429,6 +1403,14 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 24 woorden. Maximaal 20.",
+        "fragment": "In de regio’s Nieuw-Zuid-Wales, het Australisch Hoofdstedelijk Territorium, Victoria, Tasmanië en Zuid-Australië is de kans op stormen en hevige onweersbuien het hele jaar groot.",
+        "kop": "Natuurgeweld"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Of bekijk de websites of download de apps van de volgende regio’s (informatie in het Engels):",
         "kop": "Natuurgeweld"
@@ -1460,7 +1442,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -1531,10 +1512,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bereid uw reis goed voor en neem voor vertrek contact op met de Azerbeidzjaanse ambassade in Den Haag.",
-        "Neem contact op met de ambassade van Azerbeidzjan in Den Haag voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -1586,11 +1563,11 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 8,
+    "letop": 9,
     "info": 4,
     "perErnst": {
       "fout": 4,
-      "let-op": 8,
+      "let-op": 9,
       "info": 4
     },
     "perRegel": {
@@ -1599,17 +1576,12 @@
       "h3-niet-melden": 1,
       "kinderen-paspoort": 1,
       "zin-frequentiewoord": 4,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 6,
       "zin-lijdende-vorm": 1,
       "link-plakt-aan-woord": 1,
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer+31 247 247 247 of WhatsApp: +31 857 737 400.",
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -1719,6 +1691,14 @@
         "kop": "Natuurgeweld"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 31 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer+31 247 247 247 of WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -1756,23 +1736,20 @@
     ],
     "zinnen": 45,
     "fout": 0,
-    "letop": 3,
+    "letop": 4,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 4,
       "info": 2
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
-      "zin-max-woorden": 1,
+      "zin-max-woorden": 2,
       "zin-twijfeltaal": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Nederlandse ambassades zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      ],
       "twijfelUitSjabloon": [
         "In België zijn regelmatig demonstraties, vooral in grotere steden."
       ]
@@ -1817,6 +1794,14 @@
         "fragment": "De Belgische autoriteiten hebben het dreigingsniveau voor België daarna vastgesteld op 3 (ernstig: dreiging is mogelijk en waarschijnlijk).",
         "kop": "Terrorisme",
         "herkomst": "aanvulling"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 30 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 27-10-2026 | Nog steeds geldig op: 19-11-2026"
@@ -1849,10 +1834,6 @@
       "eenheden-voluit": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Vraag online een visum aan op de website van de overheid van Benin (informatie in het Engels).",
-        "Neem contact op met het consulaat van Benin in Den Haag voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -1959,10 +1940,6 @@
       "zin-max-woorden": 5
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Vraag een visum aan via de website van het ministerie van Veiligheid van Burkina Faso (informatie in het Frans).",
-        "Vul het formulier in via de website van het vliegveld van Burkina Faso (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Burkina Faso zijn regelmatig demonstraties."
       ]
@@ -2123,13 +2100,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem hiervoor contact op met het ministerie van Buitenlandse Zaken van Bangladesh (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Vraag een visum aan via het online portaal van de Immigratie- en Paspoortdienst van Bangladesh (informatie in het Engels).",
-        "Lees meer informatie over visa of neem contact op via de website van de ambassade van Bangladesh in Den Haag (informatie in het Engels).",
-        "Lees wat u mag meenemen naar Bangladesh op de website van de overheid van Bangladesh (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -2292,10 +2262,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de actuele bosbranden op de website van de European Forest Fire Information System (EFFIS) (informatie in het Engels).",
-        "Lees welke documenten u nodig heeft op de website van de Bulgaarse immigratiedienst (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Bulgarije zijn regelmatig demonstraties, vooral in de hoofdstad Sofia."
       ]
@@ -2323,24 +2289,21 @@
     ],
     "zinnen": 74,
     "fout": 1,
-    "letop": 2,
+    "letop": 3,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 2,
+      "let-op": 3,
       "info": 3
     },
     "perRegel": {
       "nood-contactcenter": 1,
       "rubriek-vrij-te-hoog": 1,
       "zin-frequentiewoord": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 3,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -2391,6 +2354,14 @@
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Hoewel er sinds 2017 geen terroristische aanslagen in Bahrein zijn geweest, blijft er een risico op terrorisme.",
         "kop": "Actueel"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 21-07-2026 | Nog steeds geldig op: 19-11-2026"
@@ -2420,10 +2391,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over het weer op de Bahama's op de website van het meteorologisch instituut van de Bahama’s (informatie in het Engels).",
-        "Neem contact op met de Ambassade van de Bahama’s in Londen voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -2495,7 +2462,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -2567,9 +2533,6 @@
       "vragen-opeenvolgend": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over de registratieplicht en registreer u op de website van de Belarussische overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -2695,11 +2658,6 @@
       "zin-max-woorden": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over tropische stormen op de website van de Meteorologische Dienst van Belize (informatie in het Engels).",
-        "Neem contact op met de ambassade van Belize in Brussel, België voor meer informatie over visa.",
-        "Registreer uw aankomst en vertrek online via de website van de Immigratiedienst van Belize (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -2772,11 +2730,6 @@
       "aanhalingstekens": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check actuele informatie over de noodtoestand op de website van het officiële nieuwsagentschap van de Boliviaanse overheid (informatie in het Spaans).",
-        "En check de staat van de wegen voordat u vertrekt op de website van de Boliviaanse wegenautoriteit (informatie in het Spaans).",
-        "Neem contact op met de Boliviaanse ambassade in Den Haag voor meer informatie over visa (informatie in het Engels en Spaans)."
-      ],
       "twijfelUitSjabloon": [
         "In Bolivia zijn regelmatig demonstraties en stakingen."
       ]
@@ -3029,11 +2982,11 @@
     ],
     "zinnen": 59,
     "fout": 1,
-    "letop": 8,
+    "letop": 9,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 9,
       "info": 1
     },
     "perRegel": {
@@ -3041,15 +2994,11 @@
       "nood-verwijzing-nood": 1,
       "nood-verwijzing-crisis": 1,
       "bagage-terug": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 5,
       "zin-twijfeltaal": 1,
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees hoe u een Verklaring van Rechtswege aanvraagt op de website van de Rijksdienst Caribisch Nederland.",
-        "Bekijk wat u vanuit Bonaire mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?"
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -3123,6 +3072,14 @@
         "kop": "Bagageregels"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20.",
+        "fragment": "Bekijk wat u vanuit Bonaire mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
+        "kop": "Bagageregels"
+      },
+      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -3157,9 +3114,6 @@
       "rijbewijs-anwb": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk of er actuele waarschuwingen voor stormen zijn op de website van het KNMI van Caribisch Nederland."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -3205,11 +3159,11 @@
     ],
     "zinnen": 45,
     "fout": 1,
-    "letop": 6,
+    "letop": 7,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 7,
       "info": 0
     },
     "perRegel": {
@@ -3218,14 +3172,10 @@
       "nood-verwijzing-crisis": 1,
       "bagage-terug": 1,
       "rijbewijs-anwb": 1,
-      "zin-max-woorden": 1,
+      "zin-max-woorden": 2,
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk of er actuele waarschuwingen voor stormen zijn op de website van het KNMI van Caribisch Nederland.",
-        "Bekijk wat u vanaf Sint Eustatius mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?"
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -3274,6 +3224,14 @@
         "kop": "Natuurgeweld"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 22 woorden. Maximaal 20.",
+        "fragment": "Bekijk wat u vanaf Sint Eustatius mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
+        "kop": "Bagageregels"
+      },
+      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -3294,11 +3252,11 @@
     ],
     "zinnen": 112,
     "fout": 1,
-    "letop": 7,
+    "letop": 8,
     "info": 10,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
+      "let-op": 8,
       "info": 10
     },
     "perRegel": {
@@ -3307,14 +3265,10 @@
       "woord-onbekend": 1,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 3,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de contactgegevens van de Nederlandse ambassade in Brasília, het consulaat-generaal in Rio de Janeiro of het consulaat-generaal in São Paulo.",
-        "Neem contact op met de Braziliaanse ambassade in Den Haag en vraag na welke documenten u mee moet nemen."
-      ],
       "twijfelUitSjabloon": [
         "In Brazilië zijn regelmatig demonstraties, vooral in Rio de Janeiro en São Paulo."
       ]
@@ -3470,6 +3424,14 @@
         "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Dit komt vaak door het gebruik van alcohol.",
         "kop": "Verkeersongevallen"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20.",
+        "fragment": "Bekijk de contactgegevens van de Nederlandse ambassade in Brasília, het consulaat-generaal in Rio de Janeiro of het consulaat-generaal in São Paulo.",
+        "kop": "In geval van nood"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 25-08-2026 | Nog steeds geldig op: 19-11-2026"
@@ -3485,21 +3447,18 @@
     ],
     "zinnen": 59,
     "fout": 0,
-    "letop": 0,
+    "letop": 1,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 0,
+      "let-op": 1,
       "info": 1
     },
     "perRegel": {
-      "zin-frequentiewoord": 1
+      "zin-frequentiewoord": 1,
+      "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -3510,6 +3469,14 @@
         "boodschap": "\"soms\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Op Barbados komen soms berovingen op toeristen voor.",
         "kop": "Criminaliteit"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 27 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
+        "kop": "Natuurgeweld"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 08-10-2026 | Nog steeds geldig op: 19-11-2026"
@@ -3539,9 +3506,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -3611,11 +3575,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees hoe u zich voorbereidt op een aardbeving op de website van het USGS Earthquake Hazard Program. (informatie in het Engels).",
-        "Lees de weersvoorspellingen voor Bhutan op de website van het National Center for Hydrology and Meteorology (informatie in het Engels).",
-        "Neem contact op met de ambassade van Bhutan in Brussel, België voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -3699,7 +3658,6 @@
       "zin-frequentiewoord": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -3774,11 +3732,6 @@
       "link-tekstlengte": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Kinshasa, Democratische Republiek Congo (DRC).",
-        "Neem contact op met de ambassade van de Centraal-Afrikaanse Republiek in Brussel voor meer informatie over visa.",
-        "Check wat u mag meenemen op de website van de douane van de Centraal-Afrikaanse Republiek (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In de Centraal-Afrikaanse Republiek zijn regelmatig demonstraties."
       ]
@@ -3867,13 +3820,6 @@
       "link-tekstlengte": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over het actuele dreigingsniveau op de website van de Canadese overheid (informatie in het Engels).",
-        "Bekijk het weer per regio op de website van de Canadese overheid (informatie in het Engels en Frans).",
-        "Lees informatie over natuurrisico’s in Canada op de website van de Canadese overheid (informatie in het Engels en Frans).",
-        "Check dit vooraf bij de lokale autoriteiten, bijvoorbeeld op de officiële website van de Canadese douane.",
-        "Lees de invoerregels voor plantaardige of dierlijke producten op de website van de Canadese voedselinspectie (informatie in het Engels en Frans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -3974,7 +3920,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -4007,31 +3952,21 @@
     ],
     "zinnen": 96,
     "fout": 1,
-    "letop": 13,
+    "letop": 15,
     "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 13,
+      "let-op": 15,
       "info": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 7,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 7
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over bosbranden op de website van de Chileense rampenbestrijdingsorganisatie Senapred en op de website van de overheidsdienst voor natuurbeheer CONAF (informatie in het Spaans).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem contact op met de Chileense ambassade in Den Haag of het Chileense consulaat in Amsterdam (informatie in het Engels) voor meer informatie over visa.",
-        "Lees welke inreisregels er nog meer zijn voor Chili op de website van het Chileense toerismebureau (informatie in het Engels).",
-        "Voor Paaseiland (Rapa Nui) moet u voor vertrek online een formulier invullen op de website van de Chileense overheid (informatie in het Engels).",
-        "Lees meer over reizen naar Paaseiland op de website van de Chileense overheid (informatie in het Engels).",
-        "Bij aankomst in Chili moet u dit aangeven met een formulier van de douane (informatie in het Spaans).",
-        "Check welke producten u mag meenemen op de website van het Servicio Agricola y Ganadero (informatie in het Spaans)."
-      ],
       "twijfelUitSjabloon": [
         "In Chili zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -4169,12 +4104,28 @@
         "kop": "Wetten en gebruiken"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 23 woorden. Maximaal 20. De toevoeging (informatie in het Spaans) telt niet mee.",
+        "fragment": "Lees actuele informatie over bosbranden op de website van de Chileense rampenbestrijdingsorganisatie Senapred en op de website van de overheidsdienst voor natuurbeheer CONAF (informatie in het Spaans).",
+        "kop": "Natuurgeweld"
+      },
+      {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "\"soms\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Maar soms zijn borden en hekken verdwenen.",
         "kop": "Landmijnen"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Neem contact op met de Chileense ambassade in Den Haag of het Chileense consulaat in Amsterdam (informatie in het Engels) voor meer informatie over visa.",
+        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -4219,13 +4170,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Volg het lokale nieuws over de weersomstandigheden in China op de website van de China Meteorological Administration (informatie in het Engels).",
-        "Lees meer informatie over visa voor China en visumvrij reizen op de website van het Chinese Visa Application Service Center (informatie in het Engels).",
-        "Registreer u online voor aankomst in China via de website van de Chinese overheid (informatie in het Engels).",
-        "Lees wat u mag meenemen naar China op de website van de Chinese overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -4559,7 +4503,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -4620,29 +4563,24 @@
     ],
     "zinnen": 97,
     "fout": 2,
-    "letop": 6,
+    "letop": 7,
     "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 6,
+      "let-op": 7,
       "info": 6
     },
     "perRegel": {
       "kleur-variant": 1,
       "nood-contactcenter": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 5,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 4,
       "link-tekstlengte": 1,
       "eenheden-voluit": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Vraag online uw visum aan op de website van de ambassade van Kameroen in Den Haag (informatie in het Engels).",
-        "Neem contact op met de ambassade van Kameroen in Den Haag voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -4746,6 +4684,14 @@
         "kop": "Demonstraties"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -4797,11 +4743,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "U kunt ook een gezondheidsverklaring invullen op de website van de Congolese overheid (informatie in het Engels, Frans of Portugees).",
-        "Neem voor informatie over visa contact op met de ambassade van de Democratische Republiek Congo in Brussel, België.",
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -5105,10 +5046,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Kinshasa, Democratische Republiek Congo.",
-        "Neem contact op met de ambassade van de Republiek Congo in Brussel voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": [
         "In de Republiek Congo zijn regelmatig demonstraties, vooral in de hoofdstad Brazzaville."
       ]
@@ -5208,10 +5145,6 @@
     },
     "perRegel": {},
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over de weersomstandigheden op de website van het National Hurricane Center (informatie in het Engels).",
-        "Neem contact op met de ambassade van Nieuw-Zeeland in Den Haag voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [],
@@ -5251,9 +5184,6 @@
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over vulkanen op de website van de Colombiaanse Geologische Diensten en de Nationale eenheid voor Ramp- en Risicobestrijding (informatie in het Spaans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -5525,11 +5455,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over de weersomstandigheden op de Comoren op de website van Severe Weather Information Centre (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Dar es Salaam, Tanzania.",
-        "Neem contact op met de ambassade van de Comoren in Brussel voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -5600,10 +5525,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over de vulkanen in Kaapverdië op de website van het Smithsonian Institute (informatie in het Engels).",
-        "Registreer u uiterlijk 5 dagen voor aankomst via de website van de overheid van Kaapverdië (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -5666,15 +5587,6 @@
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees welke dieren-en plantensoorten beschermd zijn op de website van de overheid van Costa Rica (informatie in het Spaans).",
-        "Lees actuele informatie over overstromingen op de website van het Nationaal comité voor ramppreventie (informatie in het Spaans).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Lees actuele informatie over vulkanen op de website van het Nationaal comité voor ramppreventie (informatie in het Spaans).",
-        "Bekijk de video met tips voor zwemmen van het Instituut voor Toerisme (informatie in het Engels).",
-        "Neem contact op met de ambassade van Costa Rica in Den Haag voor meer informatie over visa.",
-        "Lees welke andere regels gelden bij aankomst op de website van het Instituut voor Toerisme (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -5835,18 +5747,18 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 12,
+    "letop": 13,
     "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 12,
+      "let-op": 13,
       "info": 2
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-vaste-tekst": 1,
       "h3-niet-melden": 1,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 8,
       "zin-lijdende-vorm": 3,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 1,
@@ -5854,12 +5766,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Vraag een E-Visum aan via de website van het Cubaanse ministerie van Buitenlandse Zaken (informatie in het Engels) Of neem contact op met het consulaat-generaal van de Republiek Cuba in Den Haag voor meer informatie over visa.",
-        "Neem vooraf contact op met de US Department of the Treasury voor meer informatie (informatie in het Engels).",
-        "Lees informatie over reizen naar de VS en Cuba op de website van de US Department of the Treasury (informatie in het Engels).",
-        "Maximaal 48 uur voor vertrek naar Cuba moet u het online immigratieformulier ‘D’Viajeros’ invullen (informatie in het Spaans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -5942,6 +5848,14 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Vraag een E-Visum aan via de website van het Cubaanse ministerie van Buitenlandse Zaken (informatie in het Engels) Of neem contact op met het consulaat-generaal van de Republiek Cuba in Den Haag voor meer informatie over visa.",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "U moet in de VS aantonen dat u voldoet aan de voorwaarden voor reizen naar Cuba.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -6014,11 +5928,11 @@
     ],
     "zinnen": 43,
     "fout": 1,
-    "letop": 8,
+    "letop": 9,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 9,
       "info": 0
     },
     "perRegel": {
@@ -6027,14 +5941,11 @@
       "bagage-terug": 1,
       "kinderen-paspoort": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 3,
       "link-tekstlengte": 1,
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk wat u vanuit Curaçao mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?"
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -6094,6 +6005,14 @@
         "kop": "In geval van nood"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20.",
+        "fragment": "Bekijk wat u vanuit Curaçao mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
+        "kop": "Bagageregels"
+      },
+      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -6121,24 +6040,19 @@
     ],
     "zinnen": 57,
     "fout": 1,
-    "letop": 2,
+    "letop": 3,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 2,
+      "let-op": 3,
       "info": 0
     },
     "perRegel": {
       "h4-kop-variant": 1,
       "nood-contactcenter": 1,
-      "zin-max-woorden": 1
+      "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over het weer op de Kaaimaneilanden op de website van de Cayman Islands National Weather Service (informatie in het Engels)",
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Neem contact op met de Britse ambassade in Den Haag voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -6158,6 +6072,14 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
       },
       {
         "regel": "zin-max-woorden",
@@ -6196,12 +6118,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "U kunt om een lijst van hotels vragen bij de ambassade van de Republiek Cyprus in Den Haag.",
-        "Lees informatie over bosbranden op de website van de Department of Forest (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het Europees aardbevingscentrum (EMSC) (informatie in het Engels).",
-        "Lees meer over hoe u zich registreert op de website van immigratiedienst van Cyprus (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -6309,23 +6225,19 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 3,
+    "letop": 4,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 4,
       "info": 0
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
-      "zin-lijdende-vorm": 2
+      "zin-lijdende-vorm": 2,
+      "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over waar u in Tsjechië drones mag gebruiken op de website van de Tsjechische luchtverkeersleiding of bekijk de interactieve kaart (informatie in het Engels).",
-        "Lees informatie over lawinegevaar op de website van de European Avalanche Warning Service (informatie in het Engels).",
-        "Lees meer over registratie op de website van het Tsjechische ministerie van Binnenlandse Zaken (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -6351,6 +6263,14 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Lijdende vorm: \"worden … genomen\". Schrijf actief.",
         "fragment": "Uw drone kan in beslag worden genomen en kunt u een boete krijgen.",
+        "kop": "Wetten en gebruiken"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 23 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Lees meer informatie over waar u in Tsjechië drones mag gebruiken op de website van de Tsjechische luchtverkeersleiding of bekijk de interactieve kaart (informatie in het Engels).",
         "kop": "Wetten en gebruiken"
       }
     ],
@@ -6380,13 +6300,6 @@
       "zin-max-woorden": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Installeer de waarschuwings-app Warn-App NINA op de website van de Duitse overheid (informatie in het Duits en Engels).",
-        "Lees informatie over de Duitse grenscontroles op de website van de Europese Commissie (informatie in het Engels).",
-        "Lees informatie over de wetgeving over cannabis op de website van de Duitse overheid (informatie in het Engels).",
-        "Lees informatie over actueel lawinegevaar in de Beierse alpen op de website van de overheid van de deelstaat Beieren (informatie in het Duits).",
-        "Installeer de waarschuwings-app Warn-App NINA op de website van de Duitse overheid (informatie in het Duits)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -6445,11 +6358,11 @@
     ],
     "zinnen": 70,
     "fout": 3,
-    "letop": 2,
+    "letop": 3,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 2,
+      "let-op": 3,
       "info": 3
     },
     "perRegel": {
@@ -6459,15 +6372,11 @@
       "rubrieken-max": 1,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
+      "zin-max-woorden": 1,
       "schuine-streep": 1,
       "eenheden-voluit": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Vraag online een visum aan via de website van de overheid van Djibouti (informatie in het Frans).",
-        "Lees meer over het meenemen van kunst en antiek uit het buitenland op de website van de Inspectie Overheidsinformatie en Erfgoed."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -6520,6 +6429,14 @@
         "kop": "Criminaliteit"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20.",
+        "fragment": "Lees meer over het meenemen van kunst en antiek uit het buitenland op de website van de Inspectie Overheidsinformatie en Erfgoed.",
+        "kop": "Bagageregels"
+      },
+      {
         "regel": "schuine-streep",
         "ernst": "info",
         "bron": "SW, Schrijfregels > Schuine streep",
@@ -6560,11 +6477,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago.",
-        "Als u Dominica binnenkomt of verlaat, vult u vooraf een online formulier in van de immigratiedienst van Dominica (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -6623,10 +6535,6 @@
     },
     "perRegel": {},
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over het actuele dreigingsniveau op de website van de Deense politie (informatie in het Engels).",
-        "Lees hoe u een verblijfsvergunning aanvraagt op de website van de Deense immigratiedienst (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [],
@@ -6658,11 +6566,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Vraag een e-ticket aan via het Electronic Ticket portaal van de Dominicaanse overheid (informatie in het Engels).",
-        "Neem contact op met de ambassade van de Dominicaanse Republiek in Den Haag en vraag welke regels gelden bij aankomst."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -6758,9 +6661,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -6942,11 +6842,11 @@
     ],
     "zinnen": 148,
     "fout": 5,
-    "letop": 18,
+    "letop": 19,
     "info": 6,
     "perErnst": {
       "fout": 5,
-      "let-op": 18,
+      "let-op": 19,
       "info": 6
     },
     "perRegel": {
@@ -6955,20 +6855,12 @@
       "nood-contactcenter": 1,
       "tekst-dubbel-woord": 1,
       "woord-onbekend": 5,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 7,
       "zin-lijdende-vorm": 4,
       "zin-frequentiewoord": 6,
       "aanhalingstekens": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over wegblokkades op de website van de Ecuadoraanse overheid (informatie in het Spaans).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Lees informatie over bosbranden op de website van de overheid van Ecuador (informatie in het Spaans).",
-        "Of lees informatie over vulkanen op de website van het Ecuadoraans Geofysisch Instituut (informatie in het Spaans).",
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "In een noodgeval kunt u terecht bij de honorair consul van Nederland in Quito of Guayaquil (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Ecuador zijn regelmatig demonstraties, stakingen en wegblokkades."
       ]
@@ -7189,6 +7081,14 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Zorg dat u bij aankomst in Ecuador een inreisstempel in uw paspoort krijgt, bij een officiële grenscontrole.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -7257,10 +7157,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem contact op met de ambassade van Egypte in Den Haag als u een drone wilt invoeren in Egypte."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -7433,9 +7329,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem in een noodgeval contact op met de honorair consul van Nederland in Asmara (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -7476,11 +7369,11 @@
     ],
     "zinnen": 81,
     "fout": 1,
-    "letop": 10,
+    "letop": 11,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 10,
+      "let-op": 11,
       "info": 1
     },
     "perRegel": {
@@ -7489,15 +7382,11 @@
       "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 6,
       "zin-lijdende-vorm": 1,
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over maatregelen in Spanje bij extreme temperaturen op de website van de Spaanse overheid (informatie in het Engels en Spaans).",
-        "Of doe online aangifte bij de politie in het Spaans, Engels, Frans of Duits op de website van de Spaanse overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -7561,6 +7450,14 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Wees alert op drukke plaatsen, zoals in de metro, op terrassen, in winkelstraten en op het strand.",
+        "kop": "Criminaliteit"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Of doe online aangifte bij de politie in het Spaans, Engels, Frans of Duits op de website van de Spaanse overheid (informatie in het Engels).",
         "kop": "Criminaliteit"
       },
       {
@@ -7631,13 +7528,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over de grensovergangen op de website van de politie en grensbewaking van Estland (informatie in het Engels).",
-        "En bekijk actuele informatie over welke documenten u nodig heeft om de grens over te steken (informatie in het Engels).",
-        "Lees meer informatie op de website van het Estse ministerie van Binnenlandse Zaken (informatie in het Engels).",
-        "Lees meer informatie over de overstromingen op de website van de Estse reddingsbrigade (informatie in het Engels).",
-        "Lees meer over registreren op de website van de overheid van Estland (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -7713,11 +7603,11 @@
     ],
     "zinnen": 117,
     "fout": 3,
-    "letop": 8,
+    "letop": 9,
     "info": 4,
     "perErnst": {
       "fout": 3,
-      "let-op": 8,
+      "let-op": 9,
       "info": 4
     },
     "perRegel": {
@@ -7727,17 +7617,10 @@
       "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 3,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 5,
       "aanhalingstekens": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcentrum van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Vraag een visum online aan op de website van de Ethiopische overheid (informatie in het Engels).",
-        "Neem contact op met de ambassade van Ethiopië in Brussel, België voor informatie over visa (informatie in het Engels).",
-        "Vul het formulier online in op de website van de Ethiopische overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -7851,6 +7734,14 @@
         "kop": "Wetten en gebruiken"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 32 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcentrum van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -7893,11 +7784,6 @@
       "link-plakt-aan-woord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "U wordt gearresteerd.Lees informatie over de gesloten grensovergangen op de website van de Finse grenswacht (informatie in het Engels).",
-        "Lees informatie over lawinegevaar op de website van European Avalanche Warning Service (informatie in het Engels).",
-        "Lees informatie over winterbanden op de website van de Finnish Road Safety Council (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -7975,10 +7861,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over tsunami’s op de website van het Tsunami Information Centre (informatie in het Engels).",
-        "Check de weersverwachting op de website van Fiji Meteorological Service voor u de zee op gaat (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -8103,13 +7985,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over de veiligheidssituatie op de website van de Franse overheid (informatie in het Frans).",
-        "Lees wat u kunt doen bij een terroristische aanslag op de website van de Franse overheid (informatie in het Frans).",
-        "Lees actuele informatie over het weer in Frankrijk op de website van de Franse weerdienst (informatie in het Frans).",
-        "Lees informatie over lawines op de website van de European Avalanche Warning Services (informatie in het Engels).",
-        "Lees informatie over bosbrandgevaar in Frankrijk op de website van Météo France (informatie in het Frans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -8200,7 +8075,6 @@
     },
     "perRegel": {},
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [],
@@ -8235,11 +8109,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check de weersverwachting voor u de zee op gaat op de website van de National Weather Service (informatie in het Engels).",
-        "Lees informatie over de inreisvoorwaarden op de website van de overheid van Micronesië (informatie in het Engels).",
-        "Neem contact op met de ambassade van Micronesië in Washington D.C., Verenigde Staten voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -8343,9 +8212,6 @@
       "schuine-streep": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Download het formulier toestemming reizen met minderjarig kind op de website van de Rijksoverheid (PDF, 158 kB)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -8428,11 +8294,6 @@
       "percentage-notatie": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees de voorwaarden op de website van de overheid van het VK (informatie in het Engels).",
-        "Bekijk de film What is an Electronic Travel Authorisation? van de overheid van het VK (informatie in het Engels).",
-        "Lees meer over huisdieren meenemen naar het VK op de website van de overheid van het VK (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -8559,11 +8420,11 @@
     ],
     "zinnen": 99,
     "fout": 3,
-    "letop": 10,
+    "letop": 11,
     "info": 5,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 11,
       "info": 5
     },
     "perRegel": {
@@ -8572,15 +8433,11 @@
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
       "zin-frequentiewoord": 4,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 7,
       "zin-lijdende-vorm": 1,
       "aanhalingstekens": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het Europees aardbevingscentrum (EMSC) (informatie in het Engels).",
-        "Neem contact op met de ambassade van Georgië in Den Haag voor meer informatie over visa en de regels om naar Georgië te reizen."
-      ],
       "twijfelUitSjabloon": [
         "In Georgië zijn regelmatig demonstraties tegen de regering, vooral in de hoofdstad Tbilisi in de buurt van het parlement (Rustaveli Avenue, Freedom Square)."
       ]
@@ -8716,6 +8573,14 @@
         "kop": "Verkeersongevallen"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 24 woorden. Maximaal 20.",
+        "fragment": "Neem contact op met de ambassade van Georgië in Den Haag voor meer informatie over visa en de regels om naar Georgië te reizen.",
+        "kop": "Paspoort, ID-kaart, rijbewijs"
+      },
+      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -8761,11 +8626,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over tropische regenbuien op de website van Tropical Storm Risk (informatie in het Engels).",
-        "Lees informatie over aardschokken op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem contact op met de ambassade van Ghana in Den Haag voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": [
         "In Ghana zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -8905,9 +8765,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Vraag online een visum aan via de website van de overheid van Guinee (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Guinee zijn regelmatig demonstraties, vooral in de hoofdstad Conakry."
       ]
@@ -8985,11 +8842,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Lees meer over deze vulkaan en de risico’s op een vulkaanuitbarsting op de website van de overheid van Guadeloupe (informatie in het Frans).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -9031,11 +8883,6 @@
       "valuta-notatie": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de ambassade van Gambia in Brussel, België voor meer informatie over visa.",
-        "Daarna moet u een internationaal rijbewijs of Gambiaans rijbewijs aanvragen via de afdeling licentieverlening van de politie van Gambia (informatie in het Engels).",
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -9160,7 +9007,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -9202,9 +9048,6 @@
     },
     "perRegel": {},
     "teBespreken": {
-      "langeZinMetLink": [
-        "In een noodgeval kunt u ook terecht bij de Franse ambassade in Malabo (informatie in het Frans) of de Spaanse ambassade in Malabo (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [],
@@ -9221,11 +9064,11 @@
     ],
     "zinnen": 69,
     "fout": 1,
-    "letop": 3,
+    "letop": 4,
     "info": 5,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 4,
       "info": 5
     },
     "perRegel": {
@@ -9234,18 +9077,10 @@
       "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 1,
       "zin-frequentiewoord": 3,
-      "zin-max-woorden": 1,
+      "zin-max-woorden": 2,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over de actuele weersituatie op de website van de Griekse weerdienst, HNMS (informatie in het Engels).",
-        "Lees actuele situatie over bos- en natuurbranden op de website van de Griekse overheid (informatie in het Grieks en Engels).",
-        "En registreer u voor het ontvangen van alarmberichten van de Griekse overheid (informatie in het Grieks en het Engels).",
-        "Lees hoe u zich kunt voorbereiden op een aardbeving op de website van de Griekse overheid (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Let op: Check ook wat u niet uit Griekenland mag meenemen op de website van IATA (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Griekenland zijn regelmatig demonstraties en stakingen."
       ]
@@ -9308,6 +9143,14 @@
         "kop": "Demonstraties"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 32 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "zin-twijfeltaal",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -9349,10 +9192,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago.",
-        "Vul het online immigratie- en douaneformulier in van de overheid van Grenada (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -9406,9 +9245,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees hoe u een verblijfsvergunning aanvraagt op de website van de Deense immigratiedienst (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -9450,34 +9286,24 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 5,
+    "letop": 6,
     "info": 5,
     "perErnst": {
       "fout": 4,
-      "let-op": 5,
+      "let-op": 6,
       "info": 5
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h4-niet-melden": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 3,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 1,
       "link-verboden-partij": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Vraag vooraf of het veilig is om te reizen bij toeristenbureau INGUAT (informatie in het Spaans).",
-        "Check de actuele situatie op de website van de overheid van Guatemala (informatie in het Spaans).",
-        "Bekijk de actuele situatie op de website van de overheid van Guatemala (informatie in het Spaans).",
-        "Bekijk de actuele situatie op de website van de overheid van Guatemala (informatie in het Spaans).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in San José, Costa Rica.",
-        "In geval van nood kunt u ook terecht bij de honorair consul van Nederland in Guatemala-Stad (informatie in het Engels).",
-        "Neem contact op met de ambassade van Guatemala in Den Haag voor meer informatie over visa.",
-        "Als u Guatemala binnenkomt of verlaat, kunt u vooraf een online formulier invullen van de immigratiedienst van Guatemala (informatie in het Spaans, website alleen bereikbaar vanuit Centraal-Amerika)."
-      ],
       "twijfelUitSjabloon": [
         "In Guatemala zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -9581,6 +9407,14 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 27 woorden. Maximaal 20.",
+        "fragment": "Als u Guatemala binnenkomt of verlaat, kunt u vooraf een online formulier invullen van de immigratiedienst van Guatemala (informatie in het Spaans, website alleen bereikbaar vanuit Centraal-Amerika).",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "U krijgt dan per e-mail een bewijs met een QR-code, dat u laat zien bij aankomst of vertrek.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -9629,7 +9463,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -9705,7 +9538,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -9817,11 +9649,11 @@
     ],
     "zinnen": 51,
     "fout": 2,
-    "letop": 4,
+    "letop": 5,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 4,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
@@ -9830,15 +9662,10 @@
       "reisverzekering-vaste-tekst": 1,
       "bagage-heen": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 1,
+      "zin-max-woorden": 2,
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Neem contact op met het Chinese Visa Application Centre in Den Haag voor meer informatie over visa (informatie in het Engels).",
-        "Lees wat u mag meenemen naar Hongkong SAR op de website van de overheid van Hongkong SAR (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -9897,6 +9724,14 @@
         "boodschap": "Lijdende vorm: \"worden … bestraft\". Schrijf actief.",
         "fragment": "Kritiek op China kan streng worden bestraft.",
         "kop": "Wetten en gebruiken"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 19-11-2026"
@@ -9926,11 +9761,6 @@
       "zin-max-woorden": 6
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem in geval van nood contact op met de Nederlandse ambassade in San José, Costa Rica.",
-        "Neem contact op met de ambassade van Honduras in Brussel, België voor meer informatie over welke regels voor u gelden.",
-        "Vul het formulier voor uw bezoek aan Honduras online in op de website van de Hondurese immigratiedienst (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Honduras zijn regelmatig demonstraties, vooral in de hoofdstad Tegucigalpa en de steden San Pedro Sula en La Ceiba."
       ]
@@ -10032,25 +9862,22 @@
     ],
     "zinnen": 55,
     "fout": 1,
-    "letop": 3,
+    "letop": 5,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
       "tekst-plakfout": 1,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 1,
       "opmaak-vet-onderstreept": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Op het vasteland van Kroatië en op de eilanden zijn soms lichte aardbevingen.Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -10080,12 +9907,28 @@
         "verwacht": "aardbevingen. Lees"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 26 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Op het vasteland van Kroatië en op de eilanden zijn soms lichte aardbevingen.Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
+        "kop": "Natuurgeweld"
+      },
+      {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "\"soms\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Op het vasteland van Kroatië en op de eilanden zijn soms lichte aardbevingen.Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
         "kop": "Natuurgeweld"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 32 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
       },
       {
         "regel": "opmaak-vet-onderstreept",
@@ -10123,11 +9966,6 @@
       "getallen-cijfers": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over het weer op de website van Tropical Storm Risk (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Santo Domingo, Dominicaanse Republiek."
-      ],
       "twijfelUitSjabloon": [
         "Er zijn regelmatig demonstraties."
       ]
@@ -10212,7 +10050,6 @@
       "h4-natuurrisico": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": [
         "In Hongarije zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -10241,11 +10078,11 @@
     ],
     "zinnen": 174,
     "fout": 4,
-    "letop": 20,
+    "letop": 21,
     "info": 10,
     "perErnst": {
       "fout": 4,
-      "let-op": 20,
+      "let-op": 21,
       "info": 10
     },
     "perRegel": {
@@ -10259,22 +10096,12 @@
       "tekst-spatie-leesteken": 1,
       "woord-onbekend": 4,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 8,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 5,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over de regels voor toeristen op Bali op de website van de provinciale overheid van Bali (informatie in het Engels).",
-        "Lees informatie over vulkanen en veiligheidszones op de website van de Indonesische overheid (informatie in het Indonesisch).",
-        "Lees informatie over de weersomstandigheden in Indonesië op de website Tropical Storm Risk (informatie in het Engels).",
-        "Of lees actuele informatie over het weer op de website van het Global Disaster Alert and Coordination System (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Vraag voor vertrek een e-visum aan via de website van de Indonesische immigratiedienst (informatie in het Engels).",
-        "Vul de Arrival Card in op de website van de Indonesische overheid (informatie in het Engels).",
-        "Lees of dit ook voor u geldt op de website van de provincie Bali (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -10543,6 +10370,14 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
         "fragment": "Dan kunt u een boete krijgen van 1.000.000 Indonesische roepia per dag dat u te lang bent gebleven.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -10579,11 +10414,11 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 35,
+    "letop": 36,
     "info": 11,
     "perErnst": {
       "fout": 2,
-      "let-op": 35,
+      "let-op": 36,
       "info": 11
     },
     "perRegel": {
@@ -10597,7 +10432,7 @@
       "rubrieken-max": 1,
       "woord-onbekend": 1,
       "tekst-niet-melden": 3,
-      "zin-max-woorden": 19,
+      "zin-max-woorden": 20,
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 3,
       "link-tekstlengte": 2,
@@ -10605,13 +10440,6 @@
       "schuine-streep": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Kijk in het reisadvies van dat land welke eisen gelden om dat land in te reizen.",
-        "Registreer u online binnen 3 dagen voor aankomst in India via de website van de Indiase overheid (informatie in het Engels).",
-        "Vraag een Protected of Restricted Area Permit aan bij het Indiase ministerie van Binnenlandse Zaken (informatie in het Engels).",
-        "Neem vooraf contact op met de Indian Mountaineering Foundation (informatie in het Engels) of een reisbureau om te vragen voor welke gebieden dit nodig is.",
-        "Vraag bij de ambassade van India in Den Haag of u deze apparaten mag gebruiken (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In India zijn regelmatig demonstraties."
       ]
@@ -10952,6 +10780,14 @@
         "kop": "Verkeersongevallen"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Neem vooraf contact op met de Indian Mountaineering Foundation (informatie in het Engels) of een reisbureau om te vragen voor welke gebieden dit nodig is.",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -11033,9 +10869,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Houd het weerbericht in de gaten via de website van de The Irish Meteorological Service (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Ierland zijn regelmatig demonstraties, vooral in de hoofdstad Dublin."
       ]
@@ -11133,10 +10966,6 @@
       "zin-frequentiewoord": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Vraag een visum aan bij de ambassade van Iran in Den Haag (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -11436,10 +11265,6 @@
       "telefoon-notatie": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van de USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Of vraag een e-visum aan via het e-visaportaal van de Koerdische Regionale Overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -11630,24 +11455,20 @@
     ],
     "zinnen": 61,
     "fout": 2,
-    "letop": 2,
+    "letop": 3,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 2,
+      "let-op": 3,
       "info": 0
     },
     "perRegel": {
       "kleur-variant": 2,
       "reisverzekering-vaste-tekst": 1,
-      "regionaal-gebiedenzin": 1
+      "regionaal-gebiedenzin": 1,
+      "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees het laatste nieuws over de vulkaan en de veiligheidsmaatregelen op de website van de IJslandse overheid (informatie in het Engels).",
-        "Check voor vertrek het weer en de staat van de wegen op de website van de Icelandic Road and Coastal Administration (informatie in het Engels).",
-        "Lees meer over registratie voor lang verblijf op de website van de immigratiedienst van IJsland (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -11683,6 +11504,14 @@
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Check voor vertrek het weer en de staat van de wegen op de website van de Icelandic Road and Coastal Administration (informatie in het Engels).",
+        "kop": "Wetten en gebruiken"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 21-10-2026 | Nog steeds geldig op: 19-11-2026"
@@ -11717,13 +11546,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Volg de aanwijzingen via de website van Home Front Command (deze website is alleen beschikbaar vanuit Israël).",
-        "Neem contact op met de ambassade van Israël in Den Haag voor meer informatie over visa en ETA-IL (informatie in het Engels).",
-        "Neem voor vertrek naar Israël contact op met de ambassade van Israël in Den Haag (informatie in het Engels).",
-        "Dit kunt u aanvragen bij de ambassade van Israël in Den Haag (informatie in het Engels).",
-        "U kunt voor vertrek meer informatie opvragen bij de ambassade van Israël in Den Haag (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -11916,12 +11738,6 @@
       "zin-frequentiewoord": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardverschuivingen en overstromingen op de website van de Italiaanse overheid, Protezione Civile (informatie in het Engels).",
-        "Lees wat u moet doen tijdens en na een aardbeving op de website van de Italiaanse overheid (informatie in het Engels).",
-        "Of lees informatie over uw vlucht op de website van het vliegveld van Catania (informatie in het Engels).",
-        "Lees meer over registratie op de website van het Italiaanse ministerie van Binnenlandse Zaken (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -12014,22 +11830,19 @@
     ],
     "zinnen": 61,
     "fout": 0,
-    "letop": 2,
+    "letop": 3,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 3,
       "info": 1
     },
     "perRegel": {
       "zin-twijfeltaal": 1,
-      "zin-max-woorden": 1,
+      "zin-max-woorden": 2,
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Registreer uw aankomst op Jamaica online op de website van de overheid van Jamaica (informatie in het Engels) Dit moet u doen voordat u naar Jamaica vertrekt."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -12048,6 +11861,14 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "In oktober 2025 veroorzaakte orkaan Melissa veel schade aan wegen, gebouwen en andere infrastructuur op Jamaica.",
         "kop": "Natuurgeweld"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 23 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Registreer uw aankomst op Jamaica online op de website van de overheid van Jamaica (informatie in het Engels) Dit moet u doen voordat u naar Jamaica vertrekt.",
+        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "link-tekstlengte",
@@ -12089,10 +11910,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "En lees ook altijd voor vertrek het reisadvies voor Israël en het reisadvies voor de Palestijnse Gebieden.",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -12245,9 +12062,6 @@
       "eenheden-voluit": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over het nucleaire gebied op de website van Fukushima Prefectural Government (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -12377,9 +12191,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het Europees aardbevingscentrum (EMSC) (informatie in het Engels)"
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -12446,11 +12257,11 @@
     ],
     "zinnen": 130,
     "fout": 4,
-    "letop": 14,
+    "letop": 15,
     "info": 2,
     "perErnst": {
       "fout": 4,
-      "let-op": 14,
+      "let-op": 15,
       "info": 2
     },
     "perRegel": {
@@ -12462,18 +12273,13 @@
       "criminaliteit-themapagina": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 1,
       "aanhalingstekens": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over risico’s op kaping op de website van het Maritime Security Centre Indian Ocean (informatie in het Engels).",
-        "U kunt een werkvergunning aanvragen via de website van de Keniaanse immigratiedienst (informatie in het Engels).",
-        "Vraag na welke documenten u nodig heeft en aan welke eisen deze moeten voldoen bij de ambassade van Kenia in Den Haag (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Kenia zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -12606,6 +12412,14 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 22 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Vraag na welke documenten u nodig heeft en aan welke eisen deze moeten voldoen bij de ambassade van Kenia in Den Haag (informatie in het Engels).",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR).",
         "kop": "Reisvaccinaties"
@@ -12664,10 +12478,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het Europees aardbevingscentrum EMSC (informatie in het Engels).",
-        "Neem contact op met de ambassade van Kirgizië in Brussel, België voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": [
         "In Kirgizië zijn regelmatig demonstraties, vooral in de hoofdstad Bisjkek."
       ]
@@ -12723,7 +12533,6 @@
       "aanhalingstekens": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -13001,11 +12810,6 @@
       "zin-max-woorden": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check de weersverwachting op de website van Kiribati Meteorological Service voor u de zee op gaat (informatie in het Engels).",
-        "In een noodgeval kunt u ook contact opnemen met de honorair consul van Frankrijk op Tarawa (informatie in het Frans).",
-        "Lees informatie over visa op de website van het ministerie van Buitenlandse Zaken en Immigratie van Kiribati (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -13091,10 +12895,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago.",
-        "Registreer uw reis vooraf via de website van de overheid van Saint Kitts en Nevis (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -13137,11 +12937,11 @@
     ],
     "zinnen": 84,
     "fout": 1,
-    "letop": 10,
+    "letop": 11,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 10,
+      "let-op": 11,
       "info": 1
     },
     "perRegel": {
@@ -13149,15 +12949,10 @@
       "reisverzekering-vaste-tekst": 1,
       "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 3,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 6,
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Vul de e-Arrival card online in via de website van de Zuid-Koreaanse overheid (informatie in het Engels).",
-        "Neem contact op met de Korean Food and Drug Administration (KFDA) via het telefoonnummer +82 437 19 28 13 of via het e-mailadres narcotics@korea.kr.",
-        "Lees informatie over het meenemen van medicijnen naar Zuid-Korea op de website van het Koreaanse ministerie van Voedsel- en medicijnveiligheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -13256,6 +13051,14 @@
         "boodschap": "Lijdende vorm: \"wordt … voorgeschreven\". Schrijf actief.",
         "fragment": "Dit wordt in Nederland vaak voorgeschreven voor ADHD.",
         "kop": "Medicijnen"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 26 woorden. Maximaal 20.",
+        "fragment": "Neem contact op met de Korean Food and Drug Administration (KFDA) via het telefoonnummer +82 437 19 28 13 of via het e-mailadres narcotics@korea.kr.",
+        "kop": "Medicijnen"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 03-06-2026 | Nog steeds geldig op: 19-11-2026"
@@ -13289,9 +13092,6 @@
       "aanhalingstekens": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Vraag online een visum aan op de website van de overheid van Koeweit (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -13433,11 +13233,6 @@
       "aanhalingstekens": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Voor vertrek naar Laos kunt u een online toeristenvisum aanvragen via Lao eVisa (informatie in het Engels).",
-        "Vul het digitale immigratieformulier in via de website van de Immigratiedienst van Laos (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -13702,10 +13497,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Check wat u mee mag nemen naar Libanon op de website van de Libanese overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -13885,7 +13676,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": [
         "In Liberia zijn regelmatig demonstraties."
       ]
@@ -13944,11 +13734,11 @@
     ],
     "zinnen": 77,
     "fout": 4,
-    "letop": 3,
+    "letop": 4,
     "info": 7,
     "perErnst": {
       "fout": 4,
-      "let-op": 3,
+      "let-op": 4,
       "info": 7
     },
     "perRegel": {
@@ -13958,15 +13748,11 @@
       "nood-contactcenter": 1,
       "nood-lokale-hulpdiensten": 1,
       "zin-frequentiewoord": 6,
-      "zin-max-woorden": 1,
+      "zin-max-woorden": 2,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "U kunt 24 uur per dag, 7 dagen per week contact opnemen met het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "U kunt dit e-visum aanvragen via de officiële website van de Libische autoriteiten (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -14068,6 +13854,14 @@
         "kop": "Landmijnen"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 30 woorden. Maximaal 20.",
+        "fragment": "U kunt 24 uur per dag, 7 dagen per week contact opnemen met het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -14108,11 +13902,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago.",
-        "Neem contact op met de ambassade van Saint Lucia in Brussel, België voor meer informatie over visa (informatie in het Engels).",
-        "Vul een immigratieformulier in op de website van de overheid van Saint Lucia (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -14150,7 +13939,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -14192,11 +13980,11 @@
     ],
     "zinnen": 107,
     "fout": 2,
-    "letop": 13,
+    "letop": 14,
     "info": 5,
     "perErnst": {
       "fout": 2,
-      "let-op": 13,
+      "let-op": 14,
       "info": 5
     },
     "perRegel": {
@@ -14207,19 +13995,12 @@
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 8,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over natuurgeweld op de website van het Sri Lankaanse Disaster Management Center (informatie in Engels).",
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp +31 857 737 400.",
-        "Vraag online een visum aan op de website van de Sri Lankaanse overheid (informatie in het Engels).",
-        "Neem voor de meest actuele informatie contact op met de ambassade van Sri Lanka in Den Haag.",
-        "Lees wat u mag meenemen naar Sri Lanka op de website van de Sri Lankaanse douane (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Sri Lanka zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -14350,6 +14131,14 @@
         "kop": "Landmijnen"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 32 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "zin-twijfeltaal",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -14414,9 +14203,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over visa op de website van het ministerie van Binnenlandse Zaken van Lesotho (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Lesotho zijn regelmatig demonstraties, vooral in de hoofdstad Maseru."
       ]
@@ -14458,9 +14244,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over de grensovergangen op de website van de Litouwse overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -14532,7 +14315,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -14567,23 +14349,20 @@
     ],
     "zinnen": 71,
     "fout": 1,
-    "letop": 2,
+    "letop": 3,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 2,
+      "let-op": 3,
       "info": 1
     },
     "perRegel": {
       "reisverzekering-oranje-rood": 1,
       "regionaal-gebiedenzin": 1,
-      "zin-max-woorden": 1,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over overstromingen op de website van het Letse Meteorologisch Instituut (informatie in het Lets en deels in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -14616,6 +14395,14 @@
         "boodschap": "\"soms\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Dit leidt soms tot evacuaties, vooral in het zuidoosten van Letland.",
         "kop": "Natuurgeweld"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20.",
+        "fragment": "Lees informatie over overstromingen op de website van het Letse Meteorologisch Instituut (informatie in het Lets en deels in het Engels).",
+        "kop": "Natuurgeweld"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 26-06-2026 | Nog steeds geldig op: 19-11-2026"
@@ -14631,25 +14418,21 @@
     ],
     "zinnen": 52,
     "fout": 2,
-    "letop": 3,
+    "letop": 4,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 3,
+      "let-op": 4,
       "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 3,
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Neem contact op met het Chinese Visa Application Centre in Den Haag voor meer informatie (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -14700,6 +14483,14 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "U kunt in Macau SAR een boete krijgen als u afval achterlaat of spuugt op straat.",
         "kop": "Wetten en gebruiken"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 19-11-2026"
@@ -14717,11 +14508,11 @@
     ],
     "zinnen": 108,
     "fout": 2,
-    "letop": 10,
+    "letop": 11,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
+      "let-op": 11,
       "info": 2
     },
     "perRegel": {
@@ -14730,19 +14521,12 @@
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 6,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
       "genderneutraal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem contact op met de ambassade van Marokko in Den Haag voor meer informatie over visa.",
-        "Vraag ruim voor uw reis bij de Marokkaanse ambassade in Den Haag welke documenten u nodig heeft om als groep Marokko binnen te komen en te verlaten.",
-        "Lees hoe u uw kind of uzelf tegen mazelen kunt beschermen op de site van het RIVM.",
-        "Check wat u mee mag nemen naar Marokko op de website van de Marokkaanse douane (informatie in het Frans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -14850,6 +14634,14 @@
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 27 woorden. Maximaal 20.",
+        "fragment": "Vraag ruim voor uw reis bij de Marokkaanse ambassade in Den Haag welke documenten u nodig heeft om als groep Marokko binnen te komen en te verlaten.",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
         "regel": "genderneutraal",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Gender(neutraal) / lhbtiq+",
@@ -14879,7 +14671,6 @@
     },
     "perRegel": {},
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [],
@@ -14913,7 +14704,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": [
         "In Moldavië zijn regelmatig demonstraties."
       ]
@@ -15005,12 +14795,6 @@
       "opmaak-vet-onderstreept": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over het weer op de website Tropical Storm Risk (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Dar es Salaam, Tanzania.",
-        "Of regel vooraf online een visum via de website van de overheid van Madagaskar (informatie in het Engels).",
-        "Neem contact op met de ambassade van Madagaskar in Brussel, België voor meer informatie over visa (informatie in het Frans)."
-      ],
       "twijfelUitSjabloon": [
         "In Madagaskar zijn regelmatig demonstraties tegen de regering."
       ]
@@ -15094,11 +14878,11 @@
     ],
     "zinnen": 91,
     "fout": 2,
-    "letop": 5,
+    "letop": 7,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 5,
+      "let-op": 7,
       "info": 0
     },
     "perRegel": {
@@ -15106,16 +14890,9 @@
       "h4-niet-melden": 1,
       "h4-kop-variant": 1,
       "zin-lijdende-vorm": 3,
-      "zin-max-woorden": 1
+      "zin-max-woorden": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over het weer op de Maldiven op de website van de Maldives Meteorological Service (informatie in het Engels).",
-        "Nederlandse ambassades zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "In een noodgeval kunt u terecht bij de honorair consul van Nederland in Malé (informatie in het Engels).",
-        "Lees informatie over een toeristenvisum voor de Maldiven op de website van de immigratiedienst van de Maldiven (informatie in het Engels).",
-        "U moet voor vertrek naar de Maldiven online een reizigersverklaring (Traveller Declaration) invullen op de website van de immigratiedienst van de Maldiven (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -15176,8 +14953,24 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 30 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Bij aankomst op de Maldiven kunt u een toeristenvisum (visa on arrival) krijgen voor maximaal 30 dagen.",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 22 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "U moet voor vertrek naar de Maldiven online een reizigersverklaring (Traveller Declaration) invullen op de website van de immigratiedienst van de Maldiven (informatie in het Engels).",
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
@@ -15196,11 +14989,11 @@
     ],
     "zinnen": 158,
     "fout": 4,
-    "letop": 21,
+    "letop": 22,
     "info": 3,
     "perErnst": {
       "fout": 4,
-      "let-op": 21,
+      "let-op": 22,
       "info": 3
     },
     "perRegel": {
@@ -15208,18 +15001,13 @@
       "kleur-variant": 1,
       "kleur-formulering-verboden": 1,
       "nood-contactcenter": 1,
-      "zin-max-woorden": 10,
+      "zin-max-woorden": 11,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 6,
       "link-tekstlengte": 1,
       "aanhalingstekens": 4
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over de vulkanen op de website van de Mexicaanse overheid (informatie in het Spaans).",
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Vraag een visum aan bij de ambassade van Mexico in Den Haag (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -15397,6 +15185,14 @@
         "kop": "Natuurgeweld"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -15478,10 +15274,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check de weersverwachting voor u de zee op gaat op de website van de National Weather Service (informatie in het Engels).",
-        "Bekijk wat u vanuit de Marshalleilanden mee terug nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -15578,7 +15370,6 @@
       "zin-frequentiewoord": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -15621,11 +15412,11 @@
     ],
     "zinnen": 83,
     "fout": 2,
-    "letop": 6,
+    "letop": 7,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 6,
+      "let-op": 7,
       "info": 1
     },
     "perRegel": {
@@ -15634,13 +15425,10 @@
       "h4-kop-variant": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 4,
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -15715,6 +15503,14 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "De politie en het leger kunnen onverwachte checkpoints opzetten en u zonder duidelijke reden fouilleren, controleren of arresteren.",
         "kop": "Wetten en gebruiken"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 25 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247.",
+        "kop": "In geval van nood"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 12-11-2026 | Nog steeds geldig op: 19-11-2026"
@@ -15743,10 +15539,6 @@
       "zin-frequentiewoord": 4
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Lees meer over een lang verblijf in Malta op de website van de overheid van Malta (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -15813,11 +15605,11 @@
     ],
     "zinnen": 98,
     "fout": 3,
-    "letop": 9,
+    "letop": 10,
     "info": 6,
     "perErnst": {
       "fout": 3,
-      "let-op": 9,
+      "let-op": 10,
       "info": 6
     },
     "perRegel": {
@@ -15827,18 +15619,11 @@
       "h3-niet-melden": 1,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 4,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 4,
       "zin-frequentiewoord": 3,
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Dan moet u uw telefoon registreren in het Central Equipment Identity Register (CEIR) (informatie in het Engels) en de bijbehorende belasting betalen.",
-        "Lees informatie over aardbevingen en tsunami’s de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Lees actuele informatie over de weersomstandigheden in Myanmar op de website van Severe Weather Information Centre (informatie in het Engels).",
-        "Bekijk het laatste nieuws over het weer ook op de website van Global Disaster Alert and Coordination System (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp +31 857 737 400."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -15959,6 +15744,14 @@
         "kop": "Natuurgeweld"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 32 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -16018,9 +15811,6 @@
       "zin-frequentiewoord": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "U kunt in een noodgeval ook terecht bij de honorair consul van Nederland in Podgorica (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -16107,10 +15897,6 @@
       "zin-lijdende-vorm": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over aardbevingen in Mongolië op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Registreer uw verblijfplaats binnen 7 dagen na aankomst in Mongolië op de website van de immigratiedienst van Mongolië (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -16195,9 +15981,6 @@
       "link-plakt-aan-woord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Vraag vooraf een visum aan via de ambassade van Mozambique in Brussel, België (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -16335,9 +16118,6 @@
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over de visumregels van Mauritanië op de website van de Mauritaanse overheid (informatie in het Frans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -16444,12 +16224,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over vulkaan Soufrière op de website van het Montserrat Vulcano Observatory (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago.",
-        "Vul het online immigratie- en douaneformulier in van de overheid van Montserrat (informatie in het Engels).",
-        "Vraag een tijdelijk lokaal rijbewijs aanvragen via de website van de overheid van Montserrat (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -16513,23 +16287,18 @@
     ],
     "zinnen": 57,
     "fout": 1,
-    "letop": 0,
+    "letop": 2,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 0,
+      "let-op": 2,
       "info": 0
     },
     "perRegel": {
-      "nederlands-verbuiging": 1
+      "nederlands-verbuiging": 1,
+      "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp +31 857 737 400.",
-        "Neem bij vragen contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago."
-      ],
       "twijfelUitSjabloon": [
         "Op Martinique zijn regelmatig demonstraties."
       ]
@@ -16545,6 +16314,22 @@
         "verwacht": "Nederlands consulaat-generaal",
         "herkomst": "aanvulling",
         "notitie": "\"consulaat-generaal\" is een het-woord. Zonder lidwoord krijgt het bijvoeglijk naamwoord geen -e. Staat er een lidwoord te weinig, dan is \"het nederlandse consulaat-generaal\" ook goed."
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 27 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
+        "kop": "Natuurgeweld"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 32 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp +31 857 737 400.",
+        "kop": "In geval van nood"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 08-10-2026 | Nog steeds geldig op: 19-11-2026"
@@ -16573,13 +16358,6 @@
       "zin-max-woorden": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over piraterij in het Live Piracy Report op de website van het International Maritime Bureau (informatie in het Engels).",
-        "Lees informatie over het weer in Mauritius op de website van de Meteorologische dienst van Mauritius (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Dar es Salaam, Tanzania.",
-        "Neem contact op met de ambassade van Mauritius in Brussel, België voor meer informatie over visa.",
-        "Vul het Mauritius All-in-One Travel Form in op de website van de overheid van Mauritius (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -16636,26 +16414,20 @@
     ],
     "zinnen": 67,
     "fout": 0,
-    "letop": 2,
+    "letop": 3,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 3,
       "info": 2
     },
     "perRegel": {
       "kinderen-paspoort": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 1,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over de weersomstandigheden in Malawi op de website van de Meteorologische Dienst (informatie in het Engels).",
-        "Vraag online een visum aan bij de immigratiedienst (informatie in het Engels) of koop een visum bij aankomst op de luchthaven in Malawi (visa on arrival).",
-        "Neem contact op met de ambassade van Malawi in Brussel, België voor meer informatie over visa (informatie in het Engels).",
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR)."
-      ],
       "twijfelUitSjabloon": [
         "In Malawi zijn regelmatig demonstraties, vooral in de hoofdstad Lilongwe en andere grote steden."
       ]
@@ -16692,6 +16464,14 @@
         "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "De noodnummers zijn regelmatig minder goed bereikbaar.",
         "kop": "In geval van nood"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 22 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Vraag online een visum aan bij de immigratiedienst (informatie in het Engels) of koop een visum bij aankomst op de luchthaven in Malawi (visa on arrival).",
+        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 19-11-2026"
@@ -16722,10 +16502,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Registreer u online binnen 3 dagen voor aankomst in Maleisië via de website van de Maleisische immigratiedienst (informatie in het Engels).",
-        "Bekijk de actuele luchtkwaliteit op de website van het Maleisische ministerie van Milieu (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -16796,9 +16572,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Of vraag vooraf een elektronisch visum (e-Visa) aan op de website van de overheid van Namibië (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -16857,20 +16630,18 @@
     ],
     "zinnen": 53,
     "fout": 1,
-    "letop": 0,
+    "letop": 1,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 0,
+      "let-op": 1,
       "info": 0
     },
     "perRegel": {
-      "h4-niet-melden": 1
+      "h4-niet-melden": 1,
+      "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk in welke gebieden het veilig is om te zwemmen op de website van New Caledonia Tourism (informatie in het Engels) en de website van de gemeente Nouméa (informatie in het Frans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -16881,6 +16652,14 @@
         "boodschap": "\"Haaien\" gaat over wilde dieren, en dat hoort niet in een reisadvies.",
         "fragment": "Haaien",
         "notitie": "Reisgidsinfo."
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 24 woorden. Maximaal 20. De toevoeging (informatie in het Engels) (informatie in het Frans) telt niet mee.",
+        "fragment": "Bekijk in welke gebieden het veilig is om te zwemmen op de website van New Caledonia Tourism (informatie in het Engels) en de website van de gemeente Nouméa (informatie in het Frans).",
+        "kop": "Natuurgeweld"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 09-10-2026 | Nog steeds geldig op: 19-11-2026"
@@ -16908,7 +16687,6 @@
       "zin-max-woorden": 6
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -17006,13 +16784,6 @@
       "zin-lijdende-vorm": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over Nigeriaanse visa op de website van de Nigeriaanse immigratiedienst (informatie in het Engels).",
-        "Vul online de gezondheidsverklaring in voordat u naar Nigeria vertrekt via de website van het Nigeriaanse ministerie van Gezondheid (informatie in het Engels).",
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR).",
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR).",
-        "Lees meer informatie over cholera en hoe u zich kunt beschermen op de website van de GGD Reisvaccinaties."
-      ],
       "twijfelUitSjabloon": [
         "In Nigeria zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -17194,11 +16965,6 @@
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in San José, Costa Rica.",
-        "Check wat u mee mag nemen op de website van de douane van Nicaragua (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -17384,9 +17150,6 @@
       "kinderen-documenten": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de ambassade van Nieuw-Zeeland in Den Haag voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -17423,10 +17186,6 @@
       "rubrieken-volgorde": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over lawinegevaar op de website van de European Avalanche Warning Service (informatie in het Engels).",
-        "Lees informatie over de verkeerssituatie in Noorwegen op de website van het Noorse wegbeheer (informatie in het Noors)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -17471,11 +17230,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees hoe u zich voorbereidt op een aardbeving op de website van het USGS Earthquake Hazard Program (informatie in het Engels).",
-        "Lees de weersvoorspellingen voor Nepal op de website van de Nepalese overheid (informatie in het Engels).",
-        "Lees voor welke routes u een vergunning nodig heeft op de website van de Nepalese overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Nepal zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -17511,11 +17265,11 @@
     ],
     "zinnen": 58,
     "fout": 2,
-    "letop": 10,
+    "letop": 11,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
+      "let-op": 11,
       "info": 0
     },
     "perRegel": {
@@ -17523,15 +17277,10 @@
       "h3-niet-melden": 1,
       "intro-vaste-tekst": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 7,
       "link-tekstlengte": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check het weerbericht voor Naoero op de website van de Naoero Meteorological Service of bekijk de windkaart op de website Windy.com (informatie in het Engels).",
-        "Lees hoe u een visum aanvraagt op de website van de overheid van Naoero (informatie in het Engels).",
-        "Of neem contact op met het consulaat-generaal van Naoero in Brisbane, Australië voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -17581,6 +17330,14 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "Tropische stormen komen op Naoero het hele jaar voor, maar vooral in de periode tussen november en april.",
+        "kop": "Natuurgeweld"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 22 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Check het weerbericht voor Naoero op de website van de Naoero Meteorological Service of bekijk de windkaart op de website Windy.com (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -17643,30 +17400,22 @@
     ],
     "zinnen": 87,
     "fout": 0,
-    "letop": 7,
+    "letop": 8,
     "info": 5,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 8,
       "info": 5
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
+      "zin-max-woorden": 2,
       "zin-lijdende-vorm": 5,
-      "zin-frequentiewoord": 3,
-      "zin-max-woorden": 1
+      "zin-frequentiewoord": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de website van Immigration New Zealand voor informatie over wat u moet doen als uw reis- of visumstatus hierdoor wordt beïnvloed (informatie in Engels).",
-        "Lees meer over rijden in Nieuw-Zeeland op de website van de Nieuw-Zeelandse overheid (informatie in het Engels).",
-        "Check of u een NZetA of visum moet aanvragen op de website van de Nieuw-Zeelandse immigratiedienst (informatie in het Engels).",
-        "Check welk visum u moet aanvragen op de website van de Nieuw-Zeelandse immigratiedienst (informatie in het Engels).",
-        "Lees de regels voor een transit op de website van de Nieuw-Zeelandse immigratiedienst (informatie in het Engels).",
-        "Registreer u online binnen 1 dag voor aankomst in Nieuw-Zeeland via de website van de Nieuw-Zeelandse overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -17693,6 +17442,14 @@
         "boodschap": "Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? \"Terrorisme\" staat na \"Natuurgeweld\".",
         "fragment": "Terrorisme",
         "notitie": "Afwijken kan goed zijn: is een risico de reden voor de kleurcode, dan hoort dat bovenaan. De standaardvolgorde is: Terrorisme > Oorlog en conflict > Criminaliteit > Wetten en gebruiken > Natuurgeweld."
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 25 woorden. Maximaal 20.",
+        "fragment": "Bekijk de website van Immigration New Zealand voor informatie over wat u moet doen als uw reis- of visumstatus hierdoor wordt beïnvloed (informatie in Engels).",
+        "kop": "Actueel"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -17801,9 +17558,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over risico’s op kaping op de website Maritime Security Centre Indian Ocean (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -17948,10 +17702,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over de weersomstandigheden op de website van het Pakistan Meteorologisch Departement (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -18157,12 +17907,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over regen en overstromingen op de website van het Panamese weerinstituut IMHPA (informatie in het Spaans).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem contact op met de ambassade van Panama in Den Haag voor meer informatie over visa.",
-        "Lees de andere regels om naar Panama te reizen op de website Tourismpanama (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Panama zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -18298,7 +18042,6 @@
       "rijbewijs-anwb": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -18355,11 +18098,11 @@
     ],
     "zinnen": 137,
     "fout": 2,
-    "letop": 20,
+    "letop": 21,
     "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 20,
+      "let-op": 21,
       "info": 4
     },
     "perRegel": {
@@ -18371,19 +18114,12 @@
       "medicijnen-voldoende": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 11,
+      "zin-max-woorden": 12,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over El Niño op de website van de Peruaanse overheid (informatie in het Spaans).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Dit bureau kan u ook helpen bij incidenten. iPerú is 24 uur per dag bereikbaar via WhatsApp op +519 44 49 23 14 of via e-mail op iperu@promperu.gob.pe.",
-        "Bekijk de contactgegevens van de Nederlandse ambassade in Lima en de honorair consuls van Nederland in Peru (informatie in het Engels).",
-        "Check de registratie van uw aankomst en vertrek op de website van de Peruaanse migratiedienst (informatie in het Spaans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -18593,6 +18329,14 @@
         "kop": "Verkeersongevallen"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 31 woorden. Maximaal 20.",
+        "fragment": "Dit bureau kan u ook helpen bij incidenten. iPerú is 24 uur per dag bereikbaar via WhatsApp op +519 44 49 23 14 of via e-mail op iperu@promperu.gob.pe.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -18615,11 +18359,11 @@
     ],
     "zinnen": 146,
     "fout": 1,
-    "letop": 20,
+    "letop": 21,
     "info": 12,
     "perErnst": {
       "fout": 1,
-      "let-op": 20,
+      "let-op": 21,
       "info": 12
     },
     "perRegel": {
@@ -18630,16 +18374,10 @@
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 8,
       "zin-twijfeltaal": 2,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 9,
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over de weersomstandigheden op de Filipijnen op de website van de Philippine Atmospheric, Geophysical and Astronomical Services Administration (informatie in het Engels).",
-        "Bekijk de situatie bij de actieve vulkanen op de website van het Philippine Institute of Volcanology and Seismology (PHIVOLCS) (informatie in het Engels).",
-        "Alle reizigers zijn verplicht zich binnen 72 uur voor vertrek naar en van de Filipijnen te registreren op het E-Travel-portaal (Electronic Travel Declaration System) (informatie in het Engels).",
-        "Lees meer over het Filipijnse rijbewijs op de website van de Filipijnse overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -18903,6 +18641,14 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 24 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Alle reizigers zijn verplicht zich binnen 72 uur voor vertrek naar en van de Filipijnen te registreren op het E-Travel-portaal (Electronic Travel Declaration System) (informatie in het Engels).",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Deze code laat u bij de heen- en de terugreis zien aan de luchtvaartmaatschappij bij het inchecken.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -18948,10 +18694,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check de weersverwachting voor u de zee op gaat op de website van de National Weather Service (informatie in het Engels).",
-        "U moet altijd een inschrijfformulier (Palau Entry Form) invullen binnen 72 uur voor aankomst in Palau (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -19131,13 +18873,6 @@
       "aanhalingstekens": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk het overzicht van actieve vulkanen in Papoea-Nieuw-Guinea op de website van het Global Volcanism Program (informatie in het Engels).",
-        "In een noodgeval kunt u ook terecht bij de ambassade van Frankrijk in Port Moresby (informatie in het Engels).",
-        "Vraag een visum voor Papoea-Nieuw-Guinea aan bij de Immigration and Citizenship Services Authority (ICSA) (informatie in het Engels).",
-        "Vul de aankomstkaart online in via de website van de overheid van Papoea-Nieuw-Guinea (informatie in het Engels).",
-        "Lees meer over de Green Fee op de website van de overheid van Papoea-Nieuw-Guinea (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Papoea-Nieuw-Guinea zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -19347,9 +19082,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over de situatie in de grensgebieden op de website van de Polish Border Guards (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -19399,25 +19131,19 @@
     ],
     "zinnen": 62,
     "fout": 0,
-    "letop": 2,
+    "letop": 3,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 3,
       "info": 1
     },
     "perRegel": {
       "kinderen-paspoort": 1,
       "zin-frequentiewoord": 1,
-      "zin-max-woorden": 1
+      "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het Earthquake Hazards Program (informatie in het Engels).",
-        "Lees meer over tropische stormen en het lokale weer op de website van het Tropical Storm Center en op de website van het National Hurricane Center (informatie in het Engels).",
-        "Lees meer over de regels voor toegang tot Puerto Rico op de website van de US Customs and Border Protection (informatie in het Engels).",
-        "Neem contact op met het CBP Traveler Communications Center via het contactformulier (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -19435,6 +19161,14 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "In Puerto Rico zijn regelmatig aardbevingen.",
+        "kop": "Natuurgeweld"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 26 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Lees meer over tropische stormen en het lokale weer op de website van het Tropical Storm Center en op de website van het National Hurricane Center (informatie in het Engels).",
         "kop": "Natuurgeweld"
       },
       {
@@ -19476,7 +19210,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -19554,24 +19287,20 @@
     ],
     "zinnen": 48,
     "fout": 1,
-    "letop": 3,
+    "letop": 4,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 4,
       "info": 1
     },
     "perRegel": {
       "h4-kop-variant": 2,
-      "zin-max-woorden": 1,
+      "zin-max-woorden": 2,
       "zin-twijfeltaal": 1,
       "link-verboden-partij": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk het actuele weerbericht van Portugal op de website van de Portugese weerdienst (informatie in het Engels).",
-        "Nederlandse ambassades zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -19610,6 +19339,14 @@
         "kop": "Natuurgeweld"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 30 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "link-verboden-partij",
         "ernst": "fout",
         "bron": "SW, Relevantie > Naar wie linken we niet?",
@@ -19646,11 +19383,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees het weerbericht van Paraguay op de website van la Dirección de Meteorología e Hidrología (informatie in het Spaans).",
-        "In een noodgeval kunt u terecht bij de honorair consul van Nederland in Asunción (informatie in het Engels).",
-        "Neem contact op met de ambassade van Paraguay in Brussel, België voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -19719,11 +19451,11 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 13,
+    "letop": 15,
     "info": 3,
     "perErnst": {
       "fout": 4,
-      "let-op": 13,
+      "let-op": 15,
       "info": 3
     },
     "perRegel": {
@@ -19734,20 +19466,12 @@
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "woord-onbekend": 2,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 9,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de openingstijden van controleposten en grensovergangen op de website van de Verenigde Naties (informatie in het Engels).",
-        "Bekijk de openingstijden van grensovergangen op de website van Israëlische luchtvaartautoriteit, onder Land Borders (informatie in het Engels).",
-        "Lees informatie over overstromingen op de website van het Global Disaster Alert and Coordination System (informatie in het Engels).",
-        "Lees informatie over aardbevingen via de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Nederlandse vertegenwoordigingen zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Lees het reisadvies van Israël en het reisadvies van Jordanië om te zien of u tijdens uw reis een visum nodig heeft."
-      ],
       "twijfelUitSjabloon": [
         "In de Palestijnse Gebieden zijn regelmatig demonstraties en samenscholingen."
       ]
@@ -19909,6 +19633,22 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 30 woorden. Maximaal 20.",
+        "fragment": "Nederlandse vertegenwoordigingen zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 22 woorden. Maximaal 20.",
+        "fragment": "Lees het reisadvies van Israël en het reisadvies van Jordanië om te zien of u tijdens uw reis een visum nodig heeft.",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 28 woorden. Maximaal 15.",
         "fragment": "Let op: sinds 22 september 2026 gelden nationale handelsmaatregelen tegen de invoer, aankoop en verkoop van goederen afkomstig uit onrechtmatige Israëlische nederzettingen in de door Israël bezette gebieden.",
         "kop": "Bagageregels"
@@ -19947,11 +19687,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check de weersverwachting op de website van Meteo Polynésie Française voor u op pad gaat (informatie in het Frans).",
-        "Lees informatie over de inreisvoorwaarden op de website van de overheid van Frans-Polynesië (informatie in het Frans).",
-        "Lees meer over de registratieplicht op de website van de overheid van Frans-Polynesië (informatie in het Frans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -20033,9 +19768,6 @@
       "genderneutraal": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de ambassade van Qatar in Den Haag voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -20161,11 +19893,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check actuele waarschuwingen voor stormen op de website van het Severe Weather Information Centre (informatie in het Engels).",
-        "Check actuele waarschuwingen voor uitbarstingen op de website van het Institut de Physique du Globe de Paris (informatie in het Engels).",
-        "Neem contact op met de ambassade van Frankrijk in Den Haag voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -20209,9 +19936,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over lawinegevaar op de website van European Avalanche Warning Service (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -20324,11 +20048,6 @@
       "opmaak-vet-onderstreept": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over bos- en natuurbranden op de website van de Kosovaarse overheid (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het Europees aardbevingscentrum (EMSC) (informatie in het Engels).",
-        "Lees informatie over lawinegevaar op de website van de European Avalanche Warning Service (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Kosovo zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -20420,11 +20139,11 @@
     ],
     "zinnen": 169,
     "fout": 3,
-    "letop": 21,
+    "letop": 22,
     "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 21,
+      "let-op": 22,
       "info": 2
     },
     "perRegel": {
@@ -20434,18 +20153,12 @@
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 9,
+      "zin-max-woorden": 10,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 4,
       "aanhalingstekens": 5
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de ambassade van Rusland in Den Haag voor informatie over de niet-toegankelijke gebieden (informatie in het Engels).",
-        "Bekijk de lijst met niet-toegankelijke gebieden en de inreisregels op de website van de Russische overheid (informatie in het Russisch en website is alleen te openen in Rusland).",
-        "Vraag een visum voor Rusland aan bij het Russische Visa Application Centre in Den Haag (informatie in het Engels).",
-        "Of neem contact op met de Russische ambassade in Den Haag voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -20573,6 +20286,14 @@
         "kop": "Wetten en gebruiken"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 28 woorden. Maximaal 20.",
+        "fragment": "Bekijk de lijst met niet-toegankelijke gebieden en de inreisregels op de website van de Russische overheid (informatie in het Russisch en website is alleen te openen in Rusland).",
+        "kop": "Wetten en gebruiken"
+      },
+      {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -20670,11 +20391,11 @@
     ],
     "zinnen": 115,
     "fout": 3,
-    "letop": 15,
+    "letop": 16,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 15,
+      "let-op": 16,
       "info": 3
     },
     "perRegel": {
@@ -20684,7 +20405,7 @@
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 9,
+      "zin-max-woorden": 10,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 2,
       "link-verboden-partij": 1,
@@ -20692,12 +20413,6 @@
       "tijd-notatie": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Volg het lokale nieuws en advies op de website van het Global Volcanism Program (informatie in het Engels).",
-        "Lees informatie over de regels voor korter of langer verblijf in Rwanda op de website van het Rwanda Directorate General of Immigration and Emigration (informatie in het Engels).",
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR).",
-        "Lees wat u mag meenemen naar Rwanda op de website van de Rwandese douane (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -20848,6 +20563,14 @@
         "kop": "Natuurgeweld"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 24 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Lees informatie over de regels voor korter of langer verblijf in Rwanda op de website van het Rwanda Directorate General of Immigration and Emigration (informatie in het Engels).",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
         "regel": "link-verboden-partij",
         "ernst": "fout",
         "bron": "SW, Relevantie > Naar wie linken we niet?",
@@ -20903,9 +20626,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk meer informatie over de kledingvoorschriften op de website van het Saoedische ministerie van Toerisme (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -21035,9 +20755,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Voor consulaire dienstverlening kunt u terecht bij de Nederlandse ambassade in Egypte of Ethiopië, Kenia of in Zuid-Sudan (alleen noodpaspoorten)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -21128,11 +20845,11 @@
     ],
     "zinnen": 76,
     "fout": 3,
-    "letop": 4,
+    "letop": 5,
     "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 4,
+      "let-op": 5,
       "info": 2
     },
     "perRegel": {
@@ -21140,15 +20857,11 @@
       "nood-contactcenter": 1,
       "tekst-spatie-leesteken": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 3,
       "zin-frequentiewoord": 2,
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Registreer u bij de gemeente waar u verblijft via de website van de nationale politie (informatie in het Frans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -21212,6 +20925,14 @@
         "kop": "Demonstraties"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -21255,12 +20976,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over de rookwetgeving en waar u mag roken op de website van de overheid van Singapore (informatie in het Engels).",
-        "Neem contact op met de ambassade van Singapore in Brussel, België voor meer informatie over visa (informatie in het Engels).",
-        "Vul een digitale Singapore Arrival Card (SGAC) in, binnen 3 dagen voor aankomst (informatie in het Engels).",
-        "Lees wat u mag meenemen naar Singapore op de website van de douane van Singapore (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -21381,9 +21096,6 @@
       "telefoon-notatie": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "En lees informatie over veiligheid op Spitsbergen op de website Visit Svalbard (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -21448,12 +21160,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk het overzicht van actieve vulkanen op de Salomonseilanden op de website van het Global Volcanism Program (informatie in het Engels).",
-        "Check waarschuwingen voor vulkaanuitbarstingen op de website van de overheid van de Salomonseilanden (informatie in het Engels).",
-        "Bekijk alle nummers van ambulancediensten en ziekenhuizen op de website van de overheid van de Salomonseilanden (informatie in het Engels).",
-        "Vraag voor vertrek uw visum aan via de website van de immigratiedienst van de Salomonseilanden (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "Op de Salomonseilanden zijn regelmatig demonstraties."
       ]
@@ -21572,10 +21278,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de ambassade van Sierra Leone in Brussel voor meer informatie over visa.",
-        "Vul het formulier online in via het Sierra Leone Health Travel Portal (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Sierra Leone zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -21688,12 +21390,6 @@
       "zin-max-woorden": 4
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over vulkanen op de website van het Ministerio de Medio Ambiente (informatie in het Spaans).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in San José, Costa Rica.",
-        "Neem contact op met de ambassade van El Salvador in Den Haag voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -21765,9 +21461,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Registreer u bij de politie (Ufficio Stranieri) via de website van de Italiaanse overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -21827,9 +21520,6 @@
       "vragen-opeenvolgend": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk recente gevallen van piraterij op de website van het International Maritime Bureau Piracy Reporting Centre (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -21948,9 +21638,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de actuele bos- en natuurbranden op de website van European Forest Fire Information System (EFFIS) (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Servië zijn regelmatig demonstraties."
       ]
@@ -22026,11 +21713,11 @@
     ],
     "zinnen": 89,
     "fout": 2,
-    "letop": 7,
+    "letop": 8,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 7,
+      "let-op": 8,
       "info": 1
     },
     "perRegel": {
@@ -22038,14 +21725,11 @@
       "h4-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp:+31 857 737 400."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22099,6 +21783,14 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Zeker als het gaat om militairen, militaire installaties, vliegvelden en het John Garang Mausoleum in Juba.",
         "kop": "Wetten en gebruiken"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 32 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp:+31 857 737 400.",
+        "kop": "In geval van nood"
       },
       {
         "regel": "zin-max-woorden",
@@ -22160,9 +21852,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de ambassade van Sao Tomé en Principe in Brussel, België voor meer informatie over een visum."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22219,11 +21908,11 @@
     ],
     "zinnen": 84,
     "fout": 1,
-    "letop": 8,
+    "letop": 9,
     "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 9,
       "info": 4
     },
     "perRegel": {
@@ -22231,15 +21920,10 @@
       "h3-niet-melden": 1,
       "bagage-heen": 1,
       "zin-frequentiewoord": 3,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 6,
       "zin-lijdende-vorm": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de Eu Air Safety list op de website van de Europese Commissie (informatie in het Engels).",
-        "Lees hoe u het entreegeld betaalt op de website van VFS Global (informatie in het Engels).",
-        "Daarnaast is iedere reiziger van 18 jaar en ouder verplicht voor aankomst in Suriname en voor vertrek uit Suriname een ICF-formulier online in te vullen."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22324,6 +22008,14 @@
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 25 woorden. Maximaal 20.",
+        "fragment": "Daarnaast is iedere reiziger van 18 jaar en ouder verplicht voor aankomst in Suriname en voor vertrek uit Suriname een ICF-formulier online in te vullen.",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -22376,10 +22068,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over lawinegevaar op de website van de European Avalanche Warning Service (informatie in het Engels).",
-        "Lees informatie over de registratieplicht en de laatste wijzigingen op de website van het Slowaakse ministerie van Binnenlandse Zaken (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22436,22 +22124,18 @@
     ],
     "zinnen": 66,
     "fout": 0,
-    "letop": 1,
+    "letop": 2,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
+      "let-op": 2,
       "info": 0
     },
     "perRegel": {
-      "reisverzekering-vaste-tekst": 1
+      "reisverzekering-vaste-tekst": 1,
+      "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de veiligheidsinstructies op de website van de Sloveense Alpinistenorganisatie en lees informatie over het weer in de bergen op de website van de Sloveense overheid (informatie in het Engels).",
-        "Lees informatie over lawinegevaar op de website van de European Avalanche Warning Service (informatie in het Engels).",
-        "Check de situatie in het gebied waar u naartoe wilt reizen op de website van het USGS Earthquake Hazards Program (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22462,6 +22146,14 @@
         "boodschap": "De openingstekst over de reisverzekering wijkt af van de vaste tekst in het nieuwe format.",
         "fragment": "Sluit altijd een goede reisverzekering af die de extra kosten dekt van bijvoorbeeld ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent.",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 26 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Bekijk de veiligheidsinstructies op de website van de Sloveense Alpinistenorganisatie en lees informatie over het weer in de bergen op de website van de Sloveense overheid (informatie in het Engels).",
+        "kop": "Natuurgeweld"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 19-11-2026"
@@ -22490,11 +22182,6 @@
       "zin-lijdende-vorm": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check de weersomstandigheden in Zweden op de website van de Zweedse overheid (informatie in het Engels).",
-        "Lees informatie over lawinegevaar op de website van de European Avalanche Warning Services (informatie in het Engels).",
-        "Lees waar een vuurverbod geldt op de website van de Zweedse overheid (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22565,11 +22252,6 @@
       "zin-max-woorden": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over de weersomstandigheden in Eswatini op de website van Eswatini Meteorological Service (informatie in het Engels).",
-        "Lees meer informatie over visa op de website van het ministerie van Binnenlandse Zaken van Eswatini (informatie in het Engels).",
-        "Lees meer informatie over reizen naar Eswatini op de website van de overheid van Eswatini (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Eswatini zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -22620,23 +22302,20 @@
     ],
     "zinnen": 49,
     "fout": 1,
-    "letop": 4,
+    "letop": 5,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 5,
       "info": 0
     },
     "perRegel": {
       "nood-contactcenter": 1,
       "reisverzekering-vaste-tekst": 1,
       "bagage-terug": 1,
-      "zin-max-woorden": 2
+      "zin-max-woorden": 3
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk wat u vanuit Sint Maarten mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?"
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22678,6 +22357,14 @@
         "boodschap": "Deze zin telt 22 woorden. Maximaal 15.",
         "fragment": "De Nederlandse Vertegenwoordiging biedt hulp bij nood aan Nederlanders (met een Nederlands paspoort) die in een gemeente in Europees Nederland staan ingeschreven.",
         "kop": "In geval van nood"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 22 woorden. Maximaal 20.",
+        "fragment": "Bekijk wat u vanuit Sint Maarten mee terug mag nemen naar Europees Nederland op de pagina Wat mag ik meenemen naar Nederland?",
+        "kop": "Bagageregels"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 13-08-2026 | Nog steeds geldig op: 19-11-2026"
@@ -22704,9 +22391,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over risico’s op kaping op de website Maritime Security Centre Indian Ocean (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22748,9 +22432,6 @@
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22880,10 +22561,6 @@
       "link-plakt-aan-woord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem in geval van nood contact op met het Nederlandse consulaat-generaal in Miami, Verenigde Staten van Amerika."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -22970,7 +22647,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -23098,11 +22774,6 @@
       "eenheden-voluit": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Vraag online uw visum aan via de website van de Togolese overheid (informatie in het Frans).",
-        "Lees meer over de registratie op de website van Togo Voyage (informatie in het Engels en Frans).",
-        "Check wat u mag meenemen op de website van de luchthaven van Lomé (informatie in het Frans)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -23193,12 +22864,6 @@
       "getallen-cijfers": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer over het aantal verkeersongelukken in Thailand op de website van het Accident Data Center of Thailand (informatie in het Thais).",
-        "Lees meer informatie over het gebruik van drones op de website van de Civilian Aviation Authority in Thailand (informatie in het Engels).",
-        "Bekijk het niveau van de luchtkwaliteit op de World Air Quality Index website (informatie in het Engels).",
-        "Voor vragen kunt u contact opnemen met de ambassade van Thailand in Den Haag (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -23538,10 +23203,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het Europees aardbevingscentrum EMSC (informatie in het Engels).",
-        "In een noodgeval kunt u ook terecht bij de Duitse ambassade in Dusjanbe (informatie in het Duits)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -23619,7 +23280,6 @@
       "zin-max-woorden": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -23667,14 +23327,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem vooraf contact op met de ambassade van Turkmenistan in Brussel, België of met uw reisorganisatie voor advies.",
-        "Lees meer over aardbevingen in Turkmenistan op de website van het Europees aardbevingscentrum EMSC (informatie in het Engels).",
-        "In een noodgeval kunt u ook terecht bij de Duitse ambassade in Asjchabad (informatie in het Duits).",
-        "Neem contact op met de ambassade van Turkmenistan in Brussel, België voor meer informatie over visa.",
-        "Lees hoe u de aanvraag doet op website van de immigratiedienst van Turkmenistan (informatie in het Engels).",
-        "Registreer u binnen 3 dagen na aankomst bij de immigratiedienst van Turkmenistan (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -23740,9 +23392,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over visa op de website van de Immigratiedienst van Oost-Timor (informatie in het Engels)"
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -23860,12 +23509,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Lees het weerbericht van Tonga op de website van de Tonga Meteorological Services (informatie in het Engels).",
-        "Lees informatie over actieve vulkanen op de Facebookpagina van de Tonga Geological Services (informatie in het Engels).",
-        "Neem contact op met de ambassade van Tonga in Londen, Verenigd Koninkrijk voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -23918,11 +23561,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees over de weersomstandigheden in Trinidad en Tobago op de website van Trinidad and Tobago Meteorological Service (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Neem contact op met de ambassade van Trinidad en Tobago in Brussel, België voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -23990,9 +23628,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van USGS Earthquake Hazards Program (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Tunesische steden zijn regelmatig demonstraties."
       ]
@@ -24104,10 +23739,6 @@
       "aanhalingstekens": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de informatie over natuurbranden op de website van European Forest Fire Information System (EFFIS) (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het Europees aardbevingscentrum EMSC (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "Vooral in Istanbul zijn regelmatig demonstraties waar de politie soms hard tegen optreedt."
       ]
@@ -24432,10 +24063,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over stormen op de website van het Severe Weather Information Centre (informatie in het Engels).",
-        "Neem contact op met de ambassade van Nieuw-Zeeland in Den Haag voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -24481,10 +24108,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen, aardverschuivingen en tsunami’s op de website van USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Vul online de Taiwan Arrival Card in, binnen 3 dagen voor aankomst (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -24537,10 +24160,6 @@
       "aanhalingstekens": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees actuele informatie over het weer in Tanzania op de website van de Tanzania Meteorological Authority (informatie in het Engels).",
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -24766,27 +24385,23 @@
     ],
     "zinnen": 92,
     "fout": 2,
-    "letop": 10,
+    "letop": 11,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
+      "let-op": 11,
       "info": 3
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-vaste-kop": 1,
       "h4-kop-variant": 1,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 9,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 2,
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees wat u kunt doen om besmetting te voorkomen op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR).",
-        "Check de actuele situatie rond ebola op de website van het RIVM en de website van de WHO (informatie het Engels)."
-      ],
       "twijfelUitSjabloon": [
         "In Uganda zijn regelmatig demonstraties, vooral in de grotere steden."
       ]
@@ -24912,6 +24527,14 @@
         "kop": "Natuurgeweld"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20.",
+        "fragment": "Check de actuele situatie rond ebola op de website van het RIVM en de website van de WHO (informatie het Engels).",
+        "kop": "Reisvaccinaties"
+      },
+      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -24948,7 +24571,6 @@
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -25043,10 +24665,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees het weerbericht van Uruguay op de website van het Instituto Uruguayo de Meteorología (informatie in het Spaans).",
-        "Neem contact op met de ambassade van Uruguay in Den Haag voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -25100,12 +24718,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Abonneer u op NTAS-waarschuwingen via de website van het National Terrorism Advisory System (NTAS) (informatie in het Engels).",
-        "Lees meer over de regels voor toegang tot de VS op de website van de US Customs and Border Protection (informatie in het Engels).",
-        "Neem contact op met het CBP Traveler Communications Center via het contactformulier (informatie in het Engels).",
-        "Meer informatie vindt u op de website van de Amerikaanse gezondheidsdienst CDC (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -25276,11 +24888,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk het niveau van de luchtkwaliteit op de World Air Quality Index website (informatie in het Engels).",
-        "Lees hoeveel medicijnen u mag meenemen op de website van de Oezbeekse douane (informatie in het Engels).",
-        "Lees meer over het meenemen van drones op de website van het Civil Aviation Agency (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -25322,25 +24929,20 @@
     ],
     "zinnen": 58,
     "fout": 0,
-    "letop": 3,
+    "letop": 4,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 4,
       "info": 3
     },
     "perRegel": {
       "zin-lijdende-vorm": 1,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 3,
-      "zin-max-woorden": 1,
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
-        "Bekijk of er waarschuwingen zijn voor de vulkaan bij het Global Volcanism Program (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -25351,6 +24953,14 @@
         "boodschap": "Lijdende vorm: \"worden … gezet\". Schrijf actief.",
         "fragment": "U riskeert uit het land te worden gezet of een arrestatie en een gevangenisstraf.",
         "kop": "Wetten en gebruiken"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 27 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
+        "kop": "Natuurgeweld"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -25406,11 +25016,11 @@
     ],
     "zinnen": 103,
     "fout": 5,
-    "letop": 13,
+    "letop": 14,
     "info": 6,
     "perErnst": {
       "fout": 5,
-      "let-op": 13,
+      "let-op": 14,
       "info": 6
     },
     "perRegel": {
@@ -25421,7 +25031,7 @@
       "nood-contactcenter": 1,
       "kinderen-documenten": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 8,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 1,
@@ -25429,12 +25039,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Check regelmatig het weerbericht voor Venezuela op de website van het National Hurricane Center (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Check welke documenten u nog meer nodig heeft om te reizen met een minderjarig kind en neem die mee."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -25603,6 +25207,14 @@
         "kop": "Natuurgeweld"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "zin-twijfeltaal",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -25646,22 +25258,17 @@
     ],
     "zinnen": 54,
     "fout": 0,
-    "letop": 3,
+    "letop": 4,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 4,
       "info": 0
     },
     "perRegel": {
-      "zin-max-woorden": 3
+      "zin-max-woorden": 4
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
-        "Neem in geval van nood contact op met de Nederlandse ambassade in Port of Spain, Trinidad en Tobago.",
-        "Vul het online immigratie- en douaneformulier in van de overheid van de Britse Maagdeneilanden (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -25672,6 +25279,14 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Niet iedereen heeft een positieve houding tegenover uw seksuele voorkeur of identiteit, vooral buiten toeristische gebieden.",
         "kop": "Wetten en gebruiken"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 27 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Lees meer informatie over orkanen en het lokale weer op de website van het National Hurricane Center en op de website van het Severe Weather Information Centre (informatie in het Engels).",
+        "kop": "Natuurgeweld"
       },
       {
         "regel": "zin-max-woorden",
@@ -25703,27 +25318,21 @@
     ],
     "zinnen": 53,
     "fout": 0,
-    "letop": 7,
+    "letop": 8,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 8,
       "info": 0
     },
     "perRegel": {
       "rijbewijs-anwb": 1,
       "kinderen-paspoort": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 4,
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over tropische stormen op de website van Tropical Storm Risk (informatie in het Engels).",
-        "Lees informatie over aardbevingen op de website van het National Hurricane Center (informatie in het Engels).",
-        "Lees meer over de regels voor toegang tot de Amerikaanse Maagdeneilanden op de website van de US Customs and Border Protection (informatie in het Engels).",
-        "Neem contact op met het CBP Traveler Communications Center via het contactformulier (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -25764,6 +25373,14 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 28 woorden. Maximaal 15.",
         "fragment": "Of u een visum nodig heeft, hangt af van uw reisdoel, hoelang u blijft, of u in bepaalde landen bent geweest en of u nog andere nationaliteiten heeft.",
+        "kop": "Paspoort, visum, rijbewijs"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
+        "fragment": "Lees meer over de regels voor toegang tot de Amerikaanse Maagdeneilanden op de website van de US Customs and Border Protection (informatie in het Engels).",
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
@@ -25814,11 +25431,6 @@
       "link-tekstlengte": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de contactgegevens van de Nederlandse ambassade in Hanoi en het consulaat-generaal in Ho Chi Min Stad.",
-        "Neem contact op met de Vietnamese immigratiedienst of met de ambassade van Vietnam in Den Haag (informatie in het Engels).",
-        "Lees wat u mag meenemen naar Vietnam op de website van de douane van Vietnam (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -26043,14 +25655,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "En lees informatie over tsunami’s op de website van het Vanuatu Meteorology & Geo-hazards Department (informatie in het Engels).",
-        "Check waarschuwingen voor vulkaanuitbarstingen op de website van het Vanuatu Meteorology & Geo-Hazards Department (informatie in het Engels).",
-        "Check regelmatig het weerbericht op de website van het Vanuatu Meteorology & Geo-Hazards Department (informatie in het Engels).",
-        "Check de weersverwachting voor u de zee op gaat op de website van het Vanuatu Meteorology & Geo-hazards Department (informatie in het Engels).",
-        "Lees meer informatie over visa op de website van de immigratiedienst van Vanuatu (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -26221,9 +25825,6 @@
       "rijbewijs-anwb": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over tropische stormen op de website van de World Meteorological Organization (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -26257,11 +25858,6 @@
     },
     "perRegel": {},
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over aardbevingen op de website van het USGS Earthquake Hazards Program (informatie in het Engels).",
-        "Lees informatie over tsunami’s op de website van het Tsunami Information Centre (informatie in het Engels).",
-        "Neem contact op met de ambassade van Samoa in Brussel, België voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [],
@@ -26278,11 +25874,11 @@
     ],
     "zinnen": 85,
     "fout": 2,
-    "letop": 13,
+    "letop": 14,
     "info": 5,
     "perErnst": {
       "fout": 2,
-      "let-op": 13,
+      "let-op": 14,
       "info": 5
     },
     "perRegel": {
@@ -26291,17 +25887,12 @@
       "medicijnen-voldoende": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 4,
       "zin-lijdende-vorm": 8,
       "zin-frequentiewoord": 2,
       "zin-twijfeltaal": 2
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over piraterij op de website van Maritime Security Centre Indian Ocean (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Neem contact op met de Jemenitische ambassade in Den Haag voor meer informatie over visa (informatie in het Engels)."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -26448,6 +26039,14 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 32 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 25 woorden. Maximaal 15.",
         "fragment": "Het is op dit moment in de praktijk niet mogelijk om een visum voor Jemen aan te vragen via de Jemenitische ambassade in Den Haag.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -26482,11 +26081,11 @@
     ],
     "zinnen": 74,
     "fout": 3,
-    "letop": 12,
+    "letop": 13,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 12,
+      "let-op": 13,
       "info": 1
     },
     "perRegel": {
@@ -26496,20 +26095,12 @@
       "nood-contactcenter": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 4,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2,
       "aanhalingstekens": 4
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Lees informatie over overstromingen op de website van de overheid van Zuid-Afrika (informatie in het Engels).",
-        "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
-        "Neem contact op met de ambassade van Zuid-Afrika in Den Haag voor meer informatie over visa (informatie in het Engels).",
-        "Vul de verklaring in via de website of app van de Zuid-Afrikaanse douane (informatie in het Engels).",
-        "Bekijk welke aanvullende vereisten er zijn voor reizen met een kind naar Zuid-Afrika op de website van de Zuid-Afrikaanse overheid (informatie in het Engels).",
-        "Lees informatie over het meenemen van een jachttrofee uit Zuid-Afrika op de website van de Rijksdienst voor Ondernemend Nederland."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -26597,6 +26188,14 @@
         "kop": "Wetten en gebruiken"
       },
       {
+        "regel": "zin-max-woorden",
+        "ernst": "let-op",
+        "bron": "SW, Begrijpelijkheid > B1",
+        "boodschap": "Deze zin met link telt 33 woorden. Maximaal 20.",
+        "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
+        "kop": "In geval van nood"
+      },
+      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -26669,9 +26268,6 @@
       "aanhalingstekens": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Neem contact op met de ambassade van Zambia in Brussel, België voor meer informatie over visa."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
@@ -26791,12 +26387,6 @@
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
-      "langeZinMetLink": [
-        "Bekijk de lijst met noodnummers per regio op de website van de overheid van Zimbabwe (informatie in het Engels).",
-        "Vul het formulier in via de website van de Zimbabwaanse immigratiedienst (informatie in het Engels) en laat deze zien bij de immigratiebalie.",
-        "Lees informatie over cholera en hoe u zich kunt beschermen op de website van de GGD Reisvaccinaties.",
-        "Lees informatie over polio en hoe u zich kunt beschermen op de website van de GGD Reisvaccinaties."
-      ],
       "twijfelUitSjabloon": []
     },
     "bevindingen": [

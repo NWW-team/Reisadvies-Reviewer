@@ -32,8 +32,9 @@
   },
   "zin": {
     "max_woorden": 15,
-    "richtlijn_woorden": 12,
-    "_bron": "Begrijpelijkheid > B1: 'Gebruik maximaal 15 woorden in een zin.'"
+    "max_woorden_met_link": 20,
+    "_bron": "Begrijpelijkheid > B1 (versie 9 november 2026): 'Schrijf zinnen van maximaal 15 woorden. Bevat de zin een link? Dan geldt een maximum van 20 woorden. De toevoeging (Informatie in het Engels) telt niet mee bij de woordentelling.'",
+    "_toevoeging": "De schrijfwijzer noemt '(Informatie in het Engels)'. De tool laat elke taalvermelding van die vorm buiten de telling: '(informatie in het Spaans)', '(informatie in het Engels en Frans)'. Een toevoeging met meer erin ('website alleen bereikbaar vanuit Centraal-Amerika') telt wel mee."
   },
   "vragen": {
     "max_opeenvolgend": 2,

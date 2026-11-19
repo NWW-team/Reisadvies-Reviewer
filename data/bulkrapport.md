@@ -7,7 +7,7 @@ Gedraaid op 2026-11-19 over 226 reisadviezen.
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **102** van de 2273 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **102** van de 2343 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,14 +26,14 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 280 | 148 |
-| geel/oranje — let op | 1485 | 214 |
+| geel/oranje — let op | 1555 | 217 |
 | grijs — ter overweging | 508 | 160 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 190 | 734 |
+| `zin-max-woorden` | 198 | 804 |
 | `zin-frequentiewoord` | 136 | 340 |
 | `zin-lijdende-vorm` | 124 | 274 |
 | `h4-niet-melden` | 64 | 65 |

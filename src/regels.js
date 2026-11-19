@@ -1776,24 +1776,27 @@ export function maakToetser(data) {
     }
 
     // Wat de tool niet meldt maar wel ter bespreking ligt: dat telt mee in de samenvatting.
-    const teBespreken = { langeZinMetLink: [], twijfelUitSjabloon: [] };
+    const teBespreken = { twijfelUitSjabloon: [] };
     const sjabloonTwijfel = ((sj.voorbeeld_twijfeltaal && sj.voorbeeld_twijfeltaal.frasen) || [])
       .map((x) => norm(x.frase));
+    // "(Informatie in het Engels)" telt niet mee (schrijfwijzer, 9 november 2026). Ook niet een
+    // andere taal of meer talen: "(informatie in het Engels en Frans)". Staat er meer in de
+    // toevoeging dan alleen talen, dan telt hij gewoon mee.
+    const TAALTOEVOEGING = /\((?:informatie )?in het \p{Lu}\p{L}+(?:(?:,| en| of)(?: het)? \p{Lu}\p{L}+)*\)/giu;
     for (const z of doc.zinnen) {
       if (isVasteZin(z.tekst)) continue;
-      if (z.woorden > lim.zin.max_woorden) {
-        // Zit er een link in, dan zit de lengte vaak in de linktekst. Zo'n zin meldt de tool niet:
-        // of voor zinnen met een link een ruimere grens moet gelden (25 woorden?), ligt ter
-        // bespreking voor de schrijfwijzer (Martijn, 30 oktober 2026). Hij telt wel mee in de
-        // samenvatting, zodat het totaaloverzicht laat zien om hoeveel zinnen het gaat.
-        const metLink = doc.links.some((l) => l.tekst && z.tekst.includes(l.tekst));
-        if (metLink) {
-          teBespreken.langeZinMetLink.push(z.tekst);
-        } else {
-          b.push(bevinding('zin-max-woorden', ERNST.letop, 'SW, Begrijpelijkheid > B1',
-            `Deze zin telt ${z.woorden} woorden. Maximaal ${lim.zin.max_woorden}.`,
-            { fragment: z.tekst, kop: z.h3 || z.h2 }));
-        }
+      // Een zin met een link mag langer zijn: de linktekst zelf neemt al ruimte in.
+      const metLink = doc.links.some((l) => l.tekst && z.tekst.includes(l.tekst));
+      const toevoeging = metLink ? (z.tekst.match(TAALTOEVOEGING) || []) : [];
+      const woorden = z.woorden - toevoeging.reduce((n, t) => n + telWoorden(t), 0);
+      const max = metLink ? lim.zin.max_woorden_met_link : lim.zin.max_woorden;
+      if (woorden > max) {
+        b.push(bevinding('zin-max-woorden', ERNST.letop, 'SW, Begrijpelijkheid > B1',
+          metLink
+            ? `Deze zin met link telt ${woorden} woorden. Maximaal ${max}.`
+              + (toevoeging.length ? ` De toevoeging ${toevoeging.join(' ')} telt niet mee.` : '')
+            : `Deze zin telt ${woorden} woorden. Maximaal ${max}.`,
+          { fragment: z.tekst, kop: z.h3 || z.h2 }));
       }
       for (const w of wl.twijfeltaal.woorden) {
         if (!new RegExp('\\b' + esc(w) + '\\b', 'i').test(z.tekst)) continue;

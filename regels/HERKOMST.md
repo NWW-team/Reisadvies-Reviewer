@@ -1581,7 +1581,12 @@ Een bullet die geen kleurcode uitlegt, is een actualiteit (herkend aan het woord
 als de kleurregels). Daaruit volgt:
 
 - **De eerste daarvan moet bullet 1 zijn** (`kort-actualiteit-eerste`).
-- **Meer dan één is te veel** (`kort-een-actualiteit`, een melding per extra bullet).
+- **Meer dan één is te veel** (`kort-een-actualiteit`, een melding per extra bullet). Welke de
+  actualiteit is en welke te veel: de bullet die naar Actueel verwijst is de actualiteit, want het
+  sjabloon zegt *"Onder Actueel volgt nadere uitleg"*. De andere krijgen de melding, ook als ze
+  bovenaan staan. Bij Burkina Faso is de doodstraf (Lees meer onder Wetten en gebruiken, bullet 1)
+  dus te veel en is de arrestatie (Lees meer onder Actueel, bullet 2) de goede (Martijn, dezelfde
+  dag). *Niet bovenaan* geldt alleen als er een kleurbullet boven de actualiteit staat.
 - **De verwijzing.** Geen verwijzing is *let op*. Een verwijzing naar een andere rubriek dan Actueel
   is *ter overweging*, met de vraag of het een uitzondering is: de tool kan niet weten of er
   klantvragen achter zitten.
@@ -1598,3 +1603,21 @@ Natuurgeweld (4), Demonstraties (2), Wetten en gebruiken (2) en Paspoort, visum 
 Faso is voor het grootste deel rood."* Martijn: dat is goed; het wordt wel eens gebruikt als bijna het
 hele land één kleur heeft en een enkele plaats een andere. De vorm staat nu in `aanduiding_sjablonen`
 en in `bullet_vormen.eerste_voluit` van `kleurcodes.json`.
+
+## Sjabloon van november 2026: "uw accommodatie" (19 november 2026)
+
+Martijn leverde een nieuwere versie van het sjabloon aan. Twee verschillen, allebei in het blok
+*Natuurgeweld*:
+
+1. *"Neem contact op met de lokale autoriteiten, uw **hotel** of reisorganisatie …"* is *"uw
+   **accommodatie**"* geworden. Nieuwe vaste tekst `natuurgeweld-contact`: hij doet alleen mee als
+   de zin over de lokale autoriteiten in de rubriek Natuurgeweld staat, en meldt dan dat hij
+   afwijkt, met de nieuwe formulering erbij. Martijn: *"wijkt af melden"*. De oude vorm is
+   vrijgesteld van de schrijfregels, zodat er geen tweede melding over de lengte bij komt. Gemeten:
+   128 adviezen hebben een vorm van deze zin, 114 de oude letterlijk. De tool meldt er 125: bij drie
+   staat de zin buiten de rubriek Natuurgeweld.
+2. De voorbeelden onder Natuurgeweld hebben een verwijzing naar een themapagina gekregen (*"Lees
+   wat u verder kunt doen bij een bosbrand in het buitenland"*). Ze staan onder *[Bijv.]*; de tool
+   eist ze niet. Of het vaste teksten moeten worden, staat op de bespreeklijst.
+
+De nieuwe zin is met 20 woorden nog steeds langer dan 15; ook dat staat op de bespreeklijst.

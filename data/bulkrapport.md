@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-18 over 226 reisadviezen.
+Gedraaid op 2026-11-19 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **101** van de 2274 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **102** van de 2273 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -25,7 +25,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 281 | 148 |
+| rood — fout | 280 | 148 |
 | geel/oranje — let op | 1485 | 214 |
 | grijs — ter overweging | 508 | 160 |
 
@@ -35,9 +35,9 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 |---|---:|---:|
 | `zin-max-woorden` | 190 | 734 |
 | `zin-frequentiewoord` | 136 | 340 |
-| `zin-lijdende-vorm` | 123 | 273 |
+| `zin-lijdende-vorm` | 124 | 274 |
 | `h4-niet-melden` | 64 | 65 |
-| `aanhalingstekens` | 54 | 87 |
+| `aanhalingstekens` | 53 | 85 |
 | `zin-twijfeltaal` | 51 | 67 |
 | `doc-woordenaantal` | 47 | 47 |
 | `kleur-variant` | 44 | 50 |
@@ -48,16 +48,16 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `reisverzekering-vaste-tekst` | 31 | 31 |
 | `kinderen-paspoort` | 29 | 29 |
 | `rubriek-vrij-te-hoog` | 26 | 26 |
-| `woord-onbekend` | 24 | 45 |
+| `woord-onbekend` | 25 | 46 |
 | `h3-niet-melden` | 23 | 23 |
 | `rubrieken-volgorde` | 23 | 23 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
-| `h3-vaste-kop` | 11 | 11 |
 | `h4-kop-variant` | 10 | 11 |
 | `actueel-max-woorden` | 10 | 10 |
+| `h3-vaste-kop` | 10 | 10 |
 | `tekst-spatie-leesteken` | 9 | 10 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |

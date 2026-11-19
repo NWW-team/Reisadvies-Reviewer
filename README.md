@@ -72,10 +72,13 @@ Binnen *Ter overweging* staan de bevindingen op de volgorde van de filters, dus 
 onderaan: het is bijna altijd een stapel losse woorden die je in één ronde wegwerkt. Twijfeltaal
 had eerst een eigen kleur (roze); sinds 30 oktober 2026 is het ter overweging, met een eigen filter.
 
-**Wat de tool met opzet niet meldt, maar wel telt.** Een te lange zin met een link erin, en
-twijfeltaal uit een voorbeeldzin van het sjabloon, liggen ter bespreking
-(`regels/TER-BESPREKING.md`). De tool meldt ze niet; ze staan per advies in
-`samenvatting.teBespreken`, zodat het totaaloverzicht kan laten zien om hoeveel het gaat.
+**Zinslengte.** Een zin mag 15 woorden hebben, een zin met een link 20. De toevoeging
+*"(informatie in het Engels)"* telt niet mee, en ook niet een andere taal (schrijfwijzer, versie
+9 november 2026).
+
+**Wat de tool met opzet niet meldt, maar wel telt.** Twijfeltaal uit een voorbeeldzin van het
+sjabloon ligt ter bespreking (`regels/TER-BESPREKING.md`). De tool meldt het niet; het staat per
+advies in `samenvatting.teBespreken`, zodat het totaaloverzicht kan laten zien om hoeveel het gaat.
 
 Staan er meer bevindingen op één zin, dan wint de eerste uit die volgorde: een fout moet je hoe
 dan ook zien. Een vaste formulering uit het sjabloon telt nergens mee — die is zo vastgesteld.

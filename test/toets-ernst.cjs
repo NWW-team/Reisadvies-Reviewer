@@ -15,16 +15,27 @@ const eerste = (html, id) => bevindingen(html).find((x) => x.regel === id);
 const LANGE_ZIN = 'De autoriteiten van Testland kunnen bij onrust besluiten om wegen af te sluiten '
   + 'en het openbaar vervoer in de hoofdstad stil te leggen.';
 
-test('een lange zin zonder link is let-op, met link wordt hij niet gemeld', () => {
+test('een zin zonder link mag 15 woorden, met link 20, en de taaltoevoeging telt niet mee', () => {
   const zonder = eerste(`<p>${LANGE_ZIN}</p>`, 'zin-max-woorden');
   assert.ok(zonder);
   assert.strictEqual(zonder.ernst, Regels.ERNST.letop);
 
-  const html = `<p>De autoriteiten van Testland kunnen bij onrust besluiten om wegen af te sluiten, `
-    + `<a href="https://www.nederlandwereldwijd.nl/">lees meer over de gevolgen voor reizigers</a>.</p>`;
-  assert.strictEqual(eerste(html, 'zin-max-woorden'), undefined, 'een lange zin met link ligt ter bespreking');
-  const r = toetser(Parse.parseAdvies(html, { land: 'Testland' }));
-  assert.strictEqual(r.samenvatting.teBespreken.langeZinMetLink.length, 1, 'maar telt wel mee in de samenvatting');
+  // 18 woorden met een link: binnen de 20.
+  const kort = `<p>De autoriteiten van Testland kunnen bij onrust besluiten om wegen af te sluiten, `
+    + `<a href="https://www.nederlandwereldwijd.nl/">lees meer over de gevolgen</a>.</p>`;
+  assert.strictEqual(eerste(kort, 'zin-max-woorden'), undefined);
+
+  // 24 woorden met een link: te lang.
+  const lang = `<p>De autoriteiten van Testland kunnen bij onrust in de hoofdstad besluiten om alle wegen `
+    + `af te sluiten, <a href="https://www.nederlandwereldwijd.nl/">lees meer over de gevolgen voor reizigers</a>.</p>`;
+  const b = eerste(lang, 'zin-max-woorden');
+  assert.ok(b);
+  assert.match(b.boodschap, /met link telt 24 woorden\. Maximaal 20/);
+
+  // 20 woorden plus "(informatie in het Engels)": de toevoeging telt niet mee.
+  const engels = `<p>Lees meer over de regels voor het meenemen van medicijnen en andere producten `
+    + `<a href="https://example.org/">op de website van de douane</a> (informatie in het Engels).</p>`;
+  assert.strictEqual(eerste(engels, 'zin-max-woorden'), undefined);
 });
 
 test('twijfeltaal is ter overweging', () => {

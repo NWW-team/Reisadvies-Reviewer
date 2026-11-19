@@ -1504,3 +1504,28 @@ Bij dezelfde ronde vastgelegd:
   september is daarmee definitief.
 - **Verkeersongevallen en Geldzaken** blijven gemeld: *"die mogen gewoon oppoppen."*
 - **Vaste sjabloonzinnen boven de norm** blijven vrijgesteld; ze gaan apart op de bespreeklijst.
+
+## Nieuwe schrijfwijzer: een zin met een link mag 20 woorden (19 november 2026)
+
+De schrijfwijzer van 9 november 2026 zegt bij *Begrijpelijkheid > B1*: *"Schrijf zinnen van maximaal
+15 woorden. Bevat de zin een link? Dan geldt een maximum van 20 woorden. De toevoeging (Informatie in
+het Engels) telt niet mee bij de woordentelling."* Daarmee is het bespreekpunt van 30 oktober
+beslist. `zin-max-woorden` meldt een zin met een link weer, nu boven de 20 woorden
+(`max_woorden_met_link` in `limieten.json`); `teBespreken.langeZinMetLink` is vervallen.
+
+**De toevoeging.** De schrijfwijzer noemt alleen *"(Informatie in het Engels)"*. De tool laat elke
+taalvermelding van die vorm buiten de telling, ook *"(informatie in het Spaans)"* en *"(informatie in
+het Engels en Frans)"*. Dat is de bedoeling van de regel: de toevoeging zegt alleen in welke taal de
+gelinkte pagina is. Staat er meer in, zoals *"website alleen bereikbaar vanuit Centraal-Amerika"*,
+dan telt hij wel mee. Zo'n zin met link boven de 20 woorden noemt de toevoeging in de melding, zodat
+de redacteur ziet dat die al is afgetrokken.
+
+**Vaste sjabloonzinnen.** `scripts/vaste-teksten-boven-de-norm.mjs` houdt nu ook rekening met de
+link: of een vaste zin een link heeft, leest hij af aan hoe de adviezen hem gebruiken, ook in
+bullets. Vier zinnen vallen daardoor binnen de norm (medicijnverklaring, minderjarig kind, de
+criminaliteitpagina, de kopie van het paspoort); er blijven er tien over.
+
+De nieuwe versie van de schrijfwijzer staat in de repo. De overige wijzigingen raken de tool niet of
+nauwelijks: een alinea over Veelgestelde vragen (geen reisadvies), de schrijfwijze
+*NederlandWereldwijd* (de tien adviezen met *"Nederland Wereldwijd"* krijgen al een melding via de
+vaste contactcentertekst), en een herformulering van de regels voor getallen.

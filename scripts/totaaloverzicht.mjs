@@ -144,7 +144,7 @@ const SPEURNEUS = [
 const speurneusRegels = [...groep('tekstfouten'), ...groep('spelling')];
 
 const SCHRIJF = [
-  ['zin-max-woorden', 'Zin boven 15 woorden (zonder link)'],
+  ['zin-max-woorden', 'Te lange zin (15 woorden, met link 20)'],
   ['zin-lijdende-vorm', 'Lijdende vorm'],
   ['link-tekstlengte', 'Linktekst boven 70 tekens'],
   ['zin-twijfeltaal', 'Twijfeltaal: misschien, mogelijk …'],
@@ -195,7 +195,7 @@ const regels = [
   `| Adviezen waar een vaste tekst ontbreekt of afwijkt | ${metIets(toen, regel(...VAST.map(([id]) => id)))} | ${metIets(nu, regel(...VAST.map(([id]) => id)))} |`,
   `| Adviezen boven de woordenlimiet | ${metIets(toen, regel('doc-woordenaantal'))} | ${metIets(nu, regel('doc-woordenaantal'))} |`,
   `| Adviezen met een fout uit SpellingSpeurneus | ${metIets(toen, regel(...speurneusRegels))} | ${metIets(nu, regel(...speurneusRegels))} |`,
-  `| Adviezen met een zin boven 15 woorden (zonder link) | ${metIets(toen, regel('zin-max-woorden'))} | ${metIets(nu, regel('zin-max-woorden'))} |`,
+  `| Adviezen met een te lange zin (15 woorden, met link 20) | ${metIets(toen, regel('zin-max-woorden'))} | ${metIets(nu, regel('zin-max-woorden'))} |`,
   '',
   '## Onderwerpen die volgens de matrix niet in een reisadvies horen',
   '',
@@ -234,7 +234,6 @@ const regels = [
   '',
   `| | ${EERSTE.datum} | nu |`,
   '|---|---:|---:|',
-  `| Zin boven 15 woorden mét een link erin | ${fmt(teBespreken(toen, 'langeZinMetLink'))} | ${fmt(teBespreken(nu, 'langeZinMetLink'))} |`,
   `| Twijfeltaal uit een voorbeeldzin van het sjabloon | ${fmt(teBespreken(toen, 'twijfelUitSjabloon'))} | ${fmt(teBespreken(nu, 'twijfelUitSjabloon'))} |`,
   '',
   'De vaste sjabloonzinnen die zelf langer zijn dan 15 woorden staan in',

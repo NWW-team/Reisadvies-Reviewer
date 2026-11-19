@@ -53,29 +53,23 @@ met relatief hoge straffen.
 Vraag: houden we deze afspraken aan en halen we deze onderwerpen uit de adviezen waar ze geen
 uitzondering zijn?
 
-### Lange zinnen met een link
+### Vaste zinnen uit het sjabloon die zelf boven de norm zitten
 
-De schrijfwijzer houdt maximaal 15 woorden per zin aan. **200 adviezen** hebben samen 547 zinnen
-die langer zijn én een link bevatten. Daar zit de lengte vaak in de linktekst. De tool meldt ze
-niet meer.
-
-Vraag: geldt voor een zin met een link een ruimere grens, bijvoorbeeld 25 woorden? Of geen grens?
-
-### Vaste zinnen uit het sjabloon die zelf boven de 15 woorden zitten
-
-Vijftien formuleringen uit het sjabloon zijn zelf langer dan de schrijfwijzer toestaat. De tool
-meldt ze niet, want de redacteur volgt het sjabloon. De meest gebruikte:
+Tien formuleringen uit het sjabloon zijn zelf langer dan de schrijfwijzer toestaat: 15 woorden,
+of 20 als er een link in de zin staat. De tool meldt ze niet, want de redacteur volgt het sjabloon.
+De meest gebruikte:
 
 | woorden | in hoeveel adviezen | zin |
 |---:|---:|---|
-| 32 | 192 | Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400. |
-| 17 | 224 | Check of u een medicijnverklaring nodig heeft om uw medicijnen mee te mogen nemen naar [land]. |
-| 17 | 222 | Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee. |
-| 17 | 213 | Lees meer op de pagina Hoe voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland? |
-| 16 | 179 | Lees hoe u een veilige kopie maakt van uw paspoort op de website van de Rijksoverheid. |
-| 18 | 77 | Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |
+| 32 (met link) | 192 | Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400. |
+| 18 | 76 | Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |
+| 16 | 58 | Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar [land]. |
+| 18 | 55 | U heeft geen visum nodig voor [land] als u met een Nederlands paspoort of Nederlandse ID-kaart reist. |
+| 16 | 42 | Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig voor een reis naar [land]. |
 
-De volledige lijst staat in [`data/vaste-teksten-boven-de-norm.md`](../data/vaste-teksten-boven-de-norm.md).
+Door de nieuwe grens voor zinnen met een link vallen vier zinnen nu wél binnen de norm, waaronder
+die over de medicijnverklaring en over reizen met een minderjarig kind. De volledige lijst staat in
+[`data/vaste-teksten-boven-de-norm.md`](../data/vaste-teksten-boven-de-norm.md).
 
 Vraag: kunnen we deze zinnen zo herschrijven dat ze binnen de richtlijn vallen? Vooral de zin over
 het contactcenter (32 woorden, met twee telefoonnummers) zou je kunnen opknippen.

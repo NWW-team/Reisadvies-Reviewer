@@ -16,7 +16,7 @@ Elke cel: **in hoeveel adviezen** (hoeveel meldingen in totaal).
 | Adviezen waar een vaste tekst ontbreekt of afwijkt | 124 | 123 |
 | Adviezen boven de woordenlimiet | 46 | 47 |
 | Adviezen met een fout uit SpellingSpeurneus | 91 | 53 |
-| Adviezen met een te lange zin (15 woorden, met link 20) | 198 | 198 |
+| Adviezen met een te lange zin (15 woorden, met link 20) | 223 | 223 |
 
 ## Onderwerpen die volgens de matrix niet in een reisadvies horen
 
@@ -111,11 +111,11 @@ meting al opgelost.
 
 | | 14 september 2026 | nu |
 |---|---:|---:|
-| Te lange zin (15 woorden, met link 20) | 198 (798) | 198 (804) |
-| Twijfeltaal: vaak, soms, regelmatig … | 141 (346) | 136 (340) |
-| Lijdende vorm | 123 (271) | 124 (274) |
+| Te lange zin (15 woorden, met link 20) | 223 (1361) | 223 (1366) |
+| Lijdende vorm | 157 (399) | 158 (405) |
+| Twijfeltaal: vaak, soms, regelmatig … | 150 (420) | 146 (416) |
+| Twijfeltaal: misschien, mogelijk … | 100 (164) | 99 (162) |
 | Aanhalingstekens | 53 (86) | 53 (85) |
-| Twijfeltaal: misschien, mogelijk … | 52 (68) | 51 (67) |
 | Linktekst boven 70 tekens | 44 (49) | 43 (48) |
 | Vrije rubriek te hoog (ter overweging) | 23 (23) | 26 (26) |
 | Volgorde van de rubrieken (ter overweging) | 22 (22) | 23 (23) |
@@ -126,7 +126,7 @@ Deze meldt de tool met opzet niet: ze liggen ter bespreking (zie `regels/TER-BES
 
 | | 14 september 2026 | nu |
 |---|---:|---:|
-| Twijfeltaal uit een voorbeeldzin van het sjabloon | 43 (43) | 41 (41) |
+| Twijfeltaal uit een voorbeeldzin van het sjabloon | 70 (78) | 68 (74) |
 
 De vaste sjabloonzinnen die zelf langer zijn dan 15 woorden staan in
 [`vaste-teksten-boven-de-norm.md`](vaste-teksten-boven-de-norm.md).

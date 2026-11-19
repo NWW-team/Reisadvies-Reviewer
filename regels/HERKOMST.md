@@ -1529,3 +1529,34 @@ De nieuwe versie van de schrijfwijzer staat in de repo. De overige wijzigingen r
 nauwelijks: een alinea over Veelgestelde vragen (geen reisadvies), de schrijfwijze
 *NederlandWereldwijd* (de tien adviezen met *"Nederland Wereldwijd"* krijgen al een melding via de
 vaste contactcentertekst), en een herformulering van de regels voor getallen.
+
+## Zinsregels ook over bullets (19 november 2026)
+
+`zin-max-woorden`, `zin-twijfeltaal`, `zin-frequentiewoord` en `zin-lijdende-vorm` liepen alleen over
+zinnen in alinea's (`doc.zinnen`). Bijna de helft van de tekst staat in bullets: 11.660 zinnen tegen
+14.512 in alinea's. Martijn: *"te lange zinnen moeten tonen waar dan ook, behalve sjabloon, dat op
+de bespreeklijst."* De vier regels lopen nu ook over de zinnen in een opsomming. De parser zelf is
+niet veranderd; andere regels die `doc.zinnen` gebruiken (zoals opeenvolgende vragen) doen dat nog
+steeds alleen voor alinea's.
+
+**De Actueel-bullet** in *In het kort* houdt zijn eigen grens: de matrix geeft hem 25 woorden
+(`actueel-max-woorden`). Zonder uitzondering kreeg hij twee meldingen met twee verschillende grenzen.
+
+**Sjabloonzinnen die altijd in een bullet stonden**, kwamen nu voor het eerst langs de schrijfregels.
+Ze zijn toegevoegd aan `vrijgestelde_formuleringen` (zie `_bullets_aanvulling`) en staan op de
+bespreeklijst. Gecontroleerd door elke nieuwe melding naast de tekst van het sjabloon te leggen:
+daarna wordt geen enkele letterlijke sjabloonzin meer gemeld.
+
+Gemeten over 226 adviezen:
+
+| regel | alleen alinea's | met bullets |
+|---|---:|---:|
+| `zin-max-woorden` | 804 | 1366 |
+| `zin-lijdende-vorm` | 274 | 405 |
+| `zin-frequentiewoord` | 340 | 416 |
+| `zin-twijfeltaal` | 67 | 162 |
+
+Een zin die het sjabloon vrij volgt maar er wel van afwijkt, blijft gemeld. Voorbeelden: *"Uw
+paspoort of ID-kaart moet geldig zijn …"* zonder *Nederlandse* (Griekenland), en *"Uw Nederlandse
+paspoort moet nog minimaal 6 maanden geldig zijn …"*. Die laatste staat in 107 adviezen maar niet
+in het sjabloon.

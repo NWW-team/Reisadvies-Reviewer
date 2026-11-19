@@ -7,7 +7,7 @@ Gedraaid op 2026-11-19 over 226 reisadviezen.
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **102** van de 2343 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **106** van de 3207 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -16,6 +16,8 @@ de standaardtekst lost ze allemaal tegelijk op.
 
 | regel | in hoeveel adviezen | wat |
 |---|---:|---|
+| `zin-max-woorden` | 55 | Deze zin telt 18 woorden. Maximaal 15. |
+| `zin-max-woorden` | 52 | Deze zin telt 18 woorden. Maximaal 15. |
 | `h4-niet-melden` | 49 | "Foto’s maken" gaat over foto's maken, en dat hoort niet in een reisadvies. |
 
 ## Per soort bevinding
@@ -26,19 +28,19 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 280 | 148 |
-| geel/oranje — let op | 1555 | 217 |
-| grijs — ter overweging | 508 | 160 |
+| geel/oranje — let op | 2248 | 224 |
+| grijs — ter overweging | 679 | 184 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 198 | 804 |
-| `zin-frequentiewoord` | 136 | 340 |
-| `zin-lijdende-vorm` | 124 | 274 |
+| `zin-max-woorden` | 223 | 1366 |
+| `zin-lijdende-vorm` | 158 | 405 |
+| `zin-frequentiewoord` | 146 | 416 |
+| `zin-twijfeltaal` | 99 | 162 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 85 |
-| `zin-twijfeltaal` | 51 | 67 |
 | `doc-woordenaantal` | 47 | 47 |
 | `kleur-variant` | 44 | 50 |
 | `link-tekstlengte` | 43 | 48 |

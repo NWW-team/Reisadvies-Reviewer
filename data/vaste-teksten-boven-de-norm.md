@@ -8,17 +8,22 @@ hieronder liggen vast in het sjabloon of de matrix en komen daar zelf overheen. 
 niet: een redacteur die het format keurig volgt hoort geen fout te krijgen. Maar als een
 voorgeschreven zin structureel te lang is, is dat een gesprek over het sjabloon.
 
-**10 zinnen** zitten boven de norm.
+**15 zinnen** zitten boven de norm.
 
 | woorden | in hoeveel adviezen | soort | link | zin |
 |---:|---:|---|---|---|
 | 32 | 192 | verplicht | ja | Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400. |
+| 20 | 113 | als van toepassing |  | Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie. |
+| 16 | 110 | als van toepassing |  | U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals …. |
+| 18 | 97 | als van toepassing |  | Als u in het ziekenhuis belandt, moet u mogelijk naar een ander land worden overgebracht voor medische zorg. |
+| 16 | 81 | als van toepassing |  | Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |
 | 18 | 76 | verplicht |  | Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |
 | 16 | 58 | verplicht |  | Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Land X. |
 | 18 | 55 | als van toepassing |  | U heeft geen visum nodig voor Land X als u met een Nederlands paspoort of Nederlandse ID-kaart reist. |
 | 16 | 42 | als van toepassing |  | Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig voor een reis naar Land X. |
 | 17 | 20 | als van toepassing |  | De wetten en de gebruiken in dit land tegenover lhbtiq+ personen zijn vergelijkbaar met die van Nederland. |
 | 21 | 5 | als van toepassing |  | In een noodgeval kunt u ook terecht bij de ambassade van een ander land dat lid is van de Europese Unie. |
+| 18 | 3 | als van toepassing |  | Dan moet u een bewijs van vaccinatie tegen gele koorts laten zien als u naar Land X reist. |
 | 21 | – | verplicht |  | Bekijk wat u vanuit Land X mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland? |
 | 19 | 0 | als van toepassing |  | Kinderen hebben ook een geldig paspoort of geldige ID-kaart en een visum nodig voor een reis naar Land X. |
 | 17 | – | als van toepassing |  | In Land X is uw Nederlandse rijbewijs alleen geldig als u ook een geldig internationaal rijbewijs heeft. |

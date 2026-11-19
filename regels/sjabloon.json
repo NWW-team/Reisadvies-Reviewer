@@ -225,10 +225,22 @@
     "_toelichting": "Twijfeltaal die in een voorbeeldzin van het sjabloon zelf staat. Een redacteur die het voorbeeld volgt, heeft het sjabloon netjes gevolgd; de tool meldt het woord dan niet. Alleen de twijfeltaal valt weg: is de zin te lang, dan blijft dat gewoon gemeld. Of het sjabloon deze woorden moet houden, staat op de lijst ter bespreking (regels/TER-BESPREKING.md).",
     "_bron": "Sjabloon Reisadviezen - nieuwe format.docx. Op 30 oktober 2026 woordelijk teruggevonden; Martijn op diezelfde dag: wie het sjabloon volgt, hoeft geen melding te krijgen.",
     "frasen": [
-      {"frase": "zijn regelmatig demonstraties", "bron": "SJ, blok Demonstraties, voorbeeldtekst"},
-      {"frase": "moet u mogelijk naar een ander land worden overgebracht", "bron": "SJ, blok Reisverzekering, waarschuwing gebrekkige gezondheidszorg"},
-      {"frase": "dan komt u mogelijk het land niet in", "bron": "SJ, blok Reisvaccinaties, gele koorts"},
-      {"frase": "dieven proberen vaak hun slachtoffers af te leiden", "bron": "SJ, blok Criminaliteit, voorbeeld Argentinië"}
+      {
+        "frase": "zijn regelmatig demonstraties",
+        "bron": "SJ, blok Demonstraties, voorbeeldtekst"
+      },
+      {
+        "frase": "moet u mogelijk naar een ander land worden overgebracht",
+        "bron": "SJ, blok Reisverzekering, waarschuwing gebrekkige gezondheidszorg"
+      },
+      {
+        "frase": "dan komt u mogelijk het land niet in",
+        "bron": "SJ, blok Reisvaccinaties, gele koorts"
+      },
+      {
+        "frase": "dieven proberen vaak hun slachtoffers af te leiden",
+        "bron": "SJ, blok Criminaliteit, voorbeeld Argentinië"
+      }
     ]
   },
   "vrijgestelde_formuleringen": {
@@ -253,10 +265,20 @@
       "Bent u een lhbtiq+ persoon? En wilt u naar {land} reizen? De wetten en de gebruiken in dit land tegenover lhbtiq+ personen zijn vergelijkbaar met die van Nederland.",
       "Kinderen hebben ook een geldig paspoort",
       "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht. Lees meer op de pagina Hoe voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?",
-      "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht:"
+      "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht:",
+      "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
+      "Als u in het ziekenhuis belandt, moet u mogelijk naar een ander land worden overgebracht voor medische zorg.",
+      "Uw Nederlandse paspoort moet geldig zijn tijdens de hele periode dat u {vrij} bent.",
+      "Uw Nederlandse paspoort of ID-kaart moet geldig zijn tijdens de hele periode dat u {vrij} bent.",
+      "U heeft een geldig paspoort of geldige ID-kaart nodig om naar {land} te reizen.",
+      "Of u een visum nodig heeft, hangt af van hoelang u in {land} blijft:",
+      "Dan moet u een bewijs van vaccinatie tegen gele koorts laten zien als u naar {land} reist.",
+      "U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals {vrij}.",
+      "Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan."
     ],
     "_kinderzin_aanvulling": "De kinderzin staat in het sjabloon als 'Kinderen hebben ook een geldig paspoort [evt.: of geldige ID-kaart] [evt.: en een visum] nodig voor een reis naar [NAAM LAND].' Twee optionele haakjes, dus vier geldige vormen, en die staan hier alle vier. Martijn op 19 september 2026: het sjabloon is hier de waarheid en wat daarvan afwijkt mag oppoppen. Het woord 'eventueel' hoort dus NIET in deze lijst: dat is het sjabloonmarkeringetje [evt.:] dat in de lopende tekst terecht is gekomen. Een eerdere versie ving alle varianten met een jokerteken {vrij}; dat is op zijn aanwijzing teruggedraaid. Daarnaast staat de kale aanhef 'Kinderen hebben ook een geldig paspoort' op deze lijst. Dat stelt alleen de SCHRIJFREGELS buiten werking -- de zin is in het sjabloon zelf al 16 woorden, dus die lengte is niet de keuze van de redacteur, en 'eventueel' als twijfeltaal melden zegt niet wat er aan de hand is. Of de zin het sjabloon volgt wordt apart getoetst door de vaste tekst kinderen-paspoort, met een melding die dat ook zegt.",
-    "_criminaliteit_aanvulling": "Toegevoegd op 19 september 2026. Deze zin komt letterlijk uit het sjabloon, blok Criminaliteit, onder de aanwijzing 'Verwijzing themapagina (evt met tussenkop bij veel info 'Voorkom dat u slachtoffer wordt van criminaliteit'):'. De lijdende vorm ('wordt beroofd of opgelicht') zit in de constructie zelf -- bestolen worden overkomt je, het is geen keuze -- en de zin stond al als vaste tekst bekend (criminaliteit-themapagina) maar werd nooit vrijgesteld van de schrijfregels, dus viel hij ook over zin-lijdende-vorm. Alleen de letterlijke sjabloonzin is vrijgesteld; Djibouti ('het risico' i.p.v. 'de kans') en Singapore ('Hiermee verkleint u') herformuleren de zin zelf en blijven daarom gemeld. Een advies zet hier vaak een dubbele punt neer in plaats van het punt, omdat er een opsomming op volgt (Niger doet dat). Die vorm staat er daarom als aparte regel bij -- gericht op deze ene zin, niet als algemene regel voor elk slotteken, want dat maakte ook zinnen vrij die na de vaste tekst nog eigen inhoud toevoegen (Congo-Kinshasa: '... op de website van de ANWB onder 'Congo-Kinshasa'.' verloor daardoor terecht zijn aanhalingstekens-melding)."
+    "_criminaliteit_aanvulling": "Toegevoegd op 19 september 2026. Deze zin komt letterlijk uit het sjabloon, blok Criminaliteit, onder de aanwijzing 'Verwijzing themapagina (evt met tussenkop bij veel info 'Voorkom dat u slachtoffer wordt van criminaliteit'):'. De lijdende vorm ('wordt beroofd of opgelicht') zit in de constructie zelf -- bestolen worden overkomt je, het is geen keuze -- en de zin stond al als vaste tekst bekend (criminaliteit-themapagina) maar werd nooit vrijgesteld van de schrijfregels, dus viel hij ook over zin-lijdende-vorm. Alleen de letterlijke sjabloonzin is vrijgesteld; Djibouti ('het risico' i.p.v. 'de kans') en Singapore ('Hiermee verkleint u') herformuleren de zin zelf en blijven daarom gemeld. Een advies zet hier vaak een dubbele punt neer in plaats van het punt, omdat er een opsomming op volgt (Niger doet dat). Die vorm staat er daarom als aparte regel bij -- gericht op deze ene zin, niet als algemene regel voor elk slotteken, want dat maakte ook zinnen vrij die na de vaste tekst nog eigen inhoud toevoegen (Congo-Kinshasa: '... op de website van de ANWB onder 'Congo-Kinshasa'.' verloor daardoor terecht zijn aanhalingstekens-melding).",
+    "_bullets_aanvulling": "Toegevoegd 19 november 2026, toen de schrijfregels ook over bullets gingen lopen. Deze zinnen staan in het sjabloon (blokken Natuurgeweld, Reisverzekering, Paspoort/ID-kaart, Visum, Reisvaccinaties) en stonden in de adviezen altijd in een opsomming, dus de zinslengte kwam nooit aan bod. Het sjabloon zegt '(of ID-kaart)' tussen haakjes; dat zijn hier twee vormen. 'In het land' is {vrij}, want adviezen schrijven ook 'op Sint Maarten'. De verzekeraarszin staat er ook zonder 'Let op:', omdat adviezen die twee woorden vaak los zetten. Te lang of niet: ze staan op de bespreeklijst, niet in de tool."
   },
   "vaste_teksten": [
     {

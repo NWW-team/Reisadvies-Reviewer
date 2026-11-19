@@ -7,7 +7,7 @@ Gedraaid op 2026-11-19 over 226 reisadviezen.
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **106** van de 3207 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **106** van de 3228 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -27,9 +27,9 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 280 | 148 |
-| geel/oranje — let op | 2248 | 224 |
-| grijs — ter overweging | 679 | 184 |
+| rood — fout | 281 | 148 |
+| geel/oranje — let op | 2256 | 224 |
+| grijs — ter overweging | 691 | 184 |
 
 ## Per regel
 
@@ -57,10 +57,12 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `bagage-heen` | 20 | 20 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
+| `kort-actualiteit-verwijzing` | 12 | 12 |
+| `actueel-max-woorden` | 11 | 11 |
 | `h4-kop-variant` | 10 | 11 |
-| `actueel-max-woorden` | 10 | 10 |
 | `h3-vaste-kop` | 10 | 10 |
 | `tekst-spatie-leesteken` | 9 | 10 |
+| `kort-een-actualiteit` | 8 | 9 |
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
@@ -72,7 +74,6 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `nederlands-verbuiging` | 6 | 6 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
-| `kleur-aanduiding` | 5 | 5 |
 | `titel-leestekens` | 5 | 5 |
 | `vragen-opeenvolgend` | 5 | 7 |
 | `link-verboden-partij` | 5 | 6 |
@@ -81,7 +82,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `tekst-plakfout` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
-| `kleur-eerste-bullet-voluit` | 3 | 3 |
+| `kleur-aanduiding` | 4 | 4 |
 | `tekst-dubbel-woord` | 3 | 3 |
 | `postplaats-schrijfwijze` | 3 | 3 |
 | `reisverzekering-oranje-rood` | 3 | 3 |
@@ -91,6 +92,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `regionaal-kleur-tekst` | 2 | 3 |
 | `alinea-max-woorden` | 2 | 4 |
 | `getallen-cijfers` | 2 | 2 |
+| `kleur-eerste-bullet-voluit` | 2 | 2 |
 | `telefoon-notatie` | 2 | 2 |
 | `criminaliteit-themapagina` | 2 | 2 |
 | `genderneutraal` | 2 | 3 |
@@ -102,6 +104,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `percentage-notatie` | 1 | 1 |
 | `valuta-notatie` | 1 | 1 |
 | `vaste-tekst-land-leeg` | 1 | 1 |
+| `kort-actualiteit-eerste` | 1 | 1 |
 | `kort-verwijzing-hoogste-kleur` | 1 | 1 |
 | `rood-herhaling-voorbereiding` | 1 | 1 |
 | `tijd-notatie` | 1 | 1 |

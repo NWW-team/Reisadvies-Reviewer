@@ -564,13 +564,14 @@
     "zinnen": 84,
     "fout": 0,
     "letop": 7,
-    "info": 5,
+    "info": 6,
     "perErnst": {
       "fout": 0,
       "let-op": 7,
-      "info": 5
+      "info": 6
     },
     "perRegel": {
+      "kort-actualiteit-verwijzing": 1,
       "h3-alleen-bij-uitzondering": 1,
       "h4-natuurrisico": 1,
       "reisverzekering-vaste-tekst": 1,
@@ -585,6 +586,14 @@
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Demonstraties\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "In Albanië zijn demonstraties waarbij geweld wordt gebruikt. Lees meer onder Demonstraties.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
+      },
       {
         "regel": "h3-alleen-bij-uitzondering",
         "ernst": "info",
@@ -1379,13 +1388,14 @@
     "zinnen": 36,
     "fout": 1,
     "letop": 18,
-    "info": 6,
+    "info": 7,
     "perErnst": {
       "fout": 1,
       "let-op": 18,
-      "info": 6
+      "info": 7
     },
     "perRegel": {
+      "kort-actualiteit-verwijzing": 1,
       "informatieservice-vaste-tekst": 1,
       "nood-contactcenter": 1,
       "nood-lokale-hulpdiensten": 1,
@@ -1404,6 +1414,14 @@
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Wetten en gebruiken\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "Antarctica is een beschermd natuurgebied. Reizen naar Antarctica is alleen mogelijk onder strenge voorwaarden. Lees meer onder Wetten en gebruiken.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
+      },
       {
         "regel": "informatieservice-vaste-tekst",
         "ernst": "let-op",
@@ -2466,17 +2484,17 @@
     ],
     "zinnen": 91,
     "fout": 1,
-    "letop": 13,
-    "info": 2,
+    "letop": 12,
+    "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 13,
-      "info": 2
+      "let-op": 12,
+      "info": 3
     },
     "perRegel": {
-      "kleur-aanduiding": 1,
       "kleur-variant": 1,
-      "kleur-eerste-bullet-voluit": 1,
+      "kort-een-actualiteit": 1,
+      "kort-actualiteit-verwijzing": 1,
       "rubrieken-max": 1,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 5,
@@ -2490,13 +2508,6 @@
     },
     "bevindingen": [
       {
-        "regel": "kleur-aanduiding",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Burkina Faso is rood."
-      },
-      {
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
@@ -2506,12 +2517,20 @@
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
-        "regel": "kleur-eerste-bullet-voluit",
+        "regel": "kort-een-actualiteit",
         "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "De eerste bullet over de kleurcode staat niet voluit.",
-        "fragment": "De kleurcode van het reisadvies voor Burkina Faso is voor het grootste deel rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
-        "verwacht": "De kleurcode van het reisadvies voor Burkina Faso is … (of: De kleurcode van het reisadvies is … voor …)"
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "fragment": "In Burkina Faso kunt u zonder duidelijke reden worden gearresteerd. Lees meer onder Actueel.",
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
+      },
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Wetten en gebruiken\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "Onlangs is in Burkina Faso opnieuw de doodstraf ingevoerd. Lees meer onder Wetten en gebruiken.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
       },
       {
         "regel": "rubrieken-max",
@@ -4678,7 +4697,7 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 28 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 28 woorden. Maximaal 25.",
         "fragment": "Door conflicten tussen gewapende rebellengroepen is het in heel de Centraal-Afrikaanse Republiek onveilig. In een groot deel van het land plegen gewapende groepen aanvallen. Lees meer onder Actueel."
       },
       {
@@ -5192,16 +5211,17 @@
     ],
     "zinnen": 126,
     "fout": 3,
-    "letop": 39,
+    "letop": 40,
     "info": 11,
     "perErnst": {
       "fout": 3,
-      "let-op": 39,
+      "let-op": 40,
       "info": 11
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "actueel-max-woorden": 1,
+      "kort-een-actualiteit": 1,
       "h3-niet-melden": 1,
       "bagage-heen": 1,
       "tekst-onzichtbaar-teken": 1,
@@ -5232,8 +5252,16 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 29 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 29 woorden. Maximaal 25.",
         "fragment": "In de regio Tibet vlakbij de grens met Nepal heeft op 26 augustus 2026 een plotselinge overstroming grote schade veroorzaakt. Er kunnen nieuwe vloedgolven ontstaan. Lees meer onder Actueel."
+      },
+      {
+        "regel": "kort-een-actualiteit",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "fragment": "Reist u naar Hongkong, Macau of Taiwan? Lees het reisadvies Hongkong SAR, het reisadvies Macau SAR of het reisadvies Taiwan.",
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
       {
         "regel": "h3-niet-melden",
@@ -6502,16 +6530,17 @@
     ],
     "zinnen": 142,
     "fout": 5,
-    "letop": 24,
+    "letop": 25,
     "info": 12,
     "perErnst": {
       "fout": 5,
-      "let-op": 24,
+      "let-op": 25,
       "info": 12
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-variant": 1,
+      "kort-een-actualiteit": 1,
       "kort-max-bullets": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -6546,6 +6575,14 @@
         "fragment": "Kleurcode oranje geldt voor verschillende gebieden die grenzen aan de regio’s met kleurcode rood en gebieden in het zuidoosten van Colombia. Reis alleen hierheen als het noodzakelijk is.",
         "verwacht": "Voor de gebieden X en Y geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kort-een-actualiteit",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "fragment": "Op 10 augustus 2026 was er een zware aardbeving in het westen van Colombia. Er vinden nog altijd naschokken plaats. Lees meer onder Actueel.",
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
       {
         "regel": "kort-max-bullets",
@@ -8427,14 +8464,15 @@
     "zinnen": 127,
     "fout": 3,
     "letop": 21,
-    "info": 12,
+    "info": 13,
     "perErnst": {
       "fout": 3,
       "let-op": 21,
-      "info": 12
+      "info": 13
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kort-actualiteit-verwijzing": 1,
       "kleur-vervolg-bullet-kort": 1,
       "h4-niet-melden": 1,
       "h4-natuurrisico": 1,
@@ -8462,6 +8500,14 @@
           "Paspoort, visum, rijbewijs (199 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
+      },
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Natuurgeweld\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "In delen van Algerije kunnen door langdurige droogte en hoge temperaturen natuurbranden voorkomen. Lees meer onder Natuurgeweld.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
       },
       {
         "regel": "kleur-vervolg-bullet-kort",
@@ -9454,14 +9500,15 @@
     "zinnen": 81,
     "fout": 1,
     "letop": 12,
-    "info": 1,
+    "info": 2,
     "perErnst": {
       "fout": 1,
       "let-op": 12,
-      "info": 1
+      "info": 2
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kort-actualiteit-verwijzing": 1,
       "reisverzekering-vaste-tekst": 1,
       "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
@@ -9485,6 +9532,14 @@
           "Wetten en gebruiken (199 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Natuurgeweld\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "In delen van Spanje kan hevige regen voorkomen en kunnen overstromingen ontstaan. Lees meer onder Natuurgeweld.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
       },
       {
         "regel": "reisverzekering-vaste-tekst",
@@ -10633,13 +10688,14 @@
     "zinnen": 63,
     "fout": 1,
     "letop": 12,
-    "info": 1,
+    "info": 2,
     "perErnst": {
       "fout": 1,
       "let-op": 12,
-      "info": 1
+      "info": 2
     },
     "perRegel": {
+      "kort-actualiteit-verwijzing": 1,
       "intro-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
       "kinderen-paspoort": 1,
@@ -10654,6 +10710,14 @@
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Paspoort, ID-kaart, ETA, rijbewijs\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "Reist u met een Nederlands paspoort naar het VK? Dan heeft u een Electronic Travel Authorisation (ETA) nodig. Lees meer onder Paspoort, ID-kaart, ETA, rijbewijs.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
+      },
       {
         "regel": "intro-vaste-tekst",
         "ernst": "fout",
@@ -13786,15 +13850,16 @@
     ],
     "zinnen": 55,
     "fout": 3,
-    "letop": 2,
+    "letop": 3,
     "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 2,
+      "let-op": 3,
       "info": 2
     },
     "perRegel": {
       "actueel-max-woorden": 1,
+      "kort-een-actualiteit": 1,
       "vaste-tekst-land-leeg": 1,
       "reisverzekering-vaste-tekst": 1,
       "tekst-spatie-leesteken": 1,
@@ -13812,8 +13877,16 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 28 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 28 woorden. Maximaal 25.",
         "fragment": "Van 1 juli tot en met 31 december 2026 is Ierland voorzitter van de Raad van de Europese Unie. Houd rekening met extra veiligheidsmaatregelen. Lees meer onder Actueel."
+      },
+      {
+        "regel": "kort-een-actualiteit",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "fragment": "Reist u naar Noord-Ierland? Lees dan het reisadvies voor het Verenigd Koninkrijk (VK).",
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
       {
         "regel": "vaste-tekst-land-leeg",
@@ -13881,15 +13954,16 @@
     ],
     "zinnen": 128,
     "fout": 2,
-    "letop": 30,
+    "letop": 32,
     "info": 8,
     "perErnst": {
       "fout": 2,
-      "let-op": 30,
+      "let-op": 32,
       "info": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kort-een-actualiteit": 2,
       "h3-alleen-bij-uitzondering": 1,
       "h3-niet-melden": 1,
       "rubrieken-max": 1,
@@ -13914,6 +13988,22 @@
           "Paspoort, visum, rijbewijs (225 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kort-een-actualiteit",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "\"In het kort\" heeft 3 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "fragment": "Als gevolg van sancties is het luchtverkeer van en naar Iran beperkt. Lees meer onder Actueel.",
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
+      },
+      {
+        "regel": "kort-een-actualiteit",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "\"In het kort\" heeft 3 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "fragment": "In Iran kunt u zonder duidelijke reden worden gearresteerd en voor langere tijd in de gevangenis worden vastgezet. Ook het bezit van een Nederlands paspoort kan een reden zijn om u te arresteren. Lees meer onder Actueel.",
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -14290,7 +14380,7 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 27 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 27 woorden. Maximaal 25.",
         "fragment": "Door spanningen in de regio is in heel Irak een verhoogd risico op raketaanvallen. In sommige gebieden is een verhoogd risico op aanslagen. Lees meer onder Actueel."
       },
       {
@@ -15631,7 +15721,7 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 31 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 31 woorden. Maximaal 25.",
         "fragment": "In landen in de buurt van Kenia is een ebola-uitbraak. Ook in Kenia is er inmiddels sprake van enkele gevallen. Daarom controleert Kenia reizigers extra bij aankomst. Lees meer onder Actueel."
       },
       {
@@ -18224,14 +18314,15 @@
     "zinnen": 108,
     "fout": 2,
     "letop": 12,
-    "info": 3,
+    "info": 4,
     "perErnst": {
       "fout": 2,
       "let-op": 12,
-      "info": 3
+      "info": 4
     },
     "perRegel": {
       "kleur-variant": 1,
+      "kort-actualiteit-verwijzing": 1,
       "h4-niet-melden": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
@@ -18254,6 +18345,14 @@
         "fragment": "U kunt erheen reizen.",
         "verwacht": "U kunt hierheen reizen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
+      },
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Natuurgeweld\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "In delen van Marokko kunnen door droogte en hoge temperaturen natuurbranden voorkomen. Lees meer onder Natuurgeweld.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
       },
       {
         "regel": "h4-niet-melden",
@@ -19560,7 +19659,7 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 27 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 27 woorden. Maximaal 25.",
         "fragment": "Sinds de militaire staatsgreep in 2021 is de veiligheidssituatie in Myanmar slecht. Er zijn gevechten, aanslagen en bombardementen in delen van het land. Lees meer onder Actueel."
       },
       {
@@ -21222,16 +21321,18 @@
       "geel"
     ],
     "zinnen": 105,
-    "fout": 1,
+    "fout": 2,
     "letop": 19,
-    "info": 9,
+    "info": 10,
     "perErnst": {
-      "fout": 1,
+      "fout": 2,
       "let-op": 19,
-      "info": 9
+      "info": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "actueel-max-woorden": 1,
+      "kort-actualiteit-verwijzing": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
       "zin-max-woorden": 13,
@@ -21254,6 +21355,21 @@
           "Natuurgeweld (244 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "actueel-max-woorden",
+        "ernst": "fout",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "De actualiteit in \"In het kort\" telt 31 woorden. Maximaal 25.",
+        "fragment": "Nederland heeft geen ambassade in Nicaragua, en ook geen honorair consul. De Nederlandse overheid kan u niet helpen als u in de problemen komt. Lees meer onder In geval van nood."
+      },
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"In geval van nood\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "Nederland heeft geen ambassade in Nicaragua, en ook geen honorair consul. De Nederlandse overheid kan u niet helpen als u in de problemen komt. Lees meer onder In geval van nood.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -21608,14 +21724,15 @@
     ],
     "zinnen": 72,
     "fout": 0,
-    "letop": 4,
+    "letop": 5,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
+      "kort-actualiteit-eerste": 1,
       "kinderen-paspoort": 1,
       "zin-max-woorden": 3,
       "zin-twijfeltaal": 1
@@ -21626,6 +21743,13 @@
       ]
     },
     "bevindingen": [
+      {
+        "regel": "kort-actualiteit-eerste",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit staat niet bovenaan. Hij hoort in de eerste bullet van \"In het kort\", boven de kleurcodes.",
+        "fragment": "In de districten Rasuwa en Gorkha hebben verschillende overstromingen grote schade veroorzaakt. Er kunnen nieuwe vloedgolven ontstaan. Lees meer onder Actueel."
+      },
       {
         "regel": "kinderen-paspoort",
         "ernst": "let-op",
@@ -21849,13 +21973,14 @@
     "zinnen": 87,
     "fout": 0,
     "letop": 10,
-    "info": 6,
+    "info": 7,
     "perErnst": {
       "fout": 0,
       "let-op": 10,
-      "info": 6
+      "info": 7
     },
     "perRegel": {
+      "kort-actualiteit-verwijzing": 1,
       "h3-alleen-bij-uitzondering": 1,
       "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
@@ -21867,6 +21992,14 @@
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Natuurgeweld\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "Tussen november en mei komen in Nieuw-Zeeland vaak tropische stormen en cyclonen voor. Lees meer onder Natuurgeweld.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
+      },
       {
         "regel": "h3-alleen-bij-uitzondering",
         "ernst": "info",
@@ -24455,13 +24588,14 @@
     "zinnen": 68,
     "fout": 0,
     "letop": 6,
-    "info": 2,
+    "info": 3,
     "perErnst": {
       "fout": 0,
       "let-op": 6,
-      "info": 2
+      "info": 3
     },
     "perRegel": {
+      "kort-actualiteit-verwijzing": 1,
       "h4-kop-variant": 1,
       "rubriek-vrij-te-hoog": 1,
       "zin-max-woorden": 4,
@@ -24474,6 +24608,14 @@
       ]
     },
     "bevindingen": [
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Demonstraties\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "In Paraguay vinden sinds 3 november 2026 demonstraties plaats. Hierbij kan geweld ontstaan. Lees meer onder Demonstraties.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
+      },
       {
         "regel": "h4-kop-variant",
         "ernst": "let-op",
@@ -25479,7 +25621,7 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 29 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 29 woorden. Maximaal 25.",
         "fragment": "Door de oorlog van Rusland tegen Oekraïne komen zware Oekraïense drone-aanvallen voor in de Russische regio’s rond Oekraïne. Ook zijn in Rusland veel willekeurige arrestaties. Lees meer onder Actueel."
       },
       {
@@ -25740,16 +25882,17 @@
     ],
     "zinnen": 115,
     "fout": 3,
-    "letop": 18,
+    "letop": 19,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 18,
+      "let-op": 19,
       "info": 3
     },
     "perRegel": {
       "kleur-variant": 1,
       "actueel-max-woorden": 1,
+      "kort-een-actualiteit": 1,
       "bagage-heen": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
@@ -25778,8 +25921,16 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 26 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 26 woorden. Maximaal 25.",
         "fragment": "In de Democratische Republiek Congo (DRC) is een uitbraak van het ebolavirus. De grens tussen Rwanda en de DRC is grotendeels gesloten. Lees meer onder Actueel."
+      },
+      {
+        "regel": "kort-een-actualiteit",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "fragment": "Door onrust in de DRC is de spanning aan de Rwandese kant van de grens opgelopen. Lees meer onder Regionale risico’s.",
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
       {
         "regel": "bagage-heen",
@@ -25999,7 +26150,7 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 40 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 40 woorden. Maximaal 25.",
         "fragment": "Sinds begin september 2026 zijn er in verschillende delen van Saoedi-Arabië regelmatig drone- en raketaanvallen vanuit de Houthi’s in Jemen. Er vinden aanvallen plaats op meerdere luchthavens. Hierbij zijn doden gevallen en zijn mensen gewond geraakt. Lees meer onder Actueel."
       },
       {
@@ -27446,15 +27597,16 @@
     ],
     "zinnen": 89,
     "fout": 2,
-    "letop": 11,
+    "letop": 12,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 11,
+      "let-op": 12,
       "info": 1
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kort-een-actualiteit": 1,
       "h4-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-max": 1,
@@ -27479,6 +27631,14 @@
           "Wetten en gebruiken (170 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kort-een-actualiteit",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "fragment": "Bent u in Zuid-Sudan? Verlaat het land als dat op een veilige manier kan. Houd er rekening mee dat luchtvaartmaatschappijen hun vluchten uit Zuid-Sudan elk moment kunnen stopzetten.",
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
       },
       {
         "regel": "h4-niet-melden",
@@ -30559,15 +30719,17 @@
     ],
     "zinnen": 138,
     "fout": 2,
-    "letop": 29,
-    "info": 8,
+    "letop": 30,
+    "info": 9,
     "perErnst": {
       "fout": 2,
-      "let-op": 29,
-      "info": 8
+      "let-op": 30,
+      "info": 9
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kort-een-actualiteit": 1,
+      "kort-actualiteit-verwijzing": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
@@ -30595,6 +30757,22 @@
           "Wetten en gebruiken (231 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kort-een-actualiteit",
+        "ernst": "let-op",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "\"In het kort\" heeft 2 bullets die geen kleurcode uitleggen. Alleen de eerste bullet mag een actualiteit zijn; de andere bullets leggen elk één kleurcode uit.",
+        "fragment": "Tanzania heeft extra maatregelen ingevoerd vanwege ebola-uitbraken in de Democratische Republiek Congo en Uganda. Lees meer onder Actueel.",
+        "notitie": "Hoort deze informatie bij een rubriek, dan staat hij daar. Speelt er iets, dan komt het in de ene actualiteit bovenaan."
+      },
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Reisverzekering\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "Sinds 1 oktober 2026 is een Tanzaniaanse reisverzekering verplicht. Lees meer onder Reisverzekering.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
       },
       {
         "regel": "h4-niet-melden",
@@ -31119,7 +31297,7 @@
         "regel": "actueel-max-woorden",
         "ernst": "fout",
         "bron": "MX, tab Koppen, rij In het kort",
-        "boodschap": "De bullet die naar Actueel verwijst telt 29 woorden. Maximaal 25.",
+        "boodschap": "De actualiteit in \"In het kort\" telt 29 woorden. Maximaal 25.",
         "fragment": "Rusland voert een oorlog tegen Oekraïne. Dagelijks zijn er Russische luchtaanvallen, op de hoofdstad Kyiv en andere steden. Aanvallen kunnen gericht zijn op belangrijke voorzieningen. Lees meer onder Actueel."
       },
       {
@@ -31281,14 +31459,15 @@
     "zinnen": 84,
     "fout": 3,
     "letop": 22,
-    "info": 4,
+    "info": 5,
     "perErnst": {
       "fout": 3,
       "let-op": 22,
-      "info": 4
+      "info": 5
     },
     "perRegel": {
       "doc-woordenaantal": 1,
+      "kort-actualiteit-verwijzing": 1,
       "h4-niet-melden": 1,
       "intro-vaste-tekst": 1,
       "kinderen-paspoort": 1,
@@ -31315,6 +31494,14 @@
           "Wetten en gebruiken (226 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze."
+      },
+      {
+        "regel": "kort-actualiteit-verwijzing",
+        "ernst": "info",
+        "bron": "MX, tab Koppen, rij In het kort",
+        "boodschap": "Deze actualiteit verwijst naar \"Paspoort, visum/ESTA, rijbewijs\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
+        "fragment": "Voor reizen naar de Verenigde Staten (VS) gelden aanvullende inreisregels. Lees meer onder Paspoort, visum/ESTA, rijbewijs.",
+        "notitie": "Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum."
       },
       {
         "regel": "h4-niet-melden",

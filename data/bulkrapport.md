@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-20 over 226 reisadviezen.
+Gedraaid op 2026-11-21 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **106** van de 3351 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **106** van de 3353 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -29,18 +29,18 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 281 | 148 |
-| geel/oranje — let op | 2381 | 225 |
-| grijs — ter overweging | 689 | 184 |
+| geel/oranje — let op | 2382 | 225 |
+| grijs — ter overweging | 690 | 184 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
 | `zin-max-woorden` | 223 | 1366 |
-| `zin-lijdende-vorm` | 158 | 405 |
+| `zin-lijdende-vorm` | 158 | 407 |
 | `zin-frequentiewoord` | 146 | 416 |
 | `natuurgeweld-contact` | 125 | 125 |
-| `zin-twijfeltaal` | 99 | 162 |
+| `zin-twijfeltaal` | 99 | 163 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 53 | 85 |
 | `doc-woordenaantal` | 47 | 47 |
@@ -56,7 +56,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `h3-niet-melden` | 23 | 23 |
 | `rubrieken-volgorde` | 23 | 23 |
 | `nood-contactcenter` | 20 | 20 |
-| `bagage-heen` | 20 | 20 |
+| `bagage-heen` | 19 | 19 |
 | `tekst-niet-melden` | 17 | 19 |
 | `rijbewijs-anwb` | 13 | 13 |
 | `actueel-max-woorden` | 11 | 11 |

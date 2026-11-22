@@ -1,14 +1,174 @@
 {
-  "uitgevoerd": "2026-11-21T13:49:38.684Z",
+  "uitgevoerd": "2026-11-22T13:43:26.531Z",
   "gevraagd": 227,
-  "gelukt": 207,
+  "gelukt": 163,
   "mislukt": [
     {
       "iso": "VAT",
       "reden": "404 op zowel ISO-code als locationKey"
     },
     {
-      "iso": "SRB",
+      "iso": "MLT",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MTQ",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MUS",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "FSM",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MEX",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MDA",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MCO",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MNG",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MNE",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MSR",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MAR",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MMR",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "NAM",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "NRU",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "NPL",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "NER",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "NIU",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "MKD",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PAK",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "OMN",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PLW",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PSE",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PNG",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PER",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PHL",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PRY",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PCN",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "POL",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PRT",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "PRI",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "QAT",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "REU",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "ROU",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "RUS",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "RWA",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "LCA",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "VCT",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "SMR",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "SAU",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "SEN",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "SYC",
       "reden": "HTTP 429"
     },
     {
@@ -20,7 +180,23 @@
       "reden": "HTTP 429"
     },
     {
+      "iso": "SXM",
+      "reden": "HTTP 429"
+    },
+    {
       "iso": "SVK",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "SVN",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "SLB",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "SOM",
       "reden": "HTTP 429"
     },
     {
@@ -28,59 +204,59 @@
       "reden": "HTTP 429"
     },
     {
-      "iso": "SSD",
-      "reden": "HTTP 429"
-    },
-    {
       "iso": "ESP",
       "reden": "HTTP 429"
     },
     {
-      "iso": "SDN",
+      "iso": "LKA",
       "reden": "HTTP 429"
     },
     {
-      "iso": "SJM",
+      "iso": "SWE",
       "reden": "HTTP 429"
     },
     {
-      "iso": "CHE",
+      "iso": "SYR",
       "reden": "HTTP 429"
     },
     {
-      "iso": "TTO",
+      "iso": "TWN",
       "reden": "HTTP 429"
     },
     {
-      "iso": "USA",
+      "iso": "TJK",
       "reden": "HTTP 429"
     },
     {
-      "iso": "ARE",
+      "iso": "TZA",
       "reden": "HTTP 429"
     },
     {
-      "iso": "URY",
+      "iso": "THA",
       "reden": "HTTP 429"
     },
     {
-      "iso": "VEN",
+      "iso": "TLS",
       "reden": "HTTP 429"
     },
     {
-      "iso": "VIR",
+      "iso": "TKL",
       "reden": "HTTP 429"
     },
     {
-      "iso": "YEM",
+      "iso": "TON",
       "reden": "HTTP 429"
     },
     {
-      "iso": "BQ-BO",
+      "iso": "TUR",
       "reden": "HTTP 429"
     },
     {
-      "iso": "RS-KM",
+      "iso": "TKM",
+      "reden": "HTTP 429"
+    },
+    {
+      "iso": "TCA",
       "reden": "HTTP 429"
     }
   ]

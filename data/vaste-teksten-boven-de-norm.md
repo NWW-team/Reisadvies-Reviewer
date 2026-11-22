@@ -8,7 +8,7 @@ hieronder liggen vast in het sjabloon of de matrix en komen daar zelf overheen. 
 niet: een redacteur die het format keurig volgt hoort geen fout te krijgen. Maar als een
 voorgeschreven zin structureel te lang is, is dat een gesprek over het sjabloon.
 
-**15 zinnen** zitten boven de norm.
+**16 zinnen** zitten boven de norm.
 
 | woorden | in hoeveel adviezen | soort | link | zin |
 |---:|---:|---|---|---|
@@ -24,6 +24,7 @@ voorgeschreven zin structureel te lang is, is dat een gesprek over het sjabloon.
 | 21 | 5 | als van toepassing |  | In een noodgeval kunt u ook terecht bij de ambassade van een ander land dat lid is van de Europese Unie. |
 | 18 | 3 | als van toepassing |  | Dan moet u een bewijs van vaccinatie tegen gele koorts laten zien als u naar Land X reist. |
 | 21 | – | verplicht |  | Bekijk wat u vanuit Land X mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland? |
+| 21 | 0 | verplicht |  | Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land. |
 | 20 | 0 | verplicht |  | Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie. |
 | 19 | 0 | als van toepassing |  | Kinderen hebben ook een geldig paspoort of geldige ID-kaart en een visum nodig voor een reis naar Land X. |
 | 17 | – | als van toepassing |  | In Land X is uw Nederlandse rijbewijs alleen geldig als u ook een geldig internationaal rijbewijs heeft. |

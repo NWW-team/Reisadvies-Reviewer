@@ -126,6 +126,7 @@ const OPBOUW = [
 
 const VAST = [
   ['natuurgeweld-contact', 'Contact met de lokale autoriteiten ("uw hotel" is "uw accommodatie" geworden)'],
+  ['paspoort-geldigheid', 'Hoelang het paspoort nog geldig moet zijn'],
   ['regionaal-gebiedenzin', "Aanhef boven de gebieden in Regionale risico's"],
   ['reisverzekering-vaste-tekst', 'Openingstekst reisverzekering'],
   ['kinderen-paspoort', 'Zin over paspoort voor kinderen'],

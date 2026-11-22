@@ -23,7 +23,7 @@ Wat besproken moet worden, staat in [`regels/TER-BESPREKING.md`](../regels/TER-B
 | Te lang (woorden, rubrieken, bullets, Actueel) | 68 | 70 |
 | "In het kort" niet volgens de opbouw | 21 | 20 |
 | Kleurcodeformulering niet volgens de matrix | 54 | 52 |
-| **Taal: vaste zin uit het sjabloon ontbreekt of wijkt af** | **192** | **190** |
+| **Taal: vaste zin uit het sjabloon ontbreekt of wijkt af** | **196** | **194** |
 | **Taal: schrijfwijzer** | **222** | **220** |
 | Te lange zin | 213 | 213 |
 | Lijdende vorm | 157 | 158 |
@@ -109,6 +109,7 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 | Aanhef boven de gebieden in Regionale risico's | 32 (32) | 33 (33) |
 | Openingstekst reisverzekering | 32 (32) | 31 (31) |
 | Zin over paspoort voor kinderen | 28 (28) | 29 (29) |
+| Hoelang het paspoort nog geldig moet zijn | 28 (28) | 28 (28) |
 | Contactcenter (24/7 bereikbaar) | 20 (20) | 20 (20) |
 | Douaneregels van het land zelf | 20 (20) | 19 (19) |
 | Verwijzing naar de ANWB bij rijbewijs | 13 (13) | 13 (13) |
@@ -148,6 +149,7 @@ gebeurt in het sjabloon; daarna toetst de tool de nieuwe zin gewoon mee.
 | 21 | 5 | In een noodgeval kunt u ook terecht bij de ambassade van een ander land dat lid is van de Europese Unie. |
 | 18 | 3 | Dan moet u een bewijs van vaccinatie tegen gele koorts laten zien als u naar Land X reist. |
 | 21 | – | Bekijk wat u vanuit Land X mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland? |
+| 21 | 0 | Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land. |
 | 20 | 0 | Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie. |
 | 19 | 0 | Kinderen hebben ook een geldig paspoort of geldige ID-kaart en een visum nodig voor een reis naar Land X. |
 | 17 | – | In Land X is uw Nederlandse rijbewijs alleen geldig als u ook een geldig internationaal rijbewijs heeft. |

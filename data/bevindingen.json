@@ -1921,14 +1921,15 @@
     ],
     "zinnen": 74,
     "fout": 0,
-    "letop": 8,
+    "letop": 9,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
+      "let-op": 9,
       "info": 1
     },
     "perRegel": {
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1
@@ -1937,6 +1938,14 @@
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn na de einddatum van uw visum voor Azerbeidzjan.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
       {
         "regel": "kinderen-paspoort",
         "ernst": "let-op",
@@ -2871,14 +2880,15 @@
     ],
     "zinnen": 69,
     "fout": 0,
-    "letop": 1,
+    "letop": 2,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
+      "let-op": 2,
       "info": 1
     },
     "perRegel": {
+      "paspoort-geldigheid": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 1
     },
@@ -2888,6 +2898,14 @@
       ]
     },
     "bevindingen": [
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Reist u via Bulgarije naar Turkije? Zorg dat uw paspoort nog minimaal 6 maanden geldig is. Anders moet u terugreizen om een nieuw paspoort aan te vragen bij de Nederlandse ambassade in Sofia. Dit duurt minimaal 3 werkdagen.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
       {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
@@ -4103,17 +4121,18 @@
     ],
     "zinnen": 112,
     "fout": 1,
-    "letop": 11,
+    "letop": 12,
     "info": 11,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
+      "let-op": 12,
       "info": 11
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "woord-onbekend": 1,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
@@ -4153,6 +4172,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Sommige vliegmaatschappijen of reisorganisaties vragen dat uw paspoort nog minstens 6 maanden geldig is vanaf de dag dat u in Brazilië aankomt. Check dit bij het boeken van uw reis of vlucht.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "woord-onbekend",
@@ -6551,11 +6578,11 @@
     ],
     "zinnen": 142,
     "fout": 5,
-    "letop": 26,
+    "letop": 27,
     "info": 12,
     "perErnst": {
       "fout": 5,
-      "let-op": 26,
+      "let-op": 27,
       "info": 12
     },
     "perRegel": {
@@ -6564,6 +6591,7 @@
       "kort-een-actualiteit": 1,
       "kort-max-bullets": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
@@ -6619,6 +6647,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Zorg dat uw Nederlandse paspoort nog minstens 6 maanden geldig is op moment van aankomst in het land.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-max",
@@ -9252,17 +9288,18 @@
     ],
     "zinnen": 149,
     "fout": 2,
-    "letop": 19,
+    "letop": 20,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 19,
+      "let-op": 20,
       "info": 3
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-max": 1,
       "alinea-max-woorden": 2,
       "postplaats-schrijfwijze": 1,
@@ -9303,6 +9340,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet bij aankomst in Egypte nog minimaal 6 maanden geldig zijn en nog minstens 1 lege pagina hebben.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-max",
@@ -11273,17 +11318,18 @@
     ],
     "zinnen": 79,
     "fout": 2,
-    "letop": 4,
+    "letop": 5,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 4,
+      "let-op": 5,
       "info": 2
     },
     "perRegel": {
       "kleur-vaste-tekst": 1,
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
       "zin-max-woorden": 2
@@ -11316,6 +11362,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig te zijn op het moment van vertrek uit het land.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -13309,11 +13363,11 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 45,
+    "letop": 46,
     "info": 14,
     "perErnst": {
       "fout": 2,
-      "let-op": 45,
+      "let-op": 46,
       "info": 14
     },
     "perRegel": {
@@ -13323,6 +13377,7 @@
       "kleur-eerste-bullet-voluit": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
+      "paspoort-geldigheid": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
@@ -13391,6 +13446,14 @@
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van India."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in India.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -14744,17 +14807,18 @@
     ],
     "zinnen": 108,
     "fout": 2,
-    "letop": 18,
+    "letop": 19,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 18,
+      "let-op": 19,
       "info": 3
     },
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "zin-max-woorden": 12,
@@ -14790,6 +14854,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van aankomst in Israël.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-paspoort",
@@ -18207,16 +18279,17 @@
     ],
     "zinnen": 52,
     "fout": 2,
-    "letop": 5,
+    "letop": 6,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 5,
+      "let-op": 6,
       "info": 2
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "nood-contactcenter": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-volgorde": 1,
       "zin-max-woorden": 3,
       "zin-lijdende-vorm": 2,
@@ -18241,6 +18314,14 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Macau SAR.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -18773,11 +18854,11 @@
     ],
     "zinnen": 91,
     "fout": 2,
-    "letop": 9,
+    "letop": 10,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 9,
+      "let-op": 10,
       "info": 0
     },
     "perRegel": {
@@ -18785,6 +18866,7 @@
       "h4-niet-melden": 1,
       "h4-kop-variant": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 4
     },
@@ -18830,6 +18912,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek van de Maldiven.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -19646,11 +19736,11 @@
     ],
     "zinnen": 98,
     "fout": 3,
-    "letop": 18,
+    "letop": 19,
     "info": 7,
     "perErnst": {
       "fout": 3,
-      "let-op": 18,
+      "let-op": 19,
       "info": 7
     },
     "perRegel": {
@@ -19659,6 +19749,7 @@
       "h4-kop-variant": 1,
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 5,
       "zin-max-woorden": 10,
@@ -19712,6 +19803,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst Myanmar.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -21612,15 +21711,16 @@
     ],
     "zinnen": 55,
     "fout": 0,
-    "letop": 4,
+    "letop": 5,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-documenten": 1,
       "zin-max-woorden": 1,
       "zin-twijfeltaal": 1,
@@ -21637,6 +21737,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment dat u aankomt op Niue.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-documenten",
@@ -22906,11 +23014,11 @@
     ],
     "zinnen": 137,
     "fout": 2,
-    "letop": 35,
+    "letop": 36,
     "info": 8,
     "perErnst": {
       "fout": 2,
-      "let-op": 35,
+      "let-op": 36,
       "info": 8
     },
     "perRegel": {
@@ -22920,6 +23028,7 @@
       "nood-lokale-hulpdiensten": 1,
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
       "zin-max-woorden": 21,
@@ -22982,6 +23091,14 @@
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Peru.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-max",
@@ -24381,11 +24498,11 @@
     ],
     "zinnen": 38,
     "fout": 1,
-    "letop": 7,
+    "letop": 8,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
+      "let-op": 8,
       "info": 0
     },
     "perRegel": {
@@ -24393,6 +24510,7 @@
       "nood-lokale-hulpdiensten": 1,
       "nood-verwijzing-nood": 1,
       "nood-verwijzing-crisis": 1,
+      "paspoort-geldigheid": 1,
       "rijbewijs-anwb": 1,
       "rood-herhaling-voorbereiding": 1,
       "zin-max-woorden": 2
@@ -24430,6 +24548,14 @@
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Noord-Korea.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rijbewijs-anwb",
@@ -24667,17 +24793,18 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 19,
+    "letop": 20,
     "info": 3,
     "perErnst": {
       "fout": 4,
-      "let-op": 19,
+      "let-op": 20,
       "info": 3
     },
     "perRegel": {
       "kleur-variant": 2,
       "regionaal-kleur-tekst": 2,
       "h4-kop-variant": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -24737,6 +24864,14 @@
         "fragment": "Contactgegevens Nederlandse vertegenwoordiging in geval van nood",
         "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
         "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit de Palestijnse Gebieden.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-max",
@@ -24922,14 +25057,15 @@
     ],
     "zinnen": 73,
     "fout": 0,
-    "letop": 7,
+    "letop": 8,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 8,
       "info": 3
     },
     "perRegel": {
+      "paspoort-geldigheid": 1,
       "zin-frequentiewoord": 2,
       "zin-max-woorden": 5,
       "zin-twijfeltaal": 1,
@@ -24940,6 +25076,14 @@
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit Frans-Polynesië.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
       {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
@@ -25547,11 +25691,11 @@
     ],
     "zinnen": 169,
     "fout": 3,
-    "letop": 28,
+    "letop": 29,
     "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 28,
+      "let-op": 29,
       "info": 2
     },
     "perRegel": {
@@ -25559,6 +25703,7 @@
       "actueel-max-woorden": 1,
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "tekst-niet-melden": 1,
@@ -25605,6 +25750,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Rusland.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-paspoort",
@@ -26978,11 +27131,11 @@
     ],
     "zinnen": 74,
     "fout": 3,
-    "letop": 7,
+    "letop": 8,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 7,
+      "let-op": 8,
       "info": 3
     },
     "perRegel": {
@@ -26990,6 +27143,7 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-frequentiewoord": 3,
       "zin-max-woorden": 4,
       "zin-lijdende-vorm": 2
@@ -27033,6 +27187,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment dat u een visum aanvraagt.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -27283,14 +27445,15 @@
     ],
     "zinnen": 103,
     "fout": 0,
-    "letop": 11,
+    "letop": 12,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
+      "let-op": 12,
       "info": 2
     },
     "perRegel": {
+      "paspoort-geldigheid": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
@@ -27304,6 +27467,14 @@
       ]
     },
     "bevindingen": [
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Somalië.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
       {
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
@@ -28560,16 +28731,17 @@
     ],
     "zinnen": 56,
     "fout": 3,
-    "letop": 4,
+    "letop": 5,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 4,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
       "kleur-variant": 2,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "regionaal-gebiedenzin": 1,
       "zin-max-woorden": 2,
       "zin-twijfeltaal": 1,
@@ -28604,6 +28776,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Heeft u een vraag over de actuele situatie? Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek van de Turks- en Caicoseilanden.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -28925,11 +29105,11 @@
     ],
     "zinnen": 185,
     "fout": 2,
-    "letop": 34,
+    "letop": 35,
     "info": 16,
     "perErnst": {
       "fout": 2,
-      "let-op": 34,
+      "let-op": 35,
       "info": 16
     },
     "perRegel": {
@@ -28937,6 +29117,7 @@
       "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
@@ -28987,6 +29168,14 @@
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Thailand."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Thailand.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-paspoort",
@@ -29476,15 +29665,16 @@
     ],
     "zinnen": 41,
     "fout": 0,
-    "letop": 6,
+    "letop": 7,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
+      "let-op": 7,
       "info": 3
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
       "zin-max-woorden": 3,
       "zin-twijfeltaal": 3,
@@ -29501,6 +29691,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Heeft u een vraag over de actuele situatie? Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek van de Tokelau-eilanden.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-paspoort",
@@ -29797,15 +29995,16 @@
     ],
     "zinnen": 59,
     "fout": 1,
-    "letop": 4,
+    "letop": 5,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
@@ -29823,6 +30022,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Tonga.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rijbewijs-anwb",
@@ -30495,16 +30702,17 @@
     ],
     "zinnen": 52,
     "fout": 1,
-    "letop": 2,
+    "letop": 3,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 2,
+      "let-op": 3,
       "info": 1
     },
     "perRegel": {
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1
     },
@@ -30527,6 +30735,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Tuvalu.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -30558,15 +30774,16 @@
     ],
     "zinnen": 61,
     "fout": 0,
-    "letop": 4,
+    "letop": 5,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 5,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-max-woorden": 1,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 1
@@ -30582,6 +30799,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Taiwan.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-max-woorden",
@@ -30621,11 +30846,11 @@
     ],
     "zinnen": 138,
     "fout": 2,
-    "letop": 29,
+    "letop": 30,
     "info": 8,
     "perErnst": {
       "fout": 2,
-      "let-op": 29,
+      "let-op": 30,
       "info": 8
     },
     "perRegel": {
@@ -30633,6 +30858,7 @@
       "kort-een-actualiteit": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
+      "paspoort-geldigheid": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "zin-max-woorden": 16,
@@ -30682,6 +30908,14 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn na afgifte van het visum en op het moment van aankomst in het land.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -31160,15 +31394,16 @@
     ],
     "zinnen": 71,
     "fout": 2,
-    "letop": 6,
+    "letop": 7,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 6,
+      "let-op": 7,
       "info": 3
     },
     "perRegel": {
       "actueel-max-woorden": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-spatie-leesteken": 1,
@@ -31185,6 +31420,14 @@
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "De actualiteit in \"In het kort\" telt 29 woorden. Maximaal 25.",
         "fragment": "Rusland voert een oorlog tegen Oekraïne. Dagelijks zijn er Russische luchtaanvallen, op de hoofdstad Kyiv en andere steden. Aanvallen kunnen gericht zijn op belangrijke voorzieningen. Lees meer onder Actueel."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn bij vertrek uit het land.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -32902,15 +33145,16 @@
     ],
     "zinnen": 58,
     "fout": 0,
-    "letop": 1,
+    "letop": 2,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
+      "let-op": 2,
       "info": 0
     },
     "perRegel": {
-      "natuurgeweld-contact": 1
+      "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -32923,6 +33167,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Samoa.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 21-11-2026"

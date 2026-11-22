@@ -7,7 +7,7 @@ Gedraaid op 2026-11-22 over 226 reisadviezen.
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **106** van de 3200 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **106** van de 3228 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -27,7 +27,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 281 | 148 |
-| geel/oranje — let op | 2229 | 224 |
+| geel/oranje — let op | 2257 | 224 |
 | grijs — ter overweging | 690 | 184 |
 
 ## Per regel
@@ -49,6 +49,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `regionaal-gebiedenzin` | 33 | 33 |
 | `reisverzekering-vaste-tekst` | 31 | 31 |
 | `kinderen-paspoort` | 29 | 29 |
+| `paspoort-geldigheid` | 28 | 28 |
 | `rubriek-vrij-te-hoog` | 26 | 26 |
 | `woord-onbekend` | 25 | 46 |
 | `h3-niet-melden` | 23 | 23 |

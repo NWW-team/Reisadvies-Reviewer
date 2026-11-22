@@ -1622,13 +1622,23 @@ Martijn leverde een nieuwere versie van het sjabloon aan. Twee verschillen, alle
 
 De nieuwe zin is met 20 woorden nog steeds langer dan 15; ook dat staat op de bespreeklijst.
 
-## De geldigheid van het paspoort: vrijgesteld tot hij in het sjabloon staat (22 november 2026)
+## De geldigheid van het paspoort (22 november 2026)
 
-*"Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het
-land"* (en varianten met *vertrek uit*, *3 maanden* of *paspoort of ID-kaart*) staat in ongeveer 145
-adviezen, maar niet in het sjabloon. Sinds de zinsregels ook over bullets lopen, kreeg hij de melding
-dat hij te lang is (18 woorden). Martijn: de zin hoort in het sjabloon, maar dat is een
-bespreekpunt; de tool hoeft hem nu niet te melden. Hij staat daarom in `vrijgestelde_formuleringen`
-(zie `_geldigheid_aanvulling`), met het aantal maanden en *aankomst/vertrek* als `{vrij}`. Drie eigen
-formuleringen blijven gemeld, zoals *"Zorg dat uw Nederlandse paspoort nog minstens 6 maanden geldig
-is …"*.
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `paspoort-geldigheid` | SJ, blok *Paspoort / Paspoort of ID-kaart* | let op |
+
+Het sjabloon zegt: *"Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal ___ maanden geldig zijn
+op het moment van aankomst in / vertrek uit het land."* Martijn: *"die zin moet zo zijn geformuleerd.
+Echter kan de geldigheidsduur verschillen."* De regel doet alleen mee als er in de rubriek iets staat
+over hoeveel maanden het paspoort nog geldig moet zijn. Hij accepteert elk aantal maanden, met of
+zonder *of ID-kaart*, en *aankomst in* of *vertrek uit*. De rest ligt vast, ook *het land* in plaats
+van de landnaam. De zin is vrijgesteld van de schrijfregels (`_geldigheid_aanvulling`).
+
+Gemeten: ongeveer 145 adviezen hebben de zin, 28 wijken af. Meestal staat de landnaam er in plaats van
+*het land*. Een paar noemen een ander moment (*na afgifte van het visum*, *op het moment dat u een visum
+aanvraagt*); ook die meldt de tool, want de formulering ligt vast. Is zo'n afwijking terecht, dan is
+dat een keuze van de redactie.
+
+Een eerdere versie van deze sectie zei dat de zin niet in het sjabloon staat. Dat was een vergissing:
+het zoeken op *6 maanden* miste de open plek ___ in het sjabloon.

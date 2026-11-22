@@ -62,6 +62,22 @@ test('de oude contactzin met "uw hotel" wijkt af van het sjabloon, de nieuwe nie
   assert.ok(!nieuw.some((x) => x.regel === 'natuurgeweld-contact' || x.regel === 'zin-max-woorden'));
 });
 
+test('de zin over de geldigheid van het paspoort: alleen het aantal maanden mag verschillen', () => {
+  const blok = (z) => '<h2>Hoe bereid ik mijn reis naar Testland voor?</h2><h3>Paspoort, visum, rijbewijs</h3><ul><li>' + z + '</li></ul>';
+  for (const goed of [
+    'Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.',
+    'Uw Nederlandse paspoort of ID-kaart moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.',
+  ]) {
+    const b = bevindingen(blok(goed));
+    assert.ok(!b.some((x) => x.regel === 'paspoort-geldigheid' || x.regel === 'zin-max-woorden'), goed);
+  }
+  const fout = bevindingen(blok('Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Testland.'));
+  const m = fout.find((x) => x.regel === 'paspoort-geldigheid');
+  assert.ok(m, 'de landnaam in plaats van "het land" wijkt af');
+  assert.ok(m.fragment);
+  assert.ok(!fout.some((x) => x.regel === 'zin-max-woorden'), 'geen tweede melding over de lengte');
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

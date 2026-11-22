@@ -275,7 +275,9 @@
       "Of u een visum nodig heeft, hangt af van hoelang u in {land} blijft:",
       "Dan moet u een bewijs van vaccinatie tegen gele koorts laten zien als u naar {land} reist.",
       "U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals {vrij}.",
-      "Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan."
+      "Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan.",
+      "Uw Nederlandse paspoort moet nog minimaal {vrij} maanden geldig zijn op het moment van {vrij}.",
+      "Uw Nederlandse paspoort of ID-kaart moet nog minimaal {vrij} maanden geldig zijn op het moment van {vrij}."
     ],
     "_kinderzin_aanvulling": "De kinderzin staat in het sjabloon als 'Kinderen hebben ook een geldig paspoort [evt.: of geldige ID-kaart] [evt.: en een visum] nodig voor een reis naar [NAAM LAND].' Twee optionele haakjes, dus vier geldige vormen, en die staan hier alle vier. Martijn op 19 september 2026: het sjabloon is hier de waarheid en wat daarvan afwijkt mag oppoppen. Het woord 'eventueel' hoort dus NIET in deze lijst: dat is het sjabloonmarkeringetje [evt.:] dat in de lopende tekst terecht is gekomen. Een eerdere versie ving alle varianten met een jokerteken {vrij}; dat is op zijn aanwijzing teruggedraaid. Daarnaast staat de kale aanhef 'Kinderen hebben ook een geldig paspoort' op deze lijst. Dat stelt alleen de SCHRIJFREGELS buiten werking -- de zin is in het sjabloon zelf al 16 woorden, dus die lengte is niet de keuze van de redacteur, en 'eventueel' als twijfeltaal melden zegt niet wat er aan de hand is. Of de zin het sjabloon volgt wordt apart getoetst door de vaste tekst kinderen-paspoort, met een melding die dat ook zegt.",
     "_criminaliteit_aanvulling": "Toegevoegd op 19 september 2026. Deze zin komt letterlijk uit het sjabloon, blok Criminaliteit, onder de aanwijzing 'Verwijzing themapagina (evt met tussenkop bij veel info 'Voorkom dat u slachtoffer wordt van criminaliteit'):'. De lijdende vorm ('wordt beroofd of opgelicht') zit in de constructie zelf -- bestolen worden overkomt je, het is geen keuze -- en de zin stond al als vaste tekst bekend (criminaliteit-themapagina) maar werd nooit vrijgesteld van de schrijfregels, dus viel hij ook over zin-lijdende-vorm. Alleen de letterlijke sjabloonzin is vrijgesteld; Djibouti ('het risico' i.p.v. 'de kans') en Singapore ('Hiermee verkleint u') herformuleren de zin zelf en blijven daarom gemeld. Een advies zet hier vaak een dubbele punt neer in plaats van het punt, omdat er een opsomming op volgt (Niger doet dat). Die vorm staat er daarom als aparte regel bij -- gericht op deze ene zin, niet als algemene regel voor elk slotteken, want dat maakte ook zinnen vrij die na de vaste tekst nog eigen inhoud toevoegen (Congo-Kinshasa: '... op de website van de ANWB onder 'Congo-Kinshasa'.' verloor daardoor terecht zijn aanhalingstekens-melding).",
@@ -284,7 +286,8 @@
     "verouderd": [
       "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie."
     ],
-    "_verouderd_toelichting": "Zinnen die wel vrijgesteld zijn van de schrijfregels, maar niet meer in het sjabloon staan. Ze tellen niet mee in data/vaste-teksten-boven-de-norm.md en het totaaloverzicht."
+    "_verouderd_toelichting": "Zinnen die wel vrijgesteld zijn van de schrijfregels, maar niet meer in het sjabloon staan. Ze tellen niet mee in data/vaste-teksten-boven-de-norm.md en het totaaloverzicht.",
+    "_geldigheid_aanvulling": "Toegevoegd 22 november 2026. 'Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land' (of 'vertrek uit het land', of 3 maanden) staat in ongeveer 145 adviezen, maar niet in het sjabloon. Martijn: hij hoort in het sjabloon, maar dat is een bespreekpunt; de tool hoeft hem nu niet te melden. Tot het sjabloon is aangepast, is hij daarom vrijgesteld van de schrijfregels. Het aantal maanden en 'aankomst'/'vertrek' zijn {vrij}."
   },
   "vaste_teksten": [
     {

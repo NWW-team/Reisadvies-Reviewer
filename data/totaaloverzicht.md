@@ -1,6 +1,6 @@
 # Totaaloverzicht reisadviezen
 
-Gedraaid op 2026-11-19 over 226 reisadviezen. De kolom
+Gedraaid op 2026-11-22 over 226 reisadviezen. De kolom
 *14 september 2026* is de eerste meting: de teksten van toen, door de regels van nu. Zo zegt het
 verschil alleen wat er in de adviezen is veranderd.
 
@@ -24,8 +24,8 @@ Wat besproken moet worden, staat in [`regels/TER-BESPREKING.md`](../regels/TER-B
 | "In het kort" niet volgens de opbouw | 21 | 20 |
 | Kleurcodeformulering niet volgens de matrix | 54 | 52 |
 | **Taal: vaste zin uit het sjabloon ontbreekt of wijkt af** | **192** | **190** |
-| **Taal: schrijfwijzer** | **225** | **223** |
-| Te lange zin | 223 | 223 |
+| **Taal: schrijfwijzer** | **222** | **220** |
+| Te lange zin | 213 | 213 |
 | Lijdende vorm | 157 | 158 |
 | Twijfeltaal | 180 | 177 |
 | Tekst- of spelfout (SpellingSpeurneus) | 91 | 53 |
@@ -110,7 +110,7 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 | Openingstekst reisverzekering | 32 (32) | 31 (31) |
 | Zin over paspoort voor kinderen | 28 (28) | 29 (29) |
 | Contactcenter (24/7 bereikbaar) | 20 (20) | 20 (20) |
-| Douaneregels van het land zelf | 20 (20) | 20 (20) |
+| Douaneregels van het land zelf | 20 (20) | 19 (19) |
 | Verwijzing naar de ANWB bij rijbewijs | 13 (13) | 13 (13) |
 | Verwijzing 'Wat mag ik meenemen naar Nederland?' | 7 (7) | 7 (7) |
 | Aanhef boven de alarmnummers | 7 (7) | 7 (7) |
@@ -160,10 +160,10 @@ Zinnen in alinea's en in bullets. De actualiteit in "In het kort" heeft zijn eig
 
 | | 14 september 2026 | nu |
 |---|---:|---:|
-| Te lange zin, zonder link (max. 15 woorden) | 223 (1284) | 222 (1288) |
-| Lijdende vorm | 157 (399) | 158 (405) |
+| Te lange zin, zonder link (max. 15 woorden) | 212 (1131) | 209 (1135) |
+| Lijdende vorm | 157 (399) | 158 (407) |
 | Twijfeltaal: vaak, soms, regelmatig … | 150 (420) | 146 (416) |
-| Twijfeltaal: misschien, mogelijk … | 100 (164) | 99 (162) |
+| Twijfeltaal: misschien, mogelijk … | 100 (164) | 99 (163) |
 | Te lange zin, met link (max. 20 woorden) | 69 (77) | 70 (78) |
 | Meer dan 2 vragen achter elkaar | 5 (6) | 5 (7) |
 | Alinea boven 80 woorden | 2 (4) | 2 (4) |

@@ -1621,3 +1621,14 @@ Martijn leverde een nieuwere versie van het sjabloon aan. Twee verschillen, alle
    eist ze niet. Of het vaste teksten moeten worden, staat op de bespreeklijst.
 
 De nieuwe zin is met 20 woorden nog steeds langer dan 15; ook dat staat op de bespreeklijst.
+
+## De geldigheid van het paspoort: vrijgesteld tot hij in het sjabloon staat (22 november 2026)
+
+*"Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het
+land"* (en varianten met *vertrek uit*, *3 maanden* of *paspoort of ID-kaart*) staat in ongeveer 145
+adviezen, maar niet in het sjabloon. Sinds de zinsregels ook over bullets lopen, kreeg hij de melding
+dat hij te lang is (18 woorden). Martijn: de zin hoort in het sjabloon, maar dat is een
+bespreekpunt; de tool hoeft hem nu niet te melden. Hij staat daarom in `vrijgestelde_formuleringen`
+(zie `_geldigheid_aanvulling`), met het aantal maanden en *aankomst/vertrek* als `{vrij}`. Drie eigen
+formuleringen blijven gemeld, zoals *"Zorg dat uw Nederlandse paspoort nog minstens 6 maanden geldig
+is …"*.

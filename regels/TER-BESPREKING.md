@@ -145,12 +145,22 @@ ze zijn het waard om nog eens kritisch naar te kijken.
 
 ### Een standaardzin die niet in het sjabloon staat
 
-*"Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het
-land."* (en dezelfde zin met *vertrek uit het land*). Varianten ervan staan in 146 adviezen, maar
-niet in het sjabloon. Met meestal 18 woorden is hij te lang, en de tool meldt hem daarom.
+In het blok *Paspoort, visum, rijbewijs* staat in ongeveer 145 adviezen een zin over hoelang het
+paspoort nog geldig moet zijn. Die zin staat niet in het sjabloon. De twee vormen die het meest
+voorkomen:
 
-Vraag: moet deze zin in het sjabloon, in een kortere vorm? Bijvoorbeeld: *"Uw paspoort moet nog 6
-maanden geldig zijn als u aankomt."*
+| in hoeveel adviezen | zin |
+|---:|---|
+| 61 | Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land. |
+| 57 | Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land. |
+
+Daarnaast zijn er varianten met *3 maanden* (ongeveer 18), met *paspoort of ID-kaart* (7) en met de
+landnaam in plaats van *het land*. Met 18 woorden is de zin te lang.
+
+Besloten: de zin hoort in het sjabloon. Tot dat zo is, meldt de tool hem niet.
+
+Vraag: hoe komt hij in het sjabloon te staan, en kan hij korter? Bijvoorbeeld: *"Uw paspoort moet
+bij aankomst nog minimaal 6 maanden geldig zijn."* (10 woorden)
 
 ## 2. Nog vastleggen
 

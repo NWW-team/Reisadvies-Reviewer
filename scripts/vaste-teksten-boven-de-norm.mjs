@@ -44,6 +44,7 @@ const heeftLink = (kern) => {
 const bronnen = [
   ...sj.vaste_teksten.map((v) => ({ id: v.id, zin: v.zin, soort: 'verplicht' })),
   ...((sj.vrijgestelde_formuleringen && sj.vrijgestelde_formuleringen.zinnen) || [])
+    .filter((z) => !(sj.vrijgestelde_formuleringen.verouderd || []).includes(z))
     .map((z, i) => ({ id: 'vrijgesteld-' + (i + 1), zin: z, soort: 'als van toepassing' })),
 ];
 

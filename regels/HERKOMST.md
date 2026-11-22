@@ -1621,3 +1621,24 @@ Martijn leverde een nieuwere versie van het sjabloon aan. Twee verschillen, alle
    eist ze niet. Of het vaste teksten moeten worden, staat op de bespreeklijst.
 
 De nieuwe zin is met 20 woorden nog steeds langer dan 15; ook dat staat op de bespreeklijst.
+
+## De geldigheid van het paspoort (22 november 2026)
+
+| regel-id | vindplaats | ernst |
+|---|---|---|
+| `paspoort-geldigheid` | SJ, blok *Paspoort / Paspoort of ID-kaart* | let op |
+
+Het sjabloon zegt: *"Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal ___ maanden geldig zijn
+op het moment van aankomst in / vertrek uit het land."* Martijn: *"die zin moet zo zijn geformuleerd.
+Echter kan de geldigheidsduur verschillen."* De regel doet alleen mee als er in de rubriek iets staat
+over hoeveel maanden het paspoort nog geldig moet zijn. Hij accepteert elk aantal maanden, met of
+zonder *of ID-kaart*, en *aankomst in* of *vertrek uit*. De rest ligt vast, ook *het land* in plaats
+van de landnaam. De zin is vrijgesteld van de schrijfregels (`_geldigheid_aanvulling`).
+
+Gemeten: ongeveer 145 adviezen hebben de zin, 28 wijken af. Meestal staat de landnaam er in plaats van
+*het land*. Een paar noemen een ander moment (*na afgifte van het visum*, *op het moment dat u een visum
+aanvraagt*); ook die meldt de tool, want de formulering ligt vast. Is zo'n afwijking terecht, dan is
+dat een keuze van de redactie.
+
+Een eerdere versie van deze sectie zei dat de zin niet in het sjabloon staat. Dat was een vergissing:
+het zoeken op *6 maanden* miste de open plek ___ in het sjabloon.

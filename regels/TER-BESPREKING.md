@@ -1,8 +1,9 @@
 # Ter bespreking
 
 Drie lijsten voor het gesprek met de manager en de coördinator van de reisadviezen. De aantallen
-komen uit [`data/totaaloverzicht.md`](../data/totaaloverzicht.md), gemeten op 30 oktober 2026 over
-alle 226 reisadviezen.
+komen uit [`data/totaaloverzicht.md`](../data/totaaloverzicht.md), gemeten op 19 november 2026 over
+alle 226 reisadviezen. De bespreekpunten volgen dezelfde indeling als het overzicht: inhoudelijke
+keuzes over het format, en taalkeuzes.
 
 1. **Bespreekpunten**: waar format en praktijk uit elkaar lopen. Per punt is de vraag: houden we
    de regel aan en passen we de adviezen aan? Of passen we de regel aan en leggen we dat vast?
@@ -14,6 +15,8 @@ Zodra een bron is bijgewerkt en de tool de nieuwe versie gebruikt, toetst de too
 
 ## 1. Bespreekpunten
 
+## 1A. Inhoudelijke keuzes over het format
+
 ### Onderwerpen die volgens de matrix niet in een reisadvies horen
 
 De tool meldt deze. Ze staan in de adviezen, terwijl de afspraak is dat ze er niet of alleen bij
@@ -23,7 +26,7 @@ uitzondering in komen.
 |---|---:|
 | Foto's maken | 66 |
 | Verkeersongevallen | 41 |
-| Geldzaken | 24 |
+| Geldzaken | 23 |
 | Wilde dieren | 6 |
 | Kledingvoorschriften, smog, gezondheidszorg | elk 3 |
 
@@ -52,6 +55,35 @@ met relatief hoge straffen.
 
 Vraag: houden we deze afspraken aan en halen we deze onderwerpen uit de adviezen waar ze geen
 uitzondering zijn?
+
+### Lengte
+
+| | in hoeveel adviezen |
+|---|---:|
+| Advies boven de woordenlimiet (1500 bij één kleurcode, 2000 bij meer) | 47 |
+| Meer dan 6 rubrieken onder de veiligheidsrisico's of de reisvoorbereiding | 39 |
+| Actualiteit in "In het kort" boven 25 woorden | 11 |
+
+Vraag: houden we deze grenzen aan? Bij de woordenlimiet wijst de tool de langste rubrieken aan; vaak
+zit de ruimte in Regionale risico's.
+
+### "In het kort": de actualiteit
+
+Afgesproken: de bullets leggen de kleurcode uit, één kleurcode per bullet. Een actualiteit staat in
+bullet 1 en verwijst naar Actueel. Bij uitzondering verwijst hij rechtstreeks naar een rubriek:
+Natuurgeweld bij een groot risico in een bepaalde periode, of een rubriek waar veel klantvragen over
+komen (de ETA voor het VK).
+
+| | in hoeveel adviezen |
+|---|---:|
+| Meer dan één actualiteit | 8 |
+| Actualiteit verwijst naar een andere rubriek dan Actueel | 10 |
+| Actualiteit staat niet in bullet 1 | 1 |
+
+Vraag: is dit de afspraak, en zo ja, moet dat in de matrix? Die zegt nu alleen "actuele ontwikkeling
+… met verwijzing naar Actueel", zonder de uitzonderingen.
+
+## 1B. Taalkeuzes
 
 ### Vaste zinnen uit het sjabloon die zelf boven de norm zitten
 
@@ -110,6 +142,20 @@ ze zijn het waard om nog eens kritisch naar te kijken.
 | Als u in het ziekenhuis belandt, moet u **mogelijk** naar een ander land worden overgebracht voor medische zorg. | Reisverzekering | 0 |
 | Heeft u geen bewijs van vaccinatie tegen gele koorts? Dan komt u **mogelijk** het land niet in. | Reisvaccinaties | 0 |
 | Dieven proberen **vaak** hun slachtoffers af te leiden. | Criminaliteit (voorbeeld Argentinië) | 0 |
+
+### De zin over de geldigheid van het paspoort
+
+Het sjabloon (blok *Paspoort / Paspoort of ID-kaart*) zegt:
+
+> Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal ___ maanden geldig zijn op het moment van
+> aankomst in / vertrek uit het land.
+
+Het aantal maanden verschilt per land; de rest ligt vast. In ongeveer 145 adviezen staat deze zin. De
+tool meldt de 28 adviezen waar hij anders geformuleerd is, meestal met de landnaam in plaats van
+*het land*. Met 18 woorden is de zin zelf te lang.
+
+Vraag: kan hij korter in het sjabloon? Bijvoorbeeld: *"Uw paspoort moet bij aankomst nog minimaal 6
+maanden geldig zijn."* (10 woorden)
 
 ## 2. Nog vastleggen
 

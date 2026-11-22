@@ -275,12 +275,19 @@
       "Of u een visum nodig heeft, hangt af van hoelang u in {land} blijft:",
       "Dan moet u een bewijs van vaccinatie tegen gele koorts laten zien als u naar {land} reist.",
       "U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals {vrij}.",
-      "Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan."
+      "Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan.",
+      "Uw Nederlandse paspoort moet nog minimaal {vrij} maanden geldig zijn op het moment van {vrij}.",
+      "Uw Nederlandse paspoort of ID-kaart moet nog minimaal {vrij} maanden geldig zijn op het moment van {vrij}."
     ],
     "_kinderzin_aanvulling": "De kinderzin staat in het sjabloon als 'Kinderen hebben ook een geldig paspoort [evt.: of geldige ID-kaart] [evt.: en een visum] nodig voor een reis naar [NAAM LAND].' Twee optionele haakjes, dus vier geldige vormen, en die staan hier alle vier. Martijn op 19 september 2026: het sjabloon is hier de waarheid en wat daarvan afwijkt mag oppoppen. Het woord 'eventueel' hoort dus NIET in deze lijst: dat is het sjabloonmarkeringetje [evt.:] dat in de lopende tekst terecht is gekomen. Een eerdere versie ving alle varianten met een jokerteken {vrij}; dat is op zijn aanwijzing teruggedraaid. Daarnaast staat de kale aanhef 'Kinderen hebben ook een geldig paspoort' op deze lijst. Dat stelt alleen de SCHRIJFREGELS buiten werking -- de zin is in het sjabloon zelf al 16 woorden, dus die lengte is niet de keuze van de redacteur, en 'eventueel' als twijfeltaal melden zegt niet wat er aan de hand is. Of de zin het sjabloon volgt wordt apart getoetst door de vaste tekst kinderen-paspoort, met een melding die dat ook zegt.",
     "_criminaliteit_aanvulling": "Toegevoegd op 19 september 2026. Deze zin komt letterlijk uit het sjabloon, blok Criminaliteit, onder de aanwijzing 'Verwijzing themapagina (evt met tussenkop bij veel info 'Voorkom dat u slachtoffer wordt van criminaliteit'):'. De lijdende vorm ('wordt beroofd of opgelicht') zit in de constructie zelf -- bestolen worden overkomt je, het is geen keuze -- en de zin stond al als vaste tekst bekend (criminaliteit-themapagina) maar werd nooit vrijgesteld van de schrijfregels, dus viel hij ook over zin-lijdende-vorm. Alleen de letterlijke sjabloonzin is vrijgesteld; Djibouti ('het risico' i.p.v. 'de kans') en Singapore ('Hiermee verkleint u') herformuleren de zin zelf en blijven daarom gemeld. Een advies zet hier vaak een dubbele punt neer in plaats van het punt, omdat er een opsomming op volgt (Niger doet dat). Die vorm staat er daarom als aparte regel bij -- gericht op deze ene zin, niet als algemene regel voor elk slotteken, want dat maakte ook zinnen vrij die na de vaste tekst nog eigen inhoud toevoegen (Congo-Kinshasa: '... op de website van de ANWB onder 'Congo-Kinshasa'.' verloor daardoor terecht zijn aanhalingstekens-melding).",
     "_bullets_aanvulling": "Toegevoegd 19 november 2026, toen de schrijfregels ook over bullets gingen lopen. Deze zinnen staan in het sjabloon (blokken Natuurgeweld, Reisverzekering, Paspoort/ID-kaart, Visum, Reisvaccinaties) en stonden in de adviezen altijd in een opsomming, dus de zinslengte kwam nooit aan bod. Het sjabloon zegt '(of ID-kaart)' tussen haakjes; dat zijn hier twee vormen. 'In het land' is {vrij}, want adviezen schrijven ook 'op Sint Maarten'. De verzekeraarszin staat er ook zonder 'Let op:', omdat adviezen die twee woorden vaak los zetten. Te lang of niet: ze staan op de bespreeklijst, niet in de tool.",
-    "_accommodatie_aanvulling": "Toegevoegd 19 november 2026. Het sjabloon zegt sinds de versie van november 2026 'uw accommodatie' in plaats van 'uw hotel'. De oude vorm staat hier ook, maar alleen tegen de schrijfregels: natuurgeweld-contact meldt al dat hij afwijkt van het sjabloon, en een tweede melding 'te lange zin' zegt niet wat er mis is. Dezelfde aanpak als bij de kale aanhef van de kinderzin."
+    "_accommodatie_aanvulling": "Toegevoegd 19 november 2026. Het sjabloon zegt sinds de versie van november 2026 'uw accommodatie' in plaats van 'uw hotel'. De oude vorm staat hier ook, maar alleen tegen de schrijfregels: natuurgeweld-contact meldt al dat hij afwijkt van het sjabloon, en een tweede melding 'te lange zin' zegt niet wat er mis is. Dezelfde aanpak als bij de kale aanhef van de kinderzin.",
+    "verouderd": [
+      "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie."
+    ],
+    "_verouderd_toelichting": "Zinnen die wel vrijgesteld zijn van de schrijfregels, maar niet meer in het sjabloon staan. Ze tellen niet mee in data/vaste-teksten-boven-de-norm.md en het totaaloverzicht.",
+    "_geldigheid_aanvulling": "Toegevoegd 22 november 2026. Het sjabloon (blok Paspoort / Paspoort of ID-kaart) zegt: 'Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal ___ maanden geldig zijn op het moment van aankomst in / vertrek uit het land.' Het aantal maanden verschilt per land; de rest ligt vast (Martijn). Vrijgesteld van de schrijfregels; paspoort-geldigheid meldt een afwijkende formulering. Eerst stond hier per vergissing dat de zin niet in het sjabloon staat: de zoektocht op '6 maanden' miste de open plek ___."
   },
   "vaste_teksten": [
     {
@@ -476,6 +483,19 @@
       "zin": "Lees de tips op de pagina Kan ik veilig reizen als lhbtiq+ persoon? om risico’s te verkleinen.",
       "kern": "kan ik veilig reizen als lhbtiq\\+ persoon",
       "boodschap": "Waar lhbtiq+ aan de orde komt, hoort de vaste verwijzing naar de themapagina erbij."
+    },
+    {
+      "id": "paspoort-geldigheid",
+      "ernst": "let-op",
+      "rubriek": "paspoort",
+      "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+      "zin": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land.",
+      "kern": "uw nederlandse paspoort (?:of id-kaart )?moet nog minimaal \\d+ maanden geldig zijn op het moment van (?:aankomst in|vertrek uit) het land\\.",
+      "alleen_als": "paspoort[^.]{0,60}maanden geldig",
+      "herken": "paspoort[^.]{0,60}maanden geldig",
+      "boodschap_afwijkend": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+      "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+      "_toelichting": "Geen verplichte tekst: hij doet alleen mee als er in de rubriek iets staat over hoeveel maanden het paspoort nog geldig moet zijn. Het aantal maanden mag verschillen, en '(of ID-kaart)' mag er wel of niet staan. De rest ligt vast, ook 'het land' (niet de landnaam)."
     },
     {
       "id": "paspoort-kopie",

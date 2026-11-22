@@ -131,11 +131,11 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 16,
+    "letop": 15,
     "info": 4,
     "perErnst": {
       "fout": 3,
-      "let-op": 16,
+      "let-op": 15,
       "info": 4
     },
     "perRegel": {
@@ -144,7 +144,7 @@
       "h4-niet-melden": 1,
       "h4-kop-variant": 1,
       "nood-lokale-hulpdiensten": 1,
-      "zin-max-woorden": 9,
+      "zin-max-woorden": 8,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 4,
       "aanhalingstekens": 1
@@ -328,14 +328,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -357,11 +349,11 @@
     ],
     "zinnen": 91,
     "fout": 2,
-    "letop": 14,
+    "letop": 13,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 14,
+      "let-op": 13,
       "info": 1
     },
     "perRegel": {
@@ -369,7 +361,7 @@
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 10,
+      "zin-max-woorden": 9,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 1
     },
@@ -494,14 +486,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Bij aankomst in Angola bent u verplicht een bewijs van vaccinatie tegen gele koorts te laten zien.",
         "kop": "Reisvaccinaties"
@@ -581,11 +565,11 @@
     ],
     "zinnen": 84,
     "fout": 0,
-    "letop": 8,
+    "letop": 7,
     "info": 6,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
+      "let-op": 7,
       "info": 6
     },
     "perRegel": {
@@ -599,7 +583,7 @@
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 2,
       "zin-twijfeltaal": 1,
-      "zin-max-woorden": 2
+      "zin-max-woorden": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -707,14 +691,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "Houd er rekening mee dat niet alle specialistische zorg in Albanië beschikbaar is, ook niet in particuliere klinieken.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort of ID-kaart moet nog minimaal 90 dagen geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 30-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -793,11 +769,11 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 24,
+    "letop": 23,
     "info": 4,
     "perErnst": {
       "fout": 4,
-      "let-op": 24,
+      "let-op": 23,
       "info": 4
     },
     "perRegel": {
@@ -812,7 +788,7 @@
       "rubrieken-max": 1,
       "nederlands-verbuiging": 1,
       "tekst-onzichtbaar-teken": 1,
-      "zin-max-woorden": 11,
+      "zin-max-woorden": 10,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 2,
@@ -1040,14 +1016,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "De geboortedatum is niet volledig als er ‘00’ of ‘XX’ staat bij uw geboortedag, -maand of -jaar.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -1094,17 +1062,17 @@
     ],
     "zinnen": 80,
     "fout": 1,
-    "letop": 4,
+    "letop": 3,
     "info": 5,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 3,
       "info": 5
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "tekst-spatie-leesteken": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 1,
       "zin-lijdende-vorm": 1,
       "zin-frequentiewoord": 5
     },
@@ -1185,14 +1153,6 @@
         "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Let op: hulpverleners spreken vaak geen Engels.",
         "kop": "In geval van nood"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 19-11-2026 | Nog steeds geldig op: 21-11-2026"
@@ -1314,17 +1274,17 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 9,
+    "letop": 8,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 9,
+      "let-op": 8,
       "info": 3
     },
     "perRegel": {
       "h2-vast": 1,
       "zin-frequentiewoord": 2,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 1
@@ -1403,14 +1363,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis belandt, moet u mogelijk naar Hawaii (Verenigde Staten van Amerika), Australië of Nieuw-Zeeland worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-max-woorden",
@@ -1680,17 +1632,17 @@
     ],
     "zinnen": 57,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "tekst-spatie-leesteken": 1,
-      "zin-max-woorden": 2
+      "zin-max-woorden": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -1721,14 +1673,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Lees informatie over orkanen en het lokale weer op de volgende websites (informatie in het Engels):",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 18-03-2026 | Nog steeds geldig op: 21-11-2026"
@@ -1985,14 +1929,23 @@
       "info": 1
     },
     "perRegel": {
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 7,
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn na de einddatum van uw visum voor Azerbeidzjan.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
       {
         "regel": "kinderen-paspoort",
         "ernst": "let-op",
@@ -2056,14 +2009,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Ga met een gids de bergen en afgelegen natuurgebieden in, of vraag advies aan lokale gidsen.",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn na de einddatum van uw visum voor Azerbeidzjan.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-max-woorden",
@@ -2405,16 +2350,16 @@
     ],
     "zinnen": 93,
     "fout": 1,
-    "letop": 12,
+    "letop": 11,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
+      "let-op": 11,
       "info": 3
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "zin-max-woorden": 10,
+      "zin-max-woorden": 9,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 2,
       "eenheden-voluit": 1
@@ -2534,14 +2479,6 @@
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "In het zuiden van Benin loopt het regenseizoen van april tot juli en van september tot oktober.",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "eenheden-voluit",
@@ -2731,11 +2668,11 @@
     ],
     "zinnen": 121,
     "fout": 0,
-    "letop": 15,
+    "letop": 14,
     "info": 8,
     "perErnst": {
       "fout": 0,
-      "let-op": 15,
+      "let-op": 14,
       "info": 8
     },
     "perRegel": {
@@ -2746,7 +2683,7 @@
       "rubriek-vrij-te-hoog": 1,
       "tekst-niet-melden": 1,
       "zin-lijdende-vorm": 4,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 6,
       "zin-frequentiewoord": 3,
       "zin-twijfeltaal": 2,
       "link-tekstlengte": 1
@@ -2923,14 +2860,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -2951,14 +2880,15 @@
     ],
     "zinnen": 69,
     "fout": 0,
-    "letop": 1,
+    "letop": 2,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
+      "let-op": 2,
       "info": 1
     },
     "perRegel": {
+      "paspoort-geldigheid": 1,
       "zin-frequentiewoord": 1,
       "zin-max-woorden": 1
     },
@@ -2968,6 +2898,14 @@
       ]
     },
     "bevindingen": [
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Reist u via Bulgarije naar Turkije? Zorg dat uw paspoort nog minimaal 6 maanden geldig is. Anders moet u terugreizen om een nieuw paspoort aan te vragen bij de Nederlandse ambassade in Sofia. Dit duurt minimaal 3 werkdagen.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
       {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
@@ -2998,18 +2936,18 @@
     ],
     "zinnen": 74,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "info": 3
     },
     "perRegel": {
       "nood-contactcenter": 1,
       "rubriek-vrij-te-hoog": 1,
       "zin-frequentiewoord": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1
     },
@@ -3088,14 +3026,6 @@
         "boodschap": "Lijdende vorm: \"worden … gesloten\". Schrijf actief.",
         "fragment": "Houd er rekening mee dat het luchtruim van Bahrein tijdelijk kan worden gesloten.",
         "kop": "Actueel"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 21-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -3111,17 +3041,17 @@
     ],
     "zinnen": 63,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "info": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "link-tekstlengte": 1
     },
     "teBespreken": {
@@ -3168,14 +3098,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 26 woorden. Maximaal 15.",
         "fragment": "Een bewijs van vaccinatie tegen gele koorts is verplicht als u naar de Bahama’s reist vanuit een land waar een hoog risico op gele koorts bestaat.",
         "kop": "Reisvaccinaties"
@@ -3201,18 +3123,18 @@
     ],
     "zinnen": 68,
     "fout": 1,
-    "letop": 3,
+    "letop": 2,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 3,
+      "let-op": 2,
       "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 2
+      "zin-max-woorden": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -3249,14 +3171,6 @@
         "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
         "fragment": "In de winter is er een verhoogde kans op luchtvervuiling in de grote steden, zoals Sarajevo, Banja Luka en Tuzla.",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort of ID-kaart moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 15-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -3273,11 +3187,11 @@
     ],
     "zinnen": 90,
     "fout": 3,
-    "letop": 9,
+    "letop": 8,
     "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 9,
+      "let-op": 8,
       "info": 2
     },
     "perRegel": {
@@ -3290,7 +3204,7 @@
       "titel-leestekens": 1,
       "tekst-plakfout": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "vragen-opeenvolgend": 1
     },
     "teBespreken": {
@@ -3390,14 +3304,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin met link telt 39 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
         "fragment": "Dan heeft u tot en met 31 december 2026 geen visum nodig om het land binnen te komen of te verlaten.Lees meer over reizen zonder visum naar Belarus op de website van het Belarussische ministerie van Buitenlandse Zaken (informatie in het Engels).",
         "kop": "Paspoort, visum, rijbewijs"
@@ -3423,17 +3329,17 @@
     ],
     "zinnen": 56,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "tekst-spatie-leesteken": 1,
-      "zin-max-woorden": 4
+      "zin-max-woorden": 3
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -3480,14 +3386,6 @@
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Wees u ervan bewust dat de dorpen in de grensregio met Guatemala nauwelijks telefoon- of internetbereik hebben.",
         "kop": "Criminaliteit"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 12-11-2026 | Nog steeds geldig op: 21-11-2026"
@@ -3504,11 +3402,11 @@
     ],
     "zinnen": 106,
     "fout": 2,
-    "letop": 28,
+    "letop": 27,
     "info": 10,
     "perErnst": {
       "fout": 2,
-      "let-op": 28,
+      "let-op": 27,
       "info": 10
     },
     "perRegel": {
@@ -3520,7 +3418,7 @@
       "woord-onbekend": 1,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 2,
-      "zin-max-woorden": 19,
+      "zin-max-woorden": 18,
       "zin-twijfeltaal": 1,
       "vragen-opeenvolgend": 1,
       "aanhalingstekens": 3
@@ -3759,14 +3657,6 @@
         "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Bij opname in een ziekenhuis in Bolivia moet u de kosten zelf betalen of voorschieten, vaak vooraf of na uw behandeling.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-max-woorden",
@@ -4231,17 +4121,18 @@
     ],
     "zinnen": 112,
     "fout": 1,
-    "letop": 11,
+    "letop": 12,
     "info": 11,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
+      "let-op": 12,
       "info": 11
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "woord-onbekend": 1,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
@@ -4281,6 +4172,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Sommige vliegmaatschappijen of reisorganisaties vragen dat uw paspoort nog minstens 6 maanden geldig is vanaf de dag dat u in Brazilië aankomt. Check dit bij het boeken van uw reis of vlucht.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "woord-onbekend",
@@ -4513,11 +4412,11 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 7,
+    "letop": 6,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 6,
       "info": 2
     },
     "perRegel": {
@@ -4525,7 +4424,7 @@
       "rubrieken-volgorde": 1,
       "tekst-onzichtbaar-teken": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1
     },
@@ -4599,14 +4498,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Maar houd er rekening mee dat u bij ernstige ziekte of verwondingen mogelijk naar Singapore moet worden overgebracht.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 09-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -4622,11 +4513,11 @@
     ],
     "zinnen": 61,
     "fout": 0,
-    "letop": 11,
+    "letop": 10,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
+      "let-op": 10,
       "info": 2
     },
     "perRegel": {
@@ -4636,7 +4527,7 @@
       "natuurgeweld-contact": 1,
       "kinderen-documenten": 1,
       "zin-twijfeltaal": 2,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-lijdende-vorm": 2
     },
     "teBespreken": {
@@ -4731,14 +4622,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Betaal bij uw visumaanvraag een verplichte Sustainable Development Fee van 100 Amerikaanse dollar per dag, per volwassene.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -4757,19 +4640,18 @@
     ],
     "zinnen": 65,
     "fout": 2,
-    "letop": 2,
+    "letop": 1,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 2,
+      "let-op": 1,
       "info": 2
     },
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "kinderen-paspoort": 1,
-      "zin-frequentiewoord": 2,
-      "zin-max-woorden": 1
+      "zin-frequentiewoord": 2
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -4815,14 +4697,6 @@
         "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "In Botswana zijn regelmatig periodes van droogte.",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 01-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -4838,11 +4712,11 @@
     ],
     "zinnen": 60,
     "fout": 1,
-    "letop": 11,
+    "letop": 10,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
+      "let-op": 10,
       "info": 2
     },
     "perRegel": {
@@ -4850,7 +4724,7 @@
       "bagage-heen": 1,
       "natuurgeweld-contact": 1,
       "rijbewijs-anwb": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 2
@@ -4939,14 +4813,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Neem contact op met uw reisverzekeraar of met de Nederlandse ambassade in Kinshasa, Democratische Republiek Congo.",
         "kop": "In geval van nood"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-max-woorden",
@@ -5397,11 +5263,11 @@
     ],
     "zinnen": 126,
     "fout": 3,
-    "letop": 41,
+    "letop": 40,
     "info": 11,
     "perErnst": {
       "fout": 3,
-      "let-op": 41,
+      "let-op": 40,
       "info": 11
     },
     "perRegel": {
@@ -5412,7 +5278,7 @@
       "bagage-heen": 1,
       "natuurgeweld-contact": 1,
       "tekst-onzichtbaar-teken": 1,
-      "zin-max-woorden": 28,
+      "zin-max-woorden": 27,
       "zin-lijdende-vorm": 7,
       "zin-frequentiewoord": 5,
       "zin-twijfeltaal": 6,
@@ -5825,14 +5691,6 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "In China kunt u vaak alleen met uw mobiele telefoon betalen, via betaalapps als WeChat Pay en Alipay.",
         "kop": "Geldzaken"
       },
@@ -5882,17 +5740,17 @@
     ],
     "zinnen": 74,
     "fout": 2,
-    "letop": 5,
+    "letop": 4,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 5,
+      "let-op": 4,
       "info": 1
     },
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1
     },
@@ -5955,14 +5813,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 21 woorden. Maximaal 15.",
         "fragment": "U leest op de website van de GGD ook meer over ziektes die in Ivoorkust voorkomen, zoals dengue (knokkelkoorts) en malaria.",
         "kop": "Reisvaccinaties"
@@ -5983,11 +5833,11 @@
     ],
     "zinnen": 97,
     "fout": 2,
-    "letop": 14,
+    "letop": 13,
     "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 14,
+      "let-op": 13,
       "info": 6
     },
     "perRegel": {
@@ -5995,7 +5845,7 @@
       "nood-contactcenter": 1,
       "natuurgeweld-contact": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 11,
+      "zin-max-woorden": 10,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 4,
       "link-tekstlengte": 1,
@@ -6163,14 +6013,6 @@
         "kop": "In geval van nood"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -6199,11 +6041,11 @@
     ],
     "zinnen": 111,
     "fout": 5,
-    "letop": 26,
+    "letop": 25,
     "info": 9,
     "perErnst": {
       "fout": 5,
-      "let-op": 26,
+      "let-op": 25,
       "info": 9
     },
     "perRegel": {
@@ -6216,7 +6058,7 @@
       "titel-leestekens": 1,
       "tekst-cms-rest": 1,
       "woord-onbekend": 5,
-      "zin-max-woorden": 13,
+      "zin-max-woorden": 12,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
       "link-tekstlengte": 1,
@@ -6526,14 +6368,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
         "fragment": "U leest op de website van de GGD ook meer over ziektes die in de DRC voorkomen, zoals malaria.",
         "kop": "Reisvaccinaties"
@@ -6575,18 +6409,18 @@
     ],
     "zinnen": 82,
     "fout": 0,
-    "letop": 9,
+    "letop": 8,
     "info": 4,
     "perErnst": {
       "fout": 0,
-      "let-op": 9,
+      "let-op": 8,
       "info": 4
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 1
     },
@@ -6688,14 +6522,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Een bewijs van vaccinatie tegen gele koorts is verplicht als u naar de Republiek Congo reist.",
         "kop": "Reisvaccinaties"
@@ -6714,16 +6540,15 @@
     ],
     "zinnen": 52,
     "fout": 0,
-    "letop": 2,
+    "letop": 1,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 1,
       "info": 0
     },
     "perRegel": {
-      "natuurgeweld-contact": 1,
-      "zin-max-woorden": 1
+      "natuurgeweld-contact": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -6736,14 +6561,6 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 21-11-2026"
@@ -6761,11 +6578,11 @@
     ],
     "zinnen": 142,
     "fout": 5,
-    "letop": 26,
+    "letop": 27,
     "info": 12,
     "perErnst": {
       "fout": 5,
-      "let-op": 26,
+      "let-op": 27,
       "info": 12
     },
     "perRegel": {
@@ -6774,6 +6591,7 @@
       "kort-een-actualiteit": 1,
       "kort-max-bullets": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-dubbel-woord": 1,
@@ -6829,6 +6647,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Zorg dat uw Nederlandse paspoort nog minstens 6 maanden geldig is op moment van aankomst in het land.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-max",
@@ -7153,17 +6979,17 @@
     ],
     "zinnen": 66,
     "fout": 2,
-    "letop": 4,
+    "letop": 3,
     "info": 0,
     "perErnst": {
       "fout": 2,
-      "let-op": 4,
+      "let-op": 3,
       "info": 0
     },
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "link-tekstlengte": 1
     },
     "teBespreken": {
@@ -7204,14 +7030,6 @@
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -7232,17 +7050,17 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 6,
+    "letop": 5,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
+      "let-op": 5,
       "info": 2
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1
     },
@@ -7288,14 +7106,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Op de eilanden Sal en Boa Vista komt een darminfectie voor die wordt veroorzaakt door de shigellabacterie.",
         "kop": "Reisvaccinaties"
@@ -7330,11 +7140,11 @@
     ],
     "zinnen": 123,
     "fout": 3,
-    "letop": 16,
+    "letop": 15,
     "info": 9,
     "perErnst": {
       "fout": 3,
-      "let-op": 16,
+      "let-op": 15,
       "info": 9
     },
     "perRegel": {
@@ -7346,7 +7156,7 @@
       "woord-onbekend": 1,
       "zin-frequentiewoord": 5,
       "zin-lijdende-vorm": 6,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 7,
       "zin-twijfeltaal": 3
     },
     "teBespreken": {
@@ -7575,14 +7385,6 @@
         "boodschap": "Lijdende vorm: \"wordt … gecontroleerd\". Schrijf actief.",
         "fragment": "In Costa Rica wordt bijna niet gecontroleerd of bedrijven aan de voorwaarden voldoen.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 1 dag geldig zijn op het moment van het geplande vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 06-11-2026 | Nog steeds geldig op: 21-11-2026"
@@ -7598,11 +7400,11 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 19,
+    "letop": 18,
     "info": 4,
     "perErnst": {
       "fout": 3,
-      "let-op": 19,
+      "let-op": 18,
       "info": 4
     },
     "perRegel": {
@@ -7610,7 +7412,7 @@
       "kleur-vaste-tekst": 1,
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 12,
+      "zin-max-woorden": 11,
       "zin-lijdende-vorm": 4,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 3,
@@ -7794,14 +7596,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Dan moet u mogelijk naar een ander land worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-max-woorden",
@@ -7992,18 +7786,18 @@
     ],
     "zinnen": 57,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "info": 0
     },
     "perRegel": {
       "h4-kop-variant": 1,
       "nood-contactcenter": 1,
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 3
+      "zin-max-woorden": 2
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -8048,14 +7842,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
         "fragment": "Bij aankomst op het vliegveld krijgt u een stempel voor een verblijf van 30 tot en met 90 dagen.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
@@ -8402,11 +8188,11 @@
     ],
     "zinnen": 70,
     "fout": 3,
-    "letop": 8,
+    "letop": 7,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 8,
+      "let-op": 7,
       "info": 3
     },
     "perRegel": {
@@ -8417,7 +8203,7 @@
       "rubrieken-max": 1,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "schuine-streep": 1,
       "eenheden-voluit": 1
     },
@@ -8514,14 +8300,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "schuine-streep",
         "ernst": "info",
         "bron": "SW, Schrijfregels > Schuine streep",
@@ -8549,17 +8327,17 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "info": 1
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "kinderen-paspoort": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
@@ -8605,14 +8383,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "U krijgt dan per e-mail een bewijs met een QR-code, dat u laat zien bij aankomst of vertrek.",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 11-09-2026 | Nog steeds geldig op: 21-11-2026"
@@ -8653,11 +8423,11 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 6,
+    "letop": 5,
     "info": 6,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
+      "let-op": 5,
       "info": 6
     },
     "perRegel": {
@@ -8665,7 +8435,7 @@
       "natuurgeweld-contact": 1,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-twijfeltaal": 1,
       "link-tekstlengte": 1
     },
@@ -8754,14 +8524,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -8784,11 +8546,11 @@
     ],
     "zinnen": 127,
     "fout": 3,
-    "letop": 22,
+    "letop": 21,
     "info": 13,
     "perErnst": {
       "fout": 3,
-      "let-op": 22,
+      "let-op": 21,
       "info": 13
     },
     "perRegel": {
@@ -8802,7 +8564,7 @@
       "natuurgeweld-contact": 1,
       "rubrieken-max": 1,
       "zin-frequentiewoord": 8,
-      "zin-max-woorden": 16,
+      "zin-max-woorden": 15,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 3,
       "aanhalingstekens": 1
@@ -9071,14 +8833,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "zin-twijfeltaal",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -9133,11 +8887,11 @@
     ],
     "zinnen": 148,
     "fout": 5,
-    "letop": 31,
+    "letop": 30,
     "info": 8,
     "perErnst": {
       "fout": 5,
-      "let-op": 31,
+      "let-op": 30,
       "info": 8
     },
     "perRegel": {
@@ -9147,7 +8901,7 @@
       "natuurgeweld-contact": 1,
       "tekst-dubbel-woord": 1,
       "woord-onbekend": 5,
-      "zin-max-woorden": 17,
+      "zin-max-woorden": 16,
       "zin-lijdende-vorm": 5,
       "zin-frequentiewoord": 8,
       "aanhalingstekens": 3
@@ -9470,14 +9224,6 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "Blijft u als toerist 90 dagen of korter in Ecuador, binnen een periode van 12 maanden (365 dagen)?",
         "kop": "Paspoort, visum, rijbewijs"
       },
@@ -9542,17 +9288,18 @@
     ],
     "zinnen": 149,
     "fout": 2,
-    "letop": 19,
+    "letop": 20,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 19,
+      "let-op": 20,
       "info": 3
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-max": 1,
       "alinea-max-woorden": 2,
       "postplaats-schrijfwijze": 1,
@@ -9593,6 +9340,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet bij aankomst in Egypte nog minimaal 6 maanden geldig zijn en nog minstens 1 lege pagina hebben.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-max",
@@ -9778,16 +9533,16 @@
     ],
     "zinnen": 56,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "info": 0
     },
     "perRegel": {
       "rijbewijs-anwb": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
@@ -9824,14 +9579,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "Het gebied ten westen en noorden van de steden Biyakundi – Agordat – Mersa Gulbub tot de grens met Sudan.",
         "kop": "Regionale risico's"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 13-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -10106,11 +9853,11 @@
     ],
     "zinnen": 117,
     "fout": 3,
-    "letop": 21,
+    "letop": 20,
     "info": 5,
     "perErnst": {
       "fout": 3,
-      "let-op": 21,
+      "let-op": 20,
       "info": 5
     },
     "perRegel": {
@@ -10120,7 +9867,7 @@
       "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 4,
       "zin-frequentiewoord": 3,
-      "zin-max-woorden": 15,
+      "zin-max-woorden": 14,
       "zin-twijfeltaal": 1,
       "aanhalingstekens": 2
     },
@@ -10342,14 +10089,6 @@
         "kop": "Regionale risico’s"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -10469,11 +10208,11 @@
     ],
     "zinnen": 95,
     "fout": 1,
-    "letop": 7,
+    "letop": 6,
     "info": 7,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
+      "let-op": 6,
       "info": 7
     },
     "perRegel": {
@@ -10482,7 +10221,7 @@
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "zin-frequentiewoord": 4,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "aanhalingstekens": 1
     },
     "teBespreken": {
@@ -10588,14 +10327,6 @@
         "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Ook als u verzekerd bent, vragen ziekenhuizen in Fiji vaak onmiddellijke betaling van de behandelingskosten.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-max-woorden",
@@ -10817,11 +10548,11 @@
     ],
     "zinnen": 67,
     "fout": 1,
-    "letop": 8,
+    "letop": 7,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 7,
       "info": 3
     },
     "perRegel": {
@@ -10830,7 +10561,7 @@
       "rijbewijs-anwb": 1,
       "kinderen-paspoort": 1,
       "zin-lijdende-vorm": 2,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 2,
       "link-tekstlengte": 1
     },
@@ -10918,14 +10649,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 4 maanden (120 dagen) geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -10946,18 +10669,18 @@
     ],
     "zinnen": 66,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "kinderen-paspoort": 1,
       "kinderen-documenten": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 1,
       "zin-lijdende-vorm": 1,
       "schuine-streep": 1
     },
@@ -11005,14 +10728,6 @@
         "boodschap": "Lijdende vorm: \"worden … vermoedt\". Schrijf actief.",
         "fragment": "U kunt gearresteerd worden als de overheid spionage vermoedt.",
         "kop": "Wetten en gebruiken"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "schuine-streep",
@@ -11436,11 +11151,11 @@
     ],
     "zinnen": 107,
     "fout": 1,
-    "letop": 14,
+    "letop": 13,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 14,
+      "let-op": 13,
       "info": 2
     },
     "perRegel": {
@@ -11448,7 +11163,7 @@
       "natuurgeweld-contact": 1,
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 9,
+      "zin-max-woorden": 8,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
       "aanhalingstekens": 1
@@ -11578,14 +11293,6 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "Laat dit bij aankomst in Ghana door de lokale autoriteiten omzetten naar een nieuw Ghanees bewijs van vaccinatie.",
         "kop": "Reisvaccinaties"
       },
@@ -11622,9 +11329,10 @@
       "kleur-vaste-tekst": 1,
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 3
+      "zin-max-woorden": 2
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -11654,6 +11362,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig te zijn op het moment van vertrek uit het land.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -11694,14 +11410,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "De kleurcode van het reisadvies is oranje voor de gebieden die grenzen aan Mali en Ivoorkust.",
         "kop": "In het kort"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig te zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 13-11-2026 | Nog steeds geldig op: 21-11-2026"
@@ -11717,16 +11425,16 @@
     ],
     "zinnen": 53,
     "fout": 0,
-    "letop": 4,
+    "letop": 3,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 3,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 3
+      "zin-max-woorden": 2
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -11755,14 +11463,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "U heeft een geldig paspoort of een geldige Nederlandse ID-kaart nodig om naar Guadeloupe te reizen.",
         "kop": "Paspoort, ID-kaart, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort of ID-kaart moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 19-06-2026 | Nog steeds geldig op: 21-11-2026"
@@ -11778,18 +11478,18 @@
     ],
     "zinnen": 94,
     "fout": 0,
-    "letop": 10,
+    "letop": 9,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 10,
+      "let-op": 9,
       "info": 3
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 4,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "aanhalingstekens": 1,
       "valuta-notatie": 1
     },
@@ -11880,14 +11580,6 @@
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -11916,17 +11608,17 @@
     ],
     "zinnen": 66,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "regionaal-gebiedenzin": 1,
-      "zin-max-woorden": 3
+      "zin-max-woorden": 2
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -11964,14 +11656,6 @@
         "boodschap": "Deze zin met link telt 24 woorden. Maximaal 20.",
         "fragment": "De ambassade is 24/7 bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "kop": "Actueel"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 21-11-2026"
@@ -11987,29 +11671,18 @@
     ],
     "zinnen": 49,
     "fout": 0,
-    "letop": 1,
+    "letop": 0,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 1,
+      "let-op": 0,
       "info": 0
     },
-    "perRegel": {
-      "zin-max-woorden": 1
-    },
+    "perRegel": {},
     "teBespreken": {
       "twijfelUitSjabloon": []
     },
-    "bevindingen": [
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      }
-    ],
+    "bevindingen": [],
     "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 21-11-2026"
   },
   {
@@ -12179,17 +11852,17 @@
     ],
     "zinnen": 56,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 3
+      "zin-max-woorden": 2
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -12227,14 +11900,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Toon het ingevulde formulier bij aankomst op uw mobiele telefoon of neem een geprinte versie mee.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
         "kop": "Paspoort, visum, rijbewijs"
       }
     ],
@@ -12321,11 +11986,11 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 12,
+    "letop": 11,
     "info": 9,
     "perErnst": {
       "fout": 4,
-      "let-op": 12,
+      "let-op": 11,
       "info": 9
     },
     "perRegel": {
@@ -12333,7 +11998,7 @@
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 6,
       "zin-frequentiewoord": 7,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 2,
@@ -12520,14 +12185,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "zin-twijfeltaal",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -12565,18 +12222,18 @@
     ],
     "zinnen": 54,
     "fout": 0,
-    "letop": 8,
+    "letop": 7,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
+      "let-op": 7,
       "info": 3
     },
     "perRegel": {
       "zin-lijdende-vorm": 3,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 2,
-      "zin-max-woorden": 5
+      "zin-max-woorden": 4
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -12652,14 +12309,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort of ID-kaart moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 22 woorden. Maximaal 15.",
         "fragment": "U leest op de website van de GGD ook meer over ziektes die er voorkomen zoals malaria, dengue (knokkelkoorts), chikungunya en zikakoorts.",
         "kop": "Reisvaccinaties"
@@ -12686,11 +12335,11 @@
     ],
     "zinnen": 62,
     "fout": 2,
-    "letop": 10,
+    "letop": 9,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
+      "let-op": 9,
       "info": 1
     },
     "perRegel": {
@@ -12700,7 +12349,7 @@
       "natuurgeweld-contact": 1,
       "woord-onbekend": 2,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1
     },
@@ -12809,14 +12458,6 @@
         "boodschap": "Lijdende vorm: \"worden … gebracht\". Schrijf actief.",
         "fragment": "Gewonde of ernstig zieke reizigers worden dan per taxi of privé-voertuig naar het dichtstbijzijnde ziekenhuis gebracht.",
         "kop": "In geval van nood"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 30-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -12832,11 +12473,11 @@
     ],
     "zinnen": 51,
     "fout": 2,
-    "letop": 8,
+    "letop": 7,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 8,
+      "let-op": 7,
       "info": 2
     },
     "perRegel": {
@@ -12845,7 +12486,7 @@
       "reisverzekering-vaste-tekst": 1,
       "bagage-heen": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 1
     },
@@ -12940,14 +12581,6 @@
         "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Check regelmatig de weersverwachting op de website van het Hong Kong Observatory (informatie in het Engels).",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 1 maand geldig zijn op het moment van vertrek uit Hongkong SAR.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 21-11-2026"
@@ -12964,18 +12597,18 @@
     ],
     "zinnen": 90,
     "fout": 0,
-    "letop": 13,
+    "letop": 12,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 13,
+      "let-op": 12,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "woord-onbekend": 1,
       "zin-lijdende-vorm": 3,
-      "zin-max-woorden": 8
+      "zin-max-woorden": 7
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -13080,14 +12713,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "De provincies Santa Bárbara, Cortés, Atlántida, Yoro, Francisco Morazán (inclusief hoofdstad Tegucigalpa), Colón, Olancho en Gracias a Dios.",
         "kop": "Regionale risico's"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 07-08-2026 | Nog steeds geldig op: 21-11-2026"
@@ -13200,16 +12825,16 @@
     ],
     "zinnen": 71,
     "fout": 0,
-    "letop": 6,
+    "letop": 5,
     "info": 6,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
+      "let-op": 5,
       "info": 6
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 1,
       "schuine-streep": 1,
@@ -13294,14 +12919,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "schuine-streep",
         "ernst": "info",
         "bron": "SW, Schrijfregels > Schuine streep",
@@ -13377,11 +12994,11 @@
     ],
     "zinnen": 174,
     "fout": 4,
-    "letop": 25,
+    "letop": 24,
     "info": 11,
     "perErnst": {
       "fout": 4,
-      "let-op": 25,
+      "let-op": 24,
       "info": 11
     },
     "perRegel": {
@@ -13396,7 +13013,7 @@
       "tekst-spatie-leesteken": 1,
       "woord-onbekend": 4,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 10,
+      "zin-max-woorden": 9,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 6,
       "zin-twijfeltaal": 2
@@ -13729,14 +13346,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis belandt, moet u mogelijk naar Singapore, Maleisië of Thailand worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 20-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -13768,11 +13377,12 @@
       "kleur-eerste-bullet-voluit": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
+      "paspoort-geldigheid": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
       "tekst-niet-melden": 3,
-      "zin-max-woorden": 27,
+      "zin-max-woorden": 26,
       "zin-frequentiewoord": 11,
       "zin-lijdende-vorm": 6,
       "zin-twijfeltaal": 1,
@@ -13836,6 +13446,14 @@
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van India."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in India.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -14217,14 +13835,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in India.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -14401,11 +14011,11 @@
     ],
     "zinnen": 128,
     "fout": 2,
-    "letop": 33,
+    "letop": 32,
     "info": 8,
     "perErnst": {
       "fout": 2,
-      "let-op": 33,
+      "let-op": 32,
       "info": 8
     },
     "perRegel": {
@@ -14416,7 +14026,7 @@
       "natuurgeweld-contact": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 15,
+      "zin-max-woorden": 14,
       "zin-lijdende-vorm": 14,
       "zin-twijfeltaal": 2,
       "zin-frequentiewoord": 4
@@ -14763,14 +14373,6 @@
         "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Als u bent gearresteerd, is het vaak onmogelijk deze zaken te regelen.",
         "kop": "Actueel"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 25-09-2026 | Nog steeds geldig op: 21-11-2026"
@@ -14787,11 +14389,11 @@
     ],
     "zinnen": 99,
     "fout": 2,
-    "letop": 28,
+    "letop": 27,
     "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 28,
+      "let-op": 27,
       "info": 4
     },
     "perRegel": {
@@ -14804,7 +14406,7 @@
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "zin-frequentiewoord": 2,
-      "zin-max-woorden": 18,
+      "zin-max-woorden": 17,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
       "aanhalingstekens": 3,
@@ -15047,14 +14649,6 @@
         "kop": "Natuurgeweld"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -15224,9 +14818,10 @@
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 13,
+      "zin-max-woorden": 12,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 2,
       "link-tekstlengte": 1
@@ -15259,6 +14854,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van aankomst in Israël.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-paspoort",
@@ -15410,14 +15013,6 @@
         "boodschap": "Deze zin met link telt 21 woorden. Maximaal 20.",
         "fragment": "Volg de aanwijzingen van de Israëlische autoriteiten via de website van Home Front Command (deze website is alleen beschikbaar vanuit Israël).",
         "kop": "Actueel"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van aankomst in Israël.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "link-tekstlengte",
@@ -15675,11 +15270,11 @@
     ],
     "zinnen": 98,
     "fout": 1,
-    "letop": 24,
+    "letop": 23,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 24,
+      "let-op": 23,
       "info": 3
     },
     "perRegel": {
@@ -15688,7 +15283,7 @@
       "natuurgeweld-contact": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 15,
+      "zin-max-woorden": 14,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 4,
       "aanhalingstekens": 1
@@ -15891,14 +15486,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "U kunt een visum kopen bij aankomst op het vliegveld of bij een grenskantoor in Jordanië.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -16073,18 +15660,18 @@
     ],
     "zinnen": 82,
     "fout": 1,
-    "letop": 8,
+    "letop": 7,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 7,
       "info": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "zin-lijdende-vorm": 2,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "aanhalingstekens": 1
     },
     "teBespreken": {
@@ -16143,14 +15730,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Vanaf 1 juli 2027 bent u wel verplicht een Electronic Travel Authorisation (ETA) aan te vragen.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -16178,11 +15757,11 @@
     ],
     "zinnen": 130,
     "fout": 4,
-    "letop": 19,
+    "letop": 18,
     "info": 2,
     "perErnst": {
       "fout": 4,
-      "let-op": 19,
+      "let-op": 18,
       "info": 2
     },
     "perRegel": {
@@ -16195,7 +15774,7 @@
       "criminaliteit-themapagina": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 10,
+      "zin-max-woorden": 9,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 1,
@@ -16371,14 +15950,6 @@
         "kop": "In het kort"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -16420,18 +15991,17 @@
     ],
     "zinnen": 73,
     "fout": 1,
-    "letop": 2,
+    "letop": 1,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 2,
+      "let-op": 1,
       "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
-      "zin-frequentiewoord": 1,
-      "zin-max-woorden": 1
+      "zin-frequentiewoord": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -16462,14 +16032,6 @@
         "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Vooral in het voorjaar komt dit vaak voor.",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 20-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -16487,11 +16049,11 @@
     ],
     "zinnen": 113,
     "fout": 2,
-    "letop": 24,
+    "letop": 23,
     "info": 9,
     "perErnst": {
       "fout": 2,
-      "let-op": 24,
+      "let-op": 23,
       "info": 9
     },
     "perRegel": {
@@ -16499,7 +16061,7 @@
       "h3-alleen-bij-uitzondering": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 14,
+      "zin-max-woorden": 13,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 6,
       "aanhalingstekens": 2
@@ -16765,14 +16327,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -16800,18 +16354,18 @@
     ],
     "zinnen": 68,
     "fout": 0,
-    "letop": 7,
+    "letop": 6,
     "info": 4,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 6,
       "info": 4
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 2,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
@@ -16897,14 +16451,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis terechtkomt, moet u mogelijk naar Australië, Nieuw-Zeeland of Hawaii (Verenigde Staten van Amerika) worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 21-11-2026"
@@ -16920,16 +16466,16 @@
     ],
     "zinnen": 52,
     "fout": 0,
-    "letop": 4,
+    "letop": 3,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 3,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 1,
       "link-tekstlengte": 1
     },
     "teBespreken": {
@@ -16951,14 +16497,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Lees informatie over orkanen en het lokale weer op de volgende websites (informatie in het Engels):",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "link-tekstlengte",
@@ -17129,11 +16667,11 @@
     ],
     "zinnen": 73,
     "fout": 1,
-    "letop": 15,
+    "letop": 14,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 15,
+      "let-op": 14,
       "info": 2
     },
     "perRegel": {
@@ -17141,7 +16679,7 @@
       "kinderen-paspoort": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-onzichtbaar-teken": 1,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 6,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 1,
       "aanhalingstekens": 2
@@ -17268,14 +16806,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Koeweit erkent alleen paspoorten die het geslacht aangeven met de letters ‘M’ (man) of ‘F’ (vrouw).",
         "kop": "Paspoort, visum, rijbewijs"
@@ -17309,11 +16839,11 @@
     ],
     "zinnen": 119,
     "fout": 1,
-    "letop": 27,
+    "letop": 26,
     "info": 7,
     "perErnst": {
       "fout": 1,
-      "let-op": 27,
+      "let-op": 26,
       "info": 7
     },
     "perRegel": {
@@ -17322,7 +16852,7 @@
       "nood-verwijzing-crisis": 1,
       "woord-onbekend": 4,
       "zin-lijdende-vorm": 4,
-      "zin-max-woorden": 14,
+      "zin-max-woorden": 13,
       "zin-frequentiewoord": 5,
       "zin-twijfeltaal": 2,
       "aanhalingstekens": 3
@@ -17589,14 +17119,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -17631,11 +17153,11 @@
     ],
     "zinnen": 92,
     "fout": 1,
-    "letop": 20,
+    "letop": 19,
     "info": 7,
     "perErnst": {
       "fout": 1,
-      "let-op": 20,
+      "let-op": 19,
       "info": 7
     },
     "perRegel": {
@@ -17644,7 +17166,7 @@
       "natuurgeweld-contact": 1,
       "kinderen-paspoort": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 11,
+      "zin-max-woorden": 10,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 5,
       "zin-twijfeltaal": 2,
@@ -17867,14 +17389,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -17995,11 +17509,11 @@
     ],
     "zinnen": 77,
     "fout": 4,
-    "letop": 5,
+    "letop": 4,
     "info": 7,
     "perErnst": {
       "fout": 4,
-      "let-op": 5,
+      "let-op": 4,
       "info": 7
     },
     "perRegel": {
@@ -18009,7 +17523,7 @@
       "nood-contactcenter": 1,
       "nood-lokale-hulpdiensten": 1,
       "zin-frequentiewoord": 6,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1
     },
@@ -18137,14 +17651,6 @@
         "boodschap": "Twijfeltaal: \"mogelijk\".",
         "fragment": "En geld opnemen of afrekenen met een pinpas is vaak niet mogelijk.",
         "kop": "Geldzaken"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -18277,11 +17783,11 @@
     ],
     "zinnen": 107,
     "fout": 2,
-    "letop": 18,
+    "letop": 17,
     "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 18,
+      "let-op": 17,
       "info": 6
     },
     "perRegel": {
@@ -18292,7 +17798,7 @@
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 10,
+      "zin-max-woorden": 9,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 5,
       "zin-twijfeltaal": 2
@@ -18506,14 +18012,6 @@
         "boodschap": "Twijfeltaal: \"mogelijk\".",
         "fragment": "Buiten de hoofdstad Colombo en de grotere steden is alleen basishulp mogelijk.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 14-09-2026 | Nog steeds geldig op: 21-11-2026"
@@ -18529,16 +18027,16 @@
     ],
     "zinnen": 54,
     "fout": 0,
-    "letop": 3,
+    "letop": 2,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 2,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 2
+      "zin-max-woorden": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -18561,14 +18059,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "U kunt in Lesotho te maken krijgen met extreme kou en hevige sneeuwval (juni tot september).",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 90 dagen geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -18799,8 +18289,9 @@
     "perRegel": {
       "h4-niet-melden": 1,
       "nood-contactcenter": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 1
     },
@@ -18823,6 +18314,14 @@
         "boodschap": "De tekst over het contactcenter wijkt af van de vaste formulering.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van Nederland Wereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400.",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Macau SAR.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -18879,14 +18378,6 @@
         "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Check regelmatig de weersverwachting op de website van de overheid van Macau (informatie in het Engels).",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Macau SAR.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 12-06-2026 | Nog steeds geldig op: 21-11-2026"
@@ -19130,11 +18621,11 @@
     ],
     "zinnen": 78,
     "fout": 3,
-    "letop": 6,
+    "letop": 5,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 6,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
@@ -19144,7 +18635,7 @@
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "postplaats-schrijfwijze": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
@@ -19226,14 +18717,6 @@
         "boodschap": "Twijfeltaal: \"mogelijk\".",
         "fragment": "Basishulp is wel mogelijk.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 23-09-2026 | Nog steeds geldig op: 21-11-2026"
@@ -19249,15 +18732,15 @@
     ],
     "zinnen": 77,
     "fout": 0,
-    "letop": 8,
+    "letop": 7,
     "info": 4,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
+      "let-op": 7,
       "info": 4
     },
     "perRegel": {
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "zin-twijfeltaal": 3,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
@@ -19351,14 +18834,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "opmaak-vet-onderstreept",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Vet",
@@ -19391,8 +18866,9 @@
       "h4-niet-melden": 1,
       "h4-kop-variant": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-lijdende-vorm": 3,
-      "zin-max-woorden": 5
+      "zin-max-woorden": 4
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -19436,6 +18912,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek van de Maldiven.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -19483,14 +18967,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin met link telt 22 woorden. Maximaal 20. De toevoeging (informatie in het Engels) telt niet mee.",
         "fragment": "U moet voor vertrek naar de Maldiven online een reizigersverklaring (Traveller Declaration) invullen op de website van de immigratiedienst van de Maldiven (informatie in het Engels).",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek van de Maldiven.",
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
@@ -19834,11 +19310,11 @@
     ],
     "zinnen": 58,
     "fout": 3,
-    "letop": 4,
+    "letop": 3,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 4,
+      "let-op": 3,
       "info": 3
     },
     "perRegel": {
@@ -19847,7 +19323,7 @@
       "bagage-terug": 1,
       "tekst-spatie-leesteken": 2,
       "zin-frequentiewoord": 2,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 1,
       "link-tekstlengte": 1
     },
     "teBespreken": {
@@ -19923,14 +19399,6 @@
         "kop": "Natuurgeweld"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -19951,18 +19419,17 @@
     ],
     "zinnen": 65,
     "fout": 0,
-    "letop": 4,
+    "letop": 3,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 3,
       "info": 3
     },
     "perRegel": {
       "h4-natuurrisico": 1,
       "natuurgeweld-contact": 1,
       "zin-frequentiewoord": 3,
-      "zin-max-woorden": 1,
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
@@ -20000,14 +19467,6 @@
         "boodschap": "\"soms\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Ongelukken komen voor, soms met dodelijke afloop.",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort of ID-kaart moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -20290,9 +19749,10 @@
       "h4-kop-variant": 1,
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 5,
-      "zin-max-woorden": 11,
+      "zin-max-woorden": 10,
       "zin-frequentiewoord": 4,
       "aanhalingstekens": 1
     },
@@ -20343,6 +19803,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst Myanmar.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-twijfeltaal",
@@ -20508,14 +19976,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst Myanmar.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 24 woorden. Maximaal 15.",
         "fragment": "Voor een zakenvisum moet een bedrijf dat in Myanmar staat geregistreerd (let op: dit mag geen NGO of INGO zijn) u een uitnodigingsbrief geven.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -20654,17 +20114,17 @@
     ],
     "zinnen": 77,
     "fout": 1,
-    "letop": 9,
+    "letop": 8,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 8,
       "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 1
     },
@@ -20751,14 +20211,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis belandt, moet u mogelijk naar China worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 28-08-2026 | Nog steeds geldig op: 21-11-2026"
@@ -20776,11 +20228,11 @@
     ],
     "zinnen": 106,
     "fout": 3,
-    "letop": 13,
+    "letop": 12,
     "info": 1,
     "perErnst": {
       "fout": 3,
-      "let-op": 13,
+      "let-op": 12,
       "info": 1
     },
     "perRegel": {
@@ -20788,7 +20240,7 @@
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "woord-onbekend": 3,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
       "link-plakt-aan-woord": 1
@@ -20925,14 +20377,6 @@
         "kop": "Regionale risico's"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-plakt-aan-woord",
         "ernst": "fout",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
@@ -20957,17 +20401,17 @@
     ],
     "zinnen": 90,
     "fout": 1,
-    "letop": 14,
+    "letop": 13,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 14,
+      "let-op": 13,
       "info": 2
     },
     "perRegel": {
       "kleur-variant": 1,
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 13,
+      "zin-max-woorden": 12,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 1
     },
@@ -21100,14 +20544,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 28 woorden. Maximaal 15.",
         "fragment": "Betaal de kosten van uw E-visum met contact geld (euro of Amerikaanse dollar) bij aankomst op het vliegveld van Nouakchott of Nouadhibou, of aan de grens van Mauritanië.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -21127,11 +20563,11 @@
     ],
     "zinnen": 71,
     "fout": 0,
-    "letop": 8,
+    "letop": 7,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
+      "let-op": 7,
       "info": 0
     },
     "perRegel": {
@@ -21140,7 +20576,7 @@
       "kinderen-paspoort": 1,
       "regionaal-gebiedenzin": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 3
+      "zin-max-woorden": 2
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -21199,14 +20635,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Toon het ingevulde formulier bij aankomst op uw mobiele telefoon of neem een geprinte versie mee.",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 21-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -21222,17 +20650,17 @@
     ],
     "zinnen": 57,
     "fout": 1,
-    "letop": 4,
+    "letop": 3,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 4,
+      "let-op": 3,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "nederlands-verbuiging": 1,
-      "zin-max-woorden": 3
+      "zin-max-woorden": 2
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -21274,14 +20702,6 @@
         "boodschap": "Deze zin met link telt 32 woorden. Maximaal 20.",
         "fragment": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp +31 857 737 400.",
         "kop": "In geval van nood"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 08-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -21297,18 +20717,18 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 8,
+    "letop": 7,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
+      "let-op": 7,
       "info": 2
     },
     "perRegel": {
       "h2-vast": 1,
       "natuurgeweld-contact": 1,
       "zin-frequentiewoord": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1
     },
@@ -21386,14 +20806,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis belandt, moet u mogelijk naar Réunion of Zuid-Afrika worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 21-11-2026"
@@ -21409,17 +20821,17 @@
     ],
     "zinnen": 67,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "info": 2
     },
     "perRegel": {
       "kinderen-paspoort": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
@@ -21472,14 +20884,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
         "fragment": "U leest op de website van de GGD ook meer over ziektes die in Malawi voorkomen, zoals cholera en polio.",
         "kop": "Reisvaccinaties"
@@ -21499,18 +20903,18 @@
     ],
     "zinnen": 86,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "info": 3
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "regionaal-gebiedenzin": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-frequentiewoord": 3
     },
     "teBespreken": {
@@ -21587,14 +20991,6 @@
         "boodschap": "\"soms\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Soms moet u vooruit betalen.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 09-09-2026 | Nog steeds geldig op: 21-11-2026"
@@ -21610,17 +21006,17 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 4,
+    "letop": 3,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
+      "let-op": 3,
       "info": 2
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
@@ -21669,14 +21065,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "De Nederlandse overheid heeft ook regels voor wanneer u alleen naar het buitenland reist met een minderjarig kind.",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 01-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -21692,16 +21080,16 @@
     ],
     "zinnen": 53,
     "fout": 1,
-    "letop": 2,
+    "letop": 1,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 2,
+      "let-op": 1,
       "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 1,
       "zin-frequentiewoord": 1
     },
     "teBespreken": {
@@ -21731,14 +21119,6 @@
         "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Check regelmatig de weersverwachting op de website van het Severe Weather Information Centre (informatie in het Engels).",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 09-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -21848,17 +21228,17 @@
     ],
     "zinnen": 115,
     "fout": 0,
-    "letop": 15,
+    "letop": 14,
     "info": 7,
     "perErnst": {
       "fout": 0,
-      "let-op": 15,
+      "let-op": 14,
       "info": 7
     },
     "perRegel": {
       "rubrieken-max": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 10,
+      "zin-max-woorden": 9,
       "zin-frequentiewoord": 7,
       "zin-lijdende-vorm": 3
     },
@@ -22036,14 +21416,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "De grensgebieden tussen het noordwesten van Nigeria en Benin en Niger, en het grensgebied tussen Nigeria en Kameroen.",
         "kop": "Regionale risico's"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 06-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -22059,11 +21431,11 @@
     ],
     "zinnen": 105,
     "fout": 2,
-    "letop": 19,
+    "letop": 18,
     "info": 10,
     "perErnst": {
       "fout": 2,
-      "let-op": 19,
+      "let-op": 18,
       "info": 10
     },
     "perRegel": {
@@ -22072,7 +21444,7 @@
       "kort-actualiteit-verwijzing": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
-      "zin-max-woorden": 13,
+      "zin-max-woorden": 12,
       "zin-frequentiewoord": 5,
       "zin-lijdende-vorm": 5,
       "zin-twijfeltaal": 3
@@ -22318,14 +21690,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "zin-twijfeltaal",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -22356,8 +21720,9 @@
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-documenten": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 1,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1
     },
@@ -22372,6 +21737,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment dat u aankomt op Niue.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-documenten",
@@ -22403,14 +21776,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis belandt, moet u mogelijk naar Nieuw-Zeeland of Australië worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment dat u aankomt op Niue.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 21-11-2026"
@@ -22470,18 +21835,18 @@
     ],
     "zinnen": 72,
     "fout": 0,
-    "letop": 6,
+    "letop": 5,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
       "kort-actualiteit-eerste": 1,
       "natuurgeweld-contact": 1,
       "kinderen-paspoort": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
@@ -22536,14 +21901,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "Ga niet zelfstandig op pad als u niet zeker weet of wegen en routes veilig en toegankelijk zijn.",
         "kop": "Actueel"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 05-11-2026 | Nog steeds geldig op: 21-11-2026"
@@ -22559,11 +21916,11 @@
     ],
     "zinnen": 58,
     "fout": 2,
-    "letop": 14,
+    "letop": 13,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 14,
+      "let-op": 13,
       "info": 1
     },
     "perRegel": {
@@ -22571,7 +21928,7 @@
       "h3-niet-melden": 1,
       "intro-vaste-tekst": 1,
       "zin-lijdende-vorm": 2,
-      "zin-max-woorden": 9,
+      "zin-max-woorden": 8,
       "zin-twijfeltaal": 1,
       "link-tekstlengte": 2
     },
@@ -22692,14 +22049,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -22727,11 +22076,11 @@
     ],
     "zinnen": 87,
     "fout": 0,
-    "letop": 11,
+    "letop": 10,
     "info": 7,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
+      "let-op": 10,
       "info": 7
     },
     "perRegel": {
@@ -22740,7 +22089,7 @@
       "natuurgeweld-contact": 1,
       "kinderen-paspoort": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-lijdende-vorm": 5,
       "zin-frequentiewoord": 4
     },
@@ -22880,14 +22229,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Maak (online) een vaccinatie-afspraak bij een GGD of andere aanbieder van reisvaccinaties bij u in de buurt.",
         "kop": "Reisvaccinaties"
@@ -22908,11 +22249,11 @@
     ],
     "zinnen": 98,
     "fout": 2,
-    "letop": 16,
+    "letop": 15,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 16,
+      "let-op": 15,
       "info": 3
     },
     "perRegel": {
@@ -22922,7 +22263,7 @@
       "rubrieken-max": 1,
       "tekst-onzichtbaar-teken": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 6,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 1,
@@ -23088,14 +22429,6 @@
         "kop": "Wetten en gebruiken"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -23118,11 +22451,11 @@
     ],
     "zinnen": 116,
     "fout": 3,
-    "letop": 17,
+    "letop": 16,
     "info": 11,
     "perErnst": {
       "fout": 3,
-      "let-op": 17,
+      "let-op": 16,
       "info": 11
     },
     "perRegel": {
@@ -23132,7 +22465,7 @@
       "natuurgeweld-contact": 1,
       "rubrieken-max": 1,
       "zin-frequentiewoord": 8,
-      "zin-max-woorden": 13,
+      "zin-max-woorden": 12,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 3,
       "aanhalingstekens": 1
@@ -23377,14 +22710,6 @@
         "kop": "Demonstraties"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -23406,11 +22731,11 @@
     ],
     "zinnen": 93,
     "fout": 1,
-    "letop": 12,
+    "letop": 11,
     "info": 5,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
+      "let-op": 11,
       "info": 5
     },
     "perRegel": {
@@ -23419,7 +22744,7 @@
       "natuurgeweld-contact": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 7,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1
@@ -23554,14 +22879,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "Met een uitgebreide (medische) reisverzekering kunt u in Panama-Stad voor alle soorten medische zorg terecht in particuliere ziekenhuizen.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-twijfeltaal",
@@ -23711,9 +23028,10 @@
       "nood-lokale-hulpdiensten": 1,
       "reisverzekering-vaste-tekst": 1,
       "medicijnen-voldoende": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-max": 1,
       "woord-onbekend": 1,
-      "zin-max-woorden": 22,
+      "zin-max-woorden": 21,
       "zin-lijdende-vorm": 9,
       "zin-twijfeltaal": 2,
       "zin-frequentiewoord": 5
@@ -23773,6 +23091,14 @@
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Peru.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-max",
@@ -24072,14 +23398,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Peru.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -24110,11 +23428,11 @@
     ],
     "zinnen": 146,
     "fout": 1,
-    "letop": 27,
+    "letop": 26,
     "info": 14,
     "perErnst": {
       "fout": 1,
-      "let-op": 27,
+      "let-op": 26,
       "info": 14
     },
     "perRegel": {
@@ -24126,7 +23444,7 @@
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 8,
       "zin-twijfeltaal": 4,
-      "zin-max-woorden": 14,
+      "zin-max-woorden": 13,
       "aanhalingstekens": 1
     },
     "teBespreken": {
@@ -24446,14 +23764,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "zin-twijfeltaal",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -24490,11 +23800,11 @@
     ],
     "zinnen": 79,
     "fout": 3,
-    "letop": 13,
+    "letop": 12,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 13,
+      "let-op": 12,
       "info": 3
     },
     "perRegel": {
@@ -24503,7 +23813,7 @@
       "h3-alleen-bij-uitzondering": 1,
       "intro-vaste-tekst": 1,
       "rijbewijs-anwb": 1,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 7,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 2,
       "link-tekstlengte": 1,
@@ -24645,14 +23955,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -24682,11 +23984,11 @@
     ],
     "zinnen": 136,
     "fout": 3,
-    "letop": 18,
+    "letop": 17,
     "info": 12,
     "perErnst": {
       "fout": 3,
-      "let-op": 18,
+      "let-op": 17,
       "info": 12
     },
     "perRegel": {
@@ -24699,7 +24001,7 @@
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "zin-frequentiewoord": 9,
-      "zin-max-woorden": 9,
+      "zin-max-woorden": 8,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 2,
       "aanhalingstekens": 2
@@ -24952,14 +24254,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis belandt, moet u mogelijk naar Australië worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "aanhalingstekens",
@@ -25216,9 +24510,10 @@
       "nood-lokale-hulpdiensten": 1,
       "nood-verwijzing-nood": 1,
       "nood-verwijzing-crisis": 1,
+      "paspoort-geldigheid": 1,
       "rijbewijs-anwb": 1,
       "rood-herhaling-voorbereiding": 1,
-      "zin-max-woorden": 3
+      "zin-max-woorden": 2
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -25255,6 +24550,14 @@
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
       },
       {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Noord-Korea.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
+      {
         "regel": "rijbewijs-anwb",
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
@@ -25283,14 +24586,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "De Nederlandse ambassade in Seoel (Zuid-Korea) kan u niet helpen als u in Noord-Korea in de problemen komt.",
         "kop": "In geval van nood"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Noord-Korea.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 17-08-2026 | Nog steeds geldig op: 21-11-2026"
@@ -25387,11 +24682,11 @@
     ],
     "zinnen": 68,
     "fout": 0,
-    "letop": 7,
+    "letop": 6,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 6,
       "info": 3
     },
     "perRegel": {
@@ -25399,7 +24694,7 @@
       "h4-kop-variant": 1,
       "natuurgeweld-contact": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1
     },
@@ -25478,14 +24773,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "Een bewijs van vaccinatie tegen gele koorts is verplicht als u vanuit een hoogrisicoland naar Paraguay reist.",
         "kop": "Reisvaccinaties"
@@ -25517,11 +24804,12 @@
       "kleur-variant": 2,
       "regionaal-kleur-tekst": 2,
       "h4-kop-variant": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-max": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "woord-onbekend": 2,
-      "zin-max-woorden": 13,
+      "zin-max-woorden": 12,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 2,
       "link-tekstlengte": 1
@@ -25576,6 +24864,14 @@
         "fragment": "Contactgegevens Nederlandse vertegenwoordiging in geval van nood",
         "verwacht": "Contactgegevens Nederlandse ambassade in geval van nood",
         "notitie": "Een eigen kop mag hier — niet elk land heeft dezelfde informatie. Maar staat hetzelfde onderwerp elders onder een andere naam, dan is dat verwarrend."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit de Palestijnse Gebieden.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-max",
@@ -25741,14 +25037,6 @@
         "kop": "Wetten en gebruiken"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit de Palestijnse Gebieden.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -25777,8 +25065,9 @@
       "info": 3
     },
     "perRegel": {
+      "paspoort-geldigheid": 1,
       "zin-frequentiewoord": 2,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "zin-twijfeltaal": 1,
       "zin-lijdende-vorm": 1,
       "aanhalingstekens": 1
@@ -25787,6 +25076,14 @@
       "twijfelUitSjabloon": []
     },
     "bevindingen": [
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit Frans-Polynesië.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
       {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
@@ -25860,14 +25157,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit Frans-Polynesië.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -25888,11 +25177,11 @@
     ],
     "zinnen": 78,
     "fout": 0,
-    "letop": 17,
+    "letop": 16,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 17,
+      "let-op": 16,
       "info": 2
     },
     "perRegel": {
@@ -25900,7 +25189,7 @@
       "kinderen-paspoort": 1,
       "tekst-onzichtbaar-teken": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 6,
       "zin-lijdende-vorm": 4,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 1,
@@ -26042,14 +25331,6 @@
         "kop": "Wetten en gebruiken"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "genderneutraal",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Gender(neutraal) / lhbtiq+",
@@ -26077,17 +25358,16 @@
     ],
     "zinnen": 51,
     "fout": 0,
-    "letop": 2,
+    "letop": 1,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 2,
+      "let-op": 1,
       "info": 1
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
-      "zin-frequentiewoord": 1,
-      "zin-max-woorden": 1
+      "zin-frequentiewoord": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -26108,14 +25388,6 @@
         "boodschap": "\"regelmatig\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "De Piton de la Fournaise is een actieve vulkaan op Réunion die regelmatig uitbarst.",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort of ID-kaart moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 30-01-2026 | Nog steeds geldig op: 21-11-2026"
@@ -26279,11 +25551,11 @@
     ],
     "zinnen": 84,
     "fout": 1,
-    "letop": 9,
+    "letop": 8,
     "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
+      "let-op": 8,
       "info": 4
     },
     "perRegel": {
@@ -26291,7 +25563,7 @@
       "natuurgeweld-contact": 1,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 3,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-frequentiewoord": 2,
       "opmaak-vet-onderstreept": 1
     },
@@ -26377,14 +25649,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort of ID-kaart moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "U heeft geen Servische douanestempel in uw paspoort, bijvoorbeeld omdat u via Albanië naar Kosovo bent gereisd.",
         "kop": "Paspoort, ID-kaart, rijbewijs"
@@ -26439,10 +25703,11 @@
       "actueel-max-woorden": 1,
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 16,
+      "zin-max-woorden": 15,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 4,
       "aanhalingstekens": 5
@@ -26485,6 +25750,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Rusland.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-paspoort",
@@ -26674,14 +25947,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Rusland.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 19 woorden. Maximaal 15.",
         "fragment": "het formulier dat uw sponsor of contactpersoon heeft ingevuld, met daarop het adres en de periode van uw verblijf",
         "kop": "Paspoort, visum, rijbewijs"
@@ -26736,11 +26001,11 @@
     ],
     "zinnen": 115,
     "fout": 3,
-    "letop": 19,
+    "letop": 18,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 19,
+      "let-op": 18,
       "info": 3
     },
     "perRegel": {
@@ -26751,7 +26016,7 @@
       "regionaal-gebiedenzin": 1,
       "woord-onbekend": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 12,
+      "zin-max-woorden": 11,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 2,
       "link-verboden-partij": 1,
@@ -26933,14 +26198,6 @@
         "kop": "In het kort"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-verboden-partij",
         "ernst": "fout",
         "bron": "SW, Relevantie > Naar wie linken we niet?",
@@ -26977,11 +26234,11 @@
     ],
     "zinnen": 85,
     "fout": 1,
-    "letop": 19,
+    "letop": 18,
     "info": 7,
     "perErnst": {
       "fout": 1,
-      "let-op": 19,
+      "let-op": 18,
       "info": 7
     },
     "perRegel": {
@@ -26993,7 +26250,7 @@
       "rubriek-vrij-te-hoog": 1,
       "tekst-onzichtbaar-teken": 1,
       "zin-frequentiewoord": 2,
-      "zin-max-woorden": 11,
+      "zin-max-woorden": 10,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 3
     },
@@ -27165,14 +26422,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Een toeristenvisum (e-visa of sticker) is maximaal 90 dagen geldig binnen een periode van 1 jaar.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -27231,18 +26480,18 @@
     ],
     "zinnen": 64,
     "fout": 1,
-    "letop": 8,
+    "letop": 7,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 8,
+      "let-op": 7,
       "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "nood-lokale-hulpdiensten": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-frequentiewoord": 1,
       "aanhalingstekens": 1
     },
@@ -27318,14 +26567,6 @@
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -27347,11 +26588,11 @@
     ],
     "zinnen": 76,
     "fout": 3,
-    "letop": 10,
+    "letop": 9,
     "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 9,
       "info": 2
     },
     "perRegel": {
@@ -27359,7 +26600,7 @@
       "nood-contactcenter": 1,
       "tekst-spatie-leesteken": 1,
       "tekst-niet-melden": 1,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 7,
       "zin-frequentiewoord": 2,
       "aanhalingstekens": 1
     },
@@ -27475,14 +26716,6 @@
         "kop": "Regionale risico's"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -27503,17 +26736,17 @@
     ],
     "zinnen": 85,
     "fout": 0,
-    "letop": 11,
+    "letop": 10,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
+      "let-op": 10,
       "info": 2
     },
     "perRegel": {
       "bagage-heen": 1,
       "zin-lijdende-vorm": 4,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 1
     },
@@ -27610,14 +26843,6 @@
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Lijdende vorm: \"worden … gezet\". Schrijf actief.",
         "fragment": "Of u kunt het land uit worden gezet.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
@@ -27738,11 +26963,11 @@
     ],
     "zinnen": 86,
     "fout": 2,
-    "letop": 9,
+    "letop": 8,
     "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 9,
+      "let-op": 8,
       "info": 6
     },
     "perRegel": {
@@ -27750,7 +26975,7 @@
       "h3-vaste-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
       "zin-frequentiewoord": 3,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "zin-twijfeltaal": 2,
       "zin-lijdende-vorm": 2,
       "aanhalingstekens": 1
@@ -27886,14 +27111,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -27926,8 +27143,9 @@
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-frequentiewoord": 3,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-lijdende-vorm": 2
     },
     "teBespreken": {
@@ -27969,6 +27187,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment dat u een visum aanvraagt.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "zin-frequentiewoord",
@@ -28041,14 +27267,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis belandt, is de kans groot dat u naar een ander land moet worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment dat u een visum aanvraagt.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 18-11-2026 | Nog steeds geldig op: 20-11-2026"
@@ -28064,17 +27282,17 @@
     ],
     "zinnen": 82,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
       "kleur-variant": 1,
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-twijfeltaal": 1
     },
     "teBespreken": {
@@ -28137,14 +27355,6 @@
         "boodschap": "Twijfeltaal: \"mogelijk\".",
         "fragment": "Basishulp is wel mogelijk.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 19-11-2026 | Nog steeds geldig op: 21-11-2026"
@@ -28243,8 +27453,9 @@
       "info": 2
     },
     "perRegel": {
+      "paspoort-geldigheid": 1,
       "regionaal-gebiedenzin": 1,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 1,
@@ -28256,6 +27467,14 @@
       ]
     },
     "bevindingen": [
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Somalië.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
       {
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
@@ -28344,14 +27563,6 @@
         "kop": "In het kort"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Somalië.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "zin-twijfeltaal",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -28380,11 +27591,11 @@
     ],
     "zinnen": 63,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "info": 3
     },
     "perRegel": {
@@ -28393,7 +27604,7 @@
       "rubriek-vrij-te-hoog": 1,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 2,
-      "zin-max-woorden": 2
+      "zin-max-woorden": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -28464,14 +27675,6 @@
         "boodschap": "Lijdende vorm: \"worden … verslechterd\". Schrijf actief.",
         "fragment": "Wegen kunnen onbegaanbaar worden en de luchtkwaliteit verslechterd.",
         "kop": "Natuurgeweld"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort of ID-kaart moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, ID-kaart, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 14-07-2026 | Nog steeds geldig op: 19-11-2026"
@@ -28487,11 +27690,11 @@
     ],
     "zinnen": 89,
     "fout": 2,
-    "letop": 12,
+    "letop": 11,
     "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 12,
+      "let-op": 11,
       "info": 1
     },
     "perRegel": {
@@ -28500,7 +27703,7 @@
       "h4-niet-melden": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 6,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 2
     },
@@ -28624,14 +27827,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis belandt, moet u naar een ander land worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 31-07-2026 | Nog steeds geldig op: 18-11-2026"
@@ -28647,16 +27842,16 @@
     ],
     "zinnen": 51,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
       "link-tekstlengte": 1
@@ -28706,14 +27901,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -28734,11 +27921,11 @@
     ],
     "zinnen": 84,
     "fout": 1,
-    "letop": 10,
+    "letop": 9,
     "info": 5,
     "perErnst": {
       "fout": 1,
-      "let-op": 10,
+      "let-op": 9,
       "info": 5
     },
     "perRegel": {
@@ -28746,7 +27933,7 @@
       "h3-niet-melden": 1,
       "bagage-heen": 1,
       "zin-frequentiewoord": 4,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 6,
       "zin-lijdende-vorm": 2
     },
     "teBespreken": {
@@ -28874,14 +28061,6 @@
         "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Surinaamse ziekenhuizen hebben vaak een tekort aan mensen en middelen.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 16-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -29126,18 +28305,18 @@
     ],
     "zinnen": 61,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "info": 0,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "info": 0
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "titel-leestekens": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
@@ -29192,14 +28371,6 @@
         "boodschap": "Lijdende vorm: \"worden … overgebracht\". Schrijf actief.",
         "fragment": "Als u in het ziekenhuis belandt, moet u naar Zuid-Afrika worden overgebracht voor medische zorg.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 08-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -29364,18 +28535,18 @@
     ],
     "zinnen": 66,
     "fout": 1,
-    "letop": 16,
+    "letop": 15,
     "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 16,
+      "let-op": 15,
       "info": 4
     },
     "perRegel": {
       "kleur-variant": 1,
       "natuurgeweld-contact": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 12,
+      "zin-max-woorden": 11,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 1
@@ -29533,14 +28704,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "U heeft een paspoort of ander reisdocument met een stempel van de grensovergang tussen Israël en Jordanië.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -29578,8 +28741,9 @@
     "perRegel": {
       "kleur-variant": 2,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "regionaal-gebiedenzin": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-twijfeltaal": 1,
       "link-plakt-aan-woord": 1
     },
@@ -29614,6 +28778,14 @@
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
       },
       {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek van de Turks- en Caicoseilanden.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
+      {
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
@@ -29645,14 +28817,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek van de Turks- en Caicoseilanden.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-plakt-aan-woord",
         "ernst": "fout",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
@@ -29676,11 +28840,11 @@
     ],
     "zinnen": 92,
     "fout": 3,
-    "letop": 10,
+    "letop": 9,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 9,
       "info": 3
     },
     "perRegel": {
@@ -29691,7 +28855,7 @@
       "nederlands-verbuiging": 1,
       "tekst-niet-melden": 1,
       "zin-frequentiewoord": 2,
-      "zin-max-woorden": 7,
+      "zin-max-woorden": 6,
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
@@ -29823,14 +28987,6 @@
         "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
         "fragment": "Behalve de hoofdstad N’Djamena, de stad Bongor en de hoofdwegen tussen N’Djamena en Moundou, en tussen N’Djamena en Oum Hadjer.",
         "kop": "Regionale risico's"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 15-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -29848,11 +29004,11 @@
     ],
     "zinnen": 82,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "info": 2
     },
     "perRegel": {
@@ -29860,7 +29016,7 @@
       "bagage-heen": 1,
       "natuurgeweld-contact": 1,
       "regionaal-gebiedenzin": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 1,
       "eenheden-voluit": 1
     },
@@ -29927,14 +29083,6 @@
         "kop": "In het kort"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "eenheden-voluit",
         "ernst": "info",
         "bron": "SW, Schrijfregels > Afstanden/Gewicht/Hoeveelheden",
@@ -29969,10 +29117,11 @@
       "kleur-variant": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 22,
+      "zin-max-woorden": 21,
       "zin-frequentiewoord": 9,
       "zin-twijfeltaal": 4,
       "zin-lijdende-vorm": 6,
@@ -30019,6 +29168,14 @@
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Thailand."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Thailand.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-paspoort",
@@ -30345,14 +29502,6 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Thailand.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
         "fragment": "U krijgt bij aankomst een stempel in uw paspoort, met daarop de uiterste datum van uw vertrek.",
         "kop": "Paspoort, visum, rijbewijs"
       },
@@ -30421,16 +29570,16 @@
     ],
     "zinnen": 73,
     "fout": 0,
-    "letop": 7,
+    "letop": 6,
     "info": 2,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 6,
       "info": 2
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 6,
+      "zin-max-woorden": 5,
       "zin-frequentiewoord": 1,
       "zin-twijfeltaal": 1
     },
@@ -30501,14 +29650,6 @@
         "boodschap": "Twijfeltaal: \"mogelijk\".",
         "fragment": "Alleen basishulp is mogelijk.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 28-05-2026 | Nog steeds geldig op: 21-11-2026"
@@ -30533,8 +29674,9 @@
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "kinderen-paspoort": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-twijfeltaal": 3,
       "zin-lijdende-vorm": 1
     },
@@ -30549,6 +29691,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Heeft u een vraag over de actuele situatie? Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek van de Tokelau-eilanden.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "kinderen-paspoort",
@@ -30613,14 +29763,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Wees u ervan bewust dat u bij een ernstige ziekte of ongeval een groot risico loopt.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek van de Tokelau-eilanden.",
-        "kop": "Paspoort, visum"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 21-11-2026"
@@ -30636,17 +29778,17 @@
     ],
     "zinnen": 76,
     "fout": 1,
-    "letop": 5,
+    "letop": 4,
     "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
+      "let-op": 4,
       "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 1,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
       "link-tekstlengte": 1
@@ -30696,14 +29838,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -30724,11 +29858,11 @@
     ],
     "zinnen": 91,
     "fout": 1,
-    "letop": 6,
+    "letop": 5,
     "info": 7,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
+      "let-op": 5,
       "info": 7
     },
     "perRegel": {
@@ -30737,7 +29871,7 @@
       "rubrieken-volgorde": 1,
       "zin-frequentiewoord": 5,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "aanhalingstekens": 1
     },
     "teBespreken": {
@@ -30841,14 +29975,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -30878,10 +30004,10 @@
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "rijbewijs-anwb": 1,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
-      "zin-max-woorden": 1,
       "link-verboden-partij": 1,
       "link-tekstlengte": 1
     },
@@ -30896,6 +30022,14 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Tonga.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rijbewijs-anwb",
@@ -30919,14 +30053,6 @@
         "boodschap": "Twijfeltaal: \"mogelijk\".",
         "fragment": "Alleen basishulp is mogelijk.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Tonga.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "link-verboden-partij",
@@ -30957,17 +30083,17 @@
     ],
     "zinnen": 76,
     "fout": 0,
-    "letop": 7,
+    "letop": 6,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
+      "let-op": 6,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "kinderen-paspoort": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 1
     },
@@ -31014,14 +30140,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Houd altijd autodeuren op slot en de ramen dicht en houd waardevolle spullen uit het zicht.",
         "kop": "Criminaliteit"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "link-tekstlengte",
@@ -31225,11 +30343,11 @@
     ],
     "zinnen": 142,
     "fout": 4,
-    "letop": 27,
+    "letop": 26,
     "info": 9,
     "perErnst": {
       "fout": 4,
-      "let-op": 27,
+      "let-op": 26,
       "info": 9
     },
     "perRegel": {
@@ -31241,7 +30359,7 @@
       "alinea-max-woorden": 2,
       "nederlands-verbuiging": 1,
       "zin-frequentiewoord": 7,
-      "zin-max-woorden": 17,
+      "zin-max-woorden": 16,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 1,
       "link-tekstlengte": 1,
@@ -31542,14 +30660,6 @@
         "kop": "In het kort"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort of ID-kaart moet nog minimaal 150 dagen geldig zijn op het moment dat u aankomt in Turkije.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "zin-frequentiewoord",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -31602,9 +30712,9 @@
     "perRegel": {
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "paspoort-geldigheid": 1,
       "zin-lijdende-vorm": 1,
-      "zin-twijfeltaal": 1,
-      "zin-max-woorden": 1
+      "zin-twijfeltaal": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -31627,6 +30737,14 @@
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
       },
       {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Tuvalu.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
+      {
         "regel": "zin-lijdende-vorm",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -31641,14 +30759,6 @@
         "boodschap": "Twijfeltaal: \"mogelijk\".",
         "fragment": "Basishulp is mogelijk.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Tuvalu.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 21-11-2026"
@@ -31673,7 +30783,8 @@
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 2,
+      "paspoort-geldigheid": 1,
+      "zin-max-woorden": 1,
       "zin-lijdende-vorm": 1,
       "link-tekstlengte": 1
     },
@@ -31690,20 +30801,20 @@
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
       },
       {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Taiwan.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
+      },
+      {
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "De wetten en de gebruiken in Taiwan tegenover lhbtiq+ personen zijn vergelijkbaar met die van Nederland.",
         "kop": "Wetten en gebruiken"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in Taiwan.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -31747,9 +30858,10 @@
       "kort-een-actualiteit": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
+      "paspoort-geldigheid": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
-      "zin-max-woorden": 17,
+      "zin-max-woorden": 16,
       "zin-frequentiewoord": 5,
       "zin-lijdende-vorm": 8,
       "zin-twijfeltaal": 2,
@@ -31796,6 +30908,14 @@
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
         "notitie": "Alleen in uitzonderlijke gevallen als het risico groot is voor een grote groep Nederlanders."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn na afgifte van het visum en op het moment van aankomst in het land.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "regionaal-gebiedenzin",
@@ -32052,14 +31172,6 @@
         "kop": "Reisverzekering"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 24 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn na afgifte van het visum en op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "zin-twijfeltaal",
         "ernst": "info",
         "bron": "SW, Begrijpelijkheid > B1",
@@ -32095,11 +31207,11 @@
     ],
     "zinnen": 92,
     "fout": 2,
-    "letop": 14,
+    "letop": 13,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 14,
+      "let-op": 13,
       "info": 3
     },
     "perRegel": {
@@ -32107,7 +31219,7 @@
       "h3-vaste-kop": 1,
       "h4-kop-variant": 1,
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 11,
+      "zin-max-woorden": 10,
       "zin-twijfeltaal": 1,
       "zin-frequentiewoord": 2,
       "aanhalingstekens": 1
@@ -32262,14 +31374,6 @@
         "kop": "Terrorisme"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -32290,15 +31394,16 @@
     ],
     "zinnen": 71,
     "fout": 2,
-    "letop": 6,
+    "letop": 7,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 6,
+      "let-op": 7,
       "info": 3
     },
     "perRegel": {
       "actueel-max-woorden": 1,
+      "paspoort-geldigheid": 1,
       "rubrieken-volgorde": 1,
       "rubriek-vrij-te-hoog": 1,
       "tekst-spatie-leesteken": 1,
@@ -32315,6 +31420,14 @@
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "De actualiteit in \"In het kort\" telt 29 woorden. Maximaal 25.",
         "fragment": "Rusland voert een oorlog tegen Oekraïne. Dagelijks zijn er Russische luchtaanvallen, op de hoofdstad Kyiv en andere steden. Aanvallen kunnen gericht zijn op belangrijke voorzieningen. Lees meer onder Actueel."
+      },
+      {
+        "regel": "paspoort-geldigheid",
+        "ernst": "let-op",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
+        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn bij vertrek uit het land.",
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       },
       {
         "regel": "rubrieken-volgorde",
@@ -32768,15 +31881,15 @@
     ],
     "zinnen": 81,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "info": 0
     },
     "perRegel": {
-      "zin-max-woorden": 4,
+      "zin-max-woorden": 3,
       "zin-lijdende-vorm": 1
     },
     "teBespreken": {
@@ -32814,14 +31927,6 @@
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "De kleurcode van het reisadvies is oranje voor de regio Termiz en de grens van Oezbekistan met Afghanistan.",
         "kop": "In het kort"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 15-07-2026 | Nog steeds geldig op: 21-11-2026"
@@ -32837,17 +31942,17 @@
     ],
     "zinnen": 58,
     "fout": 0,
-    "letop": 5,
+    "letop": 4,
     "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
+      "let-op": 4,
       "info": 3
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "zin-lijdende-vorm": 1,
-      "zin-max-woorden": 2,
+      "zin-max-woorden": 1,
       "zin-frequentiewoord": 3,
       "link-tekstlengte": 1
     },
@@ -32904,14 +32009,6 @@
         "kop": "Paspoort, visum, rijbewijs"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -32933,11 +32030,11 @@
     ],
     "zinnen": 103,
     "fout": 5,
-    "letop": 25,
+    "letop": 24,
     "info": 8,
     "perErnst": {
       "fout": 5,
-      "let-op": 25,
+      "let-op": 24,
       "info": 8
     },
     "perRegel": {
@@ -32949,7 +32046,7 @@
       "natuurgeweld-contact": 1,
       "kinderen-documenten": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 17,
+      "zin-max-woorden": 16,
       "zin-frequentiewoord": 6,
       "zin-lijdende-vorm": 4,
       "zin-twijfeltaal": 1,
@@ -33242,14 +32339,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 20 woorden. Maximaal 15.",
         "fragment": "U moet bij aankomst wel een uitreisticket laten zien, en een bewijs dat u een accommodatie in Venezuela heeft geboekt.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -33282,16 +32371,16 @@
     ],
     "zinnen": 54,
     "fout": 0,
-    "letop": 6,
+    "letop": 5,
     "info": 0,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
+      "let-op": 5,
       "info": 0
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 5
+      "zin-max-woorden": 4
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -33336,14 +32425,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Toon het ingevulde formulier bij aankomst op uw mobiele telefoon of neem een geprinte versie mee.",
         "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 27-10-2026 | Nog steeds geldig op: 21-11-2026"
@@ -33359,11 +32440,11 @@
     ],
     "zinnen": 53,
     "fout": 0,
-    "letop": 19,
+    "letop": 18,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 19,
+      "let-op": 18,
       "info": 1
     },
     "perRegel": {
@@ -33371,7 +32452,7 @@
       "rijbewijs-anwb": 1,
       "kinderen-paspoort": 1,
       "zin-lijdende-vorm": 4,
-      "zin-max-woorden": 11,
+      "zin-max-woorden": 10,
       "zin-twijfeltaal": 1,
       "link-tekstlengte": 1
     },
@@ -33462,14 +32543,6 @@
         "regel": "zin-max-woorden",
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 21 woorden. Maximaal 15.",
         "fragment": "U bent Nederlander en u bent sinds 1 maart 2011 in Iran, Noord-Korea, Syrië, Libië, Somalië, Jemen, Irak of Sudan geweest.",
         "kop": "Paspoort, visum, rijbewijs"
@@ -33551,11 +32624,11 @@
     ],
     "zinnen": 96,
     "fout": 2,
-    "letop": 17,
+    "letop": 16,
     "info": 7,
     "perErnst": {
       "fout": 2,
-      "let-op": 17,
+      "let-op": 16,
       "info": 7
     },
     "perRegel": {
@@ -33564,7 +32637,7 @@
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 12,
+      "zin-max-woorden": 11,
       "zin-frequentiewoord": 3,
       "zin-lijdende-vorm": 2,
       "zin-twijfeltaal": 3,
@@ -33771,14 +32844,6 @@
         "kop": "Verkeersongevallen"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -33799,11 +32864,11 @@
     ],
     "zinnen": 92,
     "fout": 2,
-    "letop": 14,
+    "letop": 13,
     "info": 8,
     "perErnst": {
       "fout": 2,
-      "let-op": 14,
+      "let-op": 13,
       "info": 8
     },
     "perRegel": {
@@ -33812,7 +32877,7 @@
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "woord-onbekend": 2,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-frequentiewoord": 4,
       "zin-lijdende-vorm": 3,
       "zin-twijfeltaal": 3,
@@ -33989,14 +33054,6 @@
         "ernst": "let-op",
         "bron": "SW, Begrijpelijkheid > B1",
         "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
         "fragment": "U heeft een retourticket nodig, of een ticket naar een volgend land waarvoor u aan de inreisvoorwaarden voldoet.",
         "kop": "Paspoort, visum, rijbewijs"
       },
@@ -34035,18 +33092,17 @@
     ],
     "zinnen": 43,
     "fout": 0,
-    "letop": 3,
+    "letop": 2,
     "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
+      "let-op": 2,
       "info": 1
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
       "rijbewijs-anwb": 1,
-      "zin-twijfeltaal": 1,
-      "zin-max-woorden": 1
+      "zin-twijfeltaal": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -34074,14 +33130,6 @@
         "boodschap": "Twijfeltaal: \"mogelijk\".",
         "fragment": "Alleen basiszorg is mogelijk.",
         "kop": "Reisverzekering"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 3 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 21-11-2026"
@@ -34106,7 +33154,7 @@
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
-      "zin-max-woorden": 1
+      "paspoort-geldigheid": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -34121,12 +33169,12 @@
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
       },
       {
-        "regel": "zin-max-woorden",
+        "regel": "paspoort-geldigheid",
         "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 17 woorden. Maximaal 15.",
+        "bron": "SJ, blok Paspoort / Paspoort of ID-kaart",
+        "boodschap": "De zin over hoelang het paspoort nog geldig moet zijn, wijkt af van het sjabloon.",
         "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit Samoa.",
-        "kop": "Paspoort, visum, rijbewijs"
+        "verwacht": "Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 24-04-2026 | Nog steeds geldig op: 21-11-2026"
@@ -34142,11 +33190,11 @@
     ],
     "zinnen": 85,
     "fout": 2,
-    "letop": 21,
+    "letop": 20,
     "info": 5,
     "perErnst": {
       "fout": 2,
-      "let-op": 21,
+      "let-op": 20,
       "info": 5
     },
     "perRegel": {
@@ -34156,7 +33204,7 @@
       "natuurgeweld-contact": 1,
       "rubrieken-max": 1,
       "rubriek-vrij-te-hoog": 1,
-      "zin-max-woorden": 8,
+      "zin-max-woorden": 7,
       "zin-lijdende-vorm": 10,
       "zin-frequentiewoord": 2,
       "zin-twijfeltaal": 2
@@ -34383,14 +33431,6 @@
         "boodschap": "Deze zin telt 16 woorden. Maximaal 15.",
         "fragment": "Neem contact op met uw reisverzekeraar of met de Nederlandse ambassade in Jordanië, Saoedi-Arabië of Egypte.",
         "kop": "In geval van nood"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 19-10-2026 | Nog steeds geldig op: 19-11-2026"
@@ -34406,11 +33446,11 @@
     ],
     "zinnen": 74,
     "fout": 3,
-    "letop": 14,
+    "letop": 13,
     "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 14,
+      "let-op": 13,
       "info": 3
     },
     "perRegel": {
@@ -34420,7 +33460,7 @@
       "nood-contactcenter": 1,
       "reisverzekering-vaste-tekst": 1,
       "rubrieken-volgorde": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-lijdende-vorm": 1,
       "zin-frequentiewoord": 2,
       "link-tekstlengte": 2,
@@ -34538,14 +33578,6 @@
         "kop": "Criminaliteit"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 30 dagen geldig zijn op het moment van vertrek uit het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "link-tekstlengte",
         "ernst": "let-op",
         "bron": "SW, Gebruiksvriendelijkheid > Lengte linkteksten",
@@ -34602,18 +33634,18 @@
     ],
     "zinnen": 76,
     "fout": 1,
-    "letop": 10,
+    "letop": 9,
     "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 10,
+      "let-op": 9,
       "info": 3
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "regionaal-gebiedenzin": 1,
-      "zin-max-woorden": 5,
+      "zin-max-woorden": 4,
       "zin-lijdende-vorm": 2,
       "zin-frequentiewoord": 3,
       "aanhalingstekens": 1
@@ -34720,14 +33752,6 @@
         "kop": "In het kort"
       },
       {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
-      },
-      {
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
@@ -34748,11 +33772,11 @@
     ],
     "zinnen": 68,
     "fout": 2,
-    "letop": 7,
+    "letop": 6,
     "info": 2,
     "perErnst": {
       "fout": 2,
-      "let-op": 7,
+      "let-op": 6,
       "info": 2
     },
     "perRegel": {
@@ -34760,7 +33784,7 @@
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "kinderen-paspoort": 1,
-      "zin-max-woorden": 3,
+      "zin-max-woorden": 2,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 2
     },
@@ -34833,14 +33857,6 @@
         "boodschap": "\"vaak\" zegt hoe vaak iets gebeurt. Klopt dat hier, of kan het stelliger?",
         "fragment": "Dit is vaak in Amerikaanse dollars.",
         "kop": "Geldzaken"
-      },
-      {
-        "regel": "zin-max-woorden",
-        "ernst": "let-op",
-        "bron": "SW, Begrijpelijkheid > B1",
-        "boodschap": "Deze zin telt 18 woorden. Maximaal 15.",
-        "fragment": "Uw Nederlandse paspoort moet nog minimaal 6 maanden geldig zijn op het moment van aankomst in het land.",
-        "kop": "Paspoort, visum, rijbewijs"
       },
       {
         "regel": "zin-lijdende-vorm",

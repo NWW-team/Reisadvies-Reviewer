@@ -1,6 +1,6 @@
 # Vaste teksten die zelf boven de norm zitten
 
-Gedraaid op 2026-11-19 over 226 reisadviezen.
+Gedraaid op 2026-11-22 over 226 reisadviezen.
 
 De schrijfwijzer houdt **maximaal 15 woorden per zin** aan, en
 **20** als er een link in de zin staat. De formuleringen
@@ -13,7 +13,6 @@ voorgeschreven zin structureel te lang is, is dat een gesprek over het sjabloon.
 | woorden | in hoeveel adviezen | soort | link | zin |
 |---:|---:|---|---|---|
 | 32 | 192 | verplicht | ja | Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400. |
-| 20 | 113 | als van toepassing |  | Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie. |
 | 16 | 110 | als van toepassing |  | U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals …. |
 | 18 | 97 | als van toepassing |  | Als u in het ziekenhuis belandt, moet u mogelijk naar een ander land worden overgebracht voor medische zorg. |
 | 16 | 81 | als van toepassing |  | Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |
@@ -25,6 +24,7 @@ voorgeschreven zin structureel te lang is, is dat een gesprek over het sjabloon.
 | 21 | 5 | als van toepassing |  | In een noodgeval kunt u ook terecht bij de ambassade van een ander land dat lid is van de Europese Unie. |
 | 18 | 3 | als van toepassing |  | Dan moet u een bewijs van vaccinatie tegen gele koorts laten zien als u naar Land X reist. |
 | 21 | – | verplicht |  | Bekijk wat u vanuit Land X mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland? |
+| 21 | 0 | verplicht |  | Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal … maanden geldig zijn op het moment van aankomst in / vertrek uit het land. |
 | 20 | 0 | verplicht |  | Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie. |
 | 19 | 0 | als van toepassing |  | Kinderen hebben ook een geldig paspoort of geldige ID-kaart en een visum nodig voor een reis naar Land X. |
 | 17 | – | als van toepassing |  | In Land X is uw Nederlandse rijbewijs alleen geldig als u ook een geldig internationaal rijbewijs heeft. |

@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-21 over 226 reisadviezen.
+Gedraaid op 2026-11-22 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **78** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **106** van de 3353 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **106** van de 3228 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -17,8 +17,6 @@ de standaardtekst lost ze allemaal tegelijk op.
 | regel | in hoeveel adviezen | wat |
 |---|---:|---|
 | `natuurgeweld-contact` | 112 | De zin over contact met de lokale autoriteiten wijkt af van het sjabloon. |
-| `zin-max-woorden` | 55 | Deze zin telt 18 woorden. Maximaal 15. |
-| `zin-max-woorden` | 52 | Deze zin telt 18 woorden. Maximaal 15. |
 | `h4-niet-melden` | 49 | "Foto’s maken" gaat over foto's maken, en dat hoort niet in een reisadvies. |
 
 ## Per soort bevinding
@@ -29,14 +27,14 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 281 | 148 |
-| geel/oranje — let op | 2382 | 225 |
+| geel/oranje — let op | 2257 | 224 |
 | grijs — ter overweging | 690 | 184 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 223 | 1366 |
+| `zin-max-woorden` | 213 | 1213 |
 | `zin-lijdende-vorm` | 158 | 407 |
 | `zin-frequentiewoord` | 146 | 416 |
 | `natuurgeweld-contact` | 125 | 125 |
@@ -51,6 +49,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `regionaal-gebiedenzin` | 33 | 33 |
 | `reisverzekering-vaste-tekst` | 31 | 31 |
 | `kinderen-paspoort` | 29 | 29 |
+| `paspoort-geldigheid` | 28 | 28 |
 | `rubriek-vrij-te-hoog` | 26 | 26 |
 | `woord-onbekend` | 25 | 46 |
 | `h3-niet-melden` | 23 | 23 |

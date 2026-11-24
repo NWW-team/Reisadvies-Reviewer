@@ -1,7 +1,7 @@
 # Ter bespreking
 
 Drie lijsten voor het gesprek met de manager en de coördinator van de reisadviezen. De aantallen
-komen uit [`data/totaaloverzicht.md`](../data/totaaloverzicht.md), gemeten op 19 november 2026 over
+komen uit [`data/totaaloverzicht.md`](../data/totaaloverzicht.md), gemeten op 24 november 2026 over
 alle 226 reisadviezen. De bespreekpunten volgen dezelfde indeling als het overzicht: inhoudelijke
 keuzes over het format, en taalkeuzes.
 
@@ -87,7 +87,7 @@ Vraag: is dit de afspraak, en zo ja, moet dat in de matrix? Die zegt nu alleen "
 
 ### Vaste zinnen uit het sjabloon die zelf boven de norm zitten
 
-Zeventien formuleringen uit het sjabloon zijn zelf langer dan de schrijfwijzer toestaat: 15 woorden,
+Zestien formuleringen uit het sjabloon zijn zelf langer dan de schrijfwijzer toestaat: 15 woorden,
 of 20 als er een link in de zin staat. De tool meldt ze niet, want de redacteur volgt het sjabloon.
 Sinds de tool ook zinnen in bullets toetst (19 november 2026), zijn er zeven bijgekomen die altijd
 in een opsomming staan. De meest gebruikte:
@@ -166,7 +166,7 @@ zo heten, maar die de lezer misschien niet kent: ‘spuugtruc’, ‘babbeltruc�
 maar hij staat niet in de woordenlijst.
 
 De tool meldt enkele aanhalingstekens nu als *ter overweging*, met de vraag of er een uitleg bij staat.
-Dubbele aanhalingstekens blijven *let op*. Gemeten: 84 keer enkele, 1 keer dubbele.
+Dubbele aanhalingstekens blijven *let op*. Gemeten: 82 keer enkele, 1 keer dubbele.
 
 **Voorstel voor de schrijfwijzer** (bij *Aanhalingstekens*):
 
@@ -217,6 +217,9 @@ matrix of het sjabloon leest, ziet iets anders dan wat de tool goedkeurt.
 | Een tussenkop onder *Natuurgeweld* noemt het risico (vulkanen, orkanen, overstromingen), niet de plaats of de activiteit. | sjabloon, blok Natuurgeweld |
 | In de kinderzin mag *"eventueel"* staan (*"… en eventueel een visum"*), terwijl het sjabloon daar het markeringetje `[evt.:]` heeft. | sjabloon, blok Paspoort, visum, rijbewijs |
 | De volgorde van de rubrieken mag afwijken als een risico zwaarder weegt (bijvoorbeeld natuurgeweld in de zomer); de tool vraagt alleen of dat bewust is. Het sjabloon noemt de volgorde nu dwingend. | sjabloon, blok Risico dat van toepassing is |
+| De eerste kleurbullet mag *"De kleurcode van het reisadvies voor [land] is voor het grootste deel rood"* zijn, als bijna het hele land één kleur heeft (Burkina Faso). | matrix, tabblad Kleurcode-teksten |
+| De aanhef boven de gebieden onder Regionale risico's is *"Voor de volgende gebieden geldt kleurcode …:"*. Gaat het alleen over eilanden of over een of twee steden, dan mag *eilanden* of *steden* (de VAE). | sjabloon, blok Regionale risico's |
+| De kinderzin mag ook eindigen op *"nodig om naar [land] te reizen"* (Spanje), net als de zin voor volwassenen. | sjabloon, blok Paspoort, visum, rijbewijs |
 | Erheen of hierheen: we houden aan wat de matrix zegt (één kleurcode: *erheen*, meer kleurcodes: *hierheen*, ook bij *"de rest van [land]"*). Dat stond op *voorlopig* en is nu definitief. | staat al in de matrix; alleen bevestigen |
 
 ## 3. Later

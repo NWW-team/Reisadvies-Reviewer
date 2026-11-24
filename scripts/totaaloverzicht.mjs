@@ -91,7 +91,7 @@ const LENGTE = [
 const IN_HET_KORT = [
   ['kort-een-actualiteit', 'Meer dan één actualiteit (bullet die geen kleurcode uitlegt)'],
   ['kort-actualiteit-eerste', 'Actualiteit staat niet in bullet 1'],
-  ['kort-actualiteit-verwijzing', 'Actualiteit verwijst niet naar Actueel (of naar een andere rubriek: ter overweging)'],
+  ['kort-actualiteit-verwijzing', 'Actualiteit verwijst niet naar Actueel (of naar een andere rubriek: de vraag of dat een uitzondering is)'],
   ['kort-verwijst-regionaal', "Meerdere kleurcodes, maar geen verwijzing naar Regionale risico's"],
   ['kort-verwijzing-hoogste-kleur', "Verwijzing naar Regionale risico's niet bij de hoogste kleur"],
   ['kort-verwijzing-vorm', 'Verwijzing niet in de vorm "Lees meer onder …"'],

@@ -68,7 +68,7 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 
 | | 14 september 2026 | nu |
 |---|---:|---:|
-| Actualiteit verwijst niet naar Actueel (of naar een andere rubriek: ter overweging) | 13 (13) | 10 (10) |
+| Actualiteit verwijst niet naar Actueel (of naar een andere rubriek: de vraag of dat een uitzondering is) | 13 (13) | 10 (10) |
 | Meer dan één actualiteit (bullet die geen kleurcode uitlegt) | 6 (6) | 8 (9) |
 | Verwijzing naar Regionale risico's niet bij de hoogste kleur | 2 (2) | 1 (1) |
 | Actualiteit staat niet in bullet 1 | 0 (0) | 1 (1) |

@@ -547,8 +547,11 @@
       "rubriek": "regionaal",
       "bron": "SJ, blok Regionale risico’s",
       "zin": "Voor de volgende gebieden geldt kleurcode {kleur}:",
-      "kern": "voor de volgende gebieden geldt kleurcode",
-      "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt."
+      "kern": "voor de volgende (?:gebieden|eilanden|steden) geldt kleurcode",
+      "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+      "herken": "voor de volgende \\S+ geldt kleurcode",
+      "boodschap_afwijkend": "De aanhef boven de opsomming wijkt af van het sjabloon. Vast is 'gebieden'; 'eilanden' of 'steden' mag als het alleen daarover gaat.",
+      "_varianten": "Martijn, 24 november 2026: 'gebieden' is de vaste formulering en komt het vaakst voor. Gaat de opsomming alleen over eilanden, of over een of twee steden, dan mag 'eilanden' of 'steden'. Andere woorden (provincies, vulkanen) worden gemeld als afwijking."
     },
     {
       "id": "rood-herhaling-voorbereiding",

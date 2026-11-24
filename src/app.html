@@ -276,6 +276,8 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .bev .tekst { margin: 6px 0 0; font-size: .91rem; }
 .bev blockquote { margin: 8px 0 0; padding: 6px 10px; border-left: 2px solid var(--lijn-sterk); background: var(--vlak-2); font-size: .84rem; cursor: pointer; }
 .bev .verwacht { margin-top: 7px; font-size: .8rem; color: var(--gedempt); }
+.bev .naar-kop { color: var(--blauw); font-weight: 600; }
+#advies .kop-actief { outline: 2px solid var(--blauw); outline-offset: 3px; }
 .bev .bron { margin-top: 7px; font-size: .74rem; color: var(--gedempt); }
 .bev .verwacht b { color: var(--inkt); font-weight: 600; }
 /* Eén knop, rechtsboven en bewust bescheiden: de richtlijn volg je, dus "eens" of "oneens" is geen
@@ -954,7 +956,7 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
         const tag = blok.niveau === 2 ? 'h3 class="blok-h2"' : 'h4 class="blok-h3"';
         const sluit = blok.niveau === 2 ? 'h3' : 'h4';
         const lang = woorden > 250;
-        stukken.push('<' + tag + '>' + markeerKop(blok.kop, perZin)
+        stukken.push('<' + tag + ' data-kop="' + esc(norm(blok.kop).toLowerCase()) + '">' + markeerKop(blok.kop, perZin)
           + '<span class="telling' + (lang ? ' lang' : '') + '">' + woorden + ' woorden</span></' + sluit + '>');
       }
       // Op documentvolgorde: een alinea ná een opsomming hoort er ook ná te staan. Eerst alle
@@ -1099,6 +1101,8 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       + '<div class="bovenrij">' + soort + knop + '</div>'
       + '<p class="tekst">' + esc(bev.boodschap) + '</p>'
       + (bev.fragment ? '<blockquote data-naar="' + i + '">' + esc(bev.fragment) + '</blockquote>' : '')
+      + (bev.plek ? '<div class="verwacht">Hoort onder: <a href="#" class="naar-kop" data-naar-kop="'
+          + esc(norm(bev.plek).toLowerCase()) + '">' + esc(bev.plek) + '</a></div>' : '')
       + (bev.verwacht ? '<div class="verwacht">Verwacht: <b>' + esc(bev.verwacht) + '</b></div>' : '')
       + (bev.detail ? '<div class="verwacht">Langste blokken: <b>' + esc(bev.detail.join(' · ')) + '</b></div>' : '')
       + (bev.notitie && !woord ? '<div class="verwacht">' + esc(bev.notitie) + '</div>' : '')
@@ -1123,6 +1127,20 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
 
     const quote = e.target.closest('blockquote[data-naar]');
     if (quote) return richtOp(Number(quote.dataset.naar), 'melding');
+
+    // Een melding over iets dat ontbreekt, springt naar de kop van de rubriek waar het hoort.
+    const naarKop = e.target.closest('[data-naar-kop]');
+    if (naarKop) {
+      e.preventDefault();
+      const kop = document.querySelector('#advies [data-kop="' + CSS.escape(naarKop.dataset.naarKop) + '"]');
+      if (!kop) return;
+      document.querySelectorAll('.bev.actief, .zin.actief, #advies .kop-actief')
+        .forEach((el) => el.classList.remove('actief', 'kop-actief'));
+      kop.classList.add('kop-actief');
+      const kaart = naarKop.closest('.bev');
+      if (kaart) kaart.classList.add('actief');
+      return naarHoogte(kop, RICHT_MARGE);
+    }
 
     const knop = e.target.closest('[data-oordeel]');
     if (knop) return legOordeelVast(knop.dataset.sleutel, knop.dataset.oordeel, knop.dataset.woord);

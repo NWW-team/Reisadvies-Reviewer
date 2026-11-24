@@ -36,6 +36,7 @@
         "ernst": "fout",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
@@ -400,7 +401,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Angola?"
       },
       {
         "regel": "zin-max-woorden",
@@ -634,7 +636,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Demonstraties, Terrorisme, Criminaliteit, Wetten en gebruiken, Landmijnen, Verkeersongevallen, Natuurgeweld"
+        "notitie": "De rubrieken: Demonstraties, Terrorisme, Criminaliteit, Wetten en gebruiken, Landmijnen, Verkeersongevallen, Natuurgeweld",
+        "plek": "Welke veiligheidsrisico’s zijn er in Albanië?"
       },
       {
         "regel": "rubriek-vrij-te-hoog",
@@ -769,11 +772,11 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 23,
+    "letop": 22,
     "info": 4,
     "perErnst": {
       "fout": 4,
-      "let-op": 23,
+      "let-op": 22,
       "info": 4
     },
     "perRegel": {
@@ -784,7 +787,6 @@
       "intro-vaste-tekst": 1,
       "bagage-heen": 1,
       "natuurgeweld-contact": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "nederlands-verbuiging": 1,
       "tekst-onzichtbaar-teken": 1,
@@ -858,18 +860,12 @@
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
       },
       {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
-      },
-      {
         "regel": "rubrieken-max",
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico’s, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico’s, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in de VAE?"
       },
       {
         "regel": "nederlands-verbuiging",
@@ -1210,6 +1206,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -1440,6 +1437,7 @@
         "ernst": "fout",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
@@ -1455,6 +1453,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Bent u in Antarctica en bent u in nood? Bijvoorbeeld: u bent opgenomen in het ziekenhuis, of u bent bestolen. Lees wat u kunt doen in geval van nood."
       },
       {
@@ -1462,6 +1461,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
       },
       {
@@ -1469,6 +1469,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Reisvaccinaties",
         "boodschap": "De vaste verwijzing naar GGD Reisvaccinaties ontbreekt.",
+        "plek": "Reisvaccinaties",
         "verwacht": "Check welke vaccinaties u nodig heeft voor Antarctica op de website van GGD Reisvaccinaties."
       },
       {
@@ -1476,6 +1477,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Reisvaccinaties",
         "boodschap": "De vaste verwijzing naar het LCR ontbreekt.",
+        "plek": "Reisvaccinaties",
         "verwacht": "Maak een vaccinatie-afspraak bij u in de buurt. Check alle aanbieders van reisvaccinaties op de website van het Landelijk Coördinatiecentrum Reizigersadvisering (LCR)."
       },
       {
@@ -1483,6 +1485,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "plek": "Medicijnen",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
       },
       {
@@ -1490,6 +1493,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "plek": "Bagageregels",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Antarctica."
       },
       {
@@ -1497,6 +1501,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De verwijzing naar 'Wat mag ik meenemen naar Nederland?' wijkt af van de vaste tekst.",
+        "plek": "Bagageregels",
         "verwacht": "Bekijk wat u vanuit Antarctica mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland?"
       },
       {
@@ -2299,6 +2304,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "plek": "Medicijnen",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
       },
       {
@@ -2555,7 +2561,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Burkina Faso?"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -2705,6 +2712,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -2712,7 +2720,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 8 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Wetten en gebruiken, Criminaliteit, Verkeersongevallen, Demonstraties, Terrorisme, Natuurgeweld"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Wetten en gebruiken, Criminaliteit, Verkeersongevallen, Demonstraties, Terrorisme, Natuurgeweld",
+        "plek": "Welke veiligheidsrisico's zijn er in Bangladesh?"
       },
       {
         "regel": "rubrieken-volgorde",
@@ -3241,6 +3250,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -3470,6 +3480,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico’s",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -3782,6 +3793,7 @@
         "ernst": "fout",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
@@ -3789,6 +3801,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Bent u in Bonaire en bent u in nood? Bijvoorbeeld: u bent opgenomen in het ziekenhuis, of u bent bestolen. Lees wat u kunt doen in geval van nood."
       },
       {
@@ -3796,6 +3809,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
       },
       {
@@ -3916,6 +3930,7 @@
         "ernst": "fout",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
@@ -3923,6 +3938,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Bent u in Saba en bent u in nood? Bijvoorbeeld: u bent opgenomen in het ziekenhuis, of u bent bestolen. Lees wat u kunt doen in geval van nood."
       },
       {
@@ -3930,6 +3946,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
       },
       {
@@ -3937,6 +3954,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, rijbewijs",
         "verwacht": "Lees meer over rijden in Saba op de website van de ANWB."
       },
       {
@@ -4013,6 +4031,7 @@
         "ernst": "fout",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
@@ -4020,6 +4039,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Bent u in Sint Eustatius en bent u in nood? Bijvoorbeeld: u bent opgenomen in het ziekenhuis, of u bent bestolen. Lees wat u kunt doen in geval van nood."
       },
       {
@@ -4027,6 +4047,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
       },
       {
@@ -4050,6 +4071,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, rijbewijs",
         "verwacht": "Lees meer over rijden in Sint Eustatius op de website van de ANWB."
       },
       {
@@ -4539,6 +4561,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Bent u in Bhutan en bent u in nood? Bijvoorbeeld: u bent opgenomen in het ziekenhuis, of u bent bestolen. Lees wat u kunt doen in geval van nood."
       },
       {
@@ -4546,6 +4569,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
       },
       {
@@ -4553,6 +4577,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "plek": "Medicijnen",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
       },
       {
@@ -4568,6 +4593,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "De vaste verwijzing over reizen met een minderjarig kind ontbreekt.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee."
       },
       {
@@ -4764,6 +4790,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Centraal-Afrikaanse Republiek op de website van de ANWB."
       },
       {
@@ -5071,7 +5098,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Oorlog en conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Oorlog en conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Chili?"
       },
       {
         "regel": "zin-max-woorden",
@@ -6638,7 +6666,8 @@
         "regel": "kort-max-bullets",
         "ernst": "fout",
         "bron": "SJ, blok In het kort",
-        "boodschap": "\"In het kort\" heeft 5 bullets. Het sjabloon staat er maximaal 4 toe."
+        "boodschap": "\"In het kort\" heeft 5 bullets. Het sjabloon staat er maximaal 4 toe.",
+        "plek": "In het kort"
       },
       {
         "regel": "natuurgeweld-contact",
@@ -6661,7 +6690,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Landmijnen, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Landmijnen, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Colombia?"
       },
       {
         "regel": "rubriek-vrij-te-hoog",
@@ -7442,7 +7472,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Bij kleurcode oranje ontbreekt de vaste handelingsinstructie.",
-        "verwacht": "De kleurcode van het reisadvies voor Cuba is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt."
+        "verwacht": "De kleurcode van het reisadvies voor Cuba is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "plek": "In het kort"
       },
       {
         "regel": "h3-niet-melden",
@@ -7668,6 +7699,7 @@
         "ernst": "fout",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
@@ -8234,6 +8266,7 @@
         "ernst": "fout",
         "bron": "SJ, blok Reisverzekering",
         "boodschap": "Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij.",
+        "plek": "Reisverzekering",
         "verwacht": "Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde risico’s of kosten bij schade zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar."
       },
       {
@@ -8249,7 +8282,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Djibouti?"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -8646,7 +8680,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Algerije?"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -9354,7 +9389,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Egypte?"
       },
       {
         "regel": "alinea-max-woorden",
@@ -9554,6 +9590,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Eritrea op de website van de ANWB."
       },
       {
@@ -10590,6 +10627,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Micronesië op de website van de ANWB."
       },
       {
@@ -10711,6 +10749,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "De vaste verwijzing over reizen met een minderjarig kind ontbreekt.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee."
       },
       {
@@ -10794,6 +10833,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "plek": "Medicijnen",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
       },
       {
@@ -10976,7 +11016,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Georgië?"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -11196,6 +11237,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico’s",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -11345,7 +11387,8 @@
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
         "boodschap": "Bij kleurcode oranje ontbreekt de vaste handelingsinstructie.",
-        "verwacht": "De kleurcode van het reisadvies voor Guinee is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt."
+        "verwacht": "De kleurcode van het reisadvies voor Guinee is oranje. Reis alleen hierheen als het noodzakelijk is. Bijvoorbeeld voor de uitvaart van een familielid. Of als u er dringend heen moet voor uw werk. Het is niet veilig er op vakantie te gaan. De Nederlandse ambassade kan u minder goed helpen als u in de problemen komt.",
+        "plek": "In het kort"
       },
       {
         "regel": "h4-niet-melden",
@@ -11639,6 +11682,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -12760,6 +12804,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "plek": "Medicijnen",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
       },
       {
@@ -13079,7 +13124,8 @@
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "boodschap": "De aanhef boven de opsomming wijkt af van het sjabloon. Vast is 'gebieden'; 'eilanden' of 'steden' mag als het alleen daarover gaat.",
+        "fragment": "Voor de volgende provincies geldt kleurcode oranje:",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -13087,7 +13133,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 8 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Indonesië?"
       },
       {
         "regel": "tekst-plakfout",
@@ -13424,7 +13471,8 @@
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode rood wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor India is rood."
+        "verwacht": "De kleurcode van het reisadvies voor India is rood.",
+        "plek": "In het kort"
       },
       {
         "regel": "kleur-variant",
@@ -13456,6 +13504,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "plek": "Bagageregels",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van India."
       },
       {
@@ -13471,6 +13520,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico’s",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -13478,7 +13528,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 8 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico’s, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Actueel, Regionale risico’s, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in India?"
       },
       {
         "regel": "woord-onbekend",
@@ -14103,7 +14154,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Terrorisme, Demonstraties, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen"
+        "notitie": "De rubrieken: Actueel, Terrorisme, Demonstraties, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Iran?"
       },
       {
         "regel": "rubriek-vrij-te-hoog",
@@ -14444,7 +14496,8 @@
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode oranje wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Irak is oranje."
+        "verwacht": "De kleurcode van het reisadvies voor Irak is oranje.",
+        "plek": "In het kort"
       },
       {
         "regel": "actueel-max-woorden",
@@ -14474,6 +14527,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -14481,7 +14535,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 8 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Demonstraties, Wetten en gebruiken, Natuurgeweld, Landmijnen"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Demonstraties, Wetten en gebruiken, Natuurgeweld, Landmijnen",
+        "plek": "Welke veiligheidsrisico's zijn er in Irak?"
       },
       {
         "regel": "rubriek-vrij-te-hoog",
@@ -14761,6 +14816,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -14887,7 +14943,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Israël?"
       },
       {
         "regel": "zin-max-woorden",
@@ -15332,6 +15389,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -15339,7 +15397,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Jordanië?"
       },
       {
         "regel": "zin-max-woorden",
@@ -15556,6 +15615,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -15855,6 +15915,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Criminaliteit",
         "boodschap": "Na het maatwerk hoort de vaste verwijzing naar de themapagina over criminaliteit.",
+        "plek": "Criminaliteit",
         "verwacht": "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht. Lees meer op de pagina Hoe voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?"
       },
       {
@@ -15870,7 +15931,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 9 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Kenia?"
       },
       {
         "regel": "zin-max-woorden",
@@ -16112,6 +16174,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -16119,7 +16182,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Landmijnen, Verkeersongevallen"
+        "notitie": "De rubrieken: Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Landmijnen, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Cambodja?"
       },
       {
         "regel": "zin-max-woorden",
@@ -16582,6 +16646,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -16713,6 +16778,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Reizen met kinderen",
         "boodschap": "De vaste zin over de documenten voor kinderen ontbreekt.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar Koeweit."
       },
       {
@@ -16887,6 +16953,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Bent u in Laos en bent u in nood? Bijvoorbeeld: u bent opgenomen in het ziekenhuis, of u bent bestolen. Lees wat u kunt doen in geval van nood."
       },
       {
@@ -16894,6 +16961,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
       },
       {
@@ -17464,6 +17532,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -17861,7 +17930,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 8 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Terrorisme, Criminaliteit, Verkeersongevallen, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Terrorisme, Criminaliteit, Verkeersongevallen, Wetten en gebruiken, Natuurgeweld, Landmijnen, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Sri Lanka?"
       },
       {
         "regel": "rubriek-vrij-te-hoog",
@@ -18243,6 +18313,7 @@
         "ernst": "fout",
         "bron": "SJ, blok Reisverzekering",
         "boodschap": "Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij.",
+        "plek": "Reisverzekering",
         "verwacht": "Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde risico’s of kosten bij schade zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar."
       },
       {
@@ -18250,6 +18321,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -18477,6 +18549,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -18484,7 +18557,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Landmijnen"
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Landmijnen",
+        "plek": "Welke veiligheidsrisico's zijn er in Marokko?"
       },
       {
         "regel": "zin-max-woorden",
@@ -18685,6 +18759,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -18692,7 +18767,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Moldavië?"
       },
       {
         "regel": "postplaats-schrijfwijze",
@@ -19562,6 +19638,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico’s",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -19569,7 +19646,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico’s, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico’s, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Mali?"
       },
       {
         "regel": "zin-max-woorden",
@@ -20606,6 +20684,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Montserrat op de website van de ANWB."
       },
       {
@@ -20621,6 +20700,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico’s",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -20953,6 +21033,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -21264,7 +21345,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Nigeria?"
       },
       {
         "regel": "woord-onbekend",
@@ -21762,6 +21844,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "De vaste verwijzing over reizen met een minderjarig kind ontbreekt.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee."
       },
       {
@@ -21822,6 +21905,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Reisverzekering",
         "boodschap": "De vaste openingstekst over de reisverzekering ontbreekt.",
+        "plek": "Reisverzekering",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
       },
       {
@@ -21953,6 +22037,7 @@
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "De vaste zin bij kleurcode groen staat er, maar noemt het land \"Naoero\". In het cms heet dit advies \"Nauru\".",
         "verwacht": "De kleurcode van het reisadvies voor Nauru is groen.",
+        "plek": "In het kort",
         "notitie": "Of de tekst of de landenlijst loopt achter. De tool weet niet welke van de twee; hij meldt alleen dat ze niet hetzelfde zeggen."
       },
       {
@@ -22307,6 +22392,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -22314,7 +22400,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Conflict"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Conflict",
+        "plek": "Welke veiligheidsrisico's zijn er in Oman?"
       },
       {
         "regel": "tekst-onzichtbaar-teken",
@@ -22526,7 +22613,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Pakistan?"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -22779,6 +22867,7 @@
         "ernst": "fout",
         "bron": "SJ, blok Reisverzekering",
         "boodschap": "Dit advies heeft kleurcode oranje of rood; dan hoort de waarschuwing over de dekkingsvoorwaarden erbij.",
+        "plek": "Reisverzekering",
         "verwacht": "Let op: Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. Bepaalde risico’s of kosten bij schade zijn dan niet meer gedekt. Vraag dit na bij uw verzekeraar."
       },
       {
@@ -22794,6 +22883,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -22801,7 +22891,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Panama?"
       },
       {
         "regel": "zin-max-woorden",
@@ -22945,6 +23036,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Reisverzekering",
         "boodschap": "De vaste openingstekst over de reisverzekering ontbreekt.",
+        "plek": "Reisverzekering",
         "verwacht": "Sluit altijd een goede reisverzekering af die extra kosten dekt. Bijvoorbeeld van ziekenhuisopname, of als u naar Nederland moet worden vervoerd (repatriëring). Uw basiszorgverzekering vergoedt deze kosten niet altijd 100 procent."
       },
       {
@@ -22960,6 +23052,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Criminaliteit",
         "boodschap": "Na het maatwerk hoort de vaste verwijzing naar de themapagina over criminaliteit.",
+        "plek": "Criminaliteit",
         "verwacht": "Door een goede voorbereiding verkleint u de kans dat u wordt beroofd of opgelicht. Lees meer op de pagina Hoe voorkom ik dat ik slachtoffer word van criminaliteit in het buitenland?"
       },
       {
@@ -22967,6 +23060,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Pitcairneilanden op de website van de ANWB."
       },
       {
@@ -23101,6 +23195,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "plek": "Medicijnen",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
       },
       {
@@ -23116,7 +23211,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Demonstraties, Natuurgeweld, Verkeersongevallen"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Demonstraties, Natuurgeweld, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Peru?"
       },
       {
         "regel": "woord-onbekend",
@@ -23495,7 +23591,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er op de Filipijnen?"
       },
       {
         "regel": "woord-onbekend",
@@ -23875,6 +23972,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Palau op de website van de ANWB."
       },
       {
@@ -24081,6 +24179,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -24088,7 +24187,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 8 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen, Demonstraties, Explosieven"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen, Demonstraties, Explosieven",
+        "plek": "Welke veiligheidsrisico's zijn er in Papoea-Nieuw-Guinea?"
       },
       {
         "regel": "zin-frequentiewoord",
@@ -24544,6 +24644,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste aanhef boven de alarmnummers ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Heeft u direct hulp nodig in Noord-Korea? Neem contact op met de lokale hulpdiensten:"
       },
       {
@@ -24551,6 +24652,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over nood ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Bent u in Noord-Korea en bent u in nood? Bijvoorbeeld: u bent opgenomen in het ziekenhuis, of u bent bestolen. Lees wat u kunt doen in geval van nood."
       },
       {
@@ -24558,6 +24660,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
       },
       {
@@ -24573,6 +24676,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Noord-Korea op de website van de ANWB."
       },
       {
@@ -24580,6 +24684,7 @@
         "ernst": "let-op",
         "bron": "SJ, boven de blokken onder reisvoorbereiding",
         "boodschap": "Bij een volledig rood reisadvies herhalen we de waarschuwing onder de reisvoorbereiding.",
+        "plek": "Hoe bereid ik mijn reis naar Noord-Korea voor?",
         "verwacht": "Wat uw situatie ook is: reis niet naar gebieden met kleurcode rood. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt."
       },
       {
@@ -24889,7 +24994,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Demonstraties, Terrorisme, Wetten en gebruiken, Criminaliteit, Natuurgeweld"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Demonstraties, Terrorisme, Wetten en gebruiken, Criminaliteit, Natuurgeweld",
+        "plek": "Welke veiligheidsrisico's zijn er in de Palestijnse Gebieden?"
       },
       {
         "regel": "rubrieken-volgorde",
@@ -25483,6 +25589,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -25490,7 +25597,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Roemenië?"
       },
       {
         "regel": "zin-max-woorden",
@@ -25783,7 +25891,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Rusland?"
       },
       {
         "regel": "tekst-niet-melden",
@@ -26075,6 +26184,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -26297,6 +26407,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -27491,6 +27602,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -27765,7 +27877,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Terrorisme, Criminaliteit, Wetten en gebruiken, Demonstraties, Landmijnen, Natuurgeweld"
+        "notitie": "De rubrieken: Actueel, Terrorisme, Criminaliteit, Wetten en gebruiken, Demonstraties, Landmijnen, Natuurgeweld",
+        "plek": "Welke veiligheidsrisico's zijn er in Zuid-Sudan?"
       },
       {
         "regel": "zin-max-woorden",
@@ -28420,6 +28533,7 @@
         "ernst": "fout",
         "bron": "SJ, blok In geval van nood",
         "boodschap": "De vaste tekst over de bereikbaarheid van het contactcenter ontbreekt.",
+        "plek": "In geval van nood",
         "verwacht": "Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400."
       },
       {
@@ -28801,6 +28915,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -29067,6 +29182,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -29178,6 +29294,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Bagageregels",
         "boodschap": "De vaste tekst over de douaneregels van het land zelf ontbreekt.",
+        "plek": "Bagageregels",
         "verwacht": "Check wat de regels zijn bij de lokale autoriteiten. Bijvoorbeeld de douane van Thailand."
       },
       {
@@ -29201,7 +29318,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Verkeersongevallen, Wetten en gebruiken, Natuurgeweld, Demonstraties"
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Verkeersongevallen, Wetten en gebruiken, Natuurgeweld, Demonstraties",
+        "plek": "Welke veiligheidsrisico's zijn er in Thailand?"
       },
       {
         "regel": "rubriek-vrij-te-hoog",
@@ -30047,6 +30165,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Tonga op de website van de ANWB."
       },
       {
@@ -30240,7 +30359,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Tunesië?"
       },
       {
         "regel": "zin-max-woorden",
@@ -30424,7 +30544,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen"
+        "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Turkije?"
       },
       {
         "regel": "alinea-max-woorden",
@@ -30933,6 +31054,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
@@ -30940,7 +31062,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen"
+        "notitie": "De rubrieken: Actueel, Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Verkeersongevallen",
+        "plek": "Welke veiligheidsrisico's zijn er in Tanzania?"
       },
       {
         "regel": "zin-max-woorden",
@@ -32128,6 +32251,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "De vaste verwijzing over reizen met een minderjarig kind ontbreekt.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Check welke documenten u nodig heeft om te reizen met een minderjarig kind en neem die mee."
       },
       {
@@ -32484,6 +32608,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Amerikaanse Maagdeneilanden op de website van de ANWB."
       },
       {
@@ -33132,6 +33257,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Paspoort, visum, rijbewijs",
         "boodschap": "Waar het rijbewijs aan de orde komt, hoort de vaste verwijzing naar de ANWB erbij.",
+        "plek": "Paspoort, visum, rijbewijs",
         "verwacht": "Lees meer over rijden in Wallis en Futuna op de website van de ANWB."
       },
       {
@@ -33250,6 +33376,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Medicijnen",
         "boodschap": "De vaste tekst over voldoende medicijnen ontbreekt.",
+        "plek": "Medicijnen",
         "verwacht": "Neem voldoende medicijnen mee, ook voor extra dagen."
       },
       {
@@ -33265,7 +33392,8 @@
         "ernst": "let-op",
         "bron": "SJ, richtlijn boven de rubrieken",
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
-        "notitie": "De rubrieken: Actueel, Terrorisme, Willekeurige arrestaties, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen"
+        "notitie": "De rubrieken: Actueel, Terrorisme, Willekeurige arrestaties, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Landmijnen",
+        "plek": "Welke veiligheidsrisico's zijn er in Jemen?"
       },
       {
         "regel": "rubriek-vrij-te-hoog",
@@ -33498,7 +33626,8 @@
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
         "boodschap": "Kleurcode geel wordt niet op een van de vaste manieren aangeduid.",
-        "verwacht": "De kleurcode van het reisadvies voor Zuid-Afrika is geel."
+        "verwacht": "De kleurcode van het reisadvies voor Zuid-Afrika is geel.",
+        "plek": "In het kort"
       },
       {
         "regel": "h4-niet-melden",
@@ -33688,6 +33817,7 @@
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
         "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
+        "plek": "Regionale risico's",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {

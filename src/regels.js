@@ -232,6 +232,19 @@ function rubriekTekst(doc, patroon) {
 }
 
 /**
+ * De kop van een rubriek zoals het advies hem schrijft: de bovenste kop die op het patroon past,
+ * een H3 (rubriek) liever dan een H4. Dient als plek voor een melding over iets dat in die rubriek
+ * ontbreekt.
+ */
+function rubriekKop(doc, patroon) {
+  if (!patroon) return null;
+  const re = new RegExp(patroon, 'i');
+  const koppen = doc.koppen.filter((k) => re.test(k.tekst || ''));
+  const k = koppen.find((x) => x.niveau === 3) || koppen.find((x) => x.niveau === 2) || koppen[0];
+  return k ? k.tekst : null;
+}
+
+/**
  * De losse eenheden van een rubriek zoals de pagina ze toont: per alinea de zinnen, en de
  * items van een opsomming. rubriekTekst plakt ze aaneen om op te toetsen; deze lijst dient om
  * de plek van een treffer terug te vinden, zodat een bevinding de zin kan aanwijzen die de
@@ -700,6 +713,9 @@ export function maakToetser(data) {
     // staan. Oman verwijst naar het rode reisadvies voor Jemen; dat is de kleur van de buurman, en
     // Oman hoort daar geen vaste rode tekst bij te zetten. Ontbreekt het cms-veld (geplakte tekst),
     // dan valt kleurenVanAdvies terug op wat er in de tekst staat en blijft de toets wat hij was.
+    // De kop "In het kort" zoals dit advies hem schrijft: de plek voor meldingen zonder zin om aan te wijzen.
+    const kortKopObj = doc.koppen.find((x) => norm(x.tekst || '') === norm('In het kort'));
+    const kortKop = kortKopObj ? kortKopObj.tekst : undefined;
     for (const kleur of kleurenVanAdvies) {
       const k = kleurcodes.kleuren[kleur];
       if (!k) continue;
@@ -719,19 +735,19 @@ export function maakToetser(data) {
           ? bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
             `De vaste zin bij kleurcode ${kleur} staat er, maar noemt het land "${anders}". `
             + `In het cms heet dit advies "${doc.land}".`,
-            { verwacht: `De kleurcode van het reisadvies voor ${doc.land} is ${kleur}.`,
+            { verwacht: `De kleurcode van het reisadvies voor ${doc.land} is ${kleur}.`, plek: kortKop,
               notitie: 'Of de tekst of de landenlijst loopt achter. De tool weet niet welke van de '
                 + 'twee; hij meldt alleen dat ze niet hetzelfde zeggen.' })
           : bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
             `Kleurcode ${kleur} wordt niet op een van de vaste manieren aangeduid.`,
-            { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.` }));
+            { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.`, plek: kortKop }));
       }
 
       const heeftActie = (k.actiezinnen || []).some((z) => kortGenorm.includes(norm(z)));
       if (!heeftActie) {
         b.push(bevinding('kleur-vaste-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
           `Bij kleurcode ${kleur} ontbreekt de vaste handelingsinstructie.`,
-          { verwacht: k.in_het_kort_volledig.replace('{land}', doc.land || 'land X') }));
+          { verwacht: k.in_het_kort_volledig.replace('{land}', doc.land || 'land X'), plek: kortKop }));
         continue;                            // dan is de variant toetsen dubbelop
       }
 
@@ -965,7 +981,8 @@ export function maakToetser(data) {
       }
       if (bullets.length > sj.limieten.in_het_kort.max_bullets) {
         b.push(bevinding('kort-max-bullets', ERNST.fout, 'SJ, blok In het kort',
-          `"In het kort" heeft ${bullets.length} bullets. Het sjabloon staat er maximaal ${sj.limieten.in_het_kort.max_bullets} toe.`));
+          `"In het kort" heeft ${bullets.length} bullets. Het sjabloon staat er maximaal ${sj.limieten.in_het_kort.max_bullets} toe.`,
+          { plek: kortBlok.kop }));
       }
       // De eerste bullet over de kleurcode staat voluit, de vervolgbullets verkort. Voor beide
       // posities zijn twee formuleringen geldig; ze staan als patroon in regels/kleurcodes.json,
@@ -1306,9 +1323,12 @@ export function maakToetser(data) {
         ? rubriekEenheden(doc, vt.rubriek ? sj.rubriek_patronen[vt.rubriek] : null)
             .find((e) => herkenRe.test(norm(e)))
         : null;
+      // Ontbreekt de tekst, dan is er geen zin om aan te wijzen. Wel de rubriek waar hij hoort:
+      // die kop krijgt de melding mee als plek, zodat de pagina erheen kan springen.
+      const plek = !fragment && vt.rubriek ? rubriekKop(doc, sj.rubriek_patronen[vt.rubriek]) : null;
       b.push(bevinding(vt.id, vt.ernst, vt.bron,
         wijktAf ? (vt.boodschap_afwijkend || vt.boodschap) : vt.boodschap,
-        { ...(fragment ? { fragment } : {}),
+        { ...(fragment ? { fragment } : {}), ...(plek ? { plek } : {}),
           verwacht: vt.zin.replace(/\{land\}/g, doc.land || 'land X')
             .replace(/\{kleur\}|\{gebieden\}/g, '…') }));
     }
@@ -1321,7 +1341,8 @@ export function maakToetser(data) {
       if (rubrieken.length > sj.limieten.rubrieken.max_per_h2) {
         b.push(bevinding('rubrieken-max', ERNST.letop, 'SJ, richtlijn boven de rubrieken',
           `Onder "${label}" staan ${rubrieken.length} rubrieken. De richtlijn is maximaal ${sj.limieten.rubrieken.max_per_h2}.`,
-          { notitie: 'De rubrieken: ' + rubrieken.map((k) => k.tekst).join(', ') }));
+          { notitie: 'De rubrieken: ' + rubrieken.map((k) => k.tekst).join(', '),
+            ...(rubrieken[0] && rubrieken[0].h2 ? { plek: rubrieken[0].h2 } : {}) }));
       }
     }
 

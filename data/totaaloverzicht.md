@@ -1,6 +1,6 @@
 # Totaaloverzicht reisadviezen
 
-Gedraaid op 2026-11-22 over 226 reisadviezen. De kolom
+Gedraaid op 2026-11-24 over 226 reisadviezen. De kolom
 *14 september 2026* is de eerste meting: de teksten van toen, door de regels van nu. Zo zegt het
 verschil alleen wat er in de adviezen is veranderd.
 
@@ -106,7 +106,7 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 | | 14 september 2026 | nu |
 |---|---:|---:|
 | Contact met de lokale autoriteiten ("uw hotel" is "uw accommodatie" geworden) | 130 (130) | 125 (125) |
-| Aanhef boven de gebieden in Regionale risico's | 32 (32) | 33 (33) |
+| Aanhef boven de gebieden in Regionale risico's | 31 (31) | 32 (32) |
 | Openingstekst reisverzekering | 32 (32) | 31 (31) |
 | Zin over paspoort voor kinderen | 28 (28) | 29 (29) |
 | Hoelang het paspoort nog geldig moet zijn | 28 (28) | 28 (28) |
@@ -203,12 +203,12 @@ meldingen plaatsnamen die niet in de woordenlijst staan.
 
 | | 14 september 2026 | nu |
 |---|---:|---:|
-| **Samen** | 91 (149) | 53 (80) |
+| **Samen** | 91 (149) | 53 (81) |
 | Mogelijke spelfout (woordenlijst) | 60 (107) | 25 (46) |
 | Spatie voor een leesteken | 10 (11) | 9 (10) |
 | Onzichtbaar teken in de tekst | 7 (7) | 7 (7) |
 | Nederlands/Nederlandse | 6 (6) | 6 (6) |
-| Spatie vergeten na een punt | 7 (7) | 4 (4) |
+| Spatie vergeten na een punt | 7 (7) | 5 (5) |
 | Woord twee keer achter elkaar | 4 (4) | 3 (3) |
 | Schrijfwijze van een postplaats | 3 (3) | 3 (3) |
 | Rest van het CMS in de tekst | 3 (3) | 1 (1) |

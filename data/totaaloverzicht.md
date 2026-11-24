@@ -22,7 +22,7 @@ Wat besproken moet worden, staat in [`regels/TER-BESPREKING.md`](../regels/TER-B
 | Onderwerp dat er niet in hoort | 111 | 108 |
 | Te lang (woorden, rubrieken, bullets, Actueel) | 68 | 70 |
 | "In het kort" niet volgens de opbouw | 21 | 20 |
-| Kleurcodeformulering niet volgens de matrix | 54 | 52 |
+| Kleurcodeformulering niet volgens de matrix | 58 | 56 |
 | **Taal: vaste zin uit het sjabloon ontbreekt of wijkt af** | **196** | **194** |
 | **Taal: schrijfwijzer** | **222** | **220** |
 | Te lange zin | 213 | 213 |
@@ -78,8 +78,8 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 | | 14 september 2026 | nu |
 |---|---:|---:|
 | Volledige of verkorte kleurtekst niet zoals de matrix voorschrijft (erheen/hierheen) | 46 (52) | 44 (50) |
+| Vervolgbullet voluit in plaats van verkort | 27 (28) | 26 (26) |
 | Kleurcode niet op een van de vaste manieren aangeduid | 5 (5) | 4 (4) |
-| Vervolgbullet voluit in plaats van verkort | 5 (5) | 4 (4) |
 | Eerste kleurbullet niet voluit | 2 (2) | 2 (2) |
 | Vaste handelingsinstructie bij een kleur ontbreekt | 2 (2) | 2 (2) |
 | Kleur genoemd zonder het woord kleurcode | 2 (2) | 2 (2) |

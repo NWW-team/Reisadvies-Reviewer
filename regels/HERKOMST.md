@@ -1780,3 +1780,18 @@ vrijgesteld van de zinslengte; `paspoort-geldigheid` blijft een afwijkende formu
 Het voorstel over enkele aanhalingstekens om een term uit de volksmond gaat niet naar de collega's van
 de reisadviezen, maar naar het overleg over de schrijfwijzer (Martijn). Het staat nu in een eigen
 lijst, `regels/TER-BESPREKING-SCHRIJFWIJZER.md`, en niet meer in `TER-BESPREKING.md`.
+
+## De omgedraaide vervolgbullet wordt weer gemeld (24 november 2026)
+
+Op 18 september goedgekeurd: *"Kleurcode oranje geldt voor …"* als variant van de vorm uit de matrix
+*"Voor … geldt kleurcode oranje"*. Martijn draaide dat terug: *"zoals nu in matrix staat is meer afgeleid
+van hoe het logischer leest. Kleurcode land X is …. Maar voor de gebieden … geldt (woord maar is dan
+weggelaten). Als je meerdere keren met kleurcode begint lijkt het meer alsof het niet bij elkaar hoort."*
+
+`kleur-vervolg-bullet-kort` meldt de omgedraaide vorm weer, met een eigen boodschap: *"Deze vervolgbullet
+begint met "Kleurcode". De vaste vorm is "Voor … geldt kleurcode …": dan leest "In het kort" als één
+verhaal."* De vorm blijft herkend als kleuraanduiding (`aanduiding_sjablonen`), zodat er geen tweede
+melding bij komt. Gemeten: 22 adviezen.
+
+Het deel *Nog vastleggen* van de bespreeklijst is herschreven: per punt een voorbeeld en een advies of het in
+de richtlijnen hoort. Het punt over de omgedraaide vorm is eraf: de matrix is leidend.

@@ -1001,11 +1001,18 @@ export function maakToetser(data) {
       // juist de bedoeling dat alleen de eerste voluit staat.
       for (const vervolg of kleurBullets.slice(1)) {
         if (past(vervolg, bv.vervolg_kort)) continue;
+        // "Kleurcode oranje geldt voor …" is de omgedraaide vorm. Martijn, 24 november 2026: de vorm
+        // uit de matrix leest als een doorlopend verhaal; begint elke bullet met "Kleurcode", dan lijkt
+        // het alsof ze niet bij elkaar horen.
+        const omgedraaid = bv.omgedraaid && new RegExp(bv.omgedraaid).test(norm(vervolg));
         b.push(bevinding('kleur-vervolg-bullet-kort', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
-          past(vervolg, bv.eerste_voluit)
-            ? 'Deze vervolgbullet staat voluit. Alleen de eerste bullet over de kleurcode staat voluit.'
-            : 'Deze vervolgbullet over de kleurcode heeft niet de verkorte vaste vorm.',
-          { fragment: vervolg, verwacht: 'Voor … geldt kleurcode … (of: Kleurcode … geldt voor …)' }));
+          omgedraaid
+            ? 'Deze vervolgbullet begint met "Kleurcode". De vaste vorm is "Voor … geldt kleurcode …": '
+              + 'dan leest "In het kort" als één verhaal.'
+            : past(vervolg, bv.eerste_voluit)
+              ? 'Deze vervolgbullet staat voluit. Alleen de eerste bullet over de kleurcode staat voluit.'
+              : 'Deze vervolgbullet over de kleurcode heeft niet de verkorte vaste vorm.',
+          { fragment: vervolg, verwacht: 'Voor … geldt kleurcode …' }));
       }
       // ---------- verwijzingen vanuit "In het kort" ----------
       // Elke verwijzing heeft dezelfde vorm: "Lees meer onder X". Bij meerdere kleurcodes hoort

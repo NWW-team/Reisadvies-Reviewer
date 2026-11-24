@@ -7,7 +7,7 @@ Gedraaid op 2026-11-24 over 226 reisadviezen.
 - **82** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **100** van de 3224 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **100** van de 3246 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -27,7 +27,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 275 | 144 |
-| geel/oranje — let op | 2253 | 224 |
+| geel/oranje — let op | 2275 | 224 |
 | grijs — ter overweging | 696 | 182 |
 
 ## Per regel
@@ -51,6 +51,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `kinderen-paspoort` | 28 | 28 |
 | `paspoort-geldigheid` | 28 | 28 |
 | `rubriek-vrij-te-hoog` | 26 | 26 |
+| `kleur-vervolg-bullet-kort` | 26 | 26 |
 | `woord-onbekend` | 25 | 46 |
 | `h3-niet-melden` | 23 | 23 |
 | `rubrieken-volgorde` | 23 | 23 |
@@ -78,7 +79,6 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `titel-leestekens` | 5 | 5 |
 | `vragen-opeenvolgend` | 5 | 7 |
 | `link-verboden-partij` | 5 | 6 |
-| `kleur-vervolg-bullet-kort` | 4 | 4 |
 | `link-plakt-aan-woord` | 4 | 4 |
 | `tekst-plakfout` | 4 | 4 |
 | `kinderen-documenten` | 4 | 4 |

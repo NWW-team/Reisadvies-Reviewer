@@ -184,6 +184,26 @@ Om mee te wegen: veel van deze termen zijn Engels (*carjacking*, *flash floods*,
 schrijfwijzer zegt bij *Cursief* dat cursief mag bij een woord in een andere taal. Willen we voor een
 Engelse term cursief, of ook enkele aanhalingstekens? Eén vorm voor allebei is het duidelijkst.
 
+### Linken naar sociale media van een overheid
+
+De schrijfwijzer zegt: we linken naar overheidsinstanties, en niet naar commerciële partijen en media.
+Sociale media zijn een commercieel platform, maar het account kan van een overheid zijn. Zes adviezen
+linken naar zo'n account:
+
+| advies | link |
+|---|---|
+| Japan | Facebookpagina van de Nederlandse ambassade in Tokio |
+| Rwanda | X-account van de Rwandese Nationale Politie |
+| Guatemala | Facebookpagina met verkeersinformatie van de overheid; X-account van het toeristenbureau INGUAT |
+| Portugal | X-account met actuele adviezen |
+| Tonga | Facebookpagina met informatie over actieve vulkanen |
+
+De tool meldt dit nu als vraag (*let op*): is dit het account van een overheid, en is er geen eigen
+website met dezelfde informatie?
+
+Vraag: mag een link naar sociale media van een overheid of de eigen ambassade? Zo ja, dan kan dat in
+de schrijfwijzer bij *Naar wie linken we?*
+
 ## 2. Nog vastleggen
 
 Al besloten, en de tool toetst al zo. Maar het staat nog niet (letterlijk) in de bron, dus wie de

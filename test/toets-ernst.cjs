@@ -124,6 +124,15 @@ test('aanhalingstekens: dubbel is let op, enkel ter overweging, \'s avonds is ge
   assert.strictEqual(eerste('<p>Het is \u2018s avonds druk tussen 20.00 uur en 8.00 uur\u2019.</p>', 'aanhalingstekens'), undefined);
 });
 
+test('een link naar sociale media is een vraag, een link naar een nieuwssite een fout', () => {
+  const sociaal = eerste('<p><a href="https://www.facebook.com/ambassade">Facebookpagina van de ambassade</a></p>', 'link-verboden-partij');
+  assert.strictEqual(sociaal.ernst, Regels.ERNST.letop);
+  assert.match(sociaal.boodschap, /overheidsinstantie/);
+  assert.strictEqual(sociaal.herkomst, undefined, 'geen geel aanvullingsblok bij een vraag');
+  const nieuws = eerste('<p><a href="https://nos.nl/artikel/1">Lees het nieuws</a></p>', 'link-verboden-partij');
+  assert.strictEqual(nieuws.ernst, Regels.ERNST.fout);
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

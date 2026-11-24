@@ -288,11 +288,6 @@
       "uitzendingen of artikelen uit media"
     ],
     "domeinen": [
-      "facebook.com",
-      "x.com",
-      "twitter.com",
-      "instagram.com",
-      "tiktok.com",
       "nu.nl",
       "nos.nl",
       "telegraaf.nl",
@@ -321,7 +316,15 @@
       "tripadvisor.com",
       "expedia.com",
       "skyscanner.net"
-    ]
+    ],
+    "sociale_media": [
+      "facebook.com",
+      "x.com",
+      "twitter.com",
+      "instagram.com",
+      "tiktok.com"
+    ],
+    "_sociale_media": "Gesplitst op 24 november 2026. Alle meldingen op sociale media gingen over een account van een overheid: de Nederlandse ambassade in Tokio, de Rwandese politie, verkeersinformatie van de overheid in Guatemala. De schrijfwijzer linkt wel naar overheidsinstanties. Een link naar sociale media is daarom geen fout maar een vraag (let op): is dit het account van een overheid, en is er geen eigen website? Hoe we hiermee omgaan, staat op de bespreeklijst."
   },
   "_herkomst_bepaald_op": "2026-09-15, door elke ingang te zoeken in de Schrijfwijzer, de Matrix en het Sjabloon. Opnieuw bepalen zodra een van die documenten wijzigt.",
   "_let_op_code_in_dit_bestand": "Twee velden in dit bestand zijn geen data maar reguliere expressies die worden uitgevoerd: lijdende_vorm.deelwoord_patroon en genderneutraal.lhbtiq.patronen[].patroon. Alle andere ingangen worden ontsnapt voordat er een regex van wordt gemaakt, en de domeinen gaan via stringvergelijking. Pas die twee velden dus alleen aan met kennis van reguliere expressies, en meet daarna de looptijd: op 2026-09-15 bleef die onder 1 ms bij 12.000 tekens."

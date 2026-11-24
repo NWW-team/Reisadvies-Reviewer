@@ -1109,8 +1109,9 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
       // De aanvullingswaarschuwing gaat over schrijfregels. Bij een spelfout of een tekstfout
       // ("het het", een vergeten spatie) zegt hij niets: daar is geen schrijfwijzer bij nodig.
       + (bev.herkomst === 'aanvulling' && !woord && (groepVan(bev) || {}).id !== 'tekstfouten'
-          ? '<div class="aanvulling">Aanvulling &mdash; deze regel past de schrijfwijzer toe, maar dit woord '
-            + 'staat er niet letterlijk in. Beoordeel of hij mag blijven.</div>'
+          ? '<div class="aanvulling">Aanvulling van de tool &mdash; de regel staat in de schrijfwijzer, maar '
+            + 'dit woord of deze website wordt er niet letterlijk bij genoemd. De tool heeft het zelf aan de '
+            + 'lijst toegevoegd. Klopt dat hier niet, klik dan op Onterecht.</div>'
           : '')
       // De bron staat verder alleen in de tooltip, maar de verwijzing naar SpellingSpeurneus blijft
       // zichtbaar: dat is het tooltje van de redactie zelf, en het is goed om te zien waar het werk

@@ -1950,11 +1950,20 @@ export function maakToetser(data) {
           `Linktekst is ${l.tekst.length} tekens. Maximaal ${lim.link.max_tekens_linktekst}.`, { fragment: l.tekst }));
       }
       const host = (l.href || '').replace(/^https?:\/\//, '').split('/')[0].replace(/^www\./, '');
-      const verboden = wl.niet_linken_naar.domeinen.find((d) => host === d || host.endsWith('.' + d));
+      const past = (d) => host === d || host.endsWith('.' + d);
+      const verboden = wl.niet_linken_naar.domeinen.find(past);
+      const sociaal = (wl.niet_linken_naar.sociale_media || []).find(past);
       if (verboden) {
         b.push(bevinding('link-verboden-partij', ERNST.fout, 'SW, Relevantie > Naar wie linken we niet?',
           `Link naar ${host}. We linken niet naar commerciële partijen, politieke partijen, belangenbehartigers of media.`,
           { fragment: l.tekst, ...herkomst(extraDomein, verboden) }));
+      } else if (sociaal) {
+        // Sociale media zijn een commercieel platform, maar het account kan van een overheid zijn
+        // (een ambassade, de politie). Daar linken we wel naar. Dus een vraag, geen fout.
+        b.push(bevinding('link-verboden-partij', ERNST.letop, 'SW, Relevantie > Naar wie linken we (niet)?',
+          `Link naar ${host}. Is dit het account van een overheidsinstantie? Dan mag het. Heeft die `
+          + 'instantie ook een eigen website met deze informatie, link dan liever daarnaar.',
+          { fragment: l.tekst }));
       }
     }
     const ookNuttig = doc.blokken.find((x) => /ook nuttig/i.test(x.kop || ''));

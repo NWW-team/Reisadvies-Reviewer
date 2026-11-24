@@ -102,7 +102,7 @@ const KLEUR = [
   ['kleur-variant', 'Volledige of verkorte kleurtekst niet zoals de matrix voorschrijft (erheen/hierheen)'],
   ['kleur-aanduiding', 'Kleurcode niet op een van de vaste manieren aangeduid'],
   ['kleur-eerste-bullet-voluit', 'Eerste kleurbullet niet voluit'],
-  ['kleur-vervolg-bullet-kort', 'Vervolgbullet voluit in plaats van verkort'],
+  ['kleur-vervolg-bullet-kort', 'Vervolgbullet niet in de vaste vorm (voluit, of "Kleurcode … geldt voor" bij 1 of 2 gebieden)'],
   ['kleur-vaste-tekst', 'Vaste handelingsinstructie bij een kleur ontbreekt'],
   ['kleur-formulering-verboden', 'Kleur genoemd zonder het woord kleurcode'],
   ['kleur-volgorde', 'Kleurcodes niet van rood naar groen'],

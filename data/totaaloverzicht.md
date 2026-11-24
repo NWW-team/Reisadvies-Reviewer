@@ -78,7 +78,7 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 | | 14 september 2026 | nu |
 |---|---:|---:|
 | Volledige of verkorte kleurtekst niet zoals de matrix voorschrijft (erheen/hierheen) | 46 (52) | 44 (50) |
-| Vervolgbullet voluit in plaats van verkort | 17 (18) | 17 (17) |
+| Vervolgbullet niet in de vaste vorm (voluit, of "Kleurcode … geldt voor" bij 1 of 2 gebieden) | 17 (18) | 17 (17) |
 | Kleurcode niet op een van de vaste manieren aangeduid | 5 (5) | 4 (4) |
 | Eerste kleurbullet niet voluit | 2 (2) | 2 (2) |
 | Vaste handelingsinstructie bij een kleur ontbreekt | 2 (2) | 2 (2) |

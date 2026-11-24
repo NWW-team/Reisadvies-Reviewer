@@ -1642,3 +1642,17 @@ dat een keuze van de redactie.
 
 Een eerdere versie van deze sectie zei dat de zin niet in het sjabloon staat. Dat was een vergissing:
 het zoeken op *6 maanden* miste de open plek ___ in het sjabloon.
+
+## Een melding over iets dat ontbreekt, wijst de rubriek aan (24 november 2026)
+
+Martijn bij *"De vaste aanhef boven de opsomming van gebieden ontbreekt"*: de melding zei niet waar
+het over gaat, terwijl dat altijd Regionale risico's is. Een melding over iets dat ontbreekt heeft
+geen zin om aan te wijzen, dus ook niets om naartoe te springen.
+
+Zulke meldingen krijgen nu een veld `plek`: de kop van de rubriek waar de tekst hoort, zoals het
+advies hem schrijft. De kaart toont *"Hoort onder: Regionale risico's"* als link; een klik springt
+in het advies naar die kop en zet er een kader omheen. Het geldt voor de vaste teksten uit het
+sjabloon met een rubriek (`rubriekKop`), de kleurmeldingen in *In het kort*, `kort-max-bullets` en
+`rubrieken-max` (de H2 waaronder de rubrieken staan). Gemeten: 139 meldingen hebben nu een plek.
+Zonder plek of fragment blijven alleen `doc-woordenaantal` (gaat over het hele advies en noemt de
+langste rubrieken) en één `informatieservice-vaste-tekst`.

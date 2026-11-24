@@ -78,6 +78,15 @@ test('de zin over de geldigheid van het paspoort: alleen het aantal maanden mag 
   assert.ok(!fout.some((x) => x.regel === 'zin-max-woorden'), 'geen tweede melding over de lengte');
 });
 
+test('een ontbrekende vaste tekst wijst de rubriek aan waar hij hoort', () => {
+  const html = '<h2>Welke veiligheidsrisico\'s zijn er in Testland?</h2><h3>Regionale risico\'s</h3>'
+    + '<h4>Rood: niet reizen</h4><ul><li>Het noorden</li></ul>';
+  const b = bevindingen(html).find((x) => x.regel === 'regionaal-gebiedenzin');
+  assert.ok(b);
+  assert.strictEqual(b.fragment, undefined, 'er is geen zin om aan te wijzen');
+  assert.strictEqual(b.plek, "Regionale risico's");
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

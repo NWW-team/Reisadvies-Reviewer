@@ -276,6 +276,8 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 .bev .tekst { margin: 6px 0 0; font-size: .91rem; }
 .bev blockquote { margin: 8px 0 0; padding: 6px 10px; border-left: 2px solid var(--lijn-sterk); background: var(--vlak-2); font-size: .84rem; cursor: pointer; }
 .bev .verwacht { margin-top: 7px; font-size: .8rem; color: var(--gedempt); }
+.bev .naar-kop { color: var(--blauw); font-weight: 600; }
+#advies .kop-actief { outline: 2px solid var(--blauw); outline-offset: 3px; }
 .bev .bron { margin-top: 7px; font-size: .74rem; color: var(--gedempt); }
 .bev .verwacht b { color: var(--inkt); font-weight: 600; }
 /* Eén knop, rechtsboven en bewust bescheiden: de richtlijn volg je, dus "eens" of "oneens" is geen
@@ -1121,6 +1123,19 @@ function rubriekTekst(doc, patroon) {
 }
 
 /**
+ * De kop van een rubriek zoals het advies hem schrijft: de bovenste kop die op het patroon past,
+ * een H3 (rubriek) liever dan een H4. Dient als plek voor een melding over iets dat in die rubriek
+ * ontbreekt.
+ */
+function rubriekKop(doc, patroon) {
+  if (!patroon) return null;
+  const re = new RegExp(patroon, 'i');
+  const koppen = doc.koppen.filter((k) => re.test(k.tekst || ''));
+  const k = koppen.find((x) => x.niveau === 3) || koppen.find((x) => x.niveau === 2) || koppen[0];
+  return k ? k.tekst : null;
+}
+
+/**
  * De losse eenheden van een rubriek zoals de pagina ze toont: per alinea de zinnen, en de
  * items van een opsomming. rubriekTekst plakt ze aaneen om op te toetsen; deze lijst dient om
  * de plek van een treffer terug te vinden, zodat een bevinding de zin kan aanwijzen die de
@@ -1589,6 +1604,9 @@ function maakToetser(data) {
     // staan. Oman verwijst naar het rode reisadvies voor Jemen; dat is de kleur van de buurman, en
     // Oman hoort daar geen vaste rode tekst bij te zetten. Ontbreekt het cms-veld (geplakte tekst),
     // dan valt kleurenVanAdvies terug op wat er in de tekst staat en blijft de toets wat hij was.
+    // De kop "In het kort" zoals dit advies hem schrijft: de plek voor meldingen zonder zin om aan te wijzen.
+    const kortKopObj = doc.koppen.find((x) => norm(x.tekst || '') === norm('In het kort'));
+    const kortKop = kortKopObj ? kortKopObj.tekst : undefined;
     for (const kleur of kleurenVanAdvies) {
       const k = kleurcodes.kleuren[kleur];
       if (!k) continue;
@@ -1608,19 +1626,19 @@ function maakToetser(data) {
           ? bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
             `De vaste zin bij kleurcode ${kleur} staat er, maar noemt het land "${anders}". `
             + `In het cms heet dit advies "${doc.land}".`,
-            { verwacht: `De kleurcode van het reisadvies voor ${doc.land} is ${kleur}.`,
+            { verwacht: `De kleurcode van het reisadvies voor ${doc.land} is ${kleur}.`, plek: kortKop,
               notitie: 'Of de tekst of de landenlijst loopt achter. De tool weet niet welke van de '
                 + 'twee; hij meldt alleen dat ze niet hetzelfde zeggen.' })
           : bevinding('kleur-aanduiding', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
             `Kleurcode ${kleur} wordt niet op een van de vaste manieren aangeduid.`,
-            { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.` }));
+            { verwacht: `De kleurcode van het reisadvies voor ${doc.land || 'land X'} is ${kleur}.`, plek: kortKop }));
       }
 
       const heeftActie = (k.actiezinnen || []).some((z) => kortGenorm.includes(norm(z)));
       if (!heeftActie) {
         b.push(bevinding('kleur-vaste-tekst', ERNST.fout, 'MX, tab Kleurcode-teksten',
           `Bij kleurcode ${kleur} ontbreekt de vaste handelingsinstructie.`,
-          { verwacht: k.in_het_kort_volledig.replace('{land}', doc.land || 'land X') }));
+          { verwacht: k.in_het_kort_volledig.replace('{land}', doc.land || 'land X'), plek: kortKop }));
         continue;                            // dan is de variant toetsen dubbelop
       }
 
@@ -1854,7 +1872,8 @@ function maakToetser(data) {
       }
       if (bullets.length > sj.limieten.in_het_kort.max_bullets) {
         b.push(bevinding('kort-max-bullets', ERNST.fout, 'SJ, blok In het kort',
-          `"In het kort" heeft ${bullets.length} bullets. Het sjabloon staat er maximaal ${sj.limieten.in_het_kort.max_bullets} toe.`));
+          `"In het kort" heeft ${bullets.length} bullets. Het sjabloon staat er maximaal ${sj.limieten.in_het_kort.max_bullets} toe.`,
+          { plek: kortBlok.kop }));
       }
       // De eerste bullet over de kleurcode staat voluit, de vervolgbullets verkort. Voor beide
       // posities zijn twee formuleringen geldig; ze staan als patroon in regels/kleurcodes.json,
@@ -2195,9 +2214,12 @@ function maakToetser(data) {
         ? rubriekEenheden(doc, vt.rubriek ? sj.rubriek_patronen[vt.rubriek] : null)
             .find((e) => herkenRe.test(norm(e)))
         : null;
+      // Ontbreekt de tekst, dan is er geen zin om aan te wijzen. Wel de rubriek waar hij hoort:
+      // die kop krijgt de melding mee als plek, zodat de pagina erheen kan springen.
+      const plek = !fragment && vt.rubriek ? rubriekKop(doc, sj.rubriek_patronen[vt.rubriek]) : null;
       b.push(bevinding(vt.id, vt.ernst, vt.bron,
         wijktAf ? (vt.boodschap_afwijkend || vt.boodschap) : vt.boodschap,
-        { ...(fragment ? { fragment } : {}),
+        { ...(fragment ? { fragment } : {}), ...(plek ? { plek } : {}),
           verwacht: vt.zin.replace(/\{land\}/g, doc.land || 'land X')
             .replace(/\{kleur\}|\{gebieden\}/g, '…') }));
     }
@@ -2210,7 +2232,8 @@ function maakToetser(data) {
       if (rubrieken.length > sj.limieten.rubrieken.max_per_h2) {
         b.push(bevinding('rubrieken-max', ERNST.letop, 'SJ, richtlijn boven de rubrieken',
           `Onder "${label}" staan ${rubrieken.length} rubrieken. De richtlijn is maximaal ${sj.limieten.rubrieken.max_per_h2}.`,
-          { notitie: 'De rubrieken: ' + rubrieken.map((k) => k.tekst).join(', ') }));
+          { notitie: 'De rubrieken: ' + rubrieken.map((k) => k.tekst).join(', '),
+            ...(rubrieken[0] && rubrieken[0].h2 ? { plek: rubrieken[0].h2 } : {}) }));
       }
     }
 
@@ -3572,7 +3595,7 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
         const tag = blok.niveau === 2 ? 'h3 class="blok-h2"' : 'h4 class="blok-h3"';
         const sluit = blok.niveau === 2 ? 'h3' : 'h4';
         const lang = woorden > 250;
-        stukken.push('<' + tag + '>' + markeerKop(blok.kop, perZin)
+        stukken.push('<' + tag + ' data-kop="' + esc(norm(blok.kop).toLowerCase()) + '">' + markeerKop(blok.kop, perZin)
           + '<span class="telling' + (lang ? ' lang' : '') + '">' + woorden + ' woorden</span></' + sluit + '>');
       }
       // Op documentvolgorde: een alinea ná een opsomming hoort er ook ná te staan. Eerst alle
@@ -3717,6 +3740,8 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
       + '<div class="bovenrij">' + soort + knop + '</div>'
       + '<p class="tekst">' + esc(bev.boodschap) + '</p>'
       + (bev.fragment ? '<blockquote data-naar="' + i + '">' + esc(bev.fragment) + '</blockquote>' : '')
+      + (bev.plek ? '<div class="verwacht">Hoort onder: <a href="#" class="naar-kop" data-naar-kop="'
+          + esc(norm(bev.plek).toLowerCase()) + '">' + esc(bev.plek) + '</a></div>' : '')
       + (bev.verwacht ? '<div class="verwacht">Verwacht: <b>' + esc(bev.verwacht) + '</b></div>' : '')
       + (bev.detail ? '<div class="verwacht">Langste blokken: <b>' + esc(bev.detail.join(' · ')) + '</b></div>' : '')
       + (bev.notitie && !woord ? '<div class="verwacht">' + esc(bev.notitie) + '</div>' : '')
@@ -3741,6 +3766,20 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
 
     const quote = e.target.closest('blockquote[data-naar]');
     if (quote) return richtOp(Number(quote.dataset.naar), 'melding');
+
+    // Een melding over iets dat ontbreekt, springt naar de kop van de rubriek waar het hoort.
+    const naarKop = e.target.closest('[data-naar-kop]');
+    if (naarKop) {
+      e.preventDefault();
+      const kop = document.querySelector('#advies [data-kop="' + CSS.escape(naarKop.dataset.naarKop) + '"]');
+      if (!kop) return;
+      document.querySelectorAll('.bev.actief, .zin.actief, #advies .kop-actief')
+        .forEach((el) => el.classList.remove('actief', 'kop-actief'));
+      kop.classList.add('kop-actief');
+      const kaart = naarKop.closest('.bev');
+      if (kaart) kaart.classList.add('actief');
+      return naarHoogte(kop, RICHT_MARGE);
+    }
 
     const knop = e.target.closest('[data-oordeel]');
     if (knop) return legOordeelVast(knop.dataset.sleutel, knop.dataset.oordeel, knop.dataset.woord);

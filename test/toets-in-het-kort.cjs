@@ -119,3 +119,20 @@ test('een echte intro wordt wel getoetst', () => {
   assert.ok(b, 'een afwijkende introductietekst hoort gemeld te worden');
   assert.match(b.verwacht, /Reist u naar Testland\?/);
 });
+
+test('een vervolgbullet die met "Kleurcode" begint, wordt gemeld; de vorm uit de matrix niet', () => {
+  const kort = (b2) => '<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies voor Testland is geel. '
+    + 'U kunt hierheen reizen.</li><li>' + b2 + '</li></ul>' + INFO;
+  const r = (html) => toetser(Parse.parseAdvies(html, { land: 'Testland', kleurcodes: ['oranje', 'geel'] }))
+    .bevindingen.filter((x) => x.regel === 'kleur-vervolg-bullet-kort');
+  const omgedraaid = r(kort('Kleurcode oranje geldt voor het noorden. Reis alleen hierheen als het noodzakelijk is.'));
+  assert.strictEqual(omgedraaid.length, 1);
+  assert.match(omgedraaid[0].boodschap, /begint met "Kleurcode"/);
+  assert.strictEqual(r(kort('Voor het noorden geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is.')).length, 0);
+  // Bij een opsomming van meer dan twee gebieden mag de kleur vooraan.
+  assert.strictEqual(r(kort('Kleurcode oranje geldt voor de regio Nord, de regio Adamaoua en de provincie Est. '
+    + 'Reis alleen hierheen als het noodzakelijk is.')).length, 0);
+  // "Tussen A en B" is één gebied: dan hoort de vorm uit de matrix.
+  assert.strictEqual(r(kort('Kleurcode oranje geldt voor het grensgebied tussen Testland en Buurland. '
+    + 'Reis alleen hierheen als het noodzakelijk is.')).length, 1);
+});

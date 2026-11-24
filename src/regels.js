@@ -1001,11 +1001,30 @@ export function maakToetser(data) {
       // juist de bedoeling dat alleen de eerste voluit staat.
       for (const vervolg of kleurBullets.slice(1)) {
         if (past(vervolg, bv.vervolg_kort)) continue;
+        // "Kleurcode oranje geldt voor …" is de omgedraaide vorm. Martijn, 24 november 2026: de vorm
+        // uit de matrix leest als een doorlopend verhaal; begint elke bullet met "Kleurcode", dan lijkt
+        // het alsof ze niet bij elkaar horen.
+        const omgedraaid = bv.omgedraaid && new RegExp(bv.omgedraaid).test(norm(vervolg));
+        // Maar bij een opsomming van meer dan twee gebieden mag de kleur juist vooraan: anders staat
+        // hij achter een lange lijst (Martijn, dezelfde dag). Geteld met dezelfde telling als bij
+        // kleur-gebieden-max: oriëntatiepunten en windrichtingen tellen niet als los gebied.
+        if (omgedraaid) {
+          const lijst = norm(vervolg).replace(/^kleurcode \S+ geldt voor /, '').split(/(?<=\.)\s/)[0].replace(/\.$/, '');
+          // De opsomming zelf: delen gescheiden door een komma of "en". Een uitleg tussen haakjes
+          // telt niet mee, en "tussen A en B" is één gebied.
+          const delen = lijst.replace(/\([^)]*\)/g, ' ').replace(/\btussen (\S+(?: \S+)?) en /g, 'tussen $1_')
+            .split(/,\s*|\s+en\s+/).map((x) => x.trim()).filter(Boolean).length;
+          if (Math.max(telGebieden(lijst), delen) > 2) continue;
+        }
         b.push(bevinding('kleur-vervolg-bullet-kort', ERNST.letop, 'MX, tab Kleurcode-teksten, kolom NB',
-          past(vervolg, bv.eerste_voluit)
-            ? 'Deze vervolgbullet staat voluit. Alleen de eerste bullet over de kleurcode staat voluit.'
-            : 'Deze vervolgbullet over de kleurcode heeft niet de verkorte vaste vorm.',
-          { fragment: vervolg, verwacht: 'Voor … geldt kleurcode … (of: Kleurcode … geldt voor …)' }));
+          omgedraaid
+            ? 'Deze vervolgbullet begint met "Kleurcode". Bij één of twee gebieden is de vaste vorm '
+              + '"Voor … geldt kleurcode …": dan leest "In het kort" als één verhaal. Alleen bij een '
+              + 'opsomming van meer dan twee gebieden mag de kleur vooraan.'
+            : past(vervolg, bv.eerste_voluit)
+              ? 'Deze vervolgbullet staat voluit. Alleen de eerste bullet over de kleurcode staat voluit.'
+              : 'Deze vervolgbullet over de kleurcode heeft niet de verkorte vaste vorm.',
+          { fragment: vervolg, verwacht: 'Voor … geldt kleurcode …' }));
       }
       // ---------- verwijzingen vanuit "In het kort" ----------
       // Elke verwijzing heeft dezelfde vorm: "Lees meer onder X". Bij meerdere kleurcodes hoort

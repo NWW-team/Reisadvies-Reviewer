@@ -1,15 +1,16 @@
 # Ter bespreking
 
-Drie lijsten voor het gesprek met de manager en de coördinator van de reisadviezen. De aantallen
+Twee lijsten voor het gesprek met de manager en de coördinator van de reisadviezen. De aantallen
 komen uit [`data/totaaloverzicht.md`](../data/totaaloverzicht.md), gemeten op 24 november 2026 over
 alle 226 reisadviezen. De bespreekpunten volgen dezelfde indeling als het overzicht: inhoudelijke
 keuzes over het format, en taalkeuzes.
 
 1. **Bespreekpunten**: waar format en praktijk uit elkaar lopen. Per punt is de vraag: houden we
    de regel aan en passen we de adviezen aan? Of passen we de regel aan en leggen we dat vast?
-2. **Nog vastleggen**: wat al besloten is en wat de tool al zo toetst, maar wat nog niet in de
-   matrix, het sjabloon of de schrijfwijzer staat.
-3. **Later**: wat bewust nog even blijft liggen.
+2. **Later**: wat bewust nog even blijft liggen.
+
+Wat al besloten is maar nog in de matrix of het sjabloon moet, staat in
+[`AANPASSINGEN-MATRIX-SJABLOON.md`](AANPASSINGEN-MATRIX-SJABLOON.md).
 
 Zodra een bron is bijgewerkt en de tool de nieuwe versie gebruikt, toetst de tool vanzelf mee.
 
@@ -163,25 +164,7 @@ website met dezelfde informatie?
 Vraag: mag een link naar sociale media van een overheid of de eigen ambassade? Zo ja, dan kan dat in
 de schrijfwijzer bij *Naar wie linken we?*
 
-## 2. Nog vastleggen
-
-Al besloten, en de tool toetst al zo. Maar het staat nog niet (letterlijk) in de bron, dus wie de
-matrix of het sjabloon leest, ziet iets anders dan wat de tool goedkeurt.
-
-| besluit | vastleggen in |
-|---|---|
-| De omgedraaide vervolgbullet *"Kleurcode oranje geldt voor …"* is een geldige vorm (23 keer gebruikt, gemeten in september). | matrix, tabblad Kleurcode-teksten |
-| *"De kleurcode van het reisadvies voor [gebied] is [kleur]"* mag, met een gebied op de plek van het land (Japan: *het zuidoosten van Fukushima*). | matrix, tabblad Kleurcode-teksten |
-| Een verwijzing vanuit *In het kort* heeft altijd de vorm *"Lees meer onder …"*. | matrix, tabblad Koppen |
-| Een tussenkop onder *Natuurgeweld* noemt het risico (vulkanen, orkanen, overstromingen), niet de plaats of de activiteit. | sjabloon, blok Natuurgeweld |
-| In de kinderzin mag *"eventueel"* staan (*"… en eventueel een visum"*), terwijl het sjabloon daar het markeringetje `[evt.:]` heeft. | sjabloon, blok Paspoort, visum, rijbewijs |
-| De volgorde van de rubrieken mag afwijken als een risico zwaarder weegt (bijvoorbeeld natuurgeweld in de zomer); de tool vraagt alleen of dat bewust is. Het sjabloon noemt de volgorde nu dwingend. | sjabloon, blok Risico dat van toepassing is |
-| De eerste kleurbullet mag *"De kleurcode van het reisadvies voor [land] is voor het grootste deel rood"* zijn, als bijna het hele land één kleur heeft (Burkina Faso). | matrix, tabblad Kleurcode-teksten |
-| De aanhef boven de gebieden onder Regionale risico's is *"Voor de volgende gebieden geldt kleurcode …:"*. Gaat het alleen over eilanden of over een of twee steden, dan mag *eilanden* of *steden* (de VAE). | sjabloon, blok Regionale risico's |
-| De kinderzin mag ook eindigen op *"nodig om naar [land] te reizen"* (Spanje), net als de zin voor volwassenen. | sjabloon, blok Paspoort, visum, rijbewijs |
-| Erheen of hierheen: we houden aan wat de matrix zegt (één kleurcode: *erheen*, meer kleurcodes: *hierheen*, ook bij *"de rest van [land]"*). Dat stond op *voorlopig* en is nu definitief. | staat al in de matrix; alleen bevestigen |
-
-## 3. Later
+## 2. Later
 
 - **Namen in de spellingtoets.** Plaatsen, provincies en vulkanen staan niet in de woordenlijst. De tool
   meldt ze als *ter overweging* ("waarschijnlijk een naam"); in het totaaloverzicht tellen ze niet mee

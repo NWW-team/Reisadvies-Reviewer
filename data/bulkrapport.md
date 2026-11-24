@@ -7,7 +7,7 @@ Gedraaid op 2026-11-24 over 226 reisadviezen.
 - **82** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **100** van de 3237 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **100** van de 3234 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -27,14 +27,14 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 275 | 144 |
-| geel/oranje — let op | 2266 | 224 |
+| geel/oranje — let op | 2263 | 224 |
 | grijs — ter overweging | 696 | 182 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 213 | 1213 |
+| `zin-max-woorden` | 213 | 1212 |
 | `zin-lijdende-vorm` | 158 | 407 |
 | `zin-frequentiewoord` | 146 | 416 |
 | `natuurgeweld-contact` | 125 | 125 |
@@ -43,7 +43,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `aanhalingstekens` | 52 | 83 |
 | `doc-woordenaantal` | 47 | 47 |
 | `kleur-variant` | 44 | 50 |
-| `link-tekstlengte` | 43 | 48 |
+| `link-tekstlengte` | 42 | 47 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 39 | 39 |
 | `regionaal-gebiedenzin` | 32 | 32 |
@@ -53,7 +53,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `rubriek-vrij-te-hoog` | 26 | 26 |
 | `woord-onbekend` | 25 | 46 |
 | `h3-niet-melden` | 23 | 23 |
-| `rubrieken-volgorde` | 23 | 23 |
+| `rubrieken-volgorde` | 22 | 22 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 19 | 19 |
 | `kleur-vervolg-bullet-kort` | 17 | 17 |

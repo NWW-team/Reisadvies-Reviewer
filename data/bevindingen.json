@@ -12005,12 +12005,12 @@
       "geel"
     ],
     "zinnen": 97,
-    "fout": 4,
-    "letop": 11,
+    "fout": 2,
+    "letop": 13,
     "info": 9,
     "perErnst": {
-      "fout": 4,
-      "let-op": 11,
+      "fout": 2,
+      "let-op": 13,
       "info": 9
     },
     "perRegel": {
@@ -12214,19 +12214,17 @@
       },
       {
         "regel": "link-verboden-partij",
-        "ernst": "fout",
-        "bron": "SW, Relevantie > Naar wie linken we niet?",
-        "boodschap": "Link naar x.com. We linken niet naar commerciële partijen, politieke partijen, belangenbehartigers of media.",
-        "fragment": "X-account van toeristenbureau INGUAT",
-        "herkomst": "aanvulling"
+        "ernst": "let-op",
+        "bron": "SW, Relevantie > Naar wie linken we (niet)?",
+        "boodschap": "Link naar x.com. Is dit het account van een overheidsinstantie? Dan mag het. Heeft die instantie ook een eigen website met deze informatie, link dan liever daarnaar.",
+        "fragment": "X-account van toeristenbureau INGUAT"
       },
       {
         "regel": "link-verboden-partij",
-        "ernst": "fout",
-        "bron": "SW, Relevantie > Naar wie linken we niet?",
-        "boodschap": "Link naar m.facebook.com. We linken niet naar commerciële partijen, politieke partijen, belangenbehartigers of media.",
-        "fragment": "Facebook-pagina met verkeersinformatie van de overheid",
-        "herkomst": "aanvulling"
+        "ernst": "let-op",
+        "bron": "SW, Relevantie > Naar wie linken we (niet)?",
+        "boodschap": "Link naar m.facebook.com. Is dit het account van een overheidsinstantie? Dan mag het. Heeft die instantie ook een eigen website met deze informatie, link dan liever daarnaar.",
+        "fragment": "Facebook-pagina met verkeersinformatie van de overheid"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 18-11-2026 | Nog steeds geldig op: 23-11-2026"
@@ -15565,12 +15563,12 @@
       "groen"
     ],
     "zinnen": 68,
-    "fout": 1,
-    "letop": 10,
+    "fout": 0,
+    "letop": 11,
     "info": 2,
     "perErnst": {
-      "fout": 1,
-      "let-op": 10,
+      "fout": 0,
+      "let-op": 11,
       "info": 2
     },
     "perRegel": {
@@ -15680,11 +15678,10 @@
       },
       {
         "regel": "link-verboden-partij",
-        "ernst": "fout",
-        "bron": "SW, Relevantie > Naar wie linken we niet?",
-        "boodschap": "Link naar facebook.com. We linken niet naar commerciële partijen, politieke partijen, belangenbehartigers of media.",
-        "fragment": "Facebookpagina van de Nederlandse ambassade in Tokio",
-        "herkomst": "aanvulling"
+        "ernst": "let-op",
+        "bron": "SW, Relevantie > Naar wie linken we (niet)?",
+        "boodschap": "Link naar facebook.com. Is dit het account van een overheidsinstantie? Dan mag het. Heeft die instantie ook een eigen website met deze informatie, link dan liever daarnaar.",
+        "fragment": "Facebookpagina van de Nederlandse ambassade in Tokio"
       },
       {
         "regel": "eenheden-voluit",
@@ -24692,12 +24689,12 @@
       "groen"
     ],
     "zinnen": 48,
-    "fout": 1,
-    "letop": 4,
+    "fout": 0,
+    "letop": 5,
     "info": 1,
     "perErnst": {
-      "fout": 1,
-      "let-op": 4,
+      "fout": 0,
+      "let-op": 5,
       "info": 1
     },
     "perRegel": {
@@ -24754,11 +24751,10 @@
       },
       {
         "regel": "link-verboden-partij",
-        "ernst": "fout",
-        "bron": "SW, Relevantie > Naar wie linken we niet?",
-        "boodschap": "Link naar x.com. We linken niet naar commerciële partijen, politieke partijen, belangenbehartigers of media.",
-        "fragment": "Bekijk actuele adviezen",
-        "herkomst": "aanvulling"
+        "ernst": "let-op",
+        "bron": "SW, Relevantie > Naar wie linken we (niet)?",
+        "boodschap": "Link naar x.com. Is dit het account van een overheidsinstantie? Dan mag het. Heeft die instantie ook een eigen website met deze informatie, link dan liever daarnaar.",
+        "fragment": "Bekijk actuele adviezen"
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 27-10-2026 | Nog steeds geldig op: 23-11-2026"
@@ -26096,12 +26092,12 @@
       "geel"
     ],
     "zinnen": 115,
-    "fout": 3,
-    "letop": 18,
+    "fout": 2,
+    "letop": 19,
     "info": 3,
     "perErnst": {
-      "fout": 3,
-      "let-op": 18,
+      "fout": 2,
+      "let-op": 19,
       "info": 3
     },
     "perRegel": {
@@ -26296,11 +26292,10 @@
       },
       {
         "regel": "link-verboden-partij",
-        "ernst": "fout",
-        "bron": "SW, Relevantie > Naar wie linken we niet?",
-        "boodschap": "Link naar x.com. We linken niet naar commerciële partijen, politieke partijen, belangenbehartigers of media.",
-        "fragment": "Volg het laatste nieuws van de Rwandese Nationale Politie",
-        "herkomst": "aanvulling"
+        "ernst": "let-op",
+        "bron": "SW, Relevantie > Naar wie linken we (niet)?",
+        "boodschap": "Link naar x.com. Is dit het account van een overheidsinstantie? Dan mag het. Heeft die instantie ook een eigen website met deze informatie, link dan liever daarnaar.",
+        "fragment": "Volg het laatste nieuws van de Rwandese Nationale Politie"
       },
       {
         "regel": "link-tekstlengte",
@@ -30099,12 +30094,12 @@
       "groen"
     ],
     "zinnen": 59,
-    "fout": 1,
-    "letop": 5,
+    "fout": 0,
+    "letop": 6,
     "info": 1,
     "perErnst": {
-      "fout": 1,
-      "let-op": 5,
+      "fout": 0,
+      "let-op": 6,
       "info": 1
     },
     "perRegel": {
@@ -30162,11 +30157,10 @@
       },
       {
         "regel": "link-verboden-partij",
-        "ernst": "fout",
-        "bron": "SW, Relevantie > Naar wie linken we niet?",
-        "boodschap": "Link naar facebook.com. We linken niet naar commerciële partijen, politieke partijen, belangenbehartigers of media.",
-        "fragment": "Lees informatie over actieve vulkanen",
-        "herkomst": "aanvulling"
+        "ernst": "let-op",
+        "bron": "SW, Relevantie > Naar wie linken we (niet)?",
+        "boodschap": "Link naar facebook.com. Is dit het account van een overheidsinstantie? Dan mag het. Heeft die instantie ook een eigen website met deze informatie, link dan liever daarnaar.",
+        "fragment": "Lees informatie over actieve vulkanen"
       },
       {
         "regel": "link-tekstlengte",

@@ -1716,3 +1716,20 @@ rubrieken. De formulering blijft een vraag (*"Klopt het dat dat hier zo is?"*).
 `h3-alleen-bij-uitzondering` (Verkeersongevallen, Coronaregels) ging van *ter overweging* naar *let
 op*. Martijn: deze hoort bij de formatmeldingen, boven de te lange zinnen. De formulering blijft een
 vraag (*"is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?"*). Gemeten: 41 adviezen.
+
+## Sociale media: een vraag, geen fout; en een duidelijker aanvullingsblok (24 november 2026)
+
+`link-verboden-partij` meldde een link naar facebook.com of x.com als *fout*, met een geel blok
+*"Aanvulling — deze regel past de schrijfwijzer toe, maar dit woord staat er niet letterlijk in."*
+Martijn begreep dat blok niet. En inhoudelijk klopte de melding niet: alle zes de meldingen op
+sociale media gingen over een account van een overheid (de ambassade in Tokio, de Rwandese politie,
+verkeersinformatie in Guatemala). De schrijfwijzer linkt wél naar overheidsinstanties.
+
+- De sociale media staan nu apart in `woordenlijsten.json` (`niet_linken_naar.sociale_media`). Een
+  link daarnaar is *let op*, met de vraag of het een overheidsaccount is en of er geen eigen website
+  is. Geen geel blok: de melding is al een vraag. Nieuwssites, boekingssites en dergelijke blijven
+  *fout*.
+- Het gele blok zegt nu wat er aan de hand is: *"Aanvulling van de tool — de regel staat in de
+  schrijfwijzer, maar dit woord of deze website wordt er niet letterlijk bij genoemd. De tool heeft het
+  zelf aan de lijst toegevoegd. Klopt dat hier niet, klik dan op Onterecht."*
+- Het linken naar sociale media van een overheid staat op de bespreeklijst.

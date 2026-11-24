@@ -4,10 +4,10 @@ Gedraaid op 2026-11-24 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
-- **78** van de 226 adviezen hebben geen enkele harde fout.
+- **81** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **107** van de 3225 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **101** van de 3225 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -26,8 +26,8 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 282 | 148 |
-| geel/oranje — let op | 2271 | 224 |
+| rood — fout | 276 | 145 |
+| geel/oranje — let op | 2277 | 224 |
 | grijs — ter overweging | 672 | 181 |
 
 ## Per regel

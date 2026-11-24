@@ -1710,3 +1710,9 @@ aanhalingsteken. Twee meldingen kwamen daarvandaan (*"â€˜s avonds en 8.00 uur â€
 `kort-actualiteit-verwijzing` met een andere rubriek dan Actueel ging van *ter overweging* naar *let
 op*. Martijn: hij hoort bij het format en mag boven de stijlmeldingen staan, net als de volgorde van de
 rubrieken. De formulering blijft een vraag (*"Klopt het dat dat hier zo is?"*).
+
+## Verkeersongevallen: let op (24 november 2026)
+
+`h3-alleen-bij-uitzondering` (Verkeersongevallen, Coronaregels) ging van *ter overweging* naar *let
+op*. Martijn: deze hoort bij de formatmeldingen, boven de te lange zinnen. De formulering blijft een
+vraag (*"is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?"*). Gemeten: 41 adviezen.

@@ -27,8 +27,8 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 282 | 148 |
-| geel/oranje — let op | 2230 | 224 |
-| grijs — ter overweging | 713 | 181 |
+| geel/oranje — let op | 2271 | 224 |
+| grijs — ter overweging | 672 | 181 |
 
 ## Per regel
 

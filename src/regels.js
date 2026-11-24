@@ -1176,7 +1176,7 @@ export function maakToetser(data) {
         // De matrix merkt een paar rubrieken aan als uitzonderingsgeval. Ze mogen er dus staan,
         // maar niet standaard: de redacteur hoort te wegen of dit advies die uitzondering is.
         if (regel && regel.alleen_bij_uitzondering) {
-          b.push(bevinding('h3-alleen-bij-uitzondering', ERNST.info, 'MX, tab Koppen, kolom Toelichting',
+          b.push(bevinding('h3-alleen-bij-uitzondering', ERNST.letop, 'MX, tab Koppen, kolom Toelichting',
             `"${kop.tekst}" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?`,
             { fragment: kop.tekst, notitie: regel.toelichting }));
         }

@@ -567,12 +567,12 @@
     ],
     "zinnen": 84,
     "fout": 0,
-    "letop": 9,
-    "info": 4,
+    "letop": 10,
+    "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 9,
-      "info": 4
+      "let-op": 10,
+      "info": 3
     },
     "perRegel": {
       "kort-actualiteit-verwijzing": 1,
@@ -601,7 +601,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -1693,12 +1693,12 @@
     ],
     "zinnen": 69,
     "fout": 2,
-    "letop": 10,
-    "info": 2,
+    "letop": 11,
+    "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
-      "info": 2
+      "let-op": 11,
+      "info": 1
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -1727,7 +1727,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -2667,12 +2667,12 @@
     ],
     "zinnen": 121,
     "fout": 0,
-    "letop": 16,
-    "info": 6,
+    "letop": 17,
+    "info": 5,
     "perErnst": {
       "fout": 0,
-      "let-op": 16,
-      "info": 6
+      "let-op": 17,
+      "info": 5
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -2693,7 +2693,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -3404,12 +3404,12 @@
     ],
     "zinnen": 106,
     "fout": 2,
-    "letop": 24,
-    "info": 13,
+    "letop": 25,
+    "info": 12,
     "perErnst": {
       "fout": 2,
-      "let-op": 24,
-      "info": 13
+      "let-op": 25,
+      "info": 12
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -3453,7 +3453,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -4135,12 +4135,12 @@
     ],
     "zinnen": 112,
     "fout": 1,
-    "letop": 12,
-    "info": 11,
+    "letop": 13,
+    "info": 10,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
-      "info": 11
+      "let-op": 13,
+      "info": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -4173,7 +4173,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -7162,12 +7162,12 @@
     ],
     "zinnen": 123,
     "fout": 3,
-    "letop": 15,
-    "info": 9,
+    "letop": 16,
+    "info": 8,
     "perErnst": {
       "fout": 3,
-      "let-op": 15,
-      "info": 9
+      "let-op": 16,
+      "info": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -7207,7 +7207,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -8449,12 +8449,12 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 5,
-    "info": 6,
+    "letop": 6,
+    "info": 5,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
-      "info": 6
+      "let-op": 6,
+      "info": 5
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -8471,7 +8471,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -8572,12 +8572,12 @@
     ],
     "zinnen": 127,
     "fout": 3,
-    "letop": 21,
-    "info": 13,
+    "letop": 22,
+    "info": 12,
     "perErnst": {
       "fout": 3,
-      "let-op": 21,
-      "info": 13
+      "let-op": 22,
+      "info": 12
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -8645,7 +8645,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -9315,12 +9315,12 @@
     ],
     "zinnen": 149,
     "fout": 2,
-    "letop": 19,
-    "info": 4,
+    "letop": 20,
+    "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 19,
-      "info": 4
+      "let-op": 20,
+      "info": 3
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -9354,7 +9354,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -10221,12 +10221,12 @@
     ],
     "zinnen": 95,
     "fout": 1,
-    "letop": 7,
-    "info": 6,
+    "letop": 8,
+    "info": 5,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
-      "info": 6
+      "let-op": 8,
+      "info": 5
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -10255,7 +10255,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -10561,12 +10561,12 @@
     ],
     "zinnen": 67,
     "fout": 1,
-    "letop": 7,
-    "info": 3,
+    "letop": 8,
+    "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
-      "info": 3
+      "let-op": 8,
+      "info": 2
     },
     "perRegel": {
       "h3-vaste-kop": 1,
@@ -10592,7 +10592,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -10920,12 +10920,12 @@
     ],
     "zinnen": 99,
     "fout": 3,
-    "letop": 14,
-    "info": 9,
+    "letop": 15,
+    "info": 8,
     "perErnst": {
       "fout": 3,
-      "let-op": 14,
-      "info": 9
+      "let-op": 15,
+      "info": 8
     },
     "perRegel": {
       "kleur-variant": 2,
@@ -10973,7 +10973,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -11497,12 +11497,12 @@
     ],
     "zinnen": 94,
     "fout": 0,
-    "letop": 8,
-    "info": 4,
+    "letop": 9,
+    "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
-      "info": 4
+      "let-op": 9,
+      "info": 3
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -11520,7 +11520,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -13015,12 +13015,12 @@
     ],
     "zinnen": 173,
     "fout": 5,
-    "letop": 24,
-    "info": 11,
+    "letop": 25,
+    "info": 10,
     "perErnst": {
       "fout": 5,
-      "let-op": 24,
-      "info": 11
+      "let-op": 25,
+      "info": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -13074,7 +13074,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -13397,12 +13397,12 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 44,
-    "info": 16,
+    "letop": 45,
+    "info": 15,
     "perErnst": {
       "fout": 2,
-      "let-op": 44,
-      "info": 16
+      "let-op": 45,
+      "info": 15
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -13469,7 +13469,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -14049,12 +14049,12 @@
     ],
     "zinnen": 128,
     "fout": 2,
-    "letop": 33,
-    "info": 7,
+    "letop": 34,
+    "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 33,
-      "info": 7
+      "let-op": 34,
+      "info": 6
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -14103,7 +14103,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -15804,12 +15804,12 @@
     ],
     "zinnen": 130,
     "fout": 4,
-    "letop": 15,
-    "info": 5,
+    "letop": 16,
+    "info": 4,
     "perErnst": {
       "fout": 4,
-      "let-op": 15,
-      "info": 5
+      "let-op": 16,
+      "info": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -15872,7 +15872,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -16098,12 +16098,12 @@
     ],
     "zinnen": 113,
     "fout": 2,
-    "letop": 21,
-    "info": 11,
+    "letop": 22,
+    "info": 10,
     "perErnst": {
       "fout": 2,
-      "let-op": 21,
-      "info": 11
+      "let-op": 22,
+      "info": 10
     },
     "perRegel": {
       "kleur-variant": 2,
@@ -16139,7 +16139,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -16405,12 +16405,12 @@
     ],
     "zinnen": 68,
     "fout": 0,
-    "letop": 6,
-    "info": 4,
+    "letop": 7,
+    "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
-      "info": 4
+      "let-op": 7,
+      "info": 3
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -16425,7 +16425,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -17839,12 +17839,12 @@
     ],
     "zinnen": 107,
     "fout": 2,
-    "letop": 18,
-    "info": 5,
+    "letop": 19,
+    "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 18,
-      "info": 5
+      "let-op": 19,
+      "info": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -17879,7 +17879,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -19373,12 +19373,12 @@
     ],
     "zinnen": 58,
     "fout": 3,
-    "letop": 3,
-    "info": 3,
+    "letop": 4,
+    "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 3,
-      "info": 3
+      "let-op": 4,
+      "info": 2
     },
     "perRegel": {
       "h3-vaste-kop": 1,
@@ -19403,7 +19403,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -19695,12 +19695,12 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 4,
-    "info": 5,
+    "letop": 5,
+    "info": 4,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
-      "info": 5
+      "let-op": 5,
+      "info": 4
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -19716,7 +19716,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -20074,12 +20074,12 @@
     ],
     "zinnen": 73,
     "fout": 1,
-    "letop": 5,
-    "info": 3,
+    "letop": 6,
+    "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
-      "info": 3
+      "let-op": 6,
+      "info": 2
     },
     "perRegel": {
       "h4-niet-melden": 1,
@@ -20111,7 +20111,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -21074,12 +21074,12 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 3,
-    "info": 2,
+    "letop": 4,
+    "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
-      "info": 2
+      "let-op": 4,
+      "info": 1
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -21095,7 +21095,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -21500,12 +21500,12 @@
     ],
     "zinnen": 105,
     "fout": 2,
-    "letop": 19,
-    "info": 9,
+    "letop": 20,
+    "info": 8,
     "perErnst": {
       "fout": 2,
-      "let-op": 19,
-      "info": 9
+      "let-op": 20,
+      "info": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -21551,7 +21551,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -22148,12 +22148,12 @@
     ],
     "zinnen": 87,
     "fout": 0,
-    "letop": 12,
-    "info": 5,
+    "letop": 13,
+    "info": 4,
     "perErnst": {
       "fout": 0,
-      "let-op": 12,
-      "info": 5
+      "let-op": 13,
+      "info": 4
     },
     "perRegel": {
       "kort-actualiteit-verwijzing": 1,
@@ -22179,7 +22179,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -22806,12 +22806,12 @@
     ],
     "zinnen": 93,
     "fout": 1,
-    "letop": 11,
-    "info": 5,
+    "letop": 12,
+    "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
-      "info": 5
+      "let-op": 12,
+      "info": 4
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -22832,7 +22832,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -23095,12 +23095,12 @@
     ],
     "zinnen": 137,
     "fout": 2,
-    "letop": 36,
-    "info": 8,
+    "letop": 37,
+    "info": 7,
     "perErnst": {
       "fout": 2,
-      "let-op": 36,
-      "info": 8
+      "let-op": 37,
+      "info": 7
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -23144,7 +23144,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -23511,12 +23511,12 @@
     ],
     "zinnen": 146,
     "fout": 1,
-    "letop": 25,
-    "info": 15,
+    "letop": 26,
+    "info": 14,
     "perErnst": {
       "fout": 1,
-      "let-op": 25,
-      "info": 15
+      "let-op": 26,
+      "info": 14
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -23548,7 +23548,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -23884,12 +23884,12 @@
     ],
     "zinnen": 79,
     "fout": 3,
-    "letop": 11,
-    "info": 4,
+    "letop": 12,
+    "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 11,
-      "info": 4
+      "let-op": 12,
+      "info": 3
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -23929,7 +23929,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -24069,12 +24069,12 @@
     ],
     "zinnen": 136,
     "fout": 3,
-    "letop": 15,
-    "info": 14,
+    "letop": 16,
+    "info": 13,
     "perErnst": {
       "fout": 3,
-      "let-op": 15,
-      "info": 14
+      "let-op": 16,
+      "info": 13
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -24136,7 +24136,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -25497,12 +25497,12 @@
     ],
     "zinnen": 87,
     "fout": 3,
-    "letop": 8,
-    "info": 3,
+    "letop": 9,
+    "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 8,
-      "info": 3
+      "let-op": 9,
+      "info": 2
     },
     "perRegel": {
       "kleur-variant": 1,
@@ -25546,7 +25546,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -27061,12 +27061,12 @@
     ],
     "zinnen": 86,
     "fout": 2,
-    "letop": 7,
-    "info": 7,
+    "letop": 8,
+    "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 7,
-      "info": 7
+      "let-op": 8,
+      "info": 6
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -27106,7 +27106,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -28021,12 +28021,12 @@
     ],
     "zinnen": 84,
     "fout": 1,
-    "letop": 9,
-    "info": 5,
+    "letop": 10,
+    "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
-      "info": 5
+      "let-op": 10,
+      "info": 4
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -28044,7 +28044,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -29208,12 +29208,12 @@
     ],
     "zinnen": 185,
     "fout": 2,
-    "letop": 34,
-    "info": 17,
+    "letop": 35,
+    "info": 16,
     "perErnst": {
       "fout": 2,
-      "let-op": 34,
-      "info": 17
+      "let-op": 35,
+      "info": 16
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -29259,7 +29259,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -29963,12 +29963,12 @@
     ],
     "zinnen": 91,
     "fout": 1,
-    "letop": 5,
-    "info": 7,
+    "letop": 6,
+    "info": 6,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
-      "info": 7
+      "let-op": 6,
+      "info": 6
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -29985,7 +29985,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -30270,12 +30270,12 @@
     ],
     "zinnen": 109,
     "fout": 2,
-    "letop": 10,
-    "info": 5,
+    "letop": 11,
+    "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
-      "info": 5
+      "let-op": 11,
+      "info": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -30316,7 +30316,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -30450,12 +30450,12 @@
     ],
     "zinnen": 142,
     "fout": 4,
-    "letop": 24,
-    "info": 11,
+    "letop": 25,
+    "info": 10,
     "perErnst": {
       "fout": 4,
-      "let-op": 24,
-      "info": 11
+      "let-op": 25,
+      "info": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -30509,7 +30509,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -30954,12 +30954,12 @@
     ],
     "zinnen": 138,
     "fout": 2,
-    "letop": 28,
-    "info": 10,
+    "letop": 29,
+    "info": 9,
     "perErnst": {
       "fout": 2,
-      "let-op": 28,
-      "info": 10
+      "let-op": 29,
+      "info": 9
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -31011,7 +31011,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -32736,12 +32736,12 @@
     ],
     "zinnen": 96,
     "fout": 2,
-    "letop": 16,
-    "info": 7,
+    "letop": 17,
+    "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 16,
-      "info": 7
+      "let-op": 17,
+      "info": 6
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -32781,7 +32781,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -32976,12 +32976,12 @@
     ],
     "zinnen": 92,
     "fout": 2,
-    "letop": 12,
-    "info": 9,
+    "letop": 13,
+    "info": 8,
     "perErnst": {
       "fout": 2,
-      "let-op": 12,
-      "info": 9
+      "let-op": 13,
+      "info": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -33014,7 +33014,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",

@@ -222,16 +222,20 @@ if (nietIngedeeld.length) console.warn('Niet ingedeeld in het overzicht:', nietI
 // ---------- schrijven ----------
 
 const fmt = (x) => `${x.adviezen} (${x.meldingen})`;
-const tabel = (rijen) => [
-  `| | ${EERSTE.datum} | nu |`,
-  '|---|---:|---:|',
-  ...rijen.filter((r) => r.toen.meldingen || r.nu.meldingen)
+// Alleen de stand van nu, behalve bij de woordenaantallen en de spelfouten (Martijn, 24 november
+// 2026): daar zegt de vergelijking met de eerste meting iets. Bij de spelfouten laat hij zien wat er
+// is opgelost sinds SpellingSpeurneus de redactie meldingen stuurt.
+const tabel = (rijen, { metToen = false } = {}) => [
+  metToen ? `| | ${EERSTE.datum} | nu |` : '| | nu |',
+  metToen ? '|---|---:|---:|' : '|---|---:|',
+  ...rijen.filter((r) => (metToen && r.toen.meldingen) || r.nu.meldingen)
     .sort((a, b) => b.nu.adviezen - a.nu.adviezen || b.toen.adviezen - a.toen.adviezen)
-    .map((r) => `| ${r.wat} | ${fmt(r.toen)} | ${fmt(r.nu)} |`),
+    .map((r) => (metToen ? `| ${r.wat} | ${fmt(r.toen)} | ${fmt(r.nu)} |` : `| ${r.wat} | ${fmt(r.nu)} |`)),
 ];
-const perRegel = (lijst) => tabel(lijst.map(([id, wat]) => rij(wat, regel(id))));
+const perRegel = (lijst, opties) => tabel(lijst.map(([id, wat]) => rij(wat, regel(id))), opties);
 const metIets = (res, past) => res.filter((r) => r.bevindingen.some(past)).length;
-const oogRij = (wat, past) => `| ${wat} | ${metIets(toen, past)} | ${metIets(nu, past)} |`;
+const oogRij = (wat, past) => `| ${wat} | ${metIets(nu, past)} |`;
+const vetRij = (wat, past) => `| **${wat}** | **${metIets(nu, past)}** |`;
 
 const teBespreken = (res, sleutel) => ({
   adviezen: res.filter((r) => r.samenvatting.teBespreken[sleutel].length).length,
@@ -268,11 +272,12 @@ const bovenNu = sRijen.filter((r) => r.nu > r.limiet).length;
 const uit = [
   '# Totaaloverzicht reisadviezen',
   '',
-  `Gedraaid op ${new Date().toISOString().slice(0, 10)} over ${nu.length} reisadviezen. De kolom`,
-  `*${EERSTE.datum}* is de eerste meting: de teksten van toen, door de regels van nu. Zo zegt het`,
-  'verschil alleen wat er in de adviezen is veranderd.',
+  `Gedraaid op ${new Date().toISOString().slice(0, 10)} over ${nu.length} reisadviezen, zoals ze die dag op de website stonden.`,
   '',
   'Elke cel: **in hoeveel adviezen** (hoeveel meldingen in totaal).',
+  '',
+  `Bij de woordenaantallen en de spelfouten staat ook de eerste meting van ${EERSTE.datum}: de teksten van toen,`,
+  'door de regels van nu. Zo zegt het verschil alleen wat er in de adviezen is veranderd.',
   '',
   'Het overzicht heeft twee delen:',
   '',
@@ -284,20 +289,23 @@ const uit = [
   '',
   '## In één oogopslag',
   '',
-  `| aantal adviezen | ${EERSTE.datum} | nu |`,
-  '|---|---:|---:|',
-  `| **Format: minstens één afwijking** | **${metIets(toen, regel(...deel1))}** | **${metIets(nu, regel(...deel1))}** |`,
+  '| aantal adviezen | nu |',
+  '|---|---:|',
+  vetRij('Format: minstens één afwijking', regel(...deel1)),
   oogRij('Onderwerp dat er niet in hoort', regel(...NIET_IN_ADVIES)),
   oogRij('Te lang (woorden, rubrieken, bullets, Actueel)', regel(...ids(LENGTE))),
   oogRij('"In het kort" niet volgens de opbouw', regel(...ids(IN_HET_KORT))),
   oogRij('Kleurcodeformulering niet volgens de matrix', regel(...ids(KLEUR))),
-  `| **Taal: vaste zin uit het sjabloon ontbreekt of wijkt af** | **${metIets(toen, regel(...ids(VAST)))}** | **${metIets(nu, regel(...ids(VAST)))}** |`,
-  `| **Taal: schrijfwijzer** | **${metIets(toen, regel(...deel2.filter((id) => !ids(VAST).includes(id))))}** | **${metIets(nu, regel(...deel2.filter((id) => !ids(VAST).includes(id))))}** |`,
+  vetRij('Taal: vaste zin uit het sjabloon ontbreekt of wijkt af', regel(...ids(VAST))),
+  vetRij('Taal: schrijfwijzer', regel(...deel2.filter((id) => !ids(VAST).includes(id)))),
   oogRij('Te lange zin', regel('zin-max-woorden')),
   oogRij('Lijdende vorm', regel('zin-lijdende-vorm')),
   oogRij('Twijfeltaal', regel('zin-twijfeltaal', 'zin-frequentiewoord')),
   oogRij('Tekst- of spelfout (SpellingSpeurneus)', speurneusFout),
   '',
+  `Sinds ${EERSTE.datum}: boven de woordenlimiet van ${metIets(toen, regel('doc-woordenaantal'))} naar `
+    + `${metIets(nu, regel('doc-woordenaantal'))} adviezen; met een tekst- of spelfout van ${metIets(toen, speurneusFout)} `
+    + `naar ${metIets(nu, speurneusFout)}.`,
   '---',
   '',
   '# Deel 1. Inhoudelijke keuzes over het format',
@@ -311,7 +319,7 @@ const uit = [
   '',
   '## 1.2 Lengte',
   '',
-  ...perRegel(LENGTE),
+  ...perRegel(LENGTE, { metToen: true }),
   '',
   '### Steekproef: na de inkortslag van 2024 weer gegroeid',
   '',
@@ -377,12 +385,13 @@ const uit = [
   '',
   '## 2.6 Tekst- en spelfouten (SpellingSpeurneus)',
   '',
-  'De controles die de tool van SpellingSpeurneus heeft overgenomen. Een onbekend woord vooraan in een',
+  'De controles die de tool van SpellingSpeurneus heeft overgenomen. Sinds de eerste meting zijn veel',
+  'fouten opgelost, na de meldingen die SpellingSpeurneus aan de redactie stuurt. Een onbekend woord vooraan in een',
   'opsomming is waarschijnlijk een naam (een plaats, een provincie, een vulkaan). Die staat apart en telt',
   'niet mee als spelfout.',
   '',
   ...tabel([...SPEURNEUS.map(([id, wat]) => rij(wat, (b) => b.regel === id && !isNaam(b))),
-    rij('**Samen**', speurneusFout)]),
+    rij('**Samen**', speurneusFout)], { metToen: true }),
   '',
   `Waarschijnlijk een naam (ter overweging, niet meegeteld): nu ${tel(nu, isNaam).meldingen} meldingen `
     + `in ${tel(nu, isNaam).adviezen} adviezen.`,

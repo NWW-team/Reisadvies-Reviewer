@@ -1767,3 +1767,10 @@ spelfout. Namen die de redactie in SpellingSpeurneus als spelfout heeft aangewez
 die toets komt eerder en is aantoonbaar.
 
 Ook een webadres (*kriis.ee*) slaat de spellingtoets nu over.
+
+## De geldigheidszin blijft zoals hij is (24 november 2026)
+
+*"Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal ___ maanden geldig zijn op het moment van
+aankomst in / vertrek uit het land"* is 18 woorden en stond op de bespreeklijst om in te korten.
+Martijn: *"goed om NL erbij te zetten, dus kan niet korter."* Het punt is van de bespreeklijst. De zin blijft
+vrijgesteld van de zinslengte; `paspoort-geldigheid` blijft een afwijkende formulering melden.

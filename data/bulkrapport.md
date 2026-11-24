@@ -7,7 +7,7 @@ Gedraaid op 2026-11-24 over 226 reisadviezen.
 - **82** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **101** van de 3225 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **76** van de 3200 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -27,7 +27,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 275 | 144 |
-| geel/oranje — let op | 2278 | 224 |
+| geel/oranje — let op | 2253 | 224 |
 | grijs — ter overweging | 672 | 181 |
 
 ## Per regel
@@ -51,12 +51,12 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `kinderen-paspoort` | 28 | 28 |
 | `paspoort-geldigheid` | 28 | 28 |
 | `rubriek-vrij-te-hoog` | 26 | 26 |
-| `woord-onbekend` | 26 | 47 |
 | `h3-niet-melden` | 23 | 23 |
 | `rubrieken-volgorde` | 23 | 23 |
 | `nood-contactcenter` | 20 | 20 |
 | `bagage-heen` | 19 | 19 |
 | `tekst-niet-melden` | 17 | 19 |
+| `woord-onbekend` | 17 | 22 |
 | `rijbewijs-anwb` | 13 | 13 |
 | `actueel-max-woorden` | 11 | 11 |
 | `h4-kop-variant` | 10 | 11 |

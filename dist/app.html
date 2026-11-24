@@ -2682,6 +2682,7 @@ function maakToetser(data) {
           const w = stukken[i];
           if (!w || !/\p{L}/u.test(w)) continue;
           if (/\d/.test(w) || w.includes('@')) continue;   // jaartallen, codes, e-mailadressen
+          if (/^[a-z0-9-]+(\.[a-z0-9-]+)+$/i.test(w)) continue;   // webadressen: kriis.ee
           if (isBekendWoord(w)) continue;
           if (alGemeldWoord.has(w.toLowerCase()) || gezienWoord.has(w)) continue;
           gezienWoord.add(w);
@@ -2709,6 +2710,11 @@ function maakToetser(data) {
           const metHoofd = /^\p{Lu}/u.test(w);
           const buurHoofd = [stukken[i - 1], stukken[i + 1]].some((x) => x && /^\p{Lu}/u.test(x));
           if (metHoofd && (w !== beginWoord || buurHoofd)) continue;
+          // Een bullet die geen zin is, maar een naam in een opsomming: "Azuay", "Mocimboa da
+          // Praia", "Ibu op het eiland Halmahera". Die eindigt niet op een punt. Vooraan staat dan
+          // geen zinsbegin maar een naam, en namen meldt de tool niet (Martijn, 24 november 2026:
+          // alleen als ze aantoonbaar fout zijn, en dat zijn de namen die hierboven al gemeld zijn).
+          if (metHoofd && !/[.?!:]["'’”)]*\s*$/.test(z.tekst)) continue;
 
           b.push(bevinding('woord-onbekend', ERNST.letop, 'Tekstcontrole (SpellingSpeurneus)',
             `"${w}" staat niet in de woordenlijst.`,

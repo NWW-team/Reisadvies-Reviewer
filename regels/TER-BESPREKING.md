@@ -87,26 +87,28 @@ Vraag: is dit de afspraak, en zo ja, moet dat in de matrix? Die zegt nu alleen "
 
 ### Vaste zinnen uit het sjabloon die zelf boven de norm zitten
 
-Zestien formuleringen uit het sjabloon zijn zelf langer dan de schrijfwijzer toestaat: 15 woorden,
-of 20 als er een link in de zin staat. De tool meldt ze niet, want de redacteur volgt het sjabloon.
-Sinds de tool ook zinnen in bullets toetst (19 november 2026), zijn er zeven bijgekomen die altijd
-in een opsomming staan. De meest gebruikte:
+Deze formuleringen uit het sjabloon zijn zelf langer dan de schrijfwijzer toestaat: 15 woorden, of
+20 als er een link in de zin staat. De tool meldt ze niet, want de redacteur volgt het sjabloon. Op
+volgorde van hoe vaak ze voorkomen:
 
 | woorden | in hoeveel adviezen | zin |
 |---:|---:|---|
+| 21 (met link) | 219 | Bekijk wat u vanuit [land] mee terug mag nemen naar Nederland op de pagina Wat mag ik meenemen naar Nederland? |
 | 32 (met link) | 192 | Nederlandse ambassades en consulaten-generaal zijn 24 uur per dag, 7 dagen per week bereikbaar via het contactcenter van NederlandWereldwijd op telefoonnummer +31 247 247 247 of via WhatsApp: +31 857 737 400. |
+| 18 of 16 | 157 | (Let op:) Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. *(18 woorden met "Let op:", zoals in het sjabloon; 16 zonder. 76 adviezen hebben "Let op:", 81 niet.)* |
 | 20 | 128 | Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie. *(sinds november 2026 "accommodatie" in plaats van "hotel"; de tool meldt de oude vorm als afwijking)* |
 | 16 tot 25 | 110 | U leest op de website van de GGD ook meer over ziektes die er voorkomen, zoals dengue (knokkelkoorts), chikungunya … (de lijst verschilt per land) |
 | 18 | 97 | Als u in het ziekenhuis belandt, moet u mogelijk naar een ander land worden overgebracht voor medische zorg. *(ook lijdende vorm en twijfeltaal)* |
-| 16 of 18 | 157 | (Let op:) Bij een oranje of rood reisadvies passen veel Nederlandse verzekeraars de voorwaarden van hun reisverzekeringen aan. |
-| 16 of 18 | ongeveer 50 | Uw Nederlandse paspoort (of ID-kaart) moet geldig zijn tijdens de hele periode dat u in het land bent. |
+| 17 | 68 | In [land] is uw Nederlandse rijbewijs alleen geldig als u ook een geldig internationaal rijbewijs heeft. |
 | 16 | 58 | Kinderen hebben ook een geldig paspoort en een visum nodig voor een reis naar [land]. |
 | 18 | 55 | U heeft geen visum nodig voor [land] als u met een Nederlands paspoort of Nederlandse ID-kaart reist. |
+| 16 of 18 | ongeveer 50 | Uw Nederlandse paspoort (of ID-kaart) moet geldig zijn tijdens de hele periode dat u in het land bent. |
 | 16 | 42 | Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig voor een reis naar [land]. |
+| 17 | 20 | De wetten en de gebruiken in dit land tegenover lhbtiq+ personen zijn vergelijkbaar met die van Nederland. |
+| 21 | 5 | In een noodgeval kunt u ook terecht bij de ambassade van een ander land dat lid is van de Europese Unie. |
+| 18 | 3 | Dan moet u een bewijs van vaccinatie tegen gele koorts laten zien als u naar [land] reist. |
 
-Door de grens van 20 woorden voor zinnen met een link vallen vier zinnen wél binnen de norm,
-waaronder die over de medicijnverklaring en over reizen met een minderjarig kind. De volledige lijst
-staat in [`data/vaste-teksten-boven-de-norm.md`](../data/vaste-teksten-boven-de-norm.md).
+De zin over hoelang het paspoort nog geldig moet zijn, staat hieronder apart.
 
 Is een zin ingekort in het sjabloon, dan is het daarna geen punt meer: de tool toetst de nieuwe
 formulering gewoon mee.

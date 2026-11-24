@@ -90,8 +90,8 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 
 | | 14 september 2026 | nu |
 |---|---:|---:|
-| Vrije rubriek boven Wetten en gebruiken (ter overweging) | 23 (23) | 26 (26) |
-| Volgorde van de vaste rubrieken anders (ter overweging) | 22 (22) | 23 (23) |
+| Vrije rubriek boven Wetten en gebruiken | 23 (23) | 26 (26) |
+| Volgorde van de vaste rubrieken anders | 22 (22) | 23 (23) |
 | Tussenkop heet elders anders | 12 (13) | 10 (11) |
 | Rubriek die geen vaste kop is | 11 (11) | 10 (10) |
 | Tussenkop onder Natuurgeweld noemt geen risico | 7 (7) | 7 (7) |
@@ -108,8 +108,8 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 | Contact met de lokale autoriteiten ("uw hotel" is "uw accommodatie" geworden) | 130 (130) | 125 (125) |
 | Aanhef boven de gebieden in Regionale risico's | 31 (31) | 32 (32) |
 | Openingstekst reisverzekering | 32 (32) | 31 (31) |
-| Zin over paspoort voor kinderen | 28 (28) | 29 (29) |
 | Hoelang het paspoort nog geldig moet zijn | 28 (28) | 28 (28) |
+| Zin over paspoort voor kinderen | 27 (27) | 28 (28) |
 | Contactcenter (24/7 bereikbaar) | 20 (20) | 20 (20) |
 | Douaneregels van het land zelf | 20 (20) | 19 (19) |
 | Verwijzing naar de ANWB bij rijbewijs | 13 (13) | 13 (13) |

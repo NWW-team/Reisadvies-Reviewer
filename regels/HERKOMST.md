@@ -1669,3 +1669,24 @@ De regel accepteert nu *gebieden*, *eilanden* en *steden*. Een ander woord op di
 als afwijking, met de zin als fragment: Indonesië (*provincies*). De toets kijkt per rubriek: staat
 er ergens een geldige aanhef, dan is de rubriek goed. Daardoor valt Mexico (*vulkanen* bij rood,
 *gebieden* bij oranje) er niet onder.
+
+## Volgorde van de rubrieken: let op, direct onder de formatmeldingen (24 november 2026)
+
+Martijn: *"Dingen die echt afwijken van het format en inderdaad echt fout zijn, die zijn het
+belangrijkste om bovenaan te zetten. En in dat rijtje van belangrijkheid kan nog wel die volgorde
+[…] als laatste erbij bij de formatbevindingen."* Te lange zinnen en lijdende vorm zijn minder
+belangrijk.
+
+`rubrieken-volgorde` en `rubriek-vrij-te-hoog` gaan van *ter overweging* naar *let op*, met dezelfde
+vragende formulering (*"Weet je zeker dat je …?"*). De filtergroep *Volgorde van de rubrieken* staat
+in `groepen.json` nu direct na *Fout en format*. Binnen *Let op* staan de meldingen op de volgorde
+van de filters, dus eerst het format, dan de volgorde van de rubrieken, dan de schrijfregels.
+
+## Kinderzin: "nodig om naar … te reizen" (24 november 2026)
+
+Spanje schrijft *"Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig om naar Spanje te
+reizen."* De tool meldde dat de zin afwijkt, en stelde als verwachte zin de vorm met visum voor, terwijl
+voor Spanje geen visum nodig is. Martijn: deze variant mag worden goedgekeurd. De kern van
+`kinderen-paspoort` accepteert nu ook *"nodig om naar {land} te reizen"*: dezelfde vorm als de zin voor
+volwassenen in het sjabloon. Het nieuwe veld `verwacht` toont de zin met de optionele delen tussen
+haakjes, zoals het sjabloon ze aangeeft, zodat de melding geen visum meer voorstelt.

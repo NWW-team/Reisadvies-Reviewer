@@ -118,8 +118,8 @@ const OPBOUW = [
   ['h4-kop-variant', 'Tussenkop heet elders anders'],
   ['h4-natuurrisico', 'Tussenkop onder Natuurgeweld noemt geen risico'],
   ['rubriek-bovenaan', "Actueel of Regionale risico's niet bovenaan"],
-  ['rubrieken-volgorde', 'Volgorde van de vaste rubrieken anders (ter overweging)'],
-  ['rubriek-vrij-te-hoog', 'Vrije rubriek boven Wetten en gebruiken (ter overweging)'],
+  ['rubrieken-volgorde', 'Volgorde van de vaste rubrieken anders'],
+  ['rubriek-vrij-te-hoog', 'Vrije rubriek boven Wetten en gebruiken'],
 ];
 
 // ================= Deel 2: taalkeuzes =================

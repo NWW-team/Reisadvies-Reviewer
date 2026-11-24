@@ -99,6 +99,22 @@ test('aanhef bij Regionale risico\'s: gebieden is vast, eilanden en steden mogen
   assert.match(b.fragment, /provincies/);
 });
 
+test('kinderzin: "nodig om naar … te reizen" mag ook, en de verwachte zin stelt geen visum voor', () => {
+  const blok = (z) => '<h2>Hoe bereid ik mijn reis naar Testland voor?</h2><h3>Paspoort, visum, rijbewijs</h3><ul><li>' + z + '</li></ul>';
+  const goed = bevindingen(blok('Kinderen hebben ook een geldig paspoort of geldige ID-kaart nodig om naar Testland te reizen.'));
+  assert.ok(!goed.some((x) => x.regel === 'kinderen-paspoort'));
+  const fout = bevindingen(blok('Kinderen hebben ook een geldig paspoort en een ESTA nodig voor een reis naar Testland.'))
+    .find((x) => x.regel === 'kinderen-paspoort');
+  assert.ok(fout);
+  assert.match(fout.verwacht, /\(of geldige ID-kaart\) \(en een visum\)/);
+});
+
+test('de volgorde van de rubrieken is let op, en staat direct onder de formatmeldingen', () => {
+  const groepen = REGELDATA.groepen.groepen.map((g) => g.id);
+  assert.strictEqual(groepen.indexOf('rubriekvolgorde'), groepen.indexOf('format') + 1);
+  assert.ok(groepen.indexOf('rubriekvolgorde') < groepen.indexOf('zinslengte'));
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

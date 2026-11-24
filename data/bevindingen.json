@@ -6062,11 +6062,11 @@
     "zinnen": 111,
     "fout": 5,
     "letop": 20,
-    "info": 9,
+    "info": 14,
     "perErnst": {
       "fout": 5,
       "let-op": 20,
-      "info": 9
+      "info": 14
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -6077,6 +6077,7 @@
       "rubriek-vrij-te-hoog": 1,
       "titel-leestekens": 1,
       "tekst-cms-rest": 1,
+      "woord-onbekend": 5,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 8,
       "zin-lijdende-vorm": 4,
@@ -6156,6 +6157,56 @@
         "kop": null,
         "herkomst": "aanvulling",
         "notitie": "Een bezoeker ziet dit letterlijk op de pagina staan."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Bas-Uélé\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Bas-Uélé",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Haut-Uélé\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Haut-Uélé",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Noord-Ubangi\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Noord-Ubangi",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Zuid-Ubangi\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Zuid-Ubangi",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Tshopo\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Tshopo",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
       },
       {
         "regel": "zin-max-woorden",
@@ -7022,14 +7073,15 @@
     "zinnen": 64,
     "fout": 0,
     "letop": 4,
-    "info": 2,
+    "info": 3,
     "perErnst": {
       "fout": 0,
       "let-op": 4,
-      "info": 2
+      "info": 3
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 2,
       "zin-frequentiewoord": 2,
       "zin-lijdende-vorm": 1
@@ -7045,6 +7097,16 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Instituto\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Instituto nacional de metrologia e geofísica (informatie in het Portugees)",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
       },
       {
         "regel": "zin-max-woorden",
@@ -8853,11 +8915,11 @@
     "zinnen": 148,
     "fout": 5,
     "letop": 22,
-    "info": 11,
+    "info": 16,
     "perErnst": {
       "fout": 5,
       "let-op": 22,
-      "info": 11
+      "info": 16
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -8865,6 +8927,7 @@
       "nood-contactcenter": 1,
       "natuurgeweld-contact": 1,
       "tekst-dubbel-woord": 1,
+      "woord-onbekend": 5,
       "zin-max-woorden": 16,
       "zin-lijdende-vorm": 5,
       "zin-frequentiewoord": 8,
@@ -8932,6 +8995,56 @@
         "verwacht": "via",
         "herkomst": "aanvulling",
         "notitie": "Meestal blijft bij het herschrijven van een zin het oude woord staan."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Azuay\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Azuay",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Bolívar\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Bolívar (kanton Las Naves)",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Cañar\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Cañar (kanton La Troncal)",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Guayas\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Guayas",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Manabí\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Manabí",
+        "kop": "Actueel",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
       },
       {
         "regel": "zin-max-woorden",
@@ -12492,14 +12605,15 @@
     "zinnen": 90,
     "fout": 0,
     "letop": 11,
-    "info": 0,
+    "info": 1,
     "perErnst": {
       "fout": 0,
       "let-op": 11,
-      "info": 0
+      "info": 1
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
+      "woord-onbekend": 1,
       "zin-lijdende-vorm": 3,
       "zin-max-woorden": 7
     },
@@ -12516,6 +12630,16 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"COPECO\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "COPECO",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -12879,11 +13003,11 @@
     "zinnen": 173,
     "fout": 5,
     "letop": 23,
-    "info": 10,
+    "info": 12,
     "perErnst": {
       "fout": 5,
       "let-op": 23,
-      "info": 10
+      "info": 12
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -12896,7 +13020,7 @@
       "rubrieken-max": 1,
       "tekst-plakfout": 1,
       "tekst-spatie-leesteken": 1,
-      "woord-onbekend": 2,
+      "woord-onbekend": 4,
       "tekst-niet-melden": 1,
       "zin-max-woorden": 9,
       "zin-frequentiewoord": 8,
@@ -13014,6 +13138,26 @@
         "kop": "Criminaliteit",
         "herkomst": "aanvulling",
         "notitie": "De redactie heeft deze naam in SpellingSpeurneus naar de spelfouten verplaatst. Klopt hij toch? Zet hem daar terug."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Ibu\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Ibu op het eiland Halmahera",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Lokon\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Lokon en Ruang in Noord-Sulawesi",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
       },
       {
         "regel": "tekst-niet-melden",
@@ -13241,11 +13385,11 @@
     "zinnen": 197,
     "fout": 2,
     "letop": 44,
-    "info": 15,
+    "info": 16,
     "perErnst": {
       "fout": 2,
       "let-op": 44,
-      "info": 15
+      "info": 16
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -13257,6 +13401,7 @@
       "paspoort-geldigheid": 1,
       "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
+      "woord-onbekend": 1,
       "tekst-niet-melden": 3,
       "zin-max-woorden": 26,
       "zin-frequentiewoord": 11,
@@ -13348,6 +13493,16 @@
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 8 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Actueel, Regionale risico’s, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
         "plek": "Welke veiligheidsrisico's zijn er in India?"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Lakshadweep\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Lakshadweep",
+        "kop": "Wetten en gebruiken",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
       },
       {
         "regel": "tekst-niet-melden",
@@ -16724,16 +16879,17 @@
     "zinnen": 119,
     "fout": 1,
     "letop": 19,
-    "info": 10,
+    "info": 14,
     "perErnst": {
       "fout": 1,
       "let-op": 19,
-      "info": 10
+      "info": 14
     },
     "perRegel": {
       "h4-niet-melden": 1,
       "nood-verwijzing-nood": 1,
       "nood-verwijzing-crisis": 1,
+      "woord-onbekend": 4,
       "zin-lijdende-vorm": 4,
       "zin-max-woorden": 13,
       "zin-frequentiewoord": 5,
@@ -16769,6 +16925,46 @@
         "boodschap": "De vaste verwijzing naar de pagina over een crisissituatie ontbreekt.",
         "plek": "In geval van nood",
         "verwacht": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Attapu\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Attapu",
+        "kop": "Landmijnen",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Xekong\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Xekong",
+        "kop": "Landmijnen",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Saravan\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Saravan",
+        "kop": "Landmijnen",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Savannakhet\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Savannakhet",
+        "kop": "Landmijnen",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
       },
       {
         "regel": "zin-lijdende-vorm",
@@ -20084,16 +20280,17 @@
     "zinnen": 106,
     "fout": 3,
     "letop": 9,
-    "info": 1,
+    "info": 4,
     "perErnst": {
       "fout": 3,
       "let-op": 9,
-      "info": 1
+      "info": 4
     },
     "perRegel": {
       "kleur-variant": 1,
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
+      "woord-onbekend": 3,
       "zin-max-woorden": 7,
       "zin-frequentiewoord": 1,
       "zin-lijdende-vorm": 1,
@@ -20127,6 +20324,36 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Macomia\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Macomia",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Mocimboa\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Mocimboa da Praia",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Mueda\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Mueda",
+        "kop": "Regionale risico's",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
       },
       {
         "regel": "zin-max-woorden",
@@ -23271,17 +23498,18 @@
     "zinnen": 146,
     "fout": 1,
     "letop": 24,
-    "info": 14,
+    "info": 16,
     "perErnst": {
       "fout": 1,
       "let-op": 24,
-      "info": 14
+      "info": 16
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "h3-alleen-bij-uitzondering": 1,
       "natuurgeweld-contact": 1,
       "rubrieken-max": 1,
+      "woord-onbekend": 2,
       "zin-frequentiewoord": 9,
       "zin-lijdende-vorm": 8,
       "zin-twijfeltaal": 4,
@@ -23327,6 +23555,26 @@
         "boodschap": "Onder \"Welke veiligheidsrisico's zijn er\" staan 7 rubrieken. De richtlijn is maximaal 6.",
         "notitie": "De rubrieken: Regionale risico's, Terrorisme, Criminaliteit, Wetten en gebruiken, Natuurgeweld, Demonstraties, Verkeersongevallen",
         "plek": "Welke veiligheidsrisico's zijn er op de Filipijnen?"
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Bulusan\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Bulusan (provincie Sorsogon)",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
+      },
+      {
+        "regel": "woord-onbekend",
+        "ernst": "info",
+        "bron": "Tekstcontrole (SpellingSpeurneus)",
+        "boodschap": "\"Mayon\" staat niet in de woordenlijst. Waarschijnlijk een naam: controleer de schrijfwijze.",
+        "fragment": "Mayon (provincie Albay)",
+        "kop": "Natuurgeweld",
+        "herkomst": "aanvulling",
+        "notitie": "Plaats- en andere namen staan niet in de woordenlijst. Klopt de naam? Klik dan op \"Woord is juist\"; hij komt op de lijst met voorstellen voor de woordenlijst."
       },
       {
         "regel": "zin-frequentiewoord",

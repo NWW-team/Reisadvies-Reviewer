@@ -224,5 +224,10 @@ matrix of het sjabloon leest, ziet iets anders dan wat de tool goedkeurt.
 
 ## 3. Later
 
+- **Namen in de spellingtoets.** Plaatsen, provincies en vulkanen staan niet in de woordenlijst. De tool
+  meldt ze als *ter overweging* ("waarschijnlijk een naam"); in het totaaloverzicht tellen ze niet mee
+  als spelfout. Hoe we hiermee omgaan, bijvoorbeeld een eigen lijst met goedgekeurde plaatsnamen, besluiten
+  we later.
+
 - **Een Word-document uploaden** en de bevindingen als markeringen of track changes in de tekst
   terugzien. Eerst moet de tool zelf goed werken; ook losgeplakte tekst gaat nog niet goed.

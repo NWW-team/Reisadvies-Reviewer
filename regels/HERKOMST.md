@@ -1758,9 +1758,12 @@ Maar in opsommingen staan namen als enig woord vooraan: *"Azuay"*, *"Mocimboa da
 eiland Halmahera"*. Die werden gemeld als *"staat niet in de woordenlijst"*: 22 plaatsen, provincies en
 vulkanen in Congo, Ecuador, Laos, Mozambique, Indonesië, de Filipijnen en India.
 
-Martijn: namen eruit als niet duidelijk is of ze goed of fout zijn, *"tenzij aantoonbaar onjuist"*. Een
-bullet die niet op een leesteken eindigt, is geen zin; vooraan staat dan een naam, en die meldt de tool
-niet. Namen die de redactie in SpellingSpeurneus als spelfout heeft aangewezen, blijven gemeld: die
-toets komt eerder en is aantoonbaar.
+Martijn: in de Excel-lijst voor de redactie namen eruit als niet duidelijk is of ze goed of fout zijn,
+*"tenzij aantoonbaar onjuist"*. In de tool mogen ze wel blijven staan: *"later over beslissen of
+oplossing voor bedenken"*. Een bullet die niet op een leesteken eindigt, is geen zin; vooraan staat dan
+waarschijnlijk een naam. Die meldt de tool nu als *ter overweging*: *"staat niet in de woordenlijst.
+Waarschijnlijk een naam: controleer de schrijfwijze."* In het totaaloverzicht tellen ze apart, niet als
+spelfout. Namen die de redactie in SpellingSpeurneus als spelfout heeft aangewezen, blijven *let op*:
+die toets komt eerder en is aantoonbaar.
 
 Ook een webadres (*kriis.ee*) slaat de spellingtoets nu over.

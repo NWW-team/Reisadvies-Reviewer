@@ -1656,3 +1656,16 @@ sjabloon met een rubriek (`rubriekKop`), de kleurmeldingen in *In het kort*, `ko
 `rubrieken-max` (de H2 waaronder de rubrieken staan). Gemeten: 139 meldingen hebben nu een plek.
 Zonder plek of fragment blijven alleen `doc-woordenaantal` (gaat over het hele advies en noemt de
 langste rubrieken) en één `informatieservice-vaste-tekst`.
+
+## Aanhef bij Regionale risico's: gebieden, eilanden of steden (24 november 2026)
+
+`regionaal-gebiedenzin` vroeg letterlijk *"Voor de volgende gebieden geldt kleurcode …:"*. De VAE
+schrijven *"Voor de volgende eilanden geldt kleurcode rood:"*, en kregen te horen dat de aanhef
+ontbrak. Martijn: *"gebieden is de vaste formulering. Maar in dit geval is eilanden logisch, omdat
+het alleen eilanden zijn waarover het gaat. En als het alleen 1 stad is of 2 steden, dan zou dat ook
+mogen. Maar gebieden zal het vaakst voorkomen. Dus fijn als hij hierop handhaaft."*
+
+De regel accepteert nu *gebieden*, *eilanden* en *steden*. Een ander woord op die plek wordt gemeld
+als afwijking, met de zin als fragment: Indonesië (*provincies*). De toets kijkt per rubriek: staat
+er ergens een geldige aanhef, dan is de rubriek goed. Daardoor valt Mexico (*vulkanen* bij rood,
+*gebieden* bij oranje) er niet onder.

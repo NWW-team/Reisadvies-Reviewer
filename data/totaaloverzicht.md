@@ -106,7 +106,7 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 | | 14 september 2026 | nu |
 |---|---:|---:|
 | Contact met de lokale autoriteiten ("uw hotel" is "uw accommodatie" geworden) | 130 (130) | 125 (125) |
-| Aanhef boven de gebieden in Regionale risico's | 32 (32) | 33 (33) |
+| Aanhef boven de gebieden in Regionale risico's | 31 (31) | 32 (32) |
 | Openingstekst reisverzekering | 32 (32) | 31 (31) |
 | Zin over paspoort voor kinderen | 28 (28) | 29 (29) |
 | Hoelang het paspoort nog geldig moet zijn | 28 (28) | 28 (28) |

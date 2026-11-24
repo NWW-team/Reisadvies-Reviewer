@@ -87,6 +87,18 @@ test('een ontbrekende vaste tekst wijst de rubriek aan waar hij hoort', () => {
   assert.strictEqual(b.plek, "Regionale risico's");
 });
 
+test('aanhef bij Regionale risico\'s: gebieden is vast, eilanden en steden mogen, de rest wijkt af', () => {
+  const met = (woord) => '<h2>Welke veiligheidsrisico\'s zijn er in Testland?</h2><h3>Regionale risico\'s</h3>'
+    + '<h4>Rood: niet reizen</h4><p>Voor de volgende ' + woord + ' geldt kleurcode rood:</p><ul><li>Noord</li></ul>';
+  for (const woord of ['gebieden', 'eilanden', 'steden']) {
+    assert.ok(!bevindingen(met(woord)).some((x) => x.regel === 'regionaal-gebiedenzin'), woord);
+  }
+  const b = bevindingen(met('provincies')).find((x) => x.regel === 'regionaal-gebiedenzin');
+  assert.ok(b);
+  assert.match(b.boodschap, /wijkt af/);
+  assert.match(b.fragment, /provincies/);
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

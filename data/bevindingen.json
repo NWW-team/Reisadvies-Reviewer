@@ -772,11 +772,11 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 23,
+    "letop": 22,
     "info": 4,
     "perErnst": {
       "fout": 4,
-      "let-op": 23,
+      "let-op": 22,
       "info": 4
     },
     "perRegel": {
@@ -787,7 +787,6 @@
       "intro-vaste-tekst": 1,
       "bagage-heen": 1,
       "natuurgeweld-contact": 1,
-      "regionaal-gebiedenzin": 1,
       "rubrieken-max": 1,
       "nederlands-verbuiging": 1,
       "tekst-onzichtbaar-teken": 1,
@@ -859,14 +858,6 @@
         "boodschap": "De zin over contact met de lokale autoriteiten wijkt af van het sjabloon.",
         "fragment": "Neem contact op met de lokale autoriteiten, uw hotel of reisorganisatie als u een vraag heeft over de actuele situatie.",
         "verwacht": "Neem contact op met de lokale autoriteiten, uw accommodatie of reisorganisatie als u een vraag heeft over de actuele situatie."
-      },
-      {
-        "regel": "regionaal-gebiedenzin",
-        "ernst": "let-op",
-        "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "plek": "Regionale risico’s",
-        "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {
         "regel": "rubrieken-max",
@@ -13133,8 +13124,8 @@
         "regel": "regionaal-gebiedenzin",
         "ernst": "let-op",
         "bron": "SJ, blok Regionale risico’s",
-        "boodschap": "De vaste aanhef boven de opsomming van gebieden ontbreekt.",
-        "plek": "Regionale risico's",
+        "boodschap": "De aanhef boven de opsomming wijkt af van het sjabloon. Vast is 'gebieden'; 'eilanden' of 'steden' mag als het alleen daarover gaat.",
+        "fragment": "Voor de volgende provincies geldt kleurcode oranje:",
         "verwacht": "Voor de volgende gebieden geldt kleurcode …:"
       },
       {

@@ -143,33 +143,6 @@ ze zijn het waard om nog eens kritisch naar te kijken.
 | Heeft u geen bewijs van vaccinatie tegen gele koorts? Dan komt u **mogelijk** het land niet in. | Reisvaccinaties | 0 |
 | Dieven proberen **vaak** hun slachtoffers af te leiden. | Criminaliteit (voorbeeld Argentinië) | 0 |
 
-### Enkele aanhalingstekens om een term uit de volksmond
-
-De schrijfwijzer zegt: *"Gebruik geen aanhalingstekens. Kan het echt niet zonder aanhalingstekens?
-Gebruik dan alleen enkele."* In reisadviezen staan regelmatig termen die ter plaatse of in de volksmond
-zo heten, maar die de lezer misschien niet kent: ‘spuugtruc’, ‘babbeltruc’, ‘bezness’, ‘carjacking’,
-‘flash floods’, ‘matatu’, ‘boda boda’. Je wilt de term noemen, omdat de reiziger hem daar zal horen,
-maar hij staat niet in de woordenlijst.
-
-De tool meldt enkele aanhalingstekens nu als *ter overweging*, met de vraag of er een uitleg bij staat.
-Dubbele aanhalingstekens blijven *let op*. Gemeten: 82 keer enkele, 1 keer dubbele.
-
-**Voorstel voor de schrijfwijzer** (bij *Aanhalingstekens*):
-
-> Gebruik geen aanhalingstekens. Kan het echt niet zonder? Gebruik dan alleen enkele aanhalingstekens
-> (‘ ’).
->
-> **Uitzondering voor reisadviezen.** Noem je een term die ter plaatse of in de volksmond zo heet,
-> maar die de lezer misschien niet kent? Zet die term de eerste keer tussen enkele aanhalingstekens
-> en leg direct uit wat het is. Bijvoorbeeld: *Pas op voor de ‘spuugtruc’. Hierbij spuugt iemand op
-> u, een ander biedt hulp aan. En intussen steelt een dief uw tas of telefoon.*
->
-> Gebruik daarna de term zonder aanhalingstekens.
-
-Om mee te wegen: veel van deze termen zijn Engels (*carjacking*, *flash floods*, *love scams*). De
-schrijfwijzer zegt bij *Cursief* dat cursief mag bij een woord in een andere taal. Willen we voor een
-Engelse term cursief, of ook enkele aanhalingstekens? Eén vorm voor allebei is het duidelijkst.
-
 ### Linken naar sociale media van een overheid
 
 De schrijfwijzer zegt: we linken naar overheidsinstanties, en niet naar commerciële partijen en media.

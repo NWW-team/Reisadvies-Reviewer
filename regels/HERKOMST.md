@@ -1774,3 +1774,9 @@ Ook een webadres (*kriis.ee*) slaat de spellingtoets nu over.
 aankomst in / vertrek uit het land"* is 18 woorden en stond op de bespreeklijst om in te korten.
 Martijn: *"goed om NL erbij te zetten, dus kan niet korter."* Het punt is van de bespreeklijst. De zin blijft
 vrijgesteld van de zinslengte; `paspoort-geldigheid` blijft een afwijkende formulering melden.
+
+## Aanhalingstekens: naar het overleg over de schrijfwijzer (24 november 2026)
+
+Het voorstel over enkele aanhalingstekens om een term uit de volksmond gaat niet naar de collega's van
+de reisadviezen, maar naar het overleg over de schrijfwijzer (Martijn). Het staat nu in een eigen
+lijst, `regels/TER-BESPREKING-SCHRIJFWIJZER.md`, en niet meer in `TER-BESPREKING.md`.

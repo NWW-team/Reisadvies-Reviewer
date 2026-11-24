@@ -3360,6 +3360,14 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
   // Korter, voor de tellers in de balk.
   const ernstEtiket = { 'fout': 'Fout', 'let-op': 'Let op', 'info': 'Ter overweging' };
 
+  /** "MX, tab Koppen" wordt "Matrix, tabblad Koppen": de afkortingen zijn voor de bouwer, niet voor de redacteur. */
+  function bronVoluit(bron) {
+    return String(bron)
+      .replace(/\bMX\b/g, 'Matrix').replace(/\bSW\b/g, 'Schrijfwijzer').replace(/\bSJ\b/g, 'Sjabloon')
+      .replace(/\btab\b/g, 'tabblad').replace(/ > /g, ', ')
+      .replace(/\{land\}/g, '[land]');
+  }
+
   function esc(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
@@ -3785,10 +3793,9 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
             + 'dit woord of deze website wordt er niet letterlijk bij genoemd. De tool heeft het zelf aan de '
             + 'lijst toegevoegd. Klopt dat hier niet, klik dan op Onterecht.</div>'
           : '')
-      // De bron staat verder alleen in de tooltip, maar de verwijzing naar SpellingSpeurneus blijft
-      // zichtbaar: dat is het tooltje van de redactie zelf, en het is goed om te zien waar het werk
-      // vandaan komt.
-      + (/SpellingSpeurneus/.test(bev.bron || '') ? '<div class="bron">' + esc(bev.bron) + '</div>' : '')
+      // Elke kaart zegt waar de regel vandaan komt, voluit: "Matrix, tabblad Kleurcode-teksten".
+      // Dan hoeft de redacteur niet te raden of het een richtlijn is of een keuze van de tool.
+      + (bev.bron ? '<div class="bron">Bron: ' + esc(bronVoluit(bev.bron)) + '</div>' : '')
       + (gekozen ? '<div class="gekozen">' + esc(uitleg) + '</div>' : '')
       + '</div>';
   }

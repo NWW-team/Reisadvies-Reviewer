@@ -1733,3 +1733,11 @@ verkeersinformatie in Guatemala). De schrijfwijzer linkt wél naar overheidsinst
   schrijfwijzer, maar dit woord of deze website wordt er niet letterlijk bij genoemd. De tool heeft het
   zelf aan de lijst toegevoegd. Klopt dat hier niet, klik dan op Onterecht."*
 - Het linken naar sociale media van een overheid staat op de bespreeklijst.
+
+## De bron onderaan elke kaart (24 november 2026)
+
+Martijn bij een `kleur-variant`-melding: is die duidelijk, of moet erbij dat de richtlijn uit de matrix
+geldt? De bron stond al bij elke bevinding, maar alleen in de tooltip van het labeltje, en met de
+afkortingen voor de bouwer (*MX, tab Kleurcode-teksten*). Elke kaart heeft nu onderaan een regel
+*"Bron: Matrix, tabblad Kleurcode-teksten"*. De afkortingen worden voluit geschreven (`bronVoluit` in
+`src/app.html`): MX wordt Matrix, SW Schrijfwijzer, SJ Sjabloon, *tab* wordt *tabblad*.

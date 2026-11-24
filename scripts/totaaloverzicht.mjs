@@ -250,18 +250,17 @@ const normRijen = normRapport.slice(normRapport.findIndex((l) => l.startsWith('|
 const steekproef = JSON.parse(readFileSync(join(wortel, 'data', 'steekproef-2024.json'), 'utf8'));
 const woordenVan = (res, iso) => res.find((r) => r.iso === iso);
 const sRijen = Object.entries(steekproef.landen).map(([iso, archief]) => {
-  const n = woordenVan(nu, iso), t = woordenVan(toen, iso);
-  return { land: n.land, archief, toen: t ? t.samenvatting.woorden : null, nu: n.samenvatting.woorden,
-    limiet: n.samenvatting.woordenlimiet };
+  const n = woordenVan(nu, iso);
+  return { land: n.land, archief, nu: n.samenvatting.woorden, limiet: n.samenvatting.woordenlimiet };
 }).sort((a, b) => (b.nu - b.archief) / b.archief - (a.nu - a.archief) / a.archief);
 const som = (k) => sRijen.reduce((x, r) => x + (r[k] || 0), 0);
 const pct = (a, b) => `${b >= a ? '+' : ''}${Math.round(100 * (b - a) / a)}%`;
 const nl = (n) => n.toLocaleString('nl-NL');
 const steekproefTabel = [
-  `| | 2024 | ${EERSTE.datum} | nu | 2024 → nu | richtlijn |`,
-  '|---|---:|---:|---:|---:|---:|',
-  ...sRijen.map((r) => `| ${r.land} | ${nl(r.archief)} | ${nl(r.toen)} | ${r.nu > r.limiet ? '**' + nl(r.nu) + '**' : nl(r.nu)} | ${pct(r.archief, r.nu)} | ${nl(r.limiet)} |`),
-  `| **Samen** | **${nl(som('archief'))}** | **${nl(som('toen'))}** | **${nl(som('nu'))}** | **${pct(som('archief'), som('nu'))}** | |`,
+  '| | 2024 | nu | groei | richtlijn |',
+  '|---|---:|---:|---:|---:|',
+  ...sRijen.map((r) => `| ${r.land} | ${nl(r.archief)} | ${r.nu > r.limiet ? '**' + nl(r.nu) + '**' : nl(r.nu)} | ${pct(r.archief, r.nu)} | ${nl(r.limiet)} |`),
+  `| **Samen** | **${nl(som('archief'))}** | **${nl(som('nu'))}** | **${pct(som('archief'), som('nu'))}** | |`,
 ];
 const bovenArchief = sRijen.filter((r) => r.archief > r.limiet).length;
 const bovenNu = sRijen.filter((r) => r.nu > r.limiet).length;
@@ -314,14 +313,15 @@ const uit = [
   '',
   ...perRegel(LENGTE),
   '',
-  '### Steekproef: hoe lang waren de adviezen in 2024?',
+  '### Steekproef: na de inkortslag van 2024 weer gegroeid',
   '',
-  'Elf adviezen, geteld in de gearchiveerde tekst van kort na de inkortslag van 2024, tegenover de',
-  `eerste meting van ${EERSTE.datum} en nu. Vetgedrukt: boven de richtlijn van nu.`,
+  'In 2024 zijn de reisadviezen in één grote slag ingekort. Elf adviezen, geteld in de gearchiveerde tekst',
+  'van kort daarna, tegenover nu. Vetgedrukt: boven de richtlijn van nu.',
   '',
   ...steekproefTabel,
   '',
-  `Alle elf zijn sinds 2024 gegroeid. Gemeten tegen de richtlijn van nu zaten er in 2024 ${bovenArchief} boven, nu ${bovenNu}.`,
+  `Alle elf zijn sindsdien gegroeid, samen met ${nl(som('nu') - som('archief'))} woorden. Gemeten tegen de richtlijn van nu `
+    + `zaten er in 2024 ${bovenArchief} boven, nu ${bovenNu}.`,
   '',
   '## 1.3 "In het kort"',
   '',

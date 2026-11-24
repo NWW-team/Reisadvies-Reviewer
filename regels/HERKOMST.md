@@ -1741,3 +1741,11 @@ geldt? De bron stond al bij elke bevinding, maar alleen in de tooltip van het la
 afkortingen voor de bouwer (*MX, tab Kleurcode-teksten*). Elke kaart heeft nu onderaan een regel
 *"Bron: Matrix, tabblad Kleurcode-teksten"*. De afkortingen worden voluit geschreven (`bronVoluit` in
 `src/app.html`): MX wordt Matrix, SW Schrijfwijzer, SJ Sjabloon, *tab* wordt *tabblad*.
+
+## Een webadres met een landcode is geen vergeten spatie (24 november 2026)
+
+Bij het maken van de Excel-lijst met spelfouten bleek `tekst-plakfout` bij Estland *"kriis.ee"* te
+melden als vergeten spatie. De lijst met domeinen in `tekstcontrole.json` kende *.ee* niet. In plaats
+van elke landcode los toe te voegen: een woord dat eindigt op een punt en twee kleine letters is een
+webadres. Een vergeten spatie staat bijna altijd voor een hoofdletter (*"verlaten.Lees"*). Gemeten: de
+vier andere meldingen blijven, alle vier terecht.

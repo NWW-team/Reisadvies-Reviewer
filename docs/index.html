@@ -2498,6 +2498,9 @@ function maakToetser(data) {
         const delen = w.split('.').filter(Boolean);
         if (delen.length < 2) return false;
         if ((tc.plakfout.domeinen || []).some((d) => w.toLowerCase().endsWith(d))) return false;
+        // Elke landcode is een domein: kriis.ee (Estland), meteo.gr. Een vergeten spatie staat bijna
+        // altijd voor een hoofdletter ("verlaten.Lees"), dus twee kleine letters achteraan is een webadres.
+        if (/^[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2}$/.test(w)) return false;
         return !delen.every((d) => d.length === 1);
       };
       const gezienPlak = new Set();

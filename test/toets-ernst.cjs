@@ -133,6 +133,11 @@ test('een link naar sociale media is een vraag, een link naar een nieuwssite een
   assert.strictEqual(nieuws.ernst, Regels.ERNST.fout);
 });
 
+test('een webadres met een landcode is geen vergeten spatie', () => {
+  assert.strictEqual(eerste('<p>Bekijk de website kriis.ee van de overheid.</p>', 'tekst-plakfout'), undefined);
+  assert.ok(eerste('<p>U moet het land verlaten.Lees meer over visa.</p>', 'tekst-plakfout'));
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

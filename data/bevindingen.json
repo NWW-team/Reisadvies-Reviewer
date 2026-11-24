@@ -9774,16 +9774,16 @@
       "groen"
     ],
     "zinnen": 62,
-    "fout": 1,
-    "letop": 5,
+    "fout": 0,
+    "letop": 6,
     "info": 2,
     "perErnst": {
-      "fout": 1,
-      "let-op": 5,
+      "fout": 0,
+      "let-op": 6,
       "info": 2
     },
     "perRegel": {
-      "tekst-plakfout": 1,
+      "woord-onbekend": 1,
       "zin-max-woorden": 4,
       "zin-frequentiewoord": 1,
       "link-tekstlengte": 1,
@@ -9794,14 +9794,14 @@
     },
     "bevindingen": [
       {
-        "regel": "tekst-plakfout",
-        "ernst": "fout",
+        "regel": "woord-onbekend",
+        "ernst": "let-op",
         "bron": "Tekstcontrole (SpellingSpeurneus)",
-        "boodschap": "\"kriis.ee\": hier is een spatie vergeten.",
+        "boodschap": "\"kriis.ee\" staat niet in de woordenlijst.",
         "fragment": "Komt u in een crisissituatie terecht (zoals politieke onrust, een terroristische aanslag of natuurgeweld)? Lees wat u kunt doen in een crisissituatie. Of bekijk de website kriis.ee van de Estse overheid (informatie in het Engels).",
         "kop": "In geval van nood",
         "herkomst": "aanvulling",
-        "verwacht": "kriis. ee"
+        "notitie": "Klopt het woord wel? Klik dan op \"Woord is juist\"; het komt op de lijst met voorstellen voor regels/uitzonderingen.txt."
       },
       {
         "regel": "zin-max-woorden",

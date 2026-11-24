@@ -182,7 +182,7 @@ Zinnen in alinea's en in bullets. De actualiteit in "In het kort" heeft zijn eig
 
 | | 14 september 2026 | nu |
 |---|---:|---:|
-| Aanhalingstekens | 53 (86) | 53 (85) |
+| Aanhalingstekens | 52 (84) | 52 (83) |
 | Eenheden voluit (kilometer) | 5 (5) | 5 (5) |
 | Vet of onderstreept | 5 (5) | 5 (5) |
 | Leestekens in de titel | 5 (5) | 5 (5) |

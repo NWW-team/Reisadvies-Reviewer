@@ -204,6 +204,10 @@ const SPEURNEUS = [
   ['woord-onbekend', 'Mogelijke spelfout (woordenlijst)'],
 ];
 const speurneusRegels = [...groep('tekstfouten'), ...groep('spelling')];
+// Een onbekend woord vooraan in een opsomming is waarschijnlijk een naam (ter overweging). Die telt
+// apart, en niet mee als spelfout.
+const isNaam = (b) => b.regel === 'woord-onbekend' && b.ernst === 'info';
+const speurneusFout = (b) => speurneusRegels.includes(b.regel) && !isNaam(b);
 
 // Elke regel hoort in precies één deel. Komt er een regel bij die hier nergens staat, dan zegt het
 // script dat, in plaats van hem stilletjes weg te laten.
@@ -273,7 +277,7 @@ const uit = [
   oogRij('Te lange zin', regel('zin-max-woorden')),
   oogRij('Lijdende vorm', regel('zin-lijdende-vorm')),
   oogRij('Twijfeltaal', regel('zin-twijfeltaal', 'zin-frequentiewoord')),
-  oogRij('Tekst- of spelfout (SpellingSpeurneus)', regel(...speurneusRegels)),
+  oogRij('Tekst- of spelfout (SpellingSpeurneus)', speurneusFout),
   '',
   '---',
   '',
@@ -344,11 +348,15 @@ const uit = [
   '',
   '## 2.6 Tekst- en spelfouten (SpellingSpeurneus)',
   '',
-  'De controles die de tool van SpellingSpeurneus heeft overgenomen. Bij de spelfouten zijn de meeste',
-  'meldingen plaatsnamen die niet in de woordenlijst staan.',
+  'De controles die de tool van SpellingSpeurneus heeft overgenomen. Een onbekend woord vooraan in een',
+  'opsomming is waarschijnlijk een naam (een plaats, een provincie, een vulkaan). Die staat apart en telt',
+  'niet mee als spelfout.',
   '',
-  ...tabel([...SPEURNEUS.map(([id, wat]) => rij(wat, regel(id))),
-    rij('**Samen**', regel(...speurneusRegels))]),
+  ...tabel([...SPEURNEUS.map(([id, wat]) => rij(wat, (b) => b.regel === id && !isNaam(b))),
+    rij('**Samen**', speurneusFout)]),
+  '',
+  `Waarschijnlijk een naam (ter overweging, niet meegeteld): nu ${tel(nu, isNaam).meldingen} meldingen `
+    + `in ${tel(nu, isNaam).adviezen} adviezen.`,
   '',
 ];
 

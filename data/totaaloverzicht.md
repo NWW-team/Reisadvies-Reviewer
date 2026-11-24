@@ -198,8 +198,9 @@ Zinnen in alinea's en in bullets. De actualiteit in "In het kort" heeft zijn eig
 
 ## 2.6 Tekst- en spelfouten (SpellingSpeurneus)
 
-De controles die de tool van SpellingSpeurneus heeft overgenomen. Bij de spelfouten zijn de meeste
-meldingen plaatsnamen die niet in de woordenlijst staan.
+De controles die de tool van SpellingSpeurneus heeft overgenomen. Een onbekend woord vooraan in een
+opsomming is waarschijnlijk een naam (een plaats, een provincie, een vulkaan). Die staat apart en telt
+niet mee als spelfout.
 
 | | 14 september 2026 | nu |
 |---|---:|---:|
@@ -213,3 +214,5 @@ meldingen plaatsnamen die niet in de woordenlijst staan.
 | Schrijfwijze van een postplaats | 3 (3) | 3 (3) |
 | Rest van het CMS in de tekst | 3 (3) | 1 (1) |
 | Schrijfwijze van een landnaam | 1 (1) | 0 (0) |
+
+Waarschijnlijk een naam (ter overweging, niet meegeteld): nu 24 meldingen in 9 adviezen.

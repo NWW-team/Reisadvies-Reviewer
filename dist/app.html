@@ -1,13 +1,15 @@
 <title>Reisadvies-Reviewer</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Fira+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Kleuren uit de Rijkshuisstijl zoals Nederlandwereldwijd.nl die gebruikt: hemelblauw voor de
    band, donkerblauw voor koppen, en de vier officiele kleurcodes voor de reisadviezen zelf.
    De ernst van een bevinding gebruikt dezelfde familie — rood voor een echte fout, geel/oranje
    voor let op, grijs voor ter overweging — omdat dat sneller scant dan een aparte set. De kleurcodes zelf staan altijd bij hun naam
    ("kleurcode geel") en als chip met tekst, dus verwarring blijft beperkt tot de kleur alleen.
-   RO Sans is niet vrij beschikbaar; Fira Sans is de dichtstbijzijnde humanistische schreefloze. */
+   RO Sans (RijksSansTT) is niet vrij beschikbaar als lettertypebestand. Public Sans komt er qua
+   breedte en vorm dichter bij dan Fira Sans: een royalere, open humanistische schreefloze, ook
+   ontworpen voor overheidscommunicatie (Martijn, 24 november 2026: "lettertype nog beetje smal"). */
 :root {
   --blauw: #007bc7;
   --donkerblauw: #154273;
@@ -36,8 +38,8 @@
   --kc-rood: #d52b1e;
   --band-tekst: #ffffff;
   --schaduw: 0 1px 2px rgba(0,0,0,.08);
-  --sans: "Fira Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --mono: "Fira Mono", ui-monospace, Menlo, monospace;
+  --sans: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

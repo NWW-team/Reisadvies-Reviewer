@@ -28,7 +28,7 @@ Wat besproken moet worden, staat in [`regels/TER-BESPREKING.md`](../regels/TER-B
 | Te lange zin | 213 | 213 |
 | Lijdende vorm | 157 | 158 |
 | Twijfeltaal | 180 | 177 |
-| Tekst- of spelfout (SpellingSpeurneus) | 91 | 53 |
+| Tekst- of spelfout (SpellingSpeurneus) | 86 | 46 |
 
 ---
 
@@ -203,8 +203,8 @@ meldingen plaatsnamen die niet in de woordenlijst staan.
 
 | | 14 september 2026 | nu |
 |---|---:|---:|
-| **Samen** | 91 (149) | 53 (81) |
-| Mogelijke spelfout (woordenlijst) | 60 (107) | 26 (47) |
+| **Samen** | 86 (128) | 46 (56) |
+| Mogelijke spelfout (woordenlijst) | 55 (86) | 17 (22) |
 | Spatie voor een leesteken | 10 (11) | 9 (10) |
 | Onzichtbaar teken in de tekst | 7 (7) | 7 (7) |
 | Nederlands/Nederlandse | 6 (6) | 6 (6) |

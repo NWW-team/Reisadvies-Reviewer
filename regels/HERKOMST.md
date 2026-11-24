@@ -1749,3 +1749,18 @@ melden als vergeten spatie. De lijst met domeinen in `tekstcontrole.json` kende 
 van elke landcode los toe te voegen: een woord dat eindigt op een punt en twee kleine letters is een
 webadres. Een vergeten spatie staat bijna altijd voor een hoofdletter (*"verlaten.Lees"*). Gemeten: de
 vier andere meldingen blijven, alle vier terecht.
+
+## Spelling: een naam vooraan in een opsomming is geen zinsbegin (24 november 2026)
+
+De spellingtoets meldt geen namen (instructie van 18 september 2026), behalve een woord met een
+hoofdletter aan het zinsbegin: daar zegt de hoofdletter niets, en zo blijft *"Registeer"* een spelfout.
+Maar in opsommingen staan namen als enig woord vooraan: *"Azuay"*, *"Mocimboa da Praia"*, *"Ibu op het
+eiland Halmahera"*. Die werden gemeld als *"staat niet in de woordenlijst"*: 22 plaatsen, provincies en
+vulkanen in Congo, Ecuador, Laos, Mozambique, Indonesië, de Filipijnen en India.
+
+Martijn: namen eruit als niet duidelijk is of ze goed of fout zijn, *"tenzij aantoonbaar onjuist"*. Een
+bullet die niet op een leesteken eindigt, is geen zin; vooraan staat dan een naam, en die meldt de tool
+niet. Namen die de redactie in SpellingSpeurneus als spelfout heeft aangewezen, blijven gemeld: die
+toets komt eerder en is aantoonbaar.
+
+Ook een webadres (*kriis.ee*) slaat de spellingtoets nu over.

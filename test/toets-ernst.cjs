@@ -138,6 +138,16 @@ test('een webadres met een landcode is geen vergeten spatie', () => {
   assert.ok(eerste('<p>U moet het land verlaten.Lees meer over visa.</p>', 'tekst-plakfout'));
 });
 
+test('spelling: een naam in een opsomming en een webadres zijn geen spelfout, een tikfout in een zin wel', () => {
+  const wl = new Set(['ook', 'voor', 'dit', 'geldt', 'en', 'bekijk', 'de', 'website', 'van', 'overheid', 'het', 'eiland', 'op']);
+  const t = Regels.maakToetser({ ...REGELDATA, woordenlijst: wl });
+  const ids = (html) => t(Parse.parseAdvies(html, { land: 'Testland' })).bevindingen
+    .filter((x) => x.regel === 'woord-onbekend').map((x) => x.fragment);
+  assert.strictEqual(ids('<ul><li>Azuay</li><li>Ibu op het eiland Halmahera</li></ul>').length, 0);
+  assert.strictEqual(ids('<p>Bekijk de website kriis.ee van de overheid.</p>').length, 0);
+  assert.strictEqual(ids('<p>Dit geldt ook voor sofdrugs.</p>').length, 1);
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

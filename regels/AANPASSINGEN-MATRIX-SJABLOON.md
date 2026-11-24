@@ -27,6 +27,22 @@ Alle 149 verwijzingen in de adviezen doen dit al.
 Op 19 september is dat 5 geworden, net als op het tabblad Kleurcode-teksten. Staat er in jouw versie nog
 3, dan kan dat naar 5.
 
+## Sjabloon, blok In het kort
+
+**4b. De opbouw per bullet, gelijk met de matrix.** Het sjabloon noemt per bullet de vorm. Voorstel, zodat
+het aansluit bij de NB-tekst in de matrix:
+
+> 2e bullet: kleur + uitleg 'De kleurcode van het reisadvies voor ____ is ____' (of: 'De kleurcode van
+> het reisadvies is ____ voor ____')
+>
+> 3e bullet: evt. 2e kleur + uitleg 'Voor ____ geldt kleurcode ____' (bij een opsomming van meer dan 2
+> gebieden: 'Kleurcode ____ geldt voor ____', zodat de kleur niet te ver naar achter staat)
+>
+> 4e bullet: evt. 3e kleur + uitleg 'Voor de rest van [LAND] geldt kleurcode ____'
+
+De voorbeelden in het sjabloon passen hier al bij: Armenië zet in de 3e bullet bij vier gebieden de kleur
+vooraan.
+
 ## Sjabloon, blok Risico dat van toepassing is
 
 **5. Afwijken van de volgorde.** Het blok heet *"Risico dat van toepassing is, in volgorde van

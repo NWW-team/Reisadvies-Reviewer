@@ -60,6 +60,28 @@ de tool vraagt dan of dat hier zo is. De andere onderwerpen horen er niet in.
 | Actualiteit in "In het kort" boven 25 woorden | 10 (10) | 11 (11) |
 | "In het kort" meer dan 4 bullets | 0 (0) | 1 (1) |
 
+### Steekproef: hoe lang waren de adviezen in 2024?
+
+Elf adviezen, geteld in de gearchiveerde tekst van kort na de inkortslag van 2024, tegenover de
+eerste meting van 14 september 2026 en nu. Vetgedrukt: boven de richtlijn van nu.
+
+| | 2024 | 14 september 2026 | nu | 2024 → nu | richtlijn |
+|---|---:|---:|---:|---:|---:|
+| Spanje | 1.050 | 1.458 | **1.521** | +45% | 1.500 |
+| Cuba | 1.329 | 1.887 | **1.888** | +42% | 1.500 |
+| Verenigd Koninkrijk | 934 | 1.260 | 1.309 | +40% | 1.500 |
+| Algerije | 1.684 | 2.208 | **2.208** | +31% | 2.000 |
+| Ethiopië | 1.751 | 2.156 | **2.227** | +27% | 2.000 |
+| China | 1.974 | 2.504 | **2.504** | +27% | 1.500 |
+| Ecuador | 2.311 | 2.754 | **2.754** | +19% | 2.000 |
+| Peru | 2.174 | 2.460 | **2.461** | +13% | 2.000 |
+| Turkije | 2.191 | 2.539 | **2.416** | +10% | 2.000 |
+| Nigeria | 1.636 | 1.779 | 1.779 | +9% | 2.000 |
+| El Salvador | 1.321 | 1.429 | 1.412 | +7% | 1.500 |
+| **Samen** | **18.355** | **22.434** | **22.479** | **+22%** | |
+
+Alle elf zijn sinds 2024 gegroeid. Gemeten tegen de richtlijn van nu zaten er in 2024 4 boven, nu 8.
+
 ## 1.3 "In het kort"
 
 Bullets die elk één kleurcode uitleggen. Is er een actualiteit, dan staat die in bullet 1, verwijst

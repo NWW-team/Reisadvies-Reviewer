@@ -1329,7 +1329,7 @@ export function maakToetser(data) {
       b.push(bevinding(vt.id, vt.ernst, vt.bron,
         wijktAf ? (vt.boodschap_afwijkend || vt.boodschap) : vt.boodschap,
         { ...(fragment ? { fragment } : {}), ...(plek ? { plek } : {}),
-          verwacht: vt.zin.replace(/\{land\}/g, doc.land || 'land X')
+          verwacht: (vt.verwacht || vt.zin).replace(/\{land\}/g, doc.land || 'land X')
             .replace(/\{kleur\}|\{gebieden\}/g, '…') }));
     }
 
@@ -1388,7 +1388,7 @@ export function maakToetser(data) {
     const vastIn = rij.filter((x) => laagVan(x.n) === 1);
     for (let i = 1; i < vastIn.length; i++) {
       if (vast.indexOf(vastIn[i].n) < vast.indexOf(vastIn[i - 1].n)) {
-        b.push(bevinding('rubrieken-volgorde', ERNST.info, 'SJ, blok Risico dat van toepassing is',
+        b.push(bevinding('rubrieken-volgorde', ERNST.letop, 'SJ, blok Risico dat van toepassing is',
           `Weet je zeker dat je hier van de standaardvolgorde wilt afwijken? "${vastIn[i].tekst}" `
             + `staat na "${vastIn[i - 1].tekst}".`,
           { fragment: vastIn[i].tekst,
@@ -1407,7 +1407,7 @@ export function maakToetser(data) {
     if (eersteVrij >= 0) {
       const onder = rij.slice(eersteVrij + 1).find(bindend);
       if (onder) {
-        b.push(bevinding('rubriek-vrij-te-hoog', ERNST.info, 'SJ, blok Risico dat van toepassing is',
+        b.push(bevinding('rubriek-vrij-te-hoog', ERNST.letop, 'SJ, blok Risico dat van toepassing is',
           `"${rij[eersteVrij].tekst}" staat boven "${onder.tekst}".`,
           { fragment: rij[eersteVrij].tekst,
             notitie: `Deze rubriek hoort onder "${rv.vrij_onder}" te staan, en onder alles wat daarboven `

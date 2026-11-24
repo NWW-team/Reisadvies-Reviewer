@@ -88,9 +88,11 @@ Twijfeltaal uit een voorbeeldzin van het sjabloon (*"In … zijn regelmatig demo
 ook niet mee: wie het voorbeeld volgt, heeft het sjabloon gevolgd.
 
 **Filteren.** Boven de bevindingen staat per groep een vinkje met een teller: *Fout en format*,
-*Te lange zinnen*, *Tekstfouten*, *Mogelijke spelfouten*,
-*Linkteksten*, *Lijdende vorm*, *Twijfeltaal: misschien, mogelijk*, *Twijfeltaal: vaak, soms*,
-*Volgorde van de rubrieken* en *Notatie en stijl*. Alles staat aan; een klik zet een soort weg. Een aangevinkte knop is gevuld
+*Volgorde van de rubrieken*, *Te lange zinnen*, *Tekstfouten*, *Mogelijke spelfouten*,
+*Linkteksten*, *Lijdende vorm*, *Twijfeltaal: misschien, mogelijk*, *Twijfeltaal: vaak, soms*
+en *Notatie en stijl*. Binnen een soort (Fout, Let op, Ter overweging) staan de meldingen in deze
+volgorde: eerst wat echt van het format afwijkt, dan de volgorde van de rubrieken, en daarna de
+schrijfregels zoals zinslengte en lijdende vorm. Alles staat aan; een klik zet een soort weg. Een aangevinkte knop is gevuld
 met een vinkje, een uitgezette is doorgestreept met een kruisje, zodat je ziet wat een klik doet. De indeling staat in
 `regels/groepen.json`; een test faalt als er een regel bij komt die er niet in staat.
 
@@ -339,7 +341,7 @@ in plaats van één vaste rij:
 | laag | rubrieken | wat de tool doet |
 |---|---|---|
 | **bovenaan** | Actueel, Regionale risico's | **fout** als het anders is (0 meldingen: dit gaat altijd goed) |
-| **vast** | Terrorisme, Oorlog en conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld | *ter overweging* bij een andere volgorde (22) |
+| **vast** | Terrorisme, Oorlog en conflict, Criminaliteit, Wetten en gebruiken, Natuurgeweld | *let op* bij een andere volgorde (22) |
 | **vrij** | Demonstraties, Landmijnen, Verkeersongevallen, Willekeurige arrestaties | onderling niets; wel onder *Wetten en gebruiken* (23) |
 
 Demonstraties mág boven Natuurgeweld staan: die sluit aan op Wetten en gebruiken, terwijl

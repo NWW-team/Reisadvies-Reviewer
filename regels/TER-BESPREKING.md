@@ -108,8 +108,6 @@ volgorde van hoe vaak ze voorkomen:
 | 21 | 5 | In een noodgeval kunt u ook terecht bij de ambassade van een ander land dat lid is van de Europese Unie. |
 | 18 | 3 | Dan moet u een bewijs van vaccinatie tegen gele koorts laten zien als u naar [land] reist. |
 
-De zin over hoelang het paspoort nog geldig moet zijn, staat hieronder apart.
-
 Is een zin ingekort in het sjabloon, dan is het daarna geen punt meer: de tool toetst de nieuwe
 formulering gewoon mee.
 
@@ -144,20 +142,6 @@ ze zijn het waard om nog eens kritisch naar te kijken.
 | Als u in het ziekenhuis belandt, moet u **mogelijk** naar een ander land worden overgebracht voor medische zorg. | Reisverzekering | 0 |
 | Heeft u geen bewijs van vaccinatie tegen gele koorts? Dan komt u **mogelijk** het land niet in. | Reisvaccinaties | 0 |
 | Dieven proberen **vaak** hun slachtoffers af te leiden. | Criminaliteit (voorbeeld Argentinië) | 0 |
-
-### De zin over de geldigheid van het paspoort
-
-Het sjabloon (blok *Paspoort / Paspoort of ID-kaart*) zegt:
-
-> Uw Nederlandse paspoort (of ID-kaart) moet nog minimaal ___ maanden geldig zijn op het moment van
-> aankomst in / vertrek uit het land.
-
-Het aantal maanden verschilt per land; de rest ligt vast. In ongeveer 145 adviezen staat deze zin. De
-tool meldt de 28 adviezen waar hij anders geformuleerd is, meestal met de landnaam in plaats van
-*het land*. Met 18 woorden is de zin zelf te lang.
-
-Vraag: kan hij korter in het sjabloon? Bijvoorbeeld: *"Uw paspoort moet bij aankomst nog minimaal 6
-maanden geldig zijn."* (10 woorden)
 
 ### Enkele aanhalingstekens om een term uit de volksmond
 

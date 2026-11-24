@@ -28,7 +28,7 @@
       "^voor .+ geldt kleurcode (rood|oranje|geel|groen)\\b"
     ],
     "omgedraaid": "^kleurcode (rood|oranje|geel|groen) geldt voor ",
-    "_omgedraaid_besluit": "24 november 2026, Martijn: de vorm uit de matrix leest logischer, als een doorlopend verhaal: 'De kleurcode voor land X is geel. (Maar) voor de gebieden ... geldt kleurcode oranje.' Begint elke bullet met 'Kleurcode', dan lijkt het alsof ze niet bij elkaar horen. De omgedraaide vorm 'Kleurcode oranje geldt voor ...' wordt daarom gemeld, behalve bij een opsomming van meer dan twee gebieden: dan mag de kleur vooraan, anders staat hij te ver naar achter.",
+    "_omgedraaid_besluit": "24 november 2026, Martijn: de vorm uit de matrix leest logischer, als een doorlopend verhaal: 'De kleurcode voor land X is geel. (Maar) voor de gebieden ... geldt kleurcode oranje.' Begint elke bullet met 'Kleurcode', dan lijkt het alsof ze niet bij elkaar horen. De omgedraaide vorm 'Kleurcode oranje geldt voor ...' wordt daarom gemeld, behalve bij een opsomming van meer dan twee gebieden: dan mag de kleur vooraan, anders staat hij te ver naar achter. Op 24 november 2026 zo in de matrix gezet (tabblad Kleurcode-teksten, kolom NB): 'Bij een opsomming van meer dan 2 gebieden zet je de kleur vooraan. Anders staat die te ver naar achter.'",
     "_vervolg_kort_bron": "Tabblad Kleurcode-teksten, kolom NB: vervolgbullets verkort. De omgedraaide vorm (\"Kleurcode oranje geldt voor ...\") komt 23 keer voor in het corpus en is op 18 september 2026 door de opdrachtgever goedgekeurd als geldige variant; de matrix noemt hem niet letterlijk.",
     "_herkennen_als_kleurbullet": "kleurcode"
   },

@@ -9,22 +9,10 @@ tool doet. Opgesteld op 24 november 2026.
 De NB-tekst bij de kleurcodes zegt nu onder meer: *"In de 2e en 3e bullet kan het korter: Voor de gebieden
 X en Y geldt kleurcode …"*
 
-**1. Bij meer dan 2 gebieden mag de kleur vooraan.** Toevoegen onder *"In de 2e en 3e bullet kan het
-korter"*:
-
-> Bij een opsomming van meer dan 2 gebieden mag de kleur vooraan, anders staat die te ver naar achter:
->
-> • Kleurcode oranje geldt voor de gebieden X, Y en Z.
-
-Bij 1 of 2 gebieden blijft het *"Voor … geldt kleurcode …"*: dan leest *In het kort* als één verhaal. De
-tool meldt de omgedraaide vorm bij 1 of 2 gebieden (13 adviezen).
-
-**2. "Voor het grootste deel".** Toevoegen bij *"Bij de eerste bullet over kleurcode altijd voluit
-schrijven"*:
-
-> Heeft bijna het hele land één kleur, en geldt voor een enkele plaats een andere? Dan mag ook:
->
-> • De kleurcode van het reisadvies voor land X is voor het grootste deel rood.
+**1 en 2 zijn gedaan** (24 november 2026). De NB-tekst zegt nu dat bij een opsomming van meer dan 2
+gebieden de kleur vooraan staat, in de 1e bullet (*"De kleurcode van het reisadvies is oranje voor de
+gebieden X, Y en Z"*) en in de 2e en 3e (*"Kleurcode oranje geldt voor de gebieden X, Y en Z"*), en noemt
+*"voor het grootste deel rood"* als toegestane eerste bullet.
 
 ## Matrix, tabblad Koppen, rij In het kort, kolom Opmerking
 

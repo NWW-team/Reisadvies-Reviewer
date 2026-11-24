@@ -132,12 +132,12 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 15,
-    "info": 4,
+    "letop": 14,
+    "info": 5,
     "perErnst": {
       "fout": 3,
-      "let-op": 15,
-      "info": 4
+      "let-op": 14,
+      "info": 5
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -330,9 +330,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘mahram’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘mahram’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Vrouwen moeten altijd vergezeld worden door een ‘mahram’ (een mannelijk familielid)."
       }
     ],
@@ -567,12 +567,12 @@
     ],
     "zinnen": 84,
     "fout": 0,
-    "letop": 8,
-    "info": 5,
+    "letop": 10,
+    "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
-      "info": 5
+      "let-op": 10,
+      "info": 3
     },
     "perRegel": {
       "kort-actualiteit-verwijzing": 1,
@@ -593,7 +593,7 @@
     "bevindingen": [
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"Demonstraties\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "In Albanië zijn demonstraties waarbij geweld wordt gebruikt. Lees meer onder Demonstraties.",
@@ -601,7 +601,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -772,12 +772,12 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 22,
-    "info": 4,
+    "letop": 19,
+    "info": 7,
     "perErnst": {
       "fout": 4,
-      "let-op": 22,
-      "info": 4
+      "let-op": 19,
+      "info": 7
     },
     "perRegel": {
       "kleur-variant": 1,
@@ -1025,23 +1025,23 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘X’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘X’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "In uw paspoort staat bij het geslacht een ‘X’."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘00’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘00’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "De geboortedatum is niet volledig als er ‘00’ of ‘XX’ staat bij uw geboortedag, -maand of -jaar."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘XX’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘XX’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "De geboortedatum is niet volledig als er ‘00’ of ‘XX’ staat bij uw geboortedag, -maand of -jaar."
       }
     ],
@@ -1390,12 +1390,12 @@
     ],
     "zinnen": 36,
     "fout": 1,
-    "letop": 18,
-    "info": 7,
+    "letop": 19,
+    "info": 6,
     "perErnst": {
       "fout": 1,
-      "let-op": 18,
-      "info": 7
+      "let-op": 19,
+      "info": 6
     },
     "perRegel": {
       "kort-actualiteit-verwijzing": 1,
@@ -1419,7 +1419,7 @@
     "bevindingen": [
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"Wetten en gebruiken\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "Antarctica is een beschermd natuurgebied. Reizen naar Antarctica is alleen mogelijk onder strenge voorwaarden. Lees meer onder Wetten en gebruiken.",
@@ -1693,12 +1693,12 @@
     ],
     "zinnen": 69,
     "fout": 2,
-    "letop": 10,
-    "info": 2,
+    "letop": 11,
+    "info": 1,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
-      "info": 2
+      "let-op": 11,
+      "info": 1
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -1727,7 +1727,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -1847,12 +1847,12 @@
     ],
     "zinnen": 62,
     "fout": 0,
-    "letop": 6,
-    "info": 0,
+    "letop": 5,
+    "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
-      "info": 0
+      "let-op": 5,
+      "info": 1
     },
     "perRegel": {
       "natuurgeweld-contact": 1,
@@ -1906,9 +1906,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘hoog’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘hoog’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Sinds oktober 2023 is het dreigingsniveau in Oostenrijk aangepast naar het niveau ‘hoog’, als gevolg van de situatie in het Midden-Oosten."
       }
     ],
@@ -2039,11 +2039,11 @@
     ],
     "zinnen": 97,
     "fout": 4,
-    "letop": 15,
+    "letop": 14,
     "info": 5,
     "perErnst": {
       "fout": 4,
-      "let-op": 15,
+      "let-op": 14,
       "info": 5
     },
     "perRegel": {
@@ -2056,8 +2056,7 @@
       "zin-max-woorden": 11,
       "zin-lijdende-vorm": 1,
       "zin-twijfeltaal": 1,
-      "link-plakt-aan-woord": 1,
-      "aanhalingstekens": 1
+      "link-plakt-aan-woord": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": [
@@ -2250,13 +2249,6 @@
         "fragment": "+31 247 247 247",
         "herkomst": "aanvulling",
         "notitie": "Er staat geen spatie tussen het woord en de link. Soms valt daardoor de eerste letter van een woord buiten de link (\"K\" en dan \"ijk op de website\"), soms plakken twee woorden aan elkaar."
-      },
-      {
-        "regel": "aanhalingstekens",
-        "ernst": "let-op",
-        "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘s avonds en 8.00 uur ’. Gebruik geen aanhalingstekens.",
-        "fragment": "Reis ook niet op de RN9 (tussen Bubanza en Bukinanyana, langs het Kibirawoud) en op de RN5 (tussen Bujumbura en Bukavu) tussen 18.00 uur ‘s avonds en 8."
       }
     ],
     "gewijzigd": "Laatst gewijzigd op: 21-09-2026 | Nog steeds geldig op: 23-11-2026"
@@ -2675,12 +2667,12 @@
     ],
     "zinnen": 121,
     "fout": 0,
-    "letop": 16,
-    "info": 6,
+    "letop": 17,
+    "info": 5,
     "perErnst": {
       "fout": 0,
-      "let-op": 16,
-      "info": 6
+      "let-op": 17,
+      "info": 5
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -2701,7 +2693,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -3412,12 +3404,12 @@
     ],
     "zinnen": 106,
     "fout": 2,
-    "letop": 27,
-    "info": 10,
+    "letop": 25,
+    "info": 12,
     "perErnst": {
       "fout": 2,
-      "let-op": 27,
-      "info": 10
+      "let-op": 25,
+      "info": 12
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -3461,7 +3453,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -3734,23 +3726,23 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘Para viajeros’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘Para viajeros’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Ga naar ‘Para viajeros’ en ‘Vehículos de turísmo’ en vul het formulier in."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘Vehículos de turísmo’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘Vehículos de turísmo’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Ga naar ‘Para viajeros’ en ‘Vehículos de turísmo’ en vul het formulier in."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘An sivetur’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘An sivetur’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "U kunt ook de app ‘An sivetur’ downloaden."
       }
     ],
@@ -4143,12 +4135,12 @@
     ],
     "zinnen": 112,
     "fout": 1,
-    "letop": 12,
-    "info": 11,
+    "letop": 13,
+    "info": 10,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
-      "info": 11
+      "let-op": 13,
+      "info": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -4181,7 +4173,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -5291,12 +5283,12 @@
     ],
     "zinnen": 126,
     "fout": 3,
-    "letop": 40,
-    "info": 11,
+    "letop": 39,
+    "info": 12,
     "perErnst": {
       "fout": 3,
-      "let-op": 40,
-      "info": 11
+      "let-op": 39,
+      "info": 12
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -5747,9 +5739,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘gids’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘gids’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Wees alert op Chinese jongeren die goed Engels spreken en zich als ‘gids’ aanbieden."
       }
     ],
@@ -6069,12 +6061,12 @@
     ],
     "zinnen": 111,
     "fout": 5,
-    "letop": 26,
-    "info": 8,
+    "letop": 25,
+    "info": 9,
     "perErnst": {
       "fout": 5,
-      "let-op": 26,
-      "info": 8
+      "let-op": 25,
+      "info": 9
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -6417,9 +6409,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘Congo-Kinshasa’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘Congo-Kinshasa’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Lees meer over rijden in de DRC op de website van de ANWB onder ‘Congo-Kinshasa’."
       }
     ],
@@ -7170,12 +7162,12 @@
     ],
     "zinnen": 123,
     "fout": 3,
-    "letop": 15,
-    "info": 9,
+    "letop": 16,
+    "info": 8,
     "perErnst": {
       "fout": 3,
-      "let-op": 15,
-      "info": 9
+      "let-op": 16,
+      "info": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -7215,7 +7207,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -7430,12 +7422,12 @@
     ],
     "zinnen": 93,
     "fout": 3,
-    "letop": 18,
-    "info": 4,
+    "letop": 17,
+    "info": 5,
     "perErnst": {
       "fout": 3,
-      "let-op": 18,
-      "info": 4
+      "let-op": 17,
+      "info": 5
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -7653,9 +7645,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘D’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘D’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Maximaal 48 uur voor vertrek naar Cuba moet u het online immigratieformulier ‘D’Viajeros’ invullen (informatie in het Spaans)."
       }
     ],
@@ -7672,12 +7664,12 @@
     ],
     "zinnen": 43,
     "fout": 1,
-    "letop": 12,
-    "info": 1,
+    "letop": 11,
+    "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
-      "info": 1
+      "let-op": 11,
+      "info": 2
     },
     "perRegel": {
       "nood-contactcenter": 1,
@@ -7799,9 +7791,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘trago-meisjes’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘trago-meisjes’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Slachtoffers worden ook wel ‘trago-meisjes’ genoemd."
       }
     ],
@@ -7890,12 +7882,12 @@
     ],
     "zinnen": 89,
     "fout": 1,
-    "letop": 13,
-    "info": 1,
+    "letop": 12,
+    "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 13,
-      "info": 1
+      "let-op": 12,
+      "info": 2
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
@@ -8027,9 +8019,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘Turkse Republiek van Noord-Cyprus’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘Turkse Republiek van Noord-Cyprus’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Dit deel noemt zich de ‘Turkse Republiek van Noord-Cyprus’ en wordt alleen door Turkije erkend."
       }
     ],
@@ -8457,12 +8449,12 @@
     ],
     "zinnen": 64,
     "fout": 0,
-    "letop": 5,
-    "info": 6,
+    "letop": 6,
+    "info": 5,
     "perErnst": {
       "fout": 0,
-      "let-op": 5,
-      "info": 6
+      "let-op": 6,
+      "info": 5
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -8479,7 +8471,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -8580,12 +8572,12 @@
     ],
     "zinnen": 127,
     "fout": 3,
-    "letop": 21,
-    "info": 13,
+    "letop": 22,
+    "info": 12,
     "perErnst": {
       "fout": 3,
-      "let-op": 21,
-      "info": 13
+      "let-op": 22,
+      "info": 12
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -8621,7 +8613,7 @@
       },
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"Natuurgeweld\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "In delen van Algerije kunnen door langdurige droogte en hoge temperaturen natuurbranden voorkomen. Lees meer onder Natuurgeweld.",
@@ -8653,7 +8645,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -8901,9 +8893,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘certificaat van authenticiteit’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘certificaat van authenticiteit’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Zoals een bonnetje van de winkel of een ‘certificaat van authenticiteit’, waarop staat dat uw souvenir een kopie is en geen origineel antiek voorwerp."
       }
     ],
@@ -8922,12 +8914,12 @@
     ],
     "zinnen": 148,
     "fout": 5,
-    "letop": 30,
-    "info": 8,
+    "letop": 27,
+    "info": 11,
     "perErnst": {
       "fout": 5,
-      "let-op": 30,
-      "info": 8
+      "let-op": 27,
+      "info": 11
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -9288,23 +9280,23 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘intern gewapend conflict’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘intern gewapend conflict’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Begin 2024 heeft de regering van Ecuador de staat van ‘intern gewapend conflict’ uitgeroepen."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘rip currents’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘rip currents’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Aan de kust van Ecuador komen gevaarlijke stromingen voor (muistromen of ‘rip currents’)."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘chronologische jaar’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘chronologische jaar’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "De periode van 365 dagen (het ‘chronologische jaar’) gaat in op de dag van uw (eerste) aankomst als toerist."
       }
     ],
@@ -9362,7 +9354,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -9549,9 +9541,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘bezness’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘bezness’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "U kunt het slachtoffer worden van ‘bezness’ (liefdesfraude)."
       }
     ],
@@ -9666,7 +9658,7 @@
       },
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"Natuurgeweld\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "In delen van Spanje kan hevige regen voorkomen en kunnen overstromingen ontstaan. Lees meer onder Natuurgeweld.",
@@ -9764,9 +9756,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘spuugtruc’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘spuugtruc’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Kijk in de grote steden uit voor de ‘spuugtruc’."
       }
     ],
@@ -9783,12 +9775,12 @@
     ],
     "zinnen": 62,
     "fout": 1,
-    "letop": 6,
-    "info": 1,
+    "letop": 5,
+    "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 6,
-      "info": 1
+      "let-op": 5,
+      "info": 2
     },
     "perRegel": {
       "tekst-plakfout": 1,
@@ -9860,9 +9852,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘hazard alert’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘hazard alert’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Download daarom ook de ’Eesti’ app en zet ‘hazard alert’ aan om notificaties van de Estse overheid te ontvangen."
       }
     ],
@@ -9881,12 +9873,12 @@
     ],
     "zinnen": 117,
     "fout": 3,
-    "letop": 21,
-    "info": 4,
+    "letop": 19,
+    "info": 5,
     "perErnst": {
       "fout": 3,
-      "let-op": 21,
-      "info": 4
+      "let-op": 19,
+      "info": 5
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -9897,7 +9889,7 @@
       "zin-frequentiewoord": 3,
       "zin-max-woorden": 14,
       "zin-twijfeltaal": 1,
-      "aanhalingstekens": 2
+      "aanhalingstekens": 1
     },
     "teBespreken": {
       "twijfelUitSjabloon": []
@@ -10118,16 +10110,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘s nachts zijn er verhoogde veiligheidsr…. Gebruik geen aanhalingstekens.",
-        "fragment": "’s Avonds en ‘s nachts zijn er verhoogde veiligheidsrisico’s."
-      },
-      {
-        "regel": "aanhalingstekens",
-        "ernst": "let-op",
-        "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘nep-nieuws’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘nep-nieuws’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "De Ethiopische overheid houdt sociale media in de gaten om verspreiding van ‘nep-nieuws’ te voorkomen."
       }
     ],
@@ -10270,7 +10255,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -10366,9 +10351,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘flash floods’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘flash floods’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Houd bij hevige regenval ook rekening met ‘flash floods’."
       }
     ],
@@ -10385,12 +10370,12 @@
     ],
     "zinnen": 67,
     "fout": 0,
-    "letop": 12,
-    "info": 2,
+    "letop": 11,
+    "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 12,
-      "info": 2
+      "let-op": 11,
+      "info": 3
     },
     "perRegel": {
       "reisverzekering-vaste-tekst": 1,
@@ -10512,9 +10497,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘waarschijnlijk’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘waarschijnlijk’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "De Franse overheid schat de kans op een terroristische aanslag op dit moment in als ‘waarschijnlijk’."
       }
     ],
@@ -10576,12 +10561,12 @@
     ],
     "zinnen": 67,
     "fout": 1,
-    "letop": 7,
-    "info": 3,
+    "letop": 8,
+    "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
-      "info": 3
+      "let-op": 8,
+      "info": 2
     },
     "perRegel": {
       "h3-vaste-kop": 1,
@@ -10607,7 +10592,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -10780,12 +10765,12 @@
     ],
     "zinnen": 63,
     "fout": 1,
-    "letop": 12,
-    "info": 2,
+    "letop": 11,
+    "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 12,
-      "info": 2
+      "let-op": 11,
+      "info": 3
     },
     "perRegel": {
       "kort-actualiteit-verwijzing": 1,
@@ -10805,7 +10790,7 @@
     "bevindingen": [
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"Paspoort, ID-kaart, ETA, rijbewijs\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "Reist u met een Nederlands paspoort naar het VK? Dan heeft u een Electronic Travel Authorisation (ETA) nodig. Lees meer onder Paspoort, ID-kaart, ETA, rijbewijs.",
@@ -10901,16 +10886,16 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘severe’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘severe’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Het dreigingsniveau voor terrorisme staat in het Verenigd Koninkrijk op niveau 4 (‘severe’), op een schaal van 1 tot en met 5."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘ID-kaart’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘ID-kaart’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Check onder ‘ID-kaart’ of uw kind aan de voorwaarden voldoet."
       },
       {
@@ -10935,12 +10920,12 @@
     ],
     "zinnen": 99,
     "fout": 3,
-    "letop": 16,
-    "info": 7,
+    "letop": 15,
+    "info": 8,
     "perErnst": {
       "fout": 3,
-      "let-op": 16,
-      "info": 7
+      "let-op": 15,
+      "info": 8
     },
     "perRegel": {
       "kleur-variant": 2,
@@ -10988,7 +10973,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -11156,16 +11141,16 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘grensgebieden’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘grensgebieden’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "In deze ‘grensgebieden’ liggen mijnen en andere explosieven."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘administrative boundary lines’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘administrative boundary lines’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "het grensgebied tussen de regio’s Abchazië en Zuid-Ossetië en de rest van Georgië (‘administrative boundary lines’)"
       }
     ],
@@ -11183,12 +11168,12 @@
     ],
     "zinnen": 107,
     "fout": 1,
-    "letop": 13,
-    "info": 2,
+    "letop": 12,
+    "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 13,
-      "info": 2
+      "let-op": 12,
+      "info": 3
     },
     "perRegel": {
       "h4-niet-melden": 1,
@@ -11331,9 +11316,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘love scams’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘love scams’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Pas op voor ‘love scams’."
       }
     ],
@@ -11535,7 +11520,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -11615,9 +11600,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘Hulp’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘Hulp’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "‘Hulp’ van jonge mannen"
       },
       {
@@ -13030,12 +13015,12 @@
     ],
     "zinnen": 173,
     "fout": 5,
-    "letop": 24,
-    "info": 11,
+    "letop": 25,
+    "info": 10,
     "perErnst": {
       "fout": 5,
-      "let-op": 24,
-      "info": 11
+      "let-op": 25,
+      "info": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -13089,7 +13074,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -13412,12 +13397,12 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 46,
-    "info": 14,
+    "letop": 45,
+    "info": 15,
     "perErnst": {
       "fout": 2,
-      "let-op": 46,
-      "info": 14
+      "let-op": 45,
+      "info": 15
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -13484,7 +13469,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -13927,16 +13912,16 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘technische verkrachting’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘technische verkrachting’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Pas op voor ‘technische verkrachting’, oftewel ‘technical rape’."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘technical rape’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘technical rape’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Pas op voor ‘technische verkrachting’, oftewel ‘technical rape’."
       },
       {
@@ -14064,12 +14049,12 @@
     ],
     "zinnen": 128,
     "fout": 2,
-    "letop": 33,
-    "info": 7,
+    "letop": 34,
+    "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 33,
-      "info": 7
+      "let-op": 34,
+      "info": 6
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -14118,7 +14103,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -14443,12 +14428,12 @@
     ],
     "zinnen": 99,
     "fout": 2,
-    "letop": 28,
-    "info": 3,
+    "letop": 25,
+    "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 28,
-      "info": 3
+      "let-op": 25,
+      "info": 6
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -14707,23 +14692,23 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘anti-prostitutie en homoseksualiteit-we…. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘anti-prostitutie en homoseksualiteit-we…. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "In Irak is sinds begin juli 2024 een strenge ‘anti-prostitutie en homoseksualiteit-wet’ van kracht."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘promoten’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘promoten’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Volgens deze wet is ook het ‘promoten’ van homoseksualiteit en prostitutie verboden."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘uitingen van vrouwelijk gedrag door man…. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘uitingen van vrouwelijk gedrag door man…. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Daarnaast zijn geslachtsveranderingen en ‘uitingen van vrouwelijk gedrag door mannen’ strafbaar."
       },
       {
@@ -15329,12 +15314,12 @@
     ],
     "zinnen": 98,
     "fout": 1,
-    "letop": 23,
-    "info": 3,
+    "letop": 22,
+    "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 23,
-      "info": 3
+      "let-op": 22,
+      "info": 4
     },
     "perRegel": {
       "kleur-eerste-bullet-voluit": 1,
@@ -15561,9 +15546,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘wadi’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘wadi’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Droge ‘wadi’s’ (valleien) lopen dan snel onder water."
       }
     ],
@@ -15722,12 +15707,12 @@
     ],
     "zinnen": 82,
     "fout": 1,
-    "letop": 7,
-    "info": 0,
+    "letop": 6,
+    "info": 1,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
-      "info": 0
+      "let-op": 6,
+      "info": 1
     },
     "perRegel": {
       "h4-niet-melden": 1,
@@ -15798,9 +15783,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘lhbtiq+-propaganda’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘lhbtiq+-propaganda’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "In december 2025 is in Kazachstan wetgeving aangenomen die gericht is op het tegengaan van wat de autoriteiten beschouwen als ‘lhbtiq+-propaganda’."
       }
     ],
@@ -15819,12 +15804,12 @@
     ],
     "zinnen": 130,
     "fout": 4,
-    "letop": 18,
-    "info": 2,
+    "letop": 16,
+    "info": 4,
     "perErnst": {
       "fout": 4,
-      "let-op": 18,
-      "info": 2
+      "let-op": 16,
+      "info": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -15887,7 +15872,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -16022,23 +16007,23 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘matatu’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘matatu’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Pas ook op met ‘matatu’s’ (kleine busjes) en ‘boda boda’s’ (motortaxi’s)."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘boda boda’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘boda boda’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Pas ook op met ‘matatu’s’ (kleine busjes) en ‘boda boda’s’ (motortaxi’s)."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘carjacking’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘carjacking’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Kijk dan uit voor ‘carjacking’."
       }
     ],
@@ -16113,12 +16098,12 @@
     ],
     "zinnen": 113,
     "fout": 2,
-    "letop": 23,
-    "info": 9,
+    "letop": 22,
+    "info": 10,
     "perErnst": {
       "fout": 2,
-      "let-op": 23,
-      "info": 9
+      "let-op": 22,
+      "info": 10
     },
     "perRegel": {
       "kleur-variant": 2,
@@ -16154,7 +16139,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -16394,16 +16379,16 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘bag snatching’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘bag snatching’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Toeristen zijn regelmatig doelwit van ‘bag snatching’: het stelen van tassen of telefoons door dieven die op een motor of tuktuk voorbijrijden."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘motodop’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘motodop’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Of gaat u reizen met de bus of motortaxi (‘motodop’)?"
       }
     ],
@@ -16420,12 +16405,12 @@
     ],
     "zinnen": 68,
     "fout": 0,
-    "letop": 6,
-    "info": 4,
+    "letop": 7,
+    "info": 3,
     "perErnst": {
       "fout": 0,
-      "let-op": 6,
-      "info": 4
+      "let-op": 7,
+      "info": 3
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -16440,7 +16425,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -16734,12 +16719,12 @@
     ],
     "zinnen": 73,
     "fout": 1,
-    "letop": 15,
-    "info": 1,
+    "letop": 13,
+    "info": 3,
     "perErnst": {
       "fout": 1,
-      "let-op": 15,
-      "info": 1
+      "let-op": 13,
+      "info": 3
     },
     "perRegel": {
       "kleur-variant": 1,
@@ -16880,16 +16865,16 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘M’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘M’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Koeweit erkent alleen paspoorten die het geslacht aangeven met de letters ‘M’ (man) of ‘F’ (vrouw)."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘F’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘F’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Koeweit erkent alleen paspoorten die het geslacht aangeven met de letters ‘M’ (man) of ‘F’ (vrouw)."
       }
     ],
@@ -16907,12 +16892,12 @@
     ],
     "zinnen": 119,
     "fout": 1,
-    "letop": 26,
-    "info": 7,
+    "letop": 23,
+    "info": 10,
     "perErnst": {
       "fout": 1,
-      "let-op": 26,
-      "info": 7
+      "let-op": 23,
+      "info": 10
     },
     "perRegel": {
       "h4-niet-melden": 1,
@@ -17190,23 +17175,23 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘happy’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘happy’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Dit staat op het menu vermeld als ‘happy’ of ‘special’."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘special’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘special’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Dit staat op het menu vermeld als ‘happy’ of ‘special’."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘samenwerken’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘samenwerken’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Ook bieden personen die ‘samenwerken’ met de lokale politie soms drugs aan op straat en in bars, om toeristen in de val te lokken."
       }
     ],
@@ -17223,12 +17208,12 @@
     ],
     "zinnen": 92,
     "fout": 1,
-    "letop": 20,
-    "info": 6,
+    "letop": 19,
+    "info": 7,
     "perErnst": {
       "fout": 1,
-      "let-op": 20,
-      "info": 6
+      "let-op": 19,
+      "info": 7
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -17460,9 +17445,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘carjacking’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘carjacking’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Diefstal uit en van auto’s (‘carjacking’) komt voor."
       }
     ],
@@ -17854,12 +17839,12 @@
     ],
     "zinnen": 107,
     "fout": 2,
-    "letop": 18,
-    "info": 5,
+    "letop": 19,
+    "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 18,
-      "info": 5
+      "let-op": 19,
+      "info": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -17894,7 +17879,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -18469,12 +18454,12 @@
     ],
     "zinnen": 108,
     "fout": 2,
-    "letop": 13,
-    "info": 4,
+    "letop": 14,
+    "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 13,
-      "info": 4
+      "let-op": 14,
+      "info": 3
     },
     "perRegel": {
       "kleur-variant": 1,
@@ -18505,7 +18490,7 @@
       },
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"Natuurgeweld\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "In delen van Marokko kunnen door droogte en hoge temperaturen natuurbranden voorkomen. Lees meer onder Natuurgeweld.",
@@ -19071,12 +19056,12 @@
     ],
     "zinnen": 158,
     "fout": 4,
-    "letop": 28,
-    "info": 3,
+    "letop": 24,
+    "info": 7,
     "perErnst": {
       "fout": 4,
-      "let-op": 28,
-      "info": 3
+      "let-op": 24,
+      "info": 7
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -19348,30 +19333,30 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘Zocalo’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘Zocalo’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Let op: vermijd de wijken ten noorden van het historisch centrum ‘Zocalo’ (‘colonias’ zoals Tepito, Lagunilla en Morelos)."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘colonias’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘colonias’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Let op: vermijd de wijken ten noorden van het historisch centrum ‘Zocalo’ (‘colonias’ zoals Tepito, Lagunilla en Morelos)."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘eigen gebieden’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘eigen gebieden’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Veel bendes hebben hier hun ‘eigen gebieden’ en de kans op berovingen is groot."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘express’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘express’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "In de steden van Mexico is er risico op ‘express’-ontvoeringen."
       }
     ],
@@ -19388,12 +19373,12 @@
     ],
     "zinnen": 58,
     "fout": 3,
-    "letop": 3,
-    "info": 3,
+    "letop": 4,
+    "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 3,
-      "info": 3
+      "let-op": 4,
+      "info": 2
     },
     "perRegel": {
       "h3-vaste-kop": 1,
@@ -19418,7 +19403,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -19710,12 +19695,12 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 4,
-    "info": 5,
+    "letop": 5,
+    "info": 4,
     "perErnst": {
       "fout": 0,
-      "let-op": 4,
-      "info": 5
+      "let-op": 5,
+      "info": 4
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -19731,7 +19716,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -19816,12 +19801,12 @@
     ],
     "zinnen": 98,
     "fout": 3,
-    "letop": 19,
-    "info": 7,
+    "letop": 18,
+    "info": 8,
     "perErnst": {
       "fout": 3,
-      "let-op": 19,
-      "info": 7
+      "let-op": 18,
+      "info": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -20070,9 +20055,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘scamming kartels’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘scamming kartels’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Hier zijn drugsbendes actief en ‘scamming kartels’."
       }
     ],
@@ -20089,12 +20074,12 @@
     ],
     "zinnen": 73,
     "fout": 1,
-    "letop": 5,
-    "info": 3,
+    "letop": 6,
+    "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 5,
-      "info": 3
+      "let-op": 6,
+      "info": 2
     },
     "perRegel": {
       "h4-niet-melden": 1,
@@ -20126,7 +20111,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -21089,12 +21074,12 @@
     ],
     "zinnen": 60,
     "fout": 0,
-    "letop": 3,
-    "info": 2,
+    "letop": 4,
+    "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 3,
-      "info": 2
+      "let-op": 4,
+      "info": 1
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -21110,7 +21095,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -21515,12 +21500,12 @@
     ],
     "zinnen": 105,
     "fout": 2,
-    "letop": 18,
-    "info": 10,
+    "letop": 20,
+    "info": 8,
     "perErnst": {
       "fout": 2,
-      "let-op": 18,
-      "info": 10
+      "let-op": 20,
+      "info": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -21558,7 +21543,7 @@
       },
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"In geval van nood\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "Nederland heeft geen ambassade in Nicaragua, en ook geen honorair consul. De Nederlandse overheid kan u niet helpen als u in de problemen komt. Lees meer onder In geval van nood.",
@@ -21566,7 +21551,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -22163,12 +22148,12 @@
     ],
     "zinnen": 87,
     "fout": 0,
-    "letop": 11,
-    "info": 6,
+    "letop": 13,
+    "info": 4,
     "perErnst": {
       "fout": 0,
-      "let-op": 11,
-      "info": 6
+      "let-op": 13,
+      "info": 4
     },
     "perRegel": {
       "kort-actualiteit-verwijzing": 1,
@@ -22186,7 +22171,7 @@
     "bevindingen": [
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"Natuurgeweld\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "Tussen november en mei komen in Nieuw-Zeeland vaak tropische stormen en cyclonen voor. Lees meer onder Natuurgeweld.",
@@ -22194,7 +22179,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -22336,12 +22321,12 @@
     ],
     "zinnen": 98,
     "fout": 2,
-    "letop": 15,
-    "info": 3,
+    "letop": 14,
+    "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 15,
-      "info": 3
+      "let-op": 14,
+      "info": 4
     },
     "perRegel": {
       "kleur-variant": 1,
@@ -22519,9 +22504,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘flash floods’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘flash floods’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Deze ‘flash floods’ sleuren alles mee en zijn vaak dodelijk."
       }
     ],
@@ -22540,12 +22525,12 @@
     ],
     "zinnen": 116,
     "fout": 3,
-    "letop": 16,
-    "info": 11,
+    "letop": 15,
+    "info": 12,
     "perErnst": {
       "fout": 3,
-      "let-op": 16,
-      "info": 11
+      "let-op": 15,
+      "info": 12
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -22801,9 +22786,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘Non-Objection Certificate’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘Non-Objection Certificate’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "U heeft mogelijk een ‘Non-Objection Certificate’ (NOC) nodig."
       }
     ],
@@ -22821,12 +22806,12 @@
     ],
     "zinnen": 93,
     "fout": 1,
-    "letop": 11,
-    "info": 5,
+    "letop": 12,
+    "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 11,
-      "info": 5
+      "let-op": 12,
+      "info": 4
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -22847,7 +22832,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -23110,12 +23095,12 @@
     ],
     "zinnen": 137,
     "fout": 2,
-    "letop": 36,
-    "info": 8,
+    "letop": 37,
+    "info": 7,
     "perErnst": {
       "fout": 2,
-      "let-op": 36,
-      "info": 8
+      "let-op": 37,
+      "info": 7
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -23159,7 +23144,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -23563,7 +23548,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -23880,9 +23865,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘ernstig schandaal’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘ernstig schandaal’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Wel wordt lichamelijk contact in het openbaar soms gezien als een ‘ernstig schandaal’."
       }
     ],
@@ -23944,7 +23929,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -24063,9 +24048,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘koraal-veilige’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘koraal-veilige’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Neem alleen ‘koraal-veilige’ zonnebrandmiddelen mee of koop deze in winkels in Palau."
       }
     ],
@@ -24084,12 +24069,12 @@
     ],
     "zinnen": 136,
     "fout": 3,
-    "letop": 17,
-    "info": 12,
+    "letop": 16,
+    "info": 13,
     "perErnst": {
       "fout": 3,
-      "let-op": 17,
-      "info": 12
+      "let-op": 16,
+      "info": 13
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -24151,7 +24136,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -24359,16 +24344,16 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘public motor vehicles’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘public motor vehicles’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Reis niet met taxi’s of ‘public motor vehicles’ (PMV’s)."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘flash flooding’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘flash flooding’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Houd rekening met ‘flash flooding’."
       }
     ],
@@ -24789,12 +24774,12 @@
     ],
     "zinnen": 68,
     "fout": 0,
-    "letop": 7,
-    "info": 2,
+    "letop": 8,
+    "info": 1,
     "perErnst": {
       "fout": 0,
-      "let-op": 7,
-      "info": 2
+      "let-op": 8,
+      "info": 1
     },
     "perRegel": {
       "kort-actualiteit-verwijzing": 1,
@@ -24813,7 +24798,7 @@
     "bevindingen": [
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"Demonstraties\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "In Paraguay vinden sinds 3 november 2026 demonstraties plaats. Hierbij kan geweld ontstaan. Lees meer onder Demonstraties.",
@@ -25165,12 +25150,12 @@
     ],
     "zinnen": 73,
     "fout": 0,
-    "letop": 8,
-    "info": 3,
+    "letop": 7,
+    "info": 4,
     "perErnst": {
       "fout": 0,
-      "let-op": 8,
-      "info": 3
+      "let-op": 7,
+      "info": 4
     },
     "perRegel": {
       "paspoort-geldigheid": 1,
@@ -25266,9 +25251,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘flash floods’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘flash floods’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Houd bij hevige regenval op bergachtige eilanden, zoals Tahiti en Moorea, ook rekening met ‘flash floods’."
       }
     ],
@@ -25512,12 +25497,12 @@
     ],
     "zinnen": 87,
     "fout": 3,
-    "letop": 8,
-    "info": 3,
+    "letop": 9,
+    "info": 2,
     "perErnst": {
       "fout": 3,
-      "let-op": 8,
-      "info": 3
+      "let-op": 9,
+      "info": 2
     },
     "perRegel": {
       "kleur-variant": 1,
@@ -25561,7 +25546,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -25801,12 +25786,12 @@
     ],
     "zinnen": 169,
     "fout": 3,
-    "letop": 29,
-    "info": 2,
+    "letop": 24,
+    "info": 7,
     "perErnst": {
       "fout": 3,
-      "let-op": 29,
-      "info": 2
+      "let-op": 24,
+      "info": 7
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -26064,37 +26049,37 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘bijzondere situatie’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘bijzondere situatie’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "De Russische overheid kan extra bevoegdheden krijgen door het uitroepen van een ‘bijzondere situatie’."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘extremistisch’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘extremistisch’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Sinds 1 september 2025 is het strafbaar als u online informatie opzoekt van organisaties die Rusland als ‘extremistisch’ ziet."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘gebruiken’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘gebruiken’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Willekeurige arrestatie van buitenlanders om hen later te ‘gebruiken’ bij een gevangenenruil is ook een risico voor Nederlanders."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘toerisme’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘toerisme’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Met een visum voor het reisdoel ‘toerisme’ mag u niet werken, dus ook geen zakelijke of journalistieke activiteiten doen."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘migration card’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘migration card’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Bij aankomst in Rusland ontvangt u van de grenspolitie een ‘migration card’ (een klein wit kaartje)."
       }
     ],
@@ -26593,12 +26578,12 @@
     ],
     "zinnen": 64,
     "fout": 1,
-    "letop": 7,
-    "info": 1,
+    "letop": 6,
+    "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 7,
-      "info": 1
+      "let-op": 6,
+      "info": 2
     },
     "perRegel": {
       "h4-niet-melden": 1,
@@ -26681,9 +26666,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘carjacking’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘carjacking’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Diefstal en ‘carjacking’"
       }
     ],
@@ -26701,12 +26686,12 @@
     ],
     "zinnen": 76,
     "fout": 3,
-    "letop": 9,
-    "info": 2,
+    "letop": 8,
+    "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 9,
-      "info": 2
+      "let-op": 8,
+      "info": 3
     },
     "perRegel": {
       "h3-niet-melden": 1,
@@ -26830,9 +26815,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘carte d’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘carte d’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Na registratie ontvangt u een ‘carte d’identité d’étranger’."
       }
     ],
@@ -27121,7 +27106,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -27225,9 +27210,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘flash floods’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘flash floods’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen op de Salomonseilanden."
       }
     ],
@@ -28036,12 +28021,12 @@
     ],
     "zinnen": 84,
     "fout": 1,
-    "letop": 9,
-    "info": 5,
+    "letop": 10,
+    "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
-      "info": 5
+      "let-op": 10,
+      "info": 4
     },
     "perRegel": {
       "h3-alleen-bij-uitzondering": 1,
@@ -28059,7 +28044,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -28245,7 +28230,7 @@
         "regel": "aanhalingstekens",
         "ernst": "let-op",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om “foreign police”. Gebruik geen aanhalingstekens.",
+        "boodschap": "Dubbele aanhalingstekens om “foreign police”. Gebruik geen aanhalingstekens. Kan het echt niet zonder? Gebruik dan enkele.",
         "fragment": "Registreer u bij het kantoor voor registratie van buitenlandse inwoners (“foreign police”) in de regio waar u verblijft."
       }
     ],
@@ -29223,12 +29208,12 @@
     ],
     "zinnen": 185,
     "fout": 2,
-    "letop": 36,
-    "info": 15,
+    "letop": 35,
+    "info": 16,
     "perErnst": {
       "fout": 2,
-      "let-op": 36,
-      "info": 15
+      "let-op": 35,
+      "info": 16
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -29274,7 +29259,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -29657,16 +29642,16 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘coffeeshops’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘coffeeshops’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Winkels en ‘coffeeshops’ bieden mogelijk cannabisproducten aan die illegaal en onveilig zijn om te gebruiken."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘visa-runs’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘visa-runs’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Let op: er wordt streng gecontroleerd op zogenoemde ‘visa-runs’."
       },
       {
@@ -30000,7 +29985,7 @@
     "bevindingen": [
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -30096,9 +30081,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘flash floods’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘flash floods’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Houd rekening met ‘flash floods’."
       }
     ],
@@ -30285,12 +30270,12 @@
     ],
     "zinnen": 109,
     "fout": 2,
-    "letop": 10,
-    "info": 5,
+    "letop": 11,
+    "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 10,
-      "info": 5
+      "let-op": 11,
+      "info": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -30331,7 +30316,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -30465,12 +30450,12 @@
     ],
     "zinnen": 142,
     "fout": 4,
-    "letop": 26,
-    "info": 9,
+    "letop": 25,
+    "info": 10,
     "perErnst": {
       "fout": 4,
-      "let-op": 26,
-      "info": 9
+      "let-op": 25,
+      "info": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -30524,7 +30509,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -30799,16 +30784,16 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘In geval van nood’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘In geval van nood’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Check de telefoonnummers van de lokale hulpdiensten onder ‘In geval van nood’."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘opzettelijk misleidende informatie die …. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘opzettelijk misleidende informatie die …. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "De Turkse wet tegen desinformatie bepaalt dat het delen van ‘opzettelijk misleidende informatie die de veiligheid, openbare orde en volksgezondheid in gevaar brengt’ strafbaar is."
       }
     ],
@@ -30969,12 +30954,12 @@
     ],
     "zinnen": 138,
     "fout": 2,
-    "letop": 30,
-    "info": 8,
+    "letop": 29,
+    "info": 9,
     "perErnst": {
       "fout": 2,
-      "let-op": 30,
-      "info": 8
+      "let-op": 29,
+      "info": 9
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -31026,7 +31011,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -31306,16 +31291,16 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘bag snatchers’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘bag snatchers’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Wees ook alert op ‘bag snatchers’."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘bajaj’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘bajaj’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Neem geen waardevolle spullen mee tijdens vervoer in een ‘bajaj’ (tuktuk/klein driewielig vervoersmiddel)."
       }
     ],
@@ -31332,12 +31317,12 @@
     ],
     "zinnen": 92,
     "fout": 2,
-    "letop": 13,
-    "info": 3,
+    "letop": 12,
+    "info": 4,
     "perErnst": {
       "fout": 2,
-      "let-op": 13,
-      "info": 3
+      "let-op": 12,
+      "info": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -31500,9 +31485,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘approval letter’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘approval letter’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "U heeft ook een ‘approval letter’ nodig."
       }
     ],
@@ -31712,12 +31697,12 @@
     ],
     "zinnen": 84,
     "fout": 3,
-    "letop": 24,
-    "info": 4,
+    "letop": 25,
+    "info": 3,
     "perErnst": {
       "fout": 3,
-      "let-op": 24,
-      "info": 4
+      "let-op": 25,
+      "info": 3
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -31752,7 +31737,7 @@
       },
       {
         "regel": "kort-actualiteit-verwijzing",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "Deze actualiteit verwijst naar \"Paspoort, visum/ESTA, rijbewijs\" in plaats van naar Actueel. Dat kan alleen bij uitzondering. Klopt het dat dat hier zo is?",
         "fragment": "Voor reizen naar de Verenigde Staten (VS) gelden aanvullende inreisregels. Lees meer onder Paspoort, visum/ESTA, rijbewijs.",
@@ -32155,12 +32140,12 @@
     ],
     "zinnen": 103,
     "fout": 5,
-    "letop": 25,
-    "info": 7,
+    "letop": 24,
+    "info": 8,
     "perErnst": {
       "fout": 5,
-      "let-op": 25,
-      "info": 7
+      "let-op": 24,
+      "info": 8
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -32478,9 +32463,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘zone van beperkte toegang’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘zone van beperkte toegang’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Het noordelijk deel van de deelstaat Bolívar (het gebied Arco Minero is een ‘zone van beperkte toegang’)."
       }
     ],
@@ -32751,12 +32736,12 @@
     ],
     "zinnen": 96,
     "fout": 2,
-    "letop": 16,
-    "info": 7,
+    "letop": 17,
+    "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 16,
-      "info": 7
+      "let-op": 17,
+      "info": 6
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -32796,7 +32781,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -33029,7 +33014,7 @@
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
-        "ernst": "info",
+        "ernst": "let-op",
         "bron": "MX, tab Koppen, kolom Toelichting",
         "boodschap": "\"Verkeersongevallen\" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?",
         "fragment": "Verkeersongevallen",
@@ -33200,9 +33185,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘flash floods’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘flash floods’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Na hevige regen kunnen overstromingen en ‘flash floods’ voorkomen in Vanuatu."
       }
     ],
@@ -33576,12 +33561,12 @@
     ],
     "zinnen": 74,
     "fout": 3,
-    "letop": 14,
-    "info": 2,
+    "letop": 10,
+    "info": 6,
     "perErnst": {
       "fout": 3,
-      "let-op": 14,
-      "info": 2
+      "let-op": 10,
+      "info": 6
     },
     "perRegel": {
       "doc-woordenaantal": 1,
@@ -33724,30 +33709,30 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘carjacking’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘carjacking’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Bijvoorbeeld ‘carjacking’ (onder bedreiging van geweld wordt u gedwongen uw voertuig af te geven), ‘key jamming’ (bendes verstoren de elektronische deurvergrendeling) of ‘smash and grab’ (bij een stoplicht wordt de ruit van uw voertu"
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘key jamming’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘key jamming’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Bijvoorbeeld ‘carjacking’ (onder bedreiging van geweld wordt u gedwongen uw voertuig af te geven), ‘key jamming’ (bendes verstoren de elektronische deurvergrendeling) of ‘smash and grab’ (bij een stoplicht wordt de ruit van uw voertuig ingeslagen om spullen te stelen)."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘smash and grab’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘smash and grab’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Bijvoorbeeld ‘carjacking’ (onder bedreiging van geweld wordt u gedwongen uw voertuig af te geven), ‘key jamming’ (bendes verstoren de elektronische deurvergrendeling) of ‘smash and grab’ (bij een stoplicht wordt de ruit van uw voertuig ingeslagen om spullen te stelen)."
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘Gautrain’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘Gautrain’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "U kunt wel reizen met de ‘Gautrain’ (hogesnelheidstrein tussen Johannesburg en Pretoria) en de Gautrain-busdienst (buslijn tussen Johannesburg en Pretoria)."
       }
     ],
@@ -33765,12 +33750,12 @@
     ],
     "zinnen": 76,
     "fout": 1,
-    "letop": 9,
-    "info": 3,
+    "letop": 8,
+    "info": 4,
     "perErnst": {
       "fout": 1,
-      "let-op": 9,
-      "info": 3
+      "let-op": 8,
+      "info": 4
     },
     "perRegel": {
       "h4-niet-melden": 1,
@@ -33885,9 +33870,9 @@
       },
       {
         "regel": "aanhalingstekens",
-        "ernst": "let-op",
+        "ernst": "info",
         "bron": "SW, Schrijfregels > Aanhalingstekens",
-        "boodschap": "Aanhalingstekens om ‘car jacking’. Gebruik geen aanhalingstekens.",
+        "boodschap": "Enkele aanhalingstekens om ‘car jacking’. Dat mag alleen als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort er direct een korte uitleg bij.",
         "fragment": "Wees ook alert op ‘car jacking’."
       }
     ],

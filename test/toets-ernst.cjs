@@ -115,6 +115,15 @@ test('de volgorde van de rubrieken is let op, en staat direct onder de formatmel
   assert.ok(groepen.indexOf('rubriekvolgorde') < groepen.indexOf('zinslengte'));
 });
 
+test('aanhalingstekens: dubbel is let op, enkel ter overweging, \'s avonds is geen aanhalingsteken', () => {
+  const dubbel = eerste('<p>Kijk uit voor de \u201cspuugtruc\u201d.</p>', 'aanhalingstekens');
+  assert.strictEqual(dubbel.ernst, Regels.ERNST.letop);
+  const enkel = eerste('<p>Kijk uit voor de \u2018spuugtruc\u2019.</p>', 'aanhalingstekens');
+  assert.strictEqual(enkel.ernst, Regels.ERNST.info);
+  assert.match(enkel.boodschap, /korte uitleg/);
+  assert.strictEqual(eerste('<p>Het is \u2018s avonds druk tussen 20.00 uur en 8.00 uur\u2019.</p>', 'aanhalingstekens'), undefined);
+});
+
 test('twijfeltaal is ter overweging', () => {
   const b = eerste('<p>Het is misschien verstandig om contant geld mee te nemen.</p>', 'zin-twijfeltaal');
   assert.ok(b);

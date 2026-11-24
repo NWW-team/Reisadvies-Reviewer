@@ -951,7 +951,7 @@ export function maakToetser(data) {
             'Deze actualiteit verwijst niet naar Actueel.',
             { fragment: actualiteit.tekst, verwacht: 'Lees meer onder Actueel.' }));
         } else if (!/^actueel\b/i.test(doel)) {
-          b.push(bevinding('kort-actualiteit-verwijzing', ERNST.info, 'MX, tab Koppen, rij In het kort',
+          b.push(bevinding('kort-actualiteit-verwijzing', ERNST.letop, 'MX, tab Koppen, rij In het kort',
             `Deze actualiteit verwijst naar "${doel}" in plaats van naar Actueel. Dat kan alleen bij `
             + 'uitzondering. Klopt het dat dat hier zo is?',
             { fragment: actualiteit.tekst,
@@ -1176,7 +1176,7 @@ export function maakToetser(data) {
         // De matrix merkt een paar rubrieken aan als uitzonderingsgeval. Ze mogen er dus staan,
         // maar niet standaard: de redacteur hoort te wegen of dit advies die uitzondering is.
         if (regel && regel.alleen_bij_uitzondering) {
-          b.push(bevinding('h3-alleen-bij-uitzondering', ERNST.info, 'MX, tab Koppen, kolom Toelichting',
+          b.push(bevinding('h3-alleen-bij-uitzondering', ERNST.letop, 'MX, tab Koppen, kolom Toelichting',
             `"${kop.tekst}" is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?`,
             { fragment: kop.tekst, notitie: regel.toelichting }));
         }
@@ -1996,9 +1996,21 @@ export function maakToetser(data) {
     const regelChecks = [
       // Alleen echte paren tellen: 'veiligheidsrisico's' en 'Bahama's' bevatten een apostrof,
       // geen aanhalingsteken.
+      //
+      // De schrijfwijzer: "Gebruik geen aanhalingstekens. Kan het echt niet zonder
+      // aanhalingstekens? Gebruik dan alleen enkele." Dubbele zijn dus altijd fout. Enkele mogen als
+      // het niet anders kan, zoals bij een term uit de volksmond die de lezer misschien niet kent
+      // ('spuugtruc', 'babbeltruc'): ter overweging, met de vraag of er een uitleg bij staat.
+      // Een ‘ voor "s " is de apostrof van 's avonds of 's nachts, geen aanhalingsteken.
       ['aanhalingstekens', ERNST.letop, 'SW, Schrijfregels > Aanhalingstekens',
-        /“[^”]{1,200}”|‘[^’]{1,200}’|"[^"]{1,200}"/g,
-        (m) => `Aanhalingstekens om ${m.length > 40 ? m.slice(0, 40) + '…' : m}. Gebruik geen aanhalingstekens.`],
+        /“[^”]{1,200}”|"[^"]{1,200}"/g,
+        (m) => `Dubbele aanhalingstekens om ${m.length > 40 ? m.slice(0, 40) + '…' : m}. `
+          + 'Gebruik geen aanhalingstekens. Kan het echt niet zonder? Gebruik dan enkele.'],
+      ['aanhalingstekens', ERNST.info, 'SW, Schrijfregels > Aanhalingstekens',
+        /‘(?!s\s)[^’]{1,200}’/g,
+        (m) => `Enkele aanhalingstekens om ${m.length > 40 ? m.slice(0, 40) + '…' : m}. Dat mag alleen `
+          + 'als het echt niet zonder kan. Is het een term die de lezer misschien niet kent? Dan hoort '
+          + 'er direct een korte uitleg bij.'],
       ['percentage-notatie', ERNST.letop, 'SW, Schrijfregels > Percentages',
         /\d+\s+%|\d+\s*procent/gi, (m) => `"${m}" moet als 5% — symbool, zonder spatie.`],
       ['valuta-notatie', ERNST.letop, "SW, Schrijfregels > Euro's / Valuta",

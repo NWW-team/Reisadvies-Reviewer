@@ -34,13 +34,14 @@ test('een actualiteit zonder verwijzing naar Actueel: ook 25 woorden, en een mel
   assert.strictEqual(v.ernst, Regels.ERNST.letop);
 });
 
-test('een actualiteit die naar een andere rubriek verwijst, is een vraag en geen fout', () => {
+test('een actualiteit die naar een andere rubriek verwijst, is een vraag onder let op', () => {
   const html = '<h2>In het kort</h2><ul><li>In de zomer zijn er bosbranden. Lees meer onder Natuurgeweld.</li>'
     + '<li>De kleurcode van het reisadvies voor Testland is geel.</li></ul>' + INFO;
   const v = bevinding(html, 'kort-actualiteit-verwijzing');
   assert.ok(v);
-  assert.strictEqual(v.ernst, Regels.ERNST.info);
+  assert.strictEqual(v.ernst, Regels.ERNST.letop);
   assert.match(v.boodschap, /"Natuurgeweld" in plaats van naar Actueel/);
+  assert.match(v.boodschap, /Klopt het/);
 });
 
 test('de actualiteit hoort in bullet 1, en er is er maar één', () => {

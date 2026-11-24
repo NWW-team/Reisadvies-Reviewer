@@ -1690,3 +1690,29 @@ voor Spanje geen visum nodig is. Martijn: deze variant mag worden goedgekeurd. D
 `kinderen-paspoort` accepteert nu ook *"nodig om naar {land} te reizen"*: dezelfde vorm als de zin voor
 volwassenen in het sjabloon. Het nieuwe veld `verwacht` toont de zin met de optionele delen tussen
 haakjes, zoals het sjabloon ze aangeeft, zodat de melding geen visum meer voorstelt.
+
+## Aanhalingstekens: enkele mogen als het niet anders kan (24 november 2026)
+
+De schrijfwijzer: *"Gebruik geen aanhalingstekens. Kan het echt niet zonder aanhalingstekens? Gebruik
+dan alleen enkele."* De regel `aanhalingstekens` meldde elke vorm als *let op*. Dat was strenger dan de
+bron: enkele aanhalingstekens zijn toegestaan als het niet zonder kan. Martijn bij Spanje (*‘spuugtruc’*):
+in reisadviezen is dat juist de goede vorm voor een term uit de volksmond die de lezer misschien niet
+kent, mits er direct een uitleg bij staat.
+
+Dubbele aanhalingstekens blijven *let op*. Enkele zijn nu *ter overweging*, met de vraag of er een uitleg
+bij staat. Een voorstel voor de schrijfwijzer staat op de bespreeklijst.
+
+Bijvangst: een ‘ gevolgd door *s* en een spatie is de apostrof van *'s avonds* of *'s nachts*, geen
+aanhalingsteken. Twee meldingen kwamen daarvandaan (*"‘s avonds en 8.00 uur ’"*); die zijn weg.
+
+## De actualiteit die naar een andere rubriek verwijst: let op (24 november 2026)
+
+`kort-actualiteit-verwijzing` met een andere rubriek dan Actueel ging van *ter overweging* naar *let
+op*. Martijn: hij hoort bij het format en mag boven de stijlmeldingen staan, net als de volgorde van de
+rubrieken. De formulering blijft een vraag (*"Klopt het dat dat hier zo is?"*).
+
+## Verkeersongevallen: let op (24 november 2026)
+
+`h3-alleen-bij-uitzondering` (Verkeersongevallen, Coronaregels) ging van *ter overweging* naar *let
+op*. Martijn: deze hoort bij de formatmeldingen, boven de te lange zinnen. De formulering blijft een
+vraag (*"is bedoeld voor uitzonderingsgevallen. Klopt het dat dat hier zo is?"*). Gemeten: 41 adviezen.

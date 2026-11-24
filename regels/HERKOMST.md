@@ -1788,10 +1788,19 @@ Op 18 september goedgekeurd: *"Kleurcode oranje geldt voor …"* als variant van
 van hoe het logischer leest. Kleurcode land X is …. Maar voor de gebieden … geldt (woord maar is dan
 weggelaten). Als je meerdere keren met kleurcode begint lijkt het meer alsof het niet bij elkaar hoort."*
 
-`kleur-vervolg-bullet-kort` meldt de omgedraaide vorm weer, met een eigen boodschap: *"Deze vervolgbullet
+Kort daarna de nuance, die ook de logica achter de goedkeuring van 18 september was: *"als het een opsomming
+is van meer dan 2 gebieden is wel beter de volgorde om te draaien, omdat kleur anders te ver naar achter
+staat."* De omgedraaide vorm mag dus bij meer dan twee gebieden. Geteld op twee manieren, en de hoogste telt:
+de gebiedentelling van `kleur-gebieden-max`, en de delen van de opsomming (gescheiden door een komma of
+*en*; een uitleg tussen haakjes telt niet, *tussen A en B* is één gebied). De gebiedentelling alleen was te
+voorzichtig: die telt windrichtingen bewust niet, terwijl het hier gaat om hoe lang de lijst vóór de kleur
+is. Gemeten: van de 22 adviezen met de omgedraaide vorm krijgen er 13 een melding, allemaal met één of twee
+gebieden.
+
+`kleur-vervolg-bullet-kort` meldt de omgedraaide vorm bij één of twee gebieden, met een eigen boodschap: *"Deze vervolgbullet
 begint met "Kleurcode". De vaste vorm is "Voor … geldt kleurcode …": dan leest "In het kort" als één
 verhaal."* De vorm blijft herkend als kleuraanduiding (`aanduiding_sjablonen`), zodat er geen tweede
-melding bij komt. Gemeten: 22 adviezen.
+melding bij komt.
 
 Het deel *Nog vastleggen* van de bespreeklijst is herschreven: per punt een voorbeeld en een advies of het in
 de richtlijnen hoort. Het punt over de omgedraaide vorm is eraf: de matrix is leidend.

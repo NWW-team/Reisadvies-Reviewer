@@ -2078,7 +2078,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor de rest van het noordwesten van de provincie Bujumbura (de gemeentes Bubanza, Bukinanyana, Cibitoke, Mpanda en Mugina). Reis alleen hierheen als het noodzakelijk is.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -2380,7 +2380,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor het gebied tussen de stad Kandi en de lijn Kouandé-Bembéréké-Nikki. En voor het zuidoostelijke deel van het departement Borgou dat grenst aan Nigeria. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -5812,7 +5812,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor het grensgebied tussen Ivoorkust en Liberia. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -5880,16 +5880,15 @@
     ],
     "zinnen": 97,
     "fout": 2,
-    "letop": 14,
+    "letop": 13,
     "info": 6,
     "perErnst": {
       "fout": 2,
-      "let-op": 14,
+      "let-op": 13,
       "info": 6
     },
     "perRegel": {
       "kleur-variant": 1,
-      "kleur-vervolg-bullet-kort": 1,
       "nood-contactcenter": 1,
       "natuurgeweld-contact": 1,
       "woord-onbekend": 1,
@@ -5913,14 +5912,6 @@
         "fragment": "Wat uw situatie ook is: reis er niet heen.",
         "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-vervolg-bullet-kort",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
-        "fragment": "Kleurcode oranje geldt voor de regio Nord, de regio Adamaoua en het oosten en zuiden van de regio Sud-Ouest. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "verwacht": "Voor … geldt kleurcode …"
       },
       {
         "regel": "nood-contactcenter",
@@ -6702,7 +6693,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor verschillende gebieden die grenzen aan de regio’s met kleurcode rood en gebieden in het zuidoosten van Colombia. Reis alleen hierheen als het noodzakelijk is.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -9019,7 +9010,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor het westelijke deel van Ecuador. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -9369,16 +9360,15 @@
     ],
     "zinnen": 149,
     "fout": 2,
-    "letop": 21,
+    "letop": 20,
     "info": 3,
     "perErnst": {
       "fout": 2,
-      "let-op": 21,
+      "let-op": 20,
       "info": 3
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-vervolg-bullet-kort": 1,
       "h3-alleen-bij-uitzondering": 1,
       "natuurgeweld-contact": 1,
       "paspoort-geldigheid": 1,
@@ -9406,14 +9396,6 @@
           "Paspoort, visum, rijbewijs (320 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
-      },
-      {
-        "regel": "kleur-vervolg-bullet-kort",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
-        "fragment": "Kleurcode oranje geldt voor het westen van Egypte, het midden en noordwesten van Sinaï en het gebied rond de Hala’ib-driehoek. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "verwacht": "Voor … geldt kleurcode …"
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -9925,17 +9907,16 @@
     ],
     "zinnen": 117,
     "fout": 3,
-    "letop": 20,
+    "letop": 19,
     "info": 5,
     "perErnst": {
       "fout": 3,
-      "let-op": 20,
+      "let-op": 19,
       "info": 5
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-variant": 1,
-      "kleur-vervolg-bullet-kort": 1,
       "nood-contactcenter": 1,
       "rubrieken-volgorde": 1,
       "zin-lijdende-vorm": 4,
@@ -9968,14 +9949,6 @@
         "fragment": "Wat uw situatie ook is: reis er niet heen.",
         "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-vervolg-bullet-kort",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
-        "fragment": "Kleurcode oranje geldt voor grote delen in het midden, zuiden en oosten van het land. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "verwacht": "Voor … geldt kleurcode …"
       },
       {
         "regel": "nood-contactcenter",
@@ -13456,11 +13429,11 @@
     ],
     "zinnen": 197,
     "fout": 2,
-    "letop": 45,
+    "letop": 44,
     "info": 16,
     "perErnst": {
       "fout": 2,
-      "let-op": 45,
+      "let-op": 44,
       "info": 16
     },
     "perRegel": {
@@ -13468,7 +13441,6 @@
       "kleur-aanduiding": 1,
       "kleur-variant": 1,
       "kleur-eerste-bullet-voluit": 1,
-      "kleur-vervolg-bullet-kort": 1,
       "h3-alleen-bij-uitzondering": 1,
       "bagage-heen": 1,
       "paspoort-geldigheid": 1,
@@ -13526,14 +13498,6 @@
         "boodschap": "De eerste bullet over de kleurcode staat niet voluit.",
         "fragment": "De kleurcode van het reisadvies van India is rood voor de regio’s Jammu en Kasjmir, Aksai Chin, voor de deelstaat Manipur en voor de grensstrook tussen India en Pakistan. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. Lees meer onder Regionale risico’s.",
         "verwacht": "De kleurcode van het reisadvies voor India is … (of: De kleurcode van het reisadvies is … voor …)"
-      },
-      {
-        "regel": "kleur-vervolg-bullet-kort",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
-        "fragment": "Kleurcode oranje geldt voor het grensgebied tussen India en Myanmar, Bangladesh en China, voor de deelstaten Mizoram en Nagaland, en voor gebieden in Centraal-India. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "verwacht": "Voor … geldt kleurcode …"
       },
       {
         "regel": "h3-alleen-bij-uitzondering",
@@ -15871,18 +15835,17 @@
     ],
     "zinnen": 130,
     "fout": 4,
-    "letop": 17,
+    "letop": 16,
     "info": 4,
     "perErnst": {
       "fout": 4,
-      "let-op": 17,
+      "let-op": 16,
       "info": 4
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-variant": 1,
       "actueel-max-woorden": 1,
-      "kleur-vervolg-bullet-kort": 1,
       "h3-vaste-kop": 1,
       "h3-alleen-bij-uitzondering": 1,
       "natuurgeweld-contact": 1,
@@ -15928,14 +15891,6 @@
         "bron": "MX, tab Koppen, rij In het kort",
         "boodschap": "De actualiteit in \"In het kort\" telt 31 woorden. Maximaal 25.",
         "fragment": "In landen in de buurt van Kenia is een ebola-uitbraak. Ook in Kenia is er inmiddels sprake van enkele gevallen. Daarom controleert Kenia reizigers extra bij aankomst. Lees meer onder Actueel."
-      },
-      {
-        "regel": "kleur-vervolg-bullet-kort",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
-        "fragment": "Kleurcode oranje geldt voor de noordelijke regio’s Marsabit en Moyale, het Tana-deltagebied en een aantal wijken in de steden Nairobi en Mombasa. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "verwacht": "Voor … geldt kleurcode …"
       },
       {
         "regel": "h3-vaste-kop",
@@ -16218,7 +16173,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor de strook van 5 tot 20 kilometer vanaf de grens met Cambodja. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -16691,7 +16646,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode geel geldt voor het gebied ten zuiden van de gedemilitariseerde zone (DMZ). U kunt hierheen reizen in een georganiseerde groep. Maar let op: er zijn bijzondere veiligheidsrisico’s.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -18595,7 +18550,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor het grensgebied tussen Marokko en Algerije. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -19208,7 +19163,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor meerdere deelstaten in het zuiden en midden van Mexico. En ook voor het grensgebied tussen Mexico en de Verenigde Staten, en het grensgebied tussen de deelstaat Chiapas en Guatemala. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -20405,16 +20360,15 @@
     ],
     "zinnen": 106,
     "fout": 3,
-    "letop": 10,
+    "letop": 9,
     "info": 4,
     "perErnst": {
       "fout": 3,
-      "let-op": 10,
+      "let-op": 9,
       "info": 4
     },
     "perRegel": {
       "kleur-variant": 1,
-      "kleur-vervolg-bullet-kort": 1,
       "h4-niet-melden": 1,
       "natuurgeweld-contact": 1,
       "woord-onbekend": 3,
@@ -20435,14 +20389,6 @@
         "fragment": "Wat uw situatie ook is: reis er niet heen.",
         "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-vervolg-bullet-kort",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
-        "fragment": "Kleurcode oranje geldt voor de rest van de provincie Cabo Delgado en voor de districten Erati en Memba in de provincie Nampula. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "verwacht": "Voor … geldt kleurcode …"
       },
       {
         "regel": "h4-niet-melden",
@@ -20587,16 +20533,15 @@
     ],
     "zinnen": 90,
     "fout": 1,
-    "letop": 14,
+    "letop": 13,
     "info": 2,
     "perErnst": {
       "fout": 1,
-      "let-op": 14,
+      "let-op": 13,
       "info": 2
     },
     "perRegel": {
       "kleur-variant": 1,
-      "kleur-vervolg-bullet-kort": 1,
       "natuurgeweld-contact": 1,
       "zin-max-woorden": 12,
       "zin-frequentiewoord": 1,
@@ -20614,14 +20559,6 @@
         "fragment": "Wat uw situatie ook is: reis er niet heen.",
         "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-vervolg-bullet-kort",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
-        "fragment": "Kleurcode oranje geldt voor de grensstrook tussen Mauritanië en de Westelijke Sahara, het gebied ten noordoosten van de stad Choum en het gebied ten zuiden van de lijn Kaédi-Akhreijit. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "verwacht": "Voor … geldt kleurcode …"
       },
       {
         "regel": "natuurgeweld-contact",
@@ -22655,16 +22592,15 @@
     ],
     "zinnen": 116,
     "fout": 3,
-    "letop": 16,
+    "letop": 15,
     "info": 12,
     "perErnst": {
       "fout": 3,
-      "let-op": 16,
+      "let-op": 15,
       "info": 12
     },
     "perRegel": {
       "doc-woordenaantal": 1,
-      "kleur-vervolg-bullet-kort": 1,
       "h4-niet-melden": 1,
       "h3-niet-melden": 1,
       "natuurgeweld-contact": 1,
@@ -22690,14 +22626,6 @@
           "Paspoort, visum, rijbewijs (250 woorden)"
         ],
         "notitie": "De tool wijst de langste blokken aan maar schrapt niet zelf: wat weg kan is een inhoudelijke keuze. Bij Regionale risico's staat naast de vaste kleurtekst ook vrije tekst: welke gebieden onder een kleur vallen, en waarom. Daar zit vaak ruimte."
-      },
-      {
-        "regel": "kleur-vervolg-bullet-kort",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
-        "fragment": "Kleurcode oranje geldt voor de provincies Sindh, delen van Punjab, de regio Jammu en Kasjmir aan de Pakistaanse kant van de bestandslijn, en delen van Gilgit-Baltistan. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "verwacht": "Voor … geldt kleurcode …"
       },
       {
         "regel": "h4-niet-melden",
@@ -23286,7 +23214,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor het grensgebied tussen Peru en Colombia, en het gebied langs de Huallaga-rivier in de Huánuco-regio. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -29288,7 +29216,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor het zuidelijke deel van de regio Savanes. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -29417,7 +29345,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor de strook van 5 tot 20 kilometer vanaf de grens met Cambodja. De kleurcode is ook oranje voor het zuidelijkste deel van Thailand en het grensgebied tussen Thailand en Myanmar. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -30474,7 +30402,7 @@
         "regel": "kleur-vervolg-bullet-kort",
         "ernst": "let-op",
         "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
+        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". Bij één of twee gebieden is de vaste vorm \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal. Alleen bij een opsomming van meer dan twee gebieden mag de kleur vooraan.",
         "fragment": "Kleurcode oranje geldt voor het gebied tussen de stad Tataouine en de lijn Al Borma-Remada-Ben Gardane. Ook de stad Kasserine en omgeving hebben kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
         "verwacht": "Voor … geldt kleurcode …"
       },
@@ -30622,17 +30550,16 @@
     ],
     "zinnen": 142,
     "fout": 4,
-    "letop": 26,
+    "letop": 25,
     "info": 10,
     "perErnst": {
       "fout": 4,
-      "let-op": 26,
+      "let-op": 25,
       "info": 10
     },
     "perRegel": {
       "doc-woordenaantal": 1,
       "kleur-variant": 1,
-      "kleur-vervolg-bullet-kort": 1,
       "h4-niet-melden": 1,
       "h3-alleen-bij-uitzondering": 1,
       "rubrieken-max": 1,
@@ -30671,14 +30598,6 @@
         "fragment": "Wat uw situatie ook is: reis er niet heen.",
         "verwacht": "Wat uw situatie ook is: reis niet hierheen.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
-      },
-      {
-        "regel": "kleur-vervolg-bullet-kort",
-        "ernst": "let-op",
-        "bron": "MX, tab Kleurcode-teksten, kolom NB",
-        "boodschap": "Deze vervolgbullet begint met \"Kleurcode\". De vaste vorm is \"Voor … geldt kleurcode …\": dan leest \"In het kort\" als één verhaal.",
-        "fragment": "Kleurcode oranje geldt voor de provincies Şırnak en Hakkari en de grensovergang bij Habur (grens met Irak). Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
-        "verwacht": "Voor … geldt kleurcode …"
       },
       {
         "regel": "h4-niet-melden",

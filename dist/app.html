@@ -449,8 +449,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
       <h1>Reisadvies-Reviewer</h1>
     </div>
     <p class="lead">Toetst een reisadvies op wat objectief te toetsen is: de schrijfwijzer, de
-      onderwerpen-matrix, B1 en begrijpelijkheid. Elke bevinding verwijst naar de regel waar hij vandaan komt.</p>
-    <p class="bron" id="bron-regel"></p>
+      matrix, B1 en begrijpelijkheid. Elke bevinding verwijst naar de regel waar hij vandaan komt.</p>
   </div>
 </header>
 
@@ -459,11 +458,14 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
     <label class="veld" for="kies-advies">Reisadvies
       <select id="kies-advies"></select>
     </label>
-    <button type="button" id="knop-plakken">Eigen tekst plakken</button>
+    <!-- Voorlopig verborgen (Martijn, 25 november 2026): plakken, printen en kopiëren voor Word
+         werken nog niet goed, en de oordeelstoets heeft op de site geen model. Een land kiezen
+         haalt het advies zelf al op. De code blijft staan; weghalen van "hidden" zet ze terug. -->
+    <button type="button" id="knop-plakken" hidden>Eigen tekst plakken</button>
     <span style="flex:1"></span>
-    <button type="button" id="knop-print" disabled>Printen / pdf</button>
-    <button type="button" id="knop-kopieer" disabled>Kopi&euml;ren voor Word</button>
-    <button type="button" id="knop-oordeel" class="hoofd">Oordeelstoets uitvoeren</button>
+    <button type="button" id="knop-print" disabled hidden>Printen / pdf</button>
+    <button type="button" id="knop-kopieer" disabled hidden>Kopi&euml;ren voor Word</button>
+    <button type="button" id="knop-oordeel" class="hoofd" hidden>Oordeelstoets uitvoeren</button>
   </div>
   <p class="melding" id="melding" role="status" aria-live="polite"></p>
 
@@ -486,7 +488,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
     <section class="paneel tekst">
       <h2>Het advies</h2>
       <div class="body advies" id="advies"><p class="leeg">Kies eerst een land in de lijst
-        hierboven, of plak zelf de tekst van een reisadvies.</p></div>
+        hierboven.</p></div>
     </section>
 
     <section class="paneel">
@@ -3451,10 +3453,6 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
 
   plaatshouder();
   VOORBEELDEN.forEach((v, i) => optie('voorbeeld:' + i, v.land + ' — ' + v.kenmerk));
-  $('bron-regel').textContent = REGELDATA.matrix.koppen.length + ' koppen uit de matrix · '
-    + Object.keys(REGELDATA.kleurcodes.kleuren).length + ' kleurcodes · '
-    + REGELDATA.sjabloon.vaste_teksten.length + ' vaste teksten uit het sjabloon · '
-    + 'schrijfwijzer, format-matrix en sjabloon van Nederlandwereldwijd.nl';
 
   function toetsInvoer(html, land, meta = {}) {
     // koppen: geplakte platte tekst heeft geen opmaak meer, en dan herkent de parser een kop aan
@@ -3614,7 +3612,7 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
       $('melding').textContent = a.gewijzigd ? a.gewijzigd : '';
     } catch (e) {
       $('melding').textContent = 'Dit reisadvies kon niet worden opgehaald (' + e.message + '). '
-        + 'Kies een ander, of plak de tekst zelf.';
+        + 'Kies een ander, of probeer het later nog eens.';
     } finally {
       kiezer.disabled = false;
     }
@@ -4383,12 +4381,10 @@ const VOORBEELDEN = [{"iso":"CZE","land":"Tsjechië","kenmerk":"1 kleurcode, kor
   }
   // ---------- start ----------
   // De oordeelstoets vraagt een taalmodel om een oordeel, en dat kan alleen waar de pagina als
-  // Claude-artifact draait. Op de gepubliceerde site is er geen model; dan deed de knop niets
-  // anders dan melden dat hij niet werkt. Dan laten we knop en blok gewoon weg.
-  if (typeof window.claude?.use !== 'function') {
-    $('knop-oordeel').hidden = true;
-    $('oordeelsblok').hidden = true;
-  }
+  // Claude-artifact draait. Op de gepubliceerde site is er geen model.
+  // Voorlopig ook in de artifact verborgen (zie de knoppenbalk).
+  $('knop-oordeel').hidden = true;
+  $('oordeelsblok').hidden = true;
   // Geen kiesAdvies() hier: de pagina start bewust zonder gekozen land (zie de plaatshouder
   // "Kies een land…"), zodat een redacteur niet per ongeluk het eerste voorbeeld voor zijn eigen
   // keuze aanziet. haalLijst() vult de dropdown; kiezen doet de redacteur zelf.

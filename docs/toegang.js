@@ -221,7 +221,7 @@
         '<div class="poort-binnen">' +
           '<p class="poort-merk">Nederland Wereldwijd</p>' +
           '<h1 id="poort-titel">Reisadvies-Reviewer</h1>' +
-          '<p class="poort-sub">Toetst een reisadvies op de schrijfwijzer, de onderwerpen-matrix ' +
+          '<p class="poort-sub">Toetst een reisadvies op de schrijfwijzer, de matrix ' +
             'en de vaste formuleringen uit het sjabloon.</p>' +
           '<p class="poort-melding" id="poort-melding" hidden></p>' +
           '<form id="poort-form" autocomplete="on" novalidate>' +

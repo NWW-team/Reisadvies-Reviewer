@@ -170,9 +170,9 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "boodschap": "Bij kleurcode rood ontbreekt een vaste zin: \"De Nederlandse ambassade kan u niet helpen als u in de problemen komt.\"",
         "fragment": "De kleurcode van het reisadvies voor Afghanistan is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk.",
-        "verwacht": "De kleurcode van het reisadvies voor Afghanistan is rood. Wat uw situatie ook is: reis er niet heen. Het is er te gevaarlijk. De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
+        "verwacht": "De Nederlandse ambassade kan u niet helpen als u in de problemen komt.",
         "notitie": "Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in \"In het kort\"."
       },
       {
@@ -2069,9 +2069,9 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "De uitleg bij kleurcode oranje wijkt af van de vaste tekst.",
+        "boodschap": "Bij kleurcode oranje ontbreekt een vaste zin: \"Het is niet veilig er op vakantie te gaan.\"",
         "fragment": "Kleurcode oranje geldt voor de rest van het noordwesten van de provincie Bujumbura (de gemeentes Bubanza, Bukinanyana, Cibitoke, Mpanda en Mugina). Reis alleen hierheen als het noodzakelijk is.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "Het is niet veilig er op vakantie te gaan.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -6669,9 +6669,9 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "De uitleg bij kleurcode oranje wijkt af van de vaste tekst.",
+        "boodschap": "Bij kleurcode oranje ontbreekt een vaste zin: \"Het is niet veilig er op vakantie te gaan.\"",
         "fragment": "Kleurcode oranje geldt voor verschillende gebieden die grenzen aan de regio’s met kleurcode rood en gebieden in het zuidoosten van Colombia. Reis alleen hierheen als het noodzakelijk is.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode oranje. Reis alleen hierheen als het noodzakelijk is. Het is niet veilig er op vakantie te gaan.",
+        "verwacht": "Het is niet veilig er op vakantie te gaan.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {
@@ -24164,9 +24164,9 @@
         "regel": "kleur-variant",
         "ernst": "fout",
         "bron": "MX, tab Kleurcode-teksten",
-        "boodschap": "De uitleg bij kleurcode rood wijkt af van de vaste tekst.",
+        "boodschap": "Bij kleurcode rood ontbreekt een vaste zin: \"Het is er te gevaarlijk.\"",
         "fragment": "De kleurcode van het reisadvies is rood voor het gebied rond de Panguna-mijn op het eiland Bougainville. Wat uw situatie ook is: reis niet hierheen. Lees meer onder Regionale risico’s.",
-        "verwacht": "Voor de gebieden X en Y geldt kleurcode rood. Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk.",
+        "verwacht": "Het is er te gevaarlijk.",
         "notitie": "Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico's."
       },
       {

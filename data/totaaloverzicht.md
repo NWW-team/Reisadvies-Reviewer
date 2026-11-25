@@ -1,6 +1,6 @@
 # Totaaloverzicht reisadviezen
 
-Gedraaid op 2026-11-24 over 226 reisadviezen, zoals ze die dag op de website stonden.
+Gedraaid op 2026-11-25 over 226 reisadviezen, zoals ze die dag op de website stonden.
 
 Elke cel: **in hoeveel adviezen** (hoeveel meldingen in totaal).
 
@@ -19,7 +19,7 @@ Wat besproken moet worden, staat in [`regels/TER-BESPREKING.md`](../regels/TER-B
 
 | aantal adviezen | nu |
 |---|---:|
-| **Format: minstens één afwijking** | **154** |
+| **Format: minstens één afwijking** | **153** |
 | Onderwerp dat er niet in hoort | 108 |
 | Te lang (woorden, rubrieken, bullets, Actueel) | 70 |
 | "In het kort" niet volgens de opbouw | 20 |
@@ -114,7 +114,7 @@ andere rubriek, zoals Natuurgeweld bij bosbranden of Paspoort, visum bij veel kl
 | | nu |
 |---|---:|
 | Vrije rubriek boven Wetten en gebruiken | 26 (26) |
-| Volgorde van de vaste rubrieken anders | 23 (23) |
+| Volgorde van de vaste rubrieken anders | 22 (22) |
 | Tussenkop heet elders anders | 10 (11) |
 | Rubriek die geen vaste kop is | 10 (10) |
 | Tussenkop onder Natuurgeweld noemt geen risico | 7 (7) |
@@ -184,7 +184,7 @@ Zinnen in alinea's en in bullets. De actualiteit in "In het kort" heeft zijn eig
 
 | | nu |
 |---|---:|
-| Te lange zin, zonder link (max. 15 woorden) | 209 (1135) |
+| Te lange zin, zonder link (max. 15 woorden) | 209 (1134) |
 | Lijdende vorm | 158 (407) |
 | Twijfeltaal: vaak, soms, regelmatig … | 146 (416) |
 | Twijfeltaal: misschien, mogelijk … | 99 (163) |
@@ -196,7 +196,7 @@ Zinnen in alinea's en in bullets. De actualiteit in "In het kort" heeft zijn eig
 
 | | nu |
 |---|---:|
-| Linktekst boven 70 tekens | 43 (48) |
+| Linktekst boven 70 tekens | 42 (47) |
 | Link naar een partij waar we niet naar linken | 5 (6) |
 | Link plakt aan het woord ervoor | 4 (4) |
 

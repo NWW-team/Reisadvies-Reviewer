@@ -334,6 +334,26 @@ function afwijkendeZinnen(bullet, verwacht) {
   };
 }
 
+/**
+ * De zinnen uit de vaste handelingsinstructie die helemaal ontbreken: er staat ook geen zin die erop
+ * lijkt. Colombia schrijft "Kleurcode oranje geldt voor … Reis alleen hierheen als het noodzakelijk
+ * is." Dan ontbreekt "Het is niet veilig er op vakantie te gaan." en dat moet de melding zeggen, niet
+ * de hele vaste tekst tonen (dan lijkt het alsof de openingszin fout is).
+ */
+function ontbrekendeZinnen(bullet, verwacht) {
+  const kaal = (z) => norm(z).replace(/[.!?]$/, '');
+  const woorden = (z) => new Set(kaal(z).split(/[^\p{L}\p{N}']+/u).filter(Boolean));
+  const zinnen = splitsZinnen(bullet);
+  return splitsZinnen(verwacht).slice(1).filter((v) => {
+    if (zinnen.some((z) => kaal(z) === kaal(v))) return false;
+    const wv = woorden(v);
+    return !zinnen.slice(1).some((z) => {
+      const wz = woorden(z);
+      return [...wv].filter((w) => wz.has(w)).length / Math.max(wv.size, wz.size) >= 0.5;
+    });
+  });
+}
+
 function bevinding(regel, ernst, bron, boodschap, extra = {}) {
   return { regel, ernst, bron, boodschap, ...extra };
 }
@@ -783,13 +803,17 @@ export function maakToetser(data) {
         // Liefst alleen de zin die afwijkt, niet de hele bullet: anders lijkt het alsof er iets
         // anders in die bullet niet klopt.
         const precies = bullet ? afwijkendeZinnen(bullet, vasteTekst) : null;
+        const mist = !staatDeAndere && !precies && bullet ? ontbrekendeZinnen(bullet, vasteTekst) : [];
         b.push(bevinding('kleur-variant', ERNST.fout, 'MX, tab Kleurcode-teksten',
-          staatDeAndere
+          mist.length
+            ? `Bij kleurcode ${kleur} ontbreekt een vaste zin: "${mist.join(' ')}"`
+            : staatDeAndere
             ? (hoortVolledig
                 ? `Dit advies heeft één kleurcode, dus bij ${kleur} hoort de volledige uitleg. Nu staat de verkorte variant er.${preciezer}`
                 : `Dit advies heeft meerdere kleurcodes, dus bij ${kleur} hoort de verkorte variant. Nu staat de volledige uitleg er.${preciezer}`)
             : `De uitleg bij kleurcode ${kleur} wijkt af van de vaste tekst.`,
-          { ...(precies || { ...(bullet ? { fragment: bullet } : {}), verwacht: vasteTekst }),
+          { ...(precies || (mist.length ? { fragment: bullet, verwacht: mist.join(' ') }
+            : { ...(bullet ? { fragment: bullet } : {}), verwacht: vasteTekst })),
             notitie: hoortVolledig
               ? 'Bij één kleurcode geldt de kleur voor het hele land; dan staat de volledige uitleg in "In het kort".'
               : 'Bij meerdere kleurcodes staat per gebied de verkorte uitleg; de volledige uitleg volgt onder Regionale risico\'s.' }));

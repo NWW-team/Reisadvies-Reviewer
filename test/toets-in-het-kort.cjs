@@ -136,3 +136,14 @@ test('een vervolgbullet die met "Kleurcode" begint, wordt gemeld; de vorm uit de
   assert.strictEqual(r(kort('Kleurcode oranje geldt voor het grensgebied tussen Testland en Buurland. '
     + 'Reis alleen hierheen als het noodzakelijk is.')).length, 1);
 });
+
+test('kleurvariant: ontbreekt er een vaste zin, dan noemt de melding die zin', () => {
+  const html = '<h2>In het kort</h2><ul><li>De kleurcode van het reisadvies is rood voor het noorden. '
+    + 'Wat uw situatie ook is: reis niet hierheen. Het is er te gevaarlijk. Lees meer onder Regionale risico&#39;s.</li>'
+    + '<li>Kleurcode oranje geldt voor de regio A, de regio B en de regio C. Reis alleen hierheen als het noodzakelijk is.</li></ul>' + INFO;
+  const b = toetser(Parse.parseAdvies(html, { land: 'Testland', kleurcodes: ['rood', 'oranje'] }))
+    .bevindingen.filter((x) => x.regel === 'kleur-variant');
+  assert.strictEqual(b.length, 1);
+  assert.match(b[0].boodschap, /ontbreekt een vaste zin: "Het is niet veilig er op vakantie te gaan\."/);
+  assert.strictEqual(b[0].verwacht, 'Het is niet veilig er op vakantie te gaan.');
+});

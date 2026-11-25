@@ -1804,3 +1804,14 @@ melding bij komt.
 
 Het deel *Nog vastleggen* van de bespreeklijst is herschreven: per punt een voorbeeld en een advies of het in
 de richtlijnen hoort. Het punt over de omgedraaide vorm is eraf: de matrix is leidend.
+
+## Kleurvariant: een ontbrekende vaste zin bij naam noemen (25 november 2026)
+
+Bij Colombia meldde `kleur-variant` *"De uitleg bij kleurcode oranje wijkt af van de vaste tekst"*, met de
+hele vaste tekst als verwachting (*"Voor de gebieden X en Y geldt kleurcode oranje. …"*). Martijn las dat als
+een melding over de volgorde, terwijl *"Kleurcode oranje geldt voor …"* bij die opsomming juist mag. Het echte
+verschil: de zin *"Het is niet veilig er op vakantie te gaan."* ontbrak.
+
+Ontbreekt een zin uit de handelingsinstructie helemaal (er staat ook geen zin die erop lijkt), dan zegt de
+melding nu welke: *"Bij kleurcode oranje ontbreekt een vaste zin: '…'"*, met alleen die zin als verwachting
+(`ontbrekendeZinnen`). Gemeten: 4 meldingen (Afghanistan, Burundi, Colombia, Papoea-Nieuw-Guinea).

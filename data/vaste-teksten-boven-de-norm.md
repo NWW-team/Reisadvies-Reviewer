@@ -1,6 +1,6 @@
 # Vaste teksten die zelf boven de norm zitten
 
-Gedraaid op 2026-11-24 over 226 reisadviezen.
+Gedraaid op 2026-11-25 over 226 reisadviezen.
 
 De schrijfwijzer houdt **maximaal 15 woorden per zin** aan, en
 **20** als er een link in de zin staat. De formuleringen

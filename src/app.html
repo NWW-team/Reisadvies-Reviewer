@@ -7,9 +7,11 @@
    De ernst van een bevinding gebruikt dezelfde familie — rood voor een echte fout, geel/oranje
    voor let op, grijs voor ter overweging — omdat dat sneller scant dan een aparte set. De kleurcodes zelf staan altijd bij hun naam
    ("kleurcode geel") en als chip met tekst, dus verwarring blijft beperkt tot de kleur alleen.
-   RO Sans (RijksSansTT) is niet vrij beschikbaar als lettertypebestand. Public Sans komt er qua
-   breedte en vorm dichter bij dan Fira Sans: een royalere, open humanistische schreefloze, ook
-   ontworpen voor overheidscommunicatie (Martijn, 24 november 2026: "lettertype nog beetje smal"). */
+   RO Sans (RijksSansTT) is niet vrij beschikbaar als lettertypebestand. Staat het op de computer
+   van de lezer (een werklaptop van BZ), dan gebruikt de pagina het; daarom staat het vooraan in
+   --sans. Anders valt de pagina terug op Public Sans, die qua breedte en vorm dichter bij RO Sans
+   komt dan Fira Sans: een royalere, open humanistische schreefloze, ook ontworpen voor
+   overheidscommunicatie (Martijn, 24 november 2026: "lettertype nog beetje smal"). */
 :root {
   --blauw: #007bc7;
   --donkerblauw: #154273;
@@ -38,7 +40,7 @@
   --kc-rood: #d52b1e;
   --band-tekst: #ffffff;
   --schaduw: 0 1px 2px rgba(0,0,0,.08);
-  --sans: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --sans: "RO Sans", "ROSans", "RijksSansTT", "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) {

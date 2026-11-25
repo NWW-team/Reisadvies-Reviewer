@@ -1826,5 +1826,6 @@ regel met getallen eronder (*"31 koppen uit de matrix · 4 kleurcodes · …"*) 
 ## Kortere melding bij een actualiteit die naar een andere rubriek verwijst (25 november 2026)
 
 Martijn: de toelichting onder `kort-actualiteit-verwijzing` (welke uitzonderingen er zijn) is veel, en de
-melding zegt al dat het alleen bij uitzondering kan. De toelichting is weg; de uitzonderingen staan in de
+melding zegt al dat het alleen bij uitzondering kan. De toelichting is nu één korte regel zonder voorbeelden:
+*"Uitzondering: een groot risico in een bepaalde periode, of veel klantvragen."* De voorbeelden staan in de
 matrix (tabblad Koppen, rij In het kort).

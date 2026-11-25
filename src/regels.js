@@ -978,7 +978,8 @@ export function maakToetser(data) {
           b.push(bevinding('kort-actualiteit-verwijzing', ERNST.letop, 'MX, tab Koppen, rij In het kort',
             `Deze actualiteit verwijst naar "${doel}" in plaats van naar Actueel. Dat kan alleen bij `
             + 'uitzondering. Klopt het dat dat hier zo is?',
-            { fragment: actualiteit.tekst }));
+            { fragment: actualiteit.tekst,
+              notitie: 'Uitzondering: een groot risico in een bepaalde periode, of veel klantvragen.' }));
         }
       }
 

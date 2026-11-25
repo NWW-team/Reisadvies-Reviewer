@@ -1815,3 +1815,10 @@ verschil: de zin *"Het is niet veilig er op vakantie te gaan."* ontbrak.
 Ontbreekt een zin uit de handelingsinstructie helemaal (er staat ook geen zin die erop lijkt), dan zegt de
 melding nu welke: *"Bij kleurcode oranje ontbreekt een vaste zin: '…'"*, met alleen die zin als verwachting
 (`ontbrekendeZinnen`). Gemeten: 4 meldingen (Afghanistan, Burundi, Colombia, Papoea-Nieuw-Guinea).
+
+## Knoppen voorlopig verborgen, kop opgeruimd (25 november 2026)
+
+Martijn: de knoppen naast de landkeuze hebben nu geen functie. Een land kiezen haalt het advies al op;
+plakken, printen en kopiëren voor Word werken nog niet goed. Ze staan voorlopig op `hidden` (de code blijft),
+net als de oordeelstoets en het blok erover. In de intro heet de onderwerpen-matrix nu *de matrix*, en de
+regel met getallen eronder (*"31 koppen uit de matrix · 4 kleurcodes · …"*) is weg.

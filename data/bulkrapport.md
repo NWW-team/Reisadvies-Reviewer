@@ -7,7 +7,7 @@ Gedraaid op 2026-11-25 over 226 reisadviezen.
 - **82** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **100** van de 3234 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **101** van de 3236 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -27,15 +27,15 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 275 | 144 |
-| geel/oranje — let op | 2263 | 224 |
+| geel/oranje — let op | 2265 | 224 |
 | grijs — ter overweging | 696 | 182 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 213 | 1212 |
-| `zin-lijdende-vorm` | 158 | 407 |
+| `zin-max-woorden` | 213 | 1214 |
+| `zin-lijdende-vorm` | 158 | 406 |
 | `zin-frequentiewoord` | 146 | 416 |
 | `natuurgeweld-contact` | 125 | 125 |
 | `zin-twijfeltaal` | 99 | 163 |
@@ -43,7 +43,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `aanhalingstekens` | 52 | 83 |
 | `doc-woordenaantal` | 47 | 47 |
 | `kleur-variant` | 44 | 50 |
-| `link-tekstlengte` | 42 | 47 |
+| `link-tekstlengte` | 43 | 48 |
 | `h3-alleen-bij-uitzondering` | 41 | 41 |
 | `rubrieken-max` | 39 | 39 |
 | `regionaal-gebiedenzin` | 32 | 32 |
@@ -51,7 +51,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `kinderen-paspoort` | 28 | 28 |
 | `paspoort-geldigheid` | 28 | 28 |
 | `rubriek-vrij-te-hoog` | 26 | 26 |
-| `woord-onbekend` | 25 | 46 |
+| `woord-onbekend` | 25 | 47 |
 | `h3-niet-melden` | 23 | 23 |
 | `rubrieken-volgorde` | 22 | 22 |
 | `nood-contactcenter` | 20 | 20 |
@@ -61,8 +61,8 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `rijbewijs-anwb` | 13 | 13 |
 | `actueel-max-woorden` | 11 | 11 |
 | `h4-kop-variant` | 10 | 11 |
-| `kort-actualiteit-verwijzing` | 10 | 10 |
 | `h3-vaste-kop` | 10 | 10 |
+| `kort-actualiteit-verwijzing` | 9 | 9 |
 | `tekst-spatie-leesteken` | 9 | 10 |
 | `kort-een-actualiteit` | 8 | 9 |
 | `bagage-terug` | 7 | 7 |

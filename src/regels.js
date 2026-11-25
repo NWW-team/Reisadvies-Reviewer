@@ -978,10 +978,7 @@ export function maakToetser(data) {
           b.push(bevinding('kort-actualiteit-verwijzing', ERNST.letop, 'MX, tab Koppen, rij In het kort',
             `Deze actualiteit verwijst naar "${doel}" in plaats van naar Actueel. Dat kan alleen bij `
             + 'uitzondering. Klopt het dat dat hier zo is?',
-            { fragment: actualiteit.tekst,
-              notitie: 'Uitzonderingen zijn een groot risico in een bepaalde periode (bosbranden, '
-                + 'overstromingen, orkanen: verwijs naar Natuurgeweld), of een onderwerp waar veel '
-                + 'klantvragen over komen, zoals de ETA voor het VK onder Paspoort, visum.' }));
+            { fragment: actualiteit.tekst }));
         }
       }
 

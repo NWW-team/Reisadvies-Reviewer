@@ -129,7 +129,9 @@ body {
 
 .band { background: var(--blauw); color: var(--band-tekst); }
 .band .band-binnen { padding-block: 22px 26px; }
-.merk { display: flex; align-items: center; gap: 16px; }
+.merk { display: flex; align-items: center; gap: 16px; color: inherit; text-decoration: none; width: fit-content; }
+.merk:hover svg, .merk:focus-visible svg { transform: rotate(-12deg); }
+.merk svg { transition: transform .2s; }
 .merk svg { flex: 0 0 auto; width: 56px; height: 56px; }
 .merk h1 {
   margin: 0; font-size: clamp(1.4rem, 3.2vw, 1.95rem); font-weight: 700;
@@ -432,7 +434,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 
 <header class="band">
   <div class="band-binnen">
-    <div class="merk">
+    <a class="merk" href="./" id="naar-begin" title="Terug naar het begin: een ander land kiezen">
       <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
         <circle cx="32" cy="32" r="30" fill="#fff"/>
         <g stroke="#007bc7" stroke-width="2.4" fill="none">
@@ -447,7 +449,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
         </g>
       </svg>
       <h1>Reisadvies-Reviewer</h1>
-    </div>
+    </a>
     <p class="lead">Toetst een reisadvies op wat objectief te toetsen is: de schrijfwijzer, de
       matrix, B1 en begrijpelijkheid. Elke bevinding verwijst naar de regel waar hij vandaan komt.</p>
   </div>
@@ -456,7 +458,7 @@ textarea { width: 100%; min-height: 190px; padding: 12px 14px; font-family: var(
 <div class="wrap">
   <div class="balk">
     <label class="veld" for="kies-advies">Reisadvies
-      <select id="kies-advies"></select>
+      <select id="kies-advies" autocomplete="off"></select>
     </label>
     <!-- Voorlopig verborgen (Martijn, 25 november 2026): plakken, printen en kopiëren voor Word
          werken nog niet goed, en de oordeelstoets heeft op de site geen model. Een land kiezen
@@ -1660,6 +1662,14 @@ const VOORBEELDEN = /*__VOORBEELDEN__*/;
     veld.remove();
     return gelukt;
   }
+  // De bol (en de titel ernaast) brengt je terug naar het begin: de pagina opnieuw, zonder gekozen
+  // land. Opnieuw laden is de eenvoudigste schone start; autocomplete="off" op de keuzelijst zorgt
+  // dat de browser het vorige land niet terugzet.
+  $('naar-begin').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    location.reload();
+  });
   // ---------- start ----------
   // De oordeelstoets vraagt een taalmodel om een oordeel, en dat kan alleen waar de pagina als
   // Claude-artifact draait. Op de gepubliceerde site is er geen model.

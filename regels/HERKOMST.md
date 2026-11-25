@@ -1829,3 +1829,10 @@ Martijn: de toelichting onder `kort-actualiteit-verwijzing` (welke uitzonderinge
 melding zegt al dat het alleen bij uitzondering kan. De toelichting is nu één korte regel zonder voorbeelden:
 *"Uitzondering: een groot risico in een bepaalde periode, of veel klantvragen."* De voorbeelden staan in de
 matrix (tabblad Koppen, rij In het kort).
+
+## De bol brengt je terug naar het begin (25 november 2026)
+
+Martijn: van de bol een klikbaar iets maken, zodat je direct naar het begin gaat en een ander land kunt
+kiezen. De bol en de titel ernaast zijn samen één link (`#naar-begin`). Een klik laadt de pagina opnieuw,
+zonder gekozen land; `autocomplete="off"` op de keuzelijst voorkomt dat de browser het vorige land
+terugzet. Bij aanwijzen draait de bol een klein stukje, zodat te zien is dat je erop kunt klikken.

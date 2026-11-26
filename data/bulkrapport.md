@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-25 over 226 reisadviezen.
+Gedraaid op 2026-11-26 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **82** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **101** van de 3236 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **102** van de 3240 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -16,7 +16,7 @@ de standaardtekst lost ze allemaal tegelijk op.
 
 | regel | in hoeveel adviezen | wat |
 |---|---:|---|
-| `natuurgeweld-contact` | 112 | De zin over contact met de lokale autoriteiten wijkt af van het sjabloon. |
+| `natuurgeweld-contact` | 110 | De zin over contact met de lokale autoriteiten wijkt af van het sjabloon. |
 | `h4-niet-melden` | 49 | "Foto’s maken" gaat over foto's maken, en dat hoort niet in een reisadvies. |
 
 ## Per soort bevinding
@@ -26,18 +26,18 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
-| rood — fout | 275 | 144 |
-| geel/oranje — let op | 2265 | 224 |
+| rood — fout | 276 | 144 |
+| geel/oranje — let op | 2268 | 224 |
 | grijs — ter overweging | 696 | 182 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
-| `zin-max-woorden` | 213 | 1214 |
+| `zin-max-woorden` | 213 | 1217 |
 | `zin-lijdende-vorm` | 158 | 406 |
 | `zin-frequentiewoord` | 146 | 416 |
-| `natuurgeweld-contact` | 125 | 125 |
+| `natuurgeweld-contact` | 124 | 124 |
 | `zin-twijfeltaal` | 99 | 163 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 52 | 83 |
@@ -77,11 +77,11 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
 | `titel-leestekens` | 5 | 5 |
+| `tekst-plakfout` | 5 | 5 |
 | `vragen-opeenvolgend` | 5 | 7 |
+| `kinderen-documenten` | 5 | 5 |
 | `link-verboden-partij` | 5 | 6 |
 | `link-plakt-aan-woord` | 4 | 4 |
-| `tekst-plakfout` | 4 | 4 |
-| `kinderen-documenten` | 4 | 4 |
 | `schuine-streep` | 4 | 4 |
 | `kleur-aanduiding` | 4 | 4 |
 | `tekst-dubbel-woord` | 3 | 3 |
@@ -119,7 +119,7 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | Indonesië | 2789 | 2000 |
 | Ecuador | 2754 | 2000 |
 | Colombia | 2681 | 2000 |
-| Mexico | 2570 | 2000 |
+| Mexico | 2606 | 2000 |
 | China | 2504 | 1500 |
 | Rusland | 2495 | 2000 |
 | Tanzania | 2495 | 2000 |

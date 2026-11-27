@@ -1,13 +1,13 @@
 # Bulkrapport reisadviezen
 
-Gedraaid op 2026-11-26 over 226 reisadviezen.
+Gedraaid op 2026-11-27 over 226 reisadviezen.
 
 ## Hoe groot is de achterstand
 
 - **82** van de 226 adviezen hebben geen enkele harde fout.
 - **47** adviezen zitten boven de woordenlimiet.
 - Gemiddeld 1.0 eigen fouten per advies, los van wat uit de standaardtekst komt.
-- **102** van de 3240 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
+- **103** van de 3238 bevindingen steunen op een aanvulling: de regel komt uit de schrijfwijzer, maar het woord of domein staat er niet letterlijk in. Die zijn in de tool gemarkeerd.
 
 ## Zit in de standaardtekst
 
@@ -27,18 +27,18 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | soort | bevindingen | in hoeveel adviezen |
 |---|---:|---:|
 | rood — fout | 276 | 144 |
-| geel/oranje — let op | 2268 | 224 |
-| grijs — ter overweging | 696 | 182 |
+| geel/oranje — let op | 2265 | 224 |
+| grijs — ter overweging | 697 | 182 |
 
 ## Per regel
 
 | regel | adviezen | bevindingen |
 |---|---:|---:|
 | `zin-max-woorden` | 213 | 1217 |
-| `zin-lijdende-vorm` | 158 | 406 |
+| `zin-lijdende-vorm` | 158 | 404 |
 | `zin-frequentiewoord` | 146 | 416 |
 | `natuurgeweld-contact` | 124 | 124 |
-| `zin-twijfeltaal` | 99 | 163 |
+| `zin-twijfeltaal` | 99 | 164 |
 | `h4-niet-melden` | 64 | 65 |
 | `aanhalingstekens` | 52 | 83 |
 | `doc-woordenaantal` | 47 | 47 |
@@ -48,10 +48,10 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `rubrieken-max` | 39 | 39 |
 | `regionaal-gebiedenzin` | 32 | 32 |
 | `reisverzekering-vaste-tekst` | 31 | 31 |
-| `kinderen-paspoort` | 28 | 28 |
 | `paspoort-geldigheid` | 28 | 28 |
+| `kinderen-paspoort` | 27 | 27 |
 | `rubriek-vrij-te-hoog` | 26 | 26 |
-| `woord-onbekend` | 25 | 47 |
+| `woord-onbekend` | 26 | 48 |
 | `h3-niet-melden` | 23 | 23 |
 | `rubrieken-volgorde` | 22 | 22 |
 | `nood-contactcenter` | 20 | 20 |
@@ -68,12 +68,12 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | `bagage-terug` | 7 | 7 |
 | `nood-lokale-hulpdiensten` | 7 | 7 |
 | `h4-natuurrisico` | 7 | 7 |
-| `tekst-onzichtbaar-teken` | 7 | 7 |
 | `nood-verwijzing-nood` | 7 | 7 |
 | `nood-verwijzing-crisis` | 7 | 7 |
 | `medicijnen-voldoende` | 7 | 7 |
 | `intro-vaste-tekst` | 6 | 6 |
 | `nederlands-verbuiging` | 6 | 6 |
+| `tekst-onzichtbaar-teken` | 6 | 6 |
 | `opmaak-vet-onderstreept` | 5 | 5 |
 | `eenheden-voluit` | 5 | 5 |
 | `titel-leestekens` | 5 | 5 |
@@ -120,9 +120,9 @@ grijs ter overweging (ook een lange zin met een link erin, en twijfeltaal).
 | Ecuador | 2754 | 2000 |
 | Colombia | 2681 | 2000 |
 | Mexico | 2606 | 2000 |
+| Tanzania | 2518 | 2000 |
 | China | 2504 | 1500 |
 | Rusland | 2495 | 2000 |
-| Tanzania | 2495 | 2000 |
 | Peru | 2461 | 2000 |
 | Filipijnen | 2436 | 2000 |
 | Turkije | 2416 | 2000 |
